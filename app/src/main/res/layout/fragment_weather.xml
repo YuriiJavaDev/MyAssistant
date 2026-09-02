@@ -30,7 +30,7 @@
         android:stateListAnimator="@null"
         android:text="Search"
         android:textAllCaps="false"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_color_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -15,7 +15,7 @@
         android:background="@drawable/button_selector"
         android:text="Add"
         android:textAllCaps="false"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_color_btn"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:minWidth="100dp"

@@ -51,7 +51,7 @@
         android:stateListAnimator="@null"
         android:text="Convert"
         android:textAllCaps="false"
-        android:textColor="@color/text_color"
+        android:textColor="@color/text_color_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currencySpinner" />

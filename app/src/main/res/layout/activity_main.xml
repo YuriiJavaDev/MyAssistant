@@ -7,13 +7,14 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <!-- Верхня панель вкладки (TabLayout) з відступом зверху під системну камеру -->
+    <!-- Верхня панель вкладки (TabLayout) -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@color/background"
+        app:tabBackground="@drawable/tab_background"
         app:tabMode="fixed"
         app:tabGravity="fill"
         app:tabTextColor="@color/text_color"
