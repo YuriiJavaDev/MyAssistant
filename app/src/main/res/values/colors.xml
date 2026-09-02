@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Основні кольори проєкту MyAssistant -->
+    <color name="background">#FFF7E6</color>      <!-- Світлий теплий фон -->
+    <color name="text_color">#2D1B5E</color>      <!-- Насичений темний колір тексту -->
+    <color name="colorPrimary">#3E2773</color>    <!-- Фіолетовий акцент (під твої кнопки) -->
+</resources>

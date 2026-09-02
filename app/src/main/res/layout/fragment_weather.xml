@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Поле введення назви міста -->
+    <EditText
+        android:id="@+id/cityInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter city name..."
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/getWeatherButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Кнопка запиту погоди -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getWeatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/button_selector"
+        android:minWidth="100dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:stateListAnimator="@null"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Назва міста -->
+    <TextView
+        android:id="@+id/cityNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="City Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityInput" />
+
+    <!-- Температура -->
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="--°C"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameTextView" />
+
+    <!-- Опис стану погоди -->
+    <TextView
+        android:id="@+id/weatherDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Weather condition"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

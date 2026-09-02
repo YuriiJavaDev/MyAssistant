@@ -1,0 +1,51 @@
+# === Android / Gradle ===
+.gradle/
+/build/
+app/build/
+.local/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# === Java and Build Tools ===
+target/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+
+# === Android Studio / IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea/dataSources/
+.idea/shelf/
+out/production/
+*.hprof
+
+# === Operating System Files ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# === Logs and Temporary Files ===
+*.log
+logs/
+logger.txt
+*.tmp
+*.temp
+
+# === Database and Local Configs ===
+*.sql
+*.dump
+application-local.properties
+config.json
+.env
