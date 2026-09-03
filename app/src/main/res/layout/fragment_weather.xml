@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Поле введення назви міста -->
     <EditText
         android:id="@+id/cityInput"
         android:layout_width="0dp"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Кнопка запиту погоди -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/getWeatherButton"
         android:layout_width="wrap_content"
@@ -34,7 +32,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Назва міста -->
     <TextView
         android:id="@+id/cityNameTextView"
         android:layout_width="wrap_content"
@@ -47,7 +44,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityInput" />
 
-    <!-- Температура -->
     <TextView
         android:id="@+id/temperatureTextView"
         android:layout_width="wrap_content"
@@ -59,7 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityNameTextView" />
 
-    <!-- Опис стану погоди -->
     <TextView
         android:id="@+id/weatherDescriptionTextView"
         android:layout_width="wrap_content"

@@ -3,9 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Основні кольори проєкту MyAssistant -->
-    <color name="background">#FFF7E6</color>      <!-- Світлий теплий фон -->
-    <color name="text_color">#3E2773</color>      <!-- Насичений темний колір тексту -->
-    <color name="text_color_btn">#FA8C16</color>      <!-- Насичений темний колір тексту -->
-    <color name="colorPrimary">#3E2773</color>    <!-- Фіолетовий акцент (під твої кнопки) -->
+    <!-- Main colors of the project MyAssistant -->
+    <color name="background">#FFF7E6</color>
+    <color name="text_color">#3E2773</color>
+    <color name="text_color_btn">#FA8C16</color>
+    <color name="colorPrimary">#3E2773</color>
 </resources>

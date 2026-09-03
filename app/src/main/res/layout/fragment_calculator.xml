@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Заголовок розділу -->
     <TextView
         android:id="@+id/calculatorTitle"
         android:layout_width="wrap_content"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Перше число -->
     <EditText
         android:id="@+id/number1Input"
         android:layout_width="0dp"
@@ -29,7 +27,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculatorTitle" />
 
-    <!-- Друге число -->
     <EditText
         android:id="@+id/number2Input"
         android:layout_width="0dp"
@@ -41,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number1Input" />
 
-    <!-- Рядок з кнопками операцій (+, -, *, /) -->
+    <!-- Row with operation buttons (+, -, *, /) -->
     <LinearLayout
         android:id="@+id/buttonsLayout"
         android:layout_width="0dp"
@@ -82,7 +79,6 @@
             android:text="/" />
     </LinearLayout>
 
-    <!-- Текстове поле для результату -->
     <TextView
         android:id="@+id/calcResultTextView"
         android:layout_width="wrap_content"

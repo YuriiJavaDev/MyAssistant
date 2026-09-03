@@ -23,6 +23,6 @@ public class TasksFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null; // запобігаємо витоку пам'яті
+        binding = null; // memory leak prevention
     }
 }

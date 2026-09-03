@@ -7,14 +7,13 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <!-- Верхня панель вкладки (TabLayout) -->
+    <!-- Top tab bar (TabLayout) -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@color/background"
-        android:minHeight="30dp"
         app:tabBackground="@drawable/tab_background"
         app:tabMode="fixed"
         app:tabGravity="fill"
@@ -23,7 +22,7 @@
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3dp" />
 
-    <!-- Область, де змінюються екрани -->
+    <!-- Area where screens change -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"

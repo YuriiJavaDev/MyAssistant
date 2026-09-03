@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Тут буде поле введення завдання -->
-    <EditText android:hint="Что нужно сделать?" android:id="@+id/taskInput" android:inputType="textCapSentences" android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintEnd_toStartOf="@+id/addButton" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <!-- Task input field -->
+    <EditText android:hint="What needs to be done?" android:id="@+id/taskInput" android:inputType="textCapSentences" android:layout_height="wrap_content" android:layout_width="0dp" app:layout_constraintEnd_toStartOf="@+id/addButton" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addButton"
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Місце під майбутній список завдань -->
-    <TextView android:layout_height="wrap_content" android:layout_marginTop="64dp" android:layout_width="wrap_content" android:text="Тут буде список завдань (Tasks)" android:textSize="18sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/taskInput"/>
+    <!-- Task list -->
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="64dp" android:layout_width="wrap_content" android:text="Task list" android:textSize="18sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/taskInput"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

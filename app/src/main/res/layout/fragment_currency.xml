@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Заголовок розділу -->
     <TextView
         android:id="@+id/currencyTitle"
         android:layout_width="wrap_content"
@@ -17,7 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Поле введення суми -->
     <EditText
         android:id="@+id/amountInput"
         android:layout_width="0dp"
@@ -29,7 +27,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currencyTitle" />
 
-    <!-- Випадаючий список вибору валюти -->
     <Spinner
         android:id="@+id/currencySpinner"
         android:layout_width="0dp"
@@ -39,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/amountInput" />
 
-    <!-- Кнопка конвертації -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
@@ -56,7 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currencySpinner" />
 
-    <!-- Результат конвертації -->
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"

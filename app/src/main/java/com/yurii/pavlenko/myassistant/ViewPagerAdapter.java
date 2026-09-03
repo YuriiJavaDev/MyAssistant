@@ -21,20 +21,20 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new TasksFragment();      // Головна сторінка при старті
+                return new TasksFragment(); // Home page at startup
             case 1:
-                return new WeatherFragment();    // Погода
+                return new WeatherFragment();
             case 2:
-                return new CurrencyFragment();   // Обмін валют
+                return new CurrencyFragment();
             case 3:
-                return new CalculatorFragment(); // Калькулятор
+                return new CalculatorFragment();
             default:
-                return new TasksFragment();      // Захисний запасний варіант
+                return new TasksFragment(); // Default protection option (not the start page)
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4; // Всього 4 вкладки
+        return 4;
     }
 }
