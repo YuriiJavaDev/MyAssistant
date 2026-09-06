@@ -1,15 +1,14 @@
 package com.yurii.pavlenko.myassistant.fragments;
 
-/**
- * TasksFragment implementation managing task listing, filtering, sorting, and batch operations.
- * @date 2026-09-06
- */
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +20,6 @@ import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
 import com.yurii.pavlenko.myassistant.model.tasks.Task;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
@@ -37,7 +35,6 @@ public class TasksFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Step 1: Inflate layout using View Binding
         binding = FragmentTasksBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -46,61 +43,50 @@ public class TasksFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Step 2: Initialize lists and RecyclerView adapter
         initDataStructures();
         setupRecyclerView();
-
-        // Step 3: Load initial mock tasks
         loadInitialData();
-
-        // Step 4: Setup Spinners for filtering and sorting
         setupSpinners();
-
-        // Step 5: Setup action button listeners (Add, Delete, Clear)
         setupActionButtonsListeners();
     }
 
     private void initDataStructures() {
-        // Step 2.1: Initialize master and display collections
         allTasks = new ArrayList<>();
         displayList = new ArrayList<>();
     }
 
     private void setupRecyclerView() {
-        // Step 2.2: Configure RecyclerView layout manager and adapter
         binding.tasksRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        taskAdapter = new TaskAdapter((task, isChecked) -> {
-            task.setCompleted(isChecked);
-            task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
-            task.setUpdatedAt(LocalDateTime.now());
-            applyFilterAndSort();
-        });
+        taskAdapter = new TaskAdapter(
+                (task, isChecked) -> {
+                    task.setCompleted(isChecked);
+                    task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
+                    task.setUpdatedAt(LocalDateTime.now());
+                    applyFilterAndSort();
+                },
+                this::showEditTaskDialog // Open edit dialog when task item is clicked
+        );
         binding.tasksRecyclerView.setAdapter(taskAdapter);
     }
 
     private void loadInitialData() {
-        // Step 3.1: Populate master list with sample data matching Swing project
         allTasks.add(new Task(UUID.randomUUID(), "выпить чашечку кофе", false, LocalDateTime.now().minusHours(3), null, null, "Normal"));
         allTasks.add(new Task(UUID.randomUUID(), "Почитать учебник по Java", false, LocalDateTime.now().minusHours(2), null, null, "Important"));
         allTasks.add(new Task(UUID.randomUUID(), "поспать перед обедом и после него", false, LocalDateTime.now().minusHours(1), null, null, "Urgent"));
-
         applyFilterAndSort();
     }
 
     private void setupSpinners() {
-        // Step 4.1: Setup Filter Spinner adapter with custom layout
         String[] filterOptions = {"All Tasks", "Active", "Completed"};
         ArrayAdapter<String> filterAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, filterOptions);
         filterAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.filterSpinner.setAdapter(filterAdapter);
-
-        // Step 4.2: Setup Sort Spinner adapter with custom layout
         String[] sortOptions = {
                 "Alpha A-Z",
                 "Alpha Z-A",
                 "Status",
                 "Created",
-                "Modified",
+                "Edited",
                 "Completed",
                 "Importance"
         };
@@ -108,7 +94,6 @@ public class TasksFragment extends Fragment {
         sortAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.sortSpinner.setAdapter(sortAdapter);
 
-        // Step 4.3: Add selection listeners for dynamic updating
         AdapterView.OnItemSelectedListener selectionListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -124,11 +109,9 @@ public class TasksFragment extends Fragment {
     }
 
     private void applyFilterAndSort() {
-        // Step 4.4: Retrieve selected filter and sort criteria
         String selectedFilter = binding.filterSpinner.getSelectedItem() != null ? binding.filterSpinner.getSelectedItem().toString() : "All Tasks";
-        String selectedSort = binding.sortSpinner.getSelectedItem() != null ? binding.sortSpinner.getSelectedItem().toString() : "Alphabetical (A-Z)";
+        String selectedSort = binding.sortSpinner.getSelectedItem() != null ? binding.sortSpinner.getSelectedItem().toString() : "Alpha A-Z";
 
-        // Step 4.5: Apply filtering logic
         List<Task> filtered;
         switch (selectedFilter) {
             case "Active":
@@ -143,7 +126,6 @@ public class TasksFragment extends Fragment {
                 break;
         }
 
-        // Step 4.6: Apply sorting logic based on Swing specifications
         switch (selectedSort) {
             case "Alpha A-Z":
                 filtered.sort(Comparator.comparing(Task::getTitle, String.CASE_INSENSITIVE_ORDER));
@@ -157,7 +139,7 @@ public class TasksFragment extends Fragment {
             case "Created":
                 filtered.sort(Comparator.comparing(Task::getCreatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
                 break;
-            case "Modified":
+            case "Edited":
                 filtered.sort(Comparator.comparing(Task::getUpdatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
                 break;
             case "Completed":
@@ -168,7 +150,6 @@ public class TasksFragment extends Fragment {
                 break;
         }
 
-        // Step 4.7: Update display list and refresh adapter and statistics
         displayList = filtered;
         taskAdapter.setTasks(displayList);
         updateStatistics();
@@ -184,27 +165,17 @@ public class TasksFragment extends Fragment {
     }
 
     private void setupActionButtonsListeners() {
-        // Step 5.1: Setup Add button listener
         binding.addButton.setOnClickListener(v -> {
-            String title = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
-            if (title.isEmpty()) {
-                Toast.makeText(requireContext(), "Please enter a task title", Toast.LENGTH_SHORT).show();
-                return;
-            }
-            Task newTask = new Task(UUID.randomUUID(), title, false, LocalDateTime.now(), null, null, "Normal");
-            allTasks.add(0, newTask);
-            binding.taskInput.setText("");
-            applyFilterAndSort();
+            String initialText = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
+            showAddTaskDialog(initialText);
         });
 
-        // Step 5.2: Setup Delete Completed button listener
         binding.deleteCompletedButton.setOnClickListener(v -> {
             allTasks.removeIf(Task::isCompleted);
             applyFilterAndSort();
             Toast.makeText(requireContext(), "Completed tasks deleted", Toast.LENGTH_SHORT).show();
         });
 
-        // Step 5.3: Setup Clear All button listener
         binding.clearAllButton.setOnClickListener(v -> {
             allTasks.clear();
             applyFilterAndSort();
@@ -212,14 +183,97 @@ public class TasksFragment extends Fragment {
         });
     }
 
+    private void showAddTaskDialog(String initialText) {
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_add_task, null);
+
+        EditText dialogTaskEditText = dialogView.findViewById(R.id.dialogTaskEditText);
+        Spinner dialogImportanceSpinner = dialogView.findViewById(R.id.dialogImportanceSpinner);
+
+        dialogTaskEditText.setText(initialText);
+        dialogTaskEditText.setSelection(dialogTaskEditText.getText().length());
+
+        String[] importanceOptions = {"Normal", "Important", "Urgent"};
+        ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
+        importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
+        dialogImportanceSpinner.setAdapter(importanceAdapter);
+        dialogImportanceSpinner.setSelection(0); // Default to Normal
+
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Add New Task")
+                .setView(dialogView)
+                .setPositiveButton("OK", (dialog, which) -> {
+                    String description = dialogTaskEditText.getText().toString().trim();
+                    String importance = dialogImportanceSpinner.getSelectedItem().toString();
+
+                    if (!description.isEmpty()) {
+                        createNewTask(description, importance);
+                        binding.taskInput.setText("");
+                    } else {
+                        Toast.makeText(requireContext(), "Please enter a task title", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .create()
+                .show();
+    }
+
+    private void showEditTaskDialog(Task task) {
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_add_task, null);
+
+        EditText dialogTaskEditText = dialogView.findViewById(R.id.dialogTaskEditText);
+        Spinner dialogImportanceSpinner = dialogView.findViewById(R.id.dialogImportanceSpinner);
+
+        dialogTaskEditText.setText(task.getTitle());
+        dialogTaskEditText.setSelection(dialogTaskEditText.getText().length());
+
+        String[] importanceOptions = {"Normal", "Important", "Urgent"};
+        ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
+        importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
+        dialogImportanceSpinner.setAdapter(importanceAdapter);
+
+        if (task.getImportance() != null) {
+            for (int i = 0; i < importanceOptions.length; i++) {
+                if (importanceOptions[i].equalsIgnoreCase(task.getImportance())) {
+                    dialogImportanceSpinner.setSelection(i);
+                    break;
+                }
+            }
+        }
+
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Edit task")
+                .setView(dialogView)
+                .setPositiveButton("OK", (dialog, which) -> {
+                    String description = dialogTaskEditText.getText().toString().trim();
+                    String importance = dialogImportanceSpinner.getSelectedItem().toString();
+
+                    if (!description.isEmpty()) {
+                        task.setTitle(description);
+                        task.setImportance(importance);
+                        task.setUpdatedAt(LocalDateTime.now()); // Update modification timestamp
+                        applyFilterAndSort();
+                        Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .create()
+                .show();
+    }
+
+    private void createNewTask(String title, String importance) {
+        Task newTask = new Task(UUID.randomUUID(), title, false, LocalDateTime.now(), null, null, importance);
+        allTasks.add(0, newTask);
+        applyFilterAndSort();
+    }
+
     private void updateStatistics() {
-        // Step 6.1: Calculate total, completed, and remaining tasks based on master list
         int total = allTasks.size();
         int completed = (int) allTasks.stream().filter(Task::isCompleted).count();
         int left = total - completed;
         int progress = total > 0 ? (completed * 100) / total : 0;
 
-        // Step 6.2: Display formatted statistics text
         String statsText = String.format("Total: %d  Completed: %d  Left: %d  Progress: %d%%", total, completed, left, progress);
         binding.statisticsTextView.setText(statsText);
     }
@@ -227,7 +281,6 @@ public class TasksFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        // Step 7: Clear view binding reference to prevent memory leaks
         binding = null;
     }
 }

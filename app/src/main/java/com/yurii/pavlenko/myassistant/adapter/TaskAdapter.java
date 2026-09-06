@@ -22,13 +22,19 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
     private List<Task> tasks = new ArrayList<>();
     private final OnTaskCheckedListener checkedListener;
+    private final OnTaskClickListener clickListener;
 
     public interface OnTaskCheckedListener {
         void onTaskChecked(Task task, boolean isChecked);
     }
 
-    public TaskAdapter(OnTaskCheckedListener checkedListener) {
+    public interface OnTaskClickListener {
+        void onTaskClick(Task task);
+    }
+
+    public TaskAdapter(OnTaskCheckedListener checkedListener, OnTaskClickListener clickListener) {
         this.checkedListener = checkedListener;
+        this.clickListener = clickListener;
     }
 
     public void setTasks(List<Task> tasks) {
@@ -46,7 +52,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task task = tasks.get(position);
-        holder.bind(task, checkedListener);
+        holder.bind(task, checkedListener, clickListener);
     }
 
     @Override
@@ -66,7 +72,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             taskTimestampTextView = itemView.findViewById(R.id.taskTimestampTextView);
         }
 
-        public void bind(Task task, OnTaskCheckedListener checkedListener) {
+        public void bind(Task task, OnTaskCheckedListener checkedListener, OnTaskClickListener clickListener) {
             taskTitleTextView.setText(task.getTitle());
             taskCheckBox.setOnCheckedChangeListener(null);
             taskCheckBox.setChecked(task.isCompleted());
@@ -80,6 +86,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                 applyCompletionStyle(isChecked);
                 if (checkedListener != null) {
                     checkedListener.onTaskChecked(task, isChecked);
+                }
+            });
+
+            itemView.setOnClickListener(v -> {
+                if (clickListener != null) {
+                    clickListener.onTaskClick(task);
                 }
             });
         }
@@ -118,10 +130,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                 sb.append("Created: ").append(task.getCreatedAt().format(formatter));
             }
             if (task.getUpdatedAt() != null) {
-                sb.append(" | Edited: ").append(task.getUpdatedAt().format(formatter));
+                if (sb.length() > 0) {
+                    sb.append("\n");
+                }
+                sb.append("Edited: ").append(task.getUpdatedAt().format(formatter));
             }
             if (task.isCompleted() && task.getCompletedAt() != null) {
-                sb.append(" | Completed: ").append(task.getCompletedAt().format(formatter));
+                if (sb.length() > 0) {
+                    sb.append("\n");
+                }
+                sb.append("Completed: ").append(task.getCompletedAt().format(formatter));
             }
 
             taskTimestampTextView.setText(sb.toString());

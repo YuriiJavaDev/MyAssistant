@@ -33,25 +33,61 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/filterSpinner"
+    <FrameLayout
+        android:id="@+id/filterContainer"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/sortSpinner"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/sortContainer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taskInput" />
+        app:layout_constraintTop_toBottomOf="@+id/taskInput">
 
-    <Spinner
-        android:id="@+id/sortSpinner"
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="10dp"
+            android:src="@android:drawable/arrow_down_float"
+            app:tint="#3E2773" />
+
+        <Spinner
+            android:id="@+id/filterSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingStart="14dp"
+            android:paddingEnd="36dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/sortContainer"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="4dp"
+        android:background="@drawable/bg_spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/filterSpinner"
-        app:layout_constraintTop_toBottomOf="@+id/taskInput" />
+        app:layout_constraintStart_toEndOf="@+id/filterContainer"
+        app:layout_constraintTop_toBottomOf="@+id/taskInput">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="10dp"
+            android:src="@android:drawable/arrow_down_float"
+            app:tint="#3E2773" />
+
+        <Spinner
+            android:id="@+id/sortSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingStart="14dp"
+            android:paddingEnd="36dp" />
+    </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tasksRecyclerView"
@@ -63,7 +99,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomActionPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filterSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/filterContainer" />
 
     <LinearLayout
         android:id="@+id/bottomActionPanel"
