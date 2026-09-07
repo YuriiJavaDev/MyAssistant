@@ -18,7 +18,6 @@ public class WeatherFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Ініціалізуємо біндінг для погоди
         binding = FragmentWeatherBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }

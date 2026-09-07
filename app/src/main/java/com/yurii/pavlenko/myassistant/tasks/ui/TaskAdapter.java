@@ -1,20 +1,14 @@
 package com.yurii.pavlenko.myassistant.tasks.ui;
 
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.databinding.ItemTaskBinding;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,11 +39,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_task, parent, false);
-        return new TaskViewHolder(view);
+        ItemTaskBinding binding = ItemTaskBinding.inflate(
+                LayoutInflater.from(parent.getContext()),
+                parent,
+                false
+        );
+        return new TaskViewHolder(binding);
     }
 
     @Override
+    @SuppressWarnings("DataFlowIssue")
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task task = tasks.get(position);
         holder.bind(task, checkedListener, clickListener);
@@ -61,29 +60,25 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     }
 
     static class TaskViewHolder extends RecyclerView.ViewHolder {
-        private final CheckBox taskCheckBox;
-        private final TextView taskTitleTextView;
-        private final TextView taskTimestampTextView;
+        private final ItemTaskBinding binding;
 
-        public TaskViewHolder(@NonNull View itemView) {
-            super(itemView);
-            taskCheckBox = itemView.findViewById(R.id.taskCheckBox);
-            taskTitleTextView = itemView.findViewById(R.id.taskTitleTextView);
-            taskTimestampTextView = itemView.findViewById(R.id.taskTimestampTextView);
+        public TaskViewHolder(@NonNull ItemTaskBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
 
         public void bind(Task task, OnTaskCheckedListener checkedListener, OnTaskClickListener clickListener) {
-            taskTitleTextView.setText(task.getTitle());
-            taskCheckBox.setOnCheckedChangeListener(null);
-            taskCheckBox.setChecked(task.isCompleted());
+            binding.taskTitleTextView.setText(task.getTitle());
+            binding.taskCheckBox.setOnCheckedChangeListener(null);
+            binding.taskCheckBox.setChecked(task.isCompleted());
 
-            applyCompletionStyle(task.isCompleted());
-            applyImportanceColor(task.getImportance());
-            formatTimestamps(task);
+            TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, task.isCompleted());
+            TaskStyleHelper.applyImportanceColor(binding.taskTitleTextView, task.getImportance());
+            TaskTimeFormatter.formatTimestamps(binding.taskTimestampTextView, task);
 
-            taskCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            binding.taskCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 task.setCompleted(isChecked);
-                applyCompletionStyle(isChecked);
+                TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, isChecked);
                 if (checkedListener != null) {
                     checkedListener.onTaskChecked(task, isChecked);
                 }
@@ -94,55 +89,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     clickListener.onTaskClick(task);
                 }
             });
-        }
-
-        private void applyCompletionStyle(boolean isCompleted) {
-            if (isCompleted) {
-                taskTitleTextView.setPaintFlags(taskTitleTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            } else {
-                taskTitleTextView.setPaintFlags(taskTitleTextView.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
-            }
-        }
-
-        private void applyImportanceColor(String importance) {
-            if (importance == null) {
-                importance = "Normal";
-            }
-            switch (importance.toLowerCase()) {
-                case "urgent":
-                    taskTitleTextView.setTextColor(Color.parseColor("#D32F2F")); // Red
-                    break;
-                case "important":
-                    taskTitleTextView.setTextColor(Color.parseColor("#FA8C16")); // Brownish-orange
-                    break;
-                case "normal":
-                default:
-                    taskTitleTextView.setTextColor(Color.parseColor("#3E2773")); // Standard app text color
-                    break;
-            }
-        }
-
-        private void formatTimestamps(Task task) {
-            StringBuilder sb = new StringBuilder();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-
-            if (task.getCreatedAt() != null) {
-                sb.append("Created: ").append(task.getCreatedAt().format(formatter));
-            }
-            if (task.getUpdatedAt() != null) {
-                if (sb.length() > 0) {
-                    sb.append("\n");
-                }
-                sb.append("Edited: ").append(task.getUpdatedAt().format(formatter));
-            }
-            if (task.isCompleted() && task.getCompletedAt() != null) {
-                if (sb.length() > 0) {
-                    sb.append("\n");
-                }
-                sb.append("Completed: ").append(task.getCompletedAt().format(formatter));
-            }
-
-            taskTimestampTextView.setText(sb.toString());
         }
     }
 }
