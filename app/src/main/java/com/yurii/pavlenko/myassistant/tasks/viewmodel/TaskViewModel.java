@@ -3,13 +3,13 @@ package com.yurii.pavlenko.myassistant.tasks.viewmodel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class TaskViewModel extends ViewModel {
 
@@ -35,9 +35,7 @@ public class TaskViewModel extends ViewModel {
     }
 
     private void loadInitialData() {
-        allTasks.add(new Task(UUID.randomUUID(), "Drink a cup of coffee", false, LocalDateTime.now().minusHours(3), null, null, "Normal"));
-        allTasks.add(new Task(UUID.randomUUID(), "Read Java textbook", false, LocalDateTime.now().minusHours(2), null, null, "Important"));
-        allTasks.add(new Task(UUID.randomUUID(), "Sleep before and after lunch", false, LocalDateTime.now().minusHours(1), null, null, "Urgent"));
+        allTasks.addAll(TaskMockDataSource.getInitialTasks());
         applyFilterAndSort();
     }
 
@@ -52,55 +50,9 @@ public class TaskViewModel extends ViewModel {
     }
 
     public void applyFilterAndSort() {
-        List<Task> filtered;
-        switch (currentFilter) {
-            case "Active":
-                filtered = allTasks.stream().filter(t -> !t.isCompleted()).collect(Collectors.toList());
-                break;
-            case "Completed":
-                filtered = allTasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
-                break;
-            case "All Tasks":
-            default:
-                filtered = new ArrayList<>(allTasks);
-                break;
-        }
-
-        switch (currentSort) {
-            case "Alpha A-Z":
-                filtered.sort(Comparator.comparing(Task::getTitle, String.CASE_INSENSITIVE_ORDER));
-                break;
-            case "Alpha Z-A":
-                filtered.sort(Comparator.comparing(Task::getTitle, String.CASE_INSENSITIVE_ORDER).reversed());
-                break;
-            case "Status":
-                filtered.sort(Comparator.comparing(Task::isCompleted));
-                break;
-            case "Created":
-                filtered.sort(Comparator.comparing(Task::getCreatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Edited":
-                filtered.sort(Comparator.comparing(Task::getUpdatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Completed":
-                filtered.sort(Comparator.comparing(Task::getCompletedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Importance":
-                filtered.sort(Comparator.comparingInt(t -> getImportanceWeight(t.getImportance())));
-                break;
-        }
-
-        displayListLiveData.setValue(filtered);
+        List<Task> processedTasks = TaskFilterSorter.filterAndSort(allTasks, currentFilter, currentSort);
+        displayListLiveData.setValue(processedTasks);
         updateStatistics();
-    }
-
-    private int getImportanceWeight(String importance) {
-        if (importance == null) return 3;
-        switch (importance.toLowerCase()) {
-            case "urgent": return 1;
-            case "important": return 2;
-            case "normal": default: return 3;
-        }
     }
 
     public void createNewTask(String title, String importance) {
@@ -147,12 +99,7 @@ public class TaskViewModel extends ViewModel {
     }
 
     private void updateStatistics() {
-        int total = allTasks.size();
-        int completed = (int) allTasks.stream().filter(Task::isCompleted).count();
-        int left = total - completed;
-        int progress = total > 0 ? (completed * 100) / total : 0;
-
-        String statsText = String.format("Total: %d  Completed: %d  Left: %d  Progress: %d%%", total, completed, left, progress);
+        String statsText = TaskStatisticsCalculator.calculateStatistics(allTasks);
         statisticsLiveData.setValue(statsText);
     }
 }
