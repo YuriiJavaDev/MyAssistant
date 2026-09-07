@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.model.tasks;
+package com.yurii.pavlenko.myassistant.tasks.model;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

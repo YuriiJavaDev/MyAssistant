@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.adapter;
+package com.yurii.pavlenko.myassistant.tasks.ui;
 
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.yurii.pavlenko.myassistant.R;
-import com.yurii.pavlenko.myassistant.model.tasks.Task;
+import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

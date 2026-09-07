@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.yurii.pavlenko.myassistant.fragments.CalculatorFragment;
 import com.yurii.pavlenko.myassistant.fragments.CurrencyFragment;
-import com.yurii.pavlenko.myassistant.fragments.TasksFragment;
+import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
 import com.yurii.pavlenko.myassistant.fragments.WeatherFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {

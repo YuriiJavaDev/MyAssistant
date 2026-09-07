@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.fragments;
+package com.yurii.pavlenko.myassistant.tasks.ui;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -10,27 +10,23 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.yurii.pavlenko.myassistant.R;
-import com.yurii.pavlenko.myassistant.adapter.TaskAdapter;
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
-import com.yurii.pavlenko.myassistant.model.tasks.Task;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
+import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 public class TasksFragment extends Fragment {
 
     private FragmentTasksBinding binding;
     private TaskAdapter taskAdapter;
-    private List<Task> allTasks;
-    private List<Task> displayList;
+    private TaskViewModel taskViewModel;
 
     @Nullable
     @Override
@@ -43,37 +39,31 @@ public class TasksFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        initDataStructures();
+        taskViewModel = new ViewModelProvider(this).get(TaskViewModel.class);
+
         setupRecyclerView();
-        loadInitialData();
         setupSpinners();
         setupActionButtonsListeners();
-    }
-
-    private void initDataStructures() {
-        allTasks = new ArrayList<>();
-        displayList = new ArrayList<>();
+        observeViewModel();
     }
 
     private void setupRecyclerView() {
         binding.tasksRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         taskAdapter = new TaskAdapter(
-                (task, isChecked) -> {
-                    task.setCompleted(isChecked);
-                    task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
-                    task.setUpdatedAt(LocalDateTime.now());
-                    applyFilterAndSort();
-                },
-                this::showEditTaskDialog // Open edit dialog when task item is clicked
+                (task, isChecked) -> taskViewModel.updateTaskCompletion(task, isChecked),
+                this::showEditTaskDialog
         );
         binding.tasksRecyclerView.setAdapter(taskAdapter);
     }
 
-    private void loadInitialData() {
-        allTasks.add(new Task(UUID.randomUUID(), "выпить чашечку кофе", false, LocalDateTime.now().minusHours(3), null, null, "Normal"));
-        allTasks.add(new Task(UUID.randomUUID(), "Почитать учебник по Java", false, LocalDateTime.now().minusHours(2), null, null, "Important"));
-        allTasks.add(new Task(UUID.randomUUID(), "поспать перед обедом и после него", false, LocalDateTime.now().minusHours(1), null, null, "Urgent"));
-        applyFilterAndSort();
+    private void observeViewModel() {
+        taskViewModel.getDisplayList().observe(getViewLifecycleOwner(), tasks -> {
+            taskAdapter.setTasks(tasks);
+        });
+
+        taskViewModel.getStatistics().observe(getViewLifecycleOwner(), statsText -> {
+            binding.statisticsTextView.setText(statsText);
+        });
     }
 
     private void setupSpinners() {
@@ -81,6 +71,7 @@ public class TasksFragment extends Fragment {
         ArrayAdapter<String> filterAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, filterOptions);
         filterAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.filterSpinner.setAdapter(filterAdapter);
+
         String[] sortOptions = {
                 "Alpha A-Z",
                 "Alpha Z-A",
@@ -97,7 +88,11 @@ public class TasksFragment extends Fragment {
         AdapterView.OnItemSelectedListener selectionListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                applyFilterAndSort();
+                String selectedFilter = binding.filterSpinner.getSelectedItem() != null ? binding.filterSpinner.getSelectedItem().toString() : "All Tasks";
+                String selectedSort = binding.sortSpinner.getSelectedItem() != null ? binding.sortSpinner.getSelectedItem().toString() : "Alpha A-Z";
+
+                taskViewModel.setFilter(selectedFilter);
+                taskViewModel.setSort(selectedSort);
             }
 
             @Override
@@ -108,62 +103,6 @@ public class TasksFragment extends Fragment {
         binding.sortSpinner.setOnItemSelectedListener(selectionListener);
     }
 
-    private void applyFilterAndSort() {
-        String selectedFilter = binding.filterSpinner.getSelectedItem() != null ? binding.filterSpinner.getSelectedItem().toString() : "All Tasks";
-        String selectedSort = binding.sortSpinner.getSelectedItem() != null ? binding.sortSpinner.getSelectedItem().toString() : "Alpha A-Z";
-
-        List<Task> filtered;
-        switch (selectedFilter) {
-            case "Active":
-                filtered = allTasks.stream().filter(t -> !t.isCompleted()).collect(Collectors.toList());
-                break;
-            case "Completed":
-                filtered = allTasks.stream().filter(Task::isCompleted).collect(Collectors.toList());
-                break;
-            case "All Tasks":
-            default:
-                filtered = new ArrayList<>(allTasks);
-                break;
-        }
-
-        switch (selectedSort) {
-            case "Alpha A-Z":
-                filtered.sort(Comparator.comparing(Task::getTitle, String.CASE_INSENSITIVE_ORDER));
-                break;
-            case "Alpha Z-A":
-                filtered.sort(Comparator.comparing(Task::getTitle, String.CASE_INSENSITIVE_ORDER).reversed());
-                break;
-            case "Status":
-                filtered.sort(Comparator.comparing(Task::isCompleted));
-                break;
-            case "Created":
-                filtered.sort(Comparator.comparing(Task::getCreatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Edited":
-                filtered.sort(Comparator.comparing(Task::getUpdatedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Completed":
-                filtered.sort(Comparator.comparing(Task::getCompletedAt, Comparator.nullsLast(Comparator.naturalOrder())).reversed());
-                break;
-            case "Importance":
-                filtered.sort(Comparator.comparingInt(t -> getImportanceWeight(t.getImportance())));
-                break;
-        }
-
-        displayList = filtered;
-        taskAdapter.setTasks(displayList);
-        updateStatistics();
-    }
-
-    private int getImportanceWeight(String importance) {
-        if (importance == null) return 3;
-        switch (importance.toLowerCase()) {
-            case "urgent": return 1;
-            case "important": return 2;
-            case "normal": default: return 3;
-        }
-    }
-
     private void setupActionButtonsListeners() {
         binding.addButton.setOnClickListener(v -> {
             String initialText = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
@@ -171,27 +110,17 @@ public class TasksFragment extends Fragment {
         });
 
         binding.deleteCompletedButton.setOnClickListener(v -> {
-            boolean hasCompleted = false;
-            for (Task task : allTasks) {
-                if (task.isCompleted()) {
-                    hasCompleted = true;
-                    break;
-                }
-            }
-
+            boolean hasCompleted = taskViewModel.hasCompletedTasks();
             showDeleteConfirmationDialog(hasCompleted, () -> {
-                allTasks.removeIf(Task::isCompleted);
-                applyFilterAndSort();
+                taskViewModel.deleteCompletedTasks();
                 Toast.makeText(requireContext(), "Completed tasks deleted", Toast.LENGTH_SHORT).show();
             });
         });
 
         binding.clearAllButton.setOnClickListener(v -> {
-            boolean hasTasks = !allTasks.isEmpty();
-
+            boolean hasTasks = taskViewModel.hasTasks();
             showDeleteConfirmationDialog(hasTasks, () -> {
-                allTasks.clear();
-                applyFilterAndSort();
+                taskViewModel.clearAllTasks();
                 Toast.makeText(requireContext(), "All tasks cleared", Toast.LENGTH_SHORT).show();
             });
         });
@@ -210,7 +139,7 @@ public class TasksFragment extends Fragment {
         ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
         importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
         dialogImportanceSpinner.setAdapter(importanceAdapter);
-        dialogImportanceSpinner.setSelection(0); // Default to Normal
+        dialogImportanceSpinner.setSelection(0);
 
         new AlertDialog.Builder(requireContext())
                 .setTitle("Add New Task")
@@ -220,7 +149,7 @@ public class TasksFragment extends Fragment {
                     String importance = dialogImportanceSpinner.getSelectedItem().toString();
 
                     if (!description.isEmpty()) {
-                        createNewTask(description, importance);
+                        taskViewModel.createNewTask(description, importance);
                         binding.taskInput.setText("");
                     } else {
                         Toast.makeText(requireContext(), "Please enter a task title", Toast.LENGTH_SHORT).show();
@@ -262,19 +191,15 @@ public class TasksFragment extends Fragment {
                     String importance = dialogImportanceSpinner.getSelectedItem().toString();
 
                     if (!description.isEmpty()) {
-                        task.setTitle(description);
-                        task.setImportance(importance);
-                        task.setUpdatedAt(LocalDateTime.now());
-                        applyFilterAndSort();
+                        taskViewModel.updateTaskDetails(task, description, importance);
                         Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNeutralButton("Delete", (dialog, which) -> {
-                    showDeleteConfirmationDialog(true,() -> {
-                        allTasks.remove(task);
-                        applyFilterAndSort();
+                    showDeleteConfirmationDialog(true, () -> {
+                        taskViewModel.deleteTask(task);
                         Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
                     });
                 })
@@ -295,22 +220,6 @@ public class TasksFragment extends Fragment {
                 .setPositiveButton("Delete", (dialog, which) -> onConfirmed.run())
                 .setNegativeButton("Cancel", null)
                 .show();
-    }
-
-    private void createNewTask(String title, String importance) {
-        Task newTask = new Task(UUID.randomUUID(), title, false, LocalDateTime.now(), null, null, importance);
-        allTasks.add(0, newTask);
-        applyFilterAndSort();
-    }
-
-    private void updateStatistics() {
-        int total = allTasks.size();
-        int completed = (int) allTasks.stream().filter(Task::isCompleted).count();
-        int left = total - completed;
-        int progress = total > 0 ? (completed * 100) / total : 0;
-
-        String statsText = String.format("Total: %d  Completed: %d  Left: %d  Progress: %d%%", total, completed, left, progress);
-        binding.statisticsTextView.setText(statsText);
     }
 
     @Override
