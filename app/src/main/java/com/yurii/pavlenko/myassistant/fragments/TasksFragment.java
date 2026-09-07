@@ -171,15 +171,29 @@ public class TasksFragment extends Fragment {
         });
 
         binding.deleteCompletedButton.setOnClickListener(v -> {
-            allTasks.removeIf(Task::isCompleted);
-            applyFilterAndSort();
-            Toast.makeText(requireContext(), "Completed tasks deleted", Toast.LENGTH_SHORT).show();
+            boolean hasCompleted = false;
+            for (Task task : allTasks) {
+                if (task.isCompleted()) {
+                    hasCompleted = true;
+                    break;
+                }
+            }
+
+            showDeleteConfirmationDialog(hasCompleted, () -> {
+                allTasks.removeIf(Task::isCompleted);
+                applyFilterAndSort();
+                Toast.makeText(requireContext(), "Completed tasks deleted", Toast.LENGTH_SHORT).show();
+            });
         });
 
         binding.clearAllButton.setOnClickListener(v -> {
-            allTasks.clear();
-            applyFilterAndSort();
-            Toast.makeText(requireContext(), "All tasks cleared", Toast.LENGTH_SHORT).show();
+            boolean hasTasks = !allTasks.isEmpty();
+
+            showDeleteConfirmationDialog(hasTasks, () -> {
+                allTasks.clear();
+                applyFilterAndSort();
+                Toast.makeText(requireContext(), "All tasks cleared", Toast.LENGTH_SHORT).show();
+            });
         });
     }
 
@@ -243,22 +257,43 @@ public class TasksFragment extends Fragment {
         new AlertDialog.Builder(requireContext())
                 .setTitle("Edit task")
                 .setView(dialogView)
-                .setPositiveButton("OK", (dialog, which) -> {
+                .setPositiveButton("Save", (dialog, which) -> {
                     String description = dialogTaskEditText.getText().toString().trim();
                     String importance = dialogImportanceSpinner.getSelectedItem().toString();
 
                     if (!description.isEmpty()) {
                         task.setTitle(description);
                         task.setImportance(importance);
-                        task.setUpdatedAt(LocalDateTime.now()); // Update modification timestamp
+                        task.setUpdatedAt(LocalDateTime.now());
                         applyFilterAndSort();
                         Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
                     }
                 })
+                .setNeutralButton("Delete", (dialog, which) -> {
+                    showDeleteConfirmationDialog(true,() -> {
+                        allTasks.remove(task);
+                        applyFilterAndSort();
+                        Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
+                    });
+                })
                 .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                 .create()
+                .show();
+    }
+
+    private void showDeleteConfirmationDialog(boolean canDelete, Runnable onConfirmed) {
+        if (!canDelete) {
+            Toast.makeText(requireContext(), "No objects found to delete!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        new AlertDialog.Builder(requireContext())
+                .setTitle("Delete Confirmation")
+                .setMessage("Are you sure you want to delete this item? This action cannot be undone!")
+                .setPositiveButton("Delete", (dialog, which) -> onConfirmed.run())
+                .setNegativeButton("Cancel", null)
                 .show();
     }
 
