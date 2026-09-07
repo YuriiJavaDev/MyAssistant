@@ -77,8 +77,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             TaskTimeFormatter.formatTimestamps(binding.taskTimestampTextView, task);
 
             binding.taskCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-                task.setCompleted(isChecked);
-                TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, isChecked);
                 if (checkedListener != null) {
                     checkedListener.onTaskChecked(task, isChecked);
                 }
