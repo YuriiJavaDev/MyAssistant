@@ -15,6 +15,10 @@ import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper
 
 import java.time.LocalDate;
 
+/**
+ * Unified dialog for creating and editing tasks.
+ * Created: 2026-09-08
+ */
 public class TaskDialog {
 
     public interface OnTaskSavedListener {
@@ -29,10 +33,12 @@ public class TaskDialog {
         void onTaskDeleted(Task task);
     }
 
+    // Show dialog for creating a new task
     public static void showCreate(Context context, @Nullable String initialText, OnTaskSavedListener listener) {
         show(context, null, initialText, listener, null, null);
     }
 
+    // Show dialog for editing an existing task
     public static void showEdit(Context context, Task task, OnTaskUpdatedListener updateListener, OnTaskDeletedListener deleteListener) {
         show(context, task, null, null, updateListener, deleteListener);
     }
@@ -44,6 +50,7 @@ public class TaskDialog {
                              @Nullable OnTaskUpdatedListener updateListener,
                              @Nullable OnTaskDeletedListener deleteListener) {
 
+        // Use ViewBinding instead of multiple findViewById calls
         DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(context));
 
         String[] importanceOptions = {"Normal", "Important", "Urgent"};
@@ -54,12 +61,18 @@ public class TaskDialog {
         TaskDeadlinePickerHelper deadlineHelper = new TaskDeadlinePickerHelper(context);
         boolean isEditMode = task != null;
 
+        LocalDate initialDeadline = null;
+
         if (isEditMode) {
             // Edit mode setup
             binding.dialogTaskEditText.setText(task.getTitle());
             binding.dialogShowTimestampsCheckBox.setChecked(task.isShowTimestamps());
-            binding.dialogRemindCheckBox.setChecked(task.isRemindSoundOneDayBefore());
-            deadlineHelper.setupDeadlinePicker(context, binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, task.getDeadline());
+            initialDeadline = task.getDeadline();
+
+            // Set initial reminder checkbox state based on deadline existence
+            boolean hasDeadline = initialDeadline != null;
+            binding.dialogRemindCheckBox.setEnabled(hasDeadline);
+            binding.dialogRemindCheckBox.setChecked(hasDeadline && task.isRemindSoundOneDayBefore());
 
             if (task.getImportance() != null) {
                 for (int i = 0; i < importanceOptions.length; i++) {
@@ -75,9 +88,15 @@ public class TaskDialog {
                 binding.dialogTaskEditText.setText(initialText);
             }
             binding.dialogShowTimestampsCheckBox.setChecked(true);
-            deadlineHelper.setupDeadlinePicker(context, binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, null);
+
+            // New tasks start without a deadline, so reminder checkbox is disabled
+            binding.dialogRemindCheckBox.setEnabled(false);
+            binding.dialogRemindCheckBox.setChecked(false);
             binding.dialogImportanceSpinner.setSelection(0);
         }
+
+        // Setup deadline picker helper and synchronize checkbox state when deadline changes
+        deadlineHelper.setupDeadlinePicker(context, binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, initialDeadline);
 
         binding.dialogTaskEditText.setSelection(binding.dialogTaskEditText.getText().length());
 
@@ -88,7 +107,9 @@ public class TaskDialog {
                     String title = binding.dialogTaskEditText.getText().toString().trim();
                     String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
                     LocalDate deadline = deadlineHelper.getSelectedDeadline();
-                    boolean remindSound = binding.dialogRemindCheckBox.isChecked();
+
+                    // If deadline is null, reminder must be false
+                    boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
                     boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
 
                     if (title.isEmpty()) {

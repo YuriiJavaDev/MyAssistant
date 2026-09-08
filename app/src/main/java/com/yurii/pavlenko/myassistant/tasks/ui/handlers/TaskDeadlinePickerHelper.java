@@ -2,81 +2,83 @@ package com.yurii.pavlenko.myassistant.tasks.ui.handlers;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.speech.tts.TextToSpeech;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.yurii.pavlenko.myassistant.tasks.ui.TaskTimeFormatter;
+import androidx.annotation.Nullable;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Locale;
 
 public class TaskDeadlinePickerHelper {
-
+    private final Context context;
     private LocalDate selectedDeadline;
-    private TextToSpeech textToSpeech;
-    private boolean isTtsInitialized = false;
-    private static final DateTimeFormatter DEADLINE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+    private TextView deadlineTextView;
+    private CheckBox remindCheckBox;
 
     public TaskDeadlinePickerHelper(Context context) {
-        textToSpeech = new TextToSpeech(context, status -> {
-            if (status == TextToSpeech.SUCCESS) {
-                textToSpeech.setLanguage(Locale.ENGLISH);
-                isTtsInitialized = true;
-            }
-        });
+        this.context = context;
+        this.selectedDeadline = null;
     }
 
-    public void setupDeadlinePicker(Context context, TextView deadlineDisplayTextView,
-                                    CheckBox remindCheckBox, LocalDate initialDate) {
-        this.selectedDeadline = initialDate;
-        updateDeadlineDisplay(deadlineDisplayTextView);
+    public void setupDeadlinePicker(Context context, TextView deadlineTextView, CheckBox remindCheckBox, @Nullable LocalDate initialDeadline) {
+        this.deadlineTextView = deadlineTextView;
+        this.remindCheckBox = remindCheckBox;
+        this.selectedDeadline = initialDeadline;
 
-        deadlineDisplayTextView.setOnClickListener(v -> {
-            LocalDate baseDate = selectedDeadline != null ? selectedDeadline : LocalDate.now();
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    context,
-                    (view, year, month, dayOfMonth) -> {
-                        selectedDeadline = LocalDate.of(year, month + 1, dayOfMonth);
-                        updateDeadlineDisplay(deadlineDisplayTextView);
-                        speakSelection("Deadline set to " + selectedDeadline.format(DEADLINE_FORMATTER));
-                    },
-                    baseDate.getYear(),
-                    baseDate.getMonthValue() - 1,
-                    baseDate.getDayOfMonth()
-            );
-            datePickerDialog.show();
-        });
+        updateDeadlineDisplay();
 
-        remindCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                speakSelection("Sound reminder one day before enabled");
+        deadlineTextView.setOnClickListener(v -> showDatePicker());
+    }
+
+    private void showDatePicker() {
+        LocalDate initialDate = selectedDeadline != null ? selectedDeadline : LocalDate.now();
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                context,
+                (view, year, month, dayOfMonth) -> {
+                    selectedDeadline = LocalDate.of(year, month + 1, dayOfMonth);
+                    updateDeadlineDisplay();
+
+                    if (remindCheckBox != null) {
+                        remindCheckBox.setEnabled(true);
+                    }
+                },
+                initialDate.getYear(),
+                initialDate.getMonthValue() - 1,
+                initialDate.getDayOfMonth()
+        );
+
+        datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Clear", (dialog, which) -> {
+            selectedDeadline = null;
+            updateDeadlineDisplay();
+
+            if (remindCheckBox != null) {
+                remindCheckBox.setEnabled(false);
+                remindCheckBox.setChecked(false);
             }
         });
+
+        datePickerDialog.show();
     }
-    private void updateDeadlineDisplay(TextView textView) {
+
+    private void updateDeadlineDisplay() {
         if (selectedDeadline != null) {
-            String formattedText = TaskTimeFormatter.getFormattedDeadlineText(selectedDeadline);
-            textView.setText(formattedText);
+            long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), selectedDeadline);
+            String text = "Deadline: " + selectedDeadline.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " — " + daysLeft + " days left!";
+            deadlineTextView.setText(text);
         } else {
-            textView.setText("Click to select a deadline");
-        }
-    }
-    public void speakSelection(String message) {
-        if (isTtsInitialized && textToSpeech != null) {
-            textToSpeech.speak(message, TextToSpeech.QUEUE_FLUSH, null, null);
+            deadlineTextView.setText("Click to select a deadline");
         }
     }
 
     public LocalDate getSelectedDeadline() {
         return selectedDeadline;
     }
+
     public void release() {
-        if (textToSpeech != null) {
-            textToSpeech.stop();
-            textToSpeech.shutdown();
-        }
+        deadlineTextView = null;
+        remindCheckBox = null;
     }
 }
