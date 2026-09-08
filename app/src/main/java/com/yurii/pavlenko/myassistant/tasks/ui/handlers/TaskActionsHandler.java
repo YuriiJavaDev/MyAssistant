@@ -13,8 +13,8 @@ public class TaskActionsHandler {
     public static void setupClickListeners(Context context, FragmentTasksBinding binding, TaskViewModel taskViewModel) {
         binding.addButton.setOnClickListener(v -> {
             String initialText = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
-            AddTaskDialog.show(context, initialText, (title, importance) -> {
-                taskViewModel.createNewTask(title, importance);
+            AddTaskDialog.show(context, initialText, (title, importance, deadline, remindSound) -> {
+                taskViewModel.createNewTask(title, importance, deadline, remindSound);
                 binding.taskInput.setText("");
             });
         });

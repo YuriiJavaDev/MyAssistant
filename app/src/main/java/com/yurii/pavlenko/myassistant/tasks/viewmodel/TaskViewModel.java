@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel;
 
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class TaskViewModel extends ViewModel {
 
@@ -55,9 +55,13 @@ public class TaskViewModel extends ViewModel {
         updateStatistics();
     }
 
-    public void createNewTask(String title, String importance) {
-        Task newTask = new Task(UUID.randomUUID(), title, false, LocalDateTime.now(), null, null, importance);
-        allTasks.add(0, newTask);
+    public void createNewTask(String title, String importance, LocalDate deadline, boolean remindSound) {
+        Task newTask = new Task(title);
+        newTask.setImportance(importance);
+        newTask.setDeadline(deadline);
+        newTask.setRemindSoundOneDayBefore(remindSound);
+
+        allTasks.add(newTask);
         applyFilterAndSort();
     }
 
@@ -68,9 +72,11 @@ public class TaskViewModel extends ViewModel {
         applyFilterAndSort();
     }
 
-    public void updateTaskDetails(Task task, String title, String importance) {
+    public void updateTaskDetails(Task task, String title, String importance, LocalDate deadline, boolean remindSound) {
         task.setTitle(title);
         task.setImportance(importance);
+        task.setDeadline(deadline);
+        task.setRemindSoundOneDayBefore(remindSound);
         task.setUpdatedAt(LocalDateTime.now());
         applyFilterAndSort();
     }

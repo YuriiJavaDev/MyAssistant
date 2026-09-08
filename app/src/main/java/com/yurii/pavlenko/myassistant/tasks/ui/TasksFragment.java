@@ -49,7 +49,7 @@ public class TasksFragment extends Fragment {
                 task -> EditTaskDialog.show(
                         requireContext(),
                         task,
-                        (t, title, importance) -> taskViewModel.updateTaskDetails(t, title, importance),
+                        (t, title, importance, deadline, remindSound) -> taskViewModel.updateTaskDetails(t, title, importance, deadline, remindSound),
                         t -> taskViewModel.deleteTask(t)
                 )
         );

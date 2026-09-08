@@ -74,6 +74,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
             TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, task.isCompleted());
             TaskStyleHelper.applyImportanceColor(binding.taskTitleTextView, task.getImportance());
+            TaskTimeFormatter.formatDeadline(binding.deadlineTextView, task);
             TaskTimeFormatter.formatTimestamps(binding.taskTimestampTextView, task);
 
             binding.taskCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {

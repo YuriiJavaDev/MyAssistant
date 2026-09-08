@@ -5,28 +5,33 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
+
+import java.time.LocalDate;
 
 public class EditTaskDialog {
 
     public interface OnTaskUpdatedListener {
-        void onTaskUpdated(Task task, String title, String importance);
+        void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound);
     }
-
     public interface OnTaskDeletedListener {
         void onTaskDeleted(Task task);
     }
-
     public static void show(Context context, Task task, OnTaskUpdatedListener updateListener, OnTaskDeletedListener deleteListener) {
         View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_add_task, null);
 
         EditText dialogTaskEditText = dialogView.findViewById(R.id.dialogTaskEditText);
         Spinner dialogImportanceSpinner = dialogView.findViewById(R.id.dialogImportanceSpinner);
+        TextView dialogDeadlineTextView = dialogView.findViewById(R.id.dialogDeadlineTextView);
+        CheckBox dialogRemindCheckBox = dialogView.findViewById(R.id.dialogRemindCheckBox);
 
         dialogTaskEditText.setText(task.getTitle());
         dialogTaskEditText.setSelection(dialogTaskEditText.getText().length());
@@ -45,28 +50,36 @@ public class EditTaskDialog {
             }
         }
 
-        new AlertDialog.Builder(context)
+        TaskDeadlinePickerHelper deadlineHelper = new TaskDeadlinePickerHelper(context);
+        deadlineHelper.setupDeadlinePicker(context, dialogDeadlineTextView, dialogRemindCheckBox, task.getDeadline());
+        dialogRemindCheckBox.setChecked(task.isRemindSoundOneDayBefore());
+
+        AlertDialog dialog = new AlertDialog.Builder(context)
                 .setTitle("Edit task")
                 .setView(dialogView)
-                .setPositiveButton("Save", (dialog, which) -> {
+                .setPositiveButton("Save", (dialogInterface, which) -> {
                     String description = dialogTaskEditText.getText().toString().trim();
                     String importance = dialogImportanceSpinner.getSelectedItem().toString();
+                    LocalDate deadline = deadlineHelper.getSelectedDeadline();
+                    boolean remindSound = dialogRemindCheckBox.isChecked();
 
                     if (!description.isEmpty()) {
-                        updateListener.onTaskUpdated(task, description, importance);
+                        updateListener.onTaskUpdated(task, description, importance, deadline, remindSound);
                         Toast.makeText(context, "Task updated", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(context, "Task description cannot be empty", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .setNeutralButton("Delete", (dialog, which) -> {
+                .setNeutralButton("Delete", (dialogInterface, which) -> {
                     DeleteConfirmationDialog.show(context, true, () -> {
                         deleteListener.onTaskDeleted(task);
                         Toast.makeText(context, "Task deleted", Toast.LENGTH_SHORT).show();
                     });
                 })
-                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
-                .create()
-                .show();
+                .setNegativeButton("Cancel", (dialogInterface, which) -> dialogInterface.dismiss())
+                .create();
+
+        dialog.setOnDismissListener(dialogInterface -> deadlineHelper.release());
+        dialog.show();
     }
 }
