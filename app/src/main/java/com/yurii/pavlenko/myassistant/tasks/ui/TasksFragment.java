@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
-import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.EditTaskDialog;
+import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialog;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskActionsHandler;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskSpinnerHelper;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
@@ -46,10 +46,10 @@ public class TasksFragment extends Fragment {
         binding.tasksRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         taskAdapter = new TaskAdapter(
                 (task, isChecked) -> taskViewModel.updateTaskCompletion(task, isChecked),
-                task -> EditTaskDialog.show(
+                task -> TaskDialog.showEdit(
                         requireContext(),
                         task,
-                        (t, title, importance, deadline, remindSound) -> taskViewModel.updateTaskDetails(t, title, importance, deadline, remindSound),
+                        (t, title, importance, deadline, remindSound, showTimestamps) -> taskViewModel.updateTaskDetails(t, title, importance, deadline, remindSound, showTimestamps),
                         t -> taskViewModel.deleteTask(t)
                 )
         );

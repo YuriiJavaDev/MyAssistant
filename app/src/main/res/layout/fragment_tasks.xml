@@ -95,7 +95,6 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomActionPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,6 +107,7 @@
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tasksRecyclerView"
         app:layout_constraintBottom_toTopOf="@+id/statisticsTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

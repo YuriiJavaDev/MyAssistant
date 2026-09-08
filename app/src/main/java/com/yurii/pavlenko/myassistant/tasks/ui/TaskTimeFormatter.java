@@ -9,10 +9,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-/**
- * Utility class for formatting task timestamps and deadlines consistently.
- * Created: 2026-09-08
- */
 public class TaskTimeFormatter {
 
     private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");

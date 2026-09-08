@@ -86,4 +86,14 @@
         android:textColor="#3E2773"
         android:textSize="14sp" />
 
+    <CheckBox
+        android:id="@+id/dialogShowTimestampsCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="Show creation/edit dates"
+        android:textColor="#3E2773"
+        android:textSize="14sp" />
+
 </LinearLayout>

@@ -4,72 +4,139 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-/**
- * Task model representing a single task item with details, importance, deadline, and reminders.
- * Created: 2026-09-08
- */
 public class Task {
     private UUID id;
     private String title;
-    private boolean completed;
+    private boolean isCompleted;
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private LocalDateTime completedAt;
+    private LocalDateTime updatedAt;
     private String importance;
     private LocalDate deadline;
     private boolean remindSoundOneDayBefore;
+    private boolean showTimestamps;
 
-    public Task() {}
-
-    // Updated constructor including deadline and sound reminder parameters
-    public Task(UUID id, String title, boolean completed, LocalDateTime createdAt,
-                LocalDateTime updatedAt, LocalDateTime completedAt, String importance,
-                LocalDate deadline, boolean remindSoundOneDayBefore) {
-        this.id = id != null ? id : UUID.randomUUID();
+    // Full constructor
+    public Task(UUID id, String title, boolean isCompleted, LocalDateTime createdAt,
+                LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
+                LocalDate deadline, boolean remindSoundOneDayBefore, boolean showTimestamps) {
+        this.id = id;
         this.title = title;
-        this.completed = completed;
+        this.isCompleted = isCompleted;
         this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
         this.completedAt = completedAt;
-        this.importance = (importance == null) ? "Normal" : importance;
+        this.updatedAt = updatedAt;
+        this.importance = importance;
         this.deadline = deadline;
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
+        this.showTimestamps = showTimestamps;
     }
 
+    // Constructor for compatibility with MockDataSource
+    public Task(UUID id, String title, boolean isCompleted, LocalDateTime createdAt,
+                LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
+                LocalDate deadline, boolean showTimestamps) {
+        this.id = id;
+        this.title = title;
+        this.isCompleted = isCompleted;
+        this.createdAt = createdAt;
+        this.completedAt = completedAt;
+        this.updatedAt = updatedAt;
+        this.importance = importance;
+        this.deadline = deadline;
+        this.remindSoundOneDayBefore = false;
+        this.showTimestamps = showTimestamps;
+    }
+
+    // Convenient constructor for creating new tasks
     public Task(String title) {
         this.id = UUID.randomUUID();
         this.title = title;
-        this.completed = false;
+        this.isCompleted = false;
         this.createdAt = LocalDateTime.now();
         this.importance = "Normal";
+        this.remindSoundOneDayBefore = false;
+        this.showTimestamps = true;
     }
 
-    public UUID getId() { return id; }
-    public void setId(UUID id) { this.id = id; }
+    // Getters and Setters
+    public UUID getId() {
+        return id;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
-    public boolean isCompleted() { return completed; }
-    public void setCompleted(boolean completed) { this.completed = completed; }
+    public String getTitle() {
+        return title;
+    }
 
-    public String getImportance() { return importance; }
-    public void setImportance(String importance) { this.importance = importance; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public boolean isCompleted() {
+        return isCompleted;
+    }
 
-    public LocalDateTime getUpdatedAt() { return updatedAt; }
-    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
 
-    public LocalDateTime getCompletedAt() { return completedAt; }
-    public void setCompletedAt(LocalDateTime completedAt) { this.completedAt = completedAt; }
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 
-    public LocalDate getDeadline() { return deadline; }
-    public void setDeadline(LocalDate deadline) { this.deadline = deadline; }
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 
-    public boolean isRemindSoundOneDayBefore() { return remindSoundOneDayBefore; }
+    public LocalDateTime getCompletedAt() {
+        return completedAt;
+    }
+
+    public void setCompletedAt(LocalDateTime completedAt) {
+        this.completedAt = completedAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getImportance() {
+        return importance;
+    }
+
+    public void setImportance(String importance) {
+        this.importance = importance;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
+
+    public boolean isRemindSoundOneDayBefore() {
+        return remindSoundOneDayBefore;
+    }
+
     public void setRemindSoundOneDayBefore(boolean remindSoundOneDayBefore) {
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
+    }
+
+    public boolean isShowTimestamps() {
+        return showTimestamps;
+    }
+
+    public void setShowTimestamps(boolean showTimestamps) {
+        this.showTimestamps = showTimestamps;
     }
 }

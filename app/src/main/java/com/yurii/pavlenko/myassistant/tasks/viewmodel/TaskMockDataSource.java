@@ -11,9 +11,9 @@ public class TaskMockDataSource {
 
     public static List<Task> getInitialTasks() {
         List<Task> tasks = new ArrayList<>();
-        tasks.add(new Task(UUID.randomUUID(), "Drink a cup of coffee", false, LocalDateTime.now().minusHours(3), null, null, "Normal", null, false));
-        tasks.add(new Task(UUID.randomUUID(), "Read Java textbook", false, LocalDateTime.now().minusHours(2), null, null, "Important", null, false));
-        tasks.add(new Task(UUID.randomUUID(), "Sleep before and after lunch", false, LocalDateTime.now().minusHours(1), null, null, "Urgent", null, false));
+        tasks.add(new Task(UUID.randomUUID(), "Drink a cup of coffee", false, LocalDateTime.now().minusHours(3), null, null, "Normal", null, true));
+        tasks.add(new Task(UUID.randomUUID(), "Read Java textbook", false, LocalDateTime.now().minusHours(2), null, null, "Important", null, true));
+        tasks.add(new Task(UUID.randomUUID(), "Sleep before and after lunch", false, LocalDateTime.now().minusHours(1), null, null, "Urgent", null, true));
         return tasks;
     }
 }

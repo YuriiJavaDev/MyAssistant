@@ -55,11 +55,12 @@ public class TaskViewModel extends ViewModel {
         updateStatistics();
     }
 
-    public void createNewTask(String title, String importance, LocalDate deadline, boolean remindSound) {
+    public void createNewTask(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
         Task newTask = new Task(title);
         newTask.setImportance(importance);
         newTask.setDeadline(deadline);
         newTask.setRemindSoundOneDayBefore(remindSound);
+        newTask.setShowTimestamps(showTimestamps);
 
         allTasks.add(newTask);
         applyFilterAndSort();
@@ -72,11 +73,12 @@ public class TaskViewModel extends ViewModel {
         applyFilterAndSort();
     }
 
-    public void updateTaskDetails(Task task, String title, String importance, LocalDate deadline, boolean remindSound) {
+    public void updateTaskDetails(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
         task.setTitle(title);
         task.setImportance(importance);
         task.setDeadline(deadline);
         task.setRemindSoundOneDayBefore(remindSound);
+        task.setShowTimestamps(showTimestamps);
         task.setUpdatedAt(LocalDateTime.now());
         applyFilterAndSort();
     }
