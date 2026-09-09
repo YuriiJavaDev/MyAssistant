@@ -1,11 +1,18 @@
 package com.yurii.pavlenko.myassistant.tasks.model;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
+@Entity(tableName = "tasks")
 public class Task {
-    private UUID id;
+
+    @PrimaryKey(autoGenerate = true)
+    private long id;
+
     private String title;
     private boolean isCompleted;
     private LocalDateTime createdAt;
@@ -16,8 +23,8 @@ public class Task {
     private boolean remindSoundOneDayBefore;
     private boolean showTimestamps;
 
-    // Full constructor
-    public Task(UUID id, String title, boolean isCompleted, LocalDateTime createdAt,
+    // Room uses this constructor to recreate the object from database
+    public Task(long id, String title, boolean isCompleted, LocalDateTime createdAt,
                 LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
                 LocalDate deadline, boolean remindSoundOneDayBefore, boolean showTimestamps) {
         this.id = id;
@@ -32,39 +39,25 @@ public class Task {
         this.showTimestamps = showTimestamps;
     }
 
-    // Constructor for compatibility with MockDataSource
-    public Task(UUID id, String title, boolean isCompleted, LocalDateTime createdAt,
-                LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
-                LocalDate deadline, boolean showTimestamps) {
-        this.id = id;
+    // Convenient constructor for creating new tasks in code (ignored by Room)
+    @Ignore
+    public Task(String title, String importance, LocalDate deadline, boolean isCompleted, boolean remindSoundOneDayBefore, boolean showTimestamps) {
         this.title = title;
-        this.isCompleted = isCompleted;
-        this.createdAt = createdAt;
-        this.completedAt = completedAt;
-        this.updatedAt = updatedAt;
         this.importance = importance;
         this.deadline = deadline;
-        this.remindSoundOneDayBefore = false;
+        this.isCompleted = isCompleted;
+        this.remindSoundOneDayBefore = remindSoundOneDayBefore;
         this.showTimestamps = showTimestamps;
-    }
-
-    // Convenient constructor for creating new tasks
-    public Task(String title) {
-        this.id = UUID.randomUUID();
-        this.title = title;
-        this.isCompleted = false;
         this.createdAt = LocalDateTime.now();
-        this.importance = "Normal";
-        this.remindSoundOneDayBefore = false;
-        this.showTimestamps = true;
+        this.updatedAt = LocalDateTime.now();
     }
 
     // Getters and Setters
-    public UUID getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(long id) {
         this.id = id;
     }
 
