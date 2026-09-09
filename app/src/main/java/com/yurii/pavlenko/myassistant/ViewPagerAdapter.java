@@ -7,6 +7,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.yurii.pavlenko.myassistant.fragments.CalculatorFragment;
 import com.yurii.pavlenko.myassistant.fragments.CurrencyFragment;
+import com.yurii.pavlenko.myassistant.fragments.FlightsFragment;
+import com.yurii.pavlenko.myassistant.fragments.ScanFragment;
+import com.yurii.pavlenko.myassistant.fragments.StepsFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
 import com.yurii.pavlenko.myassistant.fragments.WeatherFragment;
 
@@ -28,13 +31,19 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
                 return new CurrencyFragment();
             case 3:
                 return new CalculatorFragment();
+            case 4:
+                return new ScanFragment();
+            case 5:
+                return new StepsFragment();
+            case 6:
+                return new FlightsFragment();
             default:
-                return new TasksFragment(); // Default protection option (not the start page)
+                return new TasksFragment(); // Default fallback
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 7;
     }
 }

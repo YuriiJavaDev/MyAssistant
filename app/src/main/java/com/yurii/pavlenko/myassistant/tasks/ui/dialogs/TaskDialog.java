@@ -15,10 +15,6 @@ import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper
 
 import java.time.LocalDate;
 
-/**
- * Unified dialog for creating and editing tasks.
- * Created: 2026-09-08
- */
 public class TaskDialog {
 
     public interface OnTaskSavedListener {

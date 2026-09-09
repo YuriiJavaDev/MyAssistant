@@ -5,24 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <!-- Top tab bar (TabLayout) -->
+    <!-- Toolbar with title on the left and 3-dot menu on the right -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        app:title="MyAssistant"
+        app:titleTextColor="@color/text_color" />
+
+    <!-- First row of tabs (4 items) -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
-        app:tabMode="fixed"
         app:tabGravity="fill"
-        app:tabTextColor="@color/text_color"
-        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorPrimary"
-        app:tabIndicatorHeight="3dp" />
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/text_color" />
 
-    <!-- Area where screens change -->
+    <!-- Second row of tabs (3 items) -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        app:tabBackground="@drawable/tab_background"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/text_color" />
+
+    <!-- Screen content container -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
