@@ -22,6 +22,8 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
         app:tabGravity="fill"
@@ -29,13 +31,16 @@
         app:tabIndicatorHeight="3dp"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabTextColor="@color/text_color" />
+        app:tabTextColor="@color/text_color"
+        app:tabTextAppearance="@style/MyTabTextAppearance"/>
 
     <!-- Second row of tabs (3 items) -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
         app:tabGravity="fill"
@@ -43,7 +48,8 @@
         app:tabIndicatorHeight="3dp"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabTextColor="@color/text_color" />
+        app:tabTextColor="@color/text_color"
+        app:tabTextAppearance="@style/MyTabTextAppearance"/>
 
     <!-- Screen content container -->
     <androidx.viewpager2.widget.ViewPager2

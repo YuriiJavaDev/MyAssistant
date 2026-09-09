@@ -3,6 +3,9 @@ package com.yurii.pavlenko.myassistant;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -109,9 +112,39 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
 
+                // Force normal case every time states update to prevent Material Design from re-enabling All Caps
+                disableAllCaps(binding.tabLayout);
+                disableAllCaps(binding.tabLayoutSecond);
+
                 isSyncing = false;
             }
         });
+
+        // Initial call
+        disableAllCaps(binding.tabLayout);
+        disableAllCaps(binding.tabLayoutSecond);
+    }
+
+    private void disableAllCaps(TabLayout tabLayout) {
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            if (tab != null && tab.view != null) {
+                applyNormalCaseToView(tab.view);
+            }
+        }
+    }
+
+    private void applyNormalCaseToView(View view) {
+        if (view instanceof TextView) {
+            TextView tv = (TextView) view;
+            tv.setAllCaps(false);
+            tv.setTransformationMethod(null);
+        } else if (view instanceof ViewGroup) {
+            ViewGroup group = (ViewGroup) view;
+            for (int i = 0; i < group.getChildCount(); i++) {
+                applyNormalCaseToView(group.getChildAt(i));
+            }
+        }
     }
 
     @Override
