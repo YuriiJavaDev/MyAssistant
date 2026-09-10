@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
-        <!-- Task Input & Add Button -->
         <EditText
             android:id="@+id/taskInput"
             android:layout_width="0dp"
@@ -40,7 +39,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Filter & Sort Spinners -->
         <FrameLayout
             android:id="@+id/filterContainer"
             android:layout_width="0dp"
@@ -81,7 +79,6 @@
                 android:paddingEnd="36dp" />
         </FrameLayout>
 
-        <!-- Tasks RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_width="0dp"
@@ -93,7 +90,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/filterContainer" />
 
-        <!-- Unified Bottom Row: Statistics on the left, Delete buttons on the right -->
         <LinearLayout
             android:id="@+id/bottomContainer"
             android:layout_width="0dp"

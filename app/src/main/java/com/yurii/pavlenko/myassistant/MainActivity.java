@@ -13,10 +13,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 
-/**
- * Main activity handling UI navigation and view pager synchronization for MyAssistant.
- * Date: 09.09.2026
- */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -36,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         binding.viewPager.setAdapter(adapter);
 
-        // Check if portrait (2 rows) or landscape (1 row)
         boolean isTwoRows = binding.tabLayoutSecond != null;
 
         if (isTwoRows) {

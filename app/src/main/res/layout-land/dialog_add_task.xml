@@ -6,7 +6,6 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-    <!-- Заголовок -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +15,6 @@
         android:textColor="@color/text_color"
         android:layout_marginBottom="8dp" />
 
-    <!-- Описание задачи (ID совпадает с TaskDialog.java) -->
     <EditText
         android:id="@+id/dialogTaskEditText"
         android:layout_width="match_parent"
@@ -27,14 +25,12 @@
         android:layout_marginBottom="8dp"
         android:inputType="text|textCapSentences" />
 
-    <!-- Строка 1: Важность и Дедлайн РЯДОМ -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="8dp">
 
-        <!-- Уровень важности (Слева) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -64,7 +60,6 @@
             </FrameLayout>
         </LinearLayout>
 
-        <!-- Дедлайн (Справа) -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -93,7 +88,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Строка 2: Чекбоксы РЯДОМ -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
