@@ -12,44 +12,44 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="36dp"
         android:background="@color/background"
         app:title="MyAssistant"
         app:titleTextColor="@color/text_color" />
 
-    <!-- First row of tabs (4 items) -->
+    <!-- First row of tabs (4 items) - compact centered pills -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
-        app:tabGravity="fill"
+        app:tabGravity="center"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3dp"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextColor="@color/text_color"
-        app:tabTextAppearance="@style/MyTabTextAppearance"/>
+        app:tabTextAppearance="@style/MyTabTextAppearance" />
 
-    <!-- Second row of tabs (3 items) -->
+    <!-- Second row of tabs (3 items) - compact centered pills -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
-        app:tabGravity="fill"
+        app:tabGravity="center"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="3dp"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorPrimary"
         app:tabTextColor="@color/text_color"
-        app:tabTextAppearance="@style/MyTabTextAppearance"/>
+        app:tabTextAppearance="@style/MyTabTextAppearance" />
 
     <!-- Screen content container -->
     <androidx.viewpager2.widget.ViewPager2

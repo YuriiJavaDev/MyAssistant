@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:padding="16dp">
 
+        <!-- Task Input & Add Button -->
         <EditText
             android:id="@+id/taskInput"
             android:layout_width="0dp"
@@ -39,24 +40,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Filter & Sort Spinners -->
         <FrameLayout
             android:id="@+id/filterContainer"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/bg_spinner"
             app:layout_constraintEnd_toStartOf="@+id/sortContainer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/taskInput">
-
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="10dp"
-                android:src="@android:drawable/arrow_down_float"
-                app:tint="#3E2773" />
 
             <Spinner
                 android:id="@+id/filterSpinner"
@@ -70,21 +64,13 @@
         <FrameLayout
             android:id="@+id/sortContainer"
             android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="4dp"
             android:background="@drawable/bg_spinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/filterContainer"
             app:layout_constraintTop_toBottomOf="@+id/taskInput">
-
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_gravity="end|center_vertical"
-                android:layout_marginEnd="10dp"
-                android:src="@android:drawable/arrow_down_float"
-                app:tint="#3E2773" />
 
             <Spinner
                 android:id="@+id/sortSpinner"
@@ -95,70 +81,75 @@
                 android:paddingEnd="36dp" />
         </FrameLayout>
 
+        <!-- Tasks RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:nestedScrollingEnabled="false"
-            app:layout_constraintBottom_toTopOf="@+id/bottomActionPanel"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/filterContainer" />
 
+        <!-- Unified Bottom Row: Statistics on the left, Delete buttons on the right -->
         <LinearLayout
-            android:id="@+id/bottomActionPanel"
+            android:id="@+id/bottomContainer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/statisticsTextView"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/deleteCompletedButton"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/statisticsTextView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/button_selector"
-                android:minWidth="120dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:stateListAnimator="@null"
-                android:text="Delete Completed"
-                android:textAllCaps="false"
-                android:textColor="@color/text_color_btn" />
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:text="Total: 0  Completed: 0  Left: 0  Progress: 0%"
+                android:textColor="@color/text_color"
+                android:textSize="11sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/clearAllButton"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/button_selector"
-                android:minWidth="100dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:stateListAnimator="@null"
-                android:text="Clear All"
-                android:textAllCaps="false"
-                android:textColor="@color/text_color_btn" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/deleteCompletedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/button_selector"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:stateListAnimator="@null"
+                    android:text="Delete Completed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color_btn"
+                    android:textSize="11sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clearAllButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:stateListAnimator="@null"
+                    android:text="Clear All"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_color_btn"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/statisticsTextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="Total: 0  Completed: 0  Left: 0  Progress: 0%"
-            android:textColor="@color/text_color"
-            android:textSize="11sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

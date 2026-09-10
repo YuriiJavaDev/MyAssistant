@@ -20,6 +20,7 @@ import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private final String[] allTitles = new String[]{"Tasks", "Weather", "Currency", "Calc", "Scan", "Steps", "Flights"};
     private final String[] firstRowTitles = new String[]{"Tasks", "Weather", "Currency", "Calc"};
     private final String[] secondRowTitles = new String[]{"Scan", "Steps", "Flights"};
     private boolean isSyncing = false;
@@ -35,94 +36,139 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         binding.viewPager.setAdapter(adapter);
 
-        for (String title : firstRowTitles) {
-            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
+        // Check if portrait (2 rows) or landscape (1 row)
+        boolean isTwoRows = binding.tabLayoutSecond != null;
+
+        if (isTwoRows) {
+            for (String title : firstRowTitles) {
+                binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
+            }
+            for (String title : secondRowTitles) {
+                binding.tabLayoutSecond.addTab(binding.tabLayoutSecond.newTab().setText(title));
+            }
+        } else {
+            for (String title : allTitles) {
+                binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
+            }
         }
 
-        for (String title : secondRowTitles) {
-            binding.tabLayoutSecond.addTab(binding.tabLayoutSecond.newTab().setText(title));
-        }
-
-        // First row tab selection
-        binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                if (isSyncing) return;
-                int position = tab.getPosition();
-                if (binding.viewPager.getCurrentItem() != position) {
-                    binding.viewPager.setCurrentItem(position);
+        if (isTwoRows) {
+            // --- PORTRAIT MODE: Two rows logic ---
+            binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    if (isSyncing) return;
+                    int position = tab.getPosition();
+                    if (binding.viewPager.getCurrentItem() != position) {
+                        binding.viewPager.setCurrentItem(position);
+                    }
                 }
-            }
-            @Override public void onTabUnselected(TabLayout.Tab tab) {}
-            @Override public void onTabReselected(TabLayout.Tab tab) {}
-        });
+                @Override public void onTabUnselected(TabLayout.Tab tab) {}
+                @Override public void onTabReselected(TabLayout.Tab tab) {}
+            });
 
-        // Second row tab selection
-        binding.tabLayoutSecond.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                if (isSyncing) return;
-                int position = tab.getPosition() + 4;
-                if (binding.viewPager.getCurrentItem() != position) {
-                    binding.viewPager.setCurrentItem(position);
+            binding.tabLayoutSecond.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    if (isSyncing) return;
+                    int position = tab.getPosition() + 4;
+                    if (binding.viewPager.getCurrentItem() != position) {
+                        binding.viewPager.setCurrentItem(position);
+                    }
                 }
-            }
-            @Override public void onTabUnselected(TabLayout.Tab tab) {}
-            @Override public void onTabReselected(TabLayout.Tab tab) {}
-        });
+                @Override public void onTabUnselected(TabLayout.Tab tab) {}
+                @Override public void onTabReselected(TabLayout.Tab tab) {}
+            });
 
-        // Sync ViewPager changes back to tabs
-        binding.viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                isSyncing = true;
+            binding.viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+                @Override
+                public void onPageSelected(int position) {
+                    super.onPageSelected(position);
+                    isSyncing = true;
 
-                int primaryColor = getResources().getColor(R.color.colorPrimary);
-                int backgroundColor = getResources().getColor(R.color.background);
+                    int primaryColor = getResources().getColor(R.color.colorPrimary);
+                    int backgroundColor = getResources().getColor(R.color.background);
 
-                if (position < 4) {
+                    if (position < 4) {
+                        if (binding.tabLayout.getSelectedTabPosition() != position) {
+                            binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position));
+                        }
+                        binding.tabLayoutSecond.selectTab(null);
+                        binding.tabLayout.setSelectedTabIndicatorColor(primaryColor);
+                        binding.tabLayoutSecond.setSelectedTabIndicatorColor(backgroundColor);
+                    } else {
+                        int secondRowPos = position - 4;
+                        if (binding.tabLayoutSecond.getSelectedTabPosition() != secondRowPos) {
+                            binding.tabLayoutSecond.selectTab(binding.tabLayoutSecond.getTabAt(secondRowPos));
+                        }
+                        binding.tabLayout.selectTab(null);
+                        binding.tabLayout.setSelectedTabIndicatorColor(backgroundColor);
+                        binding.tabLayoutSecond.setSelectedTabIndicatorColor(primaryColor);
+                    }
+
+                    for (int i = 0; i < binding.tabLayout.getTabCount(); i++) {
+                        TabLayout.Tab tab = binding.tabLayout.getTabAt(i);
+                        if (tab != null && tab.view != null) {
+                            tab.view.setSelected(position < 4 && i == position);
+                        }
+                    }
+                    for (int i = 0; i < binding.tabLayoutSecond.getTabCount(); i++) {
+                        TabLayout.Tab tab = binding.tabLayoutSecond.getTabAt(i);
+                        if (tab != null && tab.view != null) {
+                            tab.view.setSelected(position >= 4 && i == (position - 4));
+                        }
+                    }
+
+                    disableAllCaps(binding.tabLayout);
+                    disableAllCaps(binding.tabLayoutSecond);
+
+                    isSyncing = false;
+                }
+            });
+
+            disableAllCaps(binding.tabLayout);
+            disableAllCaps(binding.tabLayoutSecond);
+
+        } else {
+            // --- LANDSCAPE MODE: Single row logic ---
+            binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    if (isSyncing) return;
+                    int position = tab.getPosition();
+                    if (binding.viewPager.getCurrentItem() != position) {
+                        binding.viewPager.setCurrentItem(position);
+                    }
+                }
+                @Override public void onTabUnselected(TabLayout.Tab tab) {}
+                @Override public void onTabReselected(TabLayout.Tab tab) {}
+            });
+
+            binding.viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+                @Override
+                public void onPageSelected(int position) {
+                    super.onPageSelected(position);
+                    isSyncing = true;
+
                     if (binding.tabLayout.getSelectedTabPosition() != position) {
                         binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position));
                     }
-                    binding.tabLayoutSecond.selectTab(null);
-                    binding.tabLayout.setSelectedTabIndicatorColor(primaryColor);
-                    binding.tabLayoutSecond.setSelectedTabIndicatorColor(backgroundColor);
-                } else {
-                    int secondRowPos = position - 4;
-                    if (binding.tabLayoutSecond.getSelectedTabPosition() != secondRowPos) {
-                        binding.tabLayoutSecond.selectTab(binding.tabLayoutSecond.getTabAt(secondRowPos));
+
+                    for (int i = 0; i < binding.tabLayout.getTabCount(); i++) {
+                        TabLayout.Tab tab = binding.tabLayout.getTabAt(i);
+                        if (tab != null && tab.view != null) {
+                            tab.view.setSelected(i == position);
+                        }
                     }
-                    binding.tabLayout.selectTab(null);
-                    binding.tabLayout.setSelectedTabIndicatorColor(backgroundColor);
-                    binding.tabLayoutSecond.setSelectedTabIndicatorColor(primaryColor);
+
+                    disableAllCaps(binding.tabLayout);
+
+                    isSyncing = false;
                 }
+            });
 
-                // Explicitly update selection state on every tab view so unselected tabs lose their highlight
-                for (int i = 0; i < binding.tabLayout.getTabCount(); i++) {
-                    TabLayout.Tab tab = binding.tabLayout.getTabAt(i);
-                    if (tab != null && tab.view != null) {
-                        tab.view.setSelected(position < 4 && i == position);
-                    }
-                }
-                for (int i = 0; i < binding.tabLayoutSecond.getTabCount(); i++) {
-                    TabLayout.Tab tab = binding.tabLayoutSecond.getTabAt(i);
-                    if (tab != null && tab.view != null) {
-                        tab.view.setSelected(position >= 4 && i == (position - 4));
-                    }
-                }
-
-                // Force normal case every time states update to prevent Material Design from re-enabling All Caps
-                disableAllCaps(binding.tabLayout);
-                disableAllCaps(binding.tabLayoutSecond);
-
-                isSyncing = false;
-            }
-        });
-
-        // Initial call
-        disableAllCaps(binding.tabLayout);
-        disableAllCaps(binding.tabLayoutSecond);
+            disableAllCaps(binding.tabLayout);
+        }
     }
 
     private void disableAllCaps(TabLayout tabLayout) {
