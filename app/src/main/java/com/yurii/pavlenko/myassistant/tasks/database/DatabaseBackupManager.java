@@ -48,22 +48,38 @@ public class DatabaseBackupManager {
     /**
      * Restores/imports the database from the selected source Uri over the existing local database.
      */
-    public static boolean importDatabase(Context context, Uri sourceUri) {
+    public static boolean importDatabase(Context context, Uri uri) {
         try {
+            // 1. Закрываем текущую базу данных
+            try {
+                AppDatabase.getInstance(context).close();
+            } catch (Exception ignored) {}
+
+            // 2. Сбрасываем статический инстанс Room
+            AppDatabase.clearInstance();
+
+            // 3. Получаем путь к файлу БД
             File dbFile = context.getDatabasePath(DATABASE_NAME);
+            File dbJournal = new File(dbFile.getPath() + "-journal");
 
-            try (InputStream fis = context.getContentResolver().openInputStream(sourceUri);
-                 OutputStream fos = new FileOutputStream(dbFile)) {
+            // 4. Удаляем старый файл базы и его журнал
+            if (dbFile.exists()) dbFile.delete();
+            if (dbJournal.exists()) dbJournal.delete();
 
-                if (fis == null) return false;
+            // 5. Копируем новый файл из выбранного Uri
+            try (InputStream inputStream = context.getContentResolver().openInputStream(uri);
+                 OutputStream outputStream = new FileOutputStream(dbFile)) {
+
+                if (inputStream == null) return false;
 
                 byte[] buffer = new byte[1024];
                 int length;
-                while ((length = fis.read(buffer)) > 0) {
-                    fos.write(buffer, 0, length);
+                while ((length = inputStream.read(buffer)) > 0) {
+                    outputStream.write(buffer, 0, length);
                 }
-                fos.flush();
+                outputStream.flush();
             }
+
             return true;
         } catch (Exception e) {
             e.printStackTrace();

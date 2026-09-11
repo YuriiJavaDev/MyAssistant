@@ -23,13 +23,19 @@ public abstract class AppDatabase extends RoomDatabase {
             synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(
-                            context.getApplicationContext(),
-                            AppDatabase.class,
-                            DATABASE_NAME
-                    ).build();
+                                    context.getApplicationContext(),
+                                    AppDatabase.class,
+                                    DATABASE_NAME
+                            )
+                            .setJournalMode(RoomDatabase.JournalMode.TRUNCATE)
+                            .build();
                 }
             }
         }
         return INSTANCE;
+    }
+
+    public static void clearInstance() {
+        INSTANCE = null;
     }
 }
