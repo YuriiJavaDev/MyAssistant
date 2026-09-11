@@ -50,11 +50,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/taskInput">
 
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="10dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="#3E2773" />
+
             <Spinner
                 android:id="@+id/filterSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:popupBackground="@drawable/bg_spinner_dropdown"
                 android:paddingStart="14dp"
                 android:paddingEnd="36dp" />
         </FrameLayout>
@@ -70,11 +79,20 @@
             app:layout_constraintStart_toEndOf="@+id/filterContainer"
             app:layout_constraintTop_toBottomOf="@+id/taskInput">
 
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="10dp"
+                android:src="@android:drawable/arrow_down_float"
+                app:tint="#3E2773" />
+
             <Spinner
                 android:id="@+id/sortSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:popupBackground="@drawable/bg_spinner_dropdown"
                 android:paddingStart="14dp"
                 android:paddingEnd="36dp" />
         </FrameLayout>

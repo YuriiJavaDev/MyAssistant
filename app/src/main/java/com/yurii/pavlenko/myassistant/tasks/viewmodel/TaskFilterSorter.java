@@ -50,6 +50,9 @@ public class TaskFilterSorter {
             case "Importance":
                 tasks.sort(Comparator.comparingInt(t -> getImportanceWeight(t.getImportance())));
                 break;
+            case "Deadline":
+                tasks.sort(Comparator.comparing(Task::getDeadline, Comparator.nullsLast(Comparator.naturalOrder())));
+                break;
         }
     }
 

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MyAssistant</string>
+
+    <string-array name="filter_options">
+        <item>All Tasks</item>
+        <item>Active</item>
+        <item>Completed</item>
+    </string-array>
+
+    <string-array name="sort_options">
+        <item>Alpha A-Z</item>
+        <item>Alpha Z-A</item>
+        <item>Status</item>
+        <item>Created</item>
+        <item>Edited</item>
+        <item>Completed</item>
+        <item>Importance</item>
+        <item>Deadline</item>
+    </string-array>
 </resources>

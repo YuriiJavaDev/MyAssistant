@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:popupBackground="@drawable/bg_spinner_dropdown"
                 android:paddingStart="14dp"
                 android:paddingEnd="36dp" />
         </FrameLayout>
@@ -91,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
+                android:popupBackground="@drawable/bg_spinner_dropdown"
                 android:paddingStart="14dp"
                 android:paddingEnd="36dp" />
         </FrameLayout>
