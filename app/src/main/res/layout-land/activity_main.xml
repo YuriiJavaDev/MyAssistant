@@ -12,7 +12,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="36dp"
+        app:popupTheme="@style/CustomPopupMenu"
         android:background="@color/background"
         app:title="MyAssistant"
         app:titleTextColor="@color/text_color">

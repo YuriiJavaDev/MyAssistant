@@ -22,33 +22,37 @@
             android:inputType="text|textCapSentences"
             app:layout_constraintBaseline_toBaselineOf="@+id/addButton"
             app:layout_constraintEnd_toStartOf="@+id/addButton"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_weight="2.0" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/button_selector"
-            android:minWidth="100dp"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
+            android:minWidth="70dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
             android:stateListAnimator="@null"
             android:text="Add"
             android:textAllCaps="false"
             android:textColor="@color/text_color_btn"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/filterContainer"
+            app:layout_constraintStart_toEndOf="@+id/taskInput"
             app:layout_constraintTop_toTopOf="parent" />
 
         <FrameLayout
             android:id="@+id/filterContainer"
             android:layout_width="0dp"
             android:layout_height="36dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/bg_spinner"
+            app:layout_constraintBottom_toBottomOf="@+id/addButton"
             app:layout_constraintEnd_toStartOf="@+id/sortContainer"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/taskInput">
+            app:layout_constraintStart_toEndOf="@+id/addButton"
+            app:layout_constraintTop_toTopOf="@+id/addButton"
+            app:layout_constraintHorizontal_weight="1">
 
             <ImageView
                 android:layout_width="16dp"
@@ -64,20 +68,20 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:popupBackground="@drawable/bg_spinner_dropdown"
-                android:paddingStart="14dp"
-                android:paddingEnd="36dp" />
+                android:paddingStart="12dp"
+                android:paddingEnd="18dp" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/sortContainer"
             android:layout_width="0dp"
             android:layout_height="36dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="4dp"
             android:background="@drawable/bg_spinner"
+            app:layout_constraintBottom_toBottomOf="@+id/addButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/filterContainer"
-            app:layout_constraintTop_toBottomOf="@+id/taskInput">
+            app:layout_constraintTop_toTopOf="@+id/addButton"
+            app:layout_constraintHorizontal_weight="1">
 
             <ImageView
                 android:layout_width="16dp"
@@ -93,15 +97,15 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:popupBackground="@drawable/bg_spinner_dropdown"
-                android:paddingStart="14dp"
-                android:paddingEnd="36dp" />
+                android:paddingStart="12dp"
+                android:paddingEnd="18dp" />
         </FrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tasksRecyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
             app:layout_constraintEnd_toEndOf="parent"
