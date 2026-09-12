@@ -1,7 +1,10 @@
 package com.yurii.pavlenko.myassistant.tasks.database;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,22 +18,28 @@ import java.io.OutputStream;
 public class DatabaseBackupManager {
 
     private static final String DATABASE_NAME = "task_database";
+    private static final String BACKUP_FILE_NAME = "myassistant_backup.db";
 
     /**
-     * Exports the local database to the provided target Uri chosen by the user.
+     * Prepares the backup file in cache and returns an Intent to share/save it anywhere (including Google Drive).
      */
-    public static boolean exportDatabase(Context context, Uri targetUri) {
+    public static Intent getExportShareIntent(Context context) {
         try {
             File dbFile = context.getDatabasePath(DATABASE_NAME);
             if (!dbFile.exists()) {
-                return false;
+                return null;
             }
 
+            // Create a clean backup file in the app cache directory
+            File cacheFolder = new File(context.getCacheDir(), "backups");
+            if (!cacheFolder.exists()) {
+                cacheFolder.mkdirs();
+            }
+            File backupFile = new File(cacheFolder, BACKUP_FILE_NAME);
+
+            // Copy current database content to the export file
             try (InputStream fis = new FileInputStream(dbFile);
-                 OutputStream fos = context.getContentResolver().openOutputStream(targetUri)) {
-
-                if (fos == null) return false;
-
+                 OutputStream fos = new FileOutputStream(backupFile)) {
                 byte[] buffer = new byte[1024];
                 int length;
                 while ((length = fis.read(buffer)) > 0) {
@@ -38,10 +47,24 @@ public class DatabaseBackupManager {
                 }
                 fos.flush();
             }
-            return true;
+
+            // Generate secure Uri via FileProvider
+            Uri fileUri = FileProvider.getUriForFile(
+                    context,
+                    context.getPackageName() + ".fileprovider",
+                    backupFile
+            );
+
+            // Create share intent
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("application/octet-stream");
+            intent.putExtra(Intent.EXTRA_STREAM, fileUri);
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+            return Intent.createChooser(intent, "Export Database Backup");
         } catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 

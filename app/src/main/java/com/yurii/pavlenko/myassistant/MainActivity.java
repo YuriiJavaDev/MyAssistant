@@ -1,5 +1,7 @@
 package com.yurii.pavlenko.myassistant;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
+import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,21 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private final String[] firstRowTitles = new String[]{"Tasks", "Weather", "Currency", "Calc"};
     private final String[] secondRowTitles = new String[]{"Scan", "Steps", "Flights"};
     private boolean isSyncing = false;
-
-    // Launcher for exporting database file
-    private final ActivityResultLauncher<String> exportDatabaseLauncher = registerForActivityResult(
-            new ActivityResultContracts.CreateDocument("application/octet-stream"),
-            uri -> {
-                if (uri != null) {
-                    boolean success = DatabaseBackupManager.exportDatabase(this, uri);
-                    if (success) {
-                        Toast.makeText(this, "Database exported successfully", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Export failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
-    );
 
     // Launcher for importing database file
     private final ActivityResultLauncher<String> importDatabaseLauncher = registerForActivityResult(
@@ -241,16 +229,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.action_export_db) {
-            exportDatabaseLauncher.launch("myassistant_backup.db");
-            return true;
-        } else if (id == R.id.action_import_db) {
-            importDatabaseLauncher.launch("*/*");
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return BackupMenuHandler.handleMenuAction(
+                item,
+                () -> {
+                    Intent shareIntent = DatabaseBackupManager.getExportShareIntent(this);
+                    if (shareIntent != null) {
+                        startActivity(shareIntent);
+                    } else {
+                        Toast.makeText(this, "Export failed", Toast.LENGTH_SHORT).show();
+                    }
+                },
+                importDatabaseLauncher
+        ) || super.onOptionsItemSelected(item);
     }
 }
