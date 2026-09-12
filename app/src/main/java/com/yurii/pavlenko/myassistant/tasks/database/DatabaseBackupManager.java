@@ -50,23 +50,18 @@ public class DatabaseBackupManager {
      */
     public static boolean importDatabase(Context context, Uri uri) {
         try {
-            // 1. Закрываем текущую базу данных
             try {
                 AppDatabase.getInstance(context).close();
             } catch (Exception ignored) {}
 
-            // 2. Сбрасываем статический инстанс Room
             AppDatabase.clearInstance();
 
-            // 3. Получаем путь к файлу БД
             File dbFile = context.getDatabasePath(DATABASE_NAME);
             File dbJournal = new File(dbFile.getPath() + "-journal");
 
-            // 4. Удаляем старый файл базы и его журнал
             if (dbFile.exists()) dbFile.delete();
             if (dbJournal.exists()) dbJournal.delete();
 
-            // 5. Копируем новый файл из выбранного Uri
             try (InputStream inputStream = context.getContentResolver().openInputStream(uri);
                  OutputStream outputStream = new FileOutputStream(dbFile)) {
 

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     if (success) {
                         Toast.makeText(this, "Database imported successfully. Restarting...", Toast.LENGTH_LONG).show();
 
-                        // Пулл-рестарт процесса: сбрасывает кеш SQLite и запускает приложение с чистого листа
+                        // Process pull-restart: clears the SQLite cache and launches the application from a clean slate.
                         android.content.Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
                         if (intent != null) {
                             intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -243,7 +243,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        // Убедитесь, что ID соответствуют тем, что прописаны в main_overflow_menu.xml
         if (id == R.id.action_export_db) {
             exportDatabaseLauncher.launch("myassistant_backup.db");
             return true;
