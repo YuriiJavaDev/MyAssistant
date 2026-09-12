@@ -39,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(this, "Database imported successfully. Restarting...", Toast.LENGTH_LONG).show();
 
                         // Process pull-restart: clears the SQLite cache and launches the application from a clean slate.
-                        android.content.Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
+                        Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
                         if (intent != null) {
-                            intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP |
-                                    android.content.Intent.FLAG_ACTIVITY_NEW_TASK |
-                                    android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                                    Intent.FLAG_ACTIVITY_NEW_TASK |
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                             System.exit(0);
                         }
@@ -224,22 +224,96 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_overflow_menu, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.action_custom_overflow);
+        if (menuItem != null) {
+            View actionView = menuItem.getActionView();
+            if (actionView != null) {
+                actionView.setOnClickListener(v -> {
+                    BackupMenuHandler.showCustomPopupMenu(this, v, new BackupMenuHandler.OnMenuActionListener() {
+                        @Override
+                        public void onExportLocal() {
+                            Intent shareIntent = DatabaseBackupManager.getExportShareIntent(MainActivity.this);
+                            if (shareIntent != null) {
+                                startActivity(shareIntent);
+                            } else {
+                                Toast.makeText(MainActivity.this, "Export failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onImportLocal() {
+                            if (importDatabaseLauncher != null) {
+                                importDatabaseLauncher.launch("*/*");
+                            }
+                        }
+
+                        @Override
+                        public void onCloudSettings() {
+                            Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onCloudExport() {
+                            Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onCloudImport() {
+                            Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                });
+            }
+        }
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        return BackupMenuHandler.handleMenuAction(
-                item,
-                () -> {
-                    Intent shareIntent = DatabaseBackupManager.getExportShareIntent(this);
+        if (item.getItemId() == R.id.action_custom_overflow) {
+            // Find the anchor view for the menu (toolbar or the button itself)
+            View anchorView = findViewById(R.id.action_custom_overflow);
+            if (anchorView == null) {
+                anchorView = binding.toolbar;
+            }
+
+            BackupMenuHandler.showCustomPopupMenu(this, anchorView, new BackupMenuHandler.OnMenuActionListener() {
+                @Override
+                public void onExportLocal() {
+                    Intent shareIntent = DatabaseBackupManager.getExportShareIntent(MainActivity.this);
                     if (shareIntent != null) {
                         startActivity(shareIntent);
                     } else {
-                        Toast.makeText(this, "Export failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Export failed", Toast.LENGTH_SHORT).show();
                     }
-                },
-                importDatabaseLauncher
-        ) || super.onOptionsItemSelected(item);
+                }
+
+                @Override
+                public void onImportLocal() {
+                    if (importDatabaseLauncher != null) {
+                        importDatabaseLauncher.launch("*/*");
+                    }
+                }
+
+                @Override
+                public void onCloudSettings() {
+                    Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCloudExport() {
+                    Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onCloudImport() {
+                    Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
+                }
+            });
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

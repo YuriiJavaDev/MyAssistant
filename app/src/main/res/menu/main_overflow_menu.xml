@@ -3,12 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_export_db"
-        android:title="Export Database"
-        app:showAsAction="never" />
+        android:id="@+id/action_custom_overflow"
+        android:title="Options"
+        app:actionLayout="@layout/style_dropdown_menu_3_dots"
+        app:showAsAction="always" />
 
-    <item
-        android:id="@+id/action_import_db"
-        android:title="Import Database"
-        app:showAsAction="never" />
 </menu>
