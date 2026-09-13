@@ -18,6 +18,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
+import com.yurii.pavlenko.myassistant.tasks.database.CloudSettingsDialog;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 
 public class MainActivity extends AppCompatActivity {
@@ -258,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCloudSettings() {
-                Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
+                CloudSettingsDialog.show(MainActivity.this);
             }
 
             @Override

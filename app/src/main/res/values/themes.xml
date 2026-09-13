@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyAssistant" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="materialSwitchStyle">@style/MyAssistantMaterialSwitch</item>
     </style>
 
     <style name="Theme.MyAssistant" parent="Base.Theme.MyAssistant" />
@@ -16,5 +17,10 @@
         <item name="popupMenuBackground">@drawable/bg_spinner_dropdown</item>
         <item name="android:itemTextAppearance">@style/CustomPopupMenuItemTextAppearance</item>
         <item name="android:listPreferredItemHeightSmall">38dp</item>
+    </style>
+
+    <style name="MyAssistantMaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/colorPrimary</item>
+        <item name="trackTint">#D1C4E9</item>
     </style>
 </resources>
