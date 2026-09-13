@@ -2,12 +2,14 @@ package com.yurii.pavlenko.myassistant.tasks.database;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
 
@@ -29,7 +31,17 @@ public class CloudSettingsDialog {
         etUrl.setText(configManager.getUrl());
         etUsername.setText(configManager.getUsername());
         etPassword.setText(configManager.getPassword());
-        cbAutoBackup.setChecked(configManager.isAutoBackupEnabled());
+
+        boolean isAutoBackupEnabled = configManager.isAutoBackupEnabled();
+        cbAutoBackup.setChecked(isAutoBackupEnabled);
+
+        // Apply initial text style based on loaded state
+        updateSwitchTextualState(cbAutoBackup, isAutoBackupEnabled, context);
+
+        // Listen for toggle changes to update text style dynamically
+        cbAutoBackup.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            updateSwitchTextualState(cbAutoBackup, isChecked, context);
+        });
 
         AlertDialog dialog = new AlertDialog.Builder(context)
                 .setView(dialogView)
@@ -55,5 +67,17 @@ public class CloudSettingsDialog {
         });
 
         dialog.show();
+    }
+
+    private static void updateSwitchTextualState(SwitchCompat switchCompat, boolean isChecked, Context context) {
+        if (isChecked) {
+            // Active state: Green color and Bold font
+            switchCompat.setTextColor(ContextCompat.getColor(context, android.R.color.holo_green_dark));
+            switchCompat.setTypeface(null, Typeface.BOLD);
+        } else {
+            // Inactive state: Default text color and Normal font
+            switchCompat.setTextColor(ContextCompat.getColor(context, R.color.text_color));
+            switchCompat.setTypeface(null, Typeface.NORMAL);
+        }
     }
 }
