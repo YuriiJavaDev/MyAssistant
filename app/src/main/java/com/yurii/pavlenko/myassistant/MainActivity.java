@@ -21,6 +21,11 @@ import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
 import com.yurii.pavlenko.myassistant.tasks.database.CloudSettingsDialog;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 
+/**
+ * Main activity responsible for managing tab navigation, view pager sync,
+ * overflow menus, and cloud settings dialog integration.
+ * Created on: 2026-09-13
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isTwoRows = binding.tabLayoutSecond != null;
 
         if (isTwoRows) {
+            // Populate primary and secondary tabs for portrait mode
             for (String title : firstRowTitles) {
                 binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
             }
@@ -76,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 binding.tabLayoutSecond.addTab(binding.tabLayoutSecond.newTab().setText(title));
             }
         } else {
+            // Populate single row tabs for landscape mode
             for (String title : allTitles) {
                 binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
             }
@@ -199,14 +206,17 @@ public class MainActivity extends AppCompatActivity {
             disableAllCaps(binding.tabLayout);
         }
 
-        if (savedInstanceState != null && savedInstanceState.getBoolean(STATE_MENU_OPEN, false)) {
-            binding.toolbar.post(() -> {
-                View anchorView = findViewById(R.id.action_custom_overflow);
-                if (anchorView == null) {
-                    anchorView = binding.toolbar;
-                }
-                showPopupMenu(anchorView);
-            });
+        // Restore custom overflow menu state if saved
+        if (savedInstanceState != null) {
+            if (savedInstanceState.getBoolean(STATE_MENU_OPEN, false)) {
+                binding.toolbar.post(() -> {
+                    View anchorView = binding.toolbar.findViewById(R.id.action_custom_overflow);
+                    if (anchorView == null) {
+                        anchorView = binding.toolbar;
+                    }
+                    showPopupMenu(anchorView);
+                });
+            }
         }
     }
 
@@ -216,6 +226,9 @@ public class MainActivity extends AppCompatActivity {
         outState.putBoolean(STATE_MENU_OPEN, BackupMenuHandler.isShowing());
     }
 
+    /**
+     * Disables uppercase text transformation for tab layout items.
+     */
     private void disableAllCaps(TabLayout tabLayout) {
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
@@ -225,6 +238,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Applies normal text casing recursively to view hierarchy.
+     */
     private void applyNormalCaseToView(View view) {
         if (view instanceof TextView) {
             TextView tv = (TextView) view;
@@ -238,6 +254,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Displays the custom backup and settings popup menu.
+     */
     private void showPopupMenu(View anchorView) {
         BackupMenuHandler.showCustomPopupMenu(this, anchorView, new BackupMenuHandler.OnMenuActionListener() {
             @Override
@@ -259,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCloudSettings() {
-                CloudSettingsDialog.show(MainActivity.this);
+                new CloudSettingsDialog().show(getSupportFragmentManager(), "CloudSettingsDialog");
             }
 
             @Override
@@ -290,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.action_custom_overflow) {
-            View anchorView = findViewById(R.id.action_custom_overflow);
+            View anchorView = binding.toolbar.findViewById(R.id.action_custom_overflow);
             if (anchorView == null) {
                 anchorView = binding.toolbar;
             }

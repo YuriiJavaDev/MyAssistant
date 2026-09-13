@@ -1,134 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/bg_spinner_dropdown">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cloud Settings &amp; Auto-backup"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginBottom="14dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WebDAV Server URL:"
-        android:textColor="@color/colorPrimary"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="2dp" />
-
-    <EditText
-        android:id="@+id/etWebDavUrl"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:hint="https://dav.koofr.net/dav/Koofr/Backups/"
-        android:textSize="12sp"
-        android:paddingHorizontal="8dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textUri"
-        android:textColor="@color/text_color"
-        android:backgroundTint="@color/colorPrimary" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username:"
-        android:textColor="@color/colorPrimary"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="2dp" />
-
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:hint="Your username / email"
-        android:textSize="12sp"
-        android:paddingHorizontal="8dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/text_color"
-        android:backgroundTint="@color/colorPrimary" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password / App Token:"
-        android:textColor="@color/colorPrimary"
-        android:textSize="11sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="2dp" />
-
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:hint="Password or app-specific token"
-        android:textSize="12sp"
-        android:paddingHorizontal="8dp"
-        android:layout_marginBottom="12dp"
-        android:inputType="textPassword"
-        android:textColor="@color/text_color"
-        android:backgroundTint="@color/colorPrimary" />
-
-    <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/cbAutoBackup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enable Daily Auto-backup"
-        android:textSize="14sp"
-        android:textColor="@color/text_color"
-        android:layout_marginBottom="10dp"
-        android:scaleX="0.85"
-        android:scaleY="0.85"
-        android:pivotX="100%"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ℹ️ When automatic backup is enabled, the database file in your cloud storage will be overwritten once a day by default."
-        android:textSize="11sp"
-        android:textColor="@color/text_color"
-        android:alpha="0.7"
-        android:layout_marginBottom="16dp" />
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_spinner_dropdown">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnTestConnection"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/button_selector"
-            android:paddingHorizontal="16dp"
-            android:stateListAnimator="@null"
-            android:text="Test"
-            android:textAllCaps="false"
-            android:textColor="@color/text_color_btn"
-            android:textSize="12sp" />
+            android:layout_height="wrap_content"
+            android:text="Cloud Settings &amp; Auto-backup"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="14dp" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSaveConfig"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:background="@drawable/button_selector"
-            android:paddingHorizontal="16dp"
-            android:stateListAnimator="@null"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="@color/text_color_btn"
-            android:textSize="12sp" />
+        <!-- WebDAV URL -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/colorPrimary"
+            app:hintTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWebDavUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:hint="https://dav.koofr.net/dav/Koofr/Backups/"
+                android:textSize="12sp"
+                android:inputType="textUri"
+                android:maxLines="1"
+                android:textColor="@color/text_color" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Username and Password in one row to save vertical space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <!-- Username -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username/E-mail"
+                    android:textSize="12sp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary"
+                app:endIconMode="custom">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textSize="12sp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- Auto-backup Switch -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/cbAutoBackup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable Daily Auto-backup"
+            android:textSize="14sp"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ When automatic backup is enabled, the database file in your cloud storage will be overwritten once a day by default."
+            android:textSize="11sp"
+            android:textColor="@color/text_color"
+            android:alpha="0.7"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTestConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Test"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_btn"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveConfig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_btn"
+                android:textSize="12sp" />
+        </LinearLayout>
+
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
