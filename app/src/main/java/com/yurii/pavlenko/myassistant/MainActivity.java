@@ -1,7 +1,6 @@
 package com.yurii.pavlenko.myassistant;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private final String[] secondRowTitles = new String[]{"Scan", "Steps", "Flights"};
     private boolean isSyncing = false;
 
+    private static final String STATE_MENU_OPEN = "state_menu_open";
+
     // Launcher for importing database file
     private final ActivityResultLauncher<String> importDatabaseLauncher = registerForActivityResult(
             new ActivityResultContracts.GetContent(),
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                     if (success) {
                         Toast.makeText(this, "Database imported successfully. Restarting...", Toast.LENGTH_LONG).show();
 
-                        // Process pull-restart: clears the SQLite cache and launches the application from a clean slate.
                         Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
                         if (intent != null) {
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (isTwoRows) {
-            // --- PORTRAIT MODE: Two rows logic ---
+            // --- PORTRAIT MODE ---
             binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             disableAllCaps(binding.tabLayoutSecond);
 
         } else {
-            // --- LANDSCAPE MODE: Single row logic ---
+            // --- LANDSCAPE MODE ---
             binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
@@ -197,6 +197,22 @@ public class MainActivity extends AppCompatActivity {
 
             disableAllCaps(binding.tabLayout);
         }
+
+        if (savedInstanceState != null && savedInstanceState.getBoolean(STATE_MENU_OPEN, false)) {
+            binding.toolbar.post(() -> {
+                View anchorView = findViewById(R.id.action_custom_overflow);
+                if (anchorView == null) {
+                    anchorView = binding.toolbar;
+                }
+                showPopupMenu(anchorView);
+            });
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(STATE_MENU_OPEN, BackupMenuHandler.isShowing());
     }
 
     private void disableAllCaps(TabLayout tabLayout) {
@@ -221,49 +237,50 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void showPopupMenu(View anchorView) {
+        BackupMenuHandler.showCustomPopupMenu(this, anchorView, new BackupMenuHandler.OnMenuActionListener() {
+            @Override
+            public void onExportLocal() {
+                Intent shareIntent = DatabaseBackupManager.getExportShareIntent(MainActivity.this);
+                if (shareIntent != null) {
+                    startActivity(shareIntent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Export failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onImportLocal() {
+                if (importDatabaseLauncher != null) {
+                    importDatabaseLauncher.launch("*/*");
+                }
+            }
+
+            @Override
+            public void onCloudSettings() {
+                Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCloudExport() {
+                Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCloudImport() {
+                Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_overflow_menu, menu);
-
         MenuItem menuItem = menu.findItem(R.id.action_custom_overflow);
         if (menuItem != null) {
             View actionView = menuItem.getActionView();
             if (actionView != null) {
-                actionView.setOnClickListener(v -> {
-                    BackupMenuHandler.showCustomPopupMenu(this, v, new BackupMenuHandler.OnMenuActionListener() {
-                        @Override
-                        public void onExportLocal() {
-                            Intent shareIntent = DatabaseBackupManager.getExportShareIntent(MainActivity.this);
-                            if (shareIntent != null) {
-                                startActivity(shareIntent);
-                            } else {
-                                Toast.makeText(MainActivity.this, "Export failed", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onImportLocal() {
-                            if (importDatabaseLauncher != null) {
-                                importDatabaseLauncher.launch("*/*");
-                            }
-                        }
-
-                        @Override
-                        public void onCloudSettings() {
-                            Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
-                        }
-
-                        @Override
-                        public void onCloudExport() {
-                            Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
-                        }
-
-                        @Override
-                        public void onCloudImport() {
-                            Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                });
+                actionView.setOnClickListener(v -> showPopupMenu(v));
             }
         }
         return true;
@@ -272,45 +289,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.action_custom_overflow) {
-            // Find the anchor view for the menu (toolbar or the button itself)
             View anchorView = findViewById(R.id.action_custom_overflow);
             if (anchorView == null) {
                 anchorView = binding.toolbar;
             }
-
-            BackupMenuHandler.showCustomPopupMenu(this, anchorView, new BackupMenuHandler.OnMenuActionListener() {
-                @Override
-                public void onExportLocal() {
-                    Intent shareIntent = DatabaseBackupManager.getExportShareIntent(MainActivity.this);
-                    if (shareIntent != null) {
-                        startActivity(shareIntent);
-                    } else {
-                        Toast.makeText(MainActivity.this, "Export failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-                @Override
-                public void onImportLocal() {
-                    if (importDatabaseLauncher != null) {
-                        importDatabaseLauncher.launch("*/*");
-                    }
-                }
-
-                @Override
-                public void onCloudSettings() {
-                    Toast.makeText(MainActivity.this, "Cloud Settings coming soon", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onCloudExport() {
-                    Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onCloudImport() {
-                    Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
-                }
-            });
+            showPopupMenu(anchorView);
             return true;
         }
 
