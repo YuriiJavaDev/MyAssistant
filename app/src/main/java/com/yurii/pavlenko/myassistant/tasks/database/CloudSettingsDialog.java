@@ -20,7 +20,6 @@ import com.yurii.pavlenko.myassistant.databinding.DialogCloudSettingsBinding;
 /**
  * DialogFragment responsible for handling cloud storage settings,
  * lifecycle-safe state preservation during screen rotation, and secure credential entry.
- * Created on: 2026-09-13
  */
 public class CloudSettingsDialog extends DialogFragment {
 
@@ -84,9 +83,13 @@ public class CloudSettingsDialog extends DialogFragment {
 
         // Save button action
         binding.btnSaveConfig.setOnClickListener(v -> {
-            String url = binding.etWebDavUrl.getText().toString();
-            String username = binding.etUsername.getText().toString();
-            String password = binding.etPassword.getText().toString();
+            android.text.Editable urlEditable = binding.etWebDavUrl.getText();
+            android.text.Editable usernameEditable = binding.etUsername.getText();
+            android.text.Editable passwordEditable = binding.etPassword.getText();
+
+            String url = urlEditable != null ? urlEditable.toString() : "";
+            String username = usernameEditable != null ? usernameEditable.toString() : "";
+            String password = passwordEditable != null ? passwordEditable.toString() : "";
             boolean autoBackup = binding.cbAutoBackup.isChecked();
 
             configManager.saveConfig(url, username, password, autoBackup);
@@ -94,9 +97,39 @@ public class CloudSettingsDialog extends DialogFragment {
             dismiss();
         });
 
-        // Test connection button placeholder action
+        // Test connection button action
         binding.btnTestConnection.setOnClickListener(v -> {
-            Toast.makeText(requireContext(), "Test connection feature coming in next step", Toast.LENGTH_SHORT).show();
+            android.text.Editable urlEditable = binding.etWebDavUrl.getText();
+            android.text.Editable usernameEditable = binding.etUsername.getText();
+            android.text.Editable passwordEditable = binding.etPassword.getText();
+
+            String url = urlEditable != null ? urlEditable.toString().trim() : "";
+            String username = usernameEditable != null ? usernameEditable.toString().trim() : "";
+            String password = passwordEditable != null ? passwordEditable.toString() : "";
+
+            if (url.isEmpty()) {
+                binding.etWebDavUrl.setError("URL cannot be empty");
+                return;
+            }
+
+            Toast.makeText(requireContext(), "Testing connection...", Toast.LENGTH_SHORT).show();
+
+            WebDavTestClient testClient = new WebDavTestClient();
+            testClient.testConnection(url, username, password, new WebDavTestClient.TestCallback() {
+                @Override
+                public void onSuccess() {
+                    requireActivity().runOnUiThread(() ->
+                            Toast.makeText(requireContext(), "Connection successful!", Toast.LENGTH_SHORT).show()
+                    );
+                }
+
+                @Override
+                public void onError(String error) {
+                    requireActivity().runOnUiThread(() ->
+                            Toast.makeText(requireContext(), error, Toast.LENGTH_LONG).show()
+                    );
+                }
+            });
         });
 
         return dialog;
@@ -106,9 +139,13 @@ public class CloudSettingsDialog extends DialogFragment {
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         if (binding != null) {
-            outState.putString("url", binding.etWebDavUrl.getText().toString());
-            outState.putString("username", binding.etUsername.getText().toString());
-            outState.putString("password", binding.etPassword.getText().toString());
+            android.text.Editable urlEditable = binding.etWebDavUrl.getText();
+            android.text.Editable usernameEditable = binding.etUsername.getText();
+            android.text.Editable passwordEditable = binding.etPassword.getText();
+
+            outState.putString("url", urlEditable != null ? urlEditable.toString() : "");
+            outState.putString("username", usernameEditable != null ? usernameEditable.toString() : "");
+            outState.putString("password", passwordEditable != null ? passwordEditable.toString() : "");
             outState.putBoolean("auto_backup", binding.cbAutoBackup.isChecked());
         }
     }
