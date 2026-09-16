@@ -19,12 +19,12 @@ import com.google.android.material.tabs.TabLayout;
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
 import com.yurii.pavlenko.myassistant.tasks.database.CloudSettingsDialog;
+import com.yurii.pavlenko.myassistant.tasks.database.CloudSyncManager;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 
 /**
  * Main activity responsible for managing tab navigation, view pager sync,
  * overflow menus, and cloud settings dialog integration.
- * Created on: 2026-09-13
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -283,12 +283,55 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCloudExport() {
-                Toast.makeText(MainActivity.this, "Save to Cloud coming soon", Toast.LENGTH_SHORT).show();
+                CloudSyncManager syncManager = new CloudSyncManager(MainActivity.this);
+                Toast.makeText(MainActivity.this, "Exporting database to cloud...", Toast.LENGTH_SHORT).show();
+
+                syncManager.uploadDatabase(new CloudSyncManager.SyncCallback() {
+                    @Override
+                    public void onSuccess(String message) {
+                        runOnUiThread(() ->
+                                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show()
+                        );
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        runOnUiThread(() ->
+                                Toast.makeText(MainActivity.this, error, Toast.LENGTH_LONG).show()
+                        );
+                    }
+                });
             }
 
             @Override
             public void onCloudImport() {
-                Toast.makeText(MainActivity.this, "Restore from Cloud coming soon", Toast.LENGTH_SHORT).show();
+                CloudSyncManager syncManager = new CloudSyncManager(MainActivity.this);
+                Toast.makeText(MainActivity.this, "Importing database from cloud...", Toast.LENGTH_SHORT).show();
+
+                syncManager.downloadDatabase(new CloudSyncManager.SyncCallback() {
+                    @Override
+                    public void onSuccess(String message) {
+                        runOnUiThread(() -> {
+                            Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                            // За потреби перезавантажуємо активність, щоб оновити дані з нової бази
+                            Intent intent = getPackageManager().getLaunchIntentForPackage(getPackageName());
+                            if (intent != null) {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                                        Intent.FLAG_ACTIVITY_NEW_TASK |
+                                        Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                                System.exit(0);
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onError(String error) {
+                        runOnUiThread(() ->
+                                Toast.makeText(MainActivity.this, error, Toast.LENGTH_LONG).show()
+                        );
+                    }
+                });
             }
         });
     }

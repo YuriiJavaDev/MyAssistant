@@ -93,6 +93,25 @@ public class CloudSettingsDialog extends DialogFragment {
             boolean autoBackup = binding.cbAutoBackup.isChecked();
 
             configManager.saveConfig(url, username, password, autoBackup);
+            if (autoBackup) {
+                androidx.work.Constraints constraints = new androidx.work.Constraints.Builder()
+                        .setRequiredNetworkType(androidx.work.NetworkType.CONNECTED)
+                        .build();
+
+                androidx.work.PeriodicWorkRequest backupRequest = new androidx.work.PeriodicWorkRequest.Builder(
+                        CloudBackupWorker.class, 1, java.util.concurrent.TimeUnit.DAYS)
+                        .setConstraints(constraints)
+                        .build();
+
+                androidx.work.WorkManager.getInstance(requireContext()).enqueueUniquePeriodicWork(
+                        "CloudAutoBackupWork",
+                        androidx.work.ExistingPeriodicWorkPolicy.UPDATE,
+                        backupRequest
+                );
+            } else {
+                androidx.work.WorkManager.getInstance(requireContext()).cancelUniqueWork("CloudAutoBackupWork");
+            }
+
             Toast.makeText(requireContext(), "Cloud settings saved successfully", Toast.LENGTH_SHORT).show();
             dismiss();
         });

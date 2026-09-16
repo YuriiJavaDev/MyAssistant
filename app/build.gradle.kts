@@ -53,4 +53,5 @@ dependencies {
 
     implementation("androidx.documentfile:documentfile:1.0.1")
     implementation("androidx.security:security-crypto:1.1.0")
+    implementation("androidx.work:work-runtime:2.9.0")
 }
