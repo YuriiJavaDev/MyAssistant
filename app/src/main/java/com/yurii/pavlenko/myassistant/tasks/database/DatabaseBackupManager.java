@@ -40,7 +40,7 @@ public class DatabaseBackupManager {
             // Copy current database content to the export file
             try (InputStream fis = new FileInputStream(dbFile);
                  OutputStream fos = new FileOutputStream(backupFile)) {
-                byte[] buffer = new byte[1024];
+                byte[] buffer = new byte[4096];
                 int length;
                 while ((length = fis.read(buffer)) > 0) {
                     fos.write(buffer, 0, length);
@@ -90,7 +90,7 @@ public class DatabaseBackupManager {
 
                 if (inputStream == null) return false;
 
-                byte[] buffer = new byte[1024];
+                byte[] buffer = new byte[4096];
                 int length;
                 while ((length = inputStream.read(buffer)) > 0) {
                     outputStream.write(buffer, 0, length);
