@@ -66,10 +66,10 @@ public class TaskDeadlinePickerHelper {
     private void updateDeadlineDisplay() {
         if (selectedDeadline != null) {
             long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), selectedDeadline);
-            String text = "Deadline: " + selectedDeadline.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " — " + daysLeft + " days left!";
+            String text = selectedDeadline.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " — " + daysLeft + " days left!";
             deadlineTextView.setText(text);
         } else {
-            deadlineTextView.setText("Click to select a deadline");
+            deadlineTextView.setText("Select a deadline");
         }
     }
 

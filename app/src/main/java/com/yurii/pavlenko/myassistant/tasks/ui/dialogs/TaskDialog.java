@@ -3,6 +3,7 @@ package com.yurii.pavlenko.myassistant.tasks.ui.dialogs;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -46,7 +47,6 @@ public class TaskDialog {
                              @Nullable OnTaskUpdatedListener updateListener,
                              @Nullable OnTaskDeletedListener deleteListener) {
 
-        // Use ViewBinding instead of multiple findViewById calls
         DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(context));
 
         String[] importanceOptions = {"Normal", "Important", "Urgent"};
@@ -59,13 +59,14 @@ public class TaskDialog {
 
         LocalDate initialDeadline = null;
 
+        binding.dialogTitleTextView.setText(isEditMode ? "Edit Task" : "Add New Task");
+        binding.btnSave.setText(isEditMode ? "Save" : "Add");
+
         if (isEditMode) {
-            // Edit mode setup
             binding.dialogTaskEditText.setText(task.getTitle());
             binding.dialogShowTimestampsCheckBox.setChecked(task.isShowTimestamps());
             initialDeadline = task.getDeadline();
 
-            // Set initial reminder checkbox state based on deadline existence
             boolean hasDeadline = initialDeadline != null;
             binding.dialogRemindCheckBox.setEnabled(hasDeadline);
             binding.dialogRemindCheckBox.setChecked(hasDeadline && task.isRemindSoundOneDayBefore());
@@ -79,61 +80,66 @@ public class TaskDialog {
                 }
             }
         } else {
-            // Create mode setup
             if (initialText != null && !initialText.isEmpty()) {
                 binding.dialogTaskEditText.setText(initialText);
             }
             binding.dialogShowTimestampsCheckBox.setChecked(true);
 
-            // New tasks start without a deadline, so reminder checkbox is disabled
             binding.dialogRemindCheckBox.setEnabled(false);
             binding.dialogRemindCheckBox.setChecked(false);
             binding.dialogImportanceSpinner.setSelection(0);
         }
 
-        // Setup deadline picker helper and synchronize checkbox state when deadline changes
         deadlineHelper.setupDeadlinePicker(context, binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, initialDeadline);
 
         binding.dialogTaskEditText.setSelection(binding.dialogTaskEditText.getText().length());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context)
-                .setTitle(isEditMode ? "Edit Task" : "Add New Task")
-                .setView(binding.getRoot())
-                .setPositiveButton(isEditMode ? "Save" : "Add", (dialog, which) -> {
-                    String title = binding.dialogTaskEditText.getText().toString().trim();
-                    String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
-                    LocalDate deadline = deadlineHelper.getSelectedDeadline();
-
-                    // If deadline is null, reminder must be false
-                    boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
-                    boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
-
-                    if (title.isEmpty()) {
-                        Toast.makeText(context, "Task description cannot be empty", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-
-                    if (isEditMode && updateListener != null) {
-                        updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps);
-                        Toast.makeText(context, "Task updated", Toast.LENGTH_SHORT).show();
-                    } else if (!isEditMode && createListener != null) {
-                        createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps);
-                        Toast.makeText(context, "Task created", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
-
-        // Add Delete button only in edit mode
         if (isEditMode && deleteListener != null) {
-            builder.setNeutralButton("Delete", (dialog, which) -> {
+            binding.btnDelete.setVisibility(View.VISIBLE);
+            binding.btnDelete.setOnClickListener(v -> {
                 DeleteConfirmationDialog.show(context, true, () -> {
                     deleteListener.onTaskDeleted(task);
                     Toast.makeText(context, "Task deleted", Toast.LENGTH_SHORT).show();
                 });
             });
+        } else {
+            binding.btnDelete.setVisibility(View.GONE);
         }
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                .setView(binding.getRoot());
+
         AlertDialog dialog = builder.create();
+
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        }
+
+        binding.btnSave.setOnClickListener(v -> {
+            String title = binding.dialogTaskEditText.getText().toString().trim();
+            String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
+            LocalDate deadline = deadlineHelper.getSelectedDeadline();
+
+            boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
+            boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
+
+            if (title.isEmpty()) {
+                Toast.makeText(context, "Task description cannot be empty", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (isEditMode && updateListener != null) {
+                updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps);
+                Toast.makeText(context, "Task updated", Toast.LENGTH_SHORT).show();
+            } else if (!isEditMode && createListener != null) {
+                createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps);
+                Toast.makeText(context, "Task created", Toast.LENGTH_SHORT).show();
+            }
+            dialog.dismiss();
+        });
+
+        binding.btnCancel.setOnClickListener(v -> dialog.dismiss());
+
         dialog.setOnDismissListener(dialogInterface -> deadlineHelper.release());
         dialog.show();
     }

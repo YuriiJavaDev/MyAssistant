@@ -1,116 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@android:color/white">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add New Task"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_color"
-        android:layout_marginBottom="8dp" />
-
-    <EditText
-        android:id="@+id/dialogTaskEditText"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:hint="Task description"
-        android:textSize="13sp"
-        android:paddingHorizontal="8dp"
-        android:layout_marginBottom="8dp"
-        android:inputType="text|textCapSentences" />
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/bg_spinner_dropdown">
+
+        <TextView
+            android:id="@+id/dialogTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Task"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/dialogTaskEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="text|textCapSentences"
+            android:textColor="@color/text_color" />
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Importance level:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="2dp" />
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:background="@drawable/bg_spinner">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Importance level:"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="2dp" />
 
-                <Spinner
-                    android:id="@+id/dialogImportanceSpinner"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent" />
-            </FrameLayout>
+                    android:layout_height="34dp"
+                    android:background="@drawable/bg_spinner">
+
+                    <Spinner
+                        android:id="@+id/dialogImportanceSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deadline:"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/dialogDeadlineTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="8dp"
+                    android:text="Select deadline"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_spinner"
+                    android:textColor="@color/text_color" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="6dp"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/dialogRemindCheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Remind 1 day before"
+                android:textSize="11sp"
+                android:textColor="@color/text_color" />
+
+            <CheckBox
+                android:id="@+id/dialogShowTimestampsCheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Show creation dates"
+                android:textSize="11sp"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deadline:"
-                android:textColor="@color/colorPrimary"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="2dp" />
-
-            <TextView
-                android:id="@+id/dialogDeadlineTextView"
-                android:layout_width="match_parent"
-                android:layout_height="34dp"
-                android:gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
                 android:paddingHorizontal="8dp"
-                android:text="Select deadline"
-                android:textSize="12sp"
-                android:background="@drawable/bg_spinner" />
+                android:background="@drawable/button_selector"
+                app:backgroundTint="@null"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_btn"
+                android:textSize="11sp"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/button_selector"
+                app:backgroundTint="@null"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_btn"
+                android:textSize="11sp"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="8dp"
+                android:background="@drawable/button_selector"
+                app:backgroundTint="@null"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_btn"
+                android:textSize="11sp" />
         </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="4dp">
-
-        <CheckBox
-            android:id="@+id/dialogRemindCheckBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Remind 1 day before"
-            android:textSize="11sp"
-            android:textColor="@color/text_color" />
-
-        <CheckBox
-            android:id="@+id/dialogShowTimestampsCheckBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Show creation dates"
-            android:textSize="11sp"
-            android:textColor="@color/text_color" />
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

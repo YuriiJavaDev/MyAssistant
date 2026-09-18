@@ -3,9 +3,8 @@
 
     <item android:state_pressed="true">
         <inset
-            android:insetTop="6dp"
-            android:insetBottom="6dp">
-
+            android:insetTop="4dp"
+            android:insetBottom="4dp">
             <shape android:shape="rectangle">
                 <gradient
                     android:type="linear"
@@ -13,17 +12,14 @@
                     android:startColor="#3E2773"
                     android:endColor="#6E5CA2"/>
                 <corners android:radius="20dp" />
-                <size android:height="36dp" />
             </shape>
-
         </inset>
     </item>
 
     <item>
         <inset
-            android:insetTop="6dp"
-            android:insetBottom="6dp">
-
+            android:insetTop="4dp"
+            android:insetBottom="4dp">
             <shape android:shape="rectangle">
                 <gradient
                     android:type="linear"
@@ -31,9 +27,7 @@
                     android:startColor="#9D84E8"
                     android:endColor="#3E2773" />
                 <corners android:radius="20dp" />
-                <size android:height="16dp" />
             </shape>
-
         </inset>
     </item>
 
