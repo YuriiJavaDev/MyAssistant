@@ -42,7 +42,7 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_spinner">
 
@@ -59,6 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@android:color/transparent"
+                android:popupBackground="@drawable/bg_spinner_dropdown"
                 android:paddingStart="14dp"
                 android:paddingEnd="36dp" />
 

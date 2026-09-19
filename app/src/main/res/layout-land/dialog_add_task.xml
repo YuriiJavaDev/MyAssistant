@@ -59,11 +59,22 @@
                     android:layout_height="34dp"
                     android:background="@drawable/bg_spinner">
 
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        app:tint="#3E2773" />
+
                     <Spinner
                         android:id="@+id/dialogImportanceSpinner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:background="@android:color/transparent"
+                        android:popupBackground="@drawable/bg_spinner_dropdown"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="26dp" />
                 </FrameLayout>
             </LinearLayout>
 

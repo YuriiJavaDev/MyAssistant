@@ -1,13 +1,18 @@
 package com.yurii.pavlenko.myassistant.tasks.ui.dialogs;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogAddTaskBinding;
@@ -16,7 +21,10 @@ import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper
 
 import java.time.LocalDate;
 
-public class TaskDialog {
+public class TaskDialogFragment extends DialogFragment {
+
+    private static final String ARG_TASK = "arg_task";
+    private static final String ARG_INITIAL_TEXT = "arg_initial_text";
 
     public interface OnTaskSavedListener {
         void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps);
@@ -30,31 +38,69 @@ public class TaskDialog {
         void onTaskDeleted(Task task);
     }
 
-    // Show dialog for creating a new task
-    public static void showCreate(Context context, @Nullable String initialText, OnTaskSavedListener listener) {
-        show(context, null, initialText, listener, null, null);
+    private Task task;
+    private String initialText;
+    private OnTaskSavedListener createListener;
+    private OnTaskUpdatedListener updateListener;
+    private OnTaskDeletedListener deleteListener;
+
+    private TaskDeadlinePickerHelper deadlineHelper;
+
+    public static TaskDialogFragment newInstance(@Nullable String initialText, OnTaskSavedListener listener) {
+        TaskDialogFragment fragment = new TaskDialogFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_INITIAL_TEXT, initialText);
+        fragment.setArguments(args);
+        fragment.createListener = listener;
+        return fragment;
     }
 
-    // Show dialog for editing an existing task
-    public static void showEdit(Context context, Task task, OnTaskUpdatedListener updateListener, OnTaskDeletedListener deleteListener) {
-        show(context, task, null, null, updateListener, deleteListener);
+    public static TaskDialogFragment newInstance(Task task, OnTaskUpdatedListener updateListener, OnTaskDeletedListener deleteListener) {
+        TaskDialogFragment fragment = new TaskDialogFragment();
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_TASK, task);
+        fragment.setArguments(args);
+        fragment.updateListener = updateListener;
+        fragment.deleteListener = deleteListener;
+        return fragment;
     }
 
-    private static void show(Context context,
-                             @Nullable Task task,
-                             @Nullable String initialText,
-                             @Nullable OnTaskSavedListener createListener,
-                             @Nullable OnTaskUpdatedListener updateListener,
-                             @Nullable OnTaskDeletedListener deleteListener) {
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        Fragment parent = getParentFragment();
+        if (parent instanceof OnTaskSavedListener) {
+            createListener = (OnTaskSavedListener) parent;
+        }
+        if (parent instanceof OnTaskUpdatedListener) {
+            updateListener = (OnTaskUpdatedListener) parent;
+        }
+        if (parent instanceof OnTaskDeletedListener) {
+            deleteListener = (OnTaskDeletedListener) parent;
+        }
+    }
 
-        DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(context));
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            task = (Task) getArguments().getSerializable(ARG_TASK);
+            initialText = getArguments().getString(ARG_INITIAL_TEXT);
+        }
+    }
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(requireContext()));
 
         String[] importanceOptions = {"Normal", "Important", "Urgent"};
-        ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(context, R.layout.item_spinner, importanceOptions);
+        ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
         importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.dialogImportanceSpinner.setAdapter(importanceAdapter);
+        binding.dialogImportanceSpinner.setPopupBackgroundResource(R.drawable.bg_spinner_dropdown);
 
-        TaskDeadlinePickerHelper deadlineHelper = new TaskDeadlinePickerHelper(context);
+        deadlineHelper = new TaskDeadlinePickerHelper(requireContext());
         boolean isEditMode = task != null;
 
         LocalDate initialDeadline = null;
@@ -90,23 +136,24 @@ public class TaskDialog {
             binding.dialogImportanceSpinner.setSelection(0);
         }
 
-        deadlineHelper.setupDeadlinePicker(context, binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, initialDeadline);
+        deadlineHelper.setupDeadlinePicker(requireContext(), binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, initialDeadline);
 
         binding.dialogTaskEditText.setSelection(binding.dialogTaskEditText.getText().length());
 
         if (isEditMode && deleteListener != null) {
             binding.btnDelete.setVisibility(View.VISIBLE);
             binding.btnDelete.setOnClickListener(v -> {
-                DeleteConfirmationDialog.show(context, true, () -> {
+                DeleteConfirmationDialog.show(requireContext(), true, () -> {
                     deleteListener.onTaskDeleted(task);
-                    Toast.makeText(context, "Task deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
+                    dismiss();
                 });
             });
         } else {
             binding.btnDelete.setVisibility(View.GONE);
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context)
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext())
                 .setView(binding.getRoot());
 
         AlertDialog dialog = builder.create();
@@ -124,23 +171,30 @@ public class TaskDialog {
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
 
             if (title.isEmpty()) {
-                Toast.makeText(context, "Task description cannot be empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (isEditMode && updateListener != null) {
                 updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps);
-                Toast.makeText(context, "Task updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
                 createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps);
-                Toast.makeText(context, "Task created", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
             }
-            dialog.dismiss();
+            dismiss();
         });
 
-        binding.btnCancel.setOnClickListener(v -> dialog.dismiss());
+        binding.btnCancel.setOnClickListener(v -> dismiss());
 
-        dialog.setOnDismissListener(dialogInterface -> deadlineHelper.release());
-        dialog.show();
+        return dialog;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (deadlineHelper != null) {
+            deadlineHelper.release();
+        }
     }
 }

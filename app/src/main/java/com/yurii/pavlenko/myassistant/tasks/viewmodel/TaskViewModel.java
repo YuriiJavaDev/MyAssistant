@@ -31,7 +31,6 @@ public class TaskViewModel extends AndroidViewModel {
         super(application);
         repository = new TaskRepository(application);
 
-        // Observe raw tasks from repository and apply filtering/sorting whenever data changes
         LiveData<List<Task>> rawTasksSource = repository.getAllTasksLiveData();
         displayListLiveData.addSource(rawTasksSource, tasks -> {
             if (tasks != null) {

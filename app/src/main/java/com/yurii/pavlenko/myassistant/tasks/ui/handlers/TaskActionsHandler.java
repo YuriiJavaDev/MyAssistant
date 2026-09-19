@@ -3,20 +3,24 @@ package com.yurii.pavlenko.myassistant.tasks.ui.handlers;
 import android.content.Context;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentManager;
+
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
-import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialog;
+import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 public class TaskActionsHandler {
 
-    public static void setupClickListeners(Context context, FragmentTasksBinding binding, TaskViewModel taskViewModel) {
+    public static void setupClickListeners(Context context, FragmentManager fragmentManager, FragmentTasksBinding binding, TaskViewModel taskViewModel) {
+
         binding.addButton.setOnClickListener(v -> {
             String initialText = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
-            TaskDialog.showCreate(context, initialText, (title, importance, deadline, remindSound, showTimestamps) -> {
+
+            TaskDialogFragment.newInstance(initialText, (title, importance, deadline, remindSound, showTimestamps) -> {
                 taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps);
                 binding.taskInput.setText("");
-            });
+            }).show(fragmentManager, "TaskDialogFragment");
         });
 
         binding.deleteCompletedButton.setOnClickListener(v -> {
