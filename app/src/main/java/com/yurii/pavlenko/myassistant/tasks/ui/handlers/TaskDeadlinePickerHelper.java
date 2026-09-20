@@ -35,10 +35,8 @@ public class TaskDeadlinePickerHelper {
     }
 
     private void showDatePicker() {
-        // Determine initial date for the picker
         LocalDate initialDate = selectedDeadline != null ? selectedDeadline : LocalDate.now();
 
-        // Create the date picker dialog instance
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 context,
                 (view, year, month, dayOfMonth) -> {
@@ -54,7 +52,6 @@ public class TaskDeadlinePickerHelper {
                 initialDate.getDayOfMonth()
         );
 
-        // Configure the negative button to clear the deadline
         datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Clear", (dialog, which) -> {
             selectedDeadline = null;
             updateDeadlineDisplay();
@@ -67,7 +64,6 @@ public class TaskDeadlinePickerHelper {
 
         datePickerDialog.show();
 
-        // Apply custom dropdown window style with border and rounded corners
         if (datePickerDialog.getWindow() != null) {
             datePickerDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
         }
