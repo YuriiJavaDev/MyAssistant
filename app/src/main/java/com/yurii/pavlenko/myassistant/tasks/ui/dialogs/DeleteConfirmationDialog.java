@@ -27,7 +27,6 @@ public class DeleteConfirmationDialog {
 
         dialog.show();
 
-        // Применяем фон диалога с рамкой и скруглением 16dp
         if (dialog.getWindow() != null) {
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
         }
@@ -35,7 +34,6 @@ public class DeleteConfirmationDialog {
         Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
         Button negativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
 
-        // Переводим dp в пиксели для паддингов и маржинов
         int paddingHorizontal = (int) (16 * context.getResources().getDisplayMetrics().density);
         int marginHorizontal = (int) (8 * context.getResources().getDisplayMetrics().density);
 
@@ -45,10 +43,8 @@ public class DeleteConfirmationDialog {
             positiveButton.setTextColor(ContextCompat.getColor(context, R.color.text_color_btn));
             positiveButton.setAllCaps(false);
 
-            // Внутренние отступы для текста слева и справа
             positiveButton.setPadding(paddingHorizontal, positiveButton.getPaddingTop(), paddingHorizontal, positiveButton.getPaddingBottom());
 
-            // Отодвигаем кнопку "Delete" от "Cancel"
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) positiveButton.getLayoutParams();
             params.leftMargin = marginHorizontal;
             positiveButton.setLayoutParams(params);
@@ -59,8 +55,6 @@ public class DeleteConfirmationDialog {
             negativeButton.setBackgroundResource(R.drawable.button_selector);
             negativeButton.setTextColor(ContextCompat.getColor(context, R.color.text_color_btn));
             negativeButton.setAllCaps(false);
-
-            // Внутренние отступы для текста слева и справа
             negativeButton.setPadding(paddingHorizontal, negativeButton.getPaddingTop(), paddingHorizontal, negativeButton.getPaddingBottom());
         }
 
