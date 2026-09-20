@@ -95,7 +95,7 @@ public class BackupMenuHandler {
     private static void showImportConfirmation(Context context, Runnable importAction) {
         DeleteConfirmationDialog.showCustom(
                 context,
-                "Attention",
+                "Attention!",
                 "Restoring the database will result in the loss of the current version. Are you sure you want to proceed?",
                 "Confirm import",
                 importAction
