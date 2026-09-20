@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
-import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.databinding.PopupMenuCustomBinding;
+import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
 
 public class BackupMenuHandler {
 
@@ -28,7 +29,8 @@ public class BackupMenuHandler {
     public static void showCustomPopupMenu(Context context, View anchorView, OnMenuActionListener listener) {
         dismissMenu();
 
-        View popupView = LayoutInflater.from(context).inflate(R.layout.popup_menu_custom, null);
+        PopupMenuCustomBinding binding = PopupMenuCustomBinding.inflate(LayoutInflater.from(context));
+        View popupView = binding.getRoot();
 
         popupView.measure(
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
@@ -45,38 +47,38 @@ public class BackupMenuHandler {
         float density = context.getResources().getDisplayMetrics().density;
         popupWindow.setElevation(8f * density);
 
-        popupView.findViewById(R.id.action_export_db).setOnClickListener(v -> {
+        binding.actionExportDb.setOnClickListener(v -> {
             dismissMenu();
             if (listener != null) {
                 listener.onExportLocal();
             }
         });
 
-        popupView.findViewById(R.id.action_import_db).setOnClickListener(v -> {
+        binding.actionImportDb.setOnClickListener(v -> {
             dismissMenu();
             if (listener != null) {
-                listener.onImportLocal();
+                showImportConfirmation(context, listener::onImportLocal);
             }
         });
 
-        popupView.findViewById(R.id.action_cloud_settings).setOnClickListener(v -> {
+        binding.actionCloudSettings.setOnClickListener(v -> {
             dismissMenu();
             if (listener != null) {
                 listener.onCloudSettings();
             }
         });
 
-        popupView.findViewById(R.id.action_cloud_export).setOnClickListener(v -> {
+        binding.actionCloudExport.setOnClickListener(v -> {
             dismissMenu();
             if (listener != null) {
                 listener.onCloudExport();
             }
         });
 
-        popupView.findViewById(R.id.action_cloud_import).setOnClickListener(v -> {
+        binding.actionCloudImport.setOnClickListener(v -> {
             dismissMenu();
             if (listener != null) {
-                listener.onCloudImport();
+                showImportConfirmation(context, listener::onCloudImport);
             }
         });
 
@@ -88,6 +90,16 @@ public class BackupMenuHandler {
         popupWindow.showAtLocation(anchorView, Gravity.TOP | Gravity.END, xOffset, yOffset);
 
         activePopupWindow = popupWindow;
+    }
+
+    private static void showImportConfirmation(Context context, Runnable importAction) {
+        DeleteConfirmationDialog.showCustom(
+                context,
+                "Attention",
+                "Restoring the database will result in the loss of the current version. Are you sure you want to proceed?",
+                "Confirm import",
+                importAction
+        );
     }
 
     public static void dismissMenu() {

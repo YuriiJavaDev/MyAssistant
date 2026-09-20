@@ -12,16 +12,25 @@ import com.yurii.pavlenko.myassistant.R;
 
 public class DeleteConfirmationDialog {
 
+    // Старый метод для удаления (оставляем для обратной совместимости)
     public static AlertDialog show(Context context, boolean canDelete, Runnable onConfirmed) {
         if (!canDelete) {
             Toast.makeText(context, "No objects found to delete!", Toast.LENGTH_SHORT).show();
             return null;
         }
+        return showCustom(context,
+                "Delete Confirmation",
+                "Are you sure you want to delete this item? This action cannot be undone!",
+                "Delete",
+                onConfirmed);
+    }
 
+    // Новый универсальный метод для любых подтверждений (включая импорт)
+    public static AlertDialog showCustom(Context context, String title, String message, String positiveButtonText, Runnable onConfirmed) {
         AlertDialog dialog = new AlertDialog.Builder(context)
-                .setTitle("Delete Confirmation")
-                .setMessage("Are you sure you want to delete this item? This action cannot be undone!")
-                .setPositiveButton("Delete", (dialogInterface, which) -> onConfirmed.run())
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(positiveButtonText, (dialogInterface, which) -> onConfirmed.run())
                 .setNegativeButton("Cancel", null)
                 .create();
 
