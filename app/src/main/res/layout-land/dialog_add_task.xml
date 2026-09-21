@@ -32,6 +32,7 @@
             android:inputType="text|textCapSentences"
             android:textColor="@color/text_color" />
 
+        <!-- Рядок: Importance та Deadline -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -107,6 +108,36 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Блок нагадувань: Чекбокс та Поле кастомної дати -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <CheckBox
+                android:id="@+id/dialogRemindCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remind 1 day before"
+                android:textSize="11sp"
+                android:textColor="@color/text_color"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/dialogCustomReminderTextView"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="8dp"
+                android:text="Custom reminder date"
+                android:textSize="11sp"
+                android:background="@drawable/bg_spinner"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,24 +145,15 @@
             android:layout_marginBottom="8dp">
 
             <CheckBox
-                android:id="@+id/dialogRemindCheckBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Remind 1 day before"
-                android:textSize="11sp"
-                android:textColor="@color/text_color" />
-
-            <CheckBox
                 android:id="@+id/dialogShowTimestampsCheckBox"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="Show creation dates"
                 android:textSize="11sp"
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
+        <!-- Кнопки керування -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

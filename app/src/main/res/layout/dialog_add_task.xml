@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="16dp"
         android:background="@drawable/bg_spinner_dropdown">
 
         <TextView
@@ -92,15 +92,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Remind with sound one day in advance"
+            android:text="Remind 1 day before"
             android:textColor="#3E2773"
             android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Custom reminder time:"
+            android:textColor="#3E2773"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialogCustomReminderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_spinner"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:text="Select custom reminder time"
+            android:textColor="#3E2773"
+            android:textSize="12sp" />
 
         <CheckBox
             android:id="@+id/dialogShowTimestampsCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:checked="true"
             android:text="Show creation/edit dates"
             android:textColor="#3E2773"

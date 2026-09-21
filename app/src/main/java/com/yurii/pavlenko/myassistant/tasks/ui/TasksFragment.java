@@ -81,13 +81,13 @@ public class TasksFragment extends Fragment implements
     }
 
     @Override
-    public void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
-        taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps);
+    public void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate) {
+        taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps, customReminderDate);
     }
 
     @Override
-    public void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
-        taskViewModel.updateTaskDetails(task, title, importance, deadline, remindSound, showTimestamps);
+    public void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate) {
+        taskViewModel.updateTaskDetails(task, title, importance, deadline, remindSound, showTimestamps, customReminderDate);
     }
 
     @Override

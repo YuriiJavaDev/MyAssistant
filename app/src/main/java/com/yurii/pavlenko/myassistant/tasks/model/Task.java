@@ -23,11 +23,13 @@ public class Task implements Serializable {
     private LocalDate deadline;
     private boolean remindSoundOneDayBefore;
     private boolean showTimestamps;
+    private LocalDate customReminderDate; // Поле для даты кастомного напоминания
 
     // Room uses this constructor to recreate the object from database
     public Task(long id, String title, boolean isCompleted, LocalDateTime createdAt,
                 LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
-                LocalDate deadline, boolean remindSoundOneDayBefore, boolean showTimestamps) {
+                LocalDate deadline, boolean remindSoundOneDayBefore, boolean showTimestamps,
+                LocalDate customReminderDate) {
         this.id = id;
         this.title = title;
         this.isCompleted = isCompleted;
@@ -38,17 +40,20 @@ public class Task implements Serializable {
         this.deadline = deadline;
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
         this.showTimestamps = showTimestamps;
+        this.customReminderDate = customReminderDate;
     }
 
     // Convenient constructor for creating new tasks in code (ignored by Room)
     @Ignore
-    public Task(String title, String importance, LocalDate deadline, boolean isCompleted, boolean remindSoundOneDayBefore, boolean showTimestamps) {
+    public Task(String title, String importance, LocalDate deadline, boolean isCompleted,
+                boolean remindSoundOneDayBefore, boolean showTimestamps, LocalDate customReminderDate) {
         this.title = title;
         this.importance = importance;
         this.deadline = deadline;
         this.isCompleted = isCompleted;
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
         this.showTimestamps = showTimestamps;
+        this.customReminderDate = customReminderDate;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
@@ -132,5 +137,13 @@ public class Task implements Serializable {
 
     public void setShowTimestamps(boolean showTimestamps) {
         this.showTimestamps = showTimestamps;
+    }
+
+    public LocalDate getCustomReminderDate() {
+        return customReminderDate;
+    }
+
+    public void setCustomReminderDate(LocalDate customReminderDate) {
+        this.customReminderDate = customReminderDate;
     }
 }

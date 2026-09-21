@@ -66,8 +66,13 @@ public class TaskViewModel extends AndroidViewModel {
         updateStatistics();
     }
 
-    public void createNewTask(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
-        Task newTask = new Task(title, importance, deadline, false, remindSound, showTimestamps);
+    public void createNewTask(String title,
+                              String importance,
+                              LocalDate deadline,
+                              boolean remindSound,
+                              boolean showTimestamps,
+                              LocalDate customReminderDate) {
+        Task newTask = new Task(title, importance, deadline, false, remindSound, showTimestamps, customReminderDate);
         repository.insert(newTask);
     }
 
@@ -78,12 +83,19 @@ public class TaskViewModel extends AndroidViewModel {
         repository.update(task);
     }
 
-    public void updateTaskDetails(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps) {
+    public void updateTaskDetails(Task task,
+                                  String title,
+                                  String importance,
+                                  LocalDate deadline,
+                                  boolean remindSound,
+                                  boolean showTimestamps,
+                                  LocalDate customReminderDate) {
         task.setTitle(title);
         task.setImportance(importance);
         task.setDeadline(deadline);
         task.setRemindSoundOneDayBefore(remindSound);
         task.setShowTimestamps(showTimestamps);
+        task.setCustomReminderDate(customReminderDate);
         task.setUpdatedAt(LocalDateTime.now());
         repository.update(task);
     }

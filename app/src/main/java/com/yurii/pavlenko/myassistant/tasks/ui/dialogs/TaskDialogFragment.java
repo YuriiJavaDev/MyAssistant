@@ -26,12 +26,13 @@ public class TaskDialogFragment extends DialogFragment {
     private static final String ARG_TASK = "arg_task";
     private static final String ARG_INITIAL_TEXT = "arg_initial_text";
 
+    // Updated interfaces to include custom reminder date
     public interface OnTaskSavedListener {
-        void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps);
+        void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate);
     }
 
     public interface OnTaskUpdatedListener {
-        void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps);
+        void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate);
     }
 
     public interface OnTaskDeletedListener {
@@ -104,6 +105,7 @@ public class TaskDialogFragment extends DialogFragment {
         boolean isEditMode = task != null;
 
         LocalDate initialDeadline = null;
+        LocalDate initialCustomReminder = null;
 
         binding.dialogTitleTextView.setText(isEditMode ? "Edit Task" : "Add New Task");
         binding.btnSave.setText(isEditMode ? "Save" : "Add");
@@ -112,6 +114,8 @@ public class TaskDialogFragment extends DialogFragment {
             binding.dialogTaskEditText.setText(task.getTitle());
             binding.dialogShowTimestampsCheckBox.setChecked(task.isShowTimestamps());
             initialDeadline = task.getDeadline();
+            // If your Task model has custom reminder field, fetch it here:
+            initialCustomReminder = task.getCustomReminderDate();
 
             boolean hasDeadline = initialDeadline != null;
             binding.dialogRemindCheckBox.setEnabled(hasDeadline);
@@ -136,7 +140,14 @@ public class TaskDialogFragment extends DialogFragment {
             binding.dialogImportanceSpinner.setSelection(0);
         }
 
-        deadlineHelper.setupDeadlinePicker(requireContext(), binding.dialogDeadlineTextView, binding.dialogRemindCheckBox, initialDeadline);
+        deadlineHelper.setupDeadlinePicker(
+                requireContext(),
+                binding.dialogDeadlineTextView,
+                binding.dialogRemindCheckBox,
+                binding.dialogCustomReminderTextView,
+                initialDeadline,
+                initialCustomReminder
+        );
 
         binding.dialogTaskEditText.setSelection(binding.dialogTaskEditText.getText().length());
 
@@ -166,6 +177,7 @@ public class TaskDialogFragment extends DialogFragment {
             String title = binding.dialogTaskEditText.getText().toString().trim();
             String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
+            LocalDate customReminderDate = deadlineHelper.getCustomReminderDate(); // Retaining custom reminder date
 
             boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
@@ -176,10 +188,10 @@ public class TaskDialogFragment extends DialogFragment {
             }
 
             if (isEditMode && updateListener != null) {
-                updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps);
+                updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDate);
                 Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
-                createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps);
+                createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDate);
                 Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
             }
             dismiss();

@@ -17,8 +17,8 @@ public class TaskActionsHandler {
         binding.addButton.setOnClickListener(v -> {
             String initialText = binding.taskInput.getText() != null ? binding.taskInput.getText().toString().trim() : "";
 
-            TaskDialogFragment.newInstance(initialText, (title, importance, deadline, remindSound, showTimestamps) -> {
-                taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps);
+            TaskDialogFragment.newInstance(initialText, (title, importance, deadline, remindSound, showTimestamps, customReminderDate) -> {
+                taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps, customReminderDate);
                 binding.taskInput.setText("");
             }).show(fragmentManager, "TaskDialogFragment");
         });
