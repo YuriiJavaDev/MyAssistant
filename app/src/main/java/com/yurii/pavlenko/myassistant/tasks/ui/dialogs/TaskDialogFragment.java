@@ -20,19 +20,22 @@ import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class TaskDialogFragment extends DialogFragment {
 
     private static final String ARG_TASK = "arg_task";
     private static final String ARG_INITIAL_TEXT = "arg_initial_text";
 
-    // Updated interfaces to include custom reminder date
+    private static final String STATE_SELECTED_DEADLINE = "state_selected_deadline";
+    private static final String STATE_CUSTOM_REMINDER = "state_custom_reminder";
+
     public interface OnTaskSavedListener {
-        void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate);
+        void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDateTime customReminderDateTime);
     }
 
     public interface OnTaskUpdatedListener {
-        void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate);
+        void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDateTime customReminderDateTime);
     }
 
     public interface OnTaskDeletedListener {
@@ -90,6 +93,19 @@ public class TaskDialogFragment extends DialogFragment {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (deadlineHelper != null) {
+            if (deadlineHelper.getSelectedDeadline() != null) {
+                outState.putString(STATE_SELECTED_DEADLINE, deadlineHelper.getSelectedDeadline().toString());
+            }
+            if (deadlineHelper.getCustomReminderDateTime() != null) {
+                outState.putString(STATE_CUSTOM_REMINDER, deadlineHelper.getCustomReminderDateTime().toString());
+            }
+        }
+    }
+
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -105,17 +121,22 @@ public class TaskDialogFragment extends DialogFragment {
         boolean isEditMode = task != null;
 
         LocalDate initialDeadline = null;
-        LocalDate initialCustomReminder = null;
+        LocalDateTime initialCustomReminder = null;
 
-        binding.dialogTitleTextView.setText(isEditMode ? "Edit Task" : "Add New Task");
-        binding.btnSave.setText(isEditMode ? "Save" : "Add");
-
-        if (isEditMode) {
+        if (savedInstanceState != null) {
+            String deadlineStr = savedInstanceState.getString(STATE_SELECTED_DEADLINE);
+            if (deadlineStr != null) {
+                initialDeadline = LocalDate.parse(deadlineStr);
+            }
+            String reminderStr = savedInstanceState.getString(STATE_CUSTOM_REMINDER);
+            if (reminderStr != null) {
+                initialCustomReminder = LocalDateTime.parse(reminderStr);
+            }
+        } else if (isEditMode) {
             binding.dialogTaskEditText.setText(task.getTitle());
             binding.dialogShowTimestampsCheckBox.setChecked(task.isShowTimestamps());
             initialDeadline = task.getDeadline();
-            // If your Task model has custom reminder field, fetch it here:
-            initialCustomReminder = task.getCustomReminderDate();
+            initialCustomReminder = task.getCustomReminderDateTime();
 
             boolean hasDeadline = initialDeadline != null;
             binding.dialogRemindCheckBox.setEnabled(hasDeadline);
@@ -139,6 +160,9 @@ public class TaskDialogFragment extends DialogFragment {
             binding.dialogRemindCheckBox.setChecked(false);
             binding.dialogImportanceSpinner.setSelection(0);
         }
+
+        binding.dialogTitleTextView.setText(isEditMode ? "Edit Task" : "Add New Task");
+        binding.btnSave.setText(isEditMode ? "Save" : "Add");
 
         deadlineHelper.setupDeadlinePicker(
                 requireContext(),
@@ -177,7 +201,7 @@ public class TaskDialogFragment extends DialogFragment {
             String title = binding.dialogTaskEditText.getText().toString().trim();
             String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
-            LocalDate customReminderDate = deadlineHelper.getCustomReminderDate(); // Retaining custom reminder date
+            LocalDateTime customReminderDateTime = deadlineHelper.getCustomReminderDateTime();
 
             boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
@@ -188,10 +212,10 @@ public class TaskDialogFragment extends DialogFragment {
             }
 
             if (isEditMode && updateListener != null) {
-                updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDate);
+                updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
                 Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
-                createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDate);
+                createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
                 Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
             }
             dismiss();

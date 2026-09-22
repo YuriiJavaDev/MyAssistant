@@ -22,6 +22,7 @@ import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskSpinnerHelper;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class TasksFragment extends Fragment implements
         TaskDialogFragment.OnTaskSavedListener,
@@ -81,13 +82,13 @@ public class TasksFragment extends Fragment implements
     }
 
     @Override
-    public void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate) {
-        taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps, customReminderDate);
+    public void onTaskSaved(String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDateTime customReminderDateTime) {
+        taskViewModel.createNewTask(title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
     }
 
     @Override
-    public void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDate customReminderDate) {
-        taskViewModel.updateTaskDetails(task, title, importance, deadline, remindSound, showTimestamps, customReminderDate);
+    public void onTaskUpdated(Task task, String title, String importance, LocalDate deadline, boolean remindSound, boolean showTimestamps, LocalDateTime customReminderDateTime) {
+        taskViewModel.updateTaskDetails(task, title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
     }
 
     @Override

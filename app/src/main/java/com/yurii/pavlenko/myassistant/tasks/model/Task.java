@@ -23,13 +23,13 @@ public class Task implements Serializable {
     private LocalDate deadline;
     private boolean remindSoundOneDayBefore;
     private boolean showTimestamps;
-    private LocalDate customReminderDate; // Поле для даты кастомного напоминания
+    private LocalDateTime customReminderDateTime;
 
-    // Room uses this constructor to recreate the object from database
+    // Room constructor
     public Task(long id, String title, boolean isCompleted, LocalDateTime createdAt,
                 LocalDateTime completedAt, LocalDateTime updatedAt, String importance,
                 LocalDate deadline, boolean remindSoundOneDayBefore, boolean showTimestamps,
-                LocalDate customReminderDate) {
+                LocalDateTime customReminderDateTime) {
         this.id = id;
         this.title = title;
         this.isCompleted = isCompleted;
@@ -40,110 +40,54 @@ public class Task implements Serializable {
         this.deadline = deadline;
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
         this.showTimestamps = showTimestamps;
-        this.customReminderDate = customReminderDate;
+        this.customReminderDateTime = customReminderDateTime;
     }
 
-    // Convenient constructor for creating new tasks in code (ignored by Room)
+    // Constructor for new tasks (ignored by Room)
     @Ignore
     public Task(String title, String importance, LocalDate deadline, boolean isCompleted,
-                boolean remindSoundOneDayBefore, boolean showTimestamps, LocalDate customReminderDate) {
+                boolean remindSoundOneDayBefore, boolean showTimestamps, LocalDateTime customReminderDateTime) {
         this.title = title;
         this.importance = importance;
         this.deadline = deadline;
         this.isCompleted = isCompleted;
         this.remindSoundOneDayBefore = remindSoundOneDayBefore;
         this.showTimestamps = showTimestamps;
-        this.customReminderDate = customReminderDate;
+        this.customReminderDateTime = customReminderDateTime;
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
 
-    // Getters and Setters
-    public long getId() {
-        return id;
-    }
+    public long getId() { return id; }
+    public void setId(long id) { this.id = id; }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
-    public String getTitle() {
-        return title;
-    }
+    public boolean isCompleted() { return isCompleted; }
+    public void setCompleted(boolean completed) { isCompleted = completed; }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
-    public boolean isCompleted() {
-        return isCompleted;
-    }
+    public LocalDateTime getCompletedAt() { return completedAt; }
+    public void setCompletedAt(LocalDateTime completedAt) { this.completedAt = completedAt; }
 
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
-    }
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
+    public String getImportance() { return importance; }
+    public void setImportance(String importance) { this.importance = importance; }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
+    public LocalDate getDeadline() { return deadline; }
+    public void setDeadline(LocalDate deadline) { this.deadline = deadline; }
 
-    public LocalDateTime getCompletedAt() {
-        return completedAt;
-    }
+    public boolean isRemindSoundOneDayBefore() { return remindSoundOneDayBefore; }
+    public void setRemindSoundOneDayBefore(boolean remindSoundOneDayBefore) { this.remindSoundOneDayBefore = remindSoundOneDayBefore; }
 
-    public void setCompletedAt(LocalDateTime completedAt) {
-        this.completedAt = completedAt;
-    }
+    public boolean isShowTimestamps() { return showTimestamps; }
+    public void setShowTimestamps(boolean showTimestamps) { this.showTimestamps = showTimestamps; }
 
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public String getImportance() {
-        return importance;
-    }
-
-    public void setImportance(String importance) {
-        this.importance = importance;
-    }
-
-    public LocalDate getDeadline() {
-        return deadline;
-    }
-
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
-    }
-
-    public boolean isRemindSoundOneDayBefore() {
-        return remindSoundOneDayBefore;
-    }
-
-    public void setRemindSoundOneDayBefore(boolean remindSoundOneDayBefore) {
-        this.remindSoundOneDayBefore = remindSoundOneDayBefore;
-    }
-
-    public boolean isShowTimestamps() {
-        return showTimestamps;
-    }
-
-    public void setShowTimestamps(boolean showTimestamps) {
-        this.showTimestamps = showTimestamps;
-    }
-
-    public LocalDate getCustomReminderDate() {
-        return customReminderDate;
-    }
-
-    public void setCustomReminderDate(LocalDate customReminderDate) {
-        this.customReminderDate = customReminderDate;
-    }
+    public LocalDateTime getCustomReminderDateTime() { return customReminderDateTime; }
+    public void setCustomReminderDateTime(LocalDateTime customReminderDateTime) { this.customReminderDateTime = customReminderDateTime; }
 }

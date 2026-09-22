@@ -32,7 +32,6 @@
             android:inputType="text|textCapSentences"
             android:textColor="@color/text_color" />
 
-        <!-- Рядок: Importance та Deadline -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +107,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Блок нагадувань: Чекбокс та Поле кастомної дати -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -132,7 +130,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingHorizontal="8dp"
-                android:text="Custom reminder date"
+                android:text="Reminder date &amp; time"
                 android:textSize="11sp"
                 android:background="@drawable/bg_spinner"
                 android:textColor="@color/text_color" />
@@ -153,7 +151,6 @@
                 android:textColor="@color/text_color" />
         </LinearLayout>
 
-        <!-- Кнопки керування -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

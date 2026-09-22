@@ -71,8 +71,8 @@ public class TaskViewModel extends AndroidViewModel {
                               LocalDate deadline,
                               boolean remindSound,
                               boolean showTimestamps,
-                              LocalDate customReminderDate) {
-        Task newTask = new Task(title, importance, deadline, false, remindSound, showTimestamps, customReminderDate);
+                              LocalDateTime customReminderDateTime) {
+        Task newTask = new Task(title, importance, deadline, false, remindSound, showTimestamps, customReminderDateTime);
         repository.insert(newTask);
     }
 
@@ -89,13 +89,13 @@ public class TaskViewModel extends AndroidViewModel {
                                   LocalDate deadline,
                                   boolean remindSound,
                                   boolean showTimestamps,
-                                  LocalDate customReminderDate) {
+                                  LocalDateTime customReminderDateTime) {
         task.setTitle(title);
         task.setImportance(importance);
         task.setDeadline(deadline);
         task.setRemindSoundOneDayBefore(remindSound);
         task.setShowTimestamps(showTimestamps);
-        task.setCustomReminderDate(customReminderDate);
+        task.setCustomReminderDateTime(customReminderDateTime);
         task.setUpdatedAt(LocalDateTime.now());
         repository.update(task);
     }

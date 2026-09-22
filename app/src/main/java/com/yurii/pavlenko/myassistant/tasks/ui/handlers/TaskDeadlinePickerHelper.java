@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant.tasks.ui.handlers;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -10,21 +11,24 @@ import androidx.annotation.Nullable;
 import com.yurii.pavlenko.myassistant.R;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 public class TaskDeadlinePickerHelper {
     private final Context context;
     private LocalDate selectedDeadline;
+    private LocalDateTime customReminderDateTime;
+
     private TextView deadlineTextView;
     private CheckBox remindCheckBox;
     private TextView customReminderTextView;
-    private LocalDate customReminderDate;
 
     public TaskDeadlinePickerHelper(Context context) {
         this.context = context;
         this.selectedDeadline = null;
-        this.customReminderDate = null;
+        this.customReminderDateTime = null;
     }
 
     public void setupDeadlinePicker(Context context,
@@ -32,12 +36,12 @@ public class TaskDeadlinePickerHelper {
                                     CheckBox remindCheckBox,
                                     TextView customReminderTextView,
                                     @Nullable LocalDate initialDeadline,
-                                    @Nullable LocalDate initialCustomReminder) {
+                                    @Nullable LocalDateTime initialCustomReminder) {
         this.deadlineTextView = deadlineTextView;
         this.remindCheckBox = remindCheckBox;
         this.customReminderTextView = customReminderTextView;
         this.selectedDeadline = initialDeadline;
-        this.customReminderDate = initialCustomReminder;
+        this.customReminderDateTime = initialCustomReminder;
 
         updateDeadlineDisplay();
         updateCustomReminderDisplay();
@@ -75,20 +79,19 @@ public class TaskDeadlinePickerHelper {
         });
 
         datePickerDialog.show();
-
         if (datePickerDialog.getWindow() != null) {
             datePickerDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
         }
     }
 
     private void showCustomReminderDatePicker() {
-        LocalDate initialDate = customReminderDate != null ? customReminderDate : LocalDate.now();
+        LocalDate initialDate = customReminderDateTime != null ? customReminderDateTime.toLocalDate() : LocalDate.now();
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 context,
                 (view, year, month, dayOfMonth) -> {
-                    customReminderDate = LocalDate.of(year, month + 1, dayOfMonth);
-                    updateCustomReminderDisplay();
+                    LocalDate pickedDate = LocalDate.of(year, month + 1, dayOfMonth);
+                    showCustomReminderTimePicker(pickedDate);
                 },
                 initialDate.getYear(),
                 initialDate.getMonthValue() - 1,
@@ -96,15 +99,31 @@ public class TaskDeadlinePickerHelper {
         );
 
         datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Clear", (dialog, which) -> {
-            customReminderDate = null;
+            customReminderDateTime = null;
             updateCustomReminderDisplay();
         });
 
         datePickerDialog.show();
-
         if (datePickerDialog.getWindow() != null) {
             datePickerDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
         }
+    }
+
+    private void showCustomReminderTimePicker(LocalDate pickedDate) {
+        LocalTime initialTime = customReminderDateTime != null ? customReminderDateTime.toLocalTime() : LocalTime.of(9, 0);
+
+        TimePickerDialog timePickerDialog = new TimePickerDialog(
+                context,
+                (view, hourOfDay, minute) -> {
+                    customReminderDateTime = LocalDateTime.of(pickedDate, LocalTime.of(hourOfDay, minute));
+                    updateCustomReminderDisplay();
+                },
+                initialTime.getHour(),
+                initialTime.getMinute(),
+                true // 24-hour format
+        );
+
+        timePickerDialog.show();
     }
 
     private void updateDeadlineDisplay() {
@@ -118,11 +137,11 @@ public class TaskDeadlinePickerHelper {
     }
 
     private void updateCustomReminderDisplay() {
-        if (customReminderDate != null) {
-            String text = customReminderDate.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        if (customReminderDateTime != null) {
+            String text = customReminderDateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
             customReminderTextView.setText(text);
         } else {
-            customReminderTextView.setText("Select custom reminder time");
+            customReminderTextView.setText("Select reminder date & time");
         }
     }
 
@@ -130,8 +149,8 @@ public class TaskDeadlinePickerHelper {
         return selectedDeadline;
     }
 
-    public LocalDate getCustomReminderDate() {
-        return customReminderDate;
+    public LocalDateTime getCustomReminderDateTime() {
+        return customReminderDateTime;
     }
 
     public void release() {
