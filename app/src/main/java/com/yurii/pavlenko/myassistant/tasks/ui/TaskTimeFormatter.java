@@ -17,15 +17,18 @@ public class TaskTimeFormatter {
     public static void formatTimestamps(TextView textView, Task task) {
         StringBuilder sb = new StringBuilder();
 
-        if (task.getCreatedAt() != null) {
-            sb.append("Created: ").append(task.getCreatedAt().format(TIMESTAMP_FORMATTER));
-        }
-        if (task.getUpdatedAt() != null) {
-            if (sb.length() > 0) {
-                sb.append("\n");
+        if (task.isShowTimestamps()) {
+            if (task.getCreatedAt() != null) {
+                sb.append("Created: ").append(task.getCreatedAt().format(TIMESTAMP_FORMATTER));
             }
-            sb.append("Edited: ").append(task.getUpdatedAt().format(TIMESTAMP_FORMATTER));
+            if (task.getUpdatedAt() != null) {
+                if (sb.length() > 0) {
+                    sb.append("\n");
+                }
+                sb.append("Edited: ").append(task.getUpdatedAt().format(TIMESTAMP_FORMATTER));
+            }
         }
+
         if (task.isCompleted() && task.getCompletedAt() != null) {
             if (sb.length() > 0) {
                 sb.append("\n");
@@ -52,7 +55,13 @@ public class TaskTimeFormatter {
         if (task.getDeadline() != null) {
             String text = getFormattedDeadlineText(task.getDeadline());
             deadlineTextView.setText(text);
-            deadlineTextView.setTextColor(Color.parseColor("#00C853"));
+
+            if (task.isCompleted()) {
+                deadlineTextView.setTextColor(Color.parseColor("#9E9E9E"));
+            } else {
+                deadlineTextView.setTextColor(Color.parseColor("#00C853"));
+            }
+
             deadlineTextView.setVisibility(TextView.VISIBLE);
         } else {
             deadlineTextView.setVisibility(TextView.GONE);

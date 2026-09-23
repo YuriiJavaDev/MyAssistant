@@ -14,7 +14,13 @@ public class TaskStyleHelper {
         }
     }
 
-    public static void applyImportanceColor(TextView textView, String importance) {
+    public static void applyImportanceColor(TextView textView, String importance, boolean isCompleted) {
+
+        if (isCompleted) {
+            textView.setTextColor(Color.parseColor("#9E9E9E"));
+            return;
+        }
+
         if (importance == null) {
             importance = "Normal";
         }

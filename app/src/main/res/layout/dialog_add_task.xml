@@ -87,20 +87,11 @@
             android:textColor="#3E2773"
             android:textSize="12sp" />
 
-        <CheckBox
-            android:id="@+id/dialogRemindCheckBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Remind 1 day before"
-            android:textColor="#3E2773"
-            android:textSize="14sp" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Custom reminder (Date &amp; Time):"
+            android:text="Reminder (Date &amp; Time):"
             android:textColor="#3E2773"
             android:textSize="12sp"
             android:textStyle="bold" />

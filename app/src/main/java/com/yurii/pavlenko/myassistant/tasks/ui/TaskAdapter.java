@@ -73,14 +73,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             binding.taskCheckBox.setChecked(task.isCompleted());
 
             TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, task.isCompleted());
-            TaskStyleHelper.applyImportanceColor(binding.taskTitleTextView, task.getImportance());
+            TaskStyleHelper.applyImportanceColor(binding.taskTitleTextView, task.getImportance(), task.isCompleted());
             TaskTimeFormatter.formatDeadline(binding.deadlineTextView, task);
-
-            if (task.isShowTimestamps()) {
-                TaskTimeFormatter.formatTimestamps(binding.taskTimestampTextView, task);
-            } else {
-                binding.taskTimestampTextView.setVisibility(android.view.View.GONE);
-            }
+            TaskTimeFormatter.formatTimestamps(binding.taskTimestampTextView, task);
 
             binding.taskCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (checkedListener != null) {

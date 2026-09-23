@@ -138,10 +138,6 @@ public class TaskDialogFragment extends DialogFragment {
             initialDeadline = task.getDeadline();
             initialCustomReminder = task.getCustomReminderDateTime();
 
-            boolean hasDeadline = initialDeadline != null;
-            binding.dialogRemindCheckBox.setEnabled(hasDeadline);
-            binding.dialogRemindCheckBox.setChecked(hasDeadline && task.isRemindSoundOneDayBefore());
-
             if (task.getImportance() != null) {
                 for (int i = 0; i < importanceOptions.length; i++) {
                     if (importanceOptions[i].equalsIgnoreCase(task.getImportance())) {
@@ -154,10 +150,7 @@ public class TaskDialogFragment extends DialogFragment {
             if (initialText != null && !initialText.isEmpty()) {
                 binding.dialogTaskEditText.setText(initialText);
             }
-            binding.dialogShowTimestampsCheckBox.setChecked(true);
-
-            binding.dialogRemindCheckBox.setEnabled(false);
-            binding.dialogRemindCheckBox.setChecked(false);
+            binding.dialogShowTimestampsCheckBox.setChecked(false);
             binding.dialogImportanceSpinner.setSelection(0);
         }
 
@@ -165,9 +158,7 @@ public class TaskDialogFragment extends DialogFragment {
         binding.btnSave.setText(isEditMode ? "Save" : "Add");
 
         deadlineHelper.setupDeadlinePicker(
-                requireContext(),
                 binding.dialogDeadlineTextView,
-                binding.dialogRemindCheckBox,
                 binding.dialogCustomReminderTextView,
                 initialDeadline,
                 initialCustomReminder
@@ -202,13 +193,23 @@ public class TaskDialogFragment extends DialogFragment {
             String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
             LocalDateTime customReminderDateTime = deadlineHelper.getCustomReminderDateTime();
-
-            boolean remindSound = deadline != null && binding.dialogRemindCheckBox.isChecked();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
+
+            // Автоматично визначаємо remindSound: true, якщо встановлено кастомне нагадування
+            boolean remindSound = customReminderDateTime != null;
 
             if (title.isEmpty()) {
                 Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
                 return;
+            }
+
+            // ВАЛІДАЦІЯ: Нагадування не може бути пізніше дедлайну
+            if (deadline != null && customReminderDateTime != null) {
+                LocalDateTime deadlineDateTime = deadline.atTime(23, 59, 59);
+                if (customReminderDateTime.isAfter(deadlineDateTime)) {
+                    Toast.makeText(requireContext(), "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
             }
 
             if (isEditMode && updateListener != null) {
