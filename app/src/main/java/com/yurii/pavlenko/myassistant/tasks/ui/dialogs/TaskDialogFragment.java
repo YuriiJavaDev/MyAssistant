@@ -3,6 +3,8 @@ package com.yurii.pavlenko.myassistant.tasks.ui.dialogs;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,6 +19,7 @@ import androidx.fragment.app.Fragment;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogAddTaskBinding;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
 
 import java.time.LocalDate;
@@ -102,6 +105,37 @@ public class TaskDialogFragment extends DialogFragment {
             }
             if (deadlineHelper.getCustomReminderDateTime() != null) {
                 outState.putString(STATE_CUSTOM_REMINDER, deadlineHelper.getCustomReminderDateTime().toString());
+            }
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // Check if reminder time has passed in edit mode and trigger alert
+        if (task != null && task.getCustomReminderDateTime() != null) {
+            if (task.getCustomReminderDateTime().isBefore(LocalDateTime.now())) {
+                new Handler(Looper.getMainLooper()).post(() -> {
+                    // Show alert dialog with voice synthesis
+                    DeadlineAlertManager.showDeadlineAlert(requireContext(), task);
+
+                    // Clear the reminder once triggered
+                    task.setCustomReminderDateTime(null);
+
+                    // Persist the cleared reminder state via listener
+                    if (updateListener != null) {
+                        updateListener.onTaskUpdated(
+                                task,
+                                task.getTitle(),
+                                task.getImportance(),
+                                task.getDeadline(),
+                                false,
+                                task.isShowTimestamps(),
+                                null
+                        );
+                    }
+                });
             }
         }
     }
@@ -194,8 +228,6 @@ public class TaskDialogFragment extends DialogFragment {
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
             LocalDateTime customReminderDateTime = deadlineHelper.getCustomReminderDateTime();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
-
-            // Автоматично визначаємо remindSound: true, якщо встановлено кастомне нагадування
             boolean remindSound = customReminderDateTime != null;
 
             if (title.isEmpty()) {
@@ -203,7 +235,6 @@ public class TaskDialogFragment extends DialogFragment {
                 return;
             }
 
-            // ВАЛІДАЦІЯ: Нагадування не може бути пізніше дедлайну
             if (deadline != null && customReminderDateTime != null) {
                 LocalDateTime deadlineDateTime = deadline.atTime(23, 59, 59);
                 if (customReminderDateTime.isAfter(deadlineDateTime)) {
