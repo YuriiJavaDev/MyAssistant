@@ -58,6 +58,13 @@ public class Task implements Serializable {
         this.updatedAt = LocalDateTime.now();
     }
 
+    // Constructor for alarm receiver (ignored by Room)
+    @Ignore
+    public Task(long id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
