@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bg_spinner_dropdown">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/display_mode_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3E2773"
+        android:paddingBottom="16dp"/>
+
+    <!-- Options -->
+    <RadioGroup
+        android:id="@+id/radioGroupDisplayMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/display_mode_light"
+            android:textSize="14sp"
+            android:textColor="#3E2773"
+            android:buttonTint="#3E2773"
+            android:paddingVertical="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/display_mode_dark"
+            android:textSize="14sp"
+            android:textColor="#3E2773"
+            android:buttonTint="#3E2773"
+            android:paddingVertical="8dp"/>
+
+        <RadioButton
+            android:id="@+id/radioSystem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/display_mode_system"
+            android:textSize="14sp"
+            android:textColor="#3E2773"
+            android:buttonTint="#3E2773"
+            android:paddingVertical="8dp"/>
+
+    </RadioGroup>
+
+</LinearLayout>

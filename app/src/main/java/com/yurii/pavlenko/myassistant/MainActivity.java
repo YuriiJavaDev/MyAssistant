@@ -121,7 +121,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.action_custom_overflow) {
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.action_settings) {
+            new SettingsBottomSheet().show(getSupportFragmentManager(), "SettingsBottomSheet");
+            return true;
+        } else if (itemId == R.id.action_custom_overflow) {
             showPopupMenu(getMenuAnchorView());
             return true;
         }

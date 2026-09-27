@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">MyAssistant</string>
 
+    <!-- Settings Bottom Sheet -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_alarms_title">Reminders and Alarms</string>
+    <string name="settings_alarms_subtitle">Intervals, sounds, and notification status</string>
+
+    <string name="settings_display_title">Display Mode</string>
+    <string name="settings_display_subtitle">Day / Night / Auto</string>
+
+    <!-- Display Mode Dialog -->
+    <string name="display_mode_title">Display Mode</string>
+    <string name="display_mode_light">Light (Day)</string>
+    <string name="display_mode_dark">Dark (Night)</string>
+    <string name="display_mode_system">System (Auto)</string>
+
+    <string name="settings_design_title">App Design</string>
+    <string name="settings_design_subtitle">Customization of UI variations</string>
+    <string name="settings_permissions_title">System Permissions</string>
+    <string name="settings_permissions_subtitle">Manage access in Android system</string>
+
     <string-array name="filter_options">
         <item>All Tasks</item>
         <item>Active</item>
