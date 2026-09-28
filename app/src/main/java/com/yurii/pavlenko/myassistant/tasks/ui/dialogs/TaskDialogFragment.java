@@ -21,6 +21,7 @@ import com.yurii.pavlenko.myassistant.databinding.DialogAddTaskBinding;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmManager;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -204,6 +205,8 @@ public class TaskDialogFragment extends DialogFragment {
             binding.btnDelete.setVisibility(View.VISIBLE);
             binding.btnDelete.setOnClickListener(v -> {
                 DeleteConfirmationDialog.show(requireContext(), true, () -> {
+                    // Cancel active alarm when task is deleted
+                    TaskAlarmManager.cancelAlarm(requireContext(), task);
                     deleteListener.onTaskDeleted(task);
                     Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
                     dismiss();
@@ -244,10 +247,26 @@ public class TaskDialogFragment extends DialogFragment {
             }
 
             if (isEditMode && updateListener != null) {
+                task.setTitle(title);
+                task.setImportance(importance);
+                task.setDeadline(deadline);
+                task.setCustomReminderDateTime(customReminderDateTime);
+                task.setShowTimestamps(showTimestamps);
+
+                // Manage system alarm scheduling
+                if (customReminderDateTime != null) {
+                    TaskAlarmManager.scheduleAlarm(requireContext(), task);
+                } else {
+                    TaskAlarmManager.cancelAlarm(requireContext(), task);
+                }
+
                 updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
                 Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
                 createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
+
+                // Note: For new tasks, if ID is generated after saving in parent fragment,
+                // scheduling can be handled in the parent listener where the task object is created.
                 Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
             }
             dismiss();

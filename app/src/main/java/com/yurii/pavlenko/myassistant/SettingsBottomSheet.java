@@ -16,12 +16,18 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.ExactAlarmPermissionHelper;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskPreferences;
 
 /**
  * Bottom sheet dialog fragment for managing application settings,
  * including alarms, display modes, design variations, and system permissions.
  */
 public class SettingsBottomSheet extends BottomSheetDialogFragment {
+
+    private AlertDialog alarmSettingsDialog = null;
 
     @Nullable
     @Override
@@ -32,8 +38,7 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
         // Initialize alarm settings block click listener
         LinearLayout layoutAlarmSettings = view.findViewById(R.id.layoutAlarmSettings);
         layoutAlarmSettings.setOnClickListener(v -> {
-            Toast.makeText(requireContext(), "Opening alarm settings", Toast.LENGTH_SHORT).show();
-            dismiss();
+            showAlarmSettingsDialog();
         });
 
         // Initialize display mode settings block click listener
@@ -57,6 +62,53 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
         });
 
         return view;
+    }
+
+    /**
+     * Displays a custom-styled dialog to manage alarm preferences and exact alarm permissions.
+     */
+    private void showAlarmSettingsDialog() {
+        View dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_alarm_settings, null);
+
+        alarmSettingsDialog = new AlertDialog.Builder(requireContext())
+                .setView(dialogView)
+                .create();
+
+        if (alarmSettingsDialog.getWindow() != null) {
+            alarmSettingsDialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
+        SwitchMaterial switchVoice = dialogView.findViewById(R.id.switchVoiceAlert);
+        SwitchMaterial switchFullScreen = dialogView.findViewById(R.id.switchFullScreen);
+        MaterialButton btnPermission = dialogView.findViewById(R.id.btnExactAlarmPermission);
+
+        // Load current preference states
+        switchVoice.setChecked(TaskPreferences.isVoiceEnabled(requireContext()));
+        switchFullScreen.setChecked(TaskPreferences.isFullScreenEnabled(requireContext()));
+
+        // Save voice setting changes
+        switchVoice.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            TaskPreferences.setVoiceEnabled(requireContext(), isChecked);
+        });
+
+        // Save full-screen setting changes
+        switchFullScreen.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            TaskPreferences.setFullScreenEnabled(requireContext(), isChecked);
+        });
+
+        // Handle exact alarm permission request
+        btnPermission.setOnClickListener(v -> {
+            if (!ExactAlarmPermissionHelper.hasExactAlarmPermission(requireContext())) {
+                ExactAlarmPermissionHelper.requestExactAlarmPermission(requireContext());
+            } else {
+                Toast.makeText(requireContext(), "Exact alarm permission is already granted", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Clear reference when dialog is dismissed
+        alarmSettingsDialog.setOnDismissListener(dialog -> alarmSettingsDialog = null);
+
+        alarmSettingsDialog.show();
     }
 
     /**
@@ -106,5 +158,25 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         intent.setData(Uri.fromParts("package", requireContext().getPackageName(), null));
         startActivity(intent);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        // Dismiss the nested alarm dialog if it's showing to prevent window leaks on orientation change
+        if (alarmSettingsDialog != null && alarmSettingsDialog.isShowing()) {
+            alarmSettingsDialog.dismiss();
+            alarmSettingsDialog = null;
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        // Force dismiss the inner alarm dialog on rotation or when fragment stops to prevent UI freezing
+        if (alarmSettingsDialog != null && alarmSettingsDialog.isShowing()) {
+            alarmSettingsDialog.dismiss();
+            alarmSettingsDialog = null;
+        }
     }
 }

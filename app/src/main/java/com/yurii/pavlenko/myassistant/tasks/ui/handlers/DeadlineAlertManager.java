@@ -34,10 +34,10 @@ public class DeadlineAlertManager {
                 .setCancelable(false)
                 .create();
 
-        // Ініціалізація та первинний запуск озвучки
+        // Initialization and initial launch of the voiceover
         initAndPlayTts(context);
 
-        // Налаштування повторення кожні 5 хвилин (5 * 60 * 1000 мс)
+        // Repeat setting: every 5 minutes (5 * 60 * 1000 ms)
         repeatHandler = new Handler(Looper.getMainLooper());
         repeatRunnable = new Runnable() {
             @Override

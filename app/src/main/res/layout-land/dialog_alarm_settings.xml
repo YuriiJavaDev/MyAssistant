@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_spinner_dropdown">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reminders and Alarms"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#3E2773"
+        android:paddingBottom="8dp"/>
+
+    <!-- Scrollable container for switches so it never overflows landscape height -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Voice Alert Switch -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchVoiceAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Voice Alert (TTS)"
+                android:textColor="#3E2773"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp"
+                app:thumbTint="#3E2773" />
+
+            <!-- Full-Screen Pop-up Switch -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchFullScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full-Screen Pop-up"
+                android:textColor="#3E2773"
+                android:textSize="13sp"
+                android:layout_marginBottom="10dp"
+                app:thumbTint="#3E2773" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Exact Alarm Permission Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExactAlarmPermission"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/button_selector"
+        app:backgroundTint="@null"
+        android:text="Grant Exact Alarm Permission"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color_btn"
+        android:textSize="12sp"
+        style="?attr/materialButtonOutlinedStyle" />
+
+</LinearLayout>
