@@ -42,11 +42,10 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
             showThemeSelectionDialog();
         });
 
-        // Initialize design customization block click listener
+// Initialize design customization block click listener
         LinearLayout layoutDesignSettings = view.findViewById(R.id.layoutDesignSettings);
         layoutDesignSettings.setOnClickListener(v -> {
-            Toast.makeText(requireContext(), "Opening design customization", Toast.LENGTH_SHORT).show();
-            dismiss();
+            showDesignSelectionDialog();
         });
 
         // Initialize system permissions block click listener
@@ -89,6 +88,14 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
     private void showThemeSelectionDialog() {
         ThemeSelectionBottomSheet themeSelectionBottomSheet = new ThemeSelectionBottomSheet();
         themeSelectionBottomSheet.show(getParentFragmentManager(), "ThemeSelectionBottomSheet");
+    }
+
+    /**
+     * Displays the bottom sheet dialog to select application UI design variations.
+     */
+    private void showDesignSelectionDialog() {
+        DesignSelectionBottomSheet designSelectionBottomSheet = new DesignSelectionBottomSheet();
+        designSelectionBottomSheet.show(getParentFragmentManager(), "DesignSelectionBottomSheet");
     }
 
     /**

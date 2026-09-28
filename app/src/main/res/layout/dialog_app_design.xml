@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_spinner_dropdown">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Design"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#3E2773"
+        android:paddingBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupAppDesign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioDesign1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyAssistant 1"
+            android:textColor="#3E2773"
+            android:textSize="13sp"
+            android:paddingVertical="6dp"/>
+
+        <RadioButton
+            android:id="@+id/radioDesign2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyAssistant 2 (Coming soon)"
+            android:textColor="#3E2773"
+            android:textSize="13sp"
+            android:paddingVertical="6dp"/>
+
+        <RadioButton
+            android:id="@+id/radioDesign3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyAssistant 3 (Coming soon)"
+            android:textColor="#3E2773"
+            android:textSize="13sp"
+            android:paddingVertical="6dp"/>
+
+        <RadioButton
+            android:id="@+id/radioDesign4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MyAssistant 4 (Coming soon)"
+            android:textColor="#3E2773"
+            android:textSize="13sp"
+            android:paddingVertical="6dp"/>
+
+    </RadioGroup>
+
+</LinearLayout>
