@@ -10,11 +10,13 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
-import com.yurii.pavlenko.myassistant.MainActivity;
+import com.yurii.pavlenko.myassistant.AlarmAlertActivity;
 import com.yurii.pavlenko.myassistant.R;
-import com.yurii.pavlenko.myassistant.tasks.model.Task;
-import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
 
+/**
+ * Broadcast receiver responsible for handling scheduled task deadline alarms
+ * and triggering high-priority full-screen notifications to wake up the device.
+ */
 public class TaskAlarmReceiver extends BroadcastReceiver {
 
     private static final String CHANNEL_ID = "task_alarm_channel";
@@ -29,16 +31,15 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
 
         if (taskId == -1 || taskTitle == null) return;
 
-        Task task = new Task(taskId, taskTitle);
-        task.setId(taskId);
-        task.setTitle(taskTitle);
-
         // Ensure notification channel exists for Android 8.0+
         createNotificationChannel(context);
 
-        // Create intent to open MainActivity with full-screen capability
-        Intent fullScreenIntent = new Intent(context, MainActivity.class);
+        // Create intent to open AlarmAlertActivity with full-screen capability and task details
+        Intent fullScreenIntent = new Intent(context, AlarmAlertActivity.class);
+        fullScreenIntent.putExtra(EXTRA_TASK_ID, taskId);
+        fullScreenIntent.putExtra(EXTRA_TASK_TITLE, taskTitle);
         fullScreenIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
         PendingIntent fullScreenPendingIntent = PendingIntent.getActivity(
                 context,
                 (int) taskId,
@@ -59,13 +60,6 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
             notificationManager.notify((int) taskId, builder.build());
-        }
-
-        // Trigger the voice alert and popup dialog directly if context allows
-        try {
-            DeadlineAlertManager.showDeadlineAlert(context, task);
-        } catch (Exception e) {
-            // Fallback handled via system full-screen notification intent
         }
     }
 
