@@ -20,73 +20,91 @@ public class DeadlineAlertManager {
     private static TextToSpeech tts;
     private static Handler repeatHandler;
     private static Runnable repeatRunnable;
+    private static AlertDialog activeDialog;
 
     public static void showDeadlineAlert(Context context, Task task) {
+        // Ensure previous alert and timer are cleared before launching a new one
+        stopAlertAndTts();
+
+        Context appContext = context.getApplicationContext();
         View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_deadline_alert, null);
 
         TextView taskTitleTextView = dialogView.findViewById(R.id.tvTaskTitleContent);
         MaterialButton btnDismiss = dialogView.findViewById(R.id.btnDismissAlert);
 
-        taskTitleTextView.setText(task.getTitle() != null ? task.getTitle() : "Untitled Task");
+        String taskTitle = (task != null && task.getTitle() != null) ? task.getTitle() : "Untitled Task";
+        taskTitleTextView.setText(taskTitle);
 
-        AlertDialog dialog = new AlertDialog.Builder(context)
+        activeDialog = new AlertDialog.Builder(context)
                 .setView(dialogView)
                 .setCancelable(false)
                 .create();
 
-        // Initialization and initial launch of the voiceover
-        initAndPlayTts(context);
+        // Initialize TTS with Application Context to prevent memory leaks
+        initAndPlayTts(appContext, taskTitle);
 
-        // Repeat setting: every 5 minutes (5 * 60 * 1000 ms)
+        // Configure repetition every 5 minutes (300,000 ms)
         repeatHandler = new Handler(Looper.getMainLooper());
         repeatRunnable = new Runnable() {
             @Override
             public void run() {
-                playTtsMessage();
-                repeatHandler.postDelayed(this, 300000); // 5 хвилин
+                playTtsMessage(taskTitle);
+                if (repeatHandler != null) {
+                    repeatHandler.postDelayed(this, 300000);
+                }
             }
         };
         repeatHandler.postDelayed(repeatRunnable, 300000);
 
         btnDismiss.setOnClickListener(v -> {
             stopAlertAndTts();
-            dialog.dismiss();
         });
 
-        if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        if (activeDialog.getWindow() != null) {
+            activeDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         }
 
-        dialog.show();
+        activeDialog.show();
     }
 
-    private static void initAndPlayTts(Context context) {
-        tts = new TextToSpeech(context, status -> {
-            if (status == TextToSpeech.SUCCESS) {
+    private static void initAndPlayTts(Context appContext, String taskTitle) {
+        tts = new TextToSpeech(appContext, status -> {
+            if (status == TextToSpeech.SUCCESS && tts != null) {
                 tts.setLanguage(Locale.US);
-                playTtsMessage();
+                playTtsMessage(taskTitle);
             }
         });
     }
 
-    private static void playTtsMessage() {
+    private static void playTtsMessage(String taskTitle) {
         if (tts != null) {
-            tts.speak("Deadline is near! Check your task!", TextToSpeech.QUEUE_FLUSH, null, "DeadlineAlert");
+            String message = "Deadline is near! Check task: " + taskTitle;
+            tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, "DeadlineAlert");
         }
     }
 
-    private static void stopAlertAndTts() {
-        // Зупиняємо повторення таймера
+    public static void stopAlertAndTts() {
+        // 1. Stop and remove the background repetition timer
         if (repeatHandler != null && repeatRunnable != null) {
             repeatHandler.removeCallbacks(repeatRunnable);
             repeatHandler = null;
             repeatRunnable = null;
         }
 
-        // Зупиняємо та вивільняємо TextToSpeech
+        // 2. Dismiss the active dialog if it is currently showing
+        if (activeDialog != null && activeDialog.isShowing()) {
+            activeDialog.dismiss();
+            activeDialog = null;
+        }
+
+        // 3. Properly stop and release TextToSpeech resources
         if (tts != null) {
-            tts.stop();
-            tts.shutdown();
+            try {
+                tts.stop();
+                tts.shutdown();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             tts = null;
         }
     }

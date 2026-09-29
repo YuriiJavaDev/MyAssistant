@@ -1,5 +1,6 @@
 package com.yurii.pavlenko.myassistant.tasks.receivers;
 
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,14 +15,15 @@ import com.yurii.pavlenko.myassistant.AlarmAlertActivity;
 import com.yurii.pavlenko.myassistant.R;
 
 /**
- * Broadcast receiver responsible for handling scheduled task deadline alarms
- * and triggering high-priority full-screen notifications to wake up the device.
+ * Broadcast receiver responsible for handling scheduled task deadline alarms,
+ * triggering high-priority full-screen notifications, and rescheduling the next alert interval.
  */
 public class TaskAlarmReceiver extends BroadcastReceiver {
 
     private static final String CHANNEL_ID = "task_alarm_channel";
     private static final String EXTRA_TASK_ID = "extra_task_id";
     private static final String EXTRA_TASK_TITLE = "extra_task_title";
+    private static final long REPEAT_INTERVAL_MS = 5 * 60 * 1000; // 5 minutes interval
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -30,6 +32,9 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
         String taskTitle = intent.getStringExtra(EXTRA_TASK_TITLE);
 
         if (taskId == -1 || taskTitle == null) return;
+
+        // Automatically reschedule the next alarm for 5 minutes later (repeating mechanism)
+        rescheduleNextAlarm(context, taskId, taskTitle);
 
         // Ensure notification channel exists for Android 8.0+
         createNotificationChannel(context);
@@ -60,6 +65,31 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
             notificationManager.notify((int) taskId, builder.build());
+        }
+    }
+
+    private void rescheduleNextAlarm(Context context, long taskId, String taskTitle) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (alarmManager == null) return;
+
+        Intent intent = new Intent(context, TaskAlarmReceiver.class);
+        intent.putExtra(EXTRA_TASK_ID, taskId);
+        intent.putExtra(EXTRA_TASK_TITLE, taskTitle);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context,
+                (int) taskId,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
+
+        long triggerTime = System.currentTimeMillis() + REPEAT_INTERVAL_MS;
+
+        // Schedule exact alarm with wake-up flag to persist repeating behavior in idle/doze mode
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
+        } else {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
         }
     }
 

@@ -42,7 +42,7 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
             showThemeSelectionDialog();
         });
 
-// Initialize design customization block click listener
+        // Initialize design customization block click listener
         LinearLayout layoutDesignSettings = view.findViewById(R.id.layoutDesignSettings);
         layoutDesignSettings.setOnClickListener(v -> {
             showDesignSelectionDialog();
