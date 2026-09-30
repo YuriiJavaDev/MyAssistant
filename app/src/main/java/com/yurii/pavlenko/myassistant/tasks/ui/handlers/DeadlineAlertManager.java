@@ -22,7 +22,13 @@ public class DeadlineAlertManager {
     private static Runnable repeatRunnable;
     private static AlertDialog activeDialog;
 
+    // Overloaded method for calls with 2 arguments (e.g. from TaskDialogFragment)
     public static void showDeadlineAlert(Context context, Task task) {
+        showDeadlineAlert(context, task, null);
+    }
+
+    // Main method with dismiss callback support
+    public static void showDeadlineAlert(Context context, Task task, Runnable onDismissCallback) {
         // Ensure previous alert and timer are cleared before launching a new one
         stopAlertAndTts();
 
@@ -58,6 +64,9 @@ public class DeadlineAlertManager {
 
         btnDismiss.setOnClickListener(v -> {
             stopAlertAndTts();
+            if (onDismissCallback != null) {
+                onDismissCallback.run();
+            }
         });
 
         if (activeDialog.getWindow() != null) {

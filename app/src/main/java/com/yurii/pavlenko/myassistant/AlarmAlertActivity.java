@@ -1,8 +1,8 @@
 package com.yurii.pavlenko.myassistant;
 
 import android.app.KeyguardManager;
+import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.receivers.TaskAlarmReceiver;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
 
 /**
@@ -41,7 +42,6 @@ public class AlarmAlertActivity extends AppCompatActivity {
             );
         }
 
-        // Extract task details passed from the broadcast receiver intent
         long taskId = getIntent().getLongExtra(EXTRA_TASK_ID, -1);
         String taskTitle = getIntent().getStringExtra(EXTRA_TASK_TITLE);
 
@@ -50,10 +50,28 @@ public class AlarmAlertActivity extends AppCompatActivity {
             task.setId(taskId);
             task.setTitle(taskTitle);
 
-            // Safely trigger the popup alert and TTS voice using a valid Activity context
-            DeadlineAlertManager.showDeadlineAlert(this, task);
+            // Show deadline alert and handle cleanup once dismissed
+            DeadlineAlertManager.showDeadlineAlert(this, task, () -> {
+                // 1. Cancel the repeating alarm manager task
+                TaskAlarmReceiver.cancelAlarm(this, taskId);
+
+                // 2. Remove the notification from system status bar (clears badge/icon counter)
+                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                if (notificationManager != null) {
+                    notificationManager.cancel((int) taskId);
+                }
+
+                // 3. Finish activity immediately to prevent white screen and stack persistence
+                finish();
+            });
         } else {
             finish();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        DeadlineAlertManager.stopAlertAndTts();
     }
 }

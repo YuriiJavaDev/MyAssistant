@@ -33,6 +33,13 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
 
         if (taskId == -1 || taskTitle == null) return;
 
+        // Cancel the previous notification with this ID so that Android treats the next call
+        // to notify() as a completely new notification and triggers the fullScreenIntent again.
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (notificationManager != null) {
+            notificationManager.cancel((int) taskId);
+        }
+
         // Automatically reschedule the next alarm for 5 minutes later (repeating mechanism)
         rescheduleNextAlarm(context, taskId, taskTitle);
 
@@ -62,7 +69,6 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
                 .setFullScreenIntent(fullScreenPendingIntent, true)
                 .setAutoCancel(true);
 
-        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
             notificationManager.notify((int) taskId, builder.build());
         }
@@ -90,6 +96,23 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
             alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
         } else {
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
+        }
+    }
+
+    /**
+     * Cancels the scheduled repeating alarm for the specified task ID.
+     */
+    public static void cancelAlarm(Context context, long taskId) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (alarmManager != null) {
+            Intent intent = new Intent(context, TaskAlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                    context,
+                    (int) taskId,
+                    intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+            );
+            alarmManager.cancel(pendingIntent);
         }
     }
 
