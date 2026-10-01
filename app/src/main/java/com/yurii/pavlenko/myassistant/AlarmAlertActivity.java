@@ -1,39 +1,58 @@
 package com.yurii.pavlenko.myassistant;
 
-import android.app.KeyguardManager;
-import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
-import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.google.android.material.button.MaterialButton;
 import com.yurii.pavlenko.myassistant.tasks.receivers.TaskAlarmReceiver;
-import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
+
+import java.util.Locale;
 
 /**
- * Lightweight activity launched via full-screen notification intent to wake up the device,
- * bypass the lock screen, and display the task deadline alert dialog with TTS voice.
+ * Full-screen activity for displaying overdue tasks count over lock screen with TTS and repeat cancellation.
+ *
+ * @date 2026-10-01
  */
 public class AlarmAlertActivity extends AppCompatActivity {
 
-    private static final String EXTRA_TASK_ID = "extra_task_id";
-    private static final String EXTRA_TASK_TITLE = "extra_task_title";
+    private TextToSpeech textToSpeech;
+    private int dueTasksCount;
+    private TextView tvTaskTitleContent;
+
+    // BroadcastReceiver to force close the existing activity window before a new repeating alarm opens a fresh one
+    private final BroadcastReceiver closeReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            finish();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Wake up the screen and show over lock screen on modern Android & Samsung One UI
+        // Register the close receiver to handle repeating alert refreshes cleanly
+        ContextCompat.registerReceiver(
+                this,
+                closeReceiver,
+                new IntentFilter(TaskAlarmReceiver.ACTION_CLOSE_ALERT),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+        );
+
+        // Allow the activity to show over lock screen and turn on the screen
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
             setShowWhenLocked(true);
             setTurnScreenOn(true);
-            KeyguardManager keyguardManager = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
-            if (keyguardManager != null) {
-                keyguardManager.requestDismissKeyguard(this, null);
-            }
         } else {
             getWindow().addFlags(
                     WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED |
@@ -42,36 +61,74 @@ public class AlarmAlertActivity extends AppCompatActivity {
             );
         }
 
-        long taskId = getIntent().getLongExtra(EXTRA_TASK_ID, -1);
-        String taskTitle = getIntent().getStringExtra(EXTRA_TASK_TITLE);
+        setContentView(R.layout.dialog_deadline_alert);
 
-        if (taskId != -1 && taskTitle != null) {
-            Task task = new Task(taskId, taskTitle);
-            task.setId(taskId);
-            task.setTitle(taskTitle);
+        tvTaskTitleContent = findViewById(R.id.tvTaskTitleContent);
+        MaterialButton btnDismissAlert = findViewById(R.id.btnDismissAlert);
 
-            // Show deadline alert and handle cleanup once dismissed
-            DeadlineAlertManager.showDeadlineAlert(this, task, () -> {
-                // 1. Cancel the repeating alarm manager task
-                TaskAlarmReceiver.cancelAlarm(this, taskId);
-
-                // 2. Remove the notification from system status bar (clears badge/icon counter)
-                NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                if (notificationManager != null) {
-                    notificationManager.cancel((int) taskId);
+        // Initialize Text-to-Speech engine
+        textToSpeech = new TextToSpeech(this, status -> {
+            if (status == TextToSpeech.SUCCESS) {
+                int result = textToSpeech.setLanguage(Locale.US);
+                if (result != TextToSpeech.LANG_MISSING_DATA && result != TextToSpeech.LANG_NOT_SUPPORTED) {
+                    speakAlarm();
                 }
+            }
+        });
 
-                // 3. Finish activity immediately to prevent white screen and stack persistence
-                finish();
-            });
-        } else {
+        // Cancel repeating alarm and finish activity when user clicks dismiss
+        btnDismissAlert.setOnClickListener(v -> {
+            TaskAlarmReceiver.cancelRepeatingAlarm(this);
+            stopAlarmAndSpeech();
             finish();
+        });
+
+        processIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        processIntent(intent);
+        speakAlarm();
+    }
+
+    private void processIntent(Intent intent) {
+        if (intent != null) {
+            dueTasksCount = intent.getIntExtra("extra_due_tasks_count", 0);
+        }
+        updateUiWithCount(dueTasksCount);
+    }
+
+    private void updateUiWithCount(int count) {
+        if (tvTaskTitleContent != null) {
+            tvTaskTitleContent.setText("Overdue tasks: " + count);
+        }
+    }
+
+    private void speakAlarm() {
+        if (textToSpeech != null) {
+            String speechText = "Attention! You have " + dueTasksCount + " task deadlines requiring immediate attention.";
+            textToSpeech.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, null);
+        }
+    }
+
+    private void stopAlarmAndSpeech() {
+        if (textToSpeech != null) {
+            textToSpeech.stop();
+            textToSpeech.shutdown();
         }
     }
 
     @Override
     protected void onDestroy() {
+        try {
+            unregisterReceiver(closeReceiver);
+        } catch (IllegalArgumentException e) {
+            // Receiver might already be unregistered
+        }
+        stopAlarmAndSpeech();
         super.onDestroy();
-        DeadlineAlertManager.stopAlertAndTts();
     }
 }

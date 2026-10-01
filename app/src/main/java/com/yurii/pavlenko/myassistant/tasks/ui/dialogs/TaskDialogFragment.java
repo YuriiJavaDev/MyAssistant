@@ -25,6 +25,7 @@ import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmManager;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class TaskDialogFragment extends DialogFragment {
 
@@ -118,8 +119,14 @@ public class TaskDialogFragment extends DialogFragment {
         if (task != null && task.getCustomReminderDateTime() != null) {
             if (task.getCustomReminderDateTime().isBefore(LocalDateTime.now())) {
                 new Handler(Looper.getMainLooper()).post(() -> {
+                    // Wrap single task title into ArrayList for consolidated DeadlineAlertManager
+                    ArrayList<String> taskTitles = new ArrayList<>();
+                    taskTitles.add(task.getTitle());
+
                     // Show alert dialog with voice synthesis
-                    DeadlineAlertManager.showDeadlineAlert(requireContext(), task);
+                    DeadlineAlertManager.showDeadlineAlert(requireContext(), taskTitles, () -> {
+                        // Optional action on dismiss
+                    });
 
                     // Clear the reminder once triggered
                     task.setCustomReminderDateTime(null);

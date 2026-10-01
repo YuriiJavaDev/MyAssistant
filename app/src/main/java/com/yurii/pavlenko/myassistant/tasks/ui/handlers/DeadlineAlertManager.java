@@ -2,119 +2,114 @@ package com.yurii.pavlenko.myassistant.tasks.ui.handlers;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.os.Handler;
-import android.os.Looper;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 import com.yurii.pavlenko.myassistant.R;
-import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
+/**
+ * Manages the consolidated task deadline alert dialog with custom layout
+ * and Text-to-Speech (TTS) voice announcements for multiple due tasks.
+ */
 public class DeadlineAlertManager {
 
-    private static TextToSpeech tts;
-    private static Handler repeatHandler;
-    private static Runnable repeatRunnable;
-    private static AlertDialog activeDialog;
+    private static final String TAG = "DeadlineAlertManager";
 
-    // Overloaded method for calls with 2 arguments (e.g. from TaskDialogFragment)
-    public static void showDeadlineAlert(Context context, Task task) {
-        showDeadlineAlert(context, task, null);
-    }
+    private static TextToSpeech tts = null;
+    private static AlertDialog currentDialog = null;
 
-    // Main method with dismiss callback support
-    public static void showDeadlineAlert(Context context, Task task, Runnable onDismissCallback) {
-        // Ensure previous alert and timer are cleared before launching a new one
+    /**
+     * Shows the consolidated deadline alert dialog with custom layout and voice announcement.
+     */
+    public static synchronized void showDeadlineAlert(Context context, ArrayList<String> taskTitles, Runnable onDismissCallback) {
+        if (context == null) return;
+
         stopAlertAndTts();
 
-        Context appContext = context.getApplicationContext();
-        View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_deadline_alert, null);
+        int taskCount = (taskTitles != null) ? taskTitles.size() : 0;
+        String messageText = taskCount > 1
+                ? "You have " + taskCount + " tasks requiring your attention."
+                : (taskCount == 1 ? taskTitles.get(0) : "You have a task deadline due.");
 
-        TextView taskTitleTextView = dialogView.findViewById(R.id.tvTaskTitleContent);
-        MaterialButton btnDismiss = dialogView.findViewById(R.id.btnDismissAlert);
-
-        String taskTitle = (task != null && task.getTitle() != null) ? task.getTitle() : "Untitled Task";
-        taskTitleTextView.setText(taskTitle);
-
-        activeDialog = new AlertDialog.Builder(context)
-                .setView(dialogView)
-                .setCancelable(false)
-                .create();
-
-        // Initialize TTS with Application Context to prevent memory leaks
-        initAndPlayTts(appContext, taskTitle);
-
-        // Configure repetition every 5 minutes (300,000 ms)
-        repeatHandler = new Handler(Looper.getMainLooper());
-        repeatRunnable = new Runnable() {
-            @Override
-            public void run() {
-                playTtsMessage(taskTitle);
-                if (repeatHandler != null) {
-                    repeatHandler.postDelayed(this, 300000);
+        // Initialize TTS for voice announcement
+        tts = new TextToSpeech(context.getApplicationContext(), status -> {
+            if (status == TextToSpeech.SUCCESS && tts != null) {
+                try {
+                    tts.setLanguage(Locale.US);
+                    String speechText = taskCount > 1
+                            ? "Attention! You have " + taskCount + " pending task deadlines."
+                            : "Attention! Deadline is near for task: " + messageText;
+                    tts.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "BatchDeadlineAlertTTS");
+                } catch (Exception e) {
+                    Log.e(TAG, "TTS speak failed", e);
                 }
             }
-        };
-        repeatHandler.postDelayed(repeatRunnable, 300000);
+        });
 
-        btnDismiss.setOnClickListener(v -> {
+        try {
+            // Inflate custom dialog layout
+            View dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_deadline_alert, null);
+
+            TextView taskTitleTextView = dialogView.findViewById(R.id.tvTaskTitleContent);
+            MaterialButton btnDismiss = dialogView.findViewById(R.id.btnDismissAlert);
+
+            if (taskTitleTextView != null) {
+                taskTitleTextView.setText(messageText);
+            }
+
+            // Update button text to reflect redirection action ("View Tasks" or "Got it")
+            if (btnDismiss != null) {
+                btnDismiss.setText("View Tasks");
+                btnDismiss.setOnClickListener(v -> {
+                    stopAlertAndTts();
+                    if (onDismissCallback != null) {
+                        onDismissCallback.run();
+                    }
+                });
+            }
+
+            currentDialog = new AlertDialog.Builder(context)
+                    .setView(dialogView)
+                    .setCancelable(false)
+                    .create();
+
+            if (currentDialog.getWindow() != null) {
+                currentDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            }
+
+            currentDialog.show();
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to show consolidated alert dialog", e);
             stopAlertAndTts();
-            if (onDismissCallback != null) {
-                onDismissCallback.run();
-            }
-        });
-
-        if (activeDialog.getWindow() != null) {
-            activeDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        }
-
-        activeDialog.show();
-    }
-
-    private static void initAndPlayTts(Context appContext, String taskTitle) {
-        tts = new TextToSpeech(appContext, status -> {
-            if (status == TextToSpeech.SUCCESS && tts != null) {
-                tts.setLanguage(Locale.US);
-                playTtsMessage(taskTitle);
-            }
-        });
-    }
-
-    private static void playTtsMessage(String taskTitle) {
-        if (tts != null) {
-            String message = "Deadline is near! Check task: " + taskTitle;
-            tts.speak(message, TextToSpeech.QUEUE_FLUSH, null, "DeadlineAlert");
         }
     }
 
-    public static void stopAlertAndTts() {
-        // 1. Stop and remove the background repetition timer
-        if (repeatHandler != null && repeatRunnable != null) {
-            repeatHandler.removeCallbacks(repeatRunnable);
-            repeatHandler = null;
-            repeatRunnable = null;
-        }
-
-        // 2. Dismiss the active dialog if it is currently showing
-        if (activeDialog != null && activeDialog.isShowing()) {
-            activeDialog.dismiss();
-            activeDialog = null;
-        }
-
-        // 3. Properly stop and release TextToSpeech resources
+    /**
+     * Immediately stops active TTS playback, dismisses dialog, and resets resources.
+     */
+    public static synchronized void stopAlertAndTts() {
         if (tts != null) {
             try {
                 tts.stop();
                 tts.shutdown();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            } catch (Exception ignored) {}
             tts = null;
+        }
+
+        if (currentDialog != null) {
+            try {
+                if (currentDialog.isShowing()) {
+                    currentDialog.dismiss();
+                }
+            } catch (Exception ignored) {}
+            currentDialog = null;
         }
     }
 }
