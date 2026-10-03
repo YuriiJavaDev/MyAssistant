@@ -26,6 +26,7 @@ public class TaskDeadlinePickerHelper {
     private TextView deadlineTextView;
     private TextView customReminderTextView;
     private ColorStateList defaultDeadlineTextColor;
+    private ColorStateList defaultReminderTextColor;
 
     public TaskDeadlinePickerHelper(Context context) {
         this.context = context;
@@ -40,6 +41,7 @@ public class TaskDeadlinePickerHelper {
         this.deadlineTextView = deadlineTextView;
         this.customReminderTextView = customReminderTextView;
         this.defaultDeadlineTextColor = deadlineTextView.getTextColors();
+        this.defaultReminderTextColor = customReminderTextView.getTextColors();
 
         this.selectedDeadline = initialDeadline;
 
@@ -51,9 +53,17 @@ public class TaskDeadlinePickerHelper {
 
         updateDeadlineDisplay();
         updateCustomReminderDisplay();
+        updateCustomReminderState();
 
         deadlineTextView.setOnClickListener(v -> showDatePicker());
-        customReminderTextView.setOnClickListener(v -> showCustomReminderDatePicker());
+
+        customReminderTextView.setOnClickListener(v -> {
+            if (selectedDeadline == null) {
+                Toast.makeText(context, "Please select a deadline first!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            showCustomReminderDatePicker();
+        });
     }
 
     private void showDatePicker() {
@@ -75,6 +85,7 @@ public class TaskDeadlinePickerHelper {
 
                     selectedDeadline = newDeadline;
                     updateDeadlineDisplay();
+                    updateCustomReminderState();
                 },
                 initialDate.getYear(),
                 initialDate.getMonthValue() - 1,
@@ -85,7 +96,10 @@ public class TaskDeadlinePickerHelper {
 
         datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Clear", (dialog, which) -> {
             selectedDeadline = null;
+            customReminderDateTime = null;
             updateDeadlineDisplay();
+            updateCustomReminderDisplay();
+            updateCustomReminderState();
         });
 
         datePickerDialog.show();
@@ -174,7 +188,6 @@ public class TaskDeadlinePickerHelper {
 
             long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), selectedDeadline);
             if (daysLeft < 0) {
-                // Red color for overdue deadline in picker
                 deadlineTextView.setTextColor(context.getResources().getColor(android.R.color.holo_red_dark, context.getTheme()));
             } else {
                 if (defaultDeadlineTextColor != null) {
@@ -195,6 +208,18 @@ public class TaskDeadlinePickerHelper {
             customReminderTextView.setText(text);
         } else {
             customReminderTextView.setText("Select reminder date & time");
+        }
+    }
+
+    /**
+     * Manages the availability and visual state of the reminder field based on the presence of a deadline.
+     */
+    private void updateCustomReminderState() {
+        boolean hasDeadline = (selectedDeadline != null);
+
+        if (customReminderTextView != null) {
+            customReminderTextView.setEnabled(hasDeadline);
+            customReminderTextView.setAlpha(hasDeadline ? 1.0f : 0.4f);
         }
     }
 
