@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,8 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
-import com.yurii.pavlenko.myassistant.tasks.database.CloudSettingsDialog;
-import com.yurii.pavlenko.myassistant.tasks.database.CloudSyncManager;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskActionsHandler;

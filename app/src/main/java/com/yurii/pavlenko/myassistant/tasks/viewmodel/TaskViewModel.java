@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.repository.TaskRepository;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmManager;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -81,6 +82,14 @@ public class TaskViewModel extends AndroidViewModel {
         task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
         task.setUpdatedAt(LocalDateTime.now());
         repository.update(task);
+
+        if (isChecked) {
+            TaskAlarmManager.cancelAlarm(getApplication(), task);
+        } else {
+            if (task.getCustomReminderDateTime() != null && task.getCustomReminderDateTime().isAfter(LocalDateTime.now())) {
+                TaskAlarmManager.scheduleAlarm(getApplication(), task);
+            }
+        }
     }
 
     public void updateTaskDetails(Task task,

@@ -6,12 +6,31 @@
     android:gravity="center_vertical"
     android:padding="12dp">
 
-    <!-- Task selection checkbox -->
-    <CheckBox
-        android:id="@+id/taskCheckBox"
+    <!-- Вертикальний контейнер для чекбокса та іконки під ним -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_gravity="top">
+
+        <!-- Task selection checkbox -->
+        <CheckBox
+            android:id="@+id/taskCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Значок нагадування під чекбоксом -->
+        <ImageView
+            android:id="@+id/ivTaskReminder"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_megaphone"
+            android:visibility="gone"
+            android:contentDescription="Reminder set" />
+
+    </LinearLayout>
 
     <!-- Container for all text elements -->
     <LinearLayout

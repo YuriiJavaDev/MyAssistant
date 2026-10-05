@@ -55,9 +55,13 @@ public class TaskDeadlinePickerHelper {
         updateCustomReminderDisplay();
         updateCustomReminderState();
 
-        deadlineTextView.setOnClickListener(v -> showDatePicker());
+        deadlineTextView.setOnClickListener(v -> {
+            if (!deadlineTextView.isEnabled()) return;
+            showDatePicker();
+        });
 
         customReminderTextView.setOnClickListener(v -> {
+            if (!customReminderTextView.isEnabled()) return;
             if (selectedDeadline == null) {
                 Toast.makeText(context, "Please select a deadline first!", Toast.LENGTH_SHORT).show();
                 return;
@@ -220,6 +224,24 @@ public class TaskDeadlinePickerHelper {
         if (customReminderTextView != null) {
             customReminderTextView.setEnabled(hasDeadline);
             customReminderTextView.setAlpha(hasDeadline ? 1.0f : 0.4f);
+        }
+    }
+
+    /**
+     * The entire field is blocked or unblocked
+     */
+    public void setFieldsEnabled(boolean enabled) {
+        if (deadlineTextView != null) {
+            deadlineTextView.setEnabled(enabled);
+            deadlineTextView.setAlpha(enabled ? 1.0f : 0.4f);
+        }
+        if (customReminderTextView != null) {
+            if (enabled) {
+                updateCustomReminderState();
+            } else {
+                customReminderTextView.setEnabled(false);
+                customReminderTextView.setAlpha(0.4f);
+            }
         }
     }
 

@@ -115,23 +115,16 @@ public class TaskDialogFragment extends DialogFragment {
     public void onStart() {
         super.onStart();
 
-        // Check if reminder time has passed in edit mode and trigger alert
-        if (task != null && task.getCustomReminderDateTime() != null) {
+        if (task != null && task.getCustomReminderDateTime() != null && !task.isCompleted()) {
             if (task.getCustomReminderDateTime().isBefore(LocalDateTime.now())) {
                 new Handler(Looper.getMainLooper()).post(() -> {
-                    // Wrap single task title into ArrayList for consolidated DeadlineAlertManager
                     ArrayList<String> taskTitles = new ArrayList<>();
                     taskTitles.add(task.getTitle());
 
-                    // Show alert dialog with voice synthesis
-                    DeadlineAlertManager.showDeadlineAlert(requireContext(), taskTitles, () -> {
-                        // Optional action on dismiss
-                    });
+                    DeadlineAlertManager.showDeadlineAlert(requireContext(), taskTitles, () -> {});
 
-                    // Clear the reminder once triggered
                     task.setCustomReminderDateTime(null);
 
-                    // Persist the cleared reminder state via listener
                     if (updateListener != null) {
                         updateListener.onTaskUpdated(
                                 task,
@@ -212,7 +205,6 @@ public class TaskDialogFragment extends DialogFragment {
             binding.btnDelete.setVisibility(View.VISIBLE);
             binding.btnDelete.setOnClickListener(v -> {
                 DeleteConfirmationDialog.show(requireContext(), true, () -> {
-                    // Cancel active alarm when task is deleted
                     TaskAlarmManager.cancelAlarm(requireContext(), task);
                     deleteListener.onTaskDeleted(task);
                     Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
@@ -238,7 +230,8 @@ public class TaskDialogFragment extends DialogFragment {
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
             LocalDateTime customReminderDateTime = deadlineHelper.getCustomReminderDateTime();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
-            boolean remindSound = customReminderDateTime != null;
+            boolean isCompleted = isEditMode && task.isCompleted();
+            boolean remindSound = customReminderDateTime != null && !isCompleted;
 
             if (title.isEmpty()) {
                 Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
@@ -260,8 +253,7 @@ public class TaskDialogFragment extends DialogFragment {
                 task.setCustomReminderDateTime(customReminderDateTime);
                 task.setShowTimestamps(showTimestamps);
 
-                // Manage system alarm scheduling
-                if (customReminderDateTime != null) {
+                if (customReminderDateTime != null && !isCompleted) {
                     TaskAlarmManager.scheduleAlarm(requireContext(), task);
                 } else {
                     TaskAlarmManager.cancelAlarm(requireContext(), task);
@@ -271,9 +263,6 @@ public class TaskDialogFragment extends DialogFragment {
                 Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
                 createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
-
-                // Note: For new tasks, if ID is generated after saving in parent fragment,
-                // scheduling can be handled in the parent listener where the task object is created.
                 Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
             }
             dismiss();

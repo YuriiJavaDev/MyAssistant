@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant.tasks.ui;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -48,7 +49,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     }
 
     @Override
-    @SuppressWarnings("DataFlowIssue")
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         Task task = tasks.get(position);
         holder.bind(task, checkedListener, clickListener);
@@ -71,6 +71,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             binding.taskTitleTextView.setText(task.getTitle());
             binding.taskCheckBox.setOnCheckedChangeListener(null);
             binding.taskCheckBox.setChecked(task.isCompleted());
+
+            if (task.getCustomReminderDateTime() != null && !task.isCompleted()) {
+                binding.ivTaskReminder.setVisibility(View.VISIBLE);
+            } else {
+                binding.ivTaskReminder.setVisibility(View.GONE);
+            }
 
             TaskStyleHelper.applyCompletionStyle(binding.taskTitleTextView, task.isCompleted());
             TaskStyleHelper.applyImportanceColor(binding.taskTitleTextView, task.getImportance(), task.isCompleted());
