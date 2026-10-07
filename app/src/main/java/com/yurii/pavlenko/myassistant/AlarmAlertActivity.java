@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.button.MaterialButton;
 import com.yurii.pavlenko.myassistant.tasks.receivers.TaskAlarmReceiver;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskPreferences;
 
 import java.util.Locale;
 
@@ -24,6 +25,8 @@ import java.util.Locale;
  * @date 2026-10-01
  */
 public class AlarmAlertActivity extends AppCompatActivity {
+
+    public static final String EXTRA_DUE_TASKS_COUNT = "extra_due_tasks_count";
 
     private TextToSpeech textToSpeech;
     private int dueTasksCount;
@@ -96,7 +99,7 @@ public class AlarmAlertActivity extends AppCompatActivity {
 
     private void processIntent(Intent intent) {
         if (intent != null) {
-            dueTasksCount = intent.getIntExtra("extra_due_tasks_count", 0);
+            dueTasksCount = intent.getIntExtra(EXTRA_DUE_TASKS_COUNT, 0);
         }
         updateUiWithCount(dueTasksCount);
     }
@@ -108,7 +111,7 @@ public class AlarmAlertActivity extends AppCompatActivity {
     }
 
     private void speakAlarm() {
-        if (textToSpeech != null) {
+        if (textToSpeech != null && TaskPreferences.isVoiceEnabled(this)) {
             String speechText = "Attention! You have " + dueTasksCount + " task deadlines requiring immediate attention.";
             textToSpeech.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, null);
         }

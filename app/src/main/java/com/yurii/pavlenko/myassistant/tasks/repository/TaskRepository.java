@@ -11,6 +11,7 @@ import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.function.LongConsumer;
 
 /**
  * Repository component to abstract data operations from the ViewModel.
@@ -44,7 +45,21 @@ public class TaskRepository {
      * Inserts a new task into the database on a background thread.
      */
     public void insert(Task task) {
-        executorService.execute(() -> taskDao.insertTask(task));
+        insert(task, null);
+    }
+
+    /**
+     * Inserts a new task on a background thread. The generated ID is written back into the task
+     * and passed to the callback, which runs on the same background thread right after the insert.
+     */
+    public void insert(Task task, LongConsumer onInserted) {
+        executorService.execute(() -> {
+            long newId = taskDao.insertTask(task);
+            task.setId(newId);
+            if (onInserted != null) {
+                onInserted.accept(newId);
+            }
+        });
     }
 
     /**

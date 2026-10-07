@@ -4,7 +4,7 @@ import android.content.Context;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -12,138 +12,106 @@ import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Manager class to handle cloud synchronization (backup export and import) via WebDAV.
- */
+/** Uploads the local database to a WebDAV server and restores it from there. */
 public class CloudSyncManager {
 
-    private final Context context;
-    private final CloudConfigManager configManager;
-    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private static final int TIMEOUT_MS = 10_000;
+    private static final ExecutorService EXECUTOR = Executors.newSingleThreadExecutor();
 
     public interface SyncCallback {
         void onSuccess(String message);
+
         void onError(String error);
     }
+
+    private interface IoAction {
+        void run() throws IOException;
+    }
+
+    private final Context context;
+    private final CloudConfigManager configManager;
 
     public CloudSyncManager(Context context) {
         this.context = context.getApplicationContext();
         this.configManager = new CloudConfigManager(this.context);
     }
 
-    /**
-     * Uploads the local SQLite database to the WebDAV server using HTTP PUT method.
-     */
     public void uploadDatabase(SyncCallback callback) {
-        executorService.execute(() -> {
-            HttpURLConnection connection = null;
-            try {
-                String urlStr = configManager.getUrl();
-                if (urlStr == null || urlStr.isEmpty()) {
-                    callback.onError("WebDAV URL is not configured");
-                    return;
-                }
-
-                URL url = new URL(WebDavUtils.buildTargetUrl(urlStr));
-
-                File dbFile = context.getDatabasePath("task_database");
-                if (!dbFile.exists()) {
-                    callback.onError("Local database file not found");
-                    return;
-                }
-
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("PUT");
-                connection.setDoOutput(true);
-                connection.setConnectTimeout(10000);
-                connection.setReadTimeout(10000);
-
-                WebDavUtils.applyBasicAuth(connection, configManager.getUsername(), configManager.getPassword());
-
-                try (OutputStream os = connection.getOutputStream();
-                     FileInputStream fis = new FileInputStream(dbFile)) {
-                    byte[] buffer = new byte[4096];
-                    int bytesRead;
-                    while ((bytesRead = fis.read(buffer)) != -1) {
-                        os.write(buffer, 0, bytesRead);
-                    }
-                    os.flush();
-                }
-
-                int responseCode = connection.getResponseCode();
-                if (responseCode >= 200 && responseCode < 300) {
-                    callback.onSuccess("Database successfully uploaded to cloud");
-                } else {
-                    callback.onError("Upload failed with HTTP code: " + responseCode);
-                }
-
-            } catch (Exception e) {
-                callback.onError("Upload error: " + (e.getMessage() != null ? e.getMessage() : "Unknown error"));
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-            }
-        });
+        runAsync(this::uploadDatabaseBlocking, "Database successfully uploaded to cloud", "Upload error: ", callback);
     }
 
     /**
-     * Downloads the database from the WebDAV server and safely replaces the local Room database.
+     * Restores the database from the cloud. The file is downloaded and verified completely
+     * before the local database is replaced, so a failed download leaves local data untouched.
      */
     public void downloadDatabase(SyncCallback callback) {
-        executorService.execute(() -> {
-            HttpURLConnection connection = null;
-            try {
-                String urlStr = configManager.getUrl();
-                if (urlStr == null || urlStr.isEmpty()) {
-                    callback.onError("WebDAV URL is not configured");
-                    return;
-                }
+        runAsync(this::downloadDatabaseBlocking, "Database successfully restored from cloud", "Download error: ", callback);
+    }
 
-                URL url = new URL(WebDavUtils.buildTargetUrl(urlStr));
+    /** Blocking upload for background workers that already run off the main thread. */
+    public void uploadDatabaseBlocking() throws IOException {
+        File dbFile = DatabaseFileManager.getDatabaseFile(context);
+        if (!dbFile.exists()) {
+            throw new IOException("Local database file not found");
+        }
 
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setConnectTimeout(10000);
-                connection.setReadTimeout(10000);
-
-                WebDavUtils.applyBasicAuth(connection, configManager.getUsername(), configManager.getPassword());
-
-                int responseCode = connection.getResponseCode();
-                if (responseCode < 200 || responseCode >= 300) {
-                    callback.onError("Download failed with HTTP code: " + responseCode);
-                    return;
-                }
-
-                try {
-                    AppDatabase.getInstance(context).close();
-                } catch (Exception ignored) {
-                }
-
-                File dbFile = context.getDatabasePath("task_database");
-                if (dbFile.getParentFile() != null && !dbFile.getParentFile().exists()) {
-                    dbFile.getParentFile().mkdirs();
-                }
-
-                try (InputStream is = connection.getInputStream();
-                     OutputStream os = new FileOutputStream(dbFile)) {
-                    byte[] buffer = new byte[4096];
-                    int bytesRead;
-                    while ((bytesRead = is.read(buffer)) != -1) {
-                        os.write(buffer, 0, bytesRead);
-                    }
-                    os.flush();
-                }
-
-                callback.onSuccess("Database successfully restored from cloud");
-
-            } catch (Exception e) {
-                callback.onError("Download error: " + (e.getMessage() != null ? e.getMessage() : "Unknown error"));
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
+        HttpURLConnection connection = openConnection("PUT");
+        try {
+            connection.setDoOutput(true);
+            connection.setFixedLengthStreamingMode(dbFile.length());
+            try (InputStream in = new FileInputStream(dbFile);
+                 OutputStream out = connection.getOutputStream()) {
+                DatabaseFileManager.copy(in, out);
             }
+            requireSuccess(connection);
+        } finally {
+            connection.disconnect();
+        }
+    }
+
+    private void downloadDatabaseBlocking() throws IOException {
+        HttpURLConnection connection = openConnection("GET");
+        try {
+            requireSuccess(connection);
+            File staged;
+            try (InputStream in = connection.getInputStream()) {
+                staged = DatabaseFileManager.stage(context, in);
+            }
+            DatabaseFileManager.replaceWith(context, staged);
+        } finally {
+            connection.disconnect();
+        }
+    }
+
+    private HttpURLConnection openConnection(String method) throws IOException {
+        String baseUrl = configManager.getUrl();
+        if (baseUrl.isEmpty()) {
+            throw new IOException("WebDAV URL is not configured");
+        }
+        HttpURLConnection connection = (HttpURLConnection) new URL(WebDavUtils.buildTargetUrl(baseUrl)).openConnection();
+        connection.setRequestMethod(method);
+        connection.setConnectTimeout(TIMEOUT_MS);
+        connection.setReadTimeout(TIMEOUT_MS);
+        WebDavUtils.applyBasicAuth(connection, configManager.getUsername(), configManager.getPassword());
+        return connection;
+    }
+
+    private static void requireSuccess(HttpURLConnection connection) throws IOException {
+        int code = connection.getResponseCode();
+        if (code < 200 || code >= 300) {
+            throw new IOException("Server responded with HTTP " + code);
+        }
+    }
+
+    private static void runAsync(IoAction action, String successMessage, String errorPrefix, SyncCallback callback) {
+        EXECUTOR.execute(() -> {
+            try {
+                action.run();
+            } catch (Exception e) {
+                callback.onError(errorPrefix + (e.getMessage() != null ? e.getMessage() : "Unknown error"));
+                return;
+            }
+            callback.onSuccess(successMessage);
         });
     }
 }

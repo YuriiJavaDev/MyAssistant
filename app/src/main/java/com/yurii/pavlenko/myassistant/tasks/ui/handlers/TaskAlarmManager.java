@@ -4,71 +4,72 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.util.Log;
 
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.receivers.TaskAlarmReceiver;
 
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 
-public class TaskAlarmManager {
+/** Registers and cancels the wake-up alarms that trigger {@link TaskAlarmReceiver}. */
+public final class TaskAlarmManager {
 
-    private static final String EXTRA_TASK_ID = "extra_task_id";
-    private static final String EXTRA_TASK_TITLE = "extra_task_title";
+    private static final String TAG = "TaskAlarmManager";
 
-    // Schedule an exact alarm for the task reminder
-    public static void scheduleAlarm(Context context, Task task) {
-        if (task.getCustomReminderDateTime() == null) return;
-
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        if (alarmManager == null) return;
-
-        // Check if exact alarms are permitted on Android 13+
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            if (!alarmManager.canScheduleExactAlarms()) {
-                // If permission is missing, system will handle or we can skip exact scheduling
-                return;
-            }
-        }
-
-        Intent intent = new Intent(context, TaskAlarmReceiver.class);
-        intent.putExtra(EXTRA_TASK_ID, task.getId());
-        intent.putExtra(EXTRA_TASK_TITLE, task.getTitle());
-
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                context,
-                (int) task.getId(), // Unique request code per task ID
-                intent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        // Convert LocalDateTime to epoch milliseconds
-        long triggerTimeMillis = task.getCustomReminderDateTime()
-                .atZone(ZoneId.systemDefault())
-                .toInstant()
-                .toEpochMilli();
-
-        // Set exact and wake up alarm
-        alarmManager.setExactAndAllowWhileIdle(
-                AlarmManager.RTC_WAKEUP,
-                triggerTimeMillis,
-                pendingIntent
-        );
+    private TaskAlarmManager() {
     }
 
-    // Cancel the alarm when task is completed, deleted, or reminder is cleared
-    public static void cancelAlarm(Context context, Task task) {
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        if (alarmManager == null) return;
+    public static void scheduleAlarm(Context context, Task task) {
+        LocalDateTime reminder = task.getCustomReminderDateTime();
+        if (reminder != null) {
+            long triggerAtMillis = reminder.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+            schedule(context, (int) task.getId(), triggerAtMillis);
+        }
+    }
 
-        Intent intent = new Intent(context, TaskAlarmReceiver.class);
+    public static void cancelAlarm(Context context, Task task) {
+        cancel(context, (int) task.getId());
+    }
+
+    /**
+     * Schedules a wake-up alarm identified by {@code requestCode}; an earlier alarm with the same
+     * code is replaced. Falls back to an inexact alarm when exact alarms are not permitted.
+     */
+    public static void schedule(Context context, int requestCode, long triggerAtMillis) {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 context,
-                (int) task.getId(),
-                intent,
+                requestCode,
+                createIntent(context),
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
+        AlarmManager alarmManager = context.getSystemService(AlarmManager.class);
 
-        alarmManager.cancel(pendingIntent);
+        try {
+            if (ExactAlarmPermissionHelper.hasExactAlarmPermission(context)) {
+                alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent);
+            } else {
+                alarmManager.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent);
+            }
+        } catch (SecurityException e) {
+            Log.w(TAG, "Alarm was not scheduled", e);
+        }
+    }
+
+    public static void cancel(Context context, int requestCode) {
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context,
+                requestCode,
+                createIntent(context),
+                PendingIntent.FLAG_NO_CREATE | PendingIntent.FLAG_IMMUTABLE
+        );
+        if (pendingIntent != null) {
+            context.getSystemService(AlarmManager.class).cancel(pendingIntent);
+            pendingIntent.cancel();
+        }
+    }
+
+    private static Intent createIntent(Context context) {
+        return new Intent(context, TaskAlarmReceiver.class);
     }
 }

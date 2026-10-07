@@ -1,6 +1,9 @@
 package com.yurii.pavlenko.myassistant;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,11 +14,13 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 import com.yurii.pavlenko.myassistant.tasks.database.MainMenuActionsHandler;
+import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmRescheduler;
 import com.yurii.pavlenko.myassistant.ui.navigation.ViewPagerConfigurator;
 
 /**
@@ -44,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             }
     );
 
+    private final ActivityResultLauncher<String> notificationPermissionLauncher = registerForActivityResult(
+            new ActivityResultContracts.RequestPermission(),
+            isGranted -> {
+                if (!isGranted) {
+                    Toast.makeText(this, "Notifications are disabled: reminders will not be shown", Toast.LENGTH_LONG).show();
+                }
+            }
+    );
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +68,20 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerConfigurator.configure(this, binding);
         restoreMenuStateIfNeeded(savedInstanceState);
+
+        requestNotificationPermissionIfNeeded();
+        if (savedInstanceState == null) {
+            TaskAlarmRescheduler.rescheduleAsync(this, false, null);
+        }
+    }
+
+    /** Without this permission (Android 13+) the system silently drops every reminder notification. */
+    private void requestNotificationPermissionIfNeeded() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+                && ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+        }
     }
 
     @Override

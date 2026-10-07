@@ -1,32 +1,28 @@
 package com.yurii.pavlenko.myassistant.tasks.database;
 
 import android.util.Base64;
+
 import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
 
-/**
- * Utility helper for WebDAV operations, handling URL formatting and authentication headers.
- */
-public class WebDavUtils {
+/** URL formatting and authentication helpers for WebDAV requests. */
+public final class WebDavUtils {
 
-    private static final String BACKUP_FILE_NAME = "myassistant_backup.db";
-
-    /**
-     * Formats the base WebDAV URL to correctly point to the backup database file.
-     */
-    public static String buildTargetUrl(String baseUrl) {
-        if (baseUrl == null) return "";
-        String trimmed = baseUrl.trim();
-        return trimmed.endsWith("/") ? trimmed + BACKUP_FILE_NAME : trimmed + "/" + BACKUP_FILE_NAME;
+    private WebDavUtils() {
     }
 
-    /**
-     * Applies HTTP Basic Authentication credentials if provided.
-     */
+    /** Appends the backup file name to the base WebDAV folder URL. */
+    public static String buildTargetUrl(String baseUrl) {
+        String trimmed = baseUrl.trim();
+        String separator = trimmed.endsWith("/") ? "" : "/";
+        return trimmed + separator + DatabaseFileManager.BACKUP_FILE_NAME;
+    }
+
+    /** Applies HTTP Basic Authentication when credentials are provided. */
     public static void applyBasicAuth(HttpURLConnection connection, String username, String password) {
         if (username != null && !username.isEmpty() && password != null) {
-            String credentials = username + ":" + password;
-            String auth = "Basic " + Base64.encodeToString(credentials.getBytes(), Base64.NO_WRAP);
-            connection.setRequestProperty("Authorization", auth);
+            byte[] credentials = (username + ":" + password).getBytes(StandardCharsets.UTF_8);
+            connection.setRequestProperty("Authorization", "Basic " + Base64.encodeToString(credentials, Base64.NO_WRAP));
         }
     }
 }
