@@ -37,4 +37,44 @@
         <item>Importance</item>
         <item>Deadline</item>
     </string-array>
+
+    <!-- Scan module -->
+    <string name="scan_camera">Camera</string>
+    <string name="scan_gallery">Gallery</string>
+    <string name="scan_empty">No scans yet. Take a photo of a document or pick one from the gallery.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Reset</string>
+    <string name="scan_next">Next</string>
+    <string name="scan_back">Back</string>
+    <string name="scan_save">Save</string>
+    <string name="scan_rotate">Rotate</string>
+    <string name="scan_paper">Paper</string>
+    <string name="scan_filter_color">Color</string>
+    <string name="scan_filter_gray">Gray</string>
+    <string name="scan_filter_bw">B&amp;W</string>
+    <string name="scan_remove_shadows">Remove shadows</string>
+    <string name="scan_sharpen">Sharpen</string>
+    <string name="scan_saved">Scan saved</string>
+    <string name="scan_saved_to_device">File saved</string>
+    <string name="scan_share_title">Share scan</string>
+    <string name="scan_rename_title">Rename scan</string>
+    <string name="scan_rename_confirm">Rename</string>
+    <string name="scan_error_load">Cannot open this photo</string>
+    <string name="scan_error_preview">Not enough memory for the preview</string>
+    <string name="scan_error_save">Cannot save the scan</string>
+    <string name="scan_error_export">Cannot prepare the file</string>
+    <string name="scan_error_no_camera">No camera app found</string>
+    <string name="scan_error_no_viewer">No app found to open the image</string>
+    <string name="scan_error_no_app">No app found to share with</string>
+
+    <!-- Order must match ScanActionsDialog.perform -->
+    <string-array name="scan_actions">
+        <item>Open</item>
+        <item>Share as PDF</item>
+        <item>Share as JPEG</item>
+        <item>Save PDF to…</item>
+        <item>Save JPEG to…</item>
+        <item>Rename</item>
+        <item>Delete</item>
+    </string-array>
 </resources>

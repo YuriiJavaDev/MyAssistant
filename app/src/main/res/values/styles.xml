@@ -3,4 +3,11 @@
         <item name="android:textSize">12sp</item>
         <!-- <item name="fontFamily">@font/my_custom_font</item> -->
     </style>
+
+    <style name="Widget.MyAssistant.ScanButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@color/text_color_btn</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
 </resources>
