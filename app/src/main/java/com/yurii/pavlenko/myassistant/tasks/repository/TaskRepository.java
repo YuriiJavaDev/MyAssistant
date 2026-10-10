@@ -66,7 +66,20 @@ public class TaskRepository {
      * Updates an existing task in the database on a background thread.
      */
     public void update(Task task) {
-        executorService.execute(() -> taskDao.updateTask(task));
+        update(task, null);
+    }
+
+    /**
+     * Updates a task on a background thread and runs the callback on the same thread right after,
+     * so follow-up work (for example, alarms) always sees the stored data.
+     */
+    public void update(Task task, Runnable onUpdated) {
+        executorService.execute(() -> {
+            taskDao.updateTask(task);
+            if (onUpdated != null) {
+                onUpdated.run();
+            }
+        });
     }
 
     /**

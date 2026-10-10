@@ -11,6 +11,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.yurii.pavlenko.myassistant.AlarmAlertActivity;
+import com.yurii.pavlenko.myassistant.MainActivity;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskPreferences;
 
@@ -22,22 +23,27 @@ public final class DeadlineNotifier {
 
     private static final String CHANNEL_ID = "task_deadline_channel";
     private static final int NOTIFICATION_ID = 9999;
+    private static final int ALERT_REQUEST_CODE = 1;
+    private static final int TASK_LIST_REQUEST_CODE = 2;
+    private static final int PENDING_INTENT_FLAGS = PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE;
 
     private DeadlineNotifier() {
     }
 
-    public static void show(Context context, int dueTasksCount) {
+    /**
+     * Shows or refreshes the notification.
+     *
+     * @return true if the full-screen alert window was requested, false for a plain notification
+     */
+    public static boolean show(Context context, int dueTasksCount) {
         createChannel(context);
 
         Intent alertIntent = new Intent(context, AlarmAlertActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 .putExtra(AlarmAlertActivity.EXTRA_DUE_TASKS_COUNT, dueTasksCount);
-        PendingIntent alertPendingIntent = PendingIntent.getActivity(
-                context,
-                NOTIFICATION_ID,
-                alertIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
+        PendingIntent alertPendingIntent = PendingIntent.getActivity(context, ALERT_REQUEST_CODE, alertIntent, PENDING_INTENT_FLAGS);
+        PendingIntent taskListPendingIntent = PendingIntent.getActivity(
+                context, TASK_LIST_REQUEST_CODE, MainActivity.createShowDueRemindersIntent(context), PENDING_INTENT_FLAGS);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
@@ -46,11 +52,12 @@ public final class DeadlineNotifier {
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setContentIntent(alertPendingIntent)
+                .setContentIntent(taskListPendingIntent)
                 .setAutoCancel(true)
                 .setDefaults(NotificationCompat.DEFAULT_ALL);
 
-        if (canUseFullScreenIntent(context)) {
+        boolean fullScreen = canUseFullScreenIntent(context);
+        if (fullScreen) {
             builder.setFullScreenIntent(alertPendingIntent, true);
         }
 
@@ -58,6 +65,7 @@ public final class DeadlineNotifier {
         // Cancel first, otherwise the system ignores the sound and full-screen intent of a repeated notification
         notificationManager.cancel(NOTIFICATION_ID);
         notificationManager.notify(NOTIFICATION_ID, builder.build());
+        return fullScreen;
     }
 
     public static void dismiss(Context context) {

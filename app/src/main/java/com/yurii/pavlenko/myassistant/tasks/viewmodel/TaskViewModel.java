@@ -9,6 +9,7 @@ import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.notifications.OverdueAlerts;
 import com.yurii.pavlenko.myassistant.tasks.repository.TaskRepository;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmManager;
 
@@ -23,7 +24,7 @@ public class TaskViewModel extends AndroidViewModel {
     private final MediatorLiveData<List<Task>> displayListLiveData = new MediatorLiveData<>();
     private final MutableLiveData<String> statisticsLiveData = new MutableLiveData<>();
 
-    private String currentFilter = "All Tasks";
+    private String currentFilter = TaskFilterSorter.FILTER_ALL;
     private String currentSort = "Alpha A-Z";
 
     private List<Task> cachedRawTasks = new ArrayList<>();
@@ -34,12 +35,9 @@ public class TaskViewModel extends AndroidViewModel {
 
         LiveData<List<Task>> rawTasksSource = repository.getAllTasksLiveData();
         displayListLiveData.addSource(rawTasksSource, tasks -> {
-            if (tasks != null) {
-                cachedRawTasks = tasks;
-            } else {
-                cachedRawTasks = new ArrayList<>();
-            }
+            cachedRawTasks = tasks != null ? tasks : new ArrayList<>();
             applyFilterAndSort();
+            stopAlertsIfNothingDue();
         });
     }
 
@@ -82,15 +80,14 @@ public class TaskViewModel extends AndroidViewModel {
         task.setCompleted(isChecked);
         task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
         task.setUpdatedAt(LocalDateTime.now());
-        repository.update(task);
-
-        if (isChecked) {
-            TaskAlarmManager.cancelAlarm(getApplication(), task);
-        } else {
-            if (task.getCustomReminderDateTime() != null && task.getCustomReminderDateTime().isAfter(LocalDateTime.now())) {
+        repository.update(task, () -> {
+            if (isChecked) {
+                TaskAlarmManager.cancelAlarm(getApplication(), task);
+            } else {
+                // A reminder whose time has already passed fires at once, as if the task was never completed
                 TaskAlarmManager.scheduleAlarm(getApplication(), task);
             }
-        }
+        });
     }
 
     public void updateTaskDetails(Task task,
@@ -131,6 +128,14 @@ public class TaskViewModel extends AndroidViewModel {
             TaskAlarmManager.cancelAlarm(getApplication(), task);
         }
         repository.clearAllTasks();
+    }
+
+    /** The alert exists only while some reminder is due; completing, editing or deleting the last one clears it. */
+    private void stopAlertsIfNothingDue() {
+        LocalDateTime now = LocalDateTime.now();
+        if (cachedRawTasks.stream().noneMatch(task -> TaskFilterSorter.isReminderDue(task, now))) {
+            OverdueAlerts.stop(getApplication());
+        }
     }
 
     private void updateStatistics() {

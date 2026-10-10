@@ -16,6 +16,7 @@ import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskActionsHandler;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskSpinnerHelper;
+import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskFilterSorter;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 import java.time.LocalDate;
@@ -25,6 +26,8 @@ public class TasksFragment extends Fragment implements
         TaskDialogFragment.OnTaskSavedListener,
         TaskDialogFragment.OnTaskUpdatedListener,
         TaskDialogFragment.OnTaskDeletedListener {
+
+    public static final String REQUEST_SHOW_DUE_REMINDERS = "request_show_due_reminders";
 
     private FragmentTasksBinding binding;
     private TaskAdapter taskAdapter;
@@ -47,6 +50,16 @@ public class TasksFragment extends Fragment implements
         TaskSpinnerHelper.setupSpinners(requireContext(), binding, taskViewModel);
         TaskActionsHandler.setupClickListeners(requireContext(), getChildFragmentManager(), binding, taskViewModel);
         observeViewModel();
+        listenForDueRemindersRequest();
+    }
+
+    /** Shows only the tasks whose reminder time has come when the activity asks for it. */
+    private void listenForDueRemindersRequest() {
+        getParentFragmentManager().setFragmentResultListener(
+                REQUEST_SHOW_DUE_REMINDERS,
+                getViewLifecycleOwner(),
+                (requestKey, result) -> TaskSpinnerHelper.selectFilter(binding, TaskFilterSorter.FILTER_DUE_REMINDERS)
+        );
     }
 
     private void setupRecyclerView() {

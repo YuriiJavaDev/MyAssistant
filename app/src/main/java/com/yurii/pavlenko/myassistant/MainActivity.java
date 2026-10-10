@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -20,6 +21,8 @@ import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
 import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
 import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
 import com.yurii.pavlenko.myassistant.tasks.database.MainMenuActionsHandler;
+import com.yurii.pavlenko.myassistant.tasks.notifications.OverdueAlerts;
+import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmRescheduler;
 import com.yurii.pavlenko.myassistant.ui.navigation.ViewPagerConfigurator;
 
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     private static final String STATE_MENU_OPEN = "state_menu_open";
+    private static final String EXTRA_SHOW_DUE_REMINDERS = "extra_show_due_reminders";
+    private static final int TASKS_TAB_POSITION = 0;
 
     // Launcher for importing database file
     private final ActivityResultLauncher<String> importDatabaseLauncher = registerForActivityResult(
@@ -58,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             }
     );
 
+    /** Creates an intent that opens the task list filtered by reminders whose time has come. */
+    public static Intent createShowDueRemindersIntent(Context context) {
+        return new Intent(context, MainActivity.class)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                .putExtra(EXTRA_SHOW_DUE_REMINDERS, true);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +84,23 @@ public class MainActivity extends AppCompatActivity {
         requestNotificationPermissionIfNeeded();
         if (savedInstanceState == null) {
             TaskAlarmRescheduler.rescheduleAsync(this, false, null);
+            showDueRemindersIfRequested(getIntent());
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        showDueRemindersIfRequested(intent);
+    }
+
+    /** Acknowledges the overdue alert and shows the tasks it is about. */
+    private void showDueRemindersIfRequested(Intent intent) {
+        if (intent.getBooleanExtra(EXTRA_SHOW_DUE_REMINDERS, false)) {
+            OverdueAlerts.stop(this);
+            binding.viewPager.setCurrentItem(TASKS_TAB_POSITION, false);
+            getSupportFragmentManager().setFragmentResult(TasksFragment.REQUEST_SHOW_DUE_REMINDERS, Bundle.EMPTY);
         }
     }
 
