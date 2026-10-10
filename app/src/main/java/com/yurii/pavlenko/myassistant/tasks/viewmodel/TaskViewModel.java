@@ -49,6 +49,11 @@ public class TaskViewModel extends AndroidViewModel {
         return statisticsLiveData;
     }
 
+    /** All tasks regardless of the current filter. */
+    public List<Task> getAllTasksSnapshot() {
+        return new ArrayList<>(cachedRawTasks);
+    }
+
     public void setFilter(String filter) {
         this.currentFilter = filter;
         applyFilterAndSort();
@@ -111,16 +116,8 @@ public class TaskViewModel extends AndroidViewModel {
         repository.delete(task);
     }
 
-    public boolean hasCompletedTasks() {
-        return cachedRawTasks.stream().anyMatch(Task::isCompleted);
-    }
-
     public void deleteCompletedTasks() {
         repository.deleteCompletedTasks();
-    }
-
-    public boolean hasTasks() {
-        return !cachedRawTasks.isEmpty();
     }
 
     public void clearAllTasks() {

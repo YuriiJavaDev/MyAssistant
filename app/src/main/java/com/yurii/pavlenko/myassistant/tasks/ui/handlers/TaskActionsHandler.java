@@ -24,16 +24,14 @@ public class TaskActionsHandler {
         });
 
         binding.deleteCompletedButton.setOnClickListener(v -> {
-            boolean hasCompleted = taskViewModel.hasCompletedTasks();
-            DeleteConfirmationDialog.show(context, hasCompleted, () -> {
+            DeleteConfirmationDialog.showDeleteCompleted(context, taskViewModel.getAllTasksSnapshot(), () -> {
                 taskViewModel.deleteCompletedTasks();
                 Toast.makeText(context, "Completed tasks deleted", Toast.LENGTH_SHORT).show();
             });
         });
 
         binding.clearAllButton.setOnClickListener(v -> {
-            boolean hasTasks = taskViewModel.hasTasks();
-            DeleteConfirmationDialog.show(context, hasTasks, () -> {
+            DeleteConfirmationDialog.showClearAll(context, taskViewModel.getAllTasksSnapshot(), () -> {
                 taskViewModel.clearAllTasks();
                 Toast.makeText(context, "All tasks cleared", Toast.LENGTH_SHORT).show();
             });

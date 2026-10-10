@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        applyLockScreenVisibility(getIntent());
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -92,7 +93,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
+        applyLockScreenVisibility(intent);
         showDueRemindersIfRequested(intent);
+    }
+
+    /**
+     * The manifest allows showing over the lock screen so a notification tap skips the unlock prompt;
+     * at runtime it stays enabled only for due-reminder launches, never for ordinary ones.
+     */
+    private void applyLockScreenVisibility(Intent intent) {
+        boolean showOverLockScreen = intent.getBooleanExtra(EXTRA_SHOW_DUE_REMINDERS, false);
+        setShowWhenLocked(showOverLockScreen);
+        setTurnScreenOn(showOverLockScreen);
     }
 
     /** Acknowledges the overdue alert and shows the tasks it is about. */

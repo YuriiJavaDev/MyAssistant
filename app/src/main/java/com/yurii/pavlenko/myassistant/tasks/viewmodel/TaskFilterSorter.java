@@ -14,7 +14,7 @@ public class TaskFilterSorter {
     public static final String FILTER_ALL = "All Tasks";
     public static final String FILTER_ACTIVE = "Active";
     public static final String FILTER_COMPLETED = "Completed";
-    public static final String FILTER_DUE_REMINDERS = "Due Reminders";
+    public static final String FILTER_DUE_REMINDERS = "Due Alerts";
 
     public static List<Task> filterAndSort(List<Task> tasks, String filter, String sort) {
         List<Task> filtered = applyFilter(tasks, filter);

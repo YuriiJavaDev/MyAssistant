@@ -22,9 +22,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAssistant">
+        <!-- showWhenLocked lets a reminder notification open the task list without the unlock prompt;
+             MainActivity turns it off again at runtime for ordinary launches -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:showWhenLocked="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

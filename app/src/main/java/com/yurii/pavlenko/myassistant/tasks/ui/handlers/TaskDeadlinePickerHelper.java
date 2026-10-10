@@ -37,7 +37,8 @@ public class TaskDeadlinePickerHelper {
     public void setupDeadlinePicker(TextView deadlineTextView,
                                     TextView customReminderTextView,
                                     @Nullable LocalDate initialDeadline,
-                                    @Nullable LocalDateTime initialCustomReminder) {
+                                    @Nullable LocalDateTime initialCustomReminder,
+                                    boolean keepPastReminder) {
         this.deadlineTextView = deadlineTextView;
         this.customReminderTextView = customReminderTextView;
         this.defaultDeadlineTextColor = deadlineTextView.getTextColors();
@@ -45,11 +46,10 @@ public class TaskDeadlinePickerHelper {
 
         this.selectedDeadline = initialDeadline;
 
-        if (initialCustomReminder != null && initialCustomReminder.isBefore(LocalDateTime.now())) {
-            this.customReminderDateTime = null;
-        } else {
-            this.customReminderDateTime = initialCustomReminder;
-        }
+        boolean isStalePastReminder = initialCustomReminder != null
+                && initialCustomReminder.isBefore(LocalDateTime.now())
+                && !keepPastReminder;
+        this.customReminderDateTime = isStalePastReminder ? null : initialCustomReminder;
 
         updateDeadlineDisplay();
         updateCustomReminderDisplay();

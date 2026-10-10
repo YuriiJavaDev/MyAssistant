@@ -196,7 +196,8 @@ public class TaskDialogFragment extends DialogFragment {
                 binding.dialogDeadlineTextView,
                 binding.dialogCustomReminderTextView,
                 initialDeadline,
-                initialCustomReminder
+                initialCustomReminder,
+                isEditMode && task.isCompleted()
         );
 
         binding.dialogTaskEditText.setSelection(binding.dialogTaskEditText.getText().length());

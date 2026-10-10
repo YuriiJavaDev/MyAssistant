@@ -24,7 +24,7 @@
         <item>All Tasks</item>
         <item>Active</item>
         <item>Completed</item>
-        <item>Due Reminders</item>
+        <item>Due Alerts</item>
     </string-array>
 
     <string-array name="sort_options">
