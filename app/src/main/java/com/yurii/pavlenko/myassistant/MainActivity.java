@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,18 +39,30 @@ public class MainActivity extends AppCompatActivity {
     private static final String EXTRA_SHOW_DUE_REMINDERS = "extra_show_due_reminders";
     private static final int TASKS_TAB_POSITION = 0;
 
-    // Launcher for importing database file
-    private final ActivityResultLauncher<String> importDatabaseLauncher = registerForActivityResult(
-            new ActivityResultContracts.GetContent(),
-            uri -> {
-                if (uri != null) {
-                    boolean success = DatabaseBackupManager.importDatabase(this, uri);
-                    if (success) {
-                        Toast.makeText(this, "Database imported successfully. Restarting...", Toast.LENGTH_LONG).show();
-                        restartApp();
-                    } else {
-                        Toast.makeText(this, "Import failed", Toast.LENGTH_SHORT).show();
-                    }
+    // Launcher for importing backup files: a task database, a scan archive, or both
+    private final ActivityResultLauncher<String> importBackupLauncher = registerForActivityResult(
+            new ActivityResultContracts.GetMultipleContents(),
+            uris -> {
+                if (!uris.isEmpty()) {
+                    DatabaseBackupManager.importFiles(this, uris, success -> {
+                        if (success) {
+                            Toast.makeText(this, "Backup imported successfully. Restarting...", Toast.LENGTH_LONG).show();
+                            restartApp();
+                        } else {
+                            Toast.makeText(this, "Import failed", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+    );
+
+    // Launcher for choosing the folder that receives the exported backup files
+    private final ActivityResultLauncher<Uri> exportFolderLauncher = registerForActivityResult(
+            new ActivityResultContracts.OpenDocumentTree(),
+            folder -> {
+                if (folder != null) {
+                    DatabaseBackupManager.exportToFolder(this, folder, success ->
+                            Toast.makeText(this, success ? "Backup saved" : "Export failed", Toast.LENGTH_SHORT).show());
                 }
             }
     );
@@ -170,7 +183,8 @@ public class MainActivity extends AppCompatActivity {
                 this,
                 anchorView,
                 getSupportFragmentManager(),
-                importDatabaseLauncher,
+                importBackupLauncher,
+                exportFolderLauncher,
                 this::restartApp
         );
     }

@@ -12,11 +12,13 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import com.yurii.pavlenko.myassistant.scan.model.ScanDocument;
 import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 
-/** Separate from the task database so task backup, import and cloud sync never touch scans. */
+import java.io.File;
+
+/** Separate from the task database, so scans are backed up and restored as their own archive (database and images). */
 @Database(entities = {ScanDocument.class, ScanPage.class}, version = 2, exportSchema = false)
 public abstract class ScanDatabase extends RoomDatabase {
 
-    private static final String DATABASE_NAME = "scan_database";
+    public static final String DATABASE_NAME = "scan_database";
 
     /** Version 1 stored single scans; each of them becomes a one-page document. */
     private static final Migration MIGRATION_1_2 = new Migration(1, 2) {
@@ -46,10 +48,26 @@ public abstract class ScanDatabase extends RoomDatabase {
                 if (instance == null) {
                     instance = Room.databaseBuilder(context.getApplicationContext(), ScanDatabase.class, DATABASE_NAME)
                             .addMigrations(MIGRATION_1_2)
+                            // TRUNCATE keeps the whole database in one file, so copying that file is a valid backup
+                            .setJournalMode(RoomDatabase.JournalMode.TRUNCATE)
                             .build();
                 }
             }
         }
         return instance;
+    }
+
+    public static File getDatabaseFile(Context context) {
+        return context.getDatabasePath(DATABASE_NAME);
+    }
+
+    /** Closes the singleton so the database file can be replaced; the next getInstance() reopens it. */
+    public static void closeInstance() {
+        synchronized (ScanDatabase.class) {
+            if (instance != null) {
+                instance.close();
+                instance = null;
+            }
+        }
     }
 }

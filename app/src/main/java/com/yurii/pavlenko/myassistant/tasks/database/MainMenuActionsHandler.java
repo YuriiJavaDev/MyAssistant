@@ -1,12 +1,15 @@
 package com.yurii.pavlenko.myassistant.tasks.database;
 
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.net.Uri;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+
+import com.yurii.pavlenko.myassistant.R;
 
 /**
  * Handler responsible for managing user actions triggered from the main overflow backup menu.
@@ -19,16 +22,12 @@ public class MainMenuActionsHandler {
     public static void showPopupMenu(AppCompatActivity activity, View anchorView,
                                      FragmentManager fragmentManager,
                                      ActivityResultLauncher<String> importLauncher,
+                                     ActivityResultLauncher<Uri> exportFolderLauncher,
                                      Runnable appRestartCallback) {
         BackupMenuHandler.showCustomPopupMenu(activity, anchorView, new BackupMenuHandler.OnMenuActionListener() {
             @Override
             public void onExportLocal() {
-                Intent shareIntent = DatabaseBackupManager.getExportShareIntent(activity);
-                if (shareIntent != null) {
-                    activity.startActivity(shareIntent);
-                } else {
-                    Toast.makeText(activity, "Export failed", Toast.LENGTH_SHORT).show();
-                }
+                showExportDestinationDialog(activity, exportFolderLauncher);
             }
 
             @Override
@@ -46,9 +45,9 @@ public class MainMenuActionsHandler {
             @Override
             public void onCloudExport() {
                 CloudSyncManager syncManager = new CloudSyncManager(activity);
-                Toast.makeText(activity, "Exporting database to cloud...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Uploading backup to cloud...", Toast.LENGTH_SHORT).show();
 
-                syncManager.uploadDatabase(new CloudSyncManager.SyncCallback() {
+                syncManager.uploadBackup(new CloudSyncManager.SyncCallback() {
                     @Override
                     public void onSuccess(String message) {
                         activity.runOnUiThread(() ->
@@ -68,9 +67,9 @@ public class MainMenuActionsHandler {
             @Override
             public void onCloudImport() {
                 CloudSyncManager syncManager = new CloudSyncManager(activity);
-                Toast.makeText(activity, "Importing database from cloud...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Restoring backup from cloud...", Toast.LENGTH_SHORT).show();
 
-                syncManager.downloadDatabase(new CloudSyncManager.SyncCallback() {
+                syncManager.restoreBackup(new CloudSyncManager.SyncCallback() {
                     @Override
                     public void onSuccess(String message) {
                         activity.runOnUiThread(() -> {
@@ -88,6 +87,36 @@ public class MainMenuActionsHandler {
                         );
                     }
                 });
+            }
+        });
+    }
+
+    /** The user first chooses where the backup goes: a folder on any storage, or another app. */
+    private static void showExportDestinationDialog(AppCompatActivity activity, ActivityResultLauncher<Uri> exportFolderLauncher) {
+        String[] destinations = {"Choose a folder (device, SD card, USB, Drive...)", "Share with an app"};
+        AlertDialog dialog = new AlertDialog.Builder(activity)
+                .setTitle("Save backup to")
+                .setItems(destinations, (d, which) -> {
+                    if (which == 0) {
+                        exportFolderLauncher.launch(null);
+                    } else {
+                        shareBackup(activity);
+                    }
+                })
+                .create();
+        dialog.show();
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
+        }
+    }
+
+    private static void shareBackup(AppCompatActivity activity) {
+        Toast.makeText(activity, "Preparing backup...", Toast.LENGTH_SHORT).show();
+        DatabaseBackupManager.prepareShareIntent(activity, shareIntent -> {
+            if (shareIntent != null) {
+                activity.startActivity(shareIntent);
+            } else {
+                Toast.makeText(activity, "Export failed", Toast.LENGTH_SHORT).show();
             }
         });
     }

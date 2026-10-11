@@ -20,6 +20,10 @@ public class ScanFileStore {
         directory = new File(context.getFilesDir(), DIRECTORY);
     }
 
+    public File getDirectory() {
+        return directory;
+    }
+
     public File saveJpeg(Bitmap bitmap) throws IOException {
         if (!directory.isDirectory() && !directory.mkdirs()) {
             throw new IOException("Cannot create " + directory);

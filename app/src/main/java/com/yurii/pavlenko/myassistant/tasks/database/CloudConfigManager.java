@@ -13,6 +13,7 @@ public class CloudConfigManager {
     private static final String KEY_USERNAME = "webdav_username";
     private static final String KEY_PASSWORD = "webdav_password";
     private static final String KEY_AUTO_BACKUP = "is_auto_backup_enabled";
+    private static final String KEY_SCAN_SIGNATURE = "last_uploaded_scan_signature";
 
     private final SharedPreferences sharedPreferences;
 
@@ -60,5 +61,14 @@ public class CloudConfigManager {
 
     public boolean isAutoBackupEnabled() {
         return sharedPreferences.getBoolean(KEY_AUTO_BACKUP, false);
+    }
+
+    /** Identifies the scans as they were at the last upload, so unchanged scans are not uploaded again. */
+    public String getUploadedScanSignature() {
+        return sharedPreferences.getString(KEY_SCAN_SIGNATURE, "");
+    }
+
+    public void saveUploadedScanSignature(String signature) {
+        sharedPreferences.edit().putString(KEY_SCAN_SIGNATURE, signature).apply();
     }
 }

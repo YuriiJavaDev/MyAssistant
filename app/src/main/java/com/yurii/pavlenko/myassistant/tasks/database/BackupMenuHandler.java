@@ -96,7 +96,7 @@ public class BackupMenuHandler {
         DeleteConfirmationDialog.showCustom(
                 context,
                 "Attention!",
-                "Restoring the database will result in the loss of the current version. Are you sure you want to proceed?",
+                "Restoring a backup replaces the current tasks and scans it contains. Are you sure you want to proceed?",
                 "Confirm import",
                 importAction
         );
