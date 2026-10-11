@@ -41,6 +41,8 @@
     <!-- Scan module -->
     <string name="scan_camera">Camera</string>
     <string name="scan_gallery">Gallery</string>
+    <string name="scan_clear_all">Clear All</string>
+    <string name="scan_cleared">All scans deleted</string>
     <string name="scan_empty">No documents yet. Take a photo of a page or pick one from the gallery.</string>
     <string name="scan_auto">Auto</string>
     <string name="scan_reset">Reset</string>

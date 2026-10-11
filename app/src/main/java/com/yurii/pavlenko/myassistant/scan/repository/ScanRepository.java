@@ -90,6 +90,13 @@ public class ScanRepository {
         });
     }
 
+    public void clearAll() {
+        executor.execute(() -> {
+            scanDao.deleteAllDocuments();
+            fileStore.deleteAll();
+        });
+    }
+
     /** Removes the page; a document left without pages disappears with it. */
     public void deletePage(ScanPage page) {
         executor.execute(() -> {

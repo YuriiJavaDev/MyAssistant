@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -14,14 +15,17 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.FragmentScanBinding;
 import com.yurii.pavlenko.myassistant.scan.export.ExportFormat;
 import com.yurii.pavlenko.myassistant.scan.export.ScanExporter;
 import com.yurii.pavlenko.myassistant.scan.model.ScanDocument;
+import com.yurii.pavlenko.myassistant.scan.model.ScanDocumentSummary;
 import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 import com.yurii.pavlenko.myassistant.scan.repository.ScanRepository;
 import com.yurii.pavlenko.myassistant.scan.viewmodel.ScanViewModel;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -34,6 +38,7 @@ public class ScanFragment extends Fragment implements ScanActionsDialog.Listener
     private ScanFileActions fileActions;
     private ScanThumbnailLoader thumbnailLoader;
     private ScanPhotoSource photoSource;
+    private List<ScanDocumentSummary> documents = Collections.emptyList();
 
     private final ActivityResultLauncher<String> savePdfLauncher = registerForActivityResult(
             new ActivityResultContracts.CreateDocument(ExportFormat.PDF.getMimeType()),
@@ -66,10 +71,12 @@ public class ScanFragment extends Fragment implements ScanActionsDialog.Listener
 
         binding.cameraButton.setOnClickListener(v -> photoSource.takePhoto());
         binding.galleryButton.setOnClickListener(v -> photoSource.pickPhoto());
+        binding.clearAllButton.setOnClickListener(v -> confirmClearAll());
 
-        viewModel.getDocuments().observe(getViewLifecycleOwner(), documents -> {
-            adapter.submitList(documents);
-            binding.emptyText.setVisibility(documents.isEmpty() ? View.VISIBLE : View.GONE);
+        viewModel.getDocuments().observe(getViewLifecycleOwner(), list -> {
+            documents = list;
+            adapter.submitList(list);
+            binding.emptyText.setVisibility(list.isEmpty() ? View.VISIBLE : View.GONE);
         });
     }
 
@@ -104,6 +111,17 @@ public class ScanFragment extends Fragment implements ScanActionsDialog.Listener
     @Override
     public void onDelete(ScanDocument document) {
         viewModel.delete(document);
+    }
+
+    private void confirmClearAll() {
+        int pageCount = 0;
+        for (ScanDocumentSummary summary : documents) {
+            pageCount += summary.pageCount;
+        }
+        ScanActionsDialog.confirmClearAll(requireContext(), documents.size(), pageCount, () -> {
+            viewModel.clearAll();
+            Toast.makeText(requireContext(), R.string.scan_cleared, Toast.LENGTH_SHORT).show();
+        });
     }
 
     private void openEditor(Uri photo) {

@@ -53,4 +53,8 @@ public interface ScanDao {
 
     @Query("SELECT * FROM scan_pages WHERE documentId = :documentId ORDER BY position")
     List<ScanPage> getPages(long documentId);
+
+    /** Pages go with their documents through the foreign key cascade. */
+    @Query("DELETE FROM scan_documents")
+    void deleteAllDocuments();
 }

@@ -26,8 +26,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:text="@string/scan_gallery" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearAllButton"
+            style="@style/Widget.MyAssistant.ScanButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/scan_clear_all" />
     </LinearLayout>
 
     <TextView

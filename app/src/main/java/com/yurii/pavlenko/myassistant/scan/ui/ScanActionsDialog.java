@@ -74,6 +74,18 @@ final class ScanActionsDialog {
                 "Delete", () -> listener.onDelete(document));
     }
 
+    /** Warns before every document is deleted; with nothing to delete it only says so. */
+    static void confirmClearAll(Context context, int documentCount, int pageCount, Runnable onConfirmed) {
+        if (documentCount == 0) {
+            DeleteConfirmationDialog.show(context, false, onConfirmed);
+            return;
+        }
+        DeleteConfirmationDialog.showCustom(context, "Delete Confirmation",
+                "Delete all " + documentCount + (documentCount == 1 ? " document" : " documents")
+                        + " with " + pageCount + (pageCount == 1 ? " page" : " pages") + "? This action cannot be undone!",
+                "Delete", onConfirmed);
+    }
+
     private static void applyAppBackground(AlertDialog dialog) {
         if (dialog.getWindow() != null) {
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);

@@ -42,6 +42,10 @@ public class ScanViewModel extends AndroidViewModel {
         repository.deleteDocument(document);
     }
 
+    public void clearAll() {
+        repository.clearAll();
+    }
+
     /** Remembers which document the system file dialog is about to save, since the dialog returns only a location. */
     public void setPendingSave(ScanDocument document) {
         pendingSave = document;

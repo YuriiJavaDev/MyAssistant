@@ -37,6 +37,16 @@ public class ScanFileStore {
         return file;
     }
 
+    /** Removes every stored image, including any that no page refers to. */
+    public void deleteAll() {
+        File[] files = directory.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                delete(file.getPath());
+            }
+        }
+    }
+
     public void delete(String path) {
         File file = new File(path);
         if (file.exists() && !file.delete()) {
