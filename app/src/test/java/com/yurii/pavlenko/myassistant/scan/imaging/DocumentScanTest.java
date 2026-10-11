@@ -104,6 +104,50 @@ public class DocumentScanTest {
     }
 
     @Test
+    public void colouredBlockLosesChromaNoiseButKeepsItsColour() {
+        PixelImage photo = SyntheticPhoto.createHarsh();
+        PixelImage image = ScanPipeline.process(photo, SyntheticPhoto.pageCorners(), ScanOptions.defaults(), MAX_SIDE).getImage();
+
+        double[] stamp = redMinusGreenStats(image, 0.75, 0.16);
+        assertTrue("stamp stays red: " + stamp[0], stamp[0] > 100);
+        assertTrue("stamp colour noise was " + stamp[1], stamp[1] < 8);
+    }
+
+    @Test
+    public void cornersSlightlyOutsideThePageLeaveNoDarkEdge() {
+        Quad exact = SyntheticPhoto.pageCorners();
+        double[] xs = new double[4];
+        double[] ys = new double[4];
+        double centreX = 0;
+        double centreY = 0;
+        for (int i = 0; i < 4; i++) {
+            centreX += exact.x(i) / 4;
+            centreY += exact.y(i) / 4;
+        }
+        for (int i = 0; i < 4; i++) {
+            xs[i] = centreX + (exact.x(i) - centreX) * 1.012;
+            ys[i] = centreY + (exact.y(i) - centreY) * 1.012;
+        }
+        PixelImage image = ScanPipeline.process(SyntheticPhoto.create(), new Quad(xs, ys), ScanOptions.defaults(), MAX_SIDE).getImage();
+
+        int ring = 3;
+        int dark = 0;
+        int total = 0;
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                boolean onRing = x < ring || y < ring || x >= image.getWidth() - ring || y >= image.getHeight() - ring;
+                if (onRing) {
+                    total++;
+                    if (Colors.luminance(image.get(x, y)) < 200) {
+                        dark++;
+                    }
+                }
+            }
+        }
+        assertTrue("dark pixels on the border: " + dark + " of " + total, dark == 0);
+    }
+
+    @Test
     public void textStaysDark() {
         PixelImage image = scan(ScanFilter.COLOR).getImage();
 
@@ -226,6 +270,27 @@ public class DocumentScanTest {
             }
         }
         return darkest;
+    }
+
+    /** Mean and standard deviation of red minus green in a small patch: a measure of colour noise inside a coloured block. */
+    private static double[] redMinusGreenStats(PixelImage image, double u, double v) {
+        int cx = (int) (u * (image.getWidth() - 1));
+        int cy = (int) (v * (image.getHeight() - 1));
+        int radius = 12;
+        double sum = 0;
+        double sumSquares = 0;
+        int count = 0;
+        for (int y = cy - radius; y <= cy + radius; y++) {
+            for (int x = cx - radius; x <= cx + radius; x++) {
+                int argb = image.get(x, y);
+                double value = Colors.red(argb) - Colors.green(argb);
+                sum += value;
+                sumSquares += value * value;
+                count++;
+            }
+        }
+        double mean = sum / count;
+        return new double[]{mean, Math.sqrt(Math.max(0, sumSquares / count - mean * mean))};
     }
 
     /** Mean and standard deviation of luminance in a small patch around a page-relative position. */

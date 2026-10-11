@@ -9,7 +9,7 @@ package com.yurii.pavlenko.myassistant.scan.imaging;
 public final class ShadowRemover implements ImageFilter {
 
     private static final int GRID_CELLS_ON_LONG_SIDE = 200;
-    private static final int TEXT_BRIDGE_DIVISOR = 60;
+    private static final int TEXT_BRIDGE_DIVISOR = 12;
     private static final double BRIGHT_PERCENTILE = 0.90;
     private static final int HISTOGRAM_BINS = 128;
     private static final float MAX_GAIN = 4f;

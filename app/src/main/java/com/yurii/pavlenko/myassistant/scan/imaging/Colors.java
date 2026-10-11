@@ -29,4 +29,12 @@ final class Colors {
     static float luminance(int argb) {
         return 0.299f * red(argb) + 0.587f * green(argb) + 0.114f * blue(argb);
     }
+
+    /** Rebuilds a colour from its luminance and its red and blue offsets from that luminance. */
+    static int fromLumaAndChroma(float luma, float redOffset, float blueOffset) {
+        float red = luma + redOffset;
+        float blue = luma + blueOffset;
+        float green = (luma - 0.299f * red - 0.114f * blue) / 0.587f;
+        return rgb(clamp(Math.round(red)), clamp(Math.round(green)), clamp(Math.round(blue)));
+    }
 }

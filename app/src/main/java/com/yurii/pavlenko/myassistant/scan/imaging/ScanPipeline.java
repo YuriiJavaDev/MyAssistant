@@ -28,6 +28,8 @@ public final class ScanPipeline {
 
     private static List<ImageFilter> buildFilters(ScanOptions options) {
         List<ImageFilter> filters = new ArrayList<>();
+        filters.add(new BorderCleaner());
+        filters.add(new ChromaDenoiser());
         if (options.getShadowStrength() > 0) {
             filters.add(new ShadowRemover(options.getShadowStrength()));
         }
