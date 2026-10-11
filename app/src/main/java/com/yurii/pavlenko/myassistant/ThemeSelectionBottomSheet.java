@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.yurii.pavlenko.myassistant.ui.theme.DisplayModeStore;
 
 /**
  * Bottom sheet dialog fragment for selecting the application theme mode (Day/Night/System).
@@ -42,11 +43,11 @@ public class ThemeSelectionBottomSheet extends BottomSheetDialogFragment {
         // Handle theme selection changes and apply the chosen mode
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId == R.id.radioLight) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                DisplayModeStore.set(requireContext(), AppCompatDelegate.MODE_NIGHT_NO);
             } else if (checkedId == R.id.radioDark) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                DisplayModeStore.set(requireContext(), AppCompatDelegate.MODE_NIGHT_YES);
             } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+                DisplayModeStore.set(requireContext(), AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             }
 
             // Dismiss the theme selection bottom sheet

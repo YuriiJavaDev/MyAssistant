@@ -14,7 +14,7 @@
         android:text="Reminders and Alarms"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#3E2773"
+        android:textColor="@color/text_color"
         android:paddingBottom="8dp"/>
 
     <!-- Scrollable container for switches so it never overflows landscape height -->
@@ -35,10 +35,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Voice Alert (TTS)"
-                android:textColor="#3E2773"
+                android:textColor="@color/text_color"
                 android:textSize="13sp"
                 android:layout_marginBottom="8dp"
-                app:thumbTint="#3E2773" />
+                app:thumbTint="@color/text_color" />
 
             <!-- Full-Screen Pop-up Switch -->
             <com.google.android.material.switchmaterial.SwitchMaterial
@@ -46,10 +46,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Full-Screen Pop-up"
-                android:textColor="#3E2773"
+                android:textColor="@color/text_color"
                 android:textSize="13sp"
                 android:layout_marginBottom="10dp"
-                app:thumbTint="#3E2773" />
+                app:thumbTint="@color/text_color" />
 
         </LinearLayout>
     </ScrollView>

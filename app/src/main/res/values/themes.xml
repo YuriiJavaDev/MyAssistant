@@ -1,19 +1,32 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme. The Material tokens come from colors.xml, which has a dark variant in values-night. -->
     <style name="Base.Theme.MyAssistant" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
         <item name="materialSwitchStyle">@style/MyAssistantMaterialSwitch</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">@bool/light_status_bar</item>
+
+        <item name="colorPrimary">@color/md_primary</item>
+        <item name="colorOnPrimary">@color/md_on_primary</item>
+        <item name="android:colorBackground">@color/md_background</item>
+        <item name="colorSurface">@color/md_surface</item>
+        <item name="colorSurfaceContainerLowest">@color/md_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/md_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/md_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/md_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/md_surface_container_highest</item>
+        <item name="colorOnSurface">@color/md_on_surface</item>
+        <item name="colorSurfaceVariant">@color/md_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/md_on_surface_variant</item>
+        <item name="colorOutline">@color/md_outline</item>
     </style>
 
     <style name="Theme.MyAssistant" parent="Base.Theme.MyAssistant" />
 
     <style name="CustomPopupMenuItemTextAppearance" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">#3E2773</item>
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
-    <style name="CustomPopupMenu" parent="ThemeOverlay.Material3.Light">
+    <style name="CustomPopupMenu" parent="ThemeOverlay.Material3">
         <item name="android:popupBackground">@drawable/bg_spinner_dropdown</item>
         <item name="popupMenuBackground">@drawable/bg_spinner_dropdown</item>
         <item name="android:itemTextAppearance">@style/CustomPopupMenuItemTextAppearance</item>
@@ -22,6 +35,6 @@
 
     <style name="MyAssistantMaterialSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="thumbTint">@color/colorPrimary</item>
-        <item name="trackTint">#D1C4E9</item>
+        <item name="trackTint">@color/switch_track</item>
     </style>
 </resources>

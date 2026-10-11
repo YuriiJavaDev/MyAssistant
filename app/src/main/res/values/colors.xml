@@ -3,9 +3,39 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Main colors of the project MyAssistant -->
+    <!-- Main colors of the project MyAssistant (values-night/colors.xml holds the dark counterparts) -->
     <color name="background">#FFF7E6</color>
     <color name="text_color">#3E2773</color>
     <color name="text_color_btn">#FA8C16</color>
     <color name="colorPrimary">#3E2773</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_muted">#9E9E9E</color>
+    <color name="outline">#B39DDB</color>
+    <color name="tab_selected">#E8DAFF</color>
+    <color name="switch_track">#D1C4E9</color>
+
+    <!-- Button gradient: purple in both themes, the orange label stays readable on it -->
+    <color name="button_start">#9D84E8</color>
+    <color name="button_end">#3E2773</color>
+    <color name="button_pressed_end">#6E5CA2</color>
+
+    <!-- Task and reminder states -->
+    <color name="status_overdue">#D32F2F</color>
+    <color name="status_important">#FA8C16</color>
+    <color name="status_ok">#00C853</color>
+
+    <!-- Material theme tokens; the light values are the Material 3 defaults, so the light theme is unchanged -->
+    <color name="md_primary">#6750A4</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_background">#FEF7FF</color>
+    <color name="md_surface">#FEF7FF</color>
+    <color name="md_surface_container_lowest">#FFFFFF</color>
+    <color name="md_surface_container_low">#F7F2FA</color>
+    <color name="md_surface_container">#F3EDF7</color>
+    <color name="md_surface_container_high">#ECE6F0</color>
+    <color name="md_surface_container_highest">#E6E0E9</color>
+    <color name="md_on_surface">#1D1B20</color>
+    <color name="md_surface_variant">#E7E0EC</color>
+    <color name="md_on_surface_variant">#49454F</color>
+    <color name="md_outline">#79747E</color>
 </resources>

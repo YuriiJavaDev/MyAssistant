@@ -11,11 +11,11 @@ public final class WebDavUtils {
     private WebDavUtils() {
     }
 
-    /** Appends the backup file name to the base WebDAV folder URL. */
-    public static String buildTargetUrl(String baseUrl) {
+    /** Appends a backup file name to the base WebDAV folder URL. */
+    public static String buildTargetUrl(String baseUrl, String fileName) {
         String trimmed = baseUrl.trim();
         String separator = trimmed.endsWith("/") ? "" : "/";
-        return trimmed + separator + DatabaseFileManager.BACKUP_FILE_NAME;
+        return trimmed + separator + fileName;
     }
 
     /** Applies HTTP Basic Authentication when credentials are provided. */

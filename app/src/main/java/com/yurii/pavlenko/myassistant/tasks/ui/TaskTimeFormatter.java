@@ -1,8 +1,11 @@
 package com.yurii.pavlenko.myassistant.tasks.ui;
 
-import android.graphics.Color;
+import android.content.Context;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
 import java.util.Locale;
@@ -73,14 +76,15 @@ public class TaskTimeFormatter {
             String text = getFormattedDeadlineText(deadline);
             deadlineTextView.setText(text);
 
+            Context context = deadlineTextView.getContext();
             if (task.isCompleted()) {
-                deadlineTextView.setTextColor(Color.parseColor("#9E9E9E")); // Сірий
+                deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.text_muted));
             } else {
                 long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), deadline);
                 if (daysLeft < 0) {
-                    deadlineTextView.setTextColor(Color.parseColor("#D32F2F")); // Червоний
+                    deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_overdue));
                 } else {
-                    deadlineTextView.setTextColor(Color.parseColor("#00C853")); // Зелений
+                    deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_ok));
                 }
             }
 

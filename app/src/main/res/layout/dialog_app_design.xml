@@ -13,7 +13,7 @@
         android:text="App Design"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#3E2773"
+        android:textColor="@color/text_color"
         android:paddingBottom="8dp"/>
 
     <RadioGroup
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MyAssistant 1"
-            android:textColor="#3E2773"
+            android:textColor="@color/text_color"
             android:textSize="13sp"
             android:paddingVertical="6dp"/>
 
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MyAssistant 2 (Coming soon)"
-            android:textColor="#3E2773"
+            android:textColor="@color/text_color"
             android:textSize="13sp"
             android:paddingVertical="6dp"/>
 
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MyAssistant 3 (Coming soon)"
-            android:textColor="#3E2773"
+            android:textColor="@color/text_color"
             android:textSize="13sp"
             android:paddingVertical="6dp"/>
 
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MyAssistant 4 (Coming soon)"
-            android:textColor="#3E2773"
+            android:textColor="@color/text_color"
             android:textSize="13sp"
             android:paddingVertical="6dp"/>
 
