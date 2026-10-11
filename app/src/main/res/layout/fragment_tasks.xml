@@ -53,7 +53,7 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="10dp"
                 android:src="@android:drawable/arrow_down_float"
-                app:tint="#3E2773" />
+                app:tint="@color/text_color" />
 
             <Spinner
                 android:id="@+id/filterSpinner"
@@ -82,7 +82,7 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="10dp"
                 android:src="@android:drawable/arrow_down_float"
-                app:tint="#3E2773" />
+                app:tint="@color/text_color" />
 
             <Spinner
                 android:id="@+id/sortSpinner"

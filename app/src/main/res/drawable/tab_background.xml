@@ -8,7 +8,7 @@
 
             <shape android:shape="rectangle">
                 <corners android:radius="18dp" />
-                <solid android:color="#E8DAFF" />
+                <solid android:color="@color/tab_selected" />
             </shape>
 
         </inset>

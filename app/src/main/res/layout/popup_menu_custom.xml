@@ -34,7 +34,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#B39DDB"
+        android:background="@color/outline"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="3dp"
