@@ -98,11 +98,16 @@ final class ScanAdjustPanel {
         reflectingState = true;
         binding.filterChips.check(chipOfFilter(options.getFilter()));
         binding.paperSpinner.setSelection(options.getPaperFormat().ordinal());
-        binding.shadowsSlider.setValue((float) options.getShadowStrength() * 100f);
-        binding.brightnessSlider.setValue((float) options.getBrightness() * 100f);
-        binding.contrastSlider.setValue((float) options.getContrast() * 100f);
+        binding.shadowsSlider.setValue(toPercent(options.getShadowStrength()));
+        binding.brightnessSlider.setValue(toPercent(options.getBrightness()));
+        binding.contrastSlider.setValue(toPercent(options.getContrast()));
         binding.sharpenSwitch.setChecked(options.isSharpen());
         reflectingState = false;
+    }
+
+    /** Slider values must lie exactly on its whole-percent steps, or the slider throws when drawn. */
+    private static float toPercent(double fraction) {
+        return Math.round(fraction * 100);
     }
 
     private static ScanFilter filterOfChip(int chipId) {
