@@ -22,6 +22,32 @@ final class SyntheticPhoto {
         return new Quad(xs, ys);
     }
 
+    /** Same sheet with a deep shadow in the upper-left corner, a diagonal falloff and sensor noise on every channel. */
+    static PixelImage createHarsh() {
+        PixelImage image = create();
+        java.util.Random random = new java.util.Random(42);
+        for (int y = 0; y < HEIGHT; y++) {
+            for (int x = 0; x < WIDTH; x++) {
+                double[] uv = pageCoordinates(x + 0.5, y + 0.5);
+                if (uv == null) {
+                    continue;
+                }
+                double corner = Math.exp(-(uv[0] * uv[0] + uv[1] * uv[1]) / 0.25);
+                double factor = 1 - 0.55 * corner;
+                int argb = image.get(x, y);
+                image.set(x, y, Colors.rgb(
+                        noisy(Colors.red(argb) * factor, random),
+                        noisy(Colors.green(argb) * factor, random),
+                        noisy(Colors.blue(argb) * factor, random)));
+            }
+        }
+        return image;
+    }
+
+    private static int noisy(double value, java.util.Random random) {
+        return Colors.clamp((int) Math.round(value + random.nextGaussian() * 8));
+    }
+
     static PixelImage create() {
         PixelImage image = PixelImage.blank(WIDTH, HEIGHT, Colors.rgb(60, 50, 40));
         for (int y = 0; y < HEIGHT; y++) {

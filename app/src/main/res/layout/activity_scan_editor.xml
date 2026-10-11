@@ -144,19 +144,72 @@
             </FrameLayout>
         </LinearLayout>
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/shadowsSwitch"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tuneButton"
+            style="@style/Widget.MyAssistant.ScanButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/scan_remove_shadows"
-            android:textColor="@color/text_color" />
+            android:text="@string/scan_tune" />
 
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/sharpenSwitch"
+        <LinearLayout
+            android:id="@+id/tunePanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/scan_sharpen"
-            android:textColor="@color/text_color" />
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_shadows"
+                android:textColor="@color/text_color" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/shadowsSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:value="100"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_brightness"
+                android:textColor="@color/text_color" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/brightnessSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:value="0"
+                android:valueFrom="-100"
+                android:valueTo="100" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_contrast"
+                android:textColor="@color/text_color" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/contrastSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:value="0"
+                android:valueFrom="-100"
+                android:valueTo="100" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sharpenSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_sharpen"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

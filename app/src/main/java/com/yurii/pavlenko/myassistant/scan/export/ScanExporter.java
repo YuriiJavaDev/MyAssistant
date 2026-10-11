@@ -7,19 +7,24 @@ import android.os.Looper;
 
 import com.yurii.pavlenko.myassistant.scan.files.FileCopier;
 import com.yurii.pavlenko.myassistant.scan.files.ScanCache;
-import com.yurii.pavlenko.myassistant.scan.model.ScanItem;
+import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Prepares a scan as a PDF or JPEG file in the shareable cache, off the main thread. */
+/**
+ * Prepares pages as files in the shareable cache, off the main thread: one PDF with all pages,
+ * or one JPEG per page (named title_1.jpg, title_2.jpg ... when there are several).
+ */
 public class ScanExporter {
 
     public interface Callback {
-        void onReady(File file);
+        void onReady(List<File> files);
 
         void onFailed(IOException error);
     }
@@ -33,42 +38,49 @@ public class ScanExporter {
     }
 
     /** The callback is delivered on the main thread. */
-    public void export(ScanItem item, ExportFormat format, Callback callback) {
+    public void export(String title, List<ScanPage> pages, ExportFormat format, Callback callback) {
         executor.execute(() -> {
             try {
-                File file = createFile(item, format);
-                mainHandler.post(() -> callback.onReady(file));
+                List<File> files = createFiles(title, pages, format);
+                mainHandler.post(() -> callback.onReady(files));
             } catch (IOException e) {
                 mainHandler.post(() -> callback.onFailed(e));
             }
         });
     }
 
-    /** Same as export, and additionally copies the file to a location the user picked in the system file dialog. */
-    public void exportToUri(ScanItem item, ExportFormat format, Uri target, Callback callback) {
+    /** Same as export, and additionally copies the first resulting file to a location picked in the system file dialog. */
+    public void exportToUri(String title, List<ScanPage> pages, ExportFormat format, Uri target, Callback callback) {
         executor.execute(() -> {
             try {
-                File file = createFile(item, format);
-                FileCopier.copy(context.getContentResolver(), file, target);
-                mainHandler.post(() -> callback.onReady(file));
+                List<File> files = createFiles(title, pages, format);
+                FileCopier.copy(context.getContentResolver(), files.get(0), target);
+                mainHandler.post(() -> callback.onReady(files));
             } catch (IOException e) {
                 mainHandler.post(() -> callback.onFailed(e));
             }
         });
     }
 
-    public static String suggestedFileName(ScanItem item, ExportFormat format) {
-        return safeFileName(item.getTitle()) + format.getExtension();
+    public static String suggestedFileName(String title, ExportFormat format) {
+        return safeFileName(title) + format.getExtension();
     }
 
-    private File createFile(ScanItem item, ExportFormat format) throws IOException {
-        File target = new File(ScanCache.freshShareDirectory(context), suggestedFileName(item, format));
+    private List<File> createFiles(String title, List<ScanPage> pages, ExportFormat format) throws IOException {
+        File directory = ScanCache.freshShareDirectory(context);
         if (format == ExportFormat.PDF) {
-            PdfWriter.write(Collections.singletonList(item), target);
-        } else {
-            FileCopier.copy(new File(item.getImagePath()), target);
+            File pdf = new File(directory, suggestedFileName(title, format));
+            PdfWriter.write(pages, pdf);
+            return Collections.singletonList(pdf);
         }
-        return target;
+        List<File> images = new ArrayList<>();
+        for (int i = 0; i < pages.size(); i++) {
+            String suffix = pages.size() == 1 ? "" : "_" + (i + 1);
+            File image = new File(directory, safeFileName(title) + suffix + format.getExtension());
+            FileCopier.copy(new File(pages.get(i).getImagePath()), image);
+            images.add(image);
+        }
+        return images;
     }
 
     /** Keeps letters, digits, dots, dashes and spaces; anything else would be rejected by some file systems. */

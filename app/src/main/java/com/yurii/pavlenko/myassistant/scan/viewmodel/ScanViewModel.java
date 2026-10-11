@@ -6,42 +6,50 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.yurii.pavlenko.myassistant.scan.model.ScanItem;
+import com.yurii.pavlenko.myassistant.scan.model.ScanDocument;
+import com.yurii.pavlenko.myassistant.scan.model.ScanDocumentSummary;
+import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 import com.yurii.pavlenko.myassistant.scan.repository.ScanRepository;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 /** State of the scan list screen. */
 public class ScanViewModel extends AndroidViewModel {
 
     private final ScanRepository repository;
-    private ScanItem pendingSave;
+    private ScanDocument pendingSave;
 
     public ScanViewModel(@NonNull Application application) {
         super(application);
         repository = new ScanRepository(application);
     }
 
-    public LiveData<List<ScanItem>> getScans() {
-        return repository.getAll();
+    public LiveData<List<ScanDocumentSummary>> getDocuments() {
+        return repository.getDocuments();
     }
 
-    public void rename(ScanItem item, String title) {
-        repository.rename(item, title);
+    /** The callback runs on a background thread. */
+    public void loadPages(ScanDocument document, Consumer<List<ScanPage>> onLoaded) {
+        repository.loadPages(document.getId(), onLoaded);
     }
 
-    public void delete(ScanItem item) {
-        repository.delete(item);
+    public void rename(ScanDocument document, String title) {
+        repository.renameDocument(document.getId(), title);
     }
 
-    /** Remembers which scan the system file dialog is about to save, since the dialog returns only a location. */
-    public void setPendingSave(ScanItem item) {
-        pendingSave = item;
+    public void delete(ScanDocument document) {
+        repository.deleteDocument(document);
     }
 
-    public ScanItem takePendingSave() {
-        ScanItem item = pendingSave;
+    /** Remembers which document the system file dialog is about to save, since the dialog returns only a location. */
+    public void setPendingSave(ScanDocument document) {
+        pendingSave = document;
+    }
+
+    public ScanDocument takePendingSave() {
+        ScanDocument document = pendingSave;
         pendingSave = null;
-        return item;
+        return document;
     }
 }

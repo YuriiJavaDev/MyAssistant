@@ -8,31 +8,34 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.ItemScanBinding;
-import com.yurii.pavlenko.myassistant.scan.model.ScanItem;
+import com.yurii.pavlenko.myassistant.scan.model.ScanDocumentSummary;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.function.Consumer;
 
-public class ScanListAdapter extends ListAdapter<ScanItem, ScanListAdapter.ScanViewHolder> {
+public class ScanListAdapter extends ListAdapter<ScanDocumentSummary, ScanListAdapter.DocumentViewHolder> {
 
-    private static final DiffUtil.ItemCallback<ScanItem> DIFF = new DiffUtil.ItemCallback<ScanItem>() {
+    private static final DiffUtil.ItemCallback<ScanDocumentSummary> DIFF = new DiffUtil.ItemCallback<ScanDocumentSummary>() {
         @Override
-        public boolean areItemsTheSame(@NonNull ScanItem oldItem, @NonNull ScanItem newItem) {
-            return oldItem.getId() == newItem.getId();
+        public boolean areItemsTheSame(@NonNull ScanDocumentSummary oldItem, @NonNull ScanDocumentSummary newItem) {
+            return oldItem.document.getId() == newItem.document.getId();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull ScanItem oldItem, @NonNull ScanItem newItem) {
-            return oldItem.getTitle().equals(newItem.getTitle());
+        public boolean areContentsTheSame(@NonNull ScanDocumentSummary oldItem, @NonNull ScanDocumentSummary newItem) {
+            return oldItem.document.getTitle().equals(newItem.document.getTitle())
+                    && oldItem.pageCount == newItem.pageCount
+                    && String.valueOf(oldItem.coverPath).equals(String.valueOf(newItem.coverPath));
         }
     };
 
     private final ScanThumbnailLoader thumbnailLoader;
-    private final Consumer<ScanItem> onItemClick;
+    private final Consumer<ScanDocumentSummary> onItemClick;
 
-    public ScanListAdapter(ScanThumbnailLoader thumbnailLoader, Consumer<ScanItem> onItemClick) {
+    public ScanListAdapter(ScanThumbnailLoader thumbnailLoader, Consumer<ScanDocumentSummary> onItemClick) {
         super(DIFF);
         this.thumbnailLoader = thumbnailLoader;
         this.onItemClick = onItemClick;
@@ -40,31 +43,30 @@ public class ScanListAdapter extends ListAdapter<ScanItem, ScanListAdapter.ScanV
 
     @NonNull
     @Override
-    public ScanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ScanViewHolder(ItemScanBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
+    public DocumentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new DocumentViewHolder(ItemScanBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ScanViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DocumentViewHolder holder, int position) {
         holder.bind(getItem(position));
     }
 
-    class ScanViewHolder extends RecyclerView.ViewHolder {
+    class DocumentViewHolder extends RecyclerView.ViewHolder {
 
         private final ItemScanBinding binding;
 
-        ScanViewHolder(ItemScanBinding binding) {
+        DocumentViewHolder(ItemScanBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
 
-        void bind(ScanItem item) {
-            binding.scanTitle.setText(item.getTitle());
-            binding.scanDetails.setText(String.format("%s · %s · %d×%d",
-                    item.resolvePaperFormat().getLabel(),
-                    DateFormat.getDateInstance(DateFormat.MEDIUM).format(new Date(item.getCreatedAt())),
-                    item.getWidth(), item.getHeight()));
-            thumbnailLoader.load(binding.scanThumbnail, item.getImagePath());
+        void bind(ScanDocumentSummary item) {
+            binding.scanTitle.setText(item.document.getTitle());
+            binding.scanDetails.setText(String.format("%s · %s",
+                    binding.getRoot().getResources().getQuantityString(R.plurals.scan_pages, item.pageCount, item.pageCount),
+                    DateFormat.getDateInstance(DateFormat.MEDIUM).format(new Date(item.document.getCreatedAt()))));
+            thumbnailLoader.load(binding.scanThumbnail, item.coverPath);
             binding.getRoot().setOnClickListener(v -> onItemClick.accept(item));
         }
     }

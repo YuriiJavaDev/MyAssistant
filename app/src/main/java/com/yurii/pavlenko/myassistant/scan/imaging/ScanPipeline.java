@@ -28,31 +28,31 @@ public final class ScanPipeline {
 
     private static List<ImageFilter> buildFilters(ScanOptions options) {
         List<ImageFilter> filters = new ArrayList<>();
-        if (options.isRemoveShadows()) {
-            filters.add(new ShadowRemover());
+        if (options.getShadowStrength() > 0) {
+            filters.add(new ShadowRemover(options.getShadowStrength()));
         }
         filters.add(new ContrastStretch());
+        filters.add(new PaperWhitener());
 
-        switch (options.getFilter()) {
-            case BLACK_WHITE:
-                filters.add(new GrayscaleFilter());
-                filters.add(new Binarizer());
-                break;
-            case GRAYSCALE:
-                filters.add(new GrayscaleFilter());
-                addSharpenIfRequested(filters, options);
-                break;
-            case COLOR:
-            default:
-                addSharpenIfRequested(filters, options);
-                break;
+        if (options.getFilter() == ScanFilter.BLACK_WHITE) {
+            addToneIfChanged(filters, options);
+            filters.add(new GrayscaleFilter());
+            filters.add(new Binarizer());
+            return filters;
         }
+        if (options.getFilter() == ScanFilter.GRAYSCALE) {
+            filters.add(new GrayscaleFilter());
+        }
+        if (options.isSharpen()) {
+            filters.add(new Sharpener());
+        }
+        addToneIfChanged(filters, options);
         return filters;
     }
 
-    private static void addSharpenIfRequested(List<ImageFilter> filters, ScanOptions options) {
-        if (options.isSharpen()) {
-            filters.add(new Sharpener());
+    private static void addToneIfChanged(List<ImageFilter> filters, ScanOptions options) {
+        if (options.getBrightness() != 0 || options.getContrast() != 0) {
+            filters.add(new ToneAdjust(options.getBrightness(), options.getContrast()));
         }
     }
 }

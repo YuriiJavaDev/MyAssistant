@@ -21,9 +21,6 @@ import com.yurii.pavlenko.myassistant.scan.imaging.ScanResult;
 import com.yurii.pavlenko.myassistant.scan.repository.ScanRepository;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -35,7 +32,7 @@ public class ScanEditorViewModel extends AndroidViewModel {
 
     public enum Stage {LOADING, CROP, ADJUST}
 
-    private static final int SOURCE_MAX_SIDE = 2400;
+    private static final int SOURCE_MAX_SIDE = 3000;
     private static final int PREVIEW_MAX_SIDE = 1000;
 
     private final ScanRepository repository;
@@ -49,13 +46,14 @@ public class ScanEditorViewModel extends AndroidViewModel {
     private final MutableLiveData<Bitmap> preview = new MutableLiveData<>();
     private final MutableLiveData<Boolean> busy = new MutableLiveData<>(false);
     private final MutableLiveData<Integer> errorMessage = new MutableLiveData<>();
-    private final MutableLiveData<Boolean> saved = new MutableLiveData<>(false);
+    private final MutableLiveData<Long> savedDocumentId = new MutableLiveData<>();
 
     private final AtomicBoolean saving = new AtomicBoolean();
 
     private PixelImage fullSource;
     private PixelImage previewSource;
-    private boolean loadStarted;
+    private volatile boolean loadStarted;
+    private volatile long documentId = ScanRepository.NEW_DOCUMENT;
 
     public ScanEditorViewModel(@NonNull Application application) {
         super(application);
@@ -69,7 +67,30 @@ public class ScanEditorViewModel extends AndroidViewModel {
     public LiveData<Bitmap> getPreview() { return preview; }
     public LiveData<Boolean> isBusy() { return busy; }
     public LiveData<Integer> getErrorMessage() { return errorMessage; }
-    public LiveData<Boolean> isSaved() { return saved; }
+    public LiveData<Long> getSavedDocumentId() { return savedDocumentId; }
+
+    /** Pages are added to this document; until it is set (or the first page is saved) a new document is created. */
+    public void setDocumentId(long documentId) {
+        if (!loadStarted) {
+            this.documentId = documentId;
+        }
+    }
+
+    /** Starts over with another photo of the same document, keeping the chosen look. */
+    public void restart(Uri photo) {
+        loadStarted = false;
+        saving.set(false);
+        savedDocumentId.setValue(null);
+        preview.setValue(null);
+        sourceBitmap.setValue(null);
+        stage.setValue(Stage.LOADING);
+        load(photo);
+    }
+
+    /** Called once the "page saved" choice has been handled, so it is not shown again after a recreation. */
+    public void consumeSaved() {
+        savedDocumentId.setValue(null);
+    }
 
     /** Loads the photo once; a recreated activity keeps the already loaded state. */
     public void load(Uri photo) {
@@ -135,8 +156,11 @@ public class ScanEditorViewModel extends AndroidViewModel {
         executor.execute(() -> {
             try {
                 ScanResult result = ScanPipeline.process(fullSource, quad, chosen, SOURCE_MAX_SIDE);
-                repository.save(BitmapCodec.toBitmap(result.getImage()), defaultTitle(), result.getPaperFormat(),
-                        item -> saved.postValue(true),
+                repository.savePage(documentId, BitmapCodec.toBitmap(result.getImage()), result.getPaperFormat(),
+                        savedTo -> {
+                            documentId = savedTo;
+                            savedDocumentId.postValue(savedTo);
+                        },
                         error -> failSaving());
             } catch (OutOfMemoryError e) {
                 failSaving();
@@ -175,9 +199,5 @@ public class ScanEditorViewModel extends AndroidViewModel {
 
     private void fail(@StringRes int message) {
         errorMessage.postValue(message);
-    }
-
-    private static String defaultTitle() {
-        return "Scan " + new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(new Date());
     }
 }

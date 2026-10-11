@@ -6,7 +6,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.pdf.PdfDocument;
 
-import com.yurii.pavlenko.myassistant.scan.model.ScanItem;
+import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,12 +22,12 @@ final class PdfWriter {
     private PdfWriter() {
     }
 
-    static void write(List<ScanItem> items, File target) throws IOException {
+    static void write(List<ScanPage> pages, File target) throws IOException {
         PdfDocument document = new PdfDocument();
         Paint smoothing = new Paint(Paint.FILTER_BITMAP_FLAG);
         try {
-            for (int i = 0; i < items.size(); i++) {
-                addPage(document, items.get(i), i + 1, smoothing);
+            for (int i = 0; i < pages.size(); i++) {
+                addPage(document, pages.get(i), i + 1, smoothing);
             }
             try (FileOutputStream out = new FileOutputStream(target)) {
                 document.writeTo(out);
@@ -37,23 +37,23 @@ final class PdfWriter {
         }
     }
 
-    private static void addPage(PdfDocument document, ScanItem item, int pageNumber, Paint smoothing) throws IOException {
-        Bitmap bitmap = decodeForPdf(item);
+    private static void addPage(PdfDocument document, ScanPage page, int pageNumber, Paint smoothing) throws IOException {
+        Bitmap bitmap = decodeForPdf(page);
         try {
-            int[] page = item.resolvePaperFormat().pdfPageSize(bitmap.getWidth(), bitmap.getHeight());
-            PdfDocument.PageInfo info = new PdfDocument.PageInfo.Builder(page[0], page[1], pageNumber).create();
+            int[] size = page.resolvePaperFormat().pdfPageSize(bitmap.getWidth(), bitmap.getHeight());
+            PdfDocument.PageInfo info = new PdfDocument.PageInfo.Builder(size[0], size[1], pageNumber).create();
             PdfDocument.Page pdfPage = document.startPage(info);
-            pdfPage.getCanvas().drawBitmap(bitmap, null, new Rect(0, 0, page[0], page[1]), smoothing);
+            pdfPage.getCanvas().drawBitmap(bitmap, null, new Rect(0, 0, size[0], size[1]), smoothing);
             document.finishPage(pdfPage);
         } finally {
             bitmap.recycle();
         }
     }
 
-    private static Bitmap decodeForPdf(ScanItem item) throws IOException {
-        Bitmap bitmap = BitmapFactory.decodeFile(item.getImagePath());
+    private static Bitmap decodeForPdf(ScanPage page) throws IOException {
+        Bitmap bitmap = BitmapFactory.decodeFile(page.getImagePath());
         if (bitmap == null) {
-            throw new IOException("Scan file is missing: " + item.getImagePath());
+            throw new IOException("Scan file is missing: " + page.getImagePath());
         }
         int longSide = Math.max(bitmap.getWidth(), bitmap.getHeight());
         if (longSide <= MAX_LONG_SIDE) {

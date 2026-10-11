@@ -3,34 +3,48 @@ package com.yurii.pavlenko.myassistant.scan.imaging;
 /**
  * Evens out uneven lighting and shadows. The paper brightness is estimated on a coarse grid
  * and every pixel is scaled by one gain for all three channels, so colours keep their hue.
+ * The estimate takes a bright percentile per cell and then a morphological closing, which fills in
+ * dark text and barcodes without pulling the estimate towards brighter areas across a shadow edge.
  */
 public final class ShadowRemover implements ImageFilter {
 
-    private static final int GRID_CELLS_ON_LONG_SIDE = 120;
-    private static final double BRIGHT_PERCENTILE = 0.85;
-    private static final int HISTOGRAM_BINS = 64;
-    private static final int TEXT_BRIDGE_CELLS = 5;
+    private static final int GRID_CELLS_ON_LONG_SIDE = 200;
+    private static final int TEXT_BRIDGE_DIVISOR = 60;
+    private static final double BRIGHT_PERCENTILE = 0.90;
+    private static final int HISTOGRAM_BINS = 128;
     private static final float MAX_GAIN = 4f;
     private static final float MIN_BACKGROUND = 32f;
+
+    private final double strength;
+
+    /** Strength 0 leaves the image alone, 1 removes the shadow completely, values between blend the two. */
+    public ShadowRemover(double strength) {
+        this.strength = strength;
+    }
 
     @Override
     public PixelImage apply(PixelImage source) {
         int width = source.getWidth();
         int height = source.getHeight();
-        int cell = Math.max(4, Math.max(width, height) / GRID_CELLS_ON_LONG_SIDE);
+        int longSide = Math.max(width, height);
+        int cell = Math.max(4, longSide / GRID_CELLS_ON_LONG_SIDE);
         int gridWidth = (width + cell - 1) / cell;
         int gridHeight = (height + cell - 1) / cell;
 
         float[] background = estimateBackground(source.luminance(), width, height, cell, gridWidth, gridHeight);
-        background = MaxFilter.apply(background, gridWidth, gridHeight, TEXT_BRIDGE_CELLS);
-        background = BoxBlur.apply(background, gridWidth, gridHeight, TEXT_BRIDGE_CELLS);
+        int bridgeCells = Math.max(1, longSide / TEXT_BRIDGE_DIVISOR / cell);
+        background = GridMorphology.dilate(background, gridWidth, gridHeight, bridgeCells);
+        background = GridMorphology.erode(background, gridWidth, gridHeight, bridgeCells);
+        background = BoxBlur.apply(background, gridWidth, gridHeight, 1);
 
-        int[] result = new int[source.getPixels().length];
+        int[] pixels = source.getPixels();
+        int[] result = new int[pixels.length];
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
                 float paper = Math.max(MIN_BACKGROUND, sampleGrid(background, gridWidth, gridHeight, (x + 0.5f) / cell - 0.5f, (y + 0.5f) / cell - 0.5f));
-                float gain = Math.min(MAX_GAIN, 255f / paper);
-                int argb = source.getPixels()[y * width + x];
+                float fullGain = Math.min(MAX_GAIN, 255f / paper);
+                float gain = (float) (1 + (fullGain - 1) * strength);
+                int argb = pixels[y * width + x];
                 result[y * width + x] = Colors.rgb(
                         Colors.clamp(Math.round(Colors.red(argb) * gain)),
                         Colors.clamp(Math.round(Colors.green(argb) * gain)),

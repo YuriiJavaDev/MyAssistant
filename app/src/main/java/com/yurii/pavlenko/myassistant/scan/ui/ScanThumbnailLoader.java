@@ -7,6 +7,8 @@ import android.os.Looper;
 import android.util.LruCache;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -25,8 +27,12 @@ public class ScanThumbnailLoader {
     private final ExecutorService executor = Executors.newFixedThreadPool(2);
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
 
-    public void load(ImageView view, String path) {
+    public void load(ImageView view, @Nullable String path) {
         view.setTag(path);
+        if (path == null) {
+            view.setImageDrawable(null);
+            return;
+        }
         Bitmap cached = cache.get(path);
         if (cached != null) {
             view.setImageBitmap(cached);

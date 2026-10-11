@@ -66,6 +66,44 @@ public class DocumentScanTest {
     }
 
     @Test
+    public void deepCornerShadowAndNoiseBecomeEvenWhitePaper() {
+        PixelImage photo = SyntheticPhoto.createHarsh();
+        PixelImage image = ScanPipeline.process(photo, SyntheticPhoto.pageCorners(), ScanOptions.defaults(), MAX_SIDE).getImage();
+
+        double[][] spots = {{0.12, 0.06}, {0.5, 0.06}, {0.9, 0.06}, {0.05, 0.5}, {0.5, 0.97}, {0.95, 0.97}};
+        for (double[] spot : spots) {
+            double[] stats = patchStats(image, spot[0], spot[1]);
+            assertTrue("paper mean at " + spot[0] + "," + spot[1] + " was " + stats[0], stats[0] > 250);
+            assertTrue("paper noise at " + spot[0] + "," + spot[1] + " was " + stats[1], stats[1] < 2.5);
+        }
+    }
+
+    @Test
+    public void brightnessAndContrastMoveTheTones() {
+        ScanOptions darker = ScanOptions.defaults().withBrightness(-0.5);
+        ScanOptions flat = ScanOptions.defaults().withContrast(-0.5);
+
+        double paperDarker = patchStats(scan(darker).getImage(), 0.5, 0.97)[0];
+        double paperNormal = patchStats(scan(ScanOptions.defaults()).getImage(), 0.5, 0.97)[0];
+        int inkNormal = darkestInk(scan(ScanOptions.defaults()).getImage());
+        int inkFlat = darkestInk(scan(flat).getImage());
+
+        assertTrue("negative brightness darkens paper", paperDarker < paperNormal - 20);
+        assertTrue("negative contrast lifts ink", inkFlat > inkNormal + 15);
+    }
+
+    @Test
+    public void zeroShadowStrengthKeepsTheShadow() {
+        PixelImage photo = SyntheticPhoto.createHarsh();
+        ScanOptions none = ScanOptions.defaults().withShadowStrength(0);
+        PixelImage image = ScanPipeline.process(photo, SyntheticPhoto.pageCorners(), none, MAX_SIDE).getImage();
+
+        double corner = patchStats(image, 0.12, 0.06)[0];
+        double far = patchStats(image, 0.9, 0.97)[0];
+        assertTrue("shadow stays visible: " + corner + " vs " + far, corner < far - 40);
+    }
+
+    @Test
     public void textStaysDark() {
         PixelImage image = scan(ScanFilter.COLOR).getImage();
 
@@ -173,8 +211,41 @@ public class DocumentScanTest {
     }
 
     private static ScanResult scan(ScanFilter filter) {
-        ScanOptions options = ScanOptions.defaults().withFilter(filter);
+        return scan(ScanOptions.defaults().withFilter(filter));
+    }
+
+    private static ScanResult scan(ScanOptions options) {
         return ScanPipeline.process(SyntheticPhoto.create(), SyntheticPhoto.pageCorners(), options, MAX_SIDE);
+    }
+
+    private static int darkestInk(PixelImage image) {
+        int darkest = 255;
+        for (int x = (int) (0.12 * image.getWidth()); x < 0.4 * image.getWidth(); x++) {
+            for (int y = (int) (0.28 * image.getHeight()); y < 0.5 * image.getHeight(); y++) {
+                darkest = Math.min(darkest, (int) Colors.luminance(image.get(x, y)));
+            }
+        }
+        return darkest;
+    }
+
+    /** Mean and standard deviation of luminance in a small patch around a page-relative position. */
+    private static double[] patchStats(PixelImage image, double u, double v) {
+        int cx = (int) (u * (image.getWidth() - 1));
+        int cy = (int) (v * (image.getHeight() - 1));
+        int radius = 12;
+        double sum = 0;
+        double sumSquares = 0;
+        int count = 0;
+        for (int y = Math.max(0, cy - radius); y <= Math.min(image.getHeight() - 1, cy + radius); y++) {
+            for (int x = Math.max(0, cx - radius); x <= Math.min(image.getWidth() - 1, cx + radius); x++) {
+                double value = Colors.luminance(image.get(x, y));
+                sum += value;
+                sumSquares += value * value;
+                count++;
+            }
+        }
+        double mean = sum / count;
+        return new double[]{mean, Math.sqrt(Math.max(0, sumSquares / count - mean * mean))};
     }
 
     /** Pixel of the scan at page-relative position; paper without text is expected there. */

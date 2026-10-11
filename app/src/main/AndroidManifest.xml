@@ -42,6 +42,10 @@
             android:turnScreenOn="true" />
 
         <activity
+            android:name=".scan.ui.ScanDocumentActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".scan.ui.ScanEditorActivity"
             android:exported="false"
             android:screenOrientation="portrait"

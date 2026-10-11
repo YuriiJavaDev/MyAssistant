@@ -1,9 +1,12 @@
 package com.yurii.pavlenko.myassistant.scan.imaging;
 
-/** Unsharp mask: adds back the difference between each pixel and its blurred surroundings. */
+/**
+ * Unsharp mask on luminance only: edges get crisper while colour noise is not amplified,
+ * and a single float buffer is enough, which matters for full-size photos.
+ */
 public final class Sharpener implements ImageFilter {
 
-    private static final float AMOUNT = 0.8f;
+    private static final float AMOUNT = 0.6f;
     private static final int PIXELS_PER_RADIUS_STEP = 1200;
 
     @Override
@@ -13,26 +16,18 @@ public final class Sharpener implements ImageFilter {
         int radius = Math.max(1, Math.max(width, height) / PIXELS_PER_RADIUS_STEP);
         int[] pixels = source.getPixels();
 
-        float[] red = sharpenChannel(pixels, width, height, radius, 16);
-        float[] green = sharpenChannel(pixels, width, height, radius, 8);
-        float[] blue = sharpenChannel(pixels, width, height, radius, 0);
+        float[] luminance = source.luminance();
+        float[] blurred = BoxBlur.apply(luminance, width, height, radius);
 
         int[] result = new int[pixels.length];
         for (int i = 0; i < pixels.length; i++) {
-            result[i] = Colors.rgb(Colors.clamp(Math.round(red[i])), Colors.clamp(Math.round(green[i])), Colors.clamp(Math.round(blue[i])));
+            int boost = Math.round(AMOUNT * (luminance[i] - blurred[i]));
+            int argb = pixels[i];
+            result[i] = Colors.rgb(
+                    Colors.clamp(Colors.red(argb) + boost),
+                    Colors.clamp(Colors.green(argb) + boost),
+                    Colors.clamp(Colors.blue(argb) + boost));
         }
         return new PixelImage(width, height, result);
-    }
-
-    private static float[] sharpenChannel(int[] pixels, int width, int height, int radius, int shift) {
-        float[] channel = new float[pixels.length];
-        for (int i = 0; i < pixels.length; i++) {
-            channel[i] = (pixels[i] >> shift) & 0xFF;
-        }
-        float[] blurred = BoxBlur.apply(channel, width, height, radius);
-        for (int i = 0; i < channel.length; i++) {
-            channel[i] += AMOUNT * (channel[i] - blurred[i]);
-        }
-        return channel;
     }
 }

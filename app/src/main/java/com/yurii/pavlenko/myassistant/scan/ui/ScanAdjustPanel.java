@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter;
 
 import androidx.lifecycle.LifecycleOwner;
 
+import com.google.android.material.slider.Slider;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.ActivityScanEditorBinding;
 import com.yurii.pavlenko.myassistant.scan.imaging.PaperFormat;
@@ -13,7 +14,9 @@ import com.yurii.pavlenko.myassistant.scan.imaging.ScanFilter;
 import com.yurii.pavlenko.myassistant.scan.imaging.ScanOptions;
 import com.yurii.pavlenko.myassistant.scan.viewmodel.ScanEditorViewModel;
 
-/** Connects the second editing step's controls (filter, paper, switches, rotate, save) with the view model. */
+import java.util.function.BiFunction;
+
+/** Connects the second editing step's controls (filter, paper, tuning sliders, rotate, save) with the view model. */
 final class ScanAdjustPanel {
 
     private final ActivityScanEditorBinding binding;
@@ -29,11 +32,24 @@ final class ScanAdjustPanel {
     void bind(LifecycleOwner owner) {
         setupFilterChips();
         setupPaperSpinner();
-        setupSwitches();
+        setupSlider(binding.shadowsSlider, ScanOptions::withShadowStrength, 100f);
+        setupSlider(binding.brightnessSlider, ScanOptions::withBrightness, 100f);
+        setupSlider(binding.contrastSlider, ScanOptions::withContrast, 100f);
+        binding.sharpenSwitch.setOnCheckedChangeListener((button, checked) -> {
+            if (!reflectingState) {
+                viewModel.updateOptions(options -> options.withSharpen(checked));
+            }
+        });
+        binding.tuneButton.setOnClickListener(v -> toggleTunePanel());
         binding.rotateButton.setOnClickListener(v -> viewModel.updateOptions(ScanOptions::rotatedClockwise));
         binding.backButton.setOnClickListener(v -> viewModel.backToCrop());
         binding.saveButton.setOnClickListener(v -> viewModel.save());
         viewModel.getOptions().observe(owner, this::reflect);
+    }
+
+    private void toggleTunePanel() {
+        boolean show = binding.tunePanel.getVisibility() != View.VISIBLE;
+        binding.tunePanel.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
     private void setupFilterChips() {
@@ -68,15 +84,11 @@ final class ScanAdjustPanel {
         });
     }
 
-    private void setupSwitches() {
-        binding.shadowsSwitch.setOnCheckedChangeListener((button, checked) -> {
-            if (!reflectingState) {
-                viewModel.updateOptions(options -> options.withRemoveShadows(checked));
-            }
-        });
-        binding.sharpenSwitch.setOnCheckedChangeListener((button, checked) -> {
-            if (!reflectingState) {
-                viewModel.updateOptions(options -> options.withSharpen(checked));
+    /** Slider positions are whole percent; the option setters take fractions, hence the divisor. */
+    private void setupSlider(Slider slider, BiFunction<ScanOptions, Double, ScanOptions> setter, float divisor) {
+        slider.addOnChangeListener((s, value, fromUser) -> {
+            if (fromUser && !reflectingState) {
+                viewModel.updateOptions(options -> setter.apply(options, (double) (value / divisor)));
             }
         });
     }
@@ -86,7 +98,9 @@ final class ScanAdjustPanel {
         reflectingState = true;
         binding.filterChips.check(chipOfFilter(options.getFilter()));
         binding.paperSpinner.setSelection(options.getPaperFormat().ordinal());
-        binding.shadowsSwitch.setChecked(options.isRemoveShadows());
+        binding.shadowsSlider.setValue((float) options.getShadowStrength() * 100f);
+        binding.brightnessSlider.setValue((float) options.getBrightness() * 100f);
+        binding.contrastSlider.setValue((float) options.getContrast() * 100f);
         binding.sharpenSwitch.setChecked(options.isSharpen());
         reflectingState = false;
     }
