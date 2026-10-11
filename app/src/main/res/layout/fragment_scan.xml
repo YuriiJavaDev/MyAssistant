@@ -3,16 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cameraButton"
+            style="@style/Widget.MyAssistant.ScanButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/scan_camera" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/galleryButton"
+            style="@style/Widget.MyAssistant.ScanButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/scan_gallery" />
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/emptyText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scan Module"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/scan_empty"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scanRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
