@@ -101,4 +101,42 @@
         <item>Move down</item>
         <item>Delete page</item>
     </string-array>
+
+    <!-- Steps module -->
+    <string name="steps_today">Today</string>
+    <string name="steps_unit">steps</string>
+    <string name="steps_walk_run">Walking %1$s · Running %2$s</string>
+    <string name="steps_period">Period</string>
+    <string name="steps_last_7">7 days</string>
+    <string name="steps_last_30">30 days</string>
+    <string name="steps_this_month">This month</string>
+    <string name="steps_pick_dates">Choose dates</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Total steps</string>
+    <string name="steps_distance">Distance</string>
+    <string name="steps_average">Average per day</string>
+    <string name="steps_best_day">Best day</string>
+    <string name="steps_walking">Walking steps</string>
+    <string name="steps_running">Running steps</string>
+    <string name="steps_active_days">Days with steps</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d of %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">No steps recorded in this period</string>
+    <string name="steps_settings">Step settings</string>
+    <string name="steps_settings_title">Step length</string>
+    <string name="steps_walk_length">Walking step length, cm</string>
+    <string name="steps_run_length">Running step length, cm</string>
+    <string name="steps_run_cadence">Running starts at, steps per minute</string>
+    <string name="steps_run_cadence_hint">Steps taken at this pace or faster are counted as running.</string>
+    <string name="steps_defaults">Defaults</string>
+    <string name="steps_save">Save</string>
+    <string name="steps_invalid_length">Enter %1$d–%2$d</string>
+    <string name="steps_measure_title">How to measure your step length</string>
+    <string name="steps_measure_text">1. Mark the starting line at the toe of your shoe before the first step.\n2. Walk 10 calm steps at your usual pace.\n3. Measure the path from the starting line to the same toe after the 10th step, in centimetres.\n4. Divide it by 10.\n5. Repeat several times and enter the average.\n\nDo the same at your normal running pace to get the running step length.</string>
+    <string name="steps_no_sensor">This phone has no step counter sensor.</string>
+    <string name="steps_permission_needed">Allow physical activity access so the phone can count your steps.</string>
+    <string name="steps_allow">Allow</string>
+    <string name="steps_open_settings">Open app settings</string>
 </resources>
