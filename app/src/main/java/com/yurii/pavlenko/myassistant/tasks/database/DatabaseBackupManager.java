@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 /**
- * Exports the local data (task database and scan archive) to a folder the user picks or to another app,
+ * Exports the local data (task and step databases and scan archive) to a folder the user picks or to another app,
  * and imports it back from user-selected files. All work runs off the main thread and reports back on it.
  */
 public final class DatabaseBackupManager {
@@ -50,7 +50,9 @@ public final class DatabaseBackupManager {
         Context appContext = context.getApplicationContext();
         run(() -> {
             List<File> files = new ArrayList<>();
-            files.add(copyDatabaseToCache(appContext));
+            for (ManagedDatabase database : existingDatabases(appContext)) {
+                files.add(copyDatabaseToCache(appContext, database));
+            }
             if (ScanBackupArchive.hasData(appContext)) {
                 files.add(writeScanArchiveToCache(appContext));
             }
@@ -66,8 +68,10 @@ public final class DatabaseBackupManager {
             if (folder == null || !folder.canWrite()) {
                 throw new IOException("Cannot write to the chosen folder");
             }
-            try (InputStream in = new FileInputStream(requireDatabase(appContext))) {
-                writeToFolder(appContext, folder, DatabaseFileManager.BACKUP_FILE_NAME, DATABASE_MIME, out -> DatabaseFileManager.copy(in, out));
+            for (ManagedDatabase database : existingDatabases(appContext)) {
+                try (InputStream in = new FileInputStream(database.getFile(appContext))) {
+                    writeToFolder(appContext, folder, database.getBackupFileName(), DATABASE_MIME, out -> DatabaseFileManager.copy(in, out));
+                }
             }
             if (ScanBackupArchive.hasData(appContext)) {
                 writeToFolder(appContext, folder, ScanBackupArchive.FILE_NAME, ZIP_MIME, out -> ScanBackupArchive.write(appContext, out));
@@ -77,7 +81,7 @@ public final class DatabaseBackupManager {
     }
 
     /**
-     * Restores from the selected files: a task database and/or a scan archive, recognised by their content.
+     * Restores from the selected files: task and step databases and/or a scan archive, recognised by their content.
      * Each file is verified before it replaces local data, so a wrong or damaged file leaves it untouched.
      */
     public static void importFiles(Context context, List<Uri> uris, Consumer<Boolean> onDone) {
@@ -123,17 +127,23 @@ public final class DatabaseBackupManager {
         });
     }
 
-    private static File requireDatabase(Context context) throws IOException {
-        File dbFile = DatabaseFileManager.getDatabaseFile(context);
-        if (!dbFile.exists()) {
+    /** The databases that have been created on this phone; the task database must be among them. */
+    private static List<ManagedDatabase> existingDatabases(Context context) throws IOException {
+        List<ManagedDatabase> existing = new ArrayList<>();
+        for (ManagedDatabase database : ManagedDatabase.values()) {
+            if (database.getFile(context).exists()) {
+                existing.add(database);
+            }
+        }
+        if (!existing.contains(ManagedDatabase.TASKS)) {
             throw new IOException("Local database file not found");
         }
-        return dbFile;
+        return existing;
     }
 
-    private static File copyDatabaseToCache(Context context) throws IOException {
-        File target = new File(cacheFolder(context), DatabaseFileManager.BACKUP_FILE_NAME);
-        try (InputStream in = new FileInputStream(requireDatabase(context));
+    private static File copyDatabaseToCache(Context context, ManagedDatabase database) throws IOException {
+        File target = new File(cacheFolder(context), database.getBackupFileName());
+        try (InputStream in = new FileInputStream(database.getFile(context));
              OutputStream out = new FileOutputStream(target)) {
             DatabaseFileManager.copy(in, out);
         }
@@ -178,7 +188,7 @@ public final class DatabaseBackupManager {
         }
     }
 
-    /** Returns false for a file that is neither a task database nor a scan archive. */
+    /** Returns false for a file that is neither one of the app's databases nor a scan archive. */
     private static boolean importFile(Context context, Uri uri) throws IOException {
         try (InputStream raw = context.getContentResolver().openInputStream(uri)) {
             if (raw == null) {
@@ -186,7 +196,7 @@ public final class DatabaseBackupManager {
             }
             BufferedInputStream in = new BufferedInputStream(raw);
             if (startsWith(in, SQLITE_HEADER)) {
-                File staged = DatabaseFileManager.stage(context, in);
+                DatabaseFileManager.Staged staged = DatabaseFileManager.stage(context, in);
                 DatabaseFileManager.replaceWith(context, staged);
                 return true;
             }

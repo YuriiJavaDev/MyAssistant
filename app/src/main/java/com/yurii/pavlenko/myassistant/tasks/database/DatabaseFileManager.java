@@ -12,23 +12,27 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * Locates the local database file, verifies an incoming database before it is used,
- * and swaps it in. The live database is never touched until the incoming file is proven valid.
+ * Verifies an incoming database before it is used and swaps it in for the matching local one.
+ * The live database is never touched until the incoming file is proven valid.
  */
 public final class DatabaseFileManager {
 
-    public static final String BACKUP_FILE_NAME = "myassistant_backup.db";
-
-    private static final String STAGING_SUFFIX = ".incoming";
+    private static final String STAGING_FILE_NAME = "incoming.staged";
     private static final String[] SIDECAR_SUFFIXES = {"-journal", "-wal", "-shm"};
-    private static final String TASKS_TABLE = "tasks";
     private static final int BUFFER_SIZE = 8192;
 
-    private DatabaseFileManager() {
+    /** A verified incoming database and the local database it replaces. */
+    public static final class Staged {
+        private final File file;
+        private final ManagedDatabase database;
+
+        private Staged(File file, ManagedDatabase database) {
+            this.file = file;
+            this.database = database;
+        }
     }
 
-    public static File getDatabaseFile(Context context) {
-        return context.getDatabasePath(AppDatabase.DATABASE_NAME);
+    private DatabaseFileManager() {
     }
 
     public static void copy(InputStream in, OutputStream out) throws IOException {
@@ -40,56 +44,71 @@ public final class DatabaseFileManager {
     }
 
     /**
-     * Fully copies an incoming database next to the live one and verifies it.
+     * Fully copies an incoming database and verifies it; the data decides which database it is.
      *
-     * @return the verified staging file, ready for {@link #replaceWith(Context, File)}
      * @throws IOException if the transfer fails or the data is not a valid MyAssistant database
      */
-    public static File stage(Context context, InputStream source) throws IOException {
-        File dbFile = getDatabaseFile(context);
-        File parent = dbFile.getParentFile();
+    public static Staged stage(Context context, InputStream source) throws IOException {
+        return stage(context, source, null);
+    }
+
+    /** Like {@link #stage(Context, InputStream)}, but the data must be the expected database. */
+    public static Staged stage(Context context, InputStream source, ManagedDatabase expected) throws IOException {
+        File parent = ManagedDatabase.TASKS.getFile(context).getParentFile();
         if (parent != null && !parent.isDirectory() && !parent.mkdirs()) {
             throw new IOException("Cannot create the database directory");
         }
 
-        File staged = new File(dbFile.getPath() + STAGING_SUFFIX);
-        boolean valid = false;
+        File staged = new File(parent, STAGING_FILE_NAME);
+        ManagedDatabase identified = null;
         try {
             try (OutputStream out = new FileOutputStream(staged)) {
                 copy(source, out);
             }
-            valid = isValidTaskDatabase(staged);
+            identified = identify(staged);
         } finally {
-            if (!valid) {
+            if (identified == null || (expected != null && identified != expected)) {
                 staged.delete();
             }
         }
-        if (!valid) {
+        if (identified == null || (expected != null && identified != expected)) {
             throw new IOException("The data is not a valid MyAssistant database");
         }
-        return staged;
+        return new Staged(staged, identified);
     }
 
     /** Closes the Room instance and puts the verified staging file in place of the live database. */
-    public static void replaceWith(Context context, File staged) throws IOException {
-        AppDatabase.closeInstance();
+    public static void replaceWith(Context context, Staged staged) throws IOException {
+        staged.database.close();
 
-        File dbFile = getDatabaseFile(context);
+        File dbFile = staged.database.getFile(context);
         for (String suffix : SIDECAR_SUFFIXES) {
             new File(dbFile.getPath() + suffix).delete();
         }
-        if (!staged.renameTo(dbFile)) {
+        if (!staged.file.renameTo(dbFile)) {
             throw new IOException("Cannot replace the local database");
         }
     }
 
-    private static boolean isValidTaskDatabase(File file) {
+    /** Returns null for a damaged file or one that holds none of the app's databases. */
+    private static ManagedDatabase identify(File file) {
         try (SQLiteDatabase db = SQLiteDatabase.openDatabase(file.getPath(), null, SQLiteDatabase.OPEN_READONLY)) {
-            boolean intact = "ok".equalsIgnoreCase(DatabaseUtils.stringForQuery(db, "PRAGMA quick_check", null));
-            // Throws SQLiteException when the tasks table does not exist
-            return intact && DatabaseUtils.queryNumEntries(db, TASKS_TABLE) >= 0;
+            if (!"ok".equalsIgnoreCase(DatabaseUtils.stringForQuery(db, "PRAGMA quick_check", null))) {
+                return null;
+            }
+            for (ManagedDatabase candidate : ManagedDatabase.values()) {
+                if (hasTable(db, candidate.getRequiredTable())) {
+                    return candidate;
+                }
+            }
+            return null;
         } catch (SQLiteException e) {
-            return false;
+            return null;
         }
+    }
+
+    private static boolean hasTable(SQLiteDatabase db, String table) {
+        return DatabaseUtils.longForQuery(db,
+                "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = ?", new String[]{table}) > 0;
     }
 }

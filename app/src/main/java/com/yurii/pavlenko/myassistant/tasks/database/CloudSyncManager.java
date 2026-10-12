@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Uploads the local backup (task database and scan archive) to a WebDAV server and restores it from there. */
+/** Uploads the local backup (task and step databases and scan archive) to a WebDAV server and restores it from there. */
 public class CloudSyncManager {
 
     private static final int TIMEOUT_MS = 10_000;
@@ -44,7 +44,10 @@ public class CloudSyncManager {
 
     public void uploadBackup(SyncCallback callback) {
         runAsync(() -> {
-            uploadTasksBlocking();
+            uploadDatabaseBlocking(ManagedDatabase.TASKS);
+            if (hasLocalDatabase(ManagedDatabase.STEPS)) {
+                uploadDatabaseBlocking(ManagedDatabase.STEPS);
+            }
             if (ScanBackupArchive.hasData(context)) {
                 uploadScansBlocking();
             }
@@ -53,26 +56,33 @@ public class CloudSyncManager {
     }
 
     /**
-     * Restores tasks and scans from the cloud. Each file is downloaded and verified completely
+     * Restores tasks, steps and scans from the cloud. Each file is downloaded and verified completely
      * before the local data is replaced, so a failed download leaves local data untouched.
      */
     public void restoreBackup(SyncCallback callback) {
         runAsync(() -> {
-            downloadTasksBlocking();
+            downloadDatabaseBlocking(ManagedDatabase.TASKS, false);
+            boolean stepsRestored = downloadDatabaseBlocking(ManagedDatabase.STEPS, true);
             boolean scansRestored = downloadScansBlocking();
-            return scansRestored
-                    ? "Backup successfully restored from cloud"
-                    : "Tasks restored from cloud (no scan backup found there)";
+            if (stepsRestored && scansRestored) {
+                return "Backup successfully restored from cloud";
+            }
+            return "Tasks restored from cloud (no " + (stepsRestored ? "scan" : scansRestored ? "step" : "step or scan")
+                    + " backup found there)";
         }, "Download error: ", callback);
     }
 
     /** Blocking upload for background workers that already run off the main thread. */
-    public void uploadTasksBlocking() throws IOException {
-        File dbFile = DatabaseFileManager.getDatabaseFile(context);
+    public void uploadDatabaseBlocking(ManagedDatabase database) throws IOException {
+        File dbFile = database.getFile(context);
         if (!dbFile.exists()) {
             throw new IOException("Local database file not found");
         }
-        upload(DatabaseFileManager.BACKUP_FILE_NAME, dbFile);
+        upload(database.getBackupFileName(), dbFile);
+    }
+
+    public boolean hasLocalDatabase(ManagedDatabase database) {
+        return database.getFile(context).exists();
     }
 
     /** The archive is built in the cache first, because the upload needs to know its size. */
@@ -96,15 +106,20 @@ public class CloudSyncManager {
                 && !ScanBackupArchive.signature(context).equals(configManager.getUploadedScanSignature());
     }
 
-    private void downloadTasksBlocking() throws IOException {
-        HttpURLConnection connection = openConnection(DatabaseFileManager.BACKUP_FILE_NAME, "GET");
+    /** Returns false when an optional database is missing on the server, as in a backup made before it existed. */
+    private boolean downloadDatabaseBlocking(ManagedDatabase database, boolean optional) throws IOException {
+        HttpURLConnection connection = openConnection(database.getBackupFileName(), "GET");
         try {
+            if (optional && connection.getResponseCode() == HTTP_NOT_FOUND) {
+                return false;
+            }
             requireSuccess(connection);
-            File staged;
+            DatabaseFileManager.Staged staged;
             try (InputStream in = connection.getInputStream()) {
-                staged = DatabaseFileManager.stage(context, in);
+                staged = DatabaseFileManager.stage(context, in, database);
             }
             DatabaseFileManager.replaceWith(context, staged);
+            return true;
         } finally {
             connection.disconnect();
         }
