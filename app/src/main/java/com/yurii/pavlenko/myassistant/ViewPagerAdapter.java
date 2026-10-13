@@ -9,7 +9,7 @@ import com.yurii.pavlenko.myassistant.fragments.CalculatorFragment;
 import com.yurii.pavlenko.myassistant.fragments.CurrencyFragment;
 import com.yurii.pavlenko.myassistant.fragments.FlightsFragment;
 import com.yurii.pavlenko.myassistant.scan.ui.ScanFragment;
-import com.yurii.pavlenko.myassistant.fragments.StepsFragment;
+import com.yurii.pavlenko.myassistant.steps.ui.StepsFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
 import com.yurii.pavlenko.myassistant.fragments.WeatherFragment;
 
