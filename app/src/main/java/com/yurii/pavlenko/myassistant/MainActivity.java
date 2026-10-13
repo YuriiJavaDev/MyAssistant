@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -116,8 +117,17 @@ public class MainActivity extends AppCompatActivity {
      */
     private void applyLockScreenVisibility(Intent intent) {
         boolean showOverLockScreen = intent.getBooleanExtra(EXTRA_SHOW_DUE_REMINDERS, false);
-        setShowWhenLocked(showOverLockScreen);
-        setTurnScreenOn(showOverLockScreen);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+            setShowWhenLocked(showOverLockScreen);
+            setTurnScreenOn(showOverLockScreen);
+            return;
+        }
+        int flags = WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON;
+        if (showOverLockScreen) {
+            getWindow().addFlags(flags);
+        } else {
+            getWindow().clearFlags(flags);
+        }
     }
 
     /** Acknowledges the overdue alert and shows the tasks it is about. */

@@ -12,7 +12,7 @@ import java.io.IOException;
 
 /**
  * Uploads the local backup to the cloud on a schedule when automatic backup is enabled.
- * Tasks are small and always uploaded; the scan archive can be large, so it goes only when it has changed
+ * Tasks and steps are small and always uploaded; the scan archive can be large, so it goes only when it has changed
  * and the connection is not metered.
  */
 public class CloudBackupWorker extends Worker {
@@ -36,7 +36,10 @@ public class CloudBackupWorker extends Worker {
 
         CloudSyncManager syncManager = new CloudSyncManager(context);
         try {
-            syncManager.uploadTasksBlocking();
+            syncManager.uploadDatabaseBlocking(ManagedDatabase.TASKS);
+            if (syncManager.hasLocalDatabase(ManagedDatabase.STEPS)) {
+                syncManager.uploadDatabaseBlocking(ManagedDatabase.STEPS);
+            }
             if (!isConnectionMetered(context) && syncManager.scansNeedUpload()) {
                 syncManager.uploadScansBlocking();
             }
