@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calc_key_height">0dp</dimen>
+    <dimen name="calc_sci_key_height">0dp</dimen>
+    <dimen name="calc_memory_key_height">0dp</dimen>
+    <dimen name="calc_expression_min_height">36dp</dimen>
+</resources>

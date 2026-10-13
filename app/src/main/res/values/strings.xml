@@ -176,4 +176,14 @@
     <string name="currency_unavailable">Rates are not available. Check the internet connection and refresh.</string>
     <string name="currency_invalid_amount">Enter an amount</string>
     <string name="currency_attribution">Rates By Exchange Rate API · https://www.exchangerate-api.com</string>
+
+    <!-- Calculator module -->
+    <string name="calculator_scientific">Sci</string>
+    <string name="calculator_basic">Basic</string>
+    <string name="calculator_degrees">Deg</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">History</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
 </resources>
