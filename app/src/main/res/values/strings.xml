@@ -101,4 +101,28 @@
         <item>Move down</item>
         <item>Delete page</item>
     </string-array>
+
+    <!-- Weather module -->
+    <string name="weather_city_hint">City name in any language</string>
+    <string name="weather_search">Search</string>
+    <string name="weather_my_location">My location</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Feels like</string>
+    <string name="weather_humidity">Humidity</string>
+    <string name="weather_wind">Wind</string>
+    <string name="weather_today_range">Today</string>
+    <string name="weather_units">Units</string>
+    <string name="weather_units_temperature">Temperature</string>
+    <string name="weather_units_wind">Wind speed</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metres per second (m/s)</string>
+    <string name="weather_unit_kmh">Kilometres per hour (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d%% lit</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">Loading weather…</string>
+    <string name="weather_location_needed">Allow access to the approximate location to see the weather where you are, or search for a city.</string>
+    <string name="weather_allow">Allow</string>
+    <string name="weather_open_settings">Open app settings</string>
+    <string name="weather_choose_city">Choose a city</string>
 </resources>
