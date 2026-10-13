@@ -11,7 +11,7 @@ import com.yurii.pavlenko.myassistant.fragments.FlightsFragment;
 import com.yurii.pavlenko.myassistant.scan.ui.ScanFragment;
 import com.yurii.pavlenko.myassistant.steps.ui.StepsFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
-import com.yurii.pavlenko.myassistant.fragments.WeatherFragment;
+import com.yurii.pavlenko.myassistant.weather.ui.WeatherFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 
