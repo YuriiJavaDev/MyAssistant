@@ -6,7 +6,7 @@
     android:fillViewport="true">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="4dp">
         <include
@@ -83,12 +83,15 @@
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:minHeight="@dimen/calc_keypad_min_height"
             android:columnCount="4">
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -98,7 +101,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -108,7 +111,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -118,7 +121,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -128,7 +131,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -138,7 +141,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -148,7 +151,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -158,7 +161,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -168,7 +171,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -178,7 +181,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -188,7 +191,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -198,7 +201,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -208,7 +211,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -218,7 +221,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -228,7 +231,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -238,7 +241,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -249,7 +252,7 @@
                 android:id="@+id/scientificToggle"
                 style="@style/Widget.MyAssistant.CalcKey.Function"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -259,7 +262,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -269,7 +272,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"
@@ -279,7 +282,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.MyAssistant.CalcKey"
                 android:layout_width="0dp"
-                android:layout_height="@dimen/calc_key_height"
+                android:layout_height="0dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_gravity="fill"

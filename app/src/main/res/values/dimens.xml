@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="calc_key_height">56dp</dimen>
     <dimen name="calc_sci_key_height">44dp</dimen>
     <dimen name="calc_memory_key_height">44dp</dimen>
     <dimen name="calc_expression_min_height">48dp</dimen>
+    <dimen name="calc_keypad_min_height">260dp</dimen>
 </resources>
