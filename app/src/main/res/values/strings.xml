@@ -124,5 +124,6 @@
     <string name="weather_location_needed">Allow access to the approximate location to see the weather where you are, or search for a city.</string>
     <string name="weather_allow">Allow</string>
     <string name="weather_open_settings">Open app settings</string>
+    <string name="weather_attribution">Weather: Open-Meteo.com · Places: © OpenStreetMap contributors</string>
     <string name="weather_choose_city">Choose a city</string>
 </resources>

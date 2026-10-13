@@ -33,6 +33,12 @@ final class Palette {
         return 0xFF000000 | rgb;
     }
 
+    /** The same landscape with frost on the sand and grass. */
+    Palette frosted() {
+        return new Palette(skyTop, skyBottom, seaFar, seaNear, blend(sand, 0xFFFFFF, 0.65f),
+                blend(wetSand, 0xDDE6EE, 0.5f), blend(grass, 0xFFFFFF, 0.55f), cloud);
+    }
+
     static Palette of(WeatherCondition condition, boolean day) {
         Palette base = byDay(condition);
         if (day) {

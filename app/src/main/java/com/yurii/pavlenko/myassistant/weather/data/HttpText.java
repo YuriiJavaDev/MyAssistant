@@ -1,8 +1,5 @@
 package com.yurii.pavlenko.myassistant.weather.data;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,26 +7,27 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-/** Minimal blocking GET that returns a JSON object. */
-final class HttpJson {
+/** Minimal blocking GET that returns the response body as text. */
+final class HttpText {
 
     private static final int TIMEOUT_MS = 10_000;
+    /** The OpenStreetMap servers require a User-Agent that identifies the app. */
+    private static final String USER_AGENT = "MyAssistant/1.0 (https://github.com/YuriiJavaDev/MyAssistant)";
 
-    private HttpJson() {
+    private HttpText() {
     }
 
-    static JSONObject get(String url) throws IOException {
+    static String get(String url) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         connection.setConnectTimeout(TIMEOUT_MS);
         connection.setReadTimeout(TIMEOUT_MS);
+        connection.setRequestProperty("User-Agent", USER_AGENT);
         try {
             int code = connection.getResponseCode();
             if (code < 200 || code >= 300) {
                 throw new IOException("Server responded with HTTP " + code);
             }
-            return new JSONObject(readAll(connection.getInputStream()));
-        } catch (JSONException e) {
-            throw new IOException("Unexpected response from the server", e);
+            return readAll(connection.getInputStream());
         } finally {
             connection.disconnect();
         }

@@ -9,8 +9,10 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.yurii.pavlenko.myassistant.weather.data.CurrentWeather;
+import com.yurii.pavlenko.myassistant.weather.data.ForecastService;
+import com.yurii.pavlenko.myassistant.weather.data.GeocodingService;
 import com.yurii.pavlenko.myassistant.weather.data.Place;
-import com.yurii.pavlenko.myassistant.weather.data.WeatherService;
+import com.yurii.pavlenko.myassistant.weather.data.PlaceChoice;
 import com.yurii.pavlenko.myassistant.weather.data.WeatherUnits;
 import com.yurii.pavlenko.myassistant.weather.data.WeatherUnitsStore;
 import com.yurii.pavlenko.myassistant.weather.location.DeviceLocation;
@@ -80,7 +82,7 @@ public class WeatherViewModel extends AndroidViewModel {
                 publish(id, WeatherState.error("Cannot determine the location. Turn on location services or search for a city."));
                 return;
             }
-            Place place = WeatherService.describeLocation(location.getLatitude(), location.getLongitude());
+            Place place = GeocodingService.describe(location.getLatitude(), location.getLongitude());
             loadWeather(id, place);
         });
     }
@@ -94,15 +96,16 @@ public class WeatherViewModel extends AndroidViewModel {
         int id = begin();
         executor.execute(() -> {
             try {
-                List<Place> found = WeatherService.searchCity(text);
+                List<Place> found = GeocodingService.search(text);
                 if (id != request) {
                     return;
                 }
+                Place obvious = PlaceChoice.obvious(found);
                 if (found.isEmpty()) {
                     publish(id, WeatherState.error("No city found for \"" + text + "\""));
-                } else if (found.size() == 1) {
+                } else if (obvious != null) {
                     followsPhone = false;
-                    loadWeather(id, found.get(0));
+                    loadWeather(id, obvious);
                 } else {
                     matches.postValue(found);
                     publish(id, backTo(before));
@@ -143,7 +146,7 @@ public class WeatherViewModel extends AndroidViewModel {
 
     private void loadWeather(int id, Place place) {
         try {
-            CurrentWeather weather = WeatherService.loadWeather(place);
+            CurrentWeather weather = ForecastService.load(place);
             if (id == request) {
                 shownPlace = place;
                 loadedAt = System.currentTimeMillis();

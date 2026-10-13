@@ -1,5 +1,7 @@
 package com.yurii.pavlenko.myassistant.weather.ui.scene;
 
+import com.yurii.pavlenko.myassistant.weather.logic.BeachScenario;
+import com.yurii.pavlenko.myassistant.weather.logic.Crowd;
 import com.yurii.pavlenko.myassistant.weather.logic.MoonPhase;
 import com.yurii.pavlenko.myassistant.weather.logic.WeatherCondition;
 
@@ -17,19 +19,30 @@ public final class SceneFactory {
     private static final int BEACH_SKY_STARS = 36;
 
     /** The beach as it looks in the given weather, by day or by night. */
-    public static Scene weather(WeatherCondition condition, boolean day) {
+    public static Scene weather(WeatherCondition condition, boolean day, BeachScenario scenario) {
         Palette palette = Palette.of(condition, day);
+        if (scenario.hasIceFloes()) {
+            palette = palette.frosted();
+        }
+        float roughness = (float) scenario.getSeaRoughness();
         List<Layer> layers = new ArrayList<>();
         layers.add(new SkyLayer(palette, SceneGeometry.HORIZON + 0.02f));
         addSky(layers, condition, day, palette);
         layers.add(new SandLayer(palette));
-        layers.add(new SeaLayer(palette));
-
-        boolean sunbathing = day && (condition == WeatherCondition.CLEAR || condition == WeatherCondition.PARTLY_CLOUDY);
-        layers.add(new LoungerLayer(sunbathing));
-        layers.add(new FlowerLayer(palette, condition != WeatherCondition.SNOW));
-        if (sunbathing) {
+        layers.add(new SeaLayer(palette, roughness));
+        if (scenario.hasIceFloes()) {
+            layers.add(new IceFloeLayer());
+        }
+        layers.add(new LoungerLayer(scenario.getCrowd() == Crowd.SUNBATHERS, scenario.areParasolsOpen(), scenario.getWind()));
+        if (scenario.getCrowd() == Crowd.STROLLERS || scenario.getCrowd() == Crowd.UMBRELLA_WALKERS) {
+            layers.add(new PromenadeLayer(scenario.getCrowd(), scenario.getOutfit()));
+        }
+        layers.add(new FlowerLayer(palette, scenario.hasFlowers()));
+        if (scenario.hasButterflies()) {
             layers.add(new ButterflyLayer());
+        }
+        if (scenario.hasGulls()) {
+            layers.add(new GullLayer(scenario.getWind()));
         }
         addEffects(layers, condition);
         return new Scene(layers);

@@ -4,7 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 
-/** Two sun loungers under striped parasols, with people sunbathing when the weather allows. */
+/** Two sun loungers with striped parasols, open or furled, and people sunbathing when the weather allows. */
 final class LoungerLayer implements Layer {
 
     private static final float[] CENTERS = {0.34f, 0.64f};
@@ -16,10 +16,17 @@ final class LoungerLayer implements Layer {
     private final Paint fill = new Paint();
     private final Paint pole = new Paint();
     private final Path canopy = new Path();
-    private final boolean occupied;
+    private static final float WIND_LEAN_PER_MS = 0.003f;
+    private static final float MAX_LEAN = 0.035f;
 
-    LoungerLayer(boolean occupied) {
+    private final boolean occupied;
+    private final boolean parasolsOpen;
+    private final float lean;
+
+    LoungerLayer(boolean occupied, boolean parasolsOpen, double windMetresPerSecond) {
         this.occupied = occupied;
+        this.parasolsOpen = parasolsOpen;
+        this.lean = (float) Math.min(MAX_LEAN, windMetresPerSecond * WIND_LEAN_PER_MS);
         pole.setColor(0xFF6D4C41);
         pole.setStyle(Paint.Style.STROKE);
         pole.setStrokeWidth(0.008f);
@@ -29,7 +36,11 @@ final class LoungerLayer implements Layer {
     public void draw(Canvas canvas, float seconds) {
         for (int i = 0; i < CENTERS.length; i++) {
             float x = CENTERS[i];
-            drawParasol(canvas, x + 0.02f, i);
+            if (parasolsOpen) {
+                drawParasol(canvas, x + 0.02f, i);
+            } else {
+                drawFurledParasol(canvas, x + 0.02f, i, seconds);
+            }
             drawLounger(canvas, x, i);
             if (occupied) {
                 drawPerson(canvas, x, i, seconds);
@@ -53,6 +64,19 @@ final class LoungerLayer implements Layer {
         canopy.quadTo(x + 0.02f, top - 0.04f, x + 0.035f, top + 0.03f);
         canopy.close();
         fill.setColor(PARASOL[index][1]);
+        canvas.drawPath(canopy, fill);
+    }
+
+    private void drawFurledParasol(Canvas canvas, float x, int index, float seconds) {
+        float top = BASE_Y - 0.15f;
+        float tipX = x + lean + 0.003f * (float) Math.sin(seconds * 2 + index);
+        canvas.drawLine(x, top + 0.05f, x, BASE_Y + 0.02f, pole);
+        canopy.reset();
+        canopy.moveTo(tipX, top - 0.03f);
+        canopy.lineTo(x - 0.016f, top + 0.07f);
+        canopy.lineTo(x + 0.016f, top + 0.07f);
+        canopy.close();
+        fill.setColor(PARASOL[index][0]);
         canvas.drawPath(canopy, fill);
     }
 

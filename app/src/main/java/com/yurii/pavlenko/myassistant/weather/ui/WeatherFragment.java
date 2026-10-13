@@ -25,7 +25,9 @@ import com.yurii.pavlenko.myassistant.databinding.FragmentWeatherBinding;
 import com.yurii.pavlenko.myassistant.weather.data.CurrentWeather;
 import com.yurii.pavlenko.myassistant.weather.data.Place;
 import com.yurii.pavlenko.myassistant.weather.data.WeatherUnits;
+import com.yurii.pavlenko.myassistant.weather.logic.BeachScenario;
 import com.yurii.pavlenko.myassistant.weather.logic.MoonPhase;
+import com.yurii.pavlenko.myassistant.weather.logic.WeatherCondition;
 import com.yurii.pavlenko.myassistant.weather.logic.WeatherCode;
 import com.yurii.pavlenko.myassistant.weather.ui.scene.SceneFactory;
 import com.yurii.pavlenko.myassistant.weather.viewmodel.WeatherState;
@@ -152,7 +154,9 @@ public class WeatherFragment extends Fragment {
         binding.countryName.setVisibility(place.getCountry().isEmpty() ? View.GONE : View.VISIBLE);
 
         WeatherUnits units = viewModel.getUnits().getValue();
-        binding.porthole.show(SceneFactory.weather(WeatherCode.condition(weather.getWeatherCode()), weather.isDay()));
+        WeatherCondition condition = WeatherCode.condition(weather.getWeatherCode());
+        BeachScenario scenario = BeachScenario.of(condition, weather.isDay(), weather.getTemperature(), weather.getWindSpeed());
+        binding.porthole.show(SceneFactory.weather(condition, weather.isDay(), scenario));
         binding.temperature.setText(units.getTemperature().format(weather.getTemperature()));
         binding.description.setText(WeatherCode.describe(weather.getWeatherCode()));
 
