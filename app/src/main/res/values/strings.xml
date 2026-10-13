@@ -163,4 +163,17 @@
     <string name="steps_permission_needed">Allow physical activity access so the phone can count your steps.</string>
     <string name="steps_allow">Allow</string>
     <string name="steps_open_settings">Open app settings</string>
+
+    <!-- Exchange module -->
+    <string name="currency_amount_hint">Amount</string>
+    <string name="currency_swap">Swap ⇅</string>
+    <string name="currency_refresh">Refresh rates</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Rates updated %1$s</string>
+    <string name="currency_outdated">No internet. Showing saved rates, updated %1$s</string>
+    <string name="currency_loading">Loading rates…</string>
+    <string name="currency_unavailable">Rates are not available. Check the internet connection and refresh.</string>
+    <string name="currency_invalid_amount">Enter an amount</string>
+    <string name="currency_attribution">Rates By Exchange Rate API · https://www.exchangerate-api.com</string>
 </resources>

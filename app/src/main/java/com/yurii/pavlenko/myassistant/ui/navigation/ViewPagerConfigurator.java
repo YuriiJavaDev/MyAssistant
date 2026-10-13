@@ -12,8 +12,8 @@ import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
  */
 public class ViewPagerConfigurator {
 
-    private static final String[] ALL_TITLES = {"Tasks", "Weather", "Currency", "Calc", "Scan", "Steps", "Flights"};
-    private static final String[] FIRST_ROW_TITLES = {"Tasks", "Weather", "Currency", "Calc"};
+    private static final String[] ALL_TITLES = {"Tasks", "Weather", "Exchange", "Calc", "Scan", "Steps", "Flights"};
+    private static final String[] FIRST_ROW_TITLES = {"Tasks", "Weather", "Exchange", "Calc"};
     private static final String[] SECOND_ROW_TITLES = {"Scan", "Steps", "Flights"};
 
     /**
