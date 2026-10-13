@@ -62,16 +62,26 @@ public class CalculatorFragment extends Fragment {
 
     private void render(CalculatorDisplay display) {
         binding.display.expressionText.setText(display.getExpression());
-        binding.display.previewText.setText(display.getError() != null ? display.getError()
-                : display.getPreview() == null ? "" : getString(R.string.calculator_preview_format, display.getPreview()));
         binding.display.memoryText.setText(display.getMemory() == null ? ""
                 : getString(R.string.calculator_memory_format, display.getMemory()));
         binding.display.angleButton.setText(display.getAngleMode() == AngleMode.DEGREES
                 ? R.string.calculator_degrees : R.string.calculator_radians);
+        showInfoLine(display);
+    }
+
+    /** The line above the expression shows an error or the result so far, and otherwise the last calculation. */
+    private void showInfoLine(CalculatorDisplay display) {
         HistoryEntry last = display.getLast();
-        binding.display.lastCalculation.setText(last == null ? "" : getString(R.string.calculator_last_format,
-                last.getExpression(), last.getResult()));
-        binding.display.lastCalculation.setEnabled(last != null);
+        boolean historyShown = display.getError() == null && display.getPreview() == null && last != null;
+        if (display.getError() != null) {
+            binding.display.lastCalculation.setText(display.getError());
+        } else if (display.getPreview() != null) {
+            binding.display.lastCalculation.setText(getString(R.string.calculator_preview_format, display.getPreview()));
+        } else {
+            binding.display.lastCalculation.setText(last == null ? "" : getString(R.string.calculator_last_format,
+                    last.getExpression(), last.getResult()));
+        }
+        binding.display.lastCalculation.setEnabled(historyShown);
     }
 
     private void showHistory() {
