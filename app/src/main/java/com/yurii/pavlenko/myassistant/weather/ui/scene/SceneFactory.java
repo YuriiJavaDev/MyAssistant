@@ -30,6 +30,9 @@ public final class SceneFactory {
         addSky(layers, condition, day, palette);
         layers.add(new SandLayer(palette));
         layers.add(new SeaLayer(palette, roughness));
+        if (scenario.hasYacht()) {
+            layers.add(new YachtLayer());
+        }
         if (scenario.hasIceFloes()) {
             layers.add(new IceFloeLayer());
         }

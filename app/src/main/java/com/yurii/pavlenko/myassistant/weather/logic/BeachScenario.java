@@ -20,18 +20,20 @@ public final class BeachScenario {
     private final boolean butterflies;
     private final boolean gulls;
     private final boolean iceFloes;
+    private final boolean yacht;
     private final boolean flowers;
     private final double seaRoughness;
     private final double wind;
 
     private BeachScenario(Crowd crowd, Outfit outfit, boolean parasolsOpen, boolean butterflies, boolean gulls,
-                          boolean iceFloes, boolean flowers, double seaRoughness, double wind) {
+                          boolean iceFloes, boolean yacht, boolean flowers, double seaRoughness, double wind) {
         this.crowd = crowd;
         this.outfit = outfit;
         this.parasolsOpen = parasolsOpen;
         this.butterflies = butterflies;
         this.gulls = gulls;
         this.iceFloes = iceFloes;
+        this.yacht = yacht;
         this.flowers = flowers;
         this.seaRoughness = seaRoughness;
         this.wind = wind;
@@ -52,6 +54,7 @@ public final class BeachScenario {
                 day && sunny && celsius >= BUTTERFLIES_MIN_CELSIUS && !breezy,
                 day && breezy && !stormy,
                 celsius <= ICE_MAX_CELSIUS,
+                day && sunny && !windy,
                 celsius >= FLOWERS_MIN_CELSIUS && !snowing,
                 roughness(stormy, wet, windMetresPerSecond),
                 windMetresPerSecond);
@@ -92,6 +95,7 @@ public final class BeachScenario {
     public boolean hasButterflies() { return butterflies; }
     public boolean hasGulls() { return gulls; }
     public boolean hasIceFloes() { return iceFloes; }
+    public boolean hasYacht() { return yacht; }
     public boolean hasFlowers() { return flowers; }
     public double getSeaRoughness() { return seaRoughness; }
 

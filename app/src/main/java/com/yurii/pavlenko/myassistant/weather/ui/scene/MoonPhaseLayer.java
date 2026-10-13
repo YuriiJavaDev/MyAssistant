@@ -14,16 +14,10 @@ final class MoonPhaseLayer implements Layer {
     private static final float CENTER = 0.5f;
     private static final float RADIUS = 0.27f;
     private static final int OUTLINE_POINTS = 48;
-    /** Dark patches of the moon as x, y and radius, in units of the moon's radius. */
-    private static final float[][] SEAS = {
-            {-0.35f, -0.30f, 0.30f}, {0.15f, -0.45f, 0.22f}, {0.30f, 0.05f, 0.34f},
-            {-0.30f, 0.30f, 0.20f}, {0.05f, 0.50f, 0.16f}, {-0.55f, 0.00f, 0.14f}
-    };
-
     private final Paint glow = new Paint();
     private final Paint dark = new Paint();
     private final Paint lit = new Paint();
-    private final Paint sea = new Paint();
+    private final MoonSurface surface = new MoonSurface(CENTER, CENTER, RADIUS);
     private final Path litPart = new Path();
     private final float illumination;
     private final boolean mirrored;
@@ -34,7 +28,6 @@ final class MoonPhaseLayer implements Layer {
         this.illumination = (float) phase.illumination();
         dark.setColor(0xFF262E4A);
         lit.setColor(0xFFF4ECC9);
-        sea.setColor(0x33807A60);
         glow.setShader(new RadialGradient(CENTER, CENTER, RADIUS * 2.2f,
                 new int[]{0x66FFF6D6, 0x00FFF6D6}, null, Shader.TileMode.CLAMP));
         buildLitPart(phase);
@@ -80,9 +73,7 @@ final class MoonPhaseLayer implements Layer {
 
         canvas.save();
         canvas.clipPath(litPart);
-        for (float[] spot : SEAS) {
-            canvas.drawCircle(CENTER + spot[0] * RADIUS, CENTER + spot[1] * RADIUS, spot[2] * RADIUS, sea);
-        }
+        surface.draw(canvas, CENTER, CENTER, RADIUS);
         canvas.restore();
         canvas.restore();
     }

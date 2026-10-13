@@ -100,4 +100,14 @@ public class BeachScenarioTest {
     public void snowfallMeansNoFlowers() {
         assertFalse(scene(WeatherCondition.SNOW, true, 1, 1).hasFlowers());
     }
+
+    @Test
+    public void yachtSailsOnlyInGoodWeather() {
+        assertTrue(scene(WeatherCondition.CLEAR, true, 25, 3).hasYacht());
+        assertTrue(scene(WeatherCondition.PARTLY_CLOUDY, true, 10, 6).hasYacht());
+        assertFalse(scene(WeatherCondition.CLEAR, true, 25, 10).hasYacht());
+        assertFalse(scene(WeatherCondition.RAIN, true, 18, 2).hasYacht());
+        assertFalse(scene(WeatherCondition.CLOUDY, true, 18, 2).hasYacht());
+        assertFalse(scene(WeatherCondition.CLEAR, false, 18, 2).hasYacht());
+    }
 }
