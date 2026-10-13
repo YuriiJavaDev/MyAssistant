@@ -1,5 +1,7 @@
 package com.yurii.pavlenko.myassistant.weather.data;
 
+import com.yurii.pavlenko.myassistant.network.HttpText;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
