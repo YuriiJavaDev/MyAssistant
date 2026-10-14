@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="4dp">
+    <include
+        android:id="@+id/display"
+        layout="@layout/calculator_display" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:columnCount="5">
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Widget.MyAssistant.CalcKey"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="1dp"
+                    android:tag="CLEAR" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Widget.MyAssistant.CalcKey"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="1dp"
+                    android:tag="MEMORY_ADD" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Widget.MyAssistant.CalcKey"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="1dp"
+                    android:tag="MEMORY_RECALL" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Widget.MyAssistant.CalcKey"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="1dp"
+                    android:tag="MEMORY_CLEAR" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/Widget.MyAssistant.CalcKey"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_margin="1dp"
+                    android:tag="BACK" />
+            </GridLayout>
+
+            <include
+                layout="@layout/calculator_sci_keys"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/outline" />
+
+        <GridLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:columnCount="4">
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="PERCENT" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="DIVIDE" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="MULTIPLY" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="SUBTRACT" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="SEVEN" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="EIGHT" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="NINE" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="ADD"
+                android:layout_rowSpan="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="FOUR" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="FIVE" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="SIX" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="ONE" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="TWO" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="THREE" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="EQUALS"
+                android:layout_rowSpan="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="ZERO"
+                android:layout_columnSpan="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.MyAssistant.CalcKey"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="1dp"
+                android:tag="DOT" />
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>
