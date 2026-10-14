@@ -6,24 +6,24 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-import com.yurii.pavlenko.myassistant.flights.logic.HeadingMath;
+import com.yurii.pavlenko.myassistant.flights.logic.Orientation;
 
-import java.util.function.DoubleConsumer;
+import java.util.function.Consumer;
 
-/** The phone's compass: reports the magnetic heading in degrees. */
-public final class HeadingSensor implements SensorEventListener {
+/** The phone's compass and level: reports the magnetic heading, the pitch and the roll. */
+public final class OrientationSensor implements SensorEventListener {
 
     private static final int MATRIX_SIZE = 9;
 
     private final SensorManager manager;
     private final Sensor rotation;
-    private final DoubleConsumer onHeading;
+    private final Consumer<Orientation> onOrientation;
     private final float[] matrix = new float[MATRIX_SIZE];
 
-    public HeadingSensor(Context context, DoubleConsumer onHeading) {
+    public OrientationSensor(Context context, Consumer<Orientation> onOrientation) {
         manager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
         rotation = manager == null ? null : manager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
-        this.onHeading = onHeading;
+        this.onOrientation = onOrientation;
     }
 
     public boolean isAvailable() {
@@ -32,7 +32,7 @@ public final class HeadingSensor implements SensorEventListener {
 
     public void start() {
         if (rotation != null) {
-            manager.registerListener(this, rotation, SensorManager.SENSOR_DELAY_UI);
+            manager.registerListener(this, rotation, SensorManager.SENSOR_DELAY_GAME);
         }
     }
 
@@ -45,7 +45,7 @@ public final class HeadingSensor implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         SensorManager.getRotationMatrixFromVector(matrix, event.values);
-        onHeading.accept(HeadingMath.fromRotationMatrix(matrix));
+        onOrientation.accept(Orientation.fromRotationMatrix(matrix));
     }
 
     @Override

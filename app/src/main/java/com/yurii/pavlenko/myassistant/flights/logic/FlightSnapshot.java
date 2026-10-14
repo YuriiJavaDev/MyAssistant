@@ -5,45 +5,43 @@ public final class FlightSnapshot {
 
     private final boolean recording;
     private final boolean hasFix;
-    private final double heading;
+    private final Orientation orientation;
     private final double speed;
     private final double altitude;
+    private final boolean altitudeFromStart;
     private final double verticalSpeed;
     private final double gForce;
     private final FlightStats stats;
 
-    public FlightSnapshot(boolean recording, boolean hasFix, double heading, double speed,
-                          double altitude, double verticalSpeed, double gForce, FlightStats stats) {
+    public FlightSnapshot(boolean recording, boolean hasFix, Orientation orientation, double speed,
+                          double altitude, boolean altitudeFromStart, double verticalSpeed,
+                          double gForce, FlightStats stats) {
         this.recording = recording;
         this.hasFix = hasFix;
-        this.heading = heading;
+        this.orientation = orientation;
         this.speed = speed;
         this.altitude = altitude;
+        this.altitudeFromStart = altitudeFromStart;
         this.verticalSpeed = verticalSpeed;
         this.gForce = gForce;
         this.stats = stats;
     }
 
     public static FlightSnapshot idle() {
-        return new FlightSnapshot(false, false, Double.NaN, 0, 0, 0, 1, FlightStats.empty());
+        return new FlightSnapshot(false, false, Orientation.unknown(), 0, 0, false, 0, 1, FlightStats.empty());
     }
 
     public boolean isRecording() {
         return recording;
     }
 
-    /** Whether a GPS position has been received since the recording began. */
+    /** Whether a GPS position has been received since the screen or the recording began. */
     public boolean hasFix() {
         return hasFix;
     }
 
-    /** The heading in degrees, or NaN when the phone has no compass. */
-    public double getHeading() {
-        return heading;
-    }
-
-    public boolean hasHeading() {
-        return !Double.isNaN(heading);
+    public Orientation getOrientation() {
+        return orientation;
     }
 
     /** Ground speed in metres per second. */
@@ -51,9 +49,13 @@ public final class FlightSnapshot {
         return speed;
     }
 
-    /** Altitude in metres. */
+    /** Altitude in metres: above sea level, or above the start after the altitude was zeroed. */
     public double getAltitude() {
         return altitude;
+    }
+
+    public boolean isAltitudeFromStart() {
+        return altitudeFromStart;
     }
 
     /** Climb rate in metres per second; negative when descending. */

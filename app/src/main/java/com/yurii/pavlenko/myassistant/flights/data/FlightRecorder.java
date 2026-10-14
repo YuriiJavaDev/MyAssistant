@@ -9,55 +9,72 @@ import android.os.SystemClock;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.yurii.pavlenko.myassistant.flights.audio.VarioAudio;
+import com.yurii.pavlenko.myassistant.flights.logic.AltitudeEstimate;
 import com.yurii.pavlenko.myassistant.flights.logic.AngleSmoother;
+import com.yurii.pavlenko.myassistant.flights.logic.BaroVario;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightPoint;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightSnapshot;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightStats;
 import com.yurii.pavlenko.myassistant.flights.logic.GeoMath;
+import com.yurii.pavlenko.myassistant.flights.logic.Orientation;
+import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
+import com.yurii.pavlenko.myassistant.flights.logic.VarioTone;
 import com.yurii.pavlenko.myassistant.flights.logic.VerticalSpeed;
+import com.yurii.pavlenko.myassistant.flights.sensor.BarometerSensor;
 import com.yurii.pavlenko.myassistant.flights.sensor.GForceSensor;
 import com.yurii.pavlenko.myassistant.flights.sensor.GpsTracker;
-import com.yurii.pavlenko.myassistant.flights.sensor.HeadingSensor;
+import com.yurii.pavlenko.myassistant.flights.sensor.OrientationSensor;
 
 /**
- * Gathers the readings of the compass, the accelerometer and the GPS into one picture of the flight.
- * One instance serves the whole app: the screen watches it, and the recording service keeps it
- * running with the screen off. Everything happens on the main thread.
+ * Gathers the readings of the compass, the barometer, the accelerometer and the GPS into one picture
+ * of the flight. One instance serves the whole app: the screen watches it, and the recording service
+ * keeps it running with the screen off. Everything happens on the main thread.
  */
 public final class FlightRecorder {
 
     private static final double GRAVITY_WEIGHT = 0.25;
-    private static final double HEADING_WEIGHT = 0.15;
+    private static final double ANGLE_WEIGHT = 0.2;
     private static final long PUBLISH_INTERVAL_MILLIS = 100;
 
     private static FlightRecorder instance;
 
-    private final Context context;
     private final MutableLiveData<FlightSnapshot> snapshot = new MutableLiveData<>(FlightSnapshot.idle());
-    private final HeadingSensor headingSensor;
+    private final OrientationSensor orientationSensor;
+    private final BarometerSensor barometer;
     private final GForceSensor gForceSensor;
     private final GpsTracker gps;
-    private final AngleSmoother headingSmoother = new AngleSmoother(HEADING_WEIGHT);
-    private final VerticalSpeed verticalSpeed = new VerticalSpeed();
+    private final VarioSoundStore soundStore;
+    private final VarioAudio audio = new VarioAudio();
+    private final AngleSmoother headingSmoother = new AngleSmoother(ANGLE_WEIGHT);
+    private final AngleSmoother pitchSmoother = new AngleSmoother(ANGLE_WEIGHT);
+    private final AngleSmoother rollSmoother = new AngleSmoother(ANGLE_WEIGHT);
+    private final BaroVario baroVario = new BaroVario();
+    private final VerticalSpeed gpsVario = new VerticalSpeed();
+    private final AltitudeEstimate altitudeEstimate = new AltitudeEstimate();
 
+    private VarioSoundSettings soundSettings;
     private boolean watching;
     private boolean recording;
     private boolean sensorsRunning;
+    private boolean gpsRunning;
     private boolean hasFix;
-    private double magneticHeading = Double.NaN;
+    private Orientation orientation = Orientation.unknown();
     private double declination;
     private double gForce = 1;
     private double gPeak = 1;
     private double speed;
-    private double altitude;
+    private double altitudeReference = Double.NaN;
     private FlightStats stats = FlightStats.empty();
     private long lastPublish;
 
     private FlightRecorder(Context context) {
-        this.context = context.getApplicationContext();
-        headingSensor = new HeadingSensor(this.context, this::onHeading);
-        gForceSensor = new GForceSensor(this.context, this::onGForce);
-        gps = new GpsTracker(this.context, this::onFix);
+        orientationSensor = new OrientationSensor(context, this::onOrientation);
+        barometer = new BarometerSensor(context, this::onPressure);
+        gForceSensor = new GForceSensor(context, this::onGForce);
+        gps = new GpsTracker(context, this::onFix);
+        soundStore = new VarioSoundStore(context);
+        soundSettings = soundStore.load();
     }
 
     public static synchronized FlightRecorder get(Context context) {
@@ -71,11 +88,18 @@ public final class FlightRecorder {
         return snapshot;
     }
 
-    public boolean hasCompass() {
-        return headingSensor.isAvailable();
+    public VarioSoundSettings getSoundSettings() {
+        return soundSettings;
     }
 
-    /** The compass and the load meter run while the screen is in front or a flight is recorded. */
+    public void setSoundSettings(VarioSoundSettings settings) {
+        soundSettings = settings;
+        soundStore.save(settings);
+        updateSensors();
+        publish(true);
+    }
+
+    /** The instruments run while the screen is in front or a flight is recorded. */
     public void setWatching(boolean watching) {
         this.watching = watching;
         updateSensors();
@@ -86,16 +110,16 @@ public final class FlightRecorder {
         if (recording) {
             return true;
         }
-        stats = FlightStats.empty();
-        verticalSpeed.reset();
-        hasFix = false;
-        speed = 0;
-        altitude = 0;
-        gPeak = gForce;
-        if (!gps.start()) {
-            publish(true);
-            return false;
+        if (!gpsRunning) {
+            gpsRunning = gps.start();
+            if (!gpsRunning) {
+                publish(true);
+                return false;
+            }
         }
+        stats = FlightStats.empty();
+        hasFix = false;
+        gPeak = gForce;
         recording = true;
         updateSensors();
         publish(true);
@@ -107,25 +131,75 @@ public final class FlightRecorder {
             return;
         }
         recording = false;
-        gps.stop();
         updateSensors();
+        publish(true);
+    }
+
+    /** From now on altitudes are counted from the current one, as the pilot does at the start. */
+    public void zeroAltitude() {
+        altitudeReference = altitudeEstimate.metres();
+        stats = stats.withAltitudeRestarted(0);
+        publish(true);
+    }
+
+    /** Back to altitudes above sea level. */
+    public void clearAltitudeZero() {
+        altitudeReference = Double.NaN;
+        stats = stats.withAltitudeRestarted(altitudeEstimate.metres());
         publish(true);
     }
 
     private void updateSensors() {
         boolean needed = watching || recording;
         if (needed && !sensorsRunning) {
-            headingSensor.start();
+            baroVario.reset();
+            gpsVario.reset();
+            orientationSensor.start();
             gForceSensor.start();
+            barometer.start();
         } else if (!needed && sensorsRunning) {
-            headingSensor.stop();
+            orientationSensor.stop();
             gForceSensor.stop();
+            barometer.stop();
+            altitudeEstimate.barometerPaused();
         }
         sensorsRunning = needed;
+        updateGps();
+        updateAudio();
     }
 
-    private void onHeading(double degrees) {
-        magneticHeading = headingSmoother.add(degrees);
+    private void updateGps() {
+        if (sensorsRunning && !gpsRunning) {
+            gpsRunning = gps.start();
+        } else if (!sensorsRunning && gpsRunning) {
+            gps.stop();
+            gpsRunning = false;
+        }
+    }
+
+    private void updateAudio() {
+        if (sensorsRunning && soundSettings.isEnabled()) {
+            audio.start();
+        } else {
+            audio.stop();
+        }
+    }
+
+    private void onOrientation(Orientation measured) {
+        double heading = headingSmoother.add(measured.getHeading());
+        double pitch = signed(pitchSmoother.add(measured.getPitch()));
+        double roll = signed(rollSmoother.add(measured.getRoll()));
+        orientation = new Orientation(heading, pitch, roll);
+        publish(false);
+    }
+
+    private static double signed(double degrees) {
+        return GeoMath.turnBetween(0, degrees);
+    }
+
+    private void onPressure(long timeMillis, double hectopascals) {
+        baroVario.add(timeMillis, hectopascals);
+        altitudeEstimate.onBarometer(baroVario.altitudeMetres());
         publish(false);
     }
 
@@ -140,12 +214,14 @@ public final class FlightRecorder {
         declination = new GeomagneticField((float) location.getLatitude(), (float) location.getLongitude(),
                 (float) altitudeMetres, location.getTime()).getDeclination();
         speed = location.hasSpeed() ? location.getSpeed() : 0;
-        altitude = altitudeMetres;
-        verticalSpeed.add(location.getTime(), altitudeMetres);
-        stats = stats.plus(new FlightPoint(location.getTime(), location.getLatitude(), location.getLongitude(),
-                altitudeMetres, speed), gPeak);
-        gPeak = gForce;
+        altitudeEstimate.onGps(altitudeMetres);
+        gpsVario.add(location.getTime(), altitudeMetres);
         hasFix = true;
+        if (recording) {
+            stats = stats.plus(new FlightPoint(location.getTime(), location.getLatitude(), location.getLongitude(),
+                    shownAltitude(), speed), gPeak);
+            gPeak = gForce;
+        }
         publish(true);
     }
 
@@ -157,15 +233,32 @@ public final class FlightRecorder {
         return location.hasAltitude() ? location.getAltitude() : 0;
     }
 
+    private boolean altitudeFromStart() {
+        return !Double.isNaN(altitudeReference);
+    }
+
+    private double shownAltitude() {
+        return altitudeEstimate.metres() - (altitudeFromStart() ? altitudeReference : 0);
+    }
+
+    private double climbRate() {
+        return baroVario.hasReading() ? baroVario.metresPerSecond() : gpsVario.metresPerSecond();
+    }
+
     private void publish(boolean force) {
         long now = SystemClock.uptimeMillis();
         if (!force && now - lastPublish < PUBLISH_INTERVAL_MILLIS) {
             return;
         }
         lastPublish = now;
-        double heading = Double.isNaN(magneticHeading) ? Double.NaN
-                : GeoMath.normalizeDegrees(magneticHeading + declination);
-        snapshot.setValue(new FlightSnapshot(recording, hasFix, heading, speed, altitude,
-                verticalSpeed.metresPerSecond(), gForce, stats));
+        double climb = climbRate();
+        if (sensorsRunning && soundSettings.isEnabled()) {
+            audio.setTone(VarioTone.of(climb, soundSettings));
+        }
+        double heading = Double.isNaN(orientation.getHeading()) ? Double.NaN
+                : GeoMath.normalizeDegrees(orientation.getHeading() + declination);
+        snapshot.setValue(new FlightSnapshot(recording, hasFix,
+                new Orientation(heading, orientation.getPitch(), orientation.getRoll()),
+                speed, shownAltitude(), altitudeFromStart(), climb, gForce, stats));
     }
 }

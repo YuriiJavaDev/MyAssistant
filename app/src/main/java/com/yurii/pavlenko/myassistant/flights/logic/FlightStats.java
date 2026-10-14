@@ -45,6 +45,12 @@ public final class FlightStats {
                 Math.max(maxGForce, gForce), point);
     }
 
+    /** The same totals with the highest altitude counted again from the current one, after a new zero. */
+    public FlightStats withAltitudeRestarted(double currentAltitude) {
+        return last == null ? this : new FlightStats(startMillis, endMillis, distanceMetres, maxSpeed,
+                currentAltitude, maxGForce, last);
+    }
+
     public boolean isEmpty() {
         return last == null;
     }

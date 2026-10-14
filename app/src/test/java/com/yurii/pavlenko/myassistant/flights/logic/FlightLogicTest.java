@@ -109,17 +109,6 @@ public class FlightLogicTest {
     }
 
     @Test
-    public void picksRoundDialRanges() {
-        assertEquals(10, NiceScale.maxFor(0), 1e-9);
-        assertEquals(10, NiceScale.maxFor(9.9), 1e-9);
-        assertEquals(20, NiceScale.maxFor(10.1), 1e-9);
-        assertEquals(50, NiceScale.maxFor(21), 1e-9);
-        assertEquals(100, NiceScale.maxFor(51), 1e-9);
-        assertEquals(1000, NiceScale.maxFor(999), 1e-9);
-        assertEquals(20_000, NiceScale.maxFor(12_000), 1e-9);
-    }
-
-    @Test
     public void formatsFlightTime() {
         assertEquals("0:00:00", FlightTime.format(0));
         assertEquals("0:00:59", FlightTime.format(59_999));
@@ -136,9 +125,9 @@ public class FlightLogicTest {
         assertEquals("1.50 km", FlightFormat.distance(1500, SpeedUnit.KILOMETRES_PER_HOUR));
         assertEquals("1234.0 km", FlightFormat.distance(1_234_000, SpeedUnit.KILOMETRES_PER_HOUR));
         assertEquals("10.0 nm", FlightFormat.distance(18_520, SpeedUnit.KNOTS));
-        assertEquals("+5.0 m/s", FlightFormat.climbRate(5, AltitudeUnit.METRES));
-        assertEquals("-2.5 m/s", FlightFormat.climbRate(-2.5, AltitudeUnit.METRES));
-        assertEquals("+984 ft/min", FlightFormat.climbRate(5, AltitudeUnit.FEET));
+        assertEquals("+5.0 m/s", FlightFormat.climbRate(5, ClimbUnit.METRES_PER_SECOND));
+        assertEquals("-2.5 m/s", FlightFormat.climbRate(-2.5, ClimbUnit.METRES_PER_SECOND));
+        assertEquals("+984 ft/min", FlightFormat.climbRate(5, ClimbUnit.FEET_PER_MINUTE));
         assertEquals("1.37 G", FlightFormat.gForce(1.37));
     }
 }

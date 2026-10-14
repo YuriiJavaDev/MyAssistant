@@ -11,10 +11,11 @@ import androidx.lifecycle.ViewModelProvider;
 import com.yurii.pavlenko.myassistant.databinding.DialogFlightUnitsBinding;
 import com.yurii.pavlenko.myassistant.flights.data.FlightUnits;
 import com.yurii.pavlenko.myassistant.flights.logic.AltitudeUnit;
+import com.yurii.pavlenko.myassistant.flights.logic.ClimbUnit;
 import com.yurii.pavlenko.myassistant.flights.logic.SpeedUnit;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
 
-/** Choice of the speed and altitude units; each choice applies at once. */
+/** Choice of the speed, altitude and climb rate units; each choice applies at once. */
 public class FlightUnitsDialog extends DialogFragment {
 
     private FlightsViewModel viewModel;
@@ -30,8 +31,11 @@ public class FlightUnitsDialog extends DialogFragment {
         binding.speedGroup.check(speedButtonId(current.getSpeed()));
         binding.altitudeGroup.check(current.getAltitude() == AltitudeUnit.FEET
                 ? binding.feet.getId() : binding.metres.getId());
+        binding.climbGroup.check(current.getClimb() == ClimbUnit.FEET_PER_MINUTE
+                ? binding.feetPerMinute.getId() : binding.metresPerSecondClimb.getId());
         binding.speedGroup.setOnCheckedChangeListener((group, id) -> save());
         binding.altitudeGroup.setOnCheckedChangeListener((group, id) -> save());
+        binding.climbGroup.setOnCheckedChangeListener((group, id) -> save());
 
         AlertDialog dialog = new AlertDialog.Builder(requireContext()).setView(binding.getRoot()).create();
         if (dialog.getWindow() != null) {
@@ -55,7 +59,9 @@ public class FlightUnitsDialog extends DialogFragment {
                 : SpeedUnit.KILOMETRES_PER_HOUR;
         AltitudeUnit altitude = binding.altitudeGroup.getCheckedRadioButtonId() == binding.feet.getId()
                 ? AltitudeUnit.FEET : AltitudeUnit.METRES;
-        viewModel.saveUnits(new FlightUnits(speed, altitude));
+        ClimbUnit climb = binding.climbGroup.getCheckedRadioButtonId() == binding.feetPerMinute.getId()
+                ? ClimbUnit.FEET_PER_MINUTE : ClimbUnit.METRES_PER_SECOND;
+        viewModel.saveUnits(new FlightUnits(speed, altitude, climb));
     }
 
     @Override

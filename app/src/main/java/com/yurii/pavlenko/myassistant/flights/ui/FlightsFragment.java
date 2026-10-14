@@ -25,23 +25,24 @@ import com.yurii.pavlenko.myassistant.flights.logic.FlightFormat;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightSnapshot;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightStats;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightTime;
+import com.yurii.pavlenko.myassistant.flights.logic.Orientation;
+import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
 import com.yurii.pavlenko.myassistant.flights.sensor.GpsTracker;
 import com.yurii.pavlenko.myassistant.flights.service.FlightRecordingService;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
 
+import java.util.Locale;
 import java.util.Map;
 
 /** The Flights tab: flight instruments and the recording of a flight. */
 public class FlightsFragment extends Fragment {
 
     private static final String UNITS_TAG = "flight_units";
-    private static final double G_MIN = -1;
-    private static final double G_MAX = 4;
+    private static final String SOUND_TAG = "vario_sound";
 
     private FragmentFlightsBinding binding;
     private FlightsViewModel viewModel;
     private boolean permissionBlocked;
-    private boolean wasRecording;
     private boolean gpsOff;
 
     private final ActivityResultLauncher<String[]> permissionLauncher = registerForActivityResult(
@@ -59,17 +60,20 @@ public class FlightsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(this).get(FlightsViewModel.class);
 
-        binding.speedDial.configureAutoRange(getString(R.string.flights_title_speed), 0);
-        binding.altitudeDial.configureAutoRange(getString(R.string.flights_title_altitude), 0);
-        binding.gDial.configure(getString(R.string.flights_title_g), G_MIN, G_MAX, 2);
-        binding.gDial.setUnit("G");
-
         binding.controls.recordButton.setOnClickListener(v -> onRecordButton());
         binding.controls.unitsButton.setOnClickListener(v -> new FlightUnitsDialog().show(getChildFragmentManager(), UNITS_TAG));
         binding.controls.accessButton.setOnClickListener(v -> onAccessButton());
+        binding.readouts.zeroButton.setOnClickListener(v -> viewModel.zeroAltitude());
+        binding.readouts.zeroButton.setOnLongClickListener(v -> {
+            viewModel.clearAltitudeZero();
+            return true;
+        });
+        binding.readouts.soundButton.setOnClickListener(v -> toggleSound());
+        binding.readouts.tuneButton.setOnClickListener(v -> new VarioSoundDialog().show(getChildFragmentManager(), SOUND_TAG));
 
         viewModel.getSnapshot().observe(getViewLifecycleOwner(), snapshot -> render());
         viewModel.getUnits().observe(getViewLifecycleOwner(), units -> render());
+        viewModel.getSound().observe(getViewLifecycleOwner(), sound -> render());
     }
 
     @Override
@@ -82,6 +86,11 @@ public class FlightsFragment extends Fragment {
     public void onPause() {
         viewModel.setWatching(false);
         super.onPause();
+    }
+
+    private void toggleSound() {
+        VarioSoundSettings sound = viewModel.getSound().getValue();
+        viewModel.saveSound(sound.withEnabled(!sound.isEnabled()));
     }
 
     private void onRecordButton() {
@@ -137,26 +146,33 @@ public class FlightsFragment extends Fragment {
         if (binding == null || snapshot == null || units == null) {
             return;
         }
-        if (snapshot.isRecording() && !wasRecording) {
-            binding.speedDial.resetRange();
-            binding.altitudeDial.resetRange();
-        }
-        wasRecording = snapshot.isRecording();
         if (snapshot.isRecording()) {
             gpsOff = false;
         }
         showInstruments(snapshot, units);
+        showReadouts(snapshot, units);
         showStats(snapshot.getStats(), snapshot, units);
         showControls(snapshot);
     }
 
     private void showInstruments(FlightSnapshot snapshot, FlightUnits units) {
-        binding.compass.setHeading(snapshot.getHeading());
-        binding.speedDial.setUnit(units.getSpeed().symbol());
-        binding.speedDial.setValue(units.getSpeed().fromMetresPerSecond(snapshot.getSpeed()));
-        binding.altitudeDial.setUnit(units.getAltitude().symbol());
-        binding.altitudeDial.setValue(units.getAltitude().fromMetres(snapshot.getAltitude()));
-        binding.gDial.setValue(snapshot.getGForce());
+        Orientation orientation = snapshot.getOrientation();
+        binding.instruments.compass.setHeading(orientation.getHeading());
+        binding.instruments.horizon.setAttitude(orientation.getPitch(), orientation.getRoll());
+        binding.instruments.vario.setUnit(units.getClimb());
+        binding.instruments.vario.setClimbRate(snapshot.getVerticalSpeed());
+    }
+
+    private void showReadouts(FlightSnapshot snapshot, FlightUnits units) {
+        binding.readouts.altitudeText.setText(String.format(Locale.US, "%.0f", units.getAltitude().fromMetres(snapshot.getAltitude())));
+        binding.readouts.altitudeUnit.setText(units.getAltitude().symbol());
+        binding.readouts.altitudeBasis.setText(snapshot.isAltitudeFromStart()
+                ? R.string.flights_altitude_start : R.string.flights_altitude_sea);
+        binding.readouts.speedText.setText(FlightFormat.speed(snapshot.getSpeed(), units.getSpeed()));
+        binding.readouts.gText.setText(FlightFormat.gForce(snapshot.getGForce()));
+        VarioSoundSettings sound = viewModel.getSound().getValue();
+        binding.readouts.soundButton.setText(sound != null && sound.isEnabled()
+                ? R.string.flights_sound_on : R.string.flights_sound_off);
     }
 
     private void showStats(FlightStats stats, FlightSnapshot snapshot, FlightUnits units) {
@@ -165,7 +181,7 @@ public class FlightsFragment extends Fragment {
         binding.stats.maxSpeed.setText(FlightFormat.speed(stats.getMaxSpeed(), units.getSpeed()));
         binding.stats.averageSpeed.setText(FlightFormat.speed(stats.getAverageSpeed(), units.getSpeed()));
         binding.stats.maxAltitude.setText(FlightFormat.altitude(stats.getMaxAltitude(), units.getAltitude()));
-        binding.stats.climbRate.setText(FlightFormat.climbRate(snapshot.getVerticalSpeed(), units.getAltitude()));
+        binding.stats.climbRate.setText(FlightFormat.climbRate(snapshot.getVerticalSpeed(), units.getClimb()));
         binding.stats.maxG.setText(FlightFormat.gForce(stats.getMaxGForce()));
     }
 
