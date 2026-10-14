@@ -93,7 +93,11 @@ public final class ExpressionEvaluator {
     private double parsePower() throws CalculationException {
         double base = parsePostfix();
         if (accept('^')) {
-            return Math.pow(base, parseUnary());
+            double exponent = parseUnary();
+            if (base == 0 && exponent < 0) {
+                throw new CalculationException(DIVISION_BY_ZERO);
+            }
+            return Math.pow(base, exponent);
         }
         return base;
     }
