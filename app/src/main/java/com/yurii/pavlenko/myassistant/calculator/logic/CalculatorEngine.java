@@ -221,10 +221,11 @@ public final class CalculatorEngine {
         if (expression.isEmpty() || showingResult) {
             return;
         }
+        String complete = withClosedParentheses();
         try {
-            double value = ExpressionEvaluator.evaluate(expression, angleMode, answer);
+            double value = ExpressionEvaluator.evaluate(complete, angleMode, answer);
             String shown = ResultFormat.format(value);
-            history.add(0, new HistoryEntry(expression, shown));
+            history.add(0, new HistoryEntry(complete, shown));
             if (history.size() > MAX_HISTORY) {
                 history.remove(history.size() - 1);
             }
@@ -234,6 +235,15 @@ public final class CalculatorEngine {
         } catch (CalculationException problem) {
             error = problem.getMessage();
         }
+    }
+
+    /** The expression with every parenthesis that is still open closed, as it is shown in the history. */
+    private String withClosedParentheses() {
+        StringBuilder closed = new StringBuilder(expression);
+        for (int open = count('(') - count(')'); open > 0; open--) {
+            closed.append(')');
+        }
+        return closed.toString();
     }
 
     private void addToMemory() {

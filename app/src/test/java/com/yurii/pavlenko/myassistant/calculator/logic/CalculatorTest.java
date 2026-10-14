@@ -212,4 +212,13 @@ public class CalculatorTest {
         assertEquals("1+1", engine.display().getExpression());
         assertEquals("2", engine.display().getPreview());
     }
+
+    @Test
+    public void closesOpenParenthesesWhenCalculating() {
+        CalculatorEngine engine = typed(Key.SIN, Key.THREE, Key.ZERO, Key.EQUALS);
+        assertEquals("sin(30) = 0.5", engine.display().getLast().toString());
+        assertEquals("0.5", engine.display().getExpression());
+        CalculatorEngine nested = typed(Key.TWO, Key.MULTIPLY, Key.OPEN, Key.THREE, Key.ADD, Key.OPEN, Key.ONE, Key.EQUALS);
+        assertEquals("2×(3+(1)) = 8", nested.display().getLast().toString());
+    }
 }
