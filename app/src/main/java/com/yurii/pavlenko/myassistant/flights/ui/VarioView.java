@@ -150,21 +150,21 @@ public class VarioView extends InstrumentView {
         needle.setStrokeWidth(radius * 0.045f);
         canvas.save();
         canvas.rotate(angleOf(scaleShare()), center, center);
-        canvas.drawLine(center - radius * 0.12f, center, center + radius * 0.5f, center, needle);
+        canvas.drawLine(center - radius * 0.12f, center, center + radius * 0.45f, center, needle);
         canvas.restore();
         canvas.drawCircle(center, center, radius * 0.07f, needle);
     }
 
     private void drawWindow(Canvas canvas, float center, float radius) {
-        float windowRadius = radius * 0.2f;
-        float x = center + radius * 0.52f;
+        float windowRadius = radius * 0.34f;
+        float x = center + radius * 0.5f;
         canvas.drawCircle(x, center, windowRadius, window);
         windowRim.setStrokeWidth(radius * 0.012f);
         canvas.drawCircle(x, center, windowRadius, windowRim);
 
-        caption.setTextSize(radius * 0.07f);
-        canvas.drawText(unit.symbol(), x, center - windowRadius * 0.38f, caption);
-        readout.setTextSize(radius * 0.15f);
+        caption.setTextSize(radius * 0.11f);
+        canvas.drawText(unit.symbol(), x, center - windowRadius * 0.4f, caption);
+        readout.setTextSize(radius * 0.24f);
         readout.setColor(metresPerSecond >= 0 ? climbColor : sinkColor);
         canvas.drawText(String.format(Locale.US, "%." + unit.decimals() + "f", unit.fromMetresPerSecond(metresPerSecond)),
                 x, center + windowRadius * 0.4f, readout);

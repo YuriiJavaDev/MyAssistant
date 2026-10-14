@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3103" />
+        app:layout_constraintGuide_percent="0.2958" />
 
     <com.yurii.pavlenko.myassistant.flights.ui.VarioView
         android:id="@+id/vario"
@@ -26,14 +26,18 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintWidth_percent="0.55" />
 
     <com.yurii.pavlenko.myassistant.flights.ui.HorizonView
         android:id="@+id/horizon"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9167"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.42" />
+        app:layout_constraintVertical_bias="0.0647"
+        app:layout_constraintWidth_percent="0.4" />
 </com.yurii.pavlenko.myassistant.flights.ui.FlightPanelLayout>

@@ -218,10 +218,7 @@
     <string name="flights_max_altitude">Highest altitude</string>
     <string name="flights_climb_rate">Climb rate</string>
     <string name="flights_max_g">Peak load</string>
-    <string name="flights_status_ready">Ready. Press Start to record a flight.</string>
     <string name="flights_status_waiting">Waiting for the GPS signal…</string>
-    <string name="flights_status_recording">Recording</string>
-    <string name="flights_status_finished">Recording finished</string>
     <string name="flights_location_needed">Allow access to the precise location, so that the speed, altitude and route can be recorded.</string>
     <string name="flights_allow">Allow</string>
     <string name="flights_open_settings">Open app settings</string>

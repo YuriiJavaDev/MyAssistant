@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 /** The panel of round instruments: taller than wide, and sized from whichever side is given. */
 public class FlightPanelLayout extends ConstraintLayout {
 
-    private static final float HEIGHT_PER_WIDTH = 1.45f;
+    private static final float HEIGHT_PER_WIDTH = 1.42f;
 
     public FlightPanelLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);

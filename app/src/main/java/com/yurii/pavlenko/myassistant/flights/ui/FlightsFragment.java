@@ -190,17 +190,19 @@ public class FlightsFragment extends Fragment {
         boolean needsPermission = !GpsTracker.hasPermission(requireContext()) && permissionBlocked;
         binding.controls.accessPanel.setVisibility(needsPermission ? View.VISIBLE : View.GONE);
         binding.controls.accessButton.setText(permissionBlocked ? R.string.flights_open_settings : R.string.flights_allow);
-        binding.controls.statusText.setText(statusOf(snapshot));
+        int status = statusOf(snapshot);
+        binding.controls.statusText.setVisibility(status == 0 ? View.GONE : View.VISIBLE);
+        if (status != 0) {
+            binding.controls.statusText.setText(status);
+        }
     }
 
+    /** The message to show under the buttons, or 0 when there is nothing worth saying. */
     private int statusOf(FlightSnapshot snapshot) {
         if (gpsOff) {
             return R.string.flights_gps_off;
         }
-        if (snapshot.isRecording()) {
-            return snapshot.hasFix() ? R.string.flights_status_recording : R.string.flights_status_waiting;
-        }
-        return snapshot.getStats().isEmpty() ? R.string.flights_status_ready : R.string.flights_status_finished;
+        return snapshot.isRecording() && !snapshot.hasFix() ? R.string.flights_status_waiting : 0;
     }
 
     @Override
