@@ -39,8 +39,11 @@ final class MathFunctions {
     }
 
     static double factorial(double x) throws CalculationException {
-        if (x < 0 || x != Math.floor(x) || x > MAX_FACTORIAL) {
+        if (x < 0 || x != Math.floor(x)) {
             throw new CalculationException(INVALID);
+        }
+        if (x > MAX_FACTORIAL) {
+            throw new CalculationException("Result is too large");
         }
         double result = 1;
         for (int i = 2; i <= x; i++) {
