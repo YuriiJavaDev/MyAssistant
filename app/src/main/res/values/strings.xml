@@ -186,4 +186,35 @@
     <string name="calculator_memory_format">M: %1$s</string>
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
+
+    <!-- Flights module -->
+    <string name="flights_start">Start recording</string>
+    <string name="flights_stop">Stop recording</string>
+    <string name="flights_units">Units</string>
+    <string name="flights_units_speed">Speed and distance</string>
+    <string name="flights_units_altitude">Altitude</string>
+    <string name="flights_unit_kmh">Kilometres per hour (km/h)</string>
+    <string name="flights_unit_knots">Knots (kt, nautical miles)</string>
+    <string name="flights_unit_ms">Metres per second (m/s)</string>
+    <string name="flights_unit_metres">Metres (m)</string>
+    <string name="flights_unit_feet">Feet (ft)</string>
+    <string name="flights_title_speed">GROUND SPEED</string>
+    <string name="flights_title_altitude">ALTITUDE</string>
+    <string name="flights_title_g">G-FORCE</string>
+    <string name="flights_time">Flight time</string>
+    <string name="flights_distance">Distance</string>
+    <string name="flights_max_speed">Top speed</string>
+    <string name="flights_avg_speed">Average speed</string>
+    <string name="flights_max_altitude">Highest altitude</string>
+    <string name="flights_climb_rate">Climb rate</string>
+    <string name="flights_max_g">Peak load</string>
+    <string name="flights_status_ready">Ready. Press Start to record a flight.</string>
+    <string name="flights_status_waiting">Waiting for the GPS signal…</string>
+    <string name="flights_status_recording">Recording</string>
+    <string name="flights_status_finished">Recording finished</string>
+    <string name="flights_location_needed">Allow access to the precise location, so that the speed, altitude and route can be recorded.</string>
+    <string name="flights_allow">Allow</string>
+    <string name="flights_open_settings">Open app settings</string>
+    <string name="flights_gps_off">Turn on location services (GPS) to record a flight.</string>
+    <string name="flights_disclaimer">For fun and curiosity only. Do not rely on these instruments for navigation or anything that affects safety.</string>
 </resources>

@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.yurii.pavlenko.myassistant.calculator.ui.CalculatorFragment;
 import com.yurii.pavlenko.myassistant.currency.ui.CurrencyFragment;
-import com.yurii.pavlenko.myassistant.fragments.FlightsFragment;
+import com.yurii.pavlenko.myassistant.flights.ui.FlightsFragment;
 import com.yurii.pavlenko.myassistant.scan.ui.ScanFragment;
 import com.yurii.pavlenko.myassistant.steps.ui.StepsFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
