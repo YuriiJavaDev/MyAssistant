@@ -6,9 +6,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -40,11 +44,12 @@ public class FlightsFragment extends Fragment {
     private static final String UNITS_TAG = "flight_units";
     private static final String SOUND_TAG = "vario_sound";
     private static final String JOURNAL_TAG = "flight_journal";
+    private static final String RECORD_DOT = "\u25CF";
 
     private FragmentFlightsBinding binding;
     private FlightsViewModel viewModel;
     private boolean permissionBlocked;
-    private boolean gpsOff;
+    private boolean waitingToastShown;
 
     private final ActivityResultLauncher<String[]> permissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestMultiplePermissions(), this::onPermissionResult);
@@ -107,9 +112,8 @@ public class FlightsFragment extends Fragment {
     }
 
     private void startRecording() {
-        gpsOff = !GpsTracker.isSwitchedOn(requireContext());
-        if (gpsOff) {
-            render();
+        if (!GpsTracker.isSwitchedOn(requireContext())) {
+            Toast.makeText(requireContext(), R.string.flights_gps_off, Toast.LENGTH_LONG).show();
             return;
         }
         ContextCompat.startForegroundService(requireContext(), new Intent(requireContext(), FlightRecordingService.class));
@@ -148,9 +152,6 @@ public class FlightsFragment extends Fragment {
         if (binding == null || snapshot == null || units == null) {
             return;
         }
-        if (snapshot.isRecording()) {
-            gpsOff = false;
-        }
         showInstruments(snapshot, units);
         showReadouts(snapshot, units);
         showStats(snapshot.getStats(), snapshot, units);
@@ -188,23 +189,28 @@ public class FlightsFragment extends Fragment {
     }
 
     private void showControls(FlightSnapshot snapshot) {
-        binding.controls.recordButton.setText(snapshot.isRecording() ? R.string.flights_stop : R.string.flights_start);
+        binding.controls.recordButton.setText(recordLabel(snapshot.isRecording()));
         boolean needsPermission = !GpsTracker.hasPermission(requireContext()) && permissionBlocked;
         binding.controls.accessPanel.setVisibility(needsPermission ? View.VISIBLE : View.GONE);
         binding.controls.accessButton.setText(permissionBlocked ? R.string.flights_open_settings : R.string.flights_allow);
-        int status = statusOf(snapshot);
-        binding.controls.statusText.setVisibility(status == 0 ? View.GONE : View.VISIBLE);
-        if (status != 0) {
-            binding.controls.statusText.setText(status);
-        }
+        announceWaitingForGps(snapshot.isRecording() && !snapshot.hasFix());
     }
 
-    /** The message to show under the buttons, or 0 when there is nothing worth saying. */
-    private int statusOf(FlightSnapshot snapshot) {
-        if (gpsOff) {
-            return R.string.flights_gps_off;
+    /** The label of the record button with a dot in front: dark red while idle, bright red while recording. */
+    private CharSequence recordLabel(boolean recording) {
+        SpannableString label = new SpannableString(RECORD_DOT + " "
+                + getString(recording ? R.string.flights_stop : R.string.flights_start));
+        int color = ContextCompat.getColor(requireContext(), recording ? R.color.record_active : R.color.record_idle);
+        label.setSpan(new ForegroundColorSpan(color), 0, RECORD_DOT.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        return label;
+    }
+
+    /** Tells once per wait, not on every update, that the GPS has no fix yet. */
+    private void announceWaitingForGps(boolean waiting) {
+        if (waiting && !waitingToastShown) {
+            Toast.makeText(requireContext(), R.string.flights_status_waiting, Toast.LENGTH_LONG).show();
         }
-        return snapshot.isRecording() && !snapshot.hasFix() ? R.string.flights_status_waiting : 0;
+        waitingToastShown = waiting;
     }
 
     @Override

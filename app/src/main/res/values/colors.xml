@@ -47,4 +47,8 @@
     <color name="instrument_sink">#FFE5584F</color>
     <color name="instrument_sky">#FF3F7FBF</color>
     <color name="instrument_ground">#FF86583A</color>
+
+    <!-- The dot on the record button: dark while idle, bright while recording -->
+    <color name="record_idle">#FFA30D0D</color>
+    <color name="record_active">#FFFF2B2B</color>
 </resources>
