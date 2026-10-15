@@ -3,11 +3,11 @@ package com.yurii.pavlenko.myassistant.flights.logic;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Chooses the web map tiles (the usual 256-pixel Web Mercator ones) that cover an area at a wanted sharpness. */
+/** Chooses the web map tiles (the usual 256-pixel Web Mercator ones; imagery is not sharper than zoom 17 in many places) that cover an area at a wanted sharpness. */
 public final class TileGrid {
 
     public static final int TILE_SIZE = 256;
-    public static final int MAX_ZOOM = 18;
+    public static final int MAX_ZOOM = 17;
 
     private static final double EQUATOR_METRES_PER_PIXEL = 156_543.03392;
     private static final double MAX_LATITUDE = 85.0511;

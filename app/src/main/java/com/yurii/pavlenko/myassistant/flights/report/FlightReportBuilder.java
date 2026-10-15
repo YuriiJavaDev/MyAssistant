@@ -25,7 +25,7 @@ import java.util.Locale;
 
 /**
  * Builds the PDF report of a flight: the route on a large map, the statistics beside it and the profiles below.
- * The map is OpenStreetMap when the tiles can be fetched, and the bundled coastline otherwise.
+ * The map is satellite imagery when the tiles can be fetched, and the bundled coastline otherwise.
  */
 public final class FlightReportBuilder {
 
@@ -49,7 +49,7 @@ public final class FlightReportBuilder {
     private final Paint footer = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public FlightReportBuilder(Context context) {
-        this(CoastlineAsset.load(context), new OpenStreetMapTiles());
+        this(CoastlineAsset.load(context), new SatelliteTiles());
     }
 
     FlightReportBuilder(Coastline coastline, TileSource tileSource) {
@@ -95,7 +95,7 @@ public final class FlightReportBuilder {
         TileLayer tiles = drawMap(canvas, points, units);
         drawStatistics(canvas, flight, points, units);
         drawProfiles(canvas, flight, points, units);
-        canvas.drawText((tiles.hasTiles() ? "Map: \u00a9 OpenStreetMap contributors. " : "Map: Natural Earth (public domain). ")
+        canvas.drawText((tiles.hasTiles() ? tileSource.attribution() + " " : "Map: Natural Earth (public domain). ")
                 + "Recorded with MyAssistant. For fun only: not for navigation or safety.", MARGIN, PAGE_HEIGHT - 12, footer);
         return tiles.isComplete();
     }
