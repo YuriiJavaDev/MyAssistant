@@ -162,6 +162,15 @@ public class MapLogicTest {
     }
 
     @Test
+    public void usesAWiderViewForAFlightOfAHundredKilometres() {
+        List<TileGrid.Tile> near = TileGrid.cover(34.76, 34.79, 31.95, 31.98, 3.0, 1.5, 20);
+        List<TileGrid.Tile> far = TileGrid.cover(34.0, 35.2, 31.5, 32.4, 210.0, 1.5, 20);
+        assertTrue(far.get(0).getZoom() < near.get(0).getZoom());
+        assertTrue(far.get(0).getZoom() >= 8 && far.get(0).getZoom() <= 11);
+        assertTrue(far.size() <= 20);
+    }
+
+    @Test
     public void knowsTheTileOfAKnownPlace() {
         assertEquals(0, TileGrid.tileX(-179.9, 1));
         assertEquals(1, TileGrid.tileX(0.1, 1));

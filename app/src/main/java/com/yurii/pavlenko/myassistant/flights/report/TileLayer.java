@@ -8,18 +8,22 @@ import android.graphics.RectF;
 import com.yurii.pavlenko.myassistant.flights.logic.MapProjection;
 import com.yurii.pavlenko.myassistant.flights.logic.TileGrid;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
- * The map tiles behind a route. The bitmaps are not recycled, because the PDF canvas still reads them
+ * One layer of map tiles behind a route. The bitmaps are not recycled, because the PDF canvas still reads them
  * when the document is written. Fetching stops at the first failure, so a missing connection costs one attempt.
  */
 final class TileLayer {
 
     private static final double TILE_PIXELS_PER_POINT = 1.5;
     private static final int MAX_TILES = 20;
+    private static final int PARALLEL_FETCHES = 4;
     private static final float SEAM = 0.4f;
 
     private final List<TileGrid.Tile> tiles = new ArrayList<>();
@@ -30,27 +34,52 @@ final class TileLayer {
     private TileLayer() {
     }
 
-    /** A layer with no tiles, for a report made without a map source. */
+    /** A layer with no tiles, for a map that could not be fetched. */
     static TileLayer none() {
         return new TileLayer();
     }
 
-    static TileLayer load(TileSource source, MapProjection projection) {
+    /** The tiles that cover the map, the same for every layer. */
+    static List<TileGrid.Tile> tilesFor(MapProjection projection) {
+        return TileGrid.cover(projection.getWest(), projection.getEast(), projection.getSouth(), projection.getNorth(),
+                projection.metresPerPixel(), TILE_PIXELS_PER_POINT, MAX_TILES);
+    }
+
+    static TileLayer load(TileSource source, List<TileGrid.Tile> wanted) {
         TileLayer layer = new TileLayer();
-        List<TileGrid.Tile> wanted = TileGrid.cover(projection.getWest(), projection.getEast(),
-                projection.getSouth(), projection.getNorth(), projection.metresPerPixel(),
-                TILE_PIXELS_PER_POINT, MAX_TILES);
         layer.complete = true;
-        for (TileGrid.Tile tile : wanted) {
-            try {
-                layer.bitmaps.add(source.tile(tile));
-                layer.tiles.add(tile);
-            } catch (IOException | RuntimeException e) {
-                layer.complete = false;
-                break;
+        ExecutorService pool = Executors.newFixedThreadPool(PARALLEL_FETCHES);
+        try {
+            List<Future<Bitmap>> results = new ArrayList<>();
+            for (TileGrid.Tile tile : wanted) {
+                results.add(pool.submit(() -> source.tile(tile)));
             }
+            for (int i = 0; i < wanted.size(); i++) {
+                Bitmap bitmap = layer.await(results.get(i));
+                if (!layer.complete) {
+                    break;
+                }
+                if (bitmap != null) {
+                    layer.tiles.add(wanted.get(i));
+                    layer.bitmaps.add(bitmap);
+                }
+            }
+        } finally {
+            pool.shutdownNow();
         }
         return layer;
+    }
+
+    private Bitmap await(Future<Bitmap> result) {
+        try {
+            return result.get();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        } catch (ExecutionException e) {
+            // the tile could not be fetched
+        }
+        complete = false;
+        return null;
     }
 
     /** True when every tile of the area was fetched. */

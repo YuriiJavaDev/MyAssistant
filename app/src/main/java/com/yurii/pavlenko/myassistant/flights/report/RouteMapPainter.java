@@ -17,7 +17,7 @@ import java.util.Locale;
 
 /**
  * Draws the route of a flight on a map: land and sea from the bundled coastline, which stays as the map when
- * there are no tiles, the tiles over it, a grid of latitudes and longitudes, the route with its start and end,
+ * there are no tiles, the tile layers over it, a grid of latitudes and longitudes, the route with its start and end,
  * a scale bar and the north arrow.
  */
 final class RouteMapPainter {
@@ -86,13 +86,15 @@ final class RouteMapPainter {
 
     /** Draws the map of the route inside the area, with the projection that {@link #projectionFor} made for it. */
     void draw(Canvas canvas, RectF area, MapProjection projection, List<FlightPoint> points, SpeedUnit units,
-              TileLayer tiles) {
+              List<TileLayer> layers) {
         canvas.save();
         canvas.clipRect(area);
         canvas.translate(area.left, area.top);
         canvas.drawRect(0, 0, area.width(), area.height(), sea);
         drawLand(canvas, projection, area);
-        tiles.draw(canvas, projection);
+        for (TileLayer layer : layers) {
+            layer.draw(canvas, projection);
+        }
         drawGrid(canvas, projection, area);
         drawRoute(canvas, projection, points);
         drawScaleBar(canvas, projection, area, units);

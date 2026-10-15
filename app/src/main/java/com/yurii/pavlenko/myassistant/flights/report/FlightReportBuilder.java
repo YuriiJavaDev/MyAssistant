@@ -13,6 +13,7 @@ import com.yurii.pavlenko.myassistant.flights.logic.FlightFormat;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightPoint;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightTime;
 import com.yurii.pavlenko.myassistant.flights.logic.MapProjection;
+import com.yurii.pavlenko.myassistant.flights.logic.TileGrid;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 
 import java.io.ByteArrayOutputStream;
@@ -38,9 +39,10 @@ public final class FlightReportBuilder {
     private static final float CHART_HEIGHT = 96f;
     private static final float CHART_TOP = PAGE_HEIGHT - 26f - CHART_HEIGHT;
     private static final float ROW_HEIGHT = 36f;
+    private static final int ROADS_MIN_ZOOM = 12;
 
     private final Coastline coastline;
-    private final TileSource tileSource;
+    private final MapTiles mapTiles;
     private final Paint headline = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint subtitle = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint label = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -49,12 +51,12 @@ public final class FlightReportBuilder {
     private final Paint footer = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public FlightReportBuilder(Context context) {
-        this(CoastlineAsset.load(context), new SatelliteTiles());
+        this(CoastlineAsset.load(context), MapTiles.esri());
     }
 
-    FlightReportBuilder(Coastline coastline, TileSource tileSource) {
+    FlightReportBuilder(Coastline coastline, MapTiles mapTiles) {
         this.coastline = coastline;
-        this.tileSource = tileSource;
+        this.mapTiles = mapTiles;
         headline.setColor(ReportColors.HEADER);
         headline.setTextSize(22);
         headline.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
@@ -92,20 +94,36 @@ public final class FlightReportBuilder {
     /** Draws the whole page on a canvas of PAGE_WIDTH by PAGE_HEIGHT units; true when the map is the online one. */
     boolean drawPage(Canvas canvas, FlightRecord flight, List<FlightPoint> points, FlightUnits units) {
         drawHeader(canvas, flight);
-        TileLayer tiles = drawMap(canvas, points, units);
-        drawStatistics(canvas, flight, points, units);
-        drawProfiles(canvas, flight, points, units);
-        canvas.drawText((tiles.hasTiles() ? tileSource.attribution() + " " : "Map: Natural Earth (public domain). ")
-                + "Recorded with MyAssistant. For fun only: not for navigation or safety.", MARGIN, PAGE_HEIGHT - 12, footer);
-        return tiles.isComplete();
-    }
-
-    private TileLayer drawMap(Canvas canvas, List<FlightPoint> points, FlightUnits units) {
         RectF area = new RectF(MARGIN, MAP_TOP, PAGE_WIDTH - MARGIN - STATS_WIDTH - GAP, CHART_TOP - GAP);
         MapProjection projection = RouteMapPainter.projectionFor(area, points);
-        TileLayer tiles = TileLayer.load(tileSource, projection);
-        new RouteMapPainter(coastline).draw(canvas, area, projection, points, units.getSpeed(), tiles);
-        return tiles;
+        List<TileLayer> layers = loadLayers(projection);
+        new RouteMapPainter(coastline).draw(canvas, area, projection, points, units.getSpeed(), layers);
+        drawStatistics(canvas, flight, points, units);
+        drawProfiles(canvas, flight, points, units);
+        boolean photo = layers.get(0).hasTiles();
+        canvas.drawText((photo ? mapTiles.getImagery().attribution() + " " : "Map: Natural Earth (public domain). ")
+                + "Recorded with MyAssistant. For fun only: not for navigation or safety.", MARGIN, PAGE_HEIGHT - 12, footer);
+        boolean complete = true;
+        for (TileLayer layer : layers) {
+            complete &= layer.isComplete();
+        }
+        return complete;
+    }
+
+    /**
+     * The photo first, then the names over it. The names are only asked for when the photo came, and the road
+     * names only where the map is close enough to have them.
+     */
+    private List<TileLayer> loadLayers(MapProjection projection) {
+        List<TileGrid.Tile> wanted = TileLayer.tilesFor(projection);
+        List<TileLayer> layers = new ArrayList<>();
+        TileLayer photo = TileLayer.load(mapTiles.getImagery(), wanted);
+        layers.add(photo);
+        if (photo.isComplete()) {
+            layers.add(TileLayer.load(mapTiles.getRoads(), wanted.get(0).getZoom() >= ROADS_MIN_ZOOM ? wanted : new ArrayList<>()));
+            layers.add(TileLayer.load(mapTiles.getPlaces(), wanted));
+        }
+        return layers;
     }
 
     private void drawHeader(Canvas canvas, FlightRecord flight) {
