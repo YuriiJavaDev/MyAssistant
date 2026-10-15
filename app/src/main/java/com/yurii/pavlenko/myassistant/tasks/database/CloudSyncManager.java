@@ -3,9 +3,14 @@ package com.yurii.pavlenko.myassistant.tasks.database;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
+import com.yurii.pavlenko.myassistant.flights.database.FlightDatabase;
+import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
+import com.yurii.pavlenko.myassistant.flights.model.FlightReportSummary;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupArchive;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupRestorer;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,11 +20,13 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Uploads the local backup (task, step and flight databases and scan archive) to a WebDAV server and restores it from there. */
+/** Uploads the local backup (task, step and flight databases, flight report PDFs and scan archive) to a WebDAV server and restores it from there. */
 public class CloudSyncManager {
 
     private static final int TIMEOUT_MS = 10_000;
@@ -98,11 +105,33 @@ public class CloudSyncManager {
         return database.getFile(context).exists();
     }
 
-    /** Uploads the flight database, which holds the PDF reports and can be large, and remembers which state went up. */
+    /**
+     * Uploads the flight database and then each flight report as a PDF file of its own, so the reports can be
+     * opened straight from the cloud; remembers which state went up.
+     */
     public void uploadFlightsBlocking() throws IOException {
         String signature = flightsSignature();
         uploadDatabaseBlocking(ManagedDatabase.FLIGHTS);
+        uploadFlightReportsBlocking();
         configManager.saveUploadedFlightSignature(signature);
+    }
+
+    /** Sends only the reports that are new or were made again, which is told by the size of the PDF. */
+    private void uploadFlightReportsBlocking() throws IOException {
+        FlightDao dao = FlightDatabase.getInstance(context).flightDao();
+        Set<String> uploaded = configManager.getUploadedFlightReports();
+        Set<String> current = new HashSet<>();
+        for (FlightReportSummary report : dao.reportSummaries()) {
+            String key = report.getFlightId() + ":" + report.getSize();
+            current.add(key);
+            byte[] pdf = uploaded.contains(key) ? null : dao.reportPdf(report.getFlightId());
+            if (pdf != null) {
+                upload(FlightReportName.of(report.getStartMillis()), new ByteArrayInputStream(pdf), pdf.length);
+                uploaded.add(key);
+                configManager.saveUploadedFlightReports(uploaded);
+            }
+        }
+        configManager.saveUploadedFlightReports(current);
     }
 
     /** True when the flights have changed since they were last uploaded. */
@@ -174,12 +203,17 @@ public class CloudSyncManager {
     }
 
     private void upload(String fileName, File file) throws IOException {
+        try (InputStream in = new FileInputStream(file)) {
+            upload(fileName, in, file.length());
+        }
+    }
+
+    private void upload(String fileName, InputStream in, long length) throws IOException {
         HttpURLConnection connection = openConnection(fileName, "PUT");
         try {
             connection.setDoOutput(true);
-            connection.setFixedLengthStreamingMode(file.length());
-            try (InputStream in = new FileInputStream(file);
-                 OutputStream out = connection.getOutputStream()) {
+            connection.setFixedLengthStreamingMode(length);
+            try (OutputStream out = connection.getOutputStream()) {
                 DatabaseFileManager.copy(in, out);
             }
             requireSuccess(connection);

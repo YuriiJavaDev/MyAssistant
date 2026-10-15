@@ -135,4 +135,43 @@ public class MapLogicTest {
         assertEquals(-4.1, stats.getMaxSink(), 1e-9);
         assertEquals(0, FlightStats.empty().getMaxSink(), 1e-9);
     }
+
+    @Test
+    public void picksTheTilesThatCoverTheArea() {
+        List<TileGrid.Tile> tiles = TileGrid.cover(34.76, 34.79, 31.95, 31.98, 3.0, 1.5, 20);
+        assertTrue(tiles.size() >= 1 && tiles.size() <= 20);
+        int zoom = tiles.get(0).getZoom();
+        assertTrue(zoom >= 14 && zoom <= TileGrid.MAX_ZOOM);
+        for (TileGrid.Tile tile : tiles) {
+            assertEquals(zoom, tile.getZoom());
+        }
+        double west = Double.MAX_VALUE, east = -Double.MAX_VALUE, south = Double.MAX_VALUE, north = -Double.MAX_VALUE;
+        for (TileGrid.Tile tile : tiles) {
+            west = Math.min(west, tile.getWest());
+            east = Math.max(east, tile.getEast());
+            south = Math.min(south, tile.getSouth());
+            north = Math.max(north, tile.getNorth());
+        }
+        assertTrue(west <= 34.76 && east >= 34.79 && south <= 31.95 && north >= 31.98);
+    }
+
+    @Test
+    public void lowersTheZoomWhenTooManyTilesWouldBeNeeded() {
+        List<TileGrid.Tile> tiles = TileGrid.cover(34.0, 35.5, 31.0, 32.5, 3.0, 1.5, 20);
+        assertTrue(tiles.size() <= 20);
+    }
+
+    @Test
+    public void knowsTheTileOfAKnownPlace() {
+        assertEquals(0, TileGrid.tileX(-179.9, 1));
+        assertEquals(1, TileGrid.tileX(0.1, 1));
+        assertEquals(0, TileGrid.tileY(60, 1));
+        assertEquals(1, TileGrid.tileY(-60, 1));
+    }
+
+    @Test
+    public void namesAReportByItsStart() {
+        String name = FlightReportName.of(0);
+        assertTrue(name.matches("flight_\\d{8}_\\d{4}\\.pdf"));
+    }
 }

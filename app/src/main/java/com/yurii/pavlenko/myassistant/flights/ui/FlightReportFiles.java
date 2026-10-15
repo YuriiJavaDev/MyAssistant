@@ -9,15 +9,13 @@ import android.widget.Toast;
 import androidx.core.content.FileProvider;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 /** Hands a flight report to other apps, which read it through the FileProvider. */
 final class FlightReportFiles {
@@ -56,8 +54,7 @@ final class FlightReportFiles {
         if (!folder.isDirectory() && !folder.mkdirs()) {
             throw new IllegalStateException("Cannot create the report folder");
         }
-        String name = "flight_" + new SimpleDateFormat("yyyyMMdd_HHmm", Locale.US).format(new Date(flight.getStartMillis())) + ".pdf";
-        File file = new File(folder, name);
+        File file = new File(folder, FlightReportName.of(flight.getStartMillis()));
         try (OutputStream out = new FileOutputStream(file)) {
             out.write(pdf);
         } catch (IOException e) {

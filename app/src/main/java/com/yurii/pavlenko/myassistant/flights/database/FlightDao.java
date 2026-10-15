@@ -10,6 +10,7 @@ import androidx.room.Update;
 import com.yurii.pavlenko.myassistant.flights.model.FlightPointRecord;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 import com.yurii.pavlenko.myassistant.flights.model.FlightReportRecord;
+import com.yurii.pavlenko.myassistant.flights.model.FlightReportSummary;
 
 import java.util.List;
 
@@ -40,8 +41,15 @@ public interface FlightDao {
     @Query("SELECT * FROM flight_points WHERE flightId = :flightId ORDER BY timeMillis")
     List<FlightPointRecord> points(long flightId);
 
+    @Query("SELECT * FROM flight_reports WHERE flightId = :flightId")
+    FlightReportRecord report(long flightId);
+
     @Query("SELECT pdf FROM flight_reports WHERE flightId = :flightId")
     byte[] reportPdf(long flightId);
+
+    @Query("SELECT f.id AS flightId, f.startMillis AS startMillis, length(r.pdf) AS size FROM flights f "
+            + "INNER JOIN flight_reports r ON r.flightId = f.id ORDER BY f.startMillis")
+    List<FlightReportSummary> reportSummaries();
 
     @Query("DELETE FROM flights WHERE id = :id")
     void deleteFlight(long id);

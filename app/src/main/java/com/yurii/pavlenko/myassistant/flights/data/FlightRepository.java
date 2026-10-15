@@ -14,6 +14,7 @@ import com.yurii.pavlenko.myassistant.flights.logic.FlightStats;
 import com.yurii.pavlenko.myassistant.flights.model.FlightPointRecord;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 import com.yurii.pavlenko.myassistant.flights.model.FlightReportRecord;
+import com.yurii.pavlenko.myassistant.flights.report.BuiltReport;
 import com.yurii.pavlenko.myassistant.flights.report.FlightReportBuilder;
 
 import java.io.IOException;
@@ -99,15 +100,13 @@ public final class FlightRepository {
         });
     }
 
-    /** Hands over the PDF of a flight, building it first if it is missing; null when it cannot be had. */
+    /**
+     * Hands over the PDF of a flight, building it first if it is missing or has only the offline map and a
+     * connection now gives a better one; null when it cannot be had.
+     */
     public void loadReport(long flightId, Consumer<byte[]> onDone) {
         io.execute(() -> {
-            byte[] pdf = dao().reportPdf(flightId);
-            if (pdf == null) {
-                FlightRecord flight = dao().flight(flightId);
-                pdf = flight != null && flight.isFinished() ? buildReport(flight) : null;
-            }
-            byte[] result = pdf;
+            byte[] result = reportOf(flightId);
             main.post(() -> onDone.accept(result));
         });
     }
@@ -125,18 +124,34 @@ public final class FlightRepository {
                 stats.getDistanceMetres(), stats.getMaxSpeed(), stats.getMaxAltitude(), stats.getMaxClimb(),
                 stats.getMaxSink(), stats.getMaxGForce(), altitudeFromStart, true);
         dao().updateFlight(flight);
-        buildReport(flight);
+        reportOf(id);
     }
 
-    private byte[] buildReport(FlightRecord flight) {
+    private byte[] reportOf(long flightId) {
+        FlightReportRecord stored = dao().report(flightId);
+        if (stored != null && stored.isOnlineMap()) {
+            return stored.getPdf();
+        }
+        FlightRecord flight = dao().flight(flightId);
+        BuiltReport built = flight != null && flight.isFinished() ? buildReport(flight) : null;
+        if (built == null) {
+            return stored != null ? stored.getPdf() : null;
+        }
+        if (stored != null && !built.hasOnlineMap()) {
+            return stored.getPdf();
+        }
+        dao().saveReport(new FlightReportRecord(flightId, built.getPdf(), built.hasOnlineMap()));
+        return built.getPdf();
+    }
+
+    /** Builds the report of a flight and keeps it; null when the flight has no points or the PDF fails. */
+    private BuiltReport buildReport(FlightRecord flight) {
         List<FlightPoint> points = pointsOf(flight.getId());
         if (points.isEmpty()) {
             return null;
         }
         try {
-            byte[] pdf = new FlightReportBuilder(context).build(flight, points, new FlightUnitsStore(context).load());
-            dao().saveReport(new FlightReportRecord(flight.getId(), pdf));
-            return pdf;
+            return new FlightReportBuilder(context).build(flight, points, new FlightUnitsStore(context).load());
         } catch (IOException | RuntimeException e) {
             Log.e(TAG, "Cannot build the flight report", e);
             return null;

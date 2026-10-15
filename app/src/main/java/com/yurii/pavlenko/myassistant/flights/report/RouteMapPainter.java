@@ -16,8 +16,9 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Draws the route of a flight on an offline map: land and sea from the bundled coastline, a grid of
- * latitudes and longitudes, the route with its start and end, a scale bar and the north arrow.
+ * Draws the route of a flight on a map: land and sea from the bundled coastline, which stays as the map when
+ * there are no tiles, the tiles over it, a grid of latitudes and longitudes, the route with its start and end,
+ * a scale bar and the north arrow.
  */
 final class RouteMapPainter {
 
@@ -34,6 +35,7 @@ final class RouteMapPainter {
     private final Paint grid = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint route = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint marker = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint casing = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint outline = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint ink = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint text = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -59,6 +61,11 @@ final class RouteMapPainter {
         route.setStrokeWidth(2f);
         route.setStrokeCap(Paint.Cap.ROUND);
         route.setStrokeJoin(Paint.Join.ROUND);
+        casing.setColor(0xFFFFFFFF);
+        casing.setStyle(Paint.Style.STROKE);
+        casing.setStrokeWidth(4f);
+        casing.setStrokeCap(Paint.Cap.ROUND);
+        casing.setStrokeJoin(Paint.Join.ROUND);
         outline.setColor(0xFFFFFFFF);
         outline.setStyle(Paint.Style.STROKE);
         outline.setStrokeWidth(1.5f);
@@ -70,17 +77,22 @@ final class RouteMapPainter {
         labelBackground.setColor(0xCCFFFFFF);
     }
 
-    /** Draws the map of the route inside the area; the points must not be empty. */
-    void draw(Canvas canvas, RectF area, List<FlightPoint> points, SpeedUnit units) {
+    /** The projection that shows the whole route inside the area; the points must not be empty. */
+    static MapProjection projectionFor(RectF area, List<FlightPoint> points) {
         double[] bounds = boundsOf(points);
-        MapProjection projection = MapProjection.fit(bounds[0], bounds[1], bounds[2], bounds[3],
+        return MapProjection.fit(bounds[0], bounds[1], bounds[2], bounds[3],
                 area.width(), area.height(), PADDING, MIN_SPAN_METRES);
+    }
 
+    /** Draws the map of the route inside the area, with the projection that {@link #projectionFor} made for it. */
+    void draw(Canvas canvas, RectF area, MapProjection projection, List<FlightPoint> points, SpeedUnit units,
+              TileLayer tiles) {
         canvas.save();
         canvas.clipRect(area);
         canvas.translate(area.left, area.top);
         canvas.drawRect(0, 0, area.width(), area.height(), sea);
         drawLand(canvas, projection, area);
+        tiles.draw(canvas, projection);
         drawGrid(canvas, projection, area);
         drawRoute(canvas, projection, points);
         drawScaleBar(canvas, projection, area, units);
@@ -179,6 +191,7 @@ final class RouteMapPainter {
                 routePath.lineTo(x, y);
             }
         }
+        canvas.drawPath(routePath, casing);
         canvas.drawPath(routePath, route);
         FlightPoint first = points.get(0);
         FlightPoint last = points.get(points.size() - 1);
