@@ -8,15 +8,21 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.yurii.pavlenko.myassistant.flights.data.FlightRecorder;
+import com.yurii.pavlenko.myassistant.flights.data.FlightRepository;
 import com.yurii.pavlenko.myassistant.flights.data.FlightUnits;
 import com.yurii.pavlenko.myassistant.flights.data.FlightUnitsStore;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightSnapshot;
 import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
+import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 /** State of the Flights screen: the instrument readings, the chosen units and the sound settings. */
 public class FlightsViewModel extends AndroidViewModel {
 
     private final FlightRecorder recorder;
+    private final FlightRepository repository;
     private final FlightUnitsStore unitsStore;
     private final MutableLiveData<FlightUnits> units;
     private final MutableLiveData<VarioSoundSettings> sound;
@@ -24,6 +30,7 @@ public class FlightsViewModel extends AndroidViewModel {
     public FlightsViewModel(@NonNull Application application) {
         super(application);
         recorder = FlightRecorder.get(application);
+        repository = FlightRepository.get(application);
         unitsStore = new FlightUnitsStore(application);
         units = new MutableLiveData<>(unitsStore.load());
         sound = new MutableLiveData<>(recorder.getSoundSettings());
@@ -39,6 +46,18 @@ public class FlightsViewModel extends AndroidViewModel {
 
     public LiveData<VarioSoundSettings> getSound() {
         return sound;
+    }
+
+    public LiveData<List<FlightRecord>> getFlights() {
+        return repository.observeFlights();
+    }
+
+    public void loadReport(long flightId, Consumer<byte[]> onDone) {
+        repository.loadReport(flightId, onDone);
+    }
+
+    public void deleteFlight(long flightId) {
+        repository.deleteFlight(flightId);
     }
 
     public void saveUnits(FlightUnits chosen) {

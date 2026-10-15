@@ -45,6 +45,7 @@ public final class FlightRecorder {
     private final GForceSensor gForceSensor;
     private final GpsTracker gps;
     private final VarioSoundStore soundStore;
+    private final FlightRepository repository;
     private final VarioAudio audio = new VarioAudio();
     private final AngleSmoother headingSmoother = new AngleSmoother(ANGLE_WEIGHT);
     private final AngleSmoother pitchSmoother = new AngleSmoother(ANGLE_WEIGHT);
@@ -75,6 +76,8 @@ public final class FlightRecorder {
         gps = new GpsTracker(context, this::onFix);
         soundStore = new VarioSoundStore(context);
         soundSettings = soundStore.load();
+        repository = FlightRepository.get(context);
+        repository.recoverUnfinished();
     }
 
     public static synchronized FlightRecorder get(Context context) {
@@ -121,6 +124,7 @@ public final class FlightRecorder {
         hasFix = false;
         gPeak = gForce;
         recording = true;
+        repository.beginFlight(System.currentTimeMillis(), altitudeFromStart());
         updateSensors();
         publish(true);
         return true;
@@ -131,6 +135,7 @@ public final class FlightRecorder {
             return;
         }
         recording = false;
+        repository.finishFlight(stats, altitudeFromStart());
         updateSensors();
         publish(true);
     }
@@ -218,8 +223,10 @@ public final class FlightRecorder {
         gpsVario.add(location.getTime(), altitudeMetres);
         hasFix = true;
         if (recording) {
-            stats = stats.plus(new FlightPoint(location.getTime(), location.getLatitude(), location.getLongitude(),
-                    shownAltitude(), speed), gPeak);
+            FlightPoint point = new FlightPoint(location.getTime(), location.getLatitude(), location.getLongitude(),
+                    shownAltitude(), speed, climbRate());
+            stats = stats.plus(point, gPeak);
+            repository.appendPoint(point, gPeak);
             gPeak = gForce;
         }
         publish(true);

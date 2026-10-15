@@ -8,14 +8,16 @@ public final class FlightPoint {
     private final double longitude;
     private final double altitudeMetres;
     private final double speedMetresPerSecond;
+    private final double climbMetresPerSecond;
 
     public FlightPoint(long timeMillis, double latitude, double longitude,
-                       double altitudeMetres, double speedMetresPerSecond) {
+                       double altitudeMetres, double speedMetresPerSecond, double climbMetresPerSecond) {
         this.timeMillis = timeMillis;
         this.latitude = latitude;
         this.longitude = longitude;
         this.altitudeMetres = altitudeMetres;
         this.speedMetresPerSecond = speedMetresPerSecond;
+        this.climbMetresPerSecond = climbMetresPerSecond;
     }
 
     public long getTimeMillis() {
@@ -36,5 +38,10 @@ public final class FlightPoint {
 
     public double getSpeedMetresPerSecond() {
         return speedMetresPerSecond;
+    }
+
+    /** Metres per second, positive when climbing. */
+    public double getClimbMetresPerSecond() {
+        return climbMetresPerSecond;
     }
 }

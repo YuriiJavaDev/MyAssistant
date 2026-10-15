@@ -11,29 +11,34 @@ public final class FlightStats {
     private final double distanceMetres;
     private final double maxSpeed;
     private final double maxAltitude;
+    private final double maxClimb;
+    private final double maxSink;
     private final double maxGForce;
     private final FlightPoint last;
 
     private FlightStats(long startMillis, long endMillis, double distanceMetres, double maxSpeed,
-                        double maxAltitude, double maxGForce, FlightPoint last) {
+                        double maxAltitude, double maxClimb, double maxSink, double maxGForce, FlightPoint last) {
         this.startMillis = startMillis;
         this.endMillis = endMillis;
         this.distanceMetres = distanceMetres;
         this.maxSpeed = maxSpeed;
         this.maxAltitude = maxAltitude;
+        this.maxClimb = maxClimb;
+        this.maxSink = maxSink;
         this.maxGForce = maxGForce;
         this.last = last;
     }
 
     public static FlightStats empty() {
-        return new FlightStats(0, 0, 0, 0, Double.NEGATIVE_INFINITY, 0, null);
+        return new FlightStats(0, 0, 0, 0, Double.NEGATIVE_INFINITY, 0, 0, 0, null);
     }
 
     /** Returns the totals including a new position fix and the load felt at that moment, in G. */
     public FlightStats plus(FlightPoint point, double gForce) {
         if (last == null) {
             return new FlightStats(point.getTimeMillis(), point.getTimeMillis(), 0,
-                    point.getSpeedMetresPerSecond(), point.getAltitudeMetres(), gForce, point);
+                    point.getSpeedMetresPerSecond(), point.getAltitudeMetres(),
+                    Math.max(0, point.getClimbMetresPerSecond()), Math.min(0, point.getClimbMetresPerSecond()), gForce, point);
         }
         double segment = GeoMath.distanceMetres(last.getLatitude(), last.getLongitude(),
                 point.getLatitude(), point.getLongitude());
@@ -42,13 +47,15 @@ public final class FlightStats {
         return new FlightStats(startMillis, point.getTimeMillis(), distanceMetres + travelled,
                 Math.max(maxSpeed, point.getSpeedMetresPerSecond()),
                 Math.max(maxAltitude, point.getAltitudeMetres()),
+                Math.max(maxClimb, point.getClimbMetresPerSecond()),
+                Math.min(maxSink, point.getClimbMetresPerSecond()),
                 Math.max(maxGForce, gForce), point);
     }
 
     /** The same totals with the highest altitude counted again from the current one, after a new zero. */
     public FlightStats withAltitudeRestarted(double currentAltitude) {
         return last == null ? this : new FlightStats(startMillis, endMillis, distanceMetres, maxSpeed,
-                currentAltitude, maxGForce, last);
+                currentAltitude, maxClimb, maxSink, maxGForce, last);
     }
 
     public boolean isEmpty() {
@@ -84,6 +91,16 @@ public final class FlightStats {
     /** The highest altitude reached, or 0 before the first fix. */
     public double getMaxAltitude() {
         return last == null ? 0 : maxAltitude;
+    }
+
+    /** The strongest climb in metres per second; 0 if the flight never climbed. */
+    public double getMaxClimb() {
+        return maxClimb;
+    }
+
+    /** The strongest descent in metres per second as a negative number; 0 if the flight never sank. */
+    public double getMaxSink() {
+        return maxSink;
     }
 
     public double getMaxGForce() {

@@ -143,11 +143,11 @@ public class VarioLogicTest {
 
     @Test
     public void restartingTheAltitudeCountsTheHighPointAgain() {
-        FlightStats stats = FlightStats.empty().plus(new FlightPoint(0, 32, 34.8, 400, 5), 1);
+        FlightStats stats = FlightStats.empty().plus(new FlightPoint(0, 32, 34.8, 400, 5, 0), 1);
         assertEquals(400, stats.getMaxAltitude(), 1e-9);
         stats = stats.withAltitudeRestarted(0);
         assertEquals(0, stats.getMaxAltitude(), 1e-9);
-        stats = stats.plus(new FlightPoint(5000, 32, 34.8, 120, 5), 1);
+        stats = stats.plus(new FlightPoint(5000, 32, 34.8, 120, 5, 0), 1);
         assertEquals(120, stats.getMaxAltitude(), 1e-9);
     }
 

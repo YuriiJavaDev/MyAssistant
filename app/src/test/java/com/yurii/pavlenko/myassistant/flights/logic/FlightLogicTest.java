@@ -8,7 +8,7 @@ import org.junit.Test;
 public class FlightLogicTest {
 
     private static FlightPoint point(long seconds, double lat, double lon, double altitude, double speed) {
-        return new FlightPoint(seconds * 1000, lat, lon, altitude, speed);
+        return new FlightPoint(seconds * 1000, lat, lon, altitude, speed, 0);
     }
 
     @Test

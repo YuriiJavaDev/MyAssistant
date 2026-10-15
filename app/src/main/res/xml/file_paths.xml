@@ -3,4 +3,5 @@
     <cache-path name="backup_cache" path="backups/" />
     <cache-path name="scan_capture" path="scan_capture/" />
     <cache-path name="scan_share" path="scan_share/" />
+    <cache-path name="flight_reports" path="flight_reports/" />
 </paths>

@@ -39,6 +39,7 @@ public class FlightsFragment extends Fragment {
 
     private static final String UNITS_TAG = "flight_units";
     private static final String SOUND_TAG = "vario_sound";
+    private static final String JOURNAL_TAG = "flight_journal";
 
     private FragmentFlightsBinding binding;
     private FlightsViewModel viewModel;
@@ -62,6 +63,7 @@ public class FlightsFragment extends Fragment {
 
         binding.controls.recordButton.setOnClickListener(v -> onRecordButton());
         binding.controls.unitsButton.setOnClickListener(v -> new FlightUnitsDialog().show(getChildFragmentManager(), UNITS_TAG));
+        binding.controls.journalButton.setOnClickListener(v -> new FlightJournalDialog().show(getChildFragmentManager(), JOURNAL_TAG));
         binding.controls.accessButton.setOnClickListener(v -> onAccessButton());
         binding.readouts.zeroButton.setOnClickListener(v -> viewModel.zeroAltitude());
         binding.readouts.zeroButton.setOnLongClickListener(v -> {

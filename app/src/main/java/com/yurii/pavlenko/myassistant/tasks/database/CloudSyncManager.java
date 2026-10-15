@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant.tasks.database;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupArchive;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupRestorer;
@@ -13,10 +14,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Uploads the local backup (task and step databases and scan archive) to a WebDAV server and restores it from there. */
+/** Uploads the local backup (task, step and flight databases and scan archive) to a WebDAV server and restores it from there. */
 public class CloudSyncManager {
 
     private static final int TIMEOUT_MS = 10_000;
@@ -48,6 +51,9 @@ public class CloudSyncManager {
             if (hasLocalDatabase(ManagedDatabase.STEPS)) {
                 uploadDatabaseBlocking(ManagedDatabase.STEPS);
             }
+            if (hasLocalDatabase(ManagedDatabase.FLIGHTS)) {
+                uploadFlightsBlocking();
+            }
             if (ScanBackupArchive.hasData(context)) {
                 uploadScansBlocking();
             }
@@ -56,19 +62,26 @@ public class CloudSyncManager {
     }
 
     /**
-     * Restores tasks, steps and scans from the cloud. Each file is downloaded and verified completely
+     * Restores tasks, steps, flights and scans from the cloud. Each file is downloaded and verified completely
      * before the local data is replaced, so a failed download leaves local data untouched.
      */
     public void restoreBackup(SyncCallback callback) {
         runAsync(() -> {
             downloadDatabaseBlocking(ManagedDatabase.TASKS, false);
-            boolean stepsRestored = downloadDatabaseBlocking(ManagedDatabase.STEPS, true);
-            boolean scansRestored = downloadScansBlocking();
-            if (stepsRestored && scansRestored) {
+            List<String> missing = new ArrayList<>();
+            if (!downloadDatabaseBlocking(ManagedDatabase.STEPS, true)) {
+                missing.add("step");
+            }
+            if (!downloadDatabaseBlocking(ManagedDatabase.FLIGHTS, true)) {
+                missing.add("flight");
+            }
+            if (!downloadScansBlocking()) {
+                missing.add("scan");
+            }
+            if (missing.isEmpty()) {
                 return "Backup successfully restored from cloud";
             }
-            return "Tasks restored from cloud (no " + (stepsRestored ? "scan" : scansRestored ? "step" : "step or scan")
-                    + " backup found there)";
+            return "Tasks restored from cloud (no " + TextUtils.join(" or ", missing) + " backup found there)";
         }, "Download error: ", callback);
     }
 
@@ -83,6 +96,24 @@ public class CloudSyncManager {
 
     public boolean hasLocalDatabase(ManagedDatabase database) {
         return database.getFile(context).exists();
+    }
+
+    /** Uploads the flight database, which holds the PDF reports and can be large, and remembers which state went up. */
+    public void uploadFlightsBlocking() throws IOException {
+        String signature = flightsSignature();
+        uploadDatabaseBlocking(ManagedDatabase.FLIGHTS);
+        configManager.saveUploadedFlightSignature(signature);
+    }
+
+    /** True when the flights have changed since they were last uploaded. */
+    public boolean flightsNeedUpload() {
+        return hasLocalDatabase(ManagedDatabase.FLIGHTS)
+                && !flightsSignature().equals(configManager.getUploadedFlightSignature());
+    }
+
+    private String flightsSignature() {
+        File database = ManagedDatabase.FLIGHTS.getFile(context);
+        return database.lastModified() + ":" + database.length();
     }
 
     /** The archive is built in the cache first, because the upload needs to know its size. */

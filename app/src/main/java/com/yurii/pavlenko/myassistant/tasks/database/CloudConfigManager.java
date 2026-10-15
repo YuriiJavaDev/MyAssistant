@@ -14,6 +14,7 @@ public class CloudConfigManager {
     private static final String KEY_PASSWORD = "webdav_password";
     private static final String KEY_AUTO_BACKUP = "is_auto_backup_enabled";
     private static final String KEY_SCAN_SIGNATURE = "last_uploaded_scan_signature";
+    private static final String KEY_FLIGHT_SIGNATURE = "last_uploaded_flight_signature";
 
     private final SharedPreferences sharedPreferences;
 
@@ -70,5 +71,14 @@ public class CloudConfigManager {
 
     public void saveUploadedScanSignature(String signature) {
         sharedPreferences.edit().putString(KEY_SCAN_SIGNATURE, signature).apply();
+    }
+
+    /** Identifies the flight database as it was at the last upload, so an unchanged one is not uploaded again. */
+    public String getUploadedFlightSignature() {
+        return sharedPreferences.getString(KEY_FLIGHT_SIGNATURE, "");
+    }
+
+    public void saveUploadedFlightSignature(String signature) {
+        sharedPreferences.edit().putString(KEY_FLIGHT_SIGNATURE, signature).apply();
     }
 }

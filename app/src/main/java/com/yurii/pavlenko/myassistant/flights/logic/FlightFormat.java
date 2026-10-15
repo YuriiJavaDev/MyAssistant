@@ -27,6 +27,13 @@ public final class FlightFormat {
                 unit.fromMetresPerSecond(metresPerSecond), unit.symbol());
     }
 
+    /** A position as degrees with the side of the world, for example 32.8000°N 35.0500°E. */
+    public static String position(FlightPoint point) {
+        return String.format(Locale.US, "%.4f°%s %.4f°%s",
+                Math.abs(point.getLatitude()), point.getLatitude() < 0 ? "S" : "N",
+                Math.abs(point.getLongitude()), point.getLongitude() < 0 ? "W" : "E");
+    }
+
     public static String gForce(double g) {
         return String.format(Locale.US, "%.2f G", g);
     }
