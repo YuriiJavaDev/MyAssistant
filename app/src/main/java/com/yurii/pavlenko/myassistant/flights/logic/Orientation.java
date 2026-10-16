@@ -30,6 +30,17 @@ public final class Orientation {
      * @param matrix the 3x3 rotation matrix from the device to the world, row by row
      */
     public static Orientation fromRotationMatrix(float[] matrix) {
+        return fromRotationMatrix(matrix, 0);
+    }
+
+    /**
+     * The same, as seen from the screen: the top of the screen is the edge that points and rises, whichever way
+     * the phone is turned.
+     *
+     * @param quarterTurns the display rotation, see {@link ScreenFrame#of}
+     */
+    public static Orientation fromRotationMatrix(float[] deviceMatrix, int quarterTurns) {
+        float[] matrix = ScreenFrame.of(deviceMatrix, quarterTurns);
         double upX = matrix[UP_X];
         double upY = matrix[UP_Y];
         double upZ = matrix[UP_Z];
