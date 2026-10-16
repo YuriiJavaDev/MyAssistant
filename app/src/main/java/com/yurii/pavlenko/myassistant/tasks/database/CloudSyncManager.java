@@ -166,23 +166,32 @@ public class CloudSyncManager {
                 && !ScanBackupArchive.signature(context).equals(configManager.getUploadedScanSignature());
     }
 
-    /** Returns false when an optional database is missing on the server, as in a backup made before it existed. */
+    /**
+     * Looks for the backup under its current name and then under the names it had before. Returns false when an
+     * optional database is missing on the server, as in a backup made before it existed.
+     */
     private boolean downloadDatabaseBlocking(ManagedDatabase database, boolean optional) throws IOException {
-        HttpURLConnection connection = openConnection(database.getBackupFileName(), "GET");
-        try {
-            if (optional && connection.getResponseCode() == HTTP_NOT_FOUND) {
-                return false;
+        for (String fileName : database.getRestoreFileNames()) {
+            HttpURLConnection connection = openConnection(fileName, "GET");
+            try {
+                if (connection.getResponseCode() == HTTP_NOT_FOUND) {
+                    continue;
+                }
+                requireSuccess(connection);
+                DatabaseFileManager.Staged staged;
+                try (InputStream in = connection.getInputStream()) {
+                    staged = DatabaseFileManager.stage(context, in, database);
+                }
+                DatabaseFileManager.replaceWith(context, staged);
+                return true;
+            } finally {
+                connection.disconnect();
             }
-            requireSuccess(connection);
-            DatabaseFileManager.Staged staged;
-            try (InputStream in = connection.getInputStream()) {
-                staged = DatabaseFileManager.stage(context, in, database);
-            }
-            DatabaseFileManager.replaceWith(context, staged);
-            return true;
-        } finally {
-            connection.disconnect();
         }
+        if (optional) {
+            return false;
+        }
+        throw new IOException("Server responded with HTTP " + HTTP_NOT_FOUND);
     }
 
     /** Returns false when the server has no scan archive, which is normal for a backup made before scans existed. */
