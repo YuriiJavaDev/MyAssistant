@@ -6,6 +6,10 @@ import android.content.SharedPreferences;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 public class CloudConfigManager {
 
     private static final String PREFS_NAME = "myassistant_secure_cloud_prefs";
@@ -14,6 +18,8 @@ public class CloudConfigManager {
     private static final String KEY_PASSWORD = "webdav_password";
     private static final String KEY_AUTO_BACKUP = "is_auto_backup_enabled";
     private static final String KEY_SCAN_SIGNATURE = "last_uploaded_scan_signature";
+    private static final String KEY_FLIGHT_SIGNATURE = "last_uploaded_flight_signature";
+    private static final String KEY_FLIGHT_REPORTS = "uploaded_flight_reports";
 
     private final SharedPreferences sharedPreferences;
 
@@ -70,5 +76,23 @@ public class CloudConfigManager {
 
     public void saveUploadedScanSignature(String signature) {
         sharedPreferences.edit().putString(KEY_SCAN_SIGNATURE, signature).apply();
+    }
+
+    /** Identifies the flight database as it was at the last upload, so an unchanged one is not uploaded again. */
+    public String getUploadedFlightSignature() {
+        return sharedPreferences.getString(KEY_FLIGHT_SIGNATURE, "");
+    }
+
+    public void saveUploadedFlightSignature(String signature) {
+        sharedPreferences.edit().putString(KEY_FLIGHT_SIGNATURE, signature).apply();
+    }
+
+    /** Flight reports already in the cloud, each as the flight id and the size of the PDF that was sent. */
+    public Set<String> getUploadedFlightReports() {
+        return new HashSet<>(sharedPreferences.getStringSet(KEY_FLIGHT_REPORTS, Collections.emptySet()));
+    }
+
+    public void saveUploadedFlightReports(Set<String> reports) {
+        sharedPreferences.edit().putStringSet(KEY_FLIGHT_REPORTS, new HashSet<>(reports)).apply();
     }
 }

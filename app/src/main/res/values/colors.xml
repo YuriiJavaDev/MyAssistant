@@ -38,4 +38,17 @@
     <color name="md_surface_variant">#E7E0EC</color>
     <color name="md_on_surface_variant">#49454F</color>
     <color name="md_outline">#79747E</color>
+
+    <!-- Flight instruments: a dark face with light markings, the same by day and night -->
+    <color name="instrument_face">#FF1E1A2E</color>
+    <color name="instrument_ink">#FFF1E9FF</color>
+    <color name="instrument_ink_dim">#FF9A93B0</color>
+    <color name="instrument_climb">#FF4CC38A</color>
+    <color name="instrument_sink">#FFE5584F</color>
+    <color name="instrument_sky">#FF3F7FBF</color>
+    <color name="instrument_ground">#FF86583A</color>
+
+    <!-- The dot on the record button: dark while idle, bright while recording -->
+    <color name="record_idle">#FFA30D0D</color>
+    <color name="record_active">#FFFF2B2B</color>
 </resources>

@@ -12,8 +12,8 @@ import java.io.IOException;
 
 /**
  * Uploads the local backup to the cloud on a schedule when automatic backup is enabled.
- * Tasks and steps are small and always uploaded; the scan archive can be large, so it goes only when it has changed
- * and the connection is not metered.
+ * Tasks and steps are small and always uploaded; the flights (with their PDF reports) and the scan archive can be
+ * large, so they go only when they have changed and the connection is not metered.
  */
 public class CloudBackupWorker extends Worker {
 
@@ -40,8 +40,13 @@ public class CloudBackupWorker extends Worker {
             if (syncManager.hasLocalDatabase(ManagedDatabase.STEPS)) {
                 syncManager.uploadDatabaseBlocking(ManagedDatabase.STEPS);
             }
-            if (!isConnectionMetered(context) && syncManager.scansNeedUpload()) {
-                syncManager.uploadScansBlocking();
+            if (!isConnectionMetered(context)) {
+                if (syncManager.flightsNeedUpload()) {
+                    syncManager.uploadFlightsBlocking();
+                }
+                if (syncManager.scansNeedUpload()) {
+                    syncManager.uploadScansBlocking();
+                }
             }
             return Result.success();
         } catch (IOException e) {

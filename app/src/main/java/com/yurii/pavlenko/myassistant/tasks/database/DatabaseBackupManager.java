@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 /**
- * Exports the local data (task and step databases and scan archive) to a folder the user picks or to another app,
+ * Exports the local data (task, step and flight databases and scan archive) to a folder the user picks or to another app,
  * and imports it back from user-selected files. All work runs off the main thread and reports back on it.
  */
 public final class DatabaseBackupManager {
@@ -81,7 +81,7 @@ public final class DatabaseBackupManager {
     }
 
     /**
-     * Restores from the selected files: task and step databases and/or a scan archive, recognised by their content.
+     * Restores from the selected files: task, step and flight databases and/or a scan archive, recognised by their content.
      * Each file is verified before it replaces local data, so a wrong or damaged file leaves it untouched.
      */
     public static void importFiles(Context context, List<Uri> uris, Consumer<Boolean> onDone) {

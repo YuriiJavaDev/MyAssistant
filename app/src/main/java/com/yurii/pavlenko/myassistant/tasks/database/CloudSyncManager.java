@@ -1,10 +1,16 @@
 package com.yurii.pavlenko.myassistant.tasks.database;
 
 import android.content.Context;
+import android.text.TextUtils;
 
+import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
+import com.yurii.pavlenko.myassistant.flights.database.FlightDatabase;
+import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
+import com.yurii.pavlenko.myassistant.flights.model.FlightReportSummary;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupArchive;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupRestorer;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -13,10 +19,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** Uploads the local backup (task and step databases and scan archive) to a WebDAV server and restores it from there. */
+/** Uploads the local backup (task, step and flight databases, flight report PDFs and scan archive) to a WebDAV server and restores it from there. */
 public class CloudSyncManager {
 
     private static final int TIMEOUT_MS = 10_000;
@@ -48,6 +58,9 @@ public class CloudSyncManager {
             if (hasLocalDatabase(ManagedDatabase.STEPS)) {
                 uploadDatabaseBlocking(ManagedDatabase.STEPS);
             }
+            if (hasLocalDatabase(ManagedDatabase.FLIGHTS)) {
+                uploadFlightsBlocking();
+            }
             if (ScanBackupArchive.hasData(context)) {
                 uploadScansBlocking();
             }
@@ -56,19 +69,26 @@ public class CloudSyncManager {
     }
 
     /**
-     * Restores tasks, steps and scans from the cloud. Each file is downloaded and verified completely
+     * Restores tasks, steps, flights and scans from the cloud. Each file is downloaded and verified completely
      * before the local data is replaced, so a failed download leaves local data untouched.
      */
     public void restoreBackup(SyncCallback callback) {
         runAsync(() -> {
             downloadDatabaseBlocking(ManagedDatabase.TASKS, false);
-            boolean stepsRestored = downloadDatabaseBlocking(ManagedDatabase.STEPS, true);
-            boolean scansRestored = downloadScansBlocking();
-            if (stepsRestored && scansRestored) {
+            List<String> missing = new ArrayList<>();
+            if (!downloadDatabaseBlocking(ManagedDatabase.STEPS, true)) {
+                missing.add("step");
+            }
+            if (!downloadDatabaseBlocking(ManagedDatabase.FLIGHTS, true)) {
+                missing.add("flight");
+            }
+            if (!downloadScansBlocking()) {
+                missing.add("scan");
+            }
+            if (missing.isEmpty()) {
                 return "Backup successfully restored from cloud";
             }
-            return "Tasks restored from cloud (no " + (stepsRestored ? "scan" : scansRestored ? "step" : "step or scan")
-                    + " backup found there)";
+            return "Tasks restored from cloud (no " + TextUtils.join(" or ", missing) + " backup found there)";
         }, "Download error: ", callback);
     }
 
@@ -83,6 +103,46 @@ public class CloudSyncManager {
 
     public boolean hasLocalDatabase(ManagedDatabase database) {
         return database.getFile(context).exists();
+    }
+
+    /**
+     * Uploads the flight database and then each flight report as a PDF file of its own, so the reports can be
+     * opened straight from the cloud; remembers which state went up.
+     */
+    public void uploadFlightsBlocking() throws IOException {
+        String signature = flightsSignature();
+        uploadDatabaseBlocking(ManagedDatabase.FLIGHTS);
+        uploadFlightReportsBlocking();
+        configManager.saveUploadedFlightSignature(signature);
+    }
+
+    /** Sends only the reports that are new or were made again, which is told by the size of the PDF. */
+    private void uploadFlightReportsBlocking() throws IOException {
+        FlightDao dao = FlightDatabase.getInstance(context).flightDao();
+        Set<String> uploaded = configManager.getUploadedFlightReports();
+        Set<String> current = new HashSet<>();
+        for (FlightReportSummary report : dao.reportSummaries()) {
+            String key = report.getFlightId() + ":" + report.getSize();
+            current.add(key);
+            byte[] pdf = uploaded.contains(key) ? null : dao.reportPdf(report.getFlightId());
+            if (pdf != null) {
+                upload(FlightReportName.of(report.getStartMillis()), new ByteArrayInputStream(pdf), pdf.length);
+                uploaded.add(key);
+                configManager.saveUploadedFlightReports(uploaded);
+            }
+        }
+        configManager.saveUploadedFlightReports(current);
+    }
+
+    /** True when the flights have changed since they were last uploaded. */
+    public boolean flightsNeedUpload() {
+        return hasLocalDatabase(ManagedDatabase.FLIGHTS)
+                && !flightsSignature().equals(configManager.getUploadedFlightSignature());
+    }
+
+    private String flightsSignature() {
+        File database = ManagedDatabase.FLIGHTS.getFile(context);
+        return database.lastModified() + ":" + database.length();
     }
 
     /** The archive is built in the cache first, because the upload needs to know its size. */
@@ -143,12 +203,17 @@ public class CloudSyncManager {
     }
 
     private void upload(String fileName, File file) throws IOException {
+        try (InputStream in = new FileInputStream(file)) {
+            upload(fileName, in, file.length());
+        }
+    }
+
+    private void upload(String fileName, InputStream in, long length) throws IOException {
         HttpURLConnection connection = openConnection(fileName, "PUT");
         try {
             connection.setDoOutput(true);
-            connection.setFixedLengthStreamingMode(file.length());
-            try (InputStream in = new FileInputStream(file);
-                 OutputStream out = connection.getOutputStream()) {
+            connection.setFixedLengthStreamingMode(length);
+            try (OutputStream out = connection.getOutputStream()) {
                 DatabaseFileManager.copy(in, out);
             }
             requireSuccess(connection);
