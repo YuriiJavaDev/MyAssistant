@@ -19,9 +19,9 @@ public class ScreenFrameTest {
             float x;
             float y;
             switch (quarterTurns) {
-                case 1: x = -top; y = right; break;
+                case 1: x = top; y = -right; break;
                 case 2: x = -right; y = -top; break;
-                case 3: x = top; y = -right; break;
+                case 3: x = -top; y = right; break;
                 default: x = right; y = top; break;
             }
             device[row * 3] = x;
@@ -33,12 +33,13 @@ public class ScreenFrameTest {
 
     @Test
     public void aScreenTurnedSidewaysPointsWithItsTopEdge() {
-        // The natural top of the phone points east, so with the screen turned a quarter its top points north.
+        // A phone lying face up with its natural top to the east. Turned a quarter counterclockwise, the natural top
+        // is on the left of the screen, so the left of the screen is east and the top of the screen is south.
         float[] flatTopEast = {0, 1, 0, -1, 0, 0, 0, 0, 1};
         assertEquals(90, Orientation.fromRotationMatrix(flatTopEast, 0).getHeading(), 1e-3);
-        assertEquals(0, Orientation.fromRotationMatrix(flatTopEast, 1).getHeading(), 1e-3);
-        assertEquals(180, Orientation.fromRotationMatrix(flatTopEast, 3).getHeading(), 1e-3);
+        assertEquals(180, Orientation.fromRotationMatrix(flatTopEast, 1).getHeading(), 1e-3);
         assertEquals(270, Orientation.fromRotationMatrix(flatTopEast, 2).getHeading(), 1e-3);
+        assertEquals(0, Orientation.fromRotationMatrix(flatTopEast, 3).getHeading(), 1e-3);
     }
 
     @Test
@@ -66,6 +67,18 @@ public class ScreenFrameTest {
         float[] screenTopUp = {1, 0, 0, 0, C, -S, 0, S, C};
         Orientation seen = Orientation.fromRotationMatrix(deviceMatrix(screenTopUp, 1), 1);
         assertEquals(20, seen.getPitch(), 1e-3);
+        assertEquals(0, seen.getRoll(), 1e-3);
+    }
+
+    @Test
+    public void aSidewaysScreenHeldUprightHasTheSkyAbove() {
+        // Screen turned a quarter counterclockwise, phone upright, camera looking north. Written from the axes
+        // alone, as the columns of the device x, y and z axes in the world (east, north, up): the natural right
+        // of the phone is up, its natural top points west and the way out of the screen points south.
+        float[] device = {0, -1, 0, 0, 0, -1, 1, 0, 0};
+        Orientation seen = Orientation.fromRotationMatrix(device, 1);
+        assertEquals(0, seen.getHeading(), 1e-3);
+        assertEquals(0, seen.getPitch(), 1e-3);
         assertEquals(0, seen.getRoll(), 1e-3);
     }
 

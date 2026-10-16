@@ -16,7 +16,8 @@ public final class ScreenFrame {
      * @param quarterTurns how far the screen is turned from natural, counterclockwise, in quarter turns, as
      *                     the display rotation of Android reports it: 0, 1 for 90, 2 for 180 and 3 for 270 degrees
      * @return the matrix from the screen to the world, whose first column is the right of the screen, the second
-     * its top and the third the way out of the screen
+     * its top and the third the way out of the screen. With the screen turned a quarter counterclockwise
+     * the natural top of the phone is on the left of the screen and its natural right is the top.
      */
     public static float[] of(float[] matrix, int quarterTurns) {
         int right;
@@ -27,8 +28,8 @@ public final class ScreenFrame {
             case 1:
                 right = 1;
                 top = 0;
-                rightSign = 1;
-                topSign = -1;
+                rightSign = -1;
+                topSign = 1;
                 break;
             case 2:
                 right = 0;
@@ -39,8 +40,8 @@ public final class ScreenFrame {
             case 3:
                 right = 1;
                 top = 0;
-                rightSign = -1;
-                topSign = 1;
+                rightSign = 1;
+                topSign = -1;
                 break;
             default:
                 return matrix.clone();
