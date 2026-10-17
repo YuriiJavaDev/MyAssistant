@@ -43,8 +43,8 @@
     <color name="instrument_face">#FF1E1A2E</color>
     <color name="instrument_ink">#FFF1E9FF</color>
     <color name="instrument_ink_dim">#FF9A93B0</color>
-    <color name="instrument_climb">#FF4CC38A</color>
-    <color name="instrument_sink">#FFE5584F</color>
+    <color name="instrument_climb">#FF22E07A</color>
+    <color name="instrument_sink">#FFFF3B30</color>
     <color name="instrument_sky">#FF3F7FBF</color>
     <color name="instrument_ground">#FF86583A</color>
 

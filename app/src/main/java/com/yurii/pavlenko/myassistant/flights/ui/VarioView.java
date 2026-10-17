@@ -3,7 +3,9 @@ package com.yurii.pavlenko.myassistant.flights.ui;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.RadialGradient;
 import android.graphics.RectF;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 
 import androidx.annotation.Nullable;
@@ -23,6 +25,9 @@ public class VarioView extends InstrumentView {
     private static final float ZERO_ANGLE = 180f;
     private static final float SIDE_SWEEP = 140f;
     private static final float RIM_FRACTION = 0.93f;
+    private static final float SECTOR_FRACTION = 0.97f;
+    private static final int[] SECTOR_ALPHAS = {0x18, 0xA0, 0xF2};
+    private static final float[] SECTOR_STOPS = {0f, 0.55f, 1f};
 
     private final Paint band = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint sector = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -36,6 +41,10 @@ public class VarioView extends InstrumentView {
     private final RectF arc = new RectF();
     private final int climbColor;
     private final int sinkColor;
+
+    private Shader climbShader;
+    private Shader sinkShader;
+    private float shaderSize;
 
     private ClimbUnit unit = ClimbUnit.METRES_PER_SECOND;
     private double metresPerSecond;
@@ -94,14 +103,32 @@ public class VarioView extends InstrumentView {
         return ZERO_ANGLE + SIDE_SWEEP * (float) share;
     }
 
+    /** The sector glows from the middle to the rim, so it is strongest at the scale where the rate is read. */
     private void drawSector(Canvas canvas, float center, float radius) {
         double share = scaleShare();
-        float inner = radius * RIM_FRACTION * 0.86f;
-        arc.set(center - inner, center - inner, center + inner, center + inner);
-        sector.setColor(share >= 0 ? climbColor : sinkColor);
-        sector.setAlpha(70);
+        float reach = radius * RIM_FRACTION * SECTOR_FRACTION;
+        arc.set(center - reach, center - reach, center + reach, center + reach);
+        updateShaders(center, reach);
+        sector.setShader(share >= 0 ? climbShader : sinkShader);
         float start = share >= 0 ? ZERO_ANGLE : angleOf(share);
         canvas.drawArc(arc, start, Math.abs(SIDE_SWEEP * (float) share), true, sector);
+    }
+
+    private void updateShaders(float center, float reach) {
+        if (climbShader != null && shaderSize == reach) {
+            return;
+        }
+        climbShader = glow(center, reach, climbColor);
+        sinkShader = glow(center, reach, sinkColor);
+        shaderSize = reach;
+    }
+
+    private static Shader glow(float center, float reach, int color) {
+        int[] colors = new int[SECTOR_ALPHAS.length];
+        for (int i = 0; i < colors.length; i++) {
+            colors[i] = (color & 0x00FFFFFF) | (SECTOR_ALPHAS[i] << 24);
+        }
+        return new RadialGradient(center, center, reach, colors, SECTOR_STOPS, Shader.TileMode.CLAMP);
     }
 
     private void drawBands(Canvas canvas, float center, float radius) {
