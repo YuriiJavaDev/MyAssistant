@@ -15,7 +15,7 @@ public class FlightReportRecord {
     private long flightId;
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     private byte[] pdf;
-    /** False when the map is only the offline coastline, so the report is made again once a connection is there. */
+    /** False when the map is only the offline coastline or an older, blurrier one, so the report is made again once a connection is there. */
     @ColumnInfo(defaultValue = "0")
     private boolean onlineMap;
 

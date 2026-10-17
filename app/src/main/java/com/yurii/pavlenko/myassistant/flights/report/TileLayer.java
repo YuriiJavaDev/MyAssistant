@@ -21,9 +21,9 @@ import java.util.concurrent.Future;
  */
 final class TileLayer {
 
-    private static final double TILE_PIXELS_PER_POINT = 1.5;
-    private static final int MAX_TILES = 20;
-    private static final int PARALLEL_FETCHES = 4;
+    private static final double TILE_PIXELS_PER_POINT = 3.0;
+    private static final int MAX_TILES = 80;
+    private static final int PARALLEL_FETCHES = 8;
     private static final float SEAM = 0.4f;
 
     private final List<TileGrid.Tile> tiles = new ArrayList<>();

@@ -183,4 +183,20 @@ public class MapLogicTest {
         String name = FlightReportName.of(0);
         assertTrue(name.matches("flight_\\d{8}_\\d{4}\\.pdf"));
     }
+
+    @Test
+    public void aFlightOfTenKilometresGetsAtLeastThreeTilePixelsPerPoint() {
+        double west = 34.7023;
+        double east = 34.8056;
+        double south = 31.9565;
+        double north = 32.0130;
+        double metresPerPoint = 16.1;
+        List<TileGrid.Tile> tiles = TileGrid.cover(west, east, south, north, metresPerPoint, 3.0, 80);
+        int zoom = tiles.get(0).getZoom();
+        double metresPerTilePixel = 156543.03392 * Math.cos(Math.toRadians(32.0)) / (1 << zoom);
+        assertEquals(15, zoom);
+        assertTrue(metresPerPoint / metresPerTilePixel >= 3.0);
+        assertTrue(tiles.size() <= 80);
+        assertTrue(tiles.size() > 40);
+    }
 }

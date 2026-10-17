@@ -13,7 +13,7 @@ import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 import com.yurii.pavlenko.myassistant.flights.model.FlightReportRecord;
 
 /** Separate from the other databases, so the flights are backed up and restored as their own file. */
-@Database(entities = {FlightRecord.class, FlightPointRecord.class, FlightReportRecord.class}, version = 2, exportSchema = false)
+@Database(entities = {FlightRecord.class, FlightPointRecord.class, FlightReportRecord.class}, version = 3, exportSchema = false)
 public abstract class FlightDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "flight_database";
@@ -22,6 +22,14 @@ public abstract class FlightDatabase extends RoomDatabase {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE flight_reports ADD COLUMN onlineMap INTEGER NOT NULL DEFAULT 0");
+        }
+    };
+
+    /** The maps of the reports made so far are blurrier than the ones made now, so each report is made again when opened. */
+    private static final Migration REBUILD_SHARPER_MAPS = new Migration(2, 3) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("UPDATE flight_reports SET onlineMap = 0");
         }
     };
 
@@ -36,7 +44,7 @@ public abstract class FlightDatabase extends RoomDatabase {
                     instance = Room.databaseBuilder(context.getApplicationContext(), FlightDatabase.class, DATABASE_NAME)
                             // TRUNCATE keeps the whole database in one file, so copying that file is a valid backup
                             .setJournalMode(RoomDatabase.JournalMode.TRUNCATE)
-                            .addMigrations(ADD_ONLINE_MAP)
+                            .addMigrations(ADD_ONLINE_MAP, REBUILD_SHARPER_MAPS)
                             .build();
                 }
             }
