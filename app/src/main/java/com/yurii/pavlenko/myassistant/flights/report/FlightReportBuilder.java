@@ -26,7 +26,8 @@ import java.util.Locale;
 
 /**
  * Builds the PDF report of a flight: the route on a large map, the statistics beside it and the profiles below.
- * The map is satellite imagery when the tiles can be fetched, and the bundled coastline otherwise.
+ * The map is satellite imagery when the tiles can be fetched, and the bundled coastline otherwise. The photos are
+ * stored as JPEG in the file, which keeps a sharp map small.
  */
 public final class FlightReportBuilder {
 
@@ -85,7 +86,7 @@ public final class FlightReportBuilder {
             document.finishPage(page);
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             document.writeTo(out);
-            return new BuiltReport(out.toByteArray(), onlineMap);
+            return new BuiltReport(PdfImageCompressor.compress(out.toByteArray(), new BitmapJpegEncoder()), onlineMap);
         } finally {
             document.close();
         }

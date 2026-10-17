@@ -128,20 +128,27 @@ public final class FlightRepository {
     }
 
     private byte[] reportOf(long flightId) {
-        FlightReportRecord stored = dao().report(flightId);
-        if (stored != null && stored.isOnlineMap()) {
-            return stored.getPdf();
+        Boolean storedOnline = dao().reportOnlineMap(flightId);
+        boolean stored = storedOnline != null;
+        if (stored && storedOnline) {
+            return storedPdf(flightId);
         }
         FlightRecord flight = dao().flight(flightId);
         BuiltReport built = flight != null && flight.isFinished() ? buildReport(flight) : null;
-        if (built == null) {
-            return stored != null ? stored.getPdf() : null;
-        }
-        if (stored != null && !built.hasOnlineMap()) {
-            return stored.getPdf();
+        if (built == null || stored && !built.hasOnlineMap()) {
+            return stored ? storedPdf(flightId) : null;
         }
         dao().saveReport(new FlightReportRecord(flightId, built.getPdf(), built.hasOnlineMap()));
         return built.getPdf();
+    }
+
+    private byte[] storedPdf(long flightId) {
+        try {
+            return new FlightReportStore(dao()).pdf(flightId);
+        } catch (IOException e) {
+            Log.e(TAG, "Cannot read the stored flight report", e);
+            return null;
+        }
     }
 
     /** Builds the report of a flight and keeps it; null when the flight has no points or the PDF fails. */

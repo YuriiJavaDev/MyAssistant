@@ -3,6 +3,7 @@ package com.yurii.pavlenko.myassistant.tasks.database;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.yurii.pavlenko.myassistant.flights.data.FlightReportStore;
 import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
 import com.yurii.pavlenko.myassistant.flights.database.FlightDatabase;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
@@ -124,7 +125,7 @@ public class CloudSyncManager {
         for (FlightReportSummary report : dao.reportSummaries()) {
             String key = report.getFlightId() + ":" + report.getSize();
             current.add(key);
-            byte[] pdf = uploaded.contains(key) ? null : dao.reportPdf(report.getFlightId());
+            byte[] pdf = uploaded.contains(key) ? null : new FlightReportStore(dao).pdf(report.getFlightId());
             if (pdf != null) {
                 upload(FlightReportName.of(report.getStartMillis()), new ByteArrayInputStream(pdf), pdf.length);
                 uploaded.add(key);
