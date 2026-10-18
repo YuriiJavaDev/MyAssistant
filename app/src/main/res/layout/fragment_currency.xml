@@ -2,7 +2,6 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -22,8 +21,8 @@
             android:maxLines="1"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:textColor="@color/text_color"
-            android:textColorHint="@color/text_muted"
+            android:textColor="?attr/maText"
+            android:textColorHint="?attr/maTextMuted"
             android:textSize="22sp" />
 
         <FrameLayout
@@ -83,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -93,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -103,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:gravity="center"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="13sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -123,8 +122,8 @@
             android:autoLink="web"
             android:gravity="center"
             android:text="@string/currency_attribution"
-            android:textColor="@color/text_muted"
-            android:textColorLink="@color/text_muted"
+            android:textColor="?attr/maTextMuted"
+            android:textColorLink="?attr/maTextMuted"
             android:textSize="11sp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

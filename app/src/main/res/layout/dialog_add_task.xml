@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Edit Task"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="4dp" />
@@ -30,13 +30,13 @@
             android:layout_marginBottom="12dp"
             android:inputType="textAutoCorrect|textCapSentences"
             android:minHeight="42dp"
-            android:textColor="@color/text_color" />
+            android:textColor="?attr/maText" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Importance level:"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="12dp"
                 android:src="@android:drawable/arrow_down_float"
-                app:tint="@color/text_color" />
+                app:tint="?attr/maText" />
 
             <Spinner
                 android:id="@+id/dialogImportanceSpinner"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Deadline:"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -84,7 +84,7 @@
             android:paddingStart="14dp"
             android:paddingEnd="14dp"
             android:text="Select a deadline"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="12sp" />
 
         <TextView
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Reminder (Date &amp; Time):"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="12sp"
             android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
             android:paddingStart="14dp"
             android:paddingEnd="14dp"
             android:text="Select reminder date &amp; time"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="12sp" />
 
         <CheckBox
@@ -116,7 +116,7 @@
             android:layout_marginTop="12dp"
             android:checked="true"
             android:text="Show creation/edit dates"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -135,7 +135,7 @@
                 app:backgroundTint="@null"
                 android:text="Delete"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="12sp"
                 style="?attr/materialButtonOutlinedStyle" />
 
@@ -153,7 +153,7 @@
                 app:backgroundTint="@null"
                 android:text="Cancel"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="12sp"
                 style="?attr/materialButtonOutlinedStyle" />
 
@@ -165,7 +165,7 @@
                 app:backgroundTint="@null"
                 android:text="Save"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="12sp" />
         </LinearLayout>
 

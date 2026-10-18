@@ -13,7 +13,7 @@
         android:text="@string/display_mode_title"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:paddingBottom="16dp"/>
 
     <!-- Options -->
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:text="@string/display_mode_light"
             android:textSize="14sp"
-            android:textColor="@color/text_color"
-            android:buttonTint="@color/text_color"
+            android:textColor="?attr/maText"
+            android:buttonTint="?attr/maText"
             android:paddingVertical="8dp"/>
 
         <RadioButton
@@ -39,8 +39,8 @@
             android:layout_height="wrap_content"
             android:text="@string/display_mode_dark"
             android:textSize="14sp"
-            android:textColor="@color/text_color"
-            android:buttonTint="@color/text_color"
+            android:textColor="?attr/maText"
+            android:buttonTint="?attr/maText"
             android:paddingVertical="8dp"/>
 
         <RadioButton
@@ -49,8 +49,8 @@
             android:layout_height="wrap_content"
             android:text="@string/display_mode_system"
             android:textSize="14sp"
-            android:textColor="@color/text_color"
-            android:buttonTint="@color/text_color"
+            android:textColor="?attr/maText"
+            android:buttonTint="?attr/maText"
             android:paddingVertical="8dp"/>
 
     </RadioGroup>

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -40,7 +40,7 @@
             android:ellipsize="start"
             android:gravity="end"
             android:singleLine="true"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="12sp"
             android:textStyle="italic" />
     </LinearLayout>
@@ -55,6 +55,6 @@
         android:gravity="end|center_vertical"
         android:maxLines="2"
         android:minHeight="@dimen/calc_expression_min_height"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:textStyle="bold" />
 </LinearLayout>

@@ -17,6 +17,28 @@
 
     <string name="settings_design_title">App Design</string>
     <string name="settings_design_subtitle">Customization of UI variations</string>
+
+    <!-- App designs -->
+    <string name="design_classic_name">Classic</string>
+    <string name="design_classic_about">The original look: cream and violet</string>
+    <string name="design_paper_ink_name">Paper &amp; Ink</string>
+    <string name="design_paper_ink_about">Thin lines and muted business tones</string>
+    <string name="design_pastel_cloud_name">Pastel Cloud</string>
+    <string name="design_pastel_cloud_about">Soft, rounded and pale, with clouds</string>
+    <string name="design_neon_arcade_name">Neon Arcade</string>
+    <string name="design_neon_arcade_about">Bright neon, bold contrast and a retro sun</string>
+    <string name="design_toon_name">Toon</string>
+    <string name="design_toon_about">Comic outlines and a handwritten font</string>
+    <string name="design_biker_name">Biker</string>
+    <string name="design_biker_about">Rough metal, rubber and exhaust orange</string>
+    <string name="design_cockpit_name">Cockpit</string>
+    <string name="design_cockpit_about">Strict instrument panel with a glider</string>
+    <string name="design_beach_name">Beach</string>
+    <string name="design_beach_about">Sand, lagoon, coral and palms</string>
+    <string name="design_forest_name">Enchanted Forest</string>
+    <string name="design_forest_about">Parchment, gold and forest moss</string>
+    <string name="design_mono_block_name">Mono Block</string>
+    <string name="design_mono_block_about">Hard black and white with one yellow marker</string>
     <string name="settings_permissions_title">System Permissions</string>
     <string name="settings_permissions_subtitle">Manage access in Android system</string>
 

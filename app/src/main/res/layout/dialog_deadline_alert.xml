@@ -24,7 +24,7 @@
             android:layout_height="100dp"
             android:layout_marginBottom="8dp"
             android:src="@drawable/ic_megaphone"
-            app:tint="@color/status_overdue" />
+            app:tint="?attr/maOverdue" />
 
         <!-- Dialog title header (Bold and Red) -->
         <TextView
@@ -34,7 +34,7 @@
             android:text="Deadline Alert!"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/status_overdue"
+            android:textColor="?attr/maOverdue"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:gravity="center"
             android:layout_marginBottom="20dp"
             android:lineSpacingExtra="4dp"
@@ -60,7 +60,7 @@
             android:textSize="14sp"
             android:background="@drawable/button_selector"
             app:backgroundTint="@null"
-            android:textColor="@color/text_color_btn"
+            android:textColor="?attr/maButtonLabel"
             style="?attr/materialButtonOutlinedStyle" />
 
     </LinearLayout>

@@ -2,7 +2,6 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -25,7 +24,7 @@
                 android:id="@+id/accessMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -50,14 +49,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/steps_today"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/todaySteps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="44sp"
                 android:textStyle="bold" />
 
@@ -65,7 +64,7 @@
                 android:id="@+id/todayDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="20sp" />
 
             <TextView
@@ -73,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -89,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/steps_period"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="14sp" />
 
             <TextView
@@ -97,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -154,13 +153,13 @@
 
                 <TextView
                     android:text="@string/steps_total"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statTotal"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -169,13 +168,13 @@
 
                 <TextView
                     android:text="@string/steps_distance"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statDistance"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -184,13 +183,13 @@
 
                 <TextView
                     android:text="@string/steps_average"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statAverage"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -199,13 +198,13 @@
 
                 <TextView
                     android:text="@string/steps_best_day"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statBest"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -214,13 +213,13 @@
 
                 <TextView
                     android:text="@string/steps_walking"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statWalking"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -229,13 +228,13 @@
 
                 <TextView
                     android:text="@string/steps_running"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statRunning"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -244,13 +243,13 @@
 
                 <TextView
                     android:text="@string/steps_active_days"
-                    android:textColor="@color/text_secondary"
+                    android:textColor="?attr/maTextSecondary"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/statActive"
                     android:gravity="end"
-                    android:textColor="@color/text_color"
+                    android:textColor="?attr/maText"
                     android:textSize="14sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -263,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/steps_no_data"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="14sp" />
 
             <androidx.recyclerview.widget.RecyclerView

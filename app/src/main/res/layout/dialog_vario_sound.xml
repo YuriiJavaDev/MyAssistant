@@ -9,7 +9,7 @@
         android:id="@+id/climbStartLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:textSize="14sp" />
 
     <SeekBar
@@ -17,14 +17,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:progressTint="@color/colorPrimary"
-        android:thumbTint="@color/colorPrimary" />
+        android:progressTint="?attr/maAccent"
+        android:thumbTint="?attr/maAccent" />
 
     <TextView
         android:id="@+id/sinkStartLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:textSize="14sp" />
 
     <SeekBar
@@ -32,20 +32,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:progressTint="@color/colorPrimary"
-        android:thumbTint="@color/colorPrimary" />
+        android:progressTint="?attr/maAccent"
+        android:thumbTint="?attr/maAccent" />
 
     <TextView
         android:id="@+id/sinkAlarmLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:textSize="14sp" />
 
     <SeekBar
         android:id="@+id/sinkAlarmSeek"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progressTint="@color/colorPrimary"
-        android:thumbTint="@color/colorPrimary" />
+        android:progressTint="?attr/maAccent"
+        android:thumbTint="?attr/maAccent" />
 </LinearLayout>

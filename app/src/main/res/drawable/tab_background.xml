@@ -7,8 +7,8 @@
             android:insetBottom="6dp">
 
             <shape android:shape="rectangle">
-                <corners android:radius="18dp" />
-                <solid android:color="@color/tab_selected" />
+                <corners android:radius="?attr/maCornerTab" />
+                <solid android:color="?attr/maTabSelected" />
             </shape>
 
         </inset>

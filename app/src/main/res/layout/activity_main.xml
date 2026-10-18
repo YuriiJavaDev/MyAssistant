@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?attr/maBackdrop"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -14,9 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         app:popupTheme="@style/CustomPopupMenu"
-        android:background="@color/background"
         app:title="MyAssistant"
-        app:titleTextColor="@color/text_color" />
+        app:titleTextColor="?attr/maText" />
 
     <!-- First row of tabs (4 items) - compact centered pills -->
     <com.google.android.material.tabs.TabLayout
@@ -25,14 +24,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
         app:tabGravity="center"
-        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorColor="?attr/maAccent"
         app:tabIndicatorHeight="3dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabTextColor="@color/text_color"
+        app:tabSelectedTextColor="?attr/maTabText"
+        app:tabTextColor="?attr/maText"
         app:tabTextAppearance="@style/MyTabTextAppearance" />
 
     <!-- Second row of tabs (3 items) - compact centered pills -->
@@ -42,14 +40,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/background"
         app:tabBackground="@drawable/tab_background"
         app:tabGravity="center"
-        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorColor="?attr/maAccent"
         app:tabIndicatorHeight="3dp"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabTextColor="@color/text_color"
+        app:tabSelectedTextColor="?attr/maTabText"
+        app:tabTextColor="?attr/maText"
         app:tabTextAppearance="@style/MyTabTextAppearance" />
 
     <!-- Screen content container -->

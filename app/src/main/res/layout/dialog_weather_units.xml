@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weather_units_temperature"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/maAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -24,18 +24,18 @@
                 android:id="@+id/celsius"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
+                android:buttonTint="?attr/maAccent"
                 android:text="@string/weather_unit_celsius"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
             <RadioButton
                 android:id="@+id/fahrenheit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
+                android:buttonTint="?attr/maAccent"
                 android:text="@string/weather_unit_fahrenheit"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
     </RadioGroup>
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weather_units_wind"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/maAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -57,18 +57,18 @@
                 android:id="@+id/metresPerSecond"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
+                android:buttonTint="?attr/maAccent"
                 android:text="@string/weather_unit_ms"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
             <RadioButton
                 android:id="@+id/kilometresPerHour"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
+                android:buttonTint="?attr/maAccent"
                 android:text="@string/weather_unit_kmh"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
     </RadioGroup>
