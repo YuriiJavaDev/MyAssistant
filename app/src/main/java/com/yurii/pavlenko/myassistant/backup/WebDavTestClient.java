@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -21,6 +21,10 @@ public class WebDavTestClient {
      * Tests connection to the WebDAV server.
      */
     public void testConnection(String urlStr, String username, String password, TestCallback callback) {
+        if (!WebDavUtils.isSecureUrl(urlStr)) {
+            callback.onError("The URL must start with https://");
+            return;
+        }
         executorService.execute(() -> {
             HttpURLConnection connection = null;
             try {

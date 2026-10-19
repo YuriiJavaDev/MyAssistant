@@ -106,13 +106,13 @@
             android:layout_height="0dp"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+            app:layout_constraintBottom_toTopOf="@+id/bottomActionPanel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/filterContainer" />
 
         <LinearLayout
-            android:id="@+id/bottomContainer"
+            android:id="@+id/bottomActionPanel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"

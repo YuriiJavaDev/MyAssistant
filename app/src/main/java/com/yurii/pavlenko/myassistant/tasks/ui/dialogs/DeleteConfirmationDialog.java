@@ -17,7 +17,7 @@ public class DeleteConfirmationDialog {
 
     private static final String CANNOT_BE_UNDONE = " This action cannot be undone!";
 
-    // Старый метод для удаления (оставляем для обратной совместимости)
+    /** Confirms deleting a single item; with nothing to delete it only says so and returns null. */
     public static AlertDialog show(Context context, boolean canDelete, Runnable onConfirmed) {
         if (!canDelete) {
             Toast.makeText(context, "No objects found to delete!", Toast.LENGTH_SHORT).show();

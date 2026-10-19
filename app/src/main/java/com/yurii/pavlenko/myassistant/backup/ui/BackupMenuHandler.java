@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup.ui;
 
 import android.content.Context;
 import android.view.Gravity;

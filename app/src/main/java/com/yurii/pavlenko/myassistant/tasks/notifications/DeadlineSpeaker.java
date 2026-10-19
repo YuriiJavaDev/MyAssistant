@@ -41,9 +41,13 @@ public final class DeadlineSpeaker {
         });
     }
 
+    /** Announces the number of overdue tasks. */
+    public void speak(int dueTasksCount) {
+        speak("Attention! You have " + dueTasksCount + " task deadlines requiring immediate attention.");
+    }
+
     /** Speaks right away, or as soon as the engine is initialized. */
-    public synchronized void speak(int dueTasksCount) {
-        String phrase = "Attention! You have " + dueTasksCount + " task deadlines requiring immediate attention.";
+    public synchronized void speak(String phrase) {
         if (ready) {
             say(phrase);
         } else {

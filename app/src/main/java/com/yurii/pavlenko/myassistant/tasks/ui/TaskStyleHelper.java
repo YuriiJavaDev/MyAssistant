@@ -4,8 +4,8 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.widget.TextView;
 
-
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.tasks.logic.Importance;
 import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 public class TaskStyleHelper {
@@ -26,17 +26,14 @@ public class TaskStyleHelper {
             return;
         }
 
-        if (importance == null) {
-            importance = "Normal";
-        }
-        switch (importance.toLowerCase()) {
-            case "urgent":
+        switch (Importance.fromLabel(importance)) {
+            case URGENT:
                 textView.setTextColor(ThemeColors.get(context, R.attr.maOverdue));
                 break;
-            case "important":
+            case IMPORTANT:
                 textView.setTextColor(ThemeColors.get(context, R.attr.maImportant));
                 break;
-            case "normal":
+            case NORMAL:
             default:
                 textView.setTextColor(ThemeColors.get(context, R.attr.maText));
                 break;

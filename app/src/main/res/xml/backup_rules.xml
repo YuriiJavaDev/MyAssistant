@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-   Sample backup rules file; uncomment and customize as necessary.
-   See https://developer.android.com/guide/topics/data/autobackup
-   for details.
-   Note: This file is ignored for devices older than API 31
-   See https://developer.android.com/about/versions/12/backup-restore
--->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Credentials are encrypted with a key that does not leave the device, so their files are never copied.
+     Scans and flights are large and have their own backup, which keeps the system backup under its size limit. -->
 <full-backup-content>
-    <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
--->
+    <exclude domain="sharedpref" path="myassistant_secure_cloud_prefs.xml"/>
+    <exclude domain="sharedpref" path="__androidx_security_crypto_encrypted_prefs__.xml"/>
+    <exclude domain="database" path="scan_database"/>
+    <exclude domain="database" path="scan_database-journal"/>
+    <exclude domain="database" path="scan_database-wal"/>
+    <exclude domain="database" path="scan_database-shm"/>
+    <exclude domain="database" path="flight_database"/>
+    <exclude domain="database" path="flight_database-journal"/>
+    <exclude domain="database" path="flight_database-wal"/>
+    <exclude domain="database" path="flight_database-shm"/>
+    <exclude domain="file" path="scans/"/>
 </full-backup-content>

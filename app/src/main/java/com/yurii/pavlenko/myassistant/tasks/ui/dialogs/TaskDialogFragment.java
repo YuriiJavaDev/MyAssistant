@@ -18,14 +18,13 @@ import androidx.fragment.app.Fragment;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogAddTaskBinding;
+import com.yurii.pavlenko.myassistant.tasks.logic.Importance;
+import com.yurii.pavlenko.myassistant.tasks.logic.ReminderRules;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
-import com.yurii.pavlenko.myassistant.tasks.ui.handlers.DeadlineAlertManager;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
-import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmManager;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class TaskDialogFragment extends DialogFragment {
 
@@ -54,6 +53,7 @@ public class TaskDialogFragment extends DialogFragment {
     private OnTaskDeletedListener deleteListener;
 
     private TaskDeadlinePickerHelper deadlineHelper;
+    private DeadlineAlertDialog deadlineAlert;
 
     public static TaskDialogFragment newInstance(@Nullable String initialText, OnTaskSavedListener listener) {
         TaskDialogFragment fragment = new TaskDialogFragment();
@@ -115,29 +115,20 @@ public class TaskDialogFragment extends DialogFragment {
     public void onStart() {
         super.onStart();
 
-        if (task != null && task.getCustomReminderDateTime() != null && !task.isCompleted()) {
-            if (task.getCustomReminderDateTime().isBefore(LocalDateTime.now())) {
-                new Handler(Looper.getMainLooper()).post(() -> {
-                    ArrayList<String> taskTitles = new ArrayList<>();
-                    taskTitles.add(task.getTitle());
+        if (task != null && ReminderRules.isStale(task.getCustomReminderDateTime(), task.isCompleted(), LocalDateTime.now())) {
+            new Handler(Looper.getMainLooper()).post(this::announceAndClearStaleReminder);
+        }
+    }
 
-                    DeadlineAlertManager.showDeadlineAlert(requireContext(), taskTitles, () -> {});
+    private void announceAndClearStaleReminder() {
+        if (!isAdded()) {
+            return;
+        }
+        deadlineAlert = DeadlineAlertDialog.show(requireContext(), task.getTitle());
 
-                    task.setCustomReminderDateTime(null);
-
-                    if (updateListener != null) {
-                        updateListener.onTaskUpdated(
-                                task,
-                                task.getTitle(),
-                                task.getImportance(),
-                                task.getDeadline(),
-                                false,
-                                task.isShowTimestamps(),
-                                null
-                        );
-                    }
-                });
-            }
+        if (updateListener != null) {
+            updateListener.onTaskUpdated(task, task.getTitle(), task.getImportance(), task.getDeadline(),
+                    false, task.isShowTimestamps(), null);
         }
     }
 
@@ -146,7 +137,7 @@ public class TaskDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(requireContext()));
 
-        String[] importanceOptions = {"Normal", "Important", "Urgent"};
+        String[] importanceOptions = Importance.labels();
         ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
         importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.dialogImportanceSpinner.setAdapter(importanceAdapter);
@@ -173,14 +164,7 @@ public class TaskDialogFragment extends DialogFragment {
             initialDeadline = task.getDeadline();
             initialCustomReminder = task.getCustomReminderDateTime();
 
-            if (task.getImportance() != null) {
-                for (int i = 0; i < importanceOptions.length; i++) {
-                    if (importanceOptions[i].equalsIgnoreCase(task.getImportance())) {
-                        binding.dialogImportanceSpinner.setSelection(i);
-                        break;
-                    }
-                }
-            }
+            binding.dialogImportanceSpinner.setSelection(Importance.fromLabel(task.getImportance()).ordinal());
         } else {
             if (initialText != null && !initialText.isEmpty()) {
                 binding.dialogTaskEditText.setText(initialText);
@@ -206,7 +190,6 @@ public class TaskDialogFragment extends DialogFragment {
             binding.btnDelete.setVisibility(View.VISIBLE);
             binding.btnDelete.setOnClickListener(v -> {
                 DeleteConfirmationDialog.show(requireContext(), true, () -> {
-                    TaskAlarmManager.cancelAlarm(requireContext(), task);
                     deleteListener.onTaskDeleted(task);
                     Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
                     dismiss();
@@ -239,27 +222,12 @@ public class TaskDialogFragment extends DialogFragment {
                 return;
             }
 
-            if (deadline != null && customReminderDateTime != null) {
-                LocalDateTime deadlineDateTime = deadline.atTime(23, 59, 59);
-                if (customReminderDateTime.isAfter(deadlineDateTime)) {
-                    Toast.makeText(requireContext(), "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+            if (ReminderRules.isLaterThanDeadline(customReminderDateTime, deadline)) {
+                Toast.makeText(requireContext(), "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
+                return;
             }
 
             if (isEditMode && updateListener != null) {
-                task.setTitle(title);
-                task.setImportance(importance);
-                task.setDeadline(deadline);
-                task.setCustomReminderDateTime(customReminderDateTime);
-                task.setShowTimestamps(showTimestamps);
-
-                if (customReminderDateTime != null && !isCompleted) {
-                    TaskAlarmManager.scheduleAlarm(requireContext(), task);
-                } else {
-                    TaskAlarmManager.cancelAlarm(requireContext(), task);
-                }
-
                 updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
                 Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
@@ -279,6 +247,9 @@ public class TaskDialogFragment extends DialogFragment {
         super.onDestroyView();
         if (deadlineHelper != null) {
             deadlineHelper.release();
+        }
+        if (deadlineAlert != null) {
+            deadlineAlert.dismiss();
         }
     }
 }
