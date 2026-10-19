@@ -34,11 +34,16 @@ final class FlightReportFiles {
     }
 
     static void share(Context context, FlightRecord flight, byte[] pdf) {
+        start(context, shareIntent(context, flight, pdf));
+    }
+
+    /** The share sheet that offers every app and drive able to take the PDF. */
+    static Intent shareIntent(Context context, FlightRecord flight, byte[] pdf) {
         Intent intent = new Intent(Intent.ACTION_SEND)
                 .setType(PDF_MIME)
                 .putExtra(Intent.EXTRA_STREAM, uriOf(context, flight, pdf))
                 .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        start(context, Intent.createChooser(intent, context.getString(R.string.flights_report_share)));
+        return Intent.createChooser(intent, context.getString(R.string.flights_report_share));
     }
 
     private static void start(Context context, Intent intent) {

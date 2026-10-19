@@ -1,8 +1,7 @@
 package com.yurii.pavlenko.myassistant.flights.ui;
 
 import android.app.Dialog;
-import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -17,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogFlightJournalBinding;
-import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
 
@@ -26,14 +24,13 @@ public class FlightJournalDialog extends DialogFragment {
 
     private static final long NO_FLIGHT = -1;
     private static final String STATE_PENDING_FLIGHT = "pending_flight";
-    private static final String PDF_MIME = "application/pdf";
 
     private FlightsViewModel viewModel;
     private DialogFlightJournalBinding binding;
     private long pendingFlightId = NO_FLIGHT;
 
-    private final ActivityResultLauncher<String> saveLauncher = registerForActivityResult(
-            new ActivityResultContracts.CreateDocument(PDF_MIME), this::onSaveTargetChosen);
+    private final ActivityResultLauncher<Intent> shareLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), result -> onShareClosed());
 
     @NonNull
     @Override
@@ -104,22 +101,35 @@ public class FlightJournalDialog extends DialogFragment {
                 .show();
     }
 
-    /** The system file picker offers the phone, a flash drive and cloud drives such as Google Drive. */
+    /** The same share sheet as "Share report", so the report can go to any app, drive or device. */
     private void chooseWhereToSave(FlightRecord flight) {
         pendingFlightId = flight.getId();
-        saveLauncher.launch(FlightReportName.of(flight.getStartMillis()));
+        viewModel.loadReport(flight.getId(), pdf -> {
+            if (!isAdded()) {
+                return;
+            }
+            if (pdf == null) {
+                pendingFlightId = NO_FLIGHT;
+                Toast.makeText(requireContext(), R.string.flights_report_failed, Toast.LENGTH_LONG).show();
+            } else {
+                shareLauncher.launch(FlightReportFiles.shareIntent(requireContext(), flight, pdf));
+            }
+        });
     }
 
-    private void onSaveTargetChosen(Uri target) {
+    /** The share sheet cannot tell whether the report was saved, so the user confirms the deletion. */
+    private void onShareClosed() {
         long flightId = pendingFlightId;
         pendingFlightId = NO_FLIGHT;
-        if (target == null || flightId == NO_FLIGHT) {
+        if (flightId == NO_FLIGHT) {
             return;
         }
-        Context context = requireContext().getApplicationContext();
-        viewModel.saveReportThenDelete(flightId, target, saved ->
-                Toast.makeText(context, saved ? R.string.flights_delete_saved : R.string.flights_delete_save_failed,
-                        Toast.LENGTH_LONG).show());
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.flights_delete_title)
+                .setMessage(R.string.flights_delete_after_share_message)
+                .setPositiveButton(R.string.flights_delete_after_share_confirm, (dialog, which) -> viewModel.deleteFlight(flightId))
+                .setNegativeButton(R.string.flights_delete_keep, null)
+                .show();
     }
 
     @Override

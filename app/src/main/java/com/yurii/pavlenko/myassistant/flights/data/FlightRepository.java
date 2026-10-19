@@ -1,7 +1,6 @@
 package com.yurii.pavlenko.myassistant.flights.data;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -20,7 +19,6 @@ import com.yurii.pavlenko.myassistant.flights.report.BuiltReport;
 import com.yurii.pavlenko.myassistant.flights.report.FlightReportBuilder;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -124,34 +122,6 @@ public final class FlightRepository {
             ReportQuota quota = new ReportQuota(new ReportLimitStore(context).load(), dao().reportCount());
             main.post(() -> onDone.accept(quota));
         });
-    }
-
-    /** Writes the report to the place the user chose and deletes the flight only when that succeeded. */
-    public void saveReportThenDelete(long flightId, Uri target, Consumer<Boolean> onDone) {
-        io.execute(() -> {
-            boolean saved = writeReport(flightId, target);
-            if (saved) {
-                dao().deleteFlight(flightId);
-            }
-            main.post(() -> onDone.accept(saved));
-        });
-    }
-
-    private boolean writeReport(long flightId, Uri target) {
-        byte[] pdf = reportOf(flightId);
-        if (pdf == null) {
-            return false;
-        }
-        try (OutputStream out = context.getContentResolver().openOutputStream(target)) {
-            if (out == null) {
-                return false;
-            }
-            out.write(pdf);
-            return true;
-        } catch (IOException e) {
-            Log.e(TAG, "Cannot save the flight report", e);
-            return false;
-        }
     }
 
     private void complete(long id, FlightStats stats, boolean altitudeFromStart) {
