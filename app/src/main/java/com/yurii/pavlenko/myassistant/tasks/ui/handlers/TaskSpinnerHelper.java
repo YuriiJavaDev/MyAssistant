@@ -4,11 +4,11 @@ import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.SpinnerAdapter;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
-import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskFilterSorter;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilter;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskSort;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 /**
@@ -42,19 +42,8 @@ public class TaskSpinnerHelper {
         AdapterView.OnItemSelectedListener selectionListener = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // Get selected filter option safely with fallback
-                String selectedFilter = binding.filterSpinner.getSelectedItem() != null
-                        ? binding.filterSpinner.getSelectedItem().toString()
-                        : TaskFilterSorter.FILTER_ALL;
-
-                // Get selected sort option safely with fallback
-                String selectedSort = binding.sortSpinner.getSelectedItem() != null
-                        ? binding.sortSpinner.getSelectedItem().toString()
-                        : "Alpha A-Z";
-
-                // Update ViewModel states
-                taskViewModel.setFilter(selectedFilter);
-                taskViewModel.setSort(selectedSort);
+                taskViewModel.setFilter(TaskFilter.fromPosition(binding.filterSpinner.getSelectedItemPosition()));
+                taskViewModel.setSort(TaskSort.fromPosition(binding.sortSpinner.getSelectedItemPosition()));
             }
 
             @Override
@@ -67,16 +56,11 @@ public class TaskSpinnerHelper {
         binding.filterSpinner.setOnItemSelectedListener(selectionListener);
         binding.sortSpinner.setOnItemSelectedListener(selectionListener);
     }
+
     /**
      * Selects a filter in the filter spinner; the selection listener then applies it to the ViewModel.
      */
-    public static void selectFilter(FragmentTasksBinding binding, String filter) {
-        SpinnerAdapter adapter = binding.filterSpinner.getAdapter();
-        for (int i = 0; i < adapter.getCount(); i++) {
-            if (filter.equals(String.valueOf(adapter.getItem(i)))) {
-                binding.filterSpinner.setSelection(i);
-                return;
-            }
-        }
+    public static void selectFilter(FragmentTasksBinding binding, TaskFilter filter) {
+        binding.filterSpinner.setSelection(filter.ordinal());
     }
 }

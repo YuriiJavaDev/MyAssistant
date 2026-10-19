@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup;
 
 import android.util.Base64;
 
@@ -9,6 +9,11 @@ import java.nio.charset.StandardCharsets;
 public final class WebDavUtils {
 
     private WebDavUtils() {
+    }
+
+    /** Credentials and backups are sent only over an encrypted connection. */
+    public static boolean isSecureUrl(String url) {
+        return url != null && url.trim().regionMatches(true, 0, "https://", 0, "https://".length());
     }
 
     /** Appends a backup file name to the base WebDAV folder URL. */

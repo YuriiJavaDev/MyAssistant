@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -236,6 +236,9 @@ public class CloudSyncManager {
         String baseUrl = configManager.getUrl();
         if (baseUrl.isEmpty()) {
             throw new IOException("WebDAV URL is not configured");
+        }
+        if (!WebDavUtils.isSecureUrl(baseUrl)) {
+            throw new IOException("WebDAV URL must start with https://");
         }
         HttpURLConnection connection = (HttpURLConnection) new URL(WebDavUtils.buildTargetUrl(baseUrl, fileName)).openConnection();
         connection.setRequestMethod(method);

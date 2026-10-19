@@ -20,9 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
-import com.yurii.pavlenko.myassistant.tasks.database.BackupMenuHandler;
-import com.yurii.pavlenko.myassistant.tasks.database.DatabaseBackupManager;
-import com.yurii.pavlenko.myassistant.tasks.database.MainMenuActionsHandler;
+import com.yurii.pavlenko.myassistant.backup.ui.BackupMenuHandler;
+import com.yurii.pavlenko.myassistant.backup.DatabaseBackupManager;
+import com.yurii.pavlenko.myassistant.backup.ui.MainMenuActionsHandler;
 import com.yurii.pavlenko.myassistant.tasks.notifications.OverdueAlerts;
 import com.yurii.pavlenko.myassistant.tasks.ui.TasksFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskAlarmRescheduler;

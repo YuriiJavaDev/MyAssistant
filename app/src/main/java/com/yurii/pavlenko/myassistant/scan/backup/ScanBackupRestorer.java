@@ -26,6 +26,8 @@ import java.util.zip.ZipInputStream;
 public final class ScanBackupRestorer {
 
     private static final String STAGING_DIRECTORY = "scans_incoming";
+    private static final long MAX_ENTRY_BYTES = 100L * 1024 * 1024;
+    private static final long MAX_TOTAL_BYTES = 1024L * 1024 * 1024;
     private static final String[] SIDECAR_SUFFIXES = {"-journal", "-wal", "-shm"};
 
     private ScanBackupRestorer() {
@@ -44,6 +46,8 @@ public final class ScanBackupRestorer {
             unpack(archive, stagedDatabase, stagedImages);
             verifyAndRelocatePaths(stagedDatabase, images);
             install(context, stagedDatabase, stagedImages, images);
+        } catch (RuntimeException e) {
+            throw new IOException("The file is not a valid scan backup", e);
         } finally {
             deleteRecursively(staging);
         }
@@ -52,14 +56,16 @@ public final class ScanBackupRestorer {
     private static void unpack(InputStream archive, File database, File imagesDirectory) throws IOException {
         boolean foundDatabase = false;
         ZipInputStream zip = new ZipInputStream(archive);
+        long total = 0;
         ZipEntry entry;
         while ((entry = zip.getNextEntry()) != null) {
             String name = entry.getName();
             if (name.equals(ScanBackupArchive.DATABASE_ENTRY)) {
-                extract(zip, database);
+                total += extract(zip, database, MAX_TOTAL_BYTES - total);
                 foundDatabase = true;
             } else if (isImageEntry(name)) {
-                extract(zip, new File(imagesDirectory, name.substring(ScanBackupArchive.IMAGES_PREFIX.length())));
+                File target = new File(imagesDirectory, name.substring(ScanBackupArchive.IMAGES_PREFIX.length()));
+                total += extract(zip, target, MAX_TOTAL_BYTES - total);
             }
         }
         if (!foundDatabase) {
@@ -76,14 +82,22 @@ public final class ScanBackupRestorer {
         return !fileName.isEmpty() && fileName.indexOf('/') < 0 && fileName.indexOf('\\') < 0 && !fileName.equals("..");
     }
 
-    private static void extract(ZipInputStream zip, File target) throws IOException {
+    /** Copies the current entry and returns its size; an entry past the limits means the archive is not a real backup. */
+    private static long extract(ZipInputStream zip, File target, long remainingTotal) throws IOException {
+        long limit = Math.min(MAX_ENTRY_BYTES, remainingTotal);
+        long written = 0;
         try (OutputStream out = new FileOutputStream(target)) {
             byte[] buffer = new byte[8192];
             int read;
             while ((read = zip.read(buffer)) != -1) {
+                written += read;
+                if (written > limit) {
+                    throw new IOException("The scan backup is too large");
+                }
                 out.write(buffer, 0, read);
             }
         }
+        return written;
     }
 
     /** Checks the unpacked database and points its page records at the folder where the images will live. */
@@ -97,6 +111,9 @@ public final class ScanBackupRestorer {
             db.beginTransaction();
             try (Cursor pages = db.rawQuery("SELECT id, imagePath FROM scan_pages", null)) {
                 while (pages.moveToNext()) {
+                    if (pages.isNull(1)) {
+                        continue;
+                    }
                     String fileName = new File(pages.getString(1)).getName();
                     ContentValues values = new ContentValues();
                     values.put("imagePath", new File(imagesDirectory, fileName).getPath());

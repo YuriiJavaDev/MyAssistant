@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup.ui;
 
 import android.app.AlertDialog;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.backup.CloudSyncManager;
+import com.yurii.pavlenko.myassistant.backup.DatabaseBackupManager;
 
 /**
  * Handler responsible for managing user actions triggered from the main overflow backup menu.

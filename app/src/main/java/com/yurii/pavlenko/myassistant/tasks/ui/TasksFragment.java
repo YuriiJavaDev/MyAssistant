@@ -12,11 +12,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilter;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskActionsHandler;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskSpinnerHelper;
-import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskFilterSorter;
 import com.yurii.pavlenko.myassistant.tasks.viewmodel.TaskViewModel;
 
 import java.time.LocalDate;
@@ -58,7 +58,7 @@ public class TasksFragment extends Fragment implements
         getParentFragmentManager().setFragmentResultListener(
                 REQUEST_SHOW_DUE_REMINDERS,
                 getViewLifecycleOwner(),
-                (requestKey, result) -> TaskSpinnerHelper.selectFilter(binding, TaskFilterSorter.FILTER_DUE_REMINDERS)
+                (requestKey, result) -> TaskSpinnerHelper.selectFilter(binding, TaskFilter.DUE_ALERTS)
         );
     }
 

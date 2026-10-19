@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup;
 
 import android.content.Context;
 
@@ -9,6 +9,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.yurii.pavlenko.myassistant.tasks.database.AppDatabase;
 
 /** A database that is backed up and restored as one file; its required table tells the backups apart. */
 public enum ManagedDatabase {

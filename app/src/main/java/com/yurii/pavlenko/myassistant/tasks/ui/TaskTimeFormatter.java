@@ -6,17 +6,16 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.tasks.logic.DeadlineText;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 
-import java.util.Locale;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 
 public class TaskTimeFormatter {
 
     private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-    private static final DateTimeFormatter DEADLINE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     public static void formatTimestamps(TextView textView, Task task) {
         StringBuilder sb = new StringBuilder();
@@ -48,21 +47,12 @@ public class TaskTimeFormatter {
         }
     }
 
+    public static String formatDateTime(LocalDateTime dateTime) {
+        return dateTime.format(TIMESTAMP_FORMATTER);
+    }
+
     public static String getRawDeadlineText(LocalDate deadline) {
-        if (deadline == null) return null;
-        long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), deadline);
-        if (daysLeft < 0) {
-            long overdueDays = Math.abs(daysLeft);
-            return String.format(Locale.US, "%s — Overdue by %d %s!",
-                    deadline.format(DEADLINE_FORMATTER),
-                    overdueDays,
-                    overdueDays == 1 ? "day" : "days");
-        } else {
-            return String.format(Locale.US, "%s — %d %s left!",
-                    deadline.format(DEADLINE_FORMATTER),
-                    daysLeft,
-                    daysLeft == 1 ? "day" : "days");
-        }
+        return DeadlineText.describe(LocalDate.now(), deadline);
     }
 
     public static String getFormattedDeadlineText(LocalDate deadline) {
@@ -80,8 +70,7 @@ public class TaskTimeFormatter {
             if (task.isCompleted()) {
                 deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.text_muted));
             } else {
-                long daysLeft = ChronoUnit.DAYS.between(LocalDate.now(), deadline);
-                if (daysLeft < 0) {
+                if (DeadlineText.isOverdue(LocalDate.now(), deadline)) {
                     deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_overdue));
                 } else {
                     deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_ok));

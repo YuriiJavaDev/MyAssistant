@@ -8,6 +8,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilter;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilterSorter;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskLifecycle;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskSort;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskStatisticsCalculator;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.notifications.OverdueAlerts;
 import com.yurii.pavlenko.myassistant.tasks.repository.TaskRepository;
@@ -24,8 +29,8 @@ public class TaskViewModel extends AndroidViewModel {
     private final MediatorLiveData<List<Task>> displayListLiveData = new MediatorLiveData<>();
     private final MutableLiveData<String> statisticsLiveData = new MutableLiveData<>();
 
-    private String currentFilter = TaskFilterSorter.FILTER_ALL;
-    private String currentSort = "Alpha A-Z";
+    private TaskFilter currentFilter = TaskFilter.ALL;
+    private TaskSort currentSort = TaskSort.ALPHA_A_Z;
 
     private List<Task> cachedRawTasks = new ArrayList<>();
 
@@ -54,18 +59,18 @@ public class TaskViewModel extends AndroidViewModel {
         return new ArrayList<>(cachedRawTasks);
     }
 
-    public void setFilter(String filter) {
+    public void setFilter(TaskFilter filter) {
         this.currentFilter = filter;
         applyFilterAndSort();
     }
 
-    public void setSort(String sort) {
+    public void setSort(TaskSort sort) {
         this.currentSort = sort;
         applyFilterAndSort();
     }
 
     public void applyFilterAndSort() {
-        List<Task> processedTasks = TaskFilterSorter.filterAndSort(cachedRawTasks, currentFilter, currentSort);
+        List<Task> processedTasks = TaskFilterSorter.filterAndSort(cachedRawTasks, currentFilter, currentSort, LocalDateTime.now());
         displayListLiveData.setValue(processedTasks);
         updateStatistics();
     }
@@ -82,17 +87,9 @@ public class TaskViewModel extends AndroidViewModel {
     }
 
     public void updateTaskCompletion(Task task, boolean isChecked) {
-        task.setCompleted(isChecked);
-        task.setCompletedAt(isChecked ? LocalDateTime.now() : null);
-        task.setUpdatedAt(LocalDateTime.now());
-        repository.update(task, () -> {
-            if (isChecked) {
-                TaskAlarmManager.cancelAlarm(getApplication(), task);
-            } else {
-                // A reminder whose time has already passed fires at once, as if the task was never completed
-                TaskAlarmManager.scheduleAlarm(getApplication(), task);
-            }
-        });
+        TaskLifecycle.setCompleted(task, isChecked, LocalDateTime.now());
+        // A reopened task whose reminder time has already passed fires at once, as if it was never completed
+        repository.update(task, () -> syncAlarm(task));
     }
 
     public void updateTaskDetails(Task task,
@@ -109,10 +106,11 @@ public class TaskViewModel extends AndroidViewModel {
         task.setShowTimestamps(showTimestamps);
         task.setCustomReminderDateTime(customReminderDateTime);
         task.setUpdatedAt(LocalDateTime.now());
-        repository.update(task);
+        repository.update(task, () -> syncAlarm(task));
     }
 
     public void deleteTask(Task task) {
+        TaskAlarmManager.cancelAlarm(getApplication(), task);
         repository.delete(task);
     }
 
@@ -130,8 +128,16 @@ public class TaskViewModel extends AndroidViewModel {
     /** The alert exists only while some reminder is due; completing, editing or deleting the last one clears it. */
     private void stopAlertsIfNothingDue() {
         LocalDateTime now = LocalDateTime.now();
-        if (cachedRawTasks.stream().noneMatch(task -> TaskFilterSorter.isReminderDue(task, now))) {
+        if (cachedRawTasks.stream().noneMatch(task -> TaskFilter.isReminderDue(task, now))) {
             OverdueAlerts.stop(getApplication());
+        }
+    }
+
+    private void syncAlarm(Task task) {
+        if (TaskLifecycle.needsAlarm(task)) {
+            TaskAlarmManager.scheduleAlarm(getApplication(), task);
+        } else {
+            TaskAlarmManager.cancelAlarm(getApplication(), task);
         }
     }
 

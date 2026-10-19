@@ -23,6 +23,7 @@
     <color name="status_overdue">#D32F2F</color>
     <color name="status_important">#FA8C16</color>
     <color name="status_ok">#00C853</color>
+    <color name="scrim">#80000000</color>
 
     <!-- Material theme tokens; the light values are the Material 3 defaults, so the light theme is unchanged -->
     <color name="md_primary">#6750A4</color>

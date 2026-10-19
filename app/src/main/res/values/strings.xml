@@ -20,6 +20,7 @@
     <string name="settings_permissions_title">System Permissions</string>
     <string name="settings_permissions_subtitle">Manage access in Android system</string>
 
+    <!-- The order must match the TaskFilter enum: the selected position is mapped to it by index -->
     <string-array name="filter_options">
         <item>All Tasks</item>
         <item>Active</item>
@@ -27,6 +28,7 @@
         <item>Due Alerts</item>
     </string-array>
 
+    <!-- The order must match the TaskSort enum: the selected position is mapped to it by index -->
     <string-array name="sort_options">
         <item>Alpha A-Z</item>
         <item>Alpha Z-A</item>

@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup;
 
 import android.content.Context;
 import android.content.Intent;
@@ -49,6 +49,7 @@ public final class DatabaseBackupManager {
     public static void prepareShareIntent(Context context, Consumer<Intent> onReady) {
         Context appContext = context.getApplicationContext();
         run(() -> {
+            deleteCachedBackups(appContext);
             List<File> files = new ArrayList<>();
             for (ManagedDatabase database : existingDatabases(appContext)) {
                 files.add(copyDatabaseToCache(appContext, database));
@@ -104,6 +105,18 @@ public final class DatabaseBackupManager {
             throw new IOException("Cannot create the backup folder");
         }
         return folder;
+    }
+
+    /** Copies shared earlier are no longer needed once a new share starts, and they hold personal data. */
+    private static void deleteCachedBackups(Context context) throws IOException {
+        File[] old = cacheFolder(context).listFiles();
+        if (old != null) {
+            for (File file : old) {
+                if (!file.delete()) {
+                    Log.w(TAG, "Cannot delete " + file.getName());
+                }
+            }
+        }
     }
 
     private interface Work<T> {

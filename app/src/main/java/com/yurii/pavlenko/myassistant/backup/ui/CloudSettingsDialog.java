@@ -1,4 +1,4 @@
-package com.yurii.pavlenko.myassistant.tasks.database;
+package com.yurii.pavlenko.myassistant.backup.ui;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -24,6 +24,10 @@ import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogCloudSettingsBinding;
 
 import java.util.concurrent.TimeUnit;
+import com.yurii.pavlenko.myassistant.backup.CloudBackupWorker;
+import com.yurii.pavlenko.myassistant.backup.CloudConfigManager;
+import com.yurii.pavlenko.myassistant.backup.WebDavTestClient;
+import com.yurii.pavlenko.myassistant.backup.WebDavUtils;
 
 /**
  * DialogFragment responsible for handling cloud storage settings,
@@ -43,16 +47,15 @@ public class CloudSettingsDialog extends DialogFragment {
         binding.cbAutoBackup.setTextOn("");
         binding.cbAutoBackup.setTextOff("");
 
-        // Restore state or load from secure storage
+        // The password is never kept in the saved state, so it is always read back from secure storage.
+        binding.etPassword.setText(configManager.getPassword());
         if (savedInstanceState != null) {
             binding.etWebDavUrl.setText(savedInstanceState.getString("url", ""));
             binding.etUsername.setText(savedInstanceState.getString("username", ""));
-            binding.etPassword.setText(savedInstanceState.getString("password", ""));
             binding.cbAutoBackup.setChecked(savedInstanceState.getBoolean("auto_backup", false));
         } else {
             binding.etWebDavUrl.setText(configManager.getUrl());
             binding.etUsername.setText(configManager.getUsername());
-            binding.etPassword.setText(configManager.getPassword());
             binding.cbAutoBackup.setChecked(configManager.isAutoBackupEnabled());
         }
 
@@ -99,7 +102,14 @@ public class CloudSettingsDialog extends DialogFragment {
         String password = getRawText(binding.etPassword);
         boolean autoBackup = binding.cbAutoBackup.isChecked();
 
-        configManager.saveConfig(url, username, password, autoBackup);
+        if (!WebDavUtils.isSecureUrl(url)) {
+            binding.etWebDavUrl.setError("The URL must start with https://");
+            return;
+        }
+        if (!configManager.saveConfig(url, username, password, autoBackup)) {
+            Toast.makeText(requireContext(), "Secure storage is unavailable, settings were not saved", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         WorkManager workManager = WorkManager.getInstance(requireContext());
         if (autoBackup) {
@@ -134,6 +144,10 @@ public class CloudSettingsDialog extends DialogFragment {
             binding.etWebDavUrl.setError("URL cannot be empty");
             return;
         }
+        if (!WebDavUtils.isSecureUrl(url)) {
+            binding.etWebDavUrl.setError("The URL must start with https://");
+            return;
+        }
 
         Toast.makeText(requireContext(), "Testing connection...", Toast.LENGTH_SHORT).show();
 
@@ -161,7 +175,6 @@ public class CloudSettingsDialog extends DialogFragment {
         if (binding != null) {
             outState.putString("url", getRawText(binding.etWebDavUrl));
             outState.putString("username", getRawText(binding.etUsername));
-            outState.putString("password", getRawText(binding.etPassword));
             outState.putBoolean("auto_backup", binding.cbAutoBackup.isChecked());
         }
     }
@@ -184,7 +197,7 @@ public class CloudSettingsDialog extends DialogFragment {
 
     private static void updateSwitchTextualState(SwitchCompat switchCompat, boolean isChecked) {
         if (isChecked) {
-            switchCompat.setTextColor(ContextCompat.getColor(switchCompat.getContext(), android.R.color.holo_green_dark));
+            switchCompat.setTextColor(ContextCompat.getColor(switchCompat.getContext(), R.color.status_ok));
             switchCompat.setTypeface(null, android.graphics.Typeface.BOLD);
         } else {
             switchCompat.setTextColor(ContextCompat.getColor(switchCompat.getContext(), R.color.text_color));
