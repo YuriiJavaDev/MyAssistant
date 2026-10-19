@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_spinner_dropdown"
+    android:background="@drawable/bg_spinner_dropdown">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="20dp">
     <TextView
@@ -89,7 +93,8 @@
     <RadioGroup
         android:id="@+id/climbGroup"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
         <RadioButton
             android:id="@+id/metresPerSecondClimb"
             android:layout_width="match_parent"
@@ -108,4 +113,27 @@
             android:textColor="?attr/maText"
             android:textSize="14sp" />
     </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flights_units_report_limit"
+        android:textColor="?attr/maAccent"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/reportLimit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="none"
+        android:hint="@string/flights_units_report_limit_hint"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="?attr/maText"
+        android:textColorHint="?attr/maTextMuted"
+        android:textSize="14sp" />
 </LinearLayout>
+</ScrollView>

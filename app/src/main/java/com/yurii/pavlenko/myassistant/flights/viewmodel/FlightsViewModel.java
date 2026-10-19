@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant.flights.viewmodel;
 
 import android.app.Application;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -11,7 +12,9 @@ import com.yurii.pavlenko.myassistant.flights.data.FlightRecorder;
 import com.yurii.pavlenko.myassistant.flights.data.FlightRepository;
 import com.yurii.pavlenko.myassistant.flights.data.FlightUnits;
 import com.yurii.pavlenko.myassistant.flights.data.FlightUnitsStore;
+import com.yurii.pavlenko.myassistant.flights.data.ReportLimitStore;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightSnapshot;
+import com.yurii.pavlenko.myassistant.flights.logic.ReportQuota;
 import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 
@@ -24,6 +27,7 @@ public class FlightsViewModel extends AndroidViewModel {
     private final FlightRecorder recorder;
     private final FlightRepository repository;
     private final FlightUnitsStore unitsStore;
+    private final ReportLimitStore limitStore;
     private final MutableLiveData<FlightUnits> units;
     private final MutableLiveData<VarioSoundSettings> sound;
 
@@ -32,6 +36,7 @@ public class FlightsViewModel extends AndroidViewModel {
         recorder = FlightRecorder.get(application);
         repository = FlightRepository.get(application);
         unitsStore = new FlightUnitsStore(application);
+        limitStore = new ReportLimitStore(application);
         units = new MutableLiveData<>(unitsStore.load());
         sound = new MutableLiveData<>(recorder.getSoundSettings());
     }
@@ -58,6 +63,22 @@ public class FlightsViewModel extends AndroidViewModel {
 
     public void deleteFlight(long flightId) {
         repository.deleteFlight(flightId);
+    }
+
+    public void checkQuota(Consumer<ReportQuota> onDone) {
+        repository.checkQuota(onDone);
+    }
+
+    public void saveReportThenDelete(long flightId, Uri target, Consumer<Boolean> onDone) {
+        repository.saveReportThenDelete(flightId, target, onDone);
+    }
+
+    public int getReportLimit() {
+        return limitStore.load();
+    }
+
+    public void saveReportLimit(int limit) {
+        limitStore.save(limit);
     }
 
     public void saveUnits(FlightUnits chosen) {

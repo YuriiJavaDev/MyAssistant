@@ -18,6 +18,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -30,6 +31,7 @@ import com.yurii.pavlenko.myassistant.flights.logic.FlightSnapshot;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightStats;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightTime;
 import com.yurii.pavlenko.myassistant.flights.logic.Orientation;
+import com.yurii.pavlenko.myassistant.flights.logic.ReportQuota;
 import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
 import com.yurii.pavlenko.myassistant.flights.sensor.GpsTracker;
 import com.yurii.pavlenko.myassistant.flights.service.FlightRecordingService;
@@ -68,7 +70,7 @@ public class FlightsFragment extends Fragment {
 
         binding.controls.recordButton.setOnClickListener(v -> onRecordButton());
         binding.controls.unitsButton.setOnClickListener(v -> new FlightUnitsDialog().show(getChildFragmentManager(), UNITS_TAG));
-        binding.controls.journalButton.setOnClickListener(v -> new FlightJournalDialog().show(getChildFragmentManager(), JOURNAL_TAG));
+        binding.controls.journalButton.setOnClickListener(v -> openJournal());
         binding.controls.accessButton.setOnClickListener(v -> onAccessButton());
         binding.readouts.zeroButton.setOnClickListener(v -> viewModel.zeroAltitude());
         binding.readouts.zeroButton.setOnLongClickListener(v -> {
@@ -116,7 +118,48 @@ public class FlightsFragment extends Fragment {
             Toast.makeText(requireContext(), R.string.flights_gps_off, Toast.LENGTH_LONG).show();
             return;
         }
+        viewModel.checkQuota(this::onQuotaChecked);
+    }
+
+    private void onQuotaChecked(ReportQuota quota) {
+        if (!isAdded()) {
+            return;
+        }
+        if (quota.isFull()) {
+            showLimitReached(quota);
+        } else if (quota.isRunningOut()) {
+            showLimitApproaching(quota);
+        } else {
+            launchRecording();
+        }
+    }
+
+    private void launchRecording() {
         ContextCompat.startForegroundService(requireContext(), new Intent(requireContext(), FlightRecordingService.class));
+    }
+
+    /** Recording does not start until the journal has room, so that a report is never left out. */
+    private void showLimitReached(ReportQuota quota) {
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.flights_limit_full_title)
+                .setMessage(getString(R.string.flights_limit_full_message, quota.getLimit()))
+                .setPositiveButton(R.string.flights_limit_open_journal, (dialog, which) -> openJournal())
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+    }
+
+    private void showLimitApproaching(ReportQuota quota) {
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.flights_limit_warning_title)
+                .setMessage(getResources().getQuantityString(R.plurals.flights_limit_warning_message,
+                        quota.remaining(), quota.remaining()))
+                .setPositiveButton(R.string.flights_start, (dialog, which) -> launchRecording())
+                .setNegativeButton(R.string.flights_limit_open_journal, (dialog, which) -> openJournal())
+                .show();
+    }
+
+    private void openJournal() {
+        new FlightJournalDialog().show(getChildFragmentManager(), JOURNAL_TAG);
     }
 
     private String[] requestedPermissions() {
