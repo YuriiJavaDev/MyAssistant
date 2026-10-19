@@ -1,4 +1,5 @@
 <resources>
+    <string name="common_cancel">Cancel</string>
     <string name="app_name">MyAssistant</string>
 
     <!-- Settings Bottom Sheet -->

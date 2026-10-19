@@ -17,6 +17,7 @@ import com.yurii.pavlenko.myassistant.databinding.ActivityScanEditorBinding;
 import com.yurii.pavlenko.myassistant.scan.repository.ScanRepository;
 import com.yurii.pavlenko.myassistant.scan.viewmodel.ScanEditorViewModel;
 import com.yurii.pavlenko.myassistant.scan.viewmodel.ScanEditorViewModel.Stage;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 /**
  * Two steps on one photo: place the page corners, then choose how the scan should look and save it.
@@ -82,7 +83,7 @@ public class ScanEditorActivity extends AppCompatActivity {
     }
 
     private void askForNextPage() {
-        new AlertDialog.Builder(this)
+        DialogStyle.show(new AlertDialog.Builder(this)
                 .setTitle(R.string.scan_page_saved)
                 .setMessage(R.string.scan_next_page_question)
                 .setCancelable(false)
@@ -94,8 +95,7 @@ public class ScanEditorActivity extends AppCompatActivity {
                     viewModel.consumeSaved();
                     photoSource.pickPhoto();
                 })
-                .setNegativeButton(R.string.scan_done, (dialog, which) -> finish())
-                .show();
+                .setNegativeButton(R.string.scan_done, (dialog, which) -> finish()));
     }
 
     private void showStage(Stage stage) {

@@ -9,9 +9,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.backup.CloudSyncManager;
 import com.yurii.pavlenko.myassistant.backup.DatabaseBackupManager;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 /**
  * Handler responsible for managing user actions triggered from the main overflow backup menu.
@@ -107,9 +107,7 @@ public class MainMenuActionsHandler {
                 })
                 .create();
         dialog.show();
-        if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
-        }
+        DialogStyle.apply(dialog);
     }
 
     private static void shareBackup(AppCompatActivity activity) {

@@ -17,6 +17,7 @@ import com.yurii.pavlenko.myassistant.calculator.logic.CalculatorDisplay;
 import com.yurii.pavlenko.myassistant.calculator.logic.HistoryEntry;
 import com.yurii.pavlenko.myassistant.calculator.viewmodel.CalculatorViewModel;
 import com.yurii.pavlenko.myassistant.databinding.FragmentCalculatorBinding;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 import java.util.List;
 
@@ -93,10 +94,9 @@ public class CalculatorFragment extends Fragment {
         for (int i = 0; i < lines.length; i++) {
             lines[i] = entries.get(i).toString();
         }
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.calculator_history)
-                .setItems(lines, (dialog, which) -> viewModel.restore(entries.get(which)))
-                .show();
+                .setItems(lines, (dialog, which) -> viewModel.restore(entries.get(which))));
     }
 
     @Override

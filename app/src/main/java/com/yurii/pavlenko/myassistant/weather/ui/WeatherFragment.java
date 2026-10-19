@@ -32,6 +32,7 @@ import com.yurii.pavlenko.myassistant.weather.logic.WeatherCode;
 import com.yurii.pavlenko.myassistant.weather.ui.scene.SceneFactory;
 import com.yurii.pavlenko.myassistant.weather.viewmodel.WeatherState;
 import com.yurii.pavlenko.myassistant.weather.viewmodel.WeatherViewModel;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 import java.util.List;
 
@@ -120,10 +121,9 @@ public class WeatherFragment extends Fragment {
         for (int i = 0; i < names.length; i++) {
             names[i] = places.get(i).fullName();
         }
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.weather_choose_city)
-                .setItems(names, (dialog, which) -> viewModel.showPlace(places.get(which)))
-                .show();
+                .setItems(names, (dialog, which) -> viewModel.showPlace(places.get(which))));
         viewModel.clearMatches();
     }
 
