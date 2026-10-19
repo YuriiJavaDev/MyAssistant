@@ -10,6 +10,11 @@ import android.util.Log;
 import androidx.core.content.FileProvider;
 import androidx.documentfile.provider.DocumentFile;
 
+import com.yurii.pavlenko.myassistant.flights.data.FlightReportStore;
+import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
+import com.yurii.pavlenko.myassistant.flights.database.FlightDatabase;
+import com.yurii.pavlenko.myassistant.flights.logic.FlightReportName;
+import com.yurii.pavlenko.myassistant.flights.model.FlightReportSummary;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupArchive;
 import com.yurii.pavlenko.myassistant.scan.backup.ScanBackupRestorer;
 
@@ -28,7 +33,7 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 /**
- * Exports the local data (task, step and flight databases and scan archive) to a folder the user picks or to another app,
+ * Exports the local data (task, step and flight databases, flight report PDFs and scan archive) to a folder the user picks or to another app,
  * and imports it back from user-selected files. All work runs off the main thread and reports back on it.
  */
 public final class DatabaseBackupManager {
@@ -37,6 +42,7 @@ public final class DatabaseBackupManager {
     private static final String CACHE_FOLDER = "backups";
     private static final String DATABASE_MIME = "application/octet-stream";
     private static final String ZIP_MIME = "application/zip";
+    private static final String PDF_MIME = "application/pdf";
     private static final byte[] SQLITE_HEADER = {'S', 'Q', 'L', 'i', 't', 'e', ' ', 'f', 'o', 'r', 'm', 'a', 't', ' ', '3', 0};
     private static final byte[] ZIP_HEADER = {'P', 'K'};
     private static final ExecutorService EXECUTOR = Executors.newSingleThreadExecutor();
@@ -57,6 +63,7 @@ public final class DatabaseBackupManager {
             if (ScanBackupArchive.hasData(appContext)) {
                 files.add(writeScanArchiveToCache(appContext));
             }
+            forEachFlightReport(appContext, (name, pdf) -> files.add(writePdfToCache(appContext, name, pdf)));
             return createShareIntent(appContext, files);
         }, onReady);
     }
@@ -77,6 +84,8 @@ public final class DatabaseBackupManager {
             if (ScanBackupArchive.hasData(appContext)) {
                 writeToFolder(appContext, folder, ScanBackupArchive.FILE_NAME, ZIP_MIME, out -> ScanBackupArchive.write(appContext, out));
             }
+            forEachFlightReport(appContext, (name, pdf) ->
+                    writeToFolder(appContext, folder, name, PDF_MIME, out -> out.write(pdf)));
             return true;
         }, result -> onDone.accept(Boolean.TRUE.equals(result)));
     }
@@ -167,6 +176,33 @@ public final class DatabaseBackupManager {
         File target = new File(cacheFolder(context), ScanBackupArchive.FILE_NAME);
         try (OutputStream out = new FileOutputStream(target)) {
             ScanBackupArchive.write(context, out);
+        }
+        return target;
+    }
+
+    private interface ReportAction {
+        void accept(String fileName, byte[] pdf) throws IOException;
+    }
+
+    /** Passes each flight report as a PDF named like the one sent to the cloud; the PDFs are read one at a time. */
+    private static void forEachFlightReport(Context context, ReportAction action) throws IOException {
+        if (!ManagedDatabase.FLIGHTS.getFile(context).exists()) {
+            return;
+        }
+        FlightDao dao = FlightDatabase.getInstance(context).flightDao();
+        FlightReportStore store = new FlightReportStore(dao);
+        for (FlightReportSummary report : dao.reportSummaries()) {
+            byte[] pdf = store.pdf(report.getFlightId());
+            if (pdf != null) {
+                action.accept(FlightReportName.of(report.getStartMillis()), pdf);
+            }
+        }
+    }
+
+    private static File writePdfToCache(Context context, String name, byte[] pdf) throws IOException {
+        File target = new File(cacheFolder(context), name);
+        try (OutputStream out = new FileOutputStream(target)) {
+            out.write(pdf);
         }
         return target;
     }
