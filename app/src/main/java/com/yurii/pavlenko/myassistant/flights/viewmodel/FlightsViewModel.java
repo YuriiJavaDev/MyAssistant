@@ -1,7 +1,6 @@
 package com.yurii.pavlenko.myassistant.flights.viewmodel;
 
 import android.app.Application;
-import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -67,10 +66,6 @@ public class FlightsViewModel extends AndroidViewModel {
 
     public void checkQuota(Consumer<ReportQuota> onDone) {
         repository.checkQuota(onDone);
-    }
-
-    public void saveReportThenDelete(long flightId, Uri target, Consumer<Boolean> onDone) {
-        repository.saveReportThenDelete(flightId, target, onDone);
     }
 
     public int getReportLimit() {

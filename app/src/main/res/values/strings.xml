@@ -225,11 +225,12 @@
     <string name="flights_report_failed">The report could not be prepared.</string>
     <string name="flights_report_no_viewer">No app that opens PDF files was found.</string>
     <string name="flights_delete_title">Delete this flight?</string>
-    <string name="flights_delete_message">The route and the report will be removed for good. You can save the report first, to a flash drive, a computer or Google Drive.</string>
+    <string name="flights_delete_message">The route and the report will be removed for good. You can send the report somewhere first, for example to a flash drive, a computer or Google Drive.</string>
     <string name="flights_delete_save_first">Save report, then delete</string>
     <string name="flights_delete_without_saving">Delete without saving</string>
-    <string name="flights_delete_saved">The report was saved and the flight deleted.</string>
-    <string name="flights_delete_save_failed">The report could not be saved, so the flight was kept.</string>
+    <string name="flights_delete_after_share_message">If the report reached the place you wanted, you can delete the flight now.</string>
+    <string name="flights_delete_after_share_confirm">Delete flight</string>
+    <string name="flights_delete_keep">Keep the flight</string>
     <string name="flights_units_report_limit">Report limit</string>
     <string name="flights_units_report_limit_hint">Maximum PDF reports in the journal, 0 for no limit</string>
     <string name="flights_limit_full_title">PDF report limit reached</string>
