@@ -225,8 +225,21 @@
     <string name="flights_report_failed">The report could not be prepared.</string>
     <string name="flights_report_no_viewer">No app that opens PDF files was found.</string>
     <string name="flights_delete_title">Delete this flight?</string>
-    <string name="flights_delete_message">The route and the report will be removed.</string>
-    <string name="flights_delete_confirm">Delete</string>
+    <string name="flights_delete_message">The route and the report will be removed for good. You can save the report first, to a flash drive, a computer or Google Drive.</string>
+    <string name="flights_delete_save_first">Save report, then delete</string>
+    <string name="flights_delete_without_saving">Delete without saving</string>
+    <string name="flights_delete_saved">The report was saved and the flight deleted.</string>
+    <string name="flights_delete_save_failed">The report could not be saved, so the flight was kept.</string>
+    <string name="flights_units_report_limit">Report limit</string>
+    <string name="flights_units_report_limit_hint">Maximum PDF reports in the journal, 0 for no limit</string>
+    <string name="flights_limit_full_title">PDF report limit reached</string>
+    <string name="flights_limit_full_message">The journal holds %1$d reports, which is the limit. To record a new flight, delete at least one flight from the journal. You can save its report first, to a flash drive, a computer or Google Drive.</string>
+    <string name="flights_limit_warning_title">You are approaching the PDF report limit!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">You can still record %d flight. Delete outdated flights from the journal.</item>
+        <item quantity="other">You can still record %d flights. Delete outdated flights from the journal.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Open journal</string>
     <string name="flights_journal_line">%1$s · top %2$s · max %3$s</string>
     <string name="flights_units_speed">Speed and distance</string>
     <string name="flights_units_altitude">Altitude</string>

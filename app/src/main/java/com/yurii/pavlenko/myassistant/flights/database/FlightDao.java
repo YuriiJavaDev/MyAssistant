@@ -56,6 +56,9 @@ public interface FlightDao {
             + "INNER JOIN flight_reports r ON r.flightId = f.id ORDER BY f.startMillis")
     List<FlightReportSummary> reportSummaries();
 
+    @Query("SELECT COUNT(*) FROM flight_reports")
+    int reportCount();
+
     @Query("DELETE FROM flights WHERE id = :id")
     void deleteFlight(long id);
 }

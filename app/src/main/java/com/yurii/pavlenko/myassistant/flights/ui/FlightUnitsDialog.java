@@ -2,6 +2,8 @@ package com.yurii.pavlenko.myassistant.flights.ui;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -15,7 +17,7 @@ import com.yurii.pavlenko.myassistant.flights.logic.ClimbUnit;
 import com.yurii.pavlenko.myassistant.flights.logic.SpeedUnit;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
 
-/** Choice of the speed, altitude and climb rate units; each choice applies at once. */
+/** Choice of the speed, altitude and climb rate units and of the report limit; each choice applies at once. */
 public class FlightUnitsDialog extends DialogFragment {
 
     private FlightsViewModel viewModel;
@@ -36,6 +38,21 @@ public class FlightUnitsDialog extends DialogFragment {
         binding.speedGroup.setOnCheckedChangeListener((group, id) -> save());
         binding.altitudeGroup.setOnCheckedChangeListener((group, id) -> save());
         binding.climbGroup.setOnCheckedChangeListener((group, id) -> save());
+        binding.reportLimit.setText(String.valueOf(viewModel.getReportLimit()));
+        binding.reportLimit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence text, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence text, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable text) {
+                saveReportLimit(text.toString());
+            }
+        });
 
         AlertDialog dialog = new AlertDialog.Builder(requireContext()).setView(binding.getRoot()).create();
         if (dialog.getWindow() != null) {
@@ -62,6 +79,15 @@ public class FlightUnitsDialog extends DialogFragment {
         ClimbUnit climb = binding.climbGroup.getCheckedRadioButtonId() == binding.feetPerMinute.getId()
                 ? ClimbUnit.FEET_PER_MINUTE : ClimbUnit.METRES_PER_SECOND;
         viewModel.saveUnits(new FlightUnits(speed, altitude, climb));
+    }
+
+    /** A value that is not a number is ignored, so the limit is never changed by a half-typed entry. */
+    private void saveReportLimit(String typed) {
+        try {
+            viewModel.saveReportLimit(Integer.parseInt(typed));
+        } catch (NumberFormatException notANumber) {
+            // The field is empty or too long to be a limit
+        }
     }
 
     @Override
