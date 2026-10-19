@@ -10,54 +10,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="App Design"
+        android:text="@string/settings_design_title"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:paddingBottom="8dp"/>
 
-    <RadioGroup
-        android:id="@+id/radioGroupAppDesign"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <RadioButton
-            android:id="@+id/radioDesign1"
+        <LinearLayout
+            android:id="@+id/designList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MyAssistant 1"
-            android:textColor="@color/text_color"
-            android:textSize="13sp"
-            android:paddingVertical="6dp"/>
-
-        <RadioButton
-            android:id="@+id/radioDesign2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MyAssistant 2 (Coming soon)"
-            android:textColor="@color/text_color"
-            android:textSize="13sp"
-            android:paddingVertical="6dp"/>
-
-        <RadioButton
-            android:id="@+id/radioDesign3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MyAssistant 3 (Coming soon)"
-            android:textColor="@color/text_color"
-            android:textSize="13sp"
-            android:paddingVertical="6dp"/>
-
-        <RadioButton
-            android:id="@+id/radioDesign4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MyAssistant 4 (Coming soon)"
-            android:textColor="@color/text_color"
-            android:textSize="13sp"
-            android:paddingVertical="6dp"/>
-
-    </RadioGroup>
+            android:orientation="vertical" />
+    </ScrollView>
 
 </LinearLayout>

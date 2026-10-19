@@ -4,9 +4,9 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 public class TaskStyleHelper {
 
@@ -22,7 +22,7 @@ public class TaskStyleHelper {
 
         Context context = textView.getContext();
         if (isCompleted) {
-            textView.setTextColor(ContextCompat.getColor(context, R.color.text_muted));
+            textView.setTextColor(ThemeColors.get(context, R.attr.maTextMuted));
             return;
         }
 
@@ -31,14 +31,14 @@ public class TaskStyleHelper {
         }
         switch (importance.toLowerCase()) {
             case "urgent":
-                textView.setTextColor(ContextCompat.getColor(context, R.color.status_overdue));
+                textView.setTextColor(ThemeColors.get(context, R.attr.maOverdue));
                 break;
             case "important":
-                textView.setTextColor(ContextCompat.getColor(context, R.color.status_important));
+                textView.setTextColor(ThemeColors.get(context, R.attr.maImportant));
                 break;
             case "normal":
             default:
-                textView.setTextColor(ContextCompat.getColor(context, R.color.text_color));
+                textView.setTextColor(ThemeColors.get(context, R.attr.maText));
                 break;
         }
     }

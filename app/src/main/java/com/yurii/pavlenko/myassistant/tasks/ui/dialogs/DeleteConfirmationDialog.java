@@ -6,10 +6,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 import java.util.List;
 
@@ -90,7 +90,7 @@ public class DeleteConfirmationDialog {
         if (positiveButton != null) {
             positiveButton.setBackgroundTintList(null);
             positiveButton.setBackgroundResource(R.drawable.button_selector);
-            positiveButton.setTextColor(ContextCompat.getColor(context, R.color.text_color_btn));
+            positiveButton.setTextColor(ThemeColors.get(context, R.attr.maButtonLabel));
             positiveButton.setAllCaps(false);
 
             positiveButton.setPadding(paddingHorizontal, positiveButton.getPaddingTop(), paddingHorizontal, positiveButton.getPaddingBottom());
@@ -103,7 +103,7 @@ public class DeleteConfirmationDialog {
         if (negativeButton != null) {
             negativeButton.setBackgroundTintList(null);
             negativeButton.setBackgroundResource(R.drawable.button_selector);
-            negativeButton.setTextColor(ContextCompat.getColor(context, R.color.text_color_btn));
+            negativeButton.setTextColor(ThemeColors.get(context, R.attr.maButtonLabel));
             negativeButton.setAllCaps(false);
             negativeButton.setPadding(paddingHorizontal, negativeButton.getPaddingTop(), paddingHorizontal, negativeButton.getPaddingBottom());
         }

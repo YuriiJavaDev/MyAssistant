@@ -10,13 +10,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_time"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/flightTime"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -26,13 +26,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_distance"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/distance"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -42,13 +42,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_max_speed"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/maxSpeed"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -58,13 +58,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_avg_speed"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/averageSpeed"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -74,13 +74,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_max_altitude"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/maxAltitude"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -90,13 +90,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_climb_rate"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/climbRate"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>
@@ -106,13 +106,13 @@
         android:paddingBottom="4dp">
         <TextView
             android:text="@string/flights_max_g"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/maxG"
             android:gravity="end"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
     </TableRow>

@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:orientation="vertical"
     android:padding="4dp">
 
@@ -38,7 +37,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="@string/scan_empty"
-        android:textColor="@color/text_color"
+        android:textColor="?attr/maText"
         android:textSize="16sp" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -67,7 +66,7 @@
             android:stateListAnimator="@null"
             android:text="@string/scan_clear_all"
             android:textAllCaps="false"
-            android:textColor="@color/text_color_btn" />
+            android:textColor="?attr/maButtonLabel" />
     </LinearLayout>
 
 </LinearLayout>

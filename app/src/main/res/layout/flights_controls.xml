@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/flights_location_needed"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton

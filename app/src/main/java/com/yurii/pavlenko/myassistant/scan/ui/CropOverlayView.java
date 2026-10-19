@@ -11,10 +11,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.scan.imaging.Quad;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 /**
  * Shows the photo with a draggable page outline: four corner handles and four edge handles,
@@ -52,7 +52,7 @@ public class CropOverlayView extends View {
         handleRadius = 10 * density;
         touchRadius = 32 * density;
 
-        int accent = ContextCompat.getColor(context, R.color.text_color_btn);
+        int accent = ThemeColors.get(context, R.attr.maButtonLabel);
         dimPaint.setColor(0x99000000);
         outlinePaint.setColor(accent);
         outlinePaint.setStyle(Paint.Style.STROKE);

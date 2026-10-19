@@ -15,7 +15,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
             android:id="@+id/flightDuration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -32,6 +32,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:textColor="@color/text_secondary"
+        android:textColor="?attr/maTextSecondary"
         android:textSize="12sp" />
 </LinearLayout>
