@@ -8,6 +8,7 @@ import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.scan.export.ExportFormat;
 import com.yurii.pavlenko.myassistant.scan.model.ScanDocument;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 /** The menu shown when a document in the list is tapped, including the rename and delete confirmations. */
 final class ScanActionsDialog {
@@ -34,7 +35,7 @@ final class ScanActionsDialog {
                 .setItems(actions, (d, which) -> perform(context, document, which, listener))
                 .create();
         dialog.show();
-        applyAppBackground(dialog);
+        DialogStyle.apply(dialog);
     }
 
     /** Order matches the scan_actions array in strings.xml. */
@@ -62,10 +63,10 @@ final class ScanActionsDialog {
                         listener.onRename(document, title);
                     }
                 })
-                .setNegativeButton(android.R.string.cancel, null)
+                .setNegativeButton(R.string.common_cancel, null)
                 .create();
         dialog.show();
-        applyAppBackground(dialog);
+        DialogStyle.apply(dialog);
     }
 
     private static void confirmDelete(Context context, ScanDocument document, Listener listener) {
@@ -86,9 +87,4 @@ final class ScanActionsDialog {
                 "Delete", onConfirmed);
     }
 
-    private static void applyAppBackground(AlertDialog dialog) {
-        if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
-        }
-    }
 }

@@ -36,6 +36,7 @@ import com.yurii.pavlenko.myassistant.flights.logic.VarioSoundSettings;
 import com.yurii.pavlenko.myassistant.flights.sensor.GpsTracker;
 import com.yurii.pavlenko.myassistant.flights.service.FlightRecordingService;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 import java.util.Locale;
 import java.util.Map;
@@ -140,22 +141,20 @@ public class FlightsFragment extends Fragment {
 
     /** Recording does not start until the journal has room, so that a report is never left out. */
     private void showLimitReached(ReportQuota quota) {
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.flights_limit_full_title)
                 .setMessage(getString(R.string.flights_limit_full_message, quota.getLimit()))
                 .setPositiveButton(R.string.flights_limit_open_journal, (dialog, which) -> openJournal())
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
+                .setNegativeButton(R.string.common_cancel, null));
     }
 
     private void showLimitApproaching(ReportQuota quota) {
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.flights_limit_warning_title)
                 .setMessage(getResources().getQuantityString(R.plurals.flights_limit_warning_message,
                         quota.remaining(), quota.remaining()))
                 .setPositiveButton(R.string.flights_start, (dialog, which) -> launchRecording())
-                .setNegativeButton(R.string.flights_limit_open_journal, (dialog, which) -> openJournal())
-                .show();
+                .setNegativeButton(R.string.flights_limit_open_journal, (dialog, which) -> openJournal()));
     }
 
     private void openJournal() {

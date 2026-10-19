@@ -18,6 +18,7 @@ import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogFlightJournalBinding;
 import com.yurii.pavlenko.myassistant.flights.model.FlightRecord;
 import com.yurii.pavlenko.myassistant.flights.viewmodel.FlightsViewModel;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 /** The list of recorded flights; a tap offers to open or share the report, or to delete the flight. */
 public class FlightJournalDialog extends DialogFragment {
@@ -63,7 +64,7 @@ public class FlightJournalDialog extends DialogFragment {
         }
         String[] actions = {getString(R.string.flights_report_open), getString(R.string.flights_report_share),
                 getString(R.string.flights_report_delete)};
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setItems(actions, (dialog, which) -> {
                     if (which == 0) {
                         withReport(flight, true);
@@ -72,8 +73,7 @@ public class FlightJournalDialog extends DialogFragment {
                     } else {
                         confirmDelete(flight);
                     }
-                })
-                .show();
+                }));
     }
 
     private void withReport(FlightRecord flight, boolean open) {
@@ -92,13 +92,12 @@ public class FlightJournalDialog extends DialogFragment {
     }
 
     private void confirmDelete(FlightRecord flight) {
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.flights_delete_title)
                 .setMessage(R.string.flights_delete_message)
                 .setPositiveButton(R.string.flights_delete_save_first, (dialog, which) -> chooseWhereToSave(flight))
                 .setNegativeButton(R.string.flights_delete_without_saving, (dialog, which) -> viewModel.deleteFlight(flight.getId()))
-                .setNeutralButton(android.R.string.cancel, null)
-                .show();
+                .setNeutralButton(R.string.common_cancel, null));
     }
 
     /** The same share sheet as "Share report", so the report can go to any app, drive or device. */
@@ -124,12 +123,11 @@ public class FlightJournalDialog extends DialogFragment {
         if (flightId == NO_FLIGHT) {
             return;
         }
-        new AlertDialog.Builder(requireContext())
+        DialogStyle.show(new AlertDialog.Builder(requireContext())
                 .setTitle(R.string.flights_delete_title)
                 .setMessage(R.string.flights_delete_after_share_message)
                 .setPositiveButton(R.string.flights_delete_after_share_confirm, (dialog, which) -> viewModel.deleteFlight(flightId))
-                .setNegativeButton(R.string.flights_delete_keep, null)
-                .show();
+                .setNegativeButton(R.string.flights_delete_keep, null));
     }
 
     @Override

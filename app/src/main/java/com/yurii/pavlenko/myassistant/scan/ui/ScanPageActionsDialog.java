@@ -6,6 +6,7 @@ import android.content.Context;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
+import com.yurii.pavlenko.myassistant.ui.theme.DialogStyle;
 
 /** The menu shown when a page of a document is tapped. */
 final class ScanPageActionsDialog {
@@ -30,7 +31,7 @@ final class ScanPageActionsDialog {
                 .setItems(actions, (d, which) -> perform(context, page, which, listener))
                 .create();
         dialog.show();
-        applyAppBackground(dialog);
+        DialogStyle.apply(dialog);
     }
 
     /** Order matches the scan_page_actions array in strings.xml. */
@@ -50,9 +51,4 @@ final class ScanPageActionsDialog {
                 "Delete", () -> listener.onDelete(page));
     }
 
-    private static void applyAppBackground(AlertDialog dialog) {
-        if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
-        }
-    }
 }
