@@ -156,7 +156,7 @@ def style(d):
         ("colorOnSurfaceVariant", c("text_secondary")), ("colorOutline", c("outline")),
     ]
     name = "".join(p.capitalize() for p in k.split("_"))
-    lines = ["    <style name=\"Design.%s\">" % name]
+    lines = ["    <style name=\"Design.%s\" parent=\"\">" % name]
     lines += ['        <item name="%s">%s</item>' % item for item in items]
     lines.append("    </style>")
     return "\n".join(lines)
