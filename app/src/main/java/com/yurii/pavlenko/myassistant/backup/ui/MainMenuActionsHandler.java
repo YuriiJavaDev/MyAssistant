@@ -1,11 +1,11 @@
 package com.yurii.pavlenko.myassistant.backup.ui;
 
-import android.app.AlertDialog;
 import android.net.Uri;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 

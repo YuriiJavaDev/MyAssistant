@@ -1,7 +1,8 @@
 package com.yurii.pavlenko.myassistant.scan.ui;
 
-import android.app.AlertDialog;
 import android.content.Context;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.scan.model.ScanPage;
