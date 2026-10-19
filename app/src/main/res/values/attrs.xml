@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design tokens: Theme.MyAssistant holds the Classic values, a Design.* overlay replaces them -->
+    <attr name="maBackground" format="color" />
+    <attr name="maText" format="color" />
+    <attr name="maTextSecondary" format="color" />
+    <attr name="maTextMuted" format="color" />
+    <attr name="maOutline" format="color" />
+    <attr name="maTabSelected" format="color" />
+    <attr name="maTabText" format="color" />
+    <attr name="maSwitchTrack" format="color" />
+    <attr name="maAccent" format="color" />
+    <attr name="maButtonLabel" format="color" />
+    <attr name="maButtonStart" format="color" />
+    <attr name="maButtonEnd" format="color" />
+    <attr name="maButtonPressedEnd" format="color" />
+    <attr name="maButtonStrokeColor" format="color" />
+    <attr name="maOverdue" format="color" />
+    <attr name="maImportant" format="color" />
+    <attr name="maOk" format="color" />
+
+    <attr name="maCorner" format="dimension" />
+    <attr name="maCornerPanel" format="dimension" />
+    <attr name="maCornerTab" format="dimension" />
+    <attr name="maStroke" format="dimension" />
+    <attr name="maButtonStroke" format="dimension" />
+
+    <attr name="maBackdrop" format="reference" />
+</resources>

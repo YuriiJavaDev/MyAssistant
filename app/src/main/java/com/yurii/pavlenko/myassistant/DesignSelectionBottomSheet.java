@@ -1,59 +1,92 @@
 package com.yurii.pavlenko.myassistant;
 
 import android.app.Dialog;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.yurii.pavlenko.myassistant.ui.theme.AppDesign;
+import com.yurii.pavlenko.myassistant.ui.theme.DesignStore;
+import com.yurii.pavlenko.myassistant.ui.theme.DesignSwatches;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 /**
- * Bottom sheet dialog fragment for selecting application UI design variations.
+ * Bottom sheet dialog fragment for choosing the look of the application.
  */
 public class DesignSelectionBottomSheet extends BottomSheetDialogFragment {
+
+    private static final int SWATCH_SIZE_DP = 16;
+    private static final int SWATCH_GAP_DP = 3;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the app design selection layout from XML resource
         View view = inflater.inflate(R.layout.dialog_app_design, container, false);
+        LinearLayout list = view.findViewById(R.id.designList);
+        AppDesign current = DesignStore.get(requireContext());
 
-        RadioGroup radioGroup = view.findViewById(R.id.radioGroupAppDesign);
-        // MyAssistant 1 is checked by default
-        radioGroup.check(R.id.radioDesign1);
-
-        // Handle design selection changes
-        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.radioDesign1) {
-                Toast.makeText(requireContext(), "MyAssistant 1 selected", Toast.LENGTH_SHORT).show();
-            } else if (checkedId == R.id.radioDesign2) {
-                Toast.makeText(requireContext(), "MyAssistant 2 is coming soon", Toast.LENGTH_SHORT).show();
-            } else if (checkedId == R.id.radioDesign3) {
-                Toast.makeText(requireContext(), "MyAssistant 3 is coming soon", Toast.LENGTH_SHORT).show();
-            } else if (checkedId == R.id.radioDesign4) {
-                Toast.makeText(requireContext(), "MyAssistant 4 is coming soon", Toast.LENGTH_SHORT).show();
-            }
-
-            // Dismiss the design selection bottom sheet
-            dismiss();
-
-            // Also dismiss the parent settings bottom sheet to return directly to the main screen
-            Fragment settingsSheet = getParentFragmentManager().findFragmentByTag("SettingsBottomSheet");
-            if (settingsSheet instanceof BottomSheetDialogFragment) {
-                ((BottomSheetDialogFragment) settingsSheet).dismiss();
-            }
-        });
-
+        for (AppDesign design : AppDesign.values()) {
+            list.addView(createOption(inflater, list, design, design == current));
+        }
         return view;
+    }
+
+    private View createOption(LayoutInflater inflater, ViewGroup parent, AppDesign design, boolean selected) {
+        View option = inflater.inflate(R.layout.item_design_option, parent, false);
+        ((RadioButton) option.findViewById(R.id.designRadio)).setChecked(selected);
+        ((TextView) option.findViewById(R.id.designName)).setText(design.nameRes);
+        ((TextView) option.findViewById(R.id.designAbout)).setText(design.aboutRes);
+        addSwatches(option.findViewById(R.id.designSwatches), design);
+        option.setOnClickListener(v -> choose(design));
+        return option;
+    }
+
+    private void addSwatches(LinearLayout row, AppDesign design) {
+        float density = getResources().getDisplayMetrics().density;
+        int size = Math.round(SWATCH_SIZE_DP * density);
+        int gap = Math.round(SWATCH_GAP_DP * density);
+        int rim = ThemeColors.get(requireContext(), R.attr.maOutline);
+
+        for (int colour : DesignSwatches.of(requireContext(), design)) {
+            GradientDrawable dot = new GradientDrawable();
+            dot.setShape(GradientDrawable.OVAL);
+            dot.setColor(colour);
+            dot.setStroke(Math.round(density), rim);
+
+            View swatch = new View(requireContext());
+            swatch.setBackground(dot);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(size, size);
+            params.setMarginStart(gap);
+            row.addView(swatch, params);
+        }
+    }
+
+    private void choose(AppDesign design) {
+        FragmentActivity activity = requireActivity();
+        DesignStore.set(activity, design);
+
+        dismiss();
+
+        // Also dismiss the parent settings bottom sheet to return directly to the main screen
+        Fragment settingsSheet = getParentFragmentManager().findFragmentByTag("SettingsBottomSheet");
+        if (settingsSheet instanceof BottomSheetDialogFragment) {
+            ((BottomSheetDialogFragment) settingsSheet).dismiss();
+        }
+
+        activity.recreate();
     }
 
     @Override

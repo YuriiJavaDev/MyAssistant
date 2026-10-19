@@ -19,7 +19,7 @@
             android:text="Edit Task"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:layout_marginBottom="8dp" />
 
         <EditText
@@ -30,7 +30,7 @@
             android:paddingHorizontal="8dp"
             android:layout_marginBottom="8dp"
             android:inputType="text|textCapSentences"
-            android:textColor="@color/text_color" />
+            android:textColor="?attr/maText" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Importance level:"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="?attr/maAccent"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="2dp" />
@@ -65,7 +65,7 @@
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginEnd="8dp"
                         android:src="@android:drawable/arrow_down_float"
-                        app:tint="@color/text_color" />
+                        app:tint="?attr/maText" />
 
                     <Spinner
                         android:id="@+id/dialogImportanceSpinner"
@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Deadline:"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="?attr/maAccent"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="2dp" />
@@ -103,7 +103,7 @@
                     android:text="Select deadline"
                     android:textSize="12sp"
                     android:background="@drawable/bg_spinner"
-                    android:textColor="@color/text_color" />
+                    android:textColor="?attr/maText" />
             </LinearLayout>
         </LinearLayout>
 
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Reminder (Date &amp; Time):"
-                android:textColor="@color/colorPrimary"
+                android:textColor="?attr/maAccent"
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="2dp" />
@@ -131,7 +131,7 @@
                 android:text="Select reminder date &amp; time"
                 android:textSize="11sp"
                 android:background="@drawable/bg_spinner"
-                android:textColor="@color/text_color" />
+                android:textColor="?attr/maText" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:text="Show creation dates"
                 android:textSize="11sp"
-                android:textColor="@color/text_color" />
+                android:textColor="?attr/maText" />
         </LinearLayout>
 
         <LinearLayout
@@ -168,7 +168,7 @@
                 app:backgroundTint="@null"
                 android:text="Delete"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp"
                 style="?attr/materialButtonOutlinedStyle" />
 
@@ -189,7 +189,7 @@
                 app:backgroundTint="@null"
                 android:text="Cancel"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp"
                 style="?attr/materialButtonOutlinedStyle" />
 
@@ -204,7 +204,7 @@
                 app:backgroundTint="@null"
                 android:text="Save"
                 android:textAllCaps="false"
-                android:textColor="@color/text_color_btn"
+                android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp" />
         </LinearLayout>
 

@@ -9,9 +9,12 @@
                 <gradient
                     android:type="linear"
                     android:angle="55"
-                    android:startColor="@color/button_end"
-                    android:endColor="@color/button_pressed_end"/>
-                <corners android:radius="20dp" />
+                    android:startColor="?attr/maButtonEnd"
+                    android:endColor="?attr/maButtonPressedEnd"/>
+                <stroke
+                    android:width="?attr/maButtonStroke"
+                    android:color="?attr/maButtonStrokeColor" />
+                <corners android:radius="?attr/maCorner" />
             </shape>
         </inset>
     </item>
@@ -24,9 +27,12 @@
                 <gradient
                     android:type="linear"
                     android:angle="125"
-                    android:startColor="@color/button_start"
-                    android:endColor="@color/button_end" />
-                <corners android:radius="20dp" />
+                    android:startColor="?attr/maButtonStart"
+                    android:endColor="?attr/maButtonEnd" />
+                <stroke
+                    android:width="?attr/maButtonStroke"
+                    android:color="?attr/maButtonStrokeColor" />
+                <corners android:radius="?attr/maCorner" />
             </shape>
         </inset>
     </item>

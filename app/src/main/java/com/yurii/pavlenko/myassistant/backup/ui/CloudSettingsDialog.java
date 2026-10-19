@@ -22,6 +22,7 @@ import androidx.work.WorkManager;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogCloudSettingsBinding;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 import java.util.concurrent.TimeUnit;
 import com.yurii.pavlenko.myassistant.backup.CloudBackupWorker;
@@ -197,10 +198,10 @@ public class CloudSettingsDialog extends DialogFragment {
 
     private static void updateSwitchTextualState(SwitchCompat switchCompat, boolean isChecked) {
         if (isChecked) {
-            switchCompat.setTextColor(ContextCompat.getColor(switchCompat.getContext(), R.color.status_ok));
+            switchCompat.setTextColor(ThemeColors.get(switchCompat.getContext(), R.attr.maOk));
             switchCompat.setTypeface(null, android.graphics.Typeface.BOLD);
         } else {
-            switchCompat.setTextColor(ContextCompat.getColor(switchCompat.getContext(), R.color.text_color));
+            switchCompat.setTextColor(ThemeColors.get(switchCompat.getContext(), R.attr.maText));
             switchCompat.setTypeface(null, android.graphics.Typeface.NORMAL);
         }
     }

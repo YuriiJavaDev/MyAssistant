@@ -2,7 +2,6 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -23,8 +22,8 @@
             android:maxLines="1"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
-            android:textColor="@color/text_color"
-            android:textColorHint="@color/text_muted"
+            android:textColor="?attr/maText"
+            android:textColorHint="?attr/maTextMuted"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -66,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/weather_location_needed"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -86,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="16sp"
             android:visibility="gone" />
 
@@ -104,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="26sp"
                 android:textStyle="bold" />
 
@@ -113,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/maTextSecondary"
                 android:textSize="16sp" />
 
             <com.yurii.pavlenko.myassistant.weather.ui.PortholeView
@@ -127,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="48sp"
                 android:textStyle="bold" />
 
@@ -135,7 +134,7 @@
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="18sp" />
 
             <TableLayout
@@ -152,13 +151,13 @@
 
                     <TextView
                         android:text="@string/weather_feels_like"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/maTextSecondary"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/detailFeelsLike"
                         android:gravity="end"
-                        android:textColor="@color/text_color"
+                        android:textColor="?attr/maText"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </TableRow>
@@ -169,13 +168,13 @@
 
                     <TextView
                         android:text="@string/weather_humidity"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/maTextSecondary"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/detailHumidity"
                         android:gravity="end"
-                        android:textColor="@color/text_color"
+                        android:textColor="?attr/maText"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </TableRow>
@@ -186,13 +185,13 @@
 
                     <TextView
                         android:text="@string/weather_wind"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/maTextSecondary"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/detailWind"
                         android:gravity="end"
-                        android:textColor="@color/text_color"
+                        android:textColor="?attr/maText"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </TableRow>
@@ -203,13 +202,13 @@
 
                     <TextView
                         android:text="@string/weather_today_range"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/maTextSecondary"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/detailRange"
                         android:gravity="end"
-                        android:textColor="@color/text_color"
+                        android:textColor="?attr/maText"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </TableRow>
@@ -227,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -256,7 +255,7 @@
             android:layout_marginBottom="12dp"
             android:gravity="center"
             android:text="@string/weather_attribution"
-            android:textColor="@color/text_muted"
+            android:textColor="?attr/maTextMuted"
             android:textSize="11sp" />
 
     </LinearLayout>

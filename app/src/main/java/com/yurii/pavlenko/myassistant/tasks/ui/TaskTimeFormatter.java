@@ -3,11 +3,10 @@ package com.yurii.pavlenko.myassistant.tasks.ui;
 import android.content.Context;
 import android.widget.TextView;
 
-import androidx.core.content.ContextCompat;
-
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.logic.DeadlineText;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -68,12 +67,12 @@ public class TaskTimeFormatter {
 
             Context context = deadlineTextView.getContext();
             if (task.isCompleted()) {
-                deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.text_muted));
+                deadlineTextView.setTextColor(ThemeColors.get(context, R.attr.maTextMuted));
             } else {
                 if (DeadlineText.isOverdue(LocalDate.now(), deadline)) {
-                    deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_overdue));
+                    deadlineTextView.setTextColor(ThemeColors.get(context, R.attr.maOverdue));
                 } else {
-                    deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_ok));
+                    deadlineTextView.setTextColor(ThemeColors.get(context, R.attr.maOk));
                 }
             }
 

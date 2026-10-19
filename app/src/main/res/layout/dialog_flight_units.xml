@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/flights_units_speed"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/maAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -22,27 +22,27 @@
             android:id="@+id/kilometresPerHour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_kmh"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/knots"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_knots"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/metresPerSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_ms"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/flights_units_altitude"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/maAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -63,18 +63,18 @@
             android:id="@+id/metres"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_metres"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/feet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_feet"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
     </RadioGroup>
 
@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/flights_units_climb"
-        android:textColor="@color/colorPrimary"
+        android:textColor="?attr/maAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -94,18 +94,18 @@
             android:id="@+id/metresPerSecondClimb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_ms"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/feetPerMinute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@color/colorPrimary"
+            android:buttonTint="?attr/maAccent"
             android:text="@string/flights_unit_fpm"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp" />
     </RadioGroup>
 </LinearLayout>

@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 import com.yurii.pavlenko.myassistant.ui.widget.Bezel;
 
 /** A round instrument: a dark face inside the riveted frame. Subclasses draw what is on the face. */
@@ -29,7 +30,7 @@ abstract class InstrumentView extends View {
         face.setColor(ContextCompat.getColor(context, R.color.instrument_face));
         ink = ContextCompat.getColor(context, R.color.instrument_ink);
         dimInk = ContextCompat.getColor(context, R.color.instrument_ink_dim);
-        accent = ContextCompat.getColor(context, R.color.text_color_btn);
+        accent = ThemeColors.get(context, R.attr.maButtonLabel);
     }
 
     /** Draws the markings and the readout; the face is a square of the given size, centred on its middle. */

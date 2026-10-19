@@ -8,12 +8,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.tasks.logic.DeadlineText;
 import com.yurii.pavlenko.myassistant.tasks.logic.ReminderRules;
 import com.yurii.pavlenko.myassistant.tasks.ui.TaskTimeFormatter;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -180,7 +180,7 @@ public class TaskDeadlinePickerHelper {
             deadlineTextView.setText(text);
 
             if (DeadlineText.isOverdue(LocalDate.now(), selectedDeadline)) {
-                deadlineTextView.setTextColor(ContextCompat.getColor(context, R.color.status_overdue));
+                deadlineTextView.setTextColor(ThemeColors.get(context, R.attr.maOverdue));
             } else if (defaultDeadlineTextColor != null) {
                 deadlineTextView.setTextColor(defaultDeadlineTextColor);
             }

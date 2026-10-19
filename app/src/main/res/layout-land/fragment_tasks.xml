@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/background">
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -37,7 +36,7 @@
             android:stateListAnimator="@null"
             android:text="Add"
             android:textAllCaps="false"
-            android:textColor="@color/text_color_btn"
+            android:textColor="?attr/maButtonLabel"
             app:layout_constraintEnd_toStartOf="@+id/filterContainer"
             app:layout_constraintStart_toEndOf="@+id/taskInput"
             app:layout_constraintTop_toTopOf="parent" />
@@ -60,7 +59,7 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="10dp"
                 android:src="@android:drawable/arrow_down_float"
-                app:tint="@color/text_color" />
+                app:tint="?attr/maText" />
 
             <Spinner
                 android:id="@+id/filterSpinner"
@@ -89,7 +88,7 @@
                 android:layout_gravity="end|center_vertical"
                 android:layout_marginEnd="10dp"
                 android:src="@android:drawable/arrow_down_float"
-                app:tint="@color/text_color" />
+                app:tint="?attr/maText" />
 
             <Spinner
                 android:id="@+id/sortSpinner"
@@ -130,7 +129,7 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="12dp"
                 android:text="Total: 0  Completed: 0  Left: 0  Progress: 0%"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="11sp" />
 
             <LinearLayout
@@ -150,7 +149,7 @@
                     android:stateListAnimator="@null"
                     android:text="Delete Completed"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_color_btn"
+                    android:textColor="?attr/maButtonLabel"
                     android:textSize="11sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -163,7 +162,7 @@
                     android:stateListAnimator="@null"
                     android:text="Clear All"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_color_btn"
+                    android:textColor="?attr/maButtonLabel"
                     android:textSize="11sp" />
             </LinearLayout>
 

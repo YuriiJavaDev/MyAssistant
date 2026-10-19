@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?attr/maBackdrop"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -14,9 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         app:popupTheme="@style/CustomPopupMenu"
-        android:background="@color/background"
         app:title="MyAssistant"
-        app:titleTextColor="@color/text_color">
+        app:titleTextColor="?attr/maText">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -26,11 +25,11 @@
             android:background="@android:color/transparent"
             app:tabBackground="@drawable/tab_background"
             app:tabGravity="center"
-            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorColor="?attr/maAccent"
             app:tabIndicatorHeight="3dp"
             app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/colorPrimary"
-            app:tabTextColor="@color/text_color"
+            app:tabSelectedTextColor="?attr/maTabText"
+            app:tabTextColor="?attr/maText"
             app:tabTextAppearance="@style/MyTabTextAppearance" />
 
     </androidx.appcompat.widget.Toolbar>

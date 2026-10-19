@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="14dp"
             android:text="@string/steps_settings_title"
-            android:textColor="@color/colorPrimary"
+            android:textColor="?attr/maAccent"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="@string/steps_walk_length"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:hintTextColor="@color/colorPrimary">
+            app:boxStrokeColor="?attr/maAccent"
+            app:hintTextColor="?attr/maAccent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/walkInput"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,8 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:hint="@string/steps_run_length"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:hintTextColor="@color/colorPrimary">
+            app:boxStrokeColor="?attr/maAccent"
+            app:hintTextColor="?attr/maAccent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/runInput"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,8 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/steps_run_cadence"
-            app:boxStrokeColor="@color/colorPrimary"
-            app:hintTextColor="@color/colorPrimary">
+            app:boxStrokeColor="?attr/maAccent"
+            app:hintTextColor="?attr/maAccent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cadenceInput"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:maxLines="1"
-                android:textColor="@color/text_color"
+                android:textColor="?attr/maText"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/steps_run_cadence_hint"
-            android:textColor="@color/text_secondary"
+            android:textColor="?attr/maTextSecondary"
             android:textSize="12sp" />
 
         <TextView
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/steps_measure_title"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/steps_measure_text"
-            android:textColor="@color/text_color"
+            android:textColor="?attr/maText"
             android:textSize="13sp" />
 
         <LinearLayout

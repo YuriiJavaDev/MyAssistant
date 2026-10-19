@@ -4,9 +4,9 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 /** The riveted round frame shared by the weather porthole and the flight instruments. */
 public final class Bezel {
@@ -20,10 +20,10 @@ public final class Bezel {
 
     public Bezel(Context context) {
         rim.setStyle(Paint.Style.STROKE);
-        rim.setColor(ContextCompat.getColor(context, R.color.colorPrimary));
+        rim.setColor(ThemeColors.get(context, R.attr.maAccent));
         highlight.setStyle(Paint.Style.STROKE);
-        highlight.setColor(ContextCompat.getColor(context, R.color.outline));
-        bolt.setColor(ContextCompat.getColor(context, R.color.text_color_btn));
+        highlight.setColor(ThemeColors.get(context, R.attr.maOutline));
+        bolt.setColor(ThemeColors.get(context, R.attr.maButtonLabel));
     }
 
     /** The width of the frame for a round view of the given size. */

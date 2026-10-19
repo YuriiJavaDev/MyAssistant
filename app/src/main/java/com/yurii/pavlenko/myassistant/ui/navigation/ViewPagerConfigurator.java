@@ -1,11 +1,11 @@
 package com.yurii.pavlenko.myassistant.ui.navigation;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.ViewPagerAdapter;
 import com.yurii.pavlenko.myassistant.databinding.ActivityMainBinding;
+import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
 
 /**
  * Configures ViewPager2 adapter, tab titles, and tab navigation based on current orientation.
@@ -45,8 +45,8 @@ public class ViewPagerConfigurator {
                 binding.viewPager
         );
 
-        int primaryColor = ContextCompat.getColor(activity, R.color.colorPrimary);
-        int backgroundColor = ContextCompat.getColor(activity, R.color.background);
+        int primaryColor = ThemeColors.get(activity, R.attr.maAccent);
+        int backgroundColor = ThemeColors.get(activity, R.attr.maBackground);
 
         navigationHelper.setupTabs(isTwoRows, primaryColor, backgroundColor);
     }
