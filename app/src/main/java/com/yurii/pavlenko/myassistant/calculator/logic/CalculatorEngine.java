@@ -19,7 +19,7 @@ public final class CalculatorEngine {
     private double memory;
     private double answer;
     private String expression = "";
-    private String error;
+    private CalcError error;
     private boolean showingResult;
 
     /** @param random supplies numbers from 0 up to but not including 1 for the Rand key */
@@ -233,7 +233,7 @@ public final class CalculatorEngine {
             expression = shown;
             showingResult = true;
         } catch (CalculationException problem) {
-            error = problem.getMessage();
+            error = problem.getError();
         }
     }
 
@@ -250,7 +250,7 @@ public final class CalculatorEngine {
         try {
             memory += expression.isEmpty() ? answer : ExpressionEvaluator.evaluate(expression, angleMode, answer);
         } catch (CalculationException problem) {
-            error = problem.getMessage();
+            error = problem.getError();
         }
     }
 

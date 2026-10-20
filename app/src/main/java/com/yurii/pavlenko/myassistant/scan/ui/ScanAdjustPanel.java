@@ -63,7 +63,7 @@ final class ScanAdjustPanel {
     private void setupPaperSpinner() {
         String[] labels = new String[formats.length];
         for (int i = 0; i < formats.length; i++) {
-            labels[i] = formats[i].getLabel();
+            labels[i] = binding.getRoot().getContext().getString(PaperFormatText.of(formats[i]));
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(binding.getRoot().getContext(), R.layout.item_spinner, labels);
         adapter.setDropDownViewResource(R.layout.item_spinner);

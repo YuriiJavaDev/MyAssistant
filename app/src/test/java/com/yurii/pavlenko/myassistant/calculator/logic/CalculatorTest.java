@@ -53,7 +53,7 @@ public class CalculatorTest {
         assertEquals("0", calc("cos(90)"));
         assertEquals("45", calc("atan(1)"));
         assertEquals("1", calc("sin(π÷2)", AngleMode.RADIANS));
-        assertEquals("ERR:Undefined", calc("tan(90)"));
+        assertEquals("ERR:UNDEFINED", calc("tan(90)"));
     }
 
     @Test
@@ -87,16 +87,16 @@ public class CalculatorTest {
 
     @Test
     public void reportsMistakesInsteadOfCrashing() {
-        assertEquals("ERR:Division by zero", calc("1÷0"));
-        assertEquals("ERR:Invalid input", calc("ln(0)"));
-        assertEquals("ERR:Invalid input", calc("sqrt(-1)"));
-        assertEquals("ERR:Invalid input", calc("asin(2)"));
-        assertEquals("ERR:Invalid input", calc("2.5!"));
-        assertEquals("ERR:Result is too large", calc("10^999"));
-        assertEquals("ERR:Invalid expression", calc("2+"));
-        assertEquals("ERR:Invalid expression", calc("2)"));
-        assertEquals("ERR:Invalid expression", calc("."));
-        assertEquals("ERR:Invalid expression", calc("foo(1)"));
+        assertEquals("ERR:DIVISION_BY_ZERO", calc("1÷0"));
+        assertEquals("ERR:INVALID_INPUT", calc("ln(0)"));
+        assertEquals("ERR:INVALID_INPUT", calc("sqrt(-1)"));
+        assertEquals("ERR:INVALID_INPUT", calc("asin(2)"));
+        assertEquals("ERR:INVALID_INPUT", calc("2.5!"));
+        assertEquals("ERR:RESULT_TOO_LARGE", calc("10^999"));
+        assertEquals("ERR:INVALID_EXPRESSION", calc("2+"));
+        assertEquals("ERR:INVALID_EXPRESSION", calc("2)"));
+        assertEquals("ERR:INVALID_EXPRESSION", calc("."));
+        assertEquals("ERR:INVALID_EXPRESSION", calc("foo(1)"));
     }
 
     @Test
@@ -105,8 +105,8 @@ public class CalculatorTest {
         for (int i = 0; i < 150; i++) {
             nested.append('(');
         }
-        assertEquals("ERR:Expression is too complex", calc(nested + "1"));
-        assertEquals("ERR:Expression is too long", calc(new String(new char[301]).replace('\0', '1')));
+        assertEquals("ERR:EXPRESSION_TOO_COMPLEX", calc(nested + "1"));
+        assertEquals("ERR:EXPRESSION_TOO_LONG", calc(new String(new char[301]).replace('\0', '1')));
     }
 
     @Test
@@ -188,7 +188,7 @@ public class CalculatorTest {
     @Test
     public void showsErrorsAndKeepsTheExpression() {
         CalculatorEngine engine = typed(Key.ONE, Key.DIVIDE, Key.ZERO, Key.EQUALS);
-        assertEquals("Division by zero", engine.display().getError());
+        assertEquals(CalcError.DIVISION_BY_ZERO, engine.display().getError());
         assertEquals("1÷0", engine.display().getExpression());
         engine.press(Key.BACK);
         assertTrue(engine.display().getError() == null);
@@ -277,22 +277,22 @@ public class CalculatorTest {
 
     @Test
     public void tellsTheUserAboutMistakes() {
-        assertEquals("ERR:Division by zero", run(Key.FIVE, Key.DIVIDE, Key.ZERO, Key.EQUALS));
-        assertEquals("ERR:Division by zero", run(Key.FIVE, Key.MOD, Key.ZERO, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.LN, Key.ZERO, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.LOG, Key.SUBTRACT, Key.ONE, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.SQRT, Key.SUBTRACT, Key.FOUR, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.ASIN, Key.TWO, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.ACOS, Key.TWO, Key.EQUALS));
-        assertEquals("ERR:Invalid input", run(Key.TWO, Key.DOT, Key.FIVE, Key.FACTORIAL, Key.EQUALS));
-        assertEquals("ERR:Division by zero", run(Key.ZERO, Key.POWER, Key.SUBTRACT, Key.ONE, Key.EQUALS));
-        assertEquals("ERR:Undefined", run(Key.TAN, Key.NINE, Key.ZERO, Key.EQUALS));
-        assertEquals("ERR:Result is too large", run(Key.ONE, Key.ZERO, Key.POWER, Key.NINE, Key.NINE, Key.NINE, Key.EQUALS));
-        assertEquals("ERR:Result is too large", run(Key.ONE, Key.SEVEN, Key.ONE, Key.FACTORIAL, Key.EQUALS));
-        assertEquals("ERR:Invalid expression", run(Key.ONE, Key.ADD, Key.EQUALS));
-        assertEquals("ERR:Invalid expression", run(Key.OPEN, Key.EQUALS));
-        assertEquals("ERR:Invalid expression", run(Key.SIN, Key.EQUALS));
-        assertEquals("ERR:Invalid expression", run(Key.DOT, Key.CLEAR, Key.SUBTRACT, Key.EQUALS));
+        assertEquals("ERR:DIVISION_BY_ZERO", run(Key.FIVE, Key.DIVIDE, Key.ZERO, Key.EQUALS));
+        assertEquals("ERR:DIVISION_BY_ZERO", run(Key.FIVE, Key.MOD, Key.ZERO, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.LN, Key.ZERO, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.LOG, Key.SUBTRACT, Key.ONE, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.SQRT, Key.SUBTRACT, Key.FOUR, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.ASIN, Key.TWO, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.ACOS, Key.TWO, Key.EQUALS));
+        assertEquals("ERR:INVALID_INPUT", run(Key.TWO, Key.DOT, Key.FIVE, Key.FACTORIAL, Key.EQUALS));
+        assertEquals("ERR:DIVISION_BY_ZERO", run(Key.ZERO, Key.POWER, Key.SUBTRACT, Key.ONE, Key.EQUALS));
+        assertEquals("ERR:UNDEFINED", run(Key.TAN, Key.NINE, Key.ZERO, Key.EQUALS));
+        assertEquals("ERR:RESULT_TOO_LARGE", run(Key.ONE, Key.ZERO, Key.POWER, Key.NINE, Key.NINE, Key.NINE, Key.EQUALS));
+        assertEquals("ERR:RESULT_TOO_LARGE", run(Key.ONE, Key.SEVEN, Key.ONE, Key.FACTORIAL, Key.EQUALS));
+        assertEquals("ERR:INVALID_EXPRESSION", run(Key.ONE, Key.ADD, Key.EQUALS));
+        assertEquals("ERR:INVALID_EXPRESSION", run(Key.OPEN, Key.EQUALS));
+        assertEquals("ERR:INVALID_EXPRESSION", run(Key.SIN, Key.EQUALS));
+        assertEquals("ERR:INVALID_EXPRESSION", run(Key.DOT, Key.CLEAR, Key.SUBTRACT, Key.EQUALS));
     }
 
     @Test

@@ -29,7 +29,6 @@ public final class GeocodingService {
     private static final String[] TOWN_KEYS = {"city", "town", "village", "municipality", "hamlet", "suburb", "county"};
     private static final Set<String> SETTLEMENT_TYPES = new HashSet<>(Arrays.asList("city", "town", "village", "hamlet", "municipality"));
     private static final int MAX_MATCHES = 5;
-    private static final String UNKNOWN_PLACE = "Current location";
 
     private GeocodingService() {
     }
@@ -67,7 +66,7 @@ public final class GeocodingService {
         } catch (IOException | JSONException ignored) {
             // The weather itself is still available for these coordinates
         }
-        return new Place(UNKNOWN_PLACE, "", "", latitude, longitude, 1);
+        return new Place("", "", "", latitude, longitude, 1);
     }
 
     private static Place toPlace(JSONObject item) {

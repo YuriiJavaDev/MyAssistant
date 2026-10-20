@@ -11,7 +11,7 @@ import java.util.Locale;
 
 final class StepFormat {
 
-    private static final DateTimeFormatter DATE = DateTimeFormatter.ofPattern("d MMM yyyy", Locale.ENGLISH);
+    private static final String DATE_PATTERN = "d MMM yyyy";
 
     private StepFormat() {
     }
@@ -25,6 +25,6 @@ final class StepFormat {
     }
 
     static String date(long epochDay) {
-        return LocalDate.ofEpochDay(epochDay).format(DATE);
+        return LocalDate.ofEpochDay(epochDay).format(DateTimeFormatter.ofPattern(DATE_PATTERN, Locale.getDefault()));
     }
 }

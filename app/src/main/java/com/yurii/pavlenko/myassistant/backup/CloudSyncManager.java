@@ -1,7 +1,6 @@
 package com.yurii.pavlenko.myassistant.backup;
 
 import android.content.Context;
-import android.text.TextUtils;
 
 import com.yurii.pavlenko.myassistant.flights.data.FlightReportStore;
 import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
@@ -35,14 +34,14 @@ public class CloudSyncManager {
     private static final ExecutorService EXECUTOR = Executors.newSingleThreadExecutor();
 
     public interface SyncCallback {
-        void onSuccess(String message);
+        void onSuccess(SyncResult result);
 
-        void onError(String error);
+        void onError(BackupFailure failure);
     }
 
-    /** Returns the message to show when the action succeeds. */
+    /** Returns what the action achieved. */
     private interface IoAction {
-        String run() throws IOException;
+        SyncResult run() throws IOException;
     }
 
     private final Context context;
@@ -65,8 +64,8 @@ public class CloudSyncManager {
             if (ScanBackupArchive.hasData(context)) {
                 uploadScansBlocking();
             }
-            return "Backup successfully uploaded to cloud";
-        }, "Upload error: ", callback);
+            return SyncResult.uploaded();
+        }, BackupFailure.Kind.UPLOAD, callback);
     }
 
     /**
@@ -76,21 +75,18 @@ public class CloudSyncManager {
     public void restoreBackup(SyncCallback callback) {
         runAsync(() -> {
             downloadDatabaseBlocking(ManagedDatabase.TASKS, false);
-            List<String> missing = new ArrayList<>();
+            List<SyncResult.Part> missing = new ArrayList<>();
             if (!downloadDatabaseBlocking(ManagedDatabase.STEPS, true)) {
-                missing.add("step");
+                missing.add(SyncResult.Part.STEPS);
             }
             if (!downloadDatabaseBlocking(ManagedDatabase.FLIGHTS, true)) {
-                missing.add("flight");
+                missing.add(SyncResult.Part.FLIGHTS);
             }
             if (!downloadScansBlocking()) {
-                missing.add("scan");
+                missing.add(SyncResult.Part.SCANS);
             }
-            if (missing.isEmpty()) {
-                return "Backup successfully restored from cloud";
-            }
-            return "Tasks restored from cloud (no " + TextUtils.join(" or ", missing) + " backup found there)";
-        }, "Download error: ", callback);
+            return SyncResult.restored(missing);
+        }, BackupFailure.Kind.DOWNLOAD, callback);
     }
 
     /** Blocking upload for background workers that already run off the main thread. */
@@ -255,16 +251,16 @@ public class CloudSyncManager {
         }
     }
 
-    private static void runAsync(IoAction action, String errorPrefix, SyncCallback callback) {
+    private static void runAsync(IoAction action, BackupFailure.Kind failureKind, SyncCallback callback) {
         EXECUTOR.execute(() -> {
-            String message;
+            SyncResult result;
             try {
-                message = action.run();
+                result = action.run();
             } catch (Exception e) {
-                callback.onError(errorPrefix + (e.getMessage() != null ? e.getMessage() : "Unknown error"));
+                callback.onError(BackupFailure.withDetail(failureKind, e.getMessage()));
                 return;
             }
-            callback.onSuccess(message);
+            callback.onSuccess(result);
         });
     }
 }

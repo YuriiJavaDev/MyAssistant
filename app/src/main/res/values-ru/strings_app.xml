@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Задачи</string>
+    <string name="app_tab_weather">Погода</string>
+    <string name="app_tab_exchange">Обмен</string>
+    <string name="app_tab_calculator">Калькул.</string>
+    <string name="app_tab_scan">Скан</string>
+    <string name="app_tab_steps">Шаги</string>
+    <string name="app_tab_flights">Полёты</string>
+    <string name="app_menu_settings">Настройки</string>
+    <string name="app_menu_options">Опции</string>
+    <string name="app_notifications_disabled">Уведомления отключены: напоминания не будут показываться</string>
+    <string name="app_overdue_tasks_format">Просроченные задачи: %1$d</string>
+    <string name="app_exact_alarm_already_granted">Разрешение на точные будильники уже выдано</string>
+    <string name="app_alarm_title">Напоминания и сигналы</string>
+    <string name="app_alarm_voice_alert">Голосовое оповещение (TTS)</string>
+    <string name="app_alarm_full_screen">Полноэкранное окно</string>
+    <string name="app_alarm_grant_exact">Выдать разрешение на точные будильники</string>
+    <string name="backup_menu_export">Экспорт резервной копии</string>
+    <string name="backup_menu_import">Импорт резервной копии</string>
+    <string name="backup_menu_cloud_settings">Настройки облака и автокопирования</string>
+    <string name="backup_menu_cloud_save">Сохранить в облако сейчас</string>
+    <string name="backup_menu_cloud_restore">Восстановить из облака</string>
+    <string name="backup_cloud_username_hint">Имя/E-mail</string>
+    <string name="backup_cloud_password_hint">Пароль</string>
+    <string name="backup_cloud_auto_backup">Ежедневное автокопирование</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Когда автоматическое копирование включено, файл базы данных в вашем облачном хранилище по умолчанию перезаписывается раз в сутки.</string>
+    <string name="backup_cloud_test">Проверить</string>
+    <string name="backup_cloud_save">Сохранить</string>
+    <string name="settings_language_title">Язык</string>
+    <string name="settings_language_subtitle">Язык приложения</string>
+    <string name="language_system_default">Системный</string>
+</resources>

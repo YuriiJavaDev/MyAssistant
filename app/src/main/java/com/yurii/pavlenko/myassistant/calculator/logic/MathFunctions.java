@@ -3,7 +3,6 @@ package com.yurii.pavlenko.myassistant.calculator.logic;
 /** The named functions of the calculator and the factorial. */
 final class MathFunctions {
 
-    private static final String INVALID = "Invalid input";
     private static final double TRIG_ZERO = 1e-14;
     private static final int MAX_FACTORIAL = 170;
 
@@ -34,16 +33,16 @@ final class MathFunctions {
             case "sqrt": return Math.sqrt(requireNotNegative(x));
             case "cbrt": return Math.cbrt(x);
             case "abs": return Math.abs(x);
-            default: throw new CalculationException(INVALID);
+            default: throw new CalculationException(CalcError.INVALID_INPUT);
         }
     }
 
     static double factorial(double x) throws CalculationException {
         if (x < 0 || x != Math.floor(x)) {
-            throw new CalculationException(INVALID);
+            throw new CalculationException(CalcError.INVALID_INPUT);
         }
         if (x > MAX_FACTORIAL) {
-            throw new CalculationException("Result is too large");
+            throw new CalculationException(CalcError.RESULT_TOO_LARGE);
         }
         double result = 1;
         for (int i = 2; i <= x; i++) {
@@ -65,7 +64,7 @@ final class MathFunctions {
                 ? Math.abs(x % 180) == 90
                 : Math.abs(Math.cos(x)) < TRIG_ZERO;
         if (vertical) {
-            throw new CalculationException("Undefined");
+            throw new CalculationException(CalcError.UNDEFINED);
         }
         return trig(Math.tan(angle(x, mode)));
     }
@@ -77,21 +76,21 @@ final class MathFunctions {
 
     private static double requireWithin(double x) throws CalculationException {
         if (x < -1 || x > 1) {
-            throw new CalculationException(INVALID);
+            throw new CalculationException(CalcError.INVALID_INPUT);
         }
         return x;
     }
 
     private static double requirePositive(double x) throws CalculationException {
         if (x <= 0) {
-            throw new CalculationException(INVALID);
+            throw new CalculationException(CalcError.INVALID_INPUT);
         }
         return x;
     }
 
     private static double requireNotNegative(double x) throws CalculationException {
         if (x < 0) {
-            throw new CalculationException(INVALID);
+            throw new CalculationException(CalcError.INVALID_INPUT);
         }
         return x;
     }

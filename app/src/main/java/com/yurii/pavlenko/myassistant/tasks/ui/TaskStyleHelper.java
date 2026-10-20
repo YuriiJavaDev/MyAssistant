@@ -26,7 +26,7 @@ public class TaskStyleHelper {
             return;
         }
 
-        switch (Importance.fromLabel(importance)) {
+        switch (Importance.fromKey(importance)) {
             case URGENT:
                 textView.setTextColor(ThemeColors.get(context, R.attr.maOverdue));
                 break;

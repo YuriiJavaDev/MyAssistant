@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.PopupMenuCustomBinding;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
 
@@ -95,9 +96,9 @@ public class BackupMenuHandler {
     private static void showImportConfirmation(Context context, Runnable importAction) {
         DeleteConfirmationDialog.showCustom(
                 context,
-                "Attention!",
-                "Restoring a backup replaces the current tasks, steps and scans it contains. Are you sure you want to proceed?",
-                "Confirm import",
+                context.getString(R.string.backup_import_title),
+                context.getString(R.string.backup_import_message),
+                context.getString(R.string.backup_import_confirm),
                 importAction
         );
     }

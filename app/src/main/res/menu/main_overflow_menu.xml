@@ -4,12 +4,12 @@
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_settings_gear"
-        android:title="Settings"
+        android:title="@string/app_menu_settings"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/action_custom_overflow"
-        android:title="Options"
+        android:title="@string/app_menu_options"
         app:actionLayout="@layout/style_dropdown_menu_3_dots"
         app:showAsAction="always" />
 

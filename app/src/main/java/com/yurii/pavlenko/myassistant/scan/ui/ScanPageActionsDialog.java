@@ -47,9 +47,9 @@ final class ScanPageActionsDialog {
     }
 
     private static void confirmDelete(Context context, ScanPage page, Listener listener) {
-        DeleteConfirmationDialog.showCustom(context, "Delete Confirmation",
-                "Delete this page? This action cannot be undone!",
-                "Delete", () -> listener.onDelete(page));
+        DeleteConfirmationDialog.showCustom(context, context.getString(R.string.tasks_delete_title),
+                context.getString(R.string.scan_delete_page_message),
+                context.getString(R.string.tasks_delete_button), () -> listener.onDelete(page));
     }
 
 }

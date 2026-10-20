@@ -5,12 +5,12 @@ public final class CalculatorDisplay {
 
     private final String expression;
     private final String preview;
-    private final String error;
+    private final CalcError error;
     private final HistoryEntry last;
     private final String memory;
     private final AngleMode angleMode;
 
-    CalculatorDisplay(String expression, String preview, String error, HistoryEntry last,
+    CalculatorDisplay(String expression, String preview, CalcError error, HistoryEntry last,
                       String memory, AngleMode angleMode) {
         this.expression = expression;
         this.preview = preview;
@@ -29,7 +29,7 @@ public final class CalculatorDisplay {
         return preview;
     }
 
-    public String getError() {
+    public CalcError getError() {
         return error;
     }
 

@@ -1,5 +1,6 @@
 package com.yurii.pavlenko.myassistant.scan.ui;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -60,8 +61,9 @@ public class ScanPageAdapter extends ListAdapter<ScanPage, ScanPageAdapter.PageV
 
         void bind(ScanPage page, int index) {
             binding.pageLabel.setText(binding.getRoot().getContext().getString(R.string.scan_page_label, index + 1));
-            binding.pageDetails.setText(String.format("%s · %d × %d",
-                    page.resolvePaperFormat().getLabel(), page.getWidth(), page.getHeight()));
+            Context context = binding.getRoot().getContext();
+            binding.pageDetails.setText(context.getString(R.string.scan_page_details_format,
+                    context.getString(PaperFormatText.of(page.resolvePaperFormat())), page.getWidth(), page.getHeight()));
             thumbnailLoader.load(binding.pageThumbnail, page.getImagePath());
             binding.getRoot().setOnClickListener(v -> onItemClick.accept(page));
         }

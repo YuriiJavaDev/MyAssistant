@@ -9,7 +9,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 
 public class TaskStatisticsCalculatorTest {
 
@@ -21,31 +20,26 @@ public class TaskStatisticsCalculatorTest {
         return tasks;
     }
 
+    private static void assertStats(int total, int completed, int left, int progress, TaskStatistics stats) {
+        assertEquals(total, stats.total);
+        assertEquals(completed, stats.completed);
+        assertEquals(left, stats.left);
+        assertEquals(progress, stats.progress);
+    }
+
     @Test
     public void emptyListShowsZeroProgressWithoutDividingByZero() {
-        assertEquals("Total: 0  Completed: 0  Left: 0  Progress: 0%",
-                TaskStatisticsCalculator.calculateStatistics(Collections.emptyList()));
+        assertStats(0, 0, 0, 0, TaskStatisticsCalculator.calculateStatistics(Collections.emptyList()));
     }
 
     @Test
     public void progressIsTheWholePercentRoundedDown() {
-        assertEquals("Total: 3  Completed: 1  Left: 2  Progress: 33%", TaskStatisticsCalculator.calculateStatistics(tasks(3, 1)));
-        assertEquals("Total: 3  Completed: 2  Left: 1  Progress: 66%", TaskStatisticsCalculator.calculateStatistics(tasks(3, 2)));
+        assertStats(3, 1, 2, 33, TaskStatisticsCalculator.calculateStatistics(tasks(3, 1)));
+        assertStats(3, 2, 1, 66, TaskStatisticsCalculator.calculateStatistics(tasks(3, 2)));
     }
 
     @Test
     public void allCompletedIsOneHundredPercent() {
-        assertEquals("Total: 4  Completed: 4  Left: 0  Progress: 100%", TaskStatisticsCalculator.calculateStatistics(tasks(4, 4)));
-    }
-
-    @Test
-    public void digitsStayWesternWhateverTheDeviceLanguage() {
-        Locale saved = Locale.getDefault();
-        try {
-            Locale.setDefault(new Locale("ar", "EG"));
-            assertEquals("Total: 2  Completed: 1  Left: 1  Progress: 50%", TaskStatisticsCalculator.calculateStatistics(tasks(2, 1)));
-        } finally {
-            Locale.setDefault(saved);
-        }
+        assertStats(4, 4, 0, 100, TaskStatisticsCalculator.calculateStatistics(tasks(4, 4)));
     }
 }

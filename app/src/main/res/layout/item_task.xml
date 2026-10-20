@@ -26,7 +26,7 @@
             android:layout_marginTop="4dp"
             android:src="@drawable/ic_megaphone"
             android:visibility="gone"
-            android:contentDescription="Reminder set" />
+            android:contentDescription="@string/tasks_list_reminder_set" />
 
     </LinearLayout>
 

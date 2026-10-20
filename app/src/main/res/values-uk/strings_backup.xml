@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Завантаження копії в хмару...</string>
+    <string name="backup_cloud_restoring">Відновлення копії з хмари...</string>
+    <string name="backup_cloud_upload_success">Копію успішно завантажено в хмару</string>
+    <string name="backup_cloud_restore_success">Копію успішно відновлено з хмари</string>
+    <string name="backup_cloud_restore_partly">Завдання відновлено з хмари (копії для таких даних там не знайдено: %1$s)</string>
+    <string name="backup_part_steps">кроки</string>
+    <string name="backup_part_flights">польоти</string>
+    <string name="backup_part_scans">скани</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Помилка завантаження: %1$s</string>
+    <string name="backup_error_download">Помилка отримання: %1$s</string>
+    <string name="backup_error_unknown">Невідома помилка</string>
+    <string name="backup_error_insecure_url">URL має починатися з https://</string>
+    <string name="backup_error_authentication">Помилка автентифікації: перевірте ім\'я користувача та пароль</string>
+    <string name="backup_error_server_code">Сервер відповів кодом: %1$d</string>
+    <string name="backup_error_connection">Помилка з\'єднання: %1$s</string>
+    <string name="backup_destination_title">Зберегти копію в</string>
+    <string name="backup_destination_folder">Вибрати теку (пристрій, SD-картка, USB, Диск...)</string>
+    <string name="backup_destination_share">Поділитися через застосунок</string>
+    <string name="backup_preparing">Підготовка копії...</string>
+    <string name="backup_export_failed">Помилка експорту</string>
+    <string name="backup_export_saved">Копію збережено</string>
+    <string name="backup_import_success">Копію успішно імпортовано. Перезапуск...</string>
+    <string name="backup_import_failed">Помилка імпорту</string>
+    <string name="backup_import_title">Увага!</string>
+    <string name="backup_import_message">Відновлення копії замінить поточні завдання, кроки та скани, які в ній є. Ви впевнені, що хочете продовжити?</string>
+    <string name="backup_import_confirm">Підтвердити імпорт</string>
+    <string name="backup_share_chooser_title">Експорт резервної копії</string>
+    <string name="backup_cloud_settings_saved">Налаштування хмари успішно збережено</string>
+    <string name="backup_cloud_secure_storage_unavailable">Захищене сховище недоступне, налаштування не збережено</string>
+    <string name="backup_cloud_url_empty">URL не може бути порожнім</string>
+    <string name="backup_cloud_testing">Перевірка з\'єднання...</string>
+    <string name="backup_cloud_connection_successful">З\'єднання успішне!</string>
+</resources>

@@ -16,7 +16,7 @@
             android:id="@+id/dialogTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit Task"
+            android:text="@string/tasks_dialog_title_edit"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="?attr/maText"
@@ -48,7 +48,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Importance level:"
+                    android:text="@string/tasks_dialog_importance"
                     android:textColor="?attr/maAccent"
                     android:textSize="11sp"
                     android:textStyle="bold"
@@ -88,7 +88,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deadline:"
+                    android:text="@string/tasks_dialog_deadline_label"
                     android:textColor="?attr/maAccent"
                     android:textSize="11sp"
                     android:textStyle="bold"
@@ -100,7 +100,7 @@
                     android:layout_height="34dp"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="8dp"
-                    android:text="Select deadline"
+                    android:text="@string/tasks_dialog_deadline_select"
                     android:textSize="12sp"
                     android:background="@drawable/bg_spinner"
                     android:textColor="?attr/maText" />
@@ -116,7 +116,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Reminder (Date &amp; Time):"
+                android:text="@string/tasks_dialog_reminder_label"
                 android:textColor="?attr/maAccent"
                 android:textSize="11sp"
                 android:textStyle="bold"
@@ -128,7 +128,7 @@
                 android:layout_height="34dp"
                 android:gravity="center_vertical"
                 android:paddingHorizontal="8dp"
-                android:text="Select reminder date &amp; time"
+                android:text="@string/tasks_dialog_reminder_select"
                 android:textSize="11sp"
                 android:background="@drawable/bg_spinner"
                 android:textColor="?attr/maText" />
@@ -144,7 +144,7 @@
                 android:id="@+id/dialogShowTimestampsCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Show creation dates"
+                android:text="@string/tasks_dialog_show_timestamps"
                 android:textSize="11sp"
                 android:textColor="?attr/maText" />
         </LinearLayout>
@@ -166,7 +166,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="@drawable/button_selector"
                 app:backgroundTint="@null"
-                android:text="Delete"
+                android:text="@string/tasks_dialog_delete"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp"
@@ -187,7 +187,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="@drawable/button_selector"
                 app:backgroundTint="@null"
-                android:text="Cancel"
+                android:text="@string/common_cancel"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp"
@@ -202,7 +202,7 @@
                 android:paddingHorizontal="8dp"
                 android:background="@drawable/button_selector"
                 app:backgroundTint="@null"
-                android:text="Save"
+                android:text="@string/tasks_dialog_save"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel"
                 android:textSize="11sp" />

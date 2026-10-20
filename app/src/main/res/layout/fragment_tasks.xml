@@ -15,7 +15,7 @@
             android:id="@+id/taskInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="What needs to be done?"
+            android:hint="@string/tasks_list_input_hint"
             android:textSize="14sp"
             android:inputType="text|textCapSentences"
             app:layout_constraintBaseline_toBaselineOf="@+id/addButton"
@@ -29,7 +29,7 @@
             android:background="@drawable/button_selector"
             android:minWidth="100dp"
             android:stateListAnimator="@null"
-            android:text="Add"
+            android:text="@string/tasks_list_add"
             android:textAllCaps="false"
             android:textColor="?attr/maButtonLabel"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,7 +125,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:stateListAnimator="@null"
-                android:text="Delete Completed"
+                android:text="@string/tasks_list_delete_completed"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel" />
 
@@ -139,7 +139,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:stateListAnimator="@null"
-                android:text="Clear All"
+                android:text="@string/tasks_list_clear_all"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel" />
         </LinearLayout>
@@ -150,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="center"
-            android:text="Total: 0  Completed: 0  Left: 0  Progress: 0%"
+            tools:text="Total: 0  Completed: 0  Left: 0  Progress: 0%"
             android:textColor="?attr/maText"
             android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="parent"

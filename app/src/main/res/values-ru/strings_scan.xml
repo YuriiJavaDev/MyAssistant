@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Оригинал</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Скан %1$s</string>
+    <string name="scan_delete_page_message">Удалить эту страницу? Это действие нельзя отменить!</string>
+    <string name="scan_delete_document_message">Удалить «%1$s» со всеми страницами? Это действие нельзя отменить!</string>
+    <string name="scan_delete_all_message">Удалить всё: %1$s, %2$s? Это действие нельзя отменить!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d документ</item>
+        <item quantity="few">%d документа</item>
+        <item quantity="many">%d документов</item>
+        <item quantity="other">%d документа</item>
+    </plurals>
+</resources>

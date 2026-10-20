@@ -75,7 +75,7 @@ public class CalculatorFragment extends Fragment {
         HistoryEntry last = display.getLast();
         boolean historyShown = display.getError() == null && display.getPreview() == null && last != null;
         if (display.getError() != null) {
-            binding.display.lastCalculation.setText(display.getError());
+            binding.display.lastCalculation.setText(CalcErrorText.of(display.getError()));
         } else if (display.getPreview() != null) {
             binding.display.lastCalculation.setText(getString(R.string.calculator_preview_format, display.getPreview()));
         } else {

@@ -2,7 +2,6 @@ package com.yurii.pavlenko.myassistant.tasks.logic;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -15,30 +14,26 @@ public class DeadlineTextTest {
 
     @Test
     public void daysAheadAreCountedInWholeDays() {
-        assertEquals("21.10.2026 — 3 days left!", DeadlineText.describe(TODAY, LocalDate.of(2026, 10, 21)));
+        assertEquals(3, DeadlineText.daysLeft(TODAY, LocalDate.of(2026, 10, 21)));
+        assertFalse(DeadlineText.isOverdue(TODAY, LocalDate.of(2026, 10, 21)));
     }
 
     @Test
-    public void oneDayIsSingular() {
-        assertEquals("19.10.2026 — 1 day left!", DeadlineText.describe(TODAY, LocalDate.of(2026, 10, 19)));
+    public void tomorrowIsOneDayLeft() {
+        assertEquals(1, DeadlineText.daysLeft(TODAY, LocalDate.of(2026, 10, 19)));
     }
 
     @Test
-    public void todayIsZeroDaysLeftNotOverdue() {
-        assertEquals("18.10.2026 — 0 days left!", DeadlineText.describe(TODAY, TODAY));
+    public void todayIsZeroDaysAndNotOverdue() {
+        assertEquals(0, DeadlineText.daysLeft(TODAY, TODAY));
         assertFalse(DeadlineText.isOverdue(TODAY, TODAY));
     }
 
     @Test
-    public void pastDeadlineSaysOverdue() {
-        assertEquals("17.10.2026 — Overdue by 1 day!", DeadlineText.describe(TODAY, LocalDate.of(2026, 10, 17)));
-        assertEquals("13.10.2026 — Overdue by 5 days!", DeadlineText.describe(TODAY, LocalDate.of(2026, 10, 13)));
+    public void pastDeadlineIsNegativeAndOverdue() {
+        assertEquals(-1, DeadlineText.daysLeft(TODAY, LocalDate.of(2026, 10, 17)));
+        assertEquals(-5, DeadlineText.daysLeft(TODAY, LocalDate.of(2026, 10, 13)));
         assertTrue(DeadlineText.isOverdue(TODAY, LocalDate.of(2026, 10, 17)));
-    }
-
-    @Test
-    public void noDeadlineGivesNoText() {
-        assertNull(DeadlineText.describe(TODAY, null));
     }
 
     @Test

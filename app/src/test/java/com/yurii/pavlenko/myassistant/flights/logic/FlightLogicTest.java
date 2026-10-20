@@ -30,13 +30,13 @@ public class FlightLogicTest {
 
     @Test
     public void namesTheNearestCompassPoint() {
-        assertEquals("N", Cardinal.of(0));
-        assertEquals("N", Cardinal.of(359));
-        assertEquals("NE", Cardinal.of(50));
-        assertEquals("E", Cardinal.of(90));
-        assertEquals("S", Cardinal.of(180));
-        assertEquals("W", Cardinal.of(268));
-        assertEquals("NW", Cardinal.of(-45));
+        assertEquals(0, Cardinal.indexOf(0));
+        assertEquals(0, Cardinal.indexOf(359));
+        assertEquals(1, Cardinal.indexOf(50));
+        assertEquals(2, Cardinal.indexOf(90));
+        assertEquals(4, Cardinal.indexOf(180));
+        assertEquals(6, Cardinal.indexOf(268));
+        assertEquals(7, Cardinal.indexOf(-45));
     }
 
     @Test

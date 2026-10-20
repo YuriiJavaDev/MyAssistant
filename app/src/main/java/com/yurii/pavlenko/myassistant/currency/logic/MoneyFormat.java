@@ -33,10 +33,10 @@ public final class MoneyFormat {
         return format.format(value);
     }
 
-    /** The code with the English name of the currency, such as "ILS · Israeli New Shekel". */
-    public static String label(String code) {
+    /** The code with the name of the currency in the given language, such as "ILS · Israeli New Shekel". */
+    public static String label(String code, Locale locale) {
         try {
-            return code + " · " + Currency.getInstance(code).getDisplayName(Locale.ENGLISH);
+            return code + " · " + Currency.getInstance(code).getDisplayName(locale);
         } catch (IllegalArgumentException unknown) {
             return code;
         }

@@ -14,7 +14,7 @@ public class WebDavTestClient {
 
     public interface TestCallback {
         void onSuccess();
-        void onError(String error);
+        void onError(BackupFailure failure);
     }
 
     /**
@@ -22,7 +22,7 @@ public class WebDavTestClient {
      */
     public void testConnection(String urlStr, String username, String password, TestCallback callback) {
         if (!WebDavUtils.isSecureUrl(urlStr)) {
-            callback.onError("The URL must start with https://");
+            callback.onError(BackupFailure.of(BackupFailure.Kind.INSECURE_URL));
             return;
         }
         executorService.execute(() -> {
@@ -40,15 +40,15 @@ public class WebDavTestClient {
                 int responseCode = connection.getResponseCode();
 
                 if (responseCode == 401 || responseCode == 403) {
-                    callback.onError("Authentication failed: Check username and password");
+                    callback.onError(BackupFailure.of(BackupFailure.Kind.AUTHENTICATION));
                 } else if (responseCode >= 200 && responseCode < 300) {
                     callback.onSuccess();
                 } else {
-                    callback.onError("Server responded with code: " + responseCode);
+                    callback.onError(BackupFailure.serverCode(responseCode));
                 }
 
             } catch (Exception e) {
-                callback.onError("Connection error: " + (e.getMessage() != null ? e.getMessage() : "Unknown error"));
+                callback.onError(BackupFailure.withDetail(BackupFailure.Kind.CONNECTION, e.getMessage()));
             } finally {
                 if (connection != null) {
                     connection.disconnect();

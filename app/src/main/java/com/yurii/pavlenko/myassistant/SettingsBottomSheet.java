@@ -47,6 +47,12 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
             showDesignSelectionDialog();
         });
 
+        // Initialize language block click listener
+        LinearLayout layoutLanguageSettings = view.findViewById(R.id.layoutLanguageSettings);
+        layoutLanguageSettings.setOnClickListener(v -> {
+            showLanguageSelectionDialog();
+        });
+
         // Initialize system permissions block click listener
         LinearLayout layoutSystemPermissions = view.findViewById(R.id.layoutSystemPermissions);
         layoutSystemPermissions.setOnClickListener(v -> {
@@ -95,6 +101,14 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
     private void showDesignSelectionDialog() {
         DesignSelectionBottomSheet designSelectionBottomSheet = new DesignSelectionBottomSheet();
         designSelectionBottomSheet.show(getParentFragmentManager(), "DesignSelectionBottomSheet");
+    }
+
+    /**
+     * Displays the bottom sheet dialog to select the language of the application.
+     */
+    private void showLanguageSelectionDialog() {
+        LanguageSelectionBottomSheet languageSelectionBottomSheet = new LanguageSelectionBottomSheet();
+        languageSelectionBottomSheet.show(getParentFragmentManager(), "LanguageSelectionBottomSheet");
     }
 
     /**

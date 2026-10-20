@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Task list screen -->
+    <string name="tasks_list_input_hint">What needs to be done?</string>
+    <string name="tasks_list_add">Add</string>
+    <string name="tasks_list_delete_completed">Delete Completed</string>
+    <string name="tasks_list_clear_all">Clear All</string>
+    <string name="tasks_list_reminder_set">Reminder set</string>
+    <string name="tasks_statistics">Total: %1$d  Completed: %2$d  Left: %3$d  Progress: %4$d%%</string>
+
+    <!-- Task dialog -->
+    <string name="tasks_dialog_title_add">Add New Task</string>
+    <string name="tasks_dialog_title_edit">Edit Task</string>
+    <string name="tasks_dialog_importance">Importance level:</string>
+    <string name="tasks_dialog_deadline_label">Deadline:</string>
+    <string name="tasks_dialog_deadline_select">Select a deadline</string>
+    <string name="tasks_dialog_reminder_label">Reminder (Date &amp; Time):</string>
+    <string name="tasks_dialog_reminder_select">Select reminder date &amp; time</string>
+    <string name="tasks_dialog_show_timestamps">Show creation/edit dates</string>
+    <string name="tasks_dialog_delete">Delete</string>
+    <string name="tasks_dialog_save">Save</string>
+    <string name="tasks_dialog_clear">Clear</string>
+
+    <!-- Importance labels (the stored keys Normal, Important and Urgent are never translated) -->
+    <string name="tasks_importance_normal">Normal</string>
+    <string name="tasks_importance_important">Important</string>
+    <string name="tasks_importance_urgent">Urgent</string>
+
+    <!-- Toasts -->
+    <string name="tasks_toast_created">Task created</string>
+    <string name="tasks_toast_updated">Task updated</string>
+    <string name="tasks_toast_deleted">Task deleted</string>
+    <string name="tasks_toast_completed_deleted">Completed tasks deleted</string>
+    <string name="tasks_toast_all_cleared">All tasks cleared</string>
+    <string name="tasks_toast_empty_title">Task description cannot be empty</string>
+    <string name="tasks_toast_reminder_after_deadline">Reminder cannot be later than the deadline!</string>
+    <string name="tasks_toast_reminder_in_past">Reminder cannot be in the past!</string>
+    <string name="tasks_toast_reminder_cleared">Reminder was cleared because the deadline is earlier!</string>
+    <string name="tasks_toast_select_deadline_first">Please select a deadline first!</string>
+
+    <!-- Time lines of a task -->
+    <string name="tasks_time_created">Created: %1$s</string>
+    <string name="tasks_time_edited">Edited: %1$s</string>
+    <string name="tasks_time_completed">Completed: %1$s</string>
+    <string name="tasks_deadline_prefixed">Deadline: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d day left!</item>
+        <item quantity="other">%1$s — %2$d days left!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — Overdue by %2$d day!</item>
+        <item quantity="other">%1$s — Overdue by %2$d days!</item>
+    </plurals>
+
+    <!-- Delete confirmations -->
+    <string name="tasks_delete_title">Delete Confirmation</string>
+    <string name="tasks_delete_button">Delete</string>
+    <string name="tasks_delete_nothing">No objects found to delete!</string>
+    <string name="tasks_delete_item_message">Are you sure you want to delete this item? This action cannot be undone!</string>
+    <string name="tasks_delete_cannot_be_undone">This action cannot be undone!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Delete %1$d completed task?</item>
+        <item quantity="other">Delete %1$d completed tasks?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d of them still has a saved reminder.</item>
+        <item quantity="other">%1$d of them still have a saved reminder.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Delete all %1$d task?</item>
+        <item quantity="other">Delete all %1$d tasks?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d has an active reminder.</item>
+        <item quantity="other">%1$d have active reminders.</item>
+    </plurals>
+
+    <!-- Deadline alerts: notification, dialog, voice -->
+    <string name="tasks_alert_title">Deadline Alert!</string>
+    <string name="tasks_alert_view_tasks">View Tasks</string>
+    <string name="tasks_alert_channel_name">Task Deadline Alerts</string>
+    <string name="tasks_alert_channel_description">Urgent task deadline alerts</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">You have %1$d overdue task deadlines.</item>
+        <item quantity="other">You have %1$d overdue task deadlines.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Attention! You have %1$d task deadlines requiring immediate attention.</item>
+        <item quantity="other">Attention! You have %1$d task deadlines requiring immediate attention.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Attention! Deadline is near for task: %1$s</string>
+</resources>

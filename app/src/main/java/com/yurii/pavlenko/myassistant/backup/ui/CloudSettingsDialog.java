@@ -20,6 +20,7 @@ import androidx.work.NetworkType;
 import androidx.work.PeriodicWorkRequest;
 import androidx.work.WorkManager;
 
+import com.yurii.pavlenko.myassistant.backup.BackupFailure;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.DialogCloudSettingsBinding;
 import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
@@ -104,11 +105,11 @@ public class CloudSettingsDialog extends DialogFragment {
         boolean autoBackup = binding.cbAutoBackup.isChecked();
 
         if (!WebDavUtils.isSecureUrl(url)) {
-            binding.etWebDavUrl.setError("The URL must start with https://");
+            binding.etWebDavUrl.setError(getString(R.string.backup_error_insecure_url));
             return;
         }
         if (!configManager.saveConfig(url, username, password, autoBackup)) {
-            Toast.makeText(requireContext(), "Secure storage is unavailable, settings were not saved", Toast.LENGTH_LONG).show();
+            Toast.makeText(requireContext(), R.string.backup_cloud_secure_storage_unavailable, Toast.LENGTH_LONG).show();
             return;
         }
 
@@ -132,7 +133,7 @@ public class CloudSettingsDialog extends DialogFragment {
             workManager.cancelUniqueWork("CloudAutoBackupWork");
         }
 
-        Toast.makeText(requireContext(), "Cloud settings saved successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireContext(), R.string.backup_cloud_settings_saved, Toast.LENGTH_SHORT).show();
         dismiss();
     }
 
@@ -142,29 +143,29 @@ public class CloudSettingsDialog extends DialogFragment {
         String password = getRawText(binding.etPassword);
 
         if (url.isEmpty()) {
-            binding.etWebDavUrl.setError("URL cannot be empty");
+            binding.etWebDavUrl.setError(getString(R.string.backup_cloud_url_empty));
             return;
         }
         if (!WebDavUtils.isSecureUrl(url)) {
-            binding.etWebDavUrl.setError("The URL must start with https://");
+            binding.etWebDavUrl.setError(getString(R.string.backup_error_insecure_url));
             return;
         }
 
-        Toast.makeText(requireContext(), "Testing connection...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireContext(), R.string.backup_cloud_testing, Toast.LENGTH_SHORT).show();
 
         WebDavTestClient testClient = new WebDavTestClient();
         testClient.testConnection(url, username, password, new WebDavTestClient.TestCallback() {
             @Override
             public void onSuccess() {
                 requireActivity().runOnUiThread(() ->
-                        Toast.makeText(requireContext(), "Connection successful!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), R.string.backup_cloud_connection_successful, Toast.LENGTH_SHORT).show()
                 );
             }
 
             @Override
-            public void onError(String error) {
+            public void onError(BackupFailure failure) {
                 requireActivity().runOnUiThread(() ->
-                        Toast.makeText(requireContext(), error, Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), BackupMessages.failure(requireContext(), failure), Toast.LENGTH_LONG).show()
                 );
             }
         });

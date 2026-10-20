@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Ясне небо</string>
+    <string name="weather_description_mainly_clear">Переважно ясно</string>
+    <string name="weather_description_partly_cloudy">Мінлива хмарність</string>
+    <string name="weather_description_overcast">Похмуро</string>
+    <string name="weather_description_fog">Туман</string>
+    <string name="weather_description_rime_fog">Паморозний туман</string>
+    <string name="weather_description_light_drizzle">Легка мряка</string>
+    <string name="weather_description_drizzle">Мряка</string>
+    <string name="weather_description_dense_drizzle">Густа мряка</string>
+    <string name="weather_description_light_freezing_drizzle">Легка паморозна мряка</string>
+    <string name="weather_description_freezing_drizzle">Паморозна мряка</string>
+    <string name="weather_description_slight_rain">Невеликий дощ</string>
+    <string name="weather_description_rain">Дощ</string>
+    <string name="weather_description_heavy_rain">Сильний дощ</string>
+    <string name="weather_description_light_freezing_rain">Легкий крижаний дощ</string>
+    <string name="weather_description_freezing_rain">Крижаний дощ</string>
+    <string name="weather_description_slight_snow">Невеликий сніг</string>
+    <string name="weather_description_snow">Сніг</string>
+    <string name="weather_description_heavy_snow">Сильний снігопад</string>
+    <string name="weather_description_snow_grains">Снігові зерна</string>
+    <string name="weather_description_light_rain_showers">Невеликі зливи</string>
+    <string name="weather_description_rain_showers">Зливи</string>
+    <string name="weather_description_violent_rain_showers">Сильні зливи</string>
+    <string name="weather_description_light_snow_showers">Невеликий сніг зі шквалами</string>
+    <string name="weather_description_heavy_snow_showers">Сильний сніг зі шквалами</string>
+    <string name="weather_description_thunderstorm">Гроза</string>
+    <string name="weather_description_thunderstorm_with_hail">Гроза з градом</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Гроза з сильним градом</string>
+    <string name="weather_description_unknown">Невідомо</string>
+    <string name="weather_moon_phase_new_moon">Новий місяць</string>
+    <string name="weather_moon_phase_waxing_crescent">Молодий місяць</string>
+    <string name="weather_moon_phase_first_quarter">Перша чверть</string>
+    <string name="weather_moon_phase_waxing_gibbous">Прибуваючий місяць</string>
+    <string name="weather_moon_phase_full_moon">Повний місяць</string>
+    <string name="weather_moon_phase_waning_gibbous">Спадаючий місяць</string>
+    <string name="weather_moon_phase_last_quarter">Остання чверть</string>
+    <string name="weather_moon_phase_waning_crescent">Старий місяць</string>
+    <string name="weather_error_no_location">Не вдається визначити місцезнаходження. Увімкніть служби геолокації або знайдіть місто.</string>
+    <string name="weather_error_city_not_found">Місто «%1$s» не знайдено</string>
+    <string name="weather_error_no_network">Не вдається завантажити погоду. Перевірте підключення до інтернету.</string>
+    <string name="weather_error_choose_city">Виберіть місто зі списку</string>
+    <string name="weather_current_location">Поточне місцезнаходження</string>
+</resources>

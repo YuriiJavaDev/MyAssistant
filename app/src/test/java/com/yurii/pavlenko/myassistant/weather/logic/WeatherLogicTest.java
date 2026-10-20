@@ -31,7 +31,14 @@ public class WeatherLogicTest {
     @Test
     public void unknownCodeIsShownAsOvercast() {
         assertEquals(WeatherCondition.CLOUDY, WeatherCode.condition(1234));
-        assertEquals("Unknown", WeatherCode.describe(1234));
+        assertEquals(WeatherDescription.UNKNOWN, WeatherCode.describe(1234));
+    }
+
+    @Test
+    public void wmoCodesAreDescribed() {
+        assertEquals(WeatherDescription.CLEAR_SKY, WeatherCode.describe(0));
+        assertEquals(WeatherDescription.OVERCAST, WeatherCode.describe(3));
+        assertEquals(WeatherDescription.THUNDERSTORM_WITH_HEAVY_HAIL, WeatherCode.describe(99));
     }
 
     @Test
@@ -53,21 +60,21 @@ public class WeatherLogicTest {
     public void knownFullMoonIsAlmostFullyLit() {
         MoonPhase full = MoonPhase.at(utc(2025, 10, 7, 3, 47));
         assertTrue(full.illumination() > 0.97);
-        assertEquals("Full moon", full.name());
+        assertEquals(MoonPhase.Phase.FULL_MOON, full.phase());
     }
 
     @Test
     public void knownNewMoonIsAlmostDark() {
         MoonPhase dark = MoonPhase.at(utc(2025, 10, 21, 12, 25));
         assertTrue(dark.illumination() < 0.03);
-        assertEquals("New moon", dark.name());
+        assertEquals(MoonPhase.Phase.NEW_MOON, dark.phase());
     }
 
     @Test
     public void moonWaxesBeforeFullAndWanesAfter() {
         assertTrue(MoonPhase.at(utc(2025, 10, 1, 0, 0)).isWaxing());
         assertFalse(MoonPhase.at(utc(2025, 10, 12, 0, 0)).isWaxing());
-        assertEquals("Waxing gibbous", MoonPhase.at(utc(2025, 10, 3, 12, 0)).name());
-        assertEquals("Last quarter", MoonPhase.at(utc(2025, 10, 13, 18, 12)).name());
+        assertEquals(MoonPhase.Phase.WAXING_GIBBOUS, MoonPhase.at(utc(2025, 10, 3, 12, 0)).phase());
+        assertEquals(MoonPhase.Phase.LAST_QUARTER, MoonPhase.at(utc(2025, 10, 13, 18, 12)).phase());
     }
 }

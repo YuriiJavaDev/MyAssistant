@@ -49,37 +49,37 @@ public final class WeatherCode {
         }
     }
 
-    public static String describe(int code) {
+    public static WeatherDescription describe(int code) {
         switch (code) {
-            case 0: return "Clear sky";
-            case 1: return "Mainly clear";
-            case 2: return "Partly cloudy";
-            case 3: return "Overcast";
-            case 45: return "Fog";
-            case 48: return "Rime fog";
-            case 51: return "Light drizzle";
-            case 53: return "Drizzle";
-            case 55: return "Dense drizzle";
-            case 56: return "Light freezing drizzle";
-            case 57: return "Freezing drizzle";
-            case 61: return "Slight rain";
-            case 63: return "Rain";
-            case 65: return "Heavy rain";
-            case 66: return "Light freezing rain";
-            case 67: return "Freezing rain";
-            case 71: return "Slight snow";
-            case 73: return "Snow";
-            case 75: return "Heavy snow";
-            case 77: return "Snow grains";
-            case 80: return "Light rain showers";
-            case 81: return "Rain showers";
-            case 82: return "Violent rain showers";
-            case 85: return "Light snow showers";
-            case 86: return "Heavy snow showers";
-            case 95: return "Thunderstorm";
-            case 96: return "Thunderstorm with hail";
-            case 99: return "Thunderstorm with heavy hail";
-            default: return "Unknown";
+            case 0: return WeatherDescription.CLEAR_SKY;
+            case 1: return WeatherDescription.MAINLY_CLEAR;
+            case 2: return WeatherDescription.PARTLY_CLOUDY;
+            case 3: return WeatherDescription.OVERCAST;
+            case 45: return WeatherDescription.FOG;
+            case 48: return WeatherDescription.RIME_FOG;
+            case 51: return WeatherDescription.LIGHT_DRIZZLE;
+            case 53: return WeatherDescription.DRIZZLE;
+            case 55: return WeatherDescription.DENSE_DRIZZLE;
+            case 56: return WeatherDescription.LIGHT_FREEZING_DRIZZLE;
+            case 57: return WeatherDescription.FREEZING_DRIZZLE;
+            case 61: return WeatherDescription.SLIGHT_RAIN;
+            case 63: return WeatherDescription.RAIN;
+            case 65: return WeatherDescription.HEAVY_RAIN;
+            case 66: return WeatherDescription.LIGHT_FREEZING_RAIN;
+            case 67: return WeatherDescription.FREEZING_RAIN;
+            case 71: return WeatherDescription.SLIGHT_SNOW;
+            case 73: return WeatherDescription.SNOW;
+            case 75: return WeatherDescription.HEAVY_SNOW;
+            case 77: return WeatherDescription.SNOW_GRAINS;
+            case 80: return WeatherDescription.LIGHT_RAIN_SHOWERS;
+            case 81: return WeatherDescription.RAIN_SHOWERS;
+            case 82: return WeatherDescription.VIOLENT_RAIN_SHOWERS;
+            case 85: return WeatherDescription.LIGHT_SNOW_SHOWERS;
+            case 86: return WeatherDescription.HEAVY_SNOW_SHOWERS;
+            case 95: return WeatherDescription.THUNDERSTORM;
+            case 96: return WeatherDescription.THUNDERSTORM_WITH_HAIL;
+            case 99: return WeatherDescription.THUNDERSTORM_WITH_HEAVY_HAIL;
+            default: return WeatherDescription.UNKNOWN;
         }
     }
 }

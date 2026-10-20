@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_a4" translatable="false">A4</string>
+    <string name="scan_paper_a5" translatable="false">A5</string>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Scan %1$s</string>
+    <string name="scan_delete_page_message">Delete this page? This action cannot be undone!</string>
+    <string name="scan_delete_document_message">Delete \"%1$s\" with all its pages? This action cannot be undone!</string>
+    <string name="scan_delete_all_message">Delete all %1$s with %2$s? This action cannot be undone!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d document</item>
+        <item quantity="other">%d documents</item>
+    </plurals>
+</resources>

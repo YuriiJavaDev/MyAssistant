@@ -3,14 +3,16 @@ package com.yurii.pavlenko.myassistant.weather.logic;
 /** Phase of the moon at a moment in time, from the mean length of the lunar month. */
 public final class MoonPhase {
 
+    /** The eight named phases, in the order of the lunar month. */
+    public enum Phase {
+        NEW_MOON, WAXING_CRESCENT, FIRST_QUARTER, WAXING_GIBBOUS,
+        FULL_MOON, WANING_GIBBOUS, LAST_QUARTER, WANING_CRESCENT
+    }
+
     private static final double SYNODIC_MONTH_DAYS = 29.530588853;
     private static final long MILLIS_PER_DAY = 86_400_000L;
     /** A new moon: 2000-01-06 18:14 UTC. */
     private static final long REFERENCE_NEW_MOON_MILLIS = 947_182_440_000L;
-    private static final String[] NAMES = {
-            "New moon", "Waxing crescent", "First quarter", "Waxing gibbous",
-            "Full moon", "Waning gibbous", "Last quarter", "Waning crescent"
-    };
 
     private final double cycle;
 
@@ -38,8 +40,9 @@ public final class MoonPhase {
         return cycle < 0.5;
     }
 
-    public String name() {
-        int index = (int) Math.floor(cycle * NAMES.length + 0.5) % NAMES.length;
-        return NAMES[index];
+    public Phase phase() {
+        Phase[] phases = Phase.values();
+        int index = (int) Math.floor(cycle * phases.length + 0.5) % phases.length;
+        return phases[index];
     }
 }

@@ -47,8 +47,8 @@ public final class DeadlineNotifier {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
-                .setContentTitle("Deadline Alert!")
-                .setContentText("You have " + dueTasksCount + " overdue task deadlines.")
+                .setContentTitle(context.getString(R.string.tasks_alert_title))
+                .setContentText(context.getResources().getQuantityString(R.plurals.tasks_alert_notification_text, dueTasksCount, dueTasksCount))
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
@@ -75,8 +75,8 @@ public final class DeadlineNotifier {
     private static void createChannel(Context context) {
         NotificationChannelCompat channel = new NotificationChannelCompat.Builder(
                 CHANNEL_ID, NotificationManagerCompat.IMPORTANCE_HIGH)
-                .setName("Task Deadline Alerts")
-                .setDescription("Urgent task deadline alerts")
+                .setName(context.getString(R.string.tasks_alert_channel_name))
+                .setDescription(context.getString(R.string.tasks_alert_channel_description))
                 .setVibrationEnabled(true)
                 .build();
         NotificationManagerCompat.from(context).createNotificationChannel(channel);

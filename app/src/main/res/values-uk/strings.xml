@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Скасувати</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Налаштування</string>
+    <string name="settings_alarms_title">Нагадування та сигнали</string>
+    <string name="settings_alarms_subtitle">Інтервали, звуки та стан сповіщень</string>
+    <string name="settings_display_title">Режим екрана</string>
+    <string name="settings_display_subtitle">День / Ніч / Авто</string>
+    <string name="display_mode_title">Режим екрана</string>
+    <string name="display_mode_light">Світлий (день)</string>
+    <string name="display_mode_dark">Темний (ніч)</string>
+    <string name="display_mode_system">Системний (авто)</string>
+    <string name="settings_design_title">Дизайн застосунку</string>
+    <string name="settings_design_subtitle">Варіанти оформлення інтерфейсу</string>
+    <string name="design_classic_name">Класичний</string>
+    <string name="design_classic_about">Початковий вигляд: кремовий і фіолетовий</string>
+    <string name="design_paper_ink_name">Папір і чорнило</string>
+    <string name="design_paper_ink_about">Тонкі лінії та стримані ділові тони</string>
+    <string name="design_pastel_cloud_name">Пастельна хмара</string>
+    <string name="design_pastel_cloud_about">М\'який, округлий і блідий, з хмарами</string>
+    <string name="design_neon_arcade_name">Неонова аркада</string>
+    <string name="design_neon_arcade_about">Яскравий неон, сильний контраст і ретросонце</string>
+    <string name="design_toon_name">Мультяшний</string>
+    <string name="design_toon_about">Комікс-контури та рукописний шрифт</string>
+    <string name="design_biker_name">Байкер</string>
+    <string name="design_biker_about">Грубий метал, гума та помаранчевий вихлоп</string>
+    <string name="design_cockpit_name">Кабіна пілота</string>
+    <string name="design_cockpit_about">Сувора приладова панель із планером</string>
+    <string name="design_beach_name">Пляж</string>
+    <string name="design_beach_about">Пісок, лагуна, корали та пальми</string>
+    <string name="design_forest_name">Чарівний ліс</string>
+    <string name="design_forest_about">Пергамент, золото та лісовий мох</string>
+    <string name="design_mono_block_name">Моноблок</string>
+    <string name="design_mono_block_about">Різкий чорно-білий із одним жовтим маркером</string>
+    <string name="settings_permissions_title">Системні дозволи</string>
+    <string name="settings_permissions_subtitle">Керування доступом у системі Android</string>
+    <string-array name="filter_options">
+        <item>Усі завдання</item>
+        <item>Активні</item>
+        <item>Виконані</item>
+        <item>Нагадування</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>А–Я</item>
+        <item>Я–А</item>
+        <item>Статус</item>
+        <item>Створені</item>
+        <item>Змінені</item>
+        <item>Виконані</item>
+        <item>Важливість</item>
+        <item>Термін</item>
+    </string-array>
+    <string name="scan_camera">Камера</string>
+    <string name="scan_gallery">Галерея</string>
+    <string name="scan_clear_all">Очистити все</string>
+    <string name="scan_cleared">Усі скани видалено</string>
+    <string name="scan_empty">Документів поки немає. Сфотографуйте сторінку або виберіть фото з галереї.</string>
+    <string name="scan_auto">Авто</string>
+    <string name="scan_reset">Скинути</string>
+    <string name="scan_next">Далі</string>
+    <string name="scan_back">Назад</string>
+    <string name="scan_save">Зберегти</string>
+    <string name="scan_rotate">Повернути</string>
+    <string name="scan_paper">Папір</string>
+    <string name="scan_filter_color">Колір</string>
+    <string name="scan_filter_gray">Сірий</string>
+    <string name="scan_filter_bw">Ч/Б</string>
+    <string name="scan_tune">Світло й контраст</string>
+    <string name="scan_shadows">Видалення тіней</string>
+    <string name="scan_brightness">Яскравість</string>
+    <string name="scan_contrast">Контраст</string>
+    <string name="scan_sharpen">Різкість</string>
+    <string name="scan_page_saved">Сторінку збережено</string>
+    <string name="scan_next_page_question">Додати ще одну сторінку до цього документа?</string>
+    <string name="scan_page_label">Сторінка %d</string>
+    <string name="scan_done">Готово</string>
+    <string name="scan_add_page">Додати сторінку</string>
+    <string name="scan_share_pdf">Поділитися PDF</string>
+    <string name="scan_pages_empty">У цьому документі немає сторінок.</string>
+    <string name="scan_saved_to_device">Файл збережено</string>
+    <string name="scan_share_title">Поділитися документом</string>
+    <string name="scan_rename_title">Перейменувати документ</string>
+    <string name="scan_rename_confirm">Перейменувати</string>
+    <string name="scan_error_load">Не вдається відкрити це фото</string>
+    <string name="scan_error_preview">Недостатньо пам\'яті для перегляду</string>
+    <string name="scan_error_save">Не вдається зберегти скан</string>
+    <string name="scan_error_export">Не вдається підготувати файл</string>
+    <string name="scan_error_no_camera">Не знайдено застосунку камери</string>
+    <string name="scan_error_no_viewer">Не знайдено застосунку для відкриття зображення</string>
+    <string name="scan_error_no_app">Не знайдено застосунку, з яким можна поділитися</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d сторінка</item>
+        <item quantity="few">%d сторінки</item>
+        <item quantity="many">%d сторінок</item>
+        <item quantity="other">%d сторінки</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Сторінки</item>
+        <item>Поділитися як PDF</item>
+        <item>Поділитися як JPEG</item>
+        <item>Зберегти PDF у…</item>
+        <item>Перейменувати</item>
+        <item>Видалити</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Переглянути</item>
+        <item>Зберегти JPEG у…</item>
+        <item>Перемістити вгору</item>
+        <item>Перемістити вниз</item>
+        <item>Видалити сторінку</item>
+    </string-array>
+    <string name="weather_city_hint">Назва міста будь-якою мовою</string>
+    <string name="weather_search">Пошук</string>
+    <string name="weather_my_location">Моє місце</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Відчувається як</string>
+    <string name="weather_humidity">Вологість</string>
+    <string name="weather_wind">Вітер</string>
+    <string name="weather_today_range">Сьогодні</string>
+    <string name="weather_units">Одиниці</string>
+    <string name="weather_units_temperature">Температура</string>
+    <string name="weather_units_wind">Швидкість вітру</string>
+    <string name="weather_unit_celsius">Цельсій (°C)</string>
+    <string name="weather_unit_fahrenheit">Фаренгейт (°F)</string>
+    <string name="weather_unit_ms">Метри за секунду (м/с)</string>
+    <string name="weather_unit_kmh">Кілометри за годину (км/год)</string>
+    <string name="weather_moon_caption">%1$s · освітлено %2$d%%</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">Завантаження погоди…</string>
+    <string name="weather_location_needed">Дозвольте доступ до приблизного місцезнаходження, щоб бачити погоду там, де ви є, або знайдіть місто.</string>
+    <string name="weather_allow">Дозволити</string>
+    <string name="weather_open_settings">Відкрити налаштування застосунку</string>
+    <string name="weather_attribution">Погода: Open-Meteo.com · Місця: © учасники OpenStreetMap</string>
+    <string name="weather_choose_city">Виберіть місто</string>
+    <string name="steps_today">Сьогодні</string>
+    <string name="steps_unit">кроків</string>
+    <string name="steps_walk_run">Ходьба %1$s · Біг %2$s</string>
+    <string name="steps_period">Період</string>
+    <string name="steps_last_7">7 днів</string>
+    <string name="steps_last_30">30 днів</string>
+    <string name="steps_this_month">Цей місяць</string>
+    <string name="steps_pick_dates">Вибрати дати</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Усього кроків</string>
+    <string name="steps_distance">Відстань</string>
+    <string name="steps_average">У середньому за день</string>
+    <string name="steps_best_day">Найкращий день</string>
+    <string name="steps_walking">Кроки ходьбою</string>
+    <string name="steps_running">Кроки бігом</string>
+    <string name="steps_active_days">Дні з кроками</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d з %2$d</string>
+    <string name="steps_distance_km">%1$.2f км</string>
+    <string name="steps_no_data">За цей період кроків не записано</string>
+    <string name="steps_settings">Налаштування кроків</string>
+    <string name="steps_settings_title">Довжина кроку</string>
+    <string name="steps_walk_length">Довжина кроку при ходьбі, см</string>
+    <string name="steps_run_length">Довжина кроку при бігу, см</string>
+    <string name="steps_run_cadence">Біг починається від, кроків за хвилину</string>
+    <string name="steps_run_cadence_hint">Кроки в такому темпі або швидше рахуються як біг.</string>
+    <string name="steps_defaults">За замовчуванням</string>
+    <string name="steps_save">Зберегти</string>
+    <string name="steps_invalid_length">Введіть %1$d–%2$d</string>
+    <string name="steps_measure_title">Як виміряти довжину кроку</string>
+    <string name="steps_measure_text">1. Позначте стартову лінію біля носка взуття перед першим кроком.\n2. Пройдіть 10 спокійних кроків у звичному темпі.\n3. Виміряйте відстань від стартової лінії до того ж носка після 10-го кроку, у сантиметрах.\n4. Поділіть її на 10.\n5. Повторіть кілька разів і введіть середнє значення.\n\nЗробіть те саме у своєму звичному темпі бігу, щоб отримати довжину кроку при бігу.</string>
+    <string name="steps_no_sensor">У цьому телефоні немає датчика кроків.</string>
+    <string name="steps_permission_needed">Дозвольте доступ до фізичної активності, щоб телефон міг рахувати ваші кроки.</string>
+    <string name="steps_allow">Дозволити</string>
+    <string name="steps_open_settings">Відкрити налаштування застосунку</string>
+    <string name="currency_amount_hint">Сума</string>
+    <string name="currency_swap">Поміняти ⇅</string>
+    <string name="currency_refresh">Оновити курси</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Курси оновлено %1$s</string>
+    <string name="currency_outdated">Немає інтернету. Показано збережені курси, оновлені %1$s</string>
+    <string name="currency_loading">Завантаження курсів…</string>
+    <string name="currency_unavailable">Курси недоступні. Перевірте підключення до інтернету та оновіть.</string>
+    <string name="currency_invalid_amount">Введіть суму</string>
+    <string name="currency_attribution">Курси від Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Інж</string>
+    <string name="calculator_basic">Прост</string>
+    <string name="calculator_degrees">Град</string>
+    <string name="calculator_radians">Рад</string>
+    <string name="calculator_history">Історія</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Почати запис</string>
+    <string name="flights_stop">Зупинити запис</string>
+    <string name="flights_units">Одиниці</string>
+    <string name="flights_journal">Журнал</string>
+    <string name="flights_journal_title">Журнал польотів</string>
+    <string name="flights_journal_empty">Польотів поки не записано.</string>
+    <string name="flights_journal_in_progress">Цей політ ще записується.</string>
+    <string name="flights_report_open">Відкрити звіт</string>
+    <string name="flights_report_share">Поділитися звітом</string>
+    <string name="flights_report_delete">Видалити політ</string>
+    <string name="flights_report_failed">Не вдалося підготувати звіт.</string>
+    <string name="flights_report_no_viewer">Не знайдено застосунку для відкриття PDF-файлів.</string>
+    <string name="flights_delete_title">Видалити цей політ?</string>
+    <string name="flights_delete_message">Маршрут і звіт буде видалено назавжди. Спершу можна надіслати звіт кудись, наприклад на флешку, комп\'ютер або Google Диск.</string>
+    <string name="flights_delete_save_first">Зберегти звіт, потім видалити</string>
+    <string name="flights_delete_without_saving">Видалити без збереження</string>
+    <string name="flights_delete_after_share_message">Якщо звіт дістався потрібного місця, політ можна видалити зараз.</string>
+    <string name="flights_delete_after_share_confirm">Видалити політ</string>
+    <string name="flights_delete_keep">Залишити політ</string>
+    <string name="flights_units_report_limit">Ліміт звітів</string>
+    <string name="flights_units_report_limit_hint">Максимум PDF-звітів у журналі, 0 — без ліміту</string>
+    <string name="flights_limit_full_title">Досягнуто ліміту PDF-звітів</string>
+    <string name="flights_limit_full_message">У журналі %1$d звітів — це ліміт. Щоб записати новий політ, видаліть із журналу хоча б один політ. Спершу можна зберегти його звіт на флешку, комп\'ютер або Google Диск.</string>
+    <string name="flights_limit_warning_title">Ви наближаєтеся до ліміту PDF-звітів!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Можна записати ще %d політ. Видаліть застарілі польоти з журналу.</item>
+        <item quantity="few">Можна записати ще %d польоти. Видаліть застарілі польоти з журналу.</item>
+        <item quantity="many">Можна записати ще %d польотів. Видаліть застарілі польоти з журналу.</item>
+        <item quantity="other">Можна записати ще %d польоту. Видаліть застарілі польоти з журналу.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Відкрити журнал</string>
+    <string name="flights_journal_line">%1$s · швидк. до %2$s · висота до %3$s</string>
+    <string name="flights_units_speed">Швидкість і відстань</string>
+    <string name="flights_units_altitude">Висота</string>
+    <string name="flights_unit_kmh">Кілометри за годину (км/год)</string>
+    <string name="flights_unit_knots">Вузли (kt, морські милі)</string>
+    <string name="flights_unit_ms">Метри за секунду (м/с)</string>
+    <string name="flights_unit_metres">Метри (м)</string>
+    <string name="flights_unit_feet">Фути (ft)</string>
+    <string name="flights_units_climb">Швидкість підйому</string>
+    <string name="flights_unit_fpm">Фути за хвилину (ft/min)</string>
+    <string name="flights_altitude_zero">Нуль</string>
+    <string name="flights_altitude_sea">Над рівнем моря</string>
+    <string name="flights_altitude_start">Над стартом · утримуйте «Нуль», щоб скасувати</string>
+    <string name="flights_sound_on">Звук: увімк.</string>
+    <string name="flights_sound_off">Звук: вимк.</string>
+    <string name="flights_sound_tune">Налаштування звуку</string>
+    <string name="flights_sound_climb_start">Сигнал починається при підйомі %1$.1f м/с</string>
+    <string name="flights_sound_sink_start">Низькі сигнали починаються при зниженні %1$.1f м/с</string>
+    <string name="flights_sound_sink_alarm">Безперервна тривога при зниженні %1$.1f м/с</string>
+    <string name="flights_speed_label">Швидкість</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Час польоту</string>
+    <string name="flights_distance">Відстань</string>
+    <string name="flights_max_speed">Макс. швидкість</string>
+    <string name="flights_avg_speed">Середня швидкість</string>
+    <string name="flights_max_altitude">Найбільша висота</string>
+    <string name="flights_climb_rate">Швидкість підйому</string>
+    <string name="flights_max_g">Пікове навантаження</string>
+    <string name="flights_status_waiting">Очікування сигналу GPS…</string>
+    <string name="flights_location_needed">Дозвольте доступ до точного місцезнаходження, щоб записувати швидкість, висоту та маршрут.</string>
+    <string name="flights_allow">Дозволити</string>
+    <string name="flights_open_settings">Відкрити налаштування застосунку</string>
+    <string name="flights_gps_off">Увімкніть служби геолокації (GPS), щоб записати політ.</string>
+    <string name="flights_disclaimer">Лише для розваги та цікавості. Не покладайтеся на ці прилади для навігації чи будь-чого, що впливає на безпеку.</string>
+</resources>

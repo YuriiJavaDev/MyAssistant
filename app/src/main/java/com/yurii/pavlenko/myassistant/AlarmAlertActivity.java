@@ -74,7 +74,7 @@ public class AlarmAlertActivity extends AppCompatActivity {
 
     private void showAlert(Intent intent) {
         int dueTasksCount = intent.getIntExtra(EXTRA_DUE_TASKS_COUNT, 0);
-        tvTaskTitleContent.setText("Overdue tasks: " + dueTasksCount);
+        tvTaskTitleContent.setText(getString(R.string.app_overdue_tasks_format, dueTasksCount));
         if (TaskPreferences.isVoiceEnabled(this)) {
             speaker.speak(dueTasksCount);
         }

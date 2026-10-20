@@ -30,7 +30,7 @@
             android:id="@+id/tvDialogTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deadline Alert!"
+            android:text="@string/tasks_alert_title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="?attr/maOverdue"
@@ -49,12 +49,12 @@
             android:lineSpacingExtra="4dp"
             tools:text="You have pending tasks." />
 
-        <!-- Action button ("View Tasks" / "Got it") with custom background and text color -->
+        <!-- Action button ("@string/tasks_alert_view_tasks" / "Got it") with custom background and text color -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDismissAlert"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="View Tasks"
+            android:text="@string/tasks_alert_view_tasks"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:background="@drawable/button_selector"

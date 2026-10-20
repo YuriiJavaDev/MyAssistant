@@ -53,7 +53,7 @@ public class AlarmSettingsBottomSheet extends BottomSheetDialogFragment {
             if (!ExactAlarmPermissionHelper.hasExactAlarmPermission(requireContext())) {
                 ExactAlarmPermissionHelper.requestExactAlarmPermission(requireContext());
             } else {
-                Toast.makeText(requireContext(), "Exact alarm permission is already granted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.app_exact_alarm_already_granted, Toast.LENGTH_SHORT).show();
             }
         });
 

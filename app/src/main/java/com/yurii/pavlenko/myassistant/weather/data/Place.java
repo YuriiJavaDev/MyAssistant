@@ -24,6 +24,11 @@ public final class Place {
         return name;
     }
 
+    /** False for a location that could not be named. */
+    public boolean hasName() {
+        return !name.isEmpty();
+    }
+
     public String getCountry() {
         return country;
     }
