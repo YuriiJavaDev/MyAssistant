@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">מקורי</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">סריקה %1$s</string>
+    <string name="scan_delete_page_message">למחוק את הדף הזה? לא ניתן לבטל פעולה זו!</string>
+    <string name="scan_delete_document_message">למחוק את \"%1$s\" על כל דפיו? לא ניתן לבטל פעולה זו!</string>
+    <string name="scan_delete_all_message">למחוק הכול: %1$s, %2$s? לא ניתן לבטל פעולה זו!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">מסמך %d</item>
+        <item quantity="two">%d מסמכים</item>
+        <item quantity="many">%d מסמכים</item>
+        <item quantity="other">%d מסמכים</item>
+    </plurals>
+</resources>

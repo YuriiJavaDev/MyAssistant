@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">משימות</string>
+    <string name="app_tab_weather">מזג אוויר</string>
+    <string name="app_tab_exchange">המרה</string>
+    <string name="app_tab_calculator">מחשבון</string>
+    <string name="app_tab_scan">סריקה</string>
+    <string name="app_tab_steps">צעדים</string>
+    <string name="app_tab_flights">טיסות</string>
+    <string name="app_menu_settings">הגדרות</string>
+    <string name="app_menu_options">אפשרויות</string>
+    <string name="app_notifications_disabled">ההודעות כבויות: תזכורות לא יוצגו</string>
+    <string name="app_overdue_tasks_format">משימות באיחור: %1$d</string>
+    <string name="app_exact_alarm_already_granted">ההרשאה להתראות מדויקות כבר ניתנה</string>
+    <string name="app_alarm_title">תזכורות והתראות</string>
+    <string name="app_alarm_voice_alert">התראה קולית (TTS)</string>
+    <string name="app_alarm_full_screen">חלון במסך מלא</string>
+    <string name="app_alarm_grant_exact">מתן הרשאה להתראות מדויקות</string>
+    <string name="backup_menu_export">ייצוא גיבוי</string>
+    <string name="backup_menu_import">ייבוא גיבוי</string>
+    <string name="backup_menu_cloud_settings">הגדרות ענן וגיבוי אוטומטי</string>
+    <string name="backup_menu_cloud_save">שמירה בענן עכשיו</string>
+    <string name="backup_menu_cloud_restore">שחזור מהענן</string>
+    <string name="backup_cloud_username_hint">שם/אימייל</string>
+    <string name="backup_cloud_password_hint">סיסמה</string>
+    <string name="backup_cloud_auto_backup">גיבוי אוטומטי יומי</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ כשהגיבוי האוטומטי מופעל, קובץ מסד הנתונים באחסון הענן שלכם נדרס כברירת מחדל פעם ביום.</string>
+    <string name="backup_cloud_test">בדיקה</string>
+    <string name="backup_cloud_save">שמירה</string>
+    <string name="settings_language_title">שפה</string>
+    <string name="settings_language_subtitle">שפת האפליקציה</string>
+    <string name="language_system_default">ברירת מחדל של המערכת</string>
+</resources>

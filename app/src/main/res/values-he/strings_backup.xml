@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">מעלה גיבוי לענן...</string>
+    <string name="backup_cloud_restoring">משחזר גיבוי מהענן...</string>
+    <string name="backup_cloud_upload_success">הגיבוי הועלה לענן בהצלחה</string>
+    <string name="backup_cloud_restore_success">הגיבוי שוחזר מהענן בהצלחה</string>
+    <string name="backup_cloud_restore_partly">המשימות שוחזרו מהענן (לא נמצא שם גיבוי של: %1$s)</string>
+    <string name="backup_part_steps">צעדים</string>
+    <string name="backup_part_flights">טיסות</string>
+    <string name="backup_part_scans">סריקות</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">שגיאת העלאה: %1$s</string>
+    <string name="backup_error_download">שגיאת הורדה: %1$s</string>
+    <string name="backup_error_unknown">שגיאה לא ידועה</string>
+    <string name="backup_error_insecure_url">הכתובת חייבת להתחיל ב-https://</string>
+    <string name="backup_error_authentication">האימות נכשל: בדקו את שם המשתמש והסיסמה</string>
+    <string name="backup_error_server_code">השרת השיב בקוד: %1$d</string>
+    <string name="backup_error_connection">שגיאת חיבור: %1$s</string>
+    <string name="backup_destination_title">שמירת הגיבוי ב</string>
+    <string name="backup_destination_folder">בחירת תיקייה (מכשיר, כרטיס SD, USB, Drive...)</string>
+    <string name="backup_destination_share">שיתוף עם אפליקציה</string>
+    <string name="backup_preparing">מכין גיבוי...</string>
+    <string name="backup_export_failed">הייצוא נכשל</string>
+    <string name="backup_export_saved">הגיבוי נשמר</string>
+    <string name="backup_import_success">הגיבוי יובא בהצלחה. מפעיל מחדש...</string>
+    <string name="backup_import_failed">הייבוא נכשל</string>
+    <string name="backup_import_title">שימו לב!</string>
+    <string name="backup_import_message">שחזור גיבוי מחליף את המשימות, הצעדים והסריקות הנוכחיים שנמצאים בו. האם אתם בטוחים שברצונכם להמשיך?</string>
+    <string name="backup_import_confirm">אישור ייבוא</string>
+    <string name="backup_share_chooser_title">ייצוא גיבוי</string>
+    <string name="backup_cloud_settings_saved">הגדרות הענן נשמרו בהצלחה</string>
+    <string name="backup_cloud_secure_storage_unavailable">האחסון המאובטח אינו זמין, ההגדרות לא נשמרו</string>
+    <string name="backup_cloud_url_empty">הכתובת לא יכולה להיות ריקה</string>
+    <string name="backup_cloud_testing">בודק חיבור...</string>
+    <string name="backup_cloud_connection_successful">החיבור הצליח!</string>
+</resources>

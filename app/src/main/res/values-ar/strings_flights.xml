@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">تسجيل الرحلة</string>
+    <string name="flights_notification_channel_description">يظهر أثناء تسجيل رحلة</string>
+    <string name="flights_notification_title">جارٍ تسجيل الرحلة</string>
+    <string name="flights_notification_text">انقر لفتح العدادات</string>
+    <string-array name="flights_cardinal_points">
+        <item>ش</item>
+        <item>ش‌ق</item>
+        <item>ق</item>
+        <item>ج‌ق</item>
+        <item>ج</item>
+        <item>ج‌غ</item>
+        <item>غ</item>
+        <item>ش‌غ</item>
+    </string-array>
+    <string name="flights_report_title">تقرير الرحلة</string>
+    <string name="flights_report_north">ش</string>
+    <string name="flights_report_side_north">ش</string>
+    <string name="flights_report_side_south">ج</string>
+    <string name="flights_report_side_east">ق</string>
+    <string name="flights_report_side_west">غ</string>
+    <string name="flights_report_duration">المدة</string>
+    <string name="flights_report_distance">المسافة</string>
+    <string name="flights_report_top_speed">أقصى سرعة</string>
+    <string name="flights_report_average_speed">متوسط السرعة</string>
+    <string name="flights_report_highest_altitude">أعلى ارتفاع</string>
+    <string name="flights_report_best_climb">أفضل صعود</string>
+    <string name="flights_report_worst_sink">أشد هبوط</string>
+    <string name="flights_report_peak_load">أقصى حِمل</string>
+    <string name="flights_report_start_point">نقطة البداية</string>
+    <string name="flights_report_end_point">نقطة النهاية</string>
+    <string name="flights_report_altitude_above_start">%1$s فوق نقطة الإقلاع</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s فوق مستوى سطح البحر</string>
+    <string name="flights_report_chart_altitude_above_start">الارتفاع (%1$s، فوق نقطة الإقلاع)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">الارتفاع (%1$s، فوق مستوى سطح البحر)</string>
+    <string name="flights_report_chart_speed">السرعة الأرضية (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">الخريطة: Natural Earth (ملكية عامة).</string>
+    <string name="flights_report_footer">%1$s سُجّل بواسطة MyAssistant. للمتعة فقط: ليس للملاحة أو السلامة.</string>
+</resources>

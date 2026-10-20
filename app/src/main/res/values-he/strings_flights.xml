@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">הקלטת טיסה</string>
+    <string name="flights_notification_channel_description">מוצג בזמן שטיסה מוקלטת</string>
+    <string name="flights_notification_title">מקליט את הטיסה</string>
+    <string name="flights_notification_text">הקישו כדי לפתוח את המכשירים</string>
+    <string-array name="flights_cardinal_points">
+        <item>צ</item>
+        <item>צמ</item>
+        <item>מ</item>
+        <item>דמ</item>
+        <item>ד</item>
+        <item>דמע</item>
+        <item>מע</item>
+        <item>צמע</item>
+    </string-array>
+    <string name="flights_report_title">דוח טיסה</string>
+    <string name="flights_report_north">צ</string>
+    <string name="flights_report_side_north">צ</string>
+    <string name="flights_report_side_south">ד</string>
+    <string name="flights_report_side_east">מ</string>
+    <string name="flights_report_side_west">מע</string>
+    <string name="flights_report_duration">משך</string>
+    <string name="flights_report_distance">מרחק</string>
+    <string name="flights_report_top_speed">מהירות מרבית</string>
+    <string name="flights_report_average_speed">מהירות ממוצעת</string>
+    <string name="flights_report_highest_altitude">הגובה הרב ביותר</string>
+    <string name="flights_report_best_climb">הטיפוס הטוב ביותר</string>
+    <string name="flights_report_worst_sink">הצניחה החדה ביותר</string>
+    <string name="flights_report_peak_load">עומס שיא</string>
+    <string name="flights_report_start_point">נקודת התחלה</string>
+    <string name="flights_report_end_point">נקודת סיום</string>
+    <string name="flights_report_altitude_above_start">%1$s מעל נקודת ההמראה</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s מעל פני הים</string>
+    <string name="flights_report_chart_altitude_above_start">גובה (%1$s, מעל נקודת ההמראה)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">גובה (%1$s, מעל פני הים)</string>
+    <string name="flights_report_chart_speed">מהירות קרקע (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">מפה: Natural Earth (נחלת הכלל).</string>
+    <string name="flights_report_footer">%1$s הוקלט ב-MyAssistant. לשעשוע בלבד: לא לניווט או לבטיחות.</string>
+</resources>

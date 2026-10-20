@@ -12,7 +12,9 @@ public final class AppLanguage {
     private static final List<AppLanguage> ALL = Collections.unmodifiableList(Arrays.asList(
             new AppLanguage("en", "English"),
             new AppLanguage("uk", "Українська"),
-            new AppLanguage("ru", "Русский")
+            new AppLanguage("ru", "Русский"),
+            new AppLanguage("he", "עברית"),
+            new AppLanguage("ar", "العربية")
     ));
 
     private final String tag;

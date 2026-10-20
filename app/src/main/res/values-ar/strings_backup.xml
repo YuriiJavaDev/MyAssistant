@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">جارٍ رفع النسخة الاحتياطية إلى السحابة...</string>
+    <string name="backup_cloud_restoring">جارٍ استعادة النسخة الاحتياطية من السحابة...</string>
+    <string name="backup_cloud_upload_success">تم رفع النسخة الاحتياطية إلى السحابة بنجاح</string>
+    <string name="backup_cloud_restore_success">تمت استعادة النسخة الاحتياطية من السحابة بنجاح</string>
+    <string name="backup_cloud_restore_partly">تمت استعادة المهام من السحابة (لم يُعثر هناك على نسخة احتياطية لـ: %1$s)</string>
+    <string name="backup_part_steps">الخطوات</string>
+    <string name="backup_part_flights">الرحلات</string>
+    <string name="backup_part_scans">الممسوحات</string>
+    <string name="backup_part_separator">"، "</string>
+    <string name="backup_error_upload">خطأ في الرفع: %1$s</string>
+    <string name="backup_error_download">خطأ في التنزيل: %1$s</string>
+    <string name="backup_error_unknown">خطأ غير معروف</string>
+    <string name="backup_error_insecure_url">يجب أن يبدأ العنوان بـ https://</string>
+    <string name="backup_error_authentication">فشلت المصادقة: تحقق من اسم المستخدم وكلمة المرور</string>
+    <string name="backup_error_server_code">ردّ الخادم بالرمز: %1$d</string>
+    <string name="backup_error_connection">خطأ في الاتصال: %1$s</string>
+    <string name="backup_destination_title">حفظ النسخة الاحتياطية في</string>
+    <string name="backup_destination_folder">اختيار مجلد (الجهاز، بطاقة SD، USB، Drive...)</string>
+    <string name="backup_destination_share">المشاركة مع تطبيق</string>
+    <string name="backup_preparing">جارٍ تجهيز النسخة الاحتياطية...</string>
+    <string name="backup_export_failed">فشل التصدير</string>
+    <string name="backup_export_saved">تم حفظ النسخة الاحتياطية</string>
+    <string name="backup_import_success">تم استيراد النسخة الاحتياطية بنجاح. جارٍ إعادة التشغيل...</string>
+    <string name="backup_import_failed">فشل الاستيراد</string>
+    <string name="backup_import_title">تنبيه!</string>
+    <string name="backup_import_message">تؤدي استعادة نسخة احتياطية إلى استبدال المهام والخطوات والممسوحات الحالية بما تحتويه. هل أنت متأكد أنك تريد المتابعة؟</string>
+    <string name="backup_import_confirm">تأكيد الاستيراد</string>
+    <string name="backup_share_chooser_title">تصدير نسخة احتياطية</string>
+    <string name="backup_cloud_settings_saved">تم حفظ إعدادات السحابة بنجاح</string>
+    <string name="backup_cloud_secure_storage_unavailable">التخزين الآمن غير متاح، لم تُحفظ الإعدادات</string>
+    <string name="backup_cloud_url_empty">لا يمكن أن يكون العنوان فارغًا</string>
+    <string name="backup_cloud_testing">جارٍ اختبار الاتصال...</string>
+    <string name="backup_cloud_connection_successful">نجح الاتصال!</string>
+</resources>
