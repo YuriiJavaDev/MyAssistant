@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Carta</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Digitalização %1$s</string>
+    <string name="scan_delete_page_message">Excluir esta página? Esta ação não pode ser desfeita!</string>
+    <string name="scan_delete_document_message">Excluir «%1$s» com todas as suas páginas? Esta ação não pode ser desfeita!</string>
+    <string name="scan_delete_all_message">Excluir tudo: %1$s com %2$s? Esta ação não pode ser desfeita!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d documento</item>
+        <item quantity="many">%d documentos</item>
+        <item quantity="other">%d documentos</item>
+    </plurals>
+</resources>

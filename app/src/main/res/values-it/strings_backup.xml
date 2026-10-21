@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Caricamento del backup nel cloud...</string>
+    <string name="backup_cloud_restoring">Ripristino del backup dal cloud...</string>
+    <string name="backup_cloud_upload_success">Backup caricato nel cloud con successo</string>
+    <string name="backup_cloud_restore_success">Backup ripristinato dal cloud con successo</string>
+    <string name="backup_cloud_restore_partly">Attività ripristinate dal cloud (nessun backup trovato per: %1$s)</string>
+    <string name="backup_part_steps">passi</string>
+    <string name="backup_part_flights">voli</string>
+    <string name="backup_part_scans">scansioni</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Errore di caricamento: %1$s</string>
+    <string name="backup_error_download">Errore di download: %1$s</string>
+    <string name="backup_error_unknown">Errore sconosciuto</string>
+    <string name="backup_error_insecure_url">L’URL deve iniziare con https://</string>
+    <string name="backup_error_authentication">Autenticazione non riuscita: controlla nome utente e password</string>
+    <string name="backup_error_server_code">Il server ha risposto con il codice: %1$d</string>
+    <string name="backup_error_connection">Errore di connessione: %1$s</string>
+    <string name="backup_destination_title">Salva il backup in</string>
+    <string name="backup_destination_folder">Scegli una cartella (dispositivo, scheda SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Condividi con un’app</string>
+    <string name="backup_preparing">Preparazione del backup...</string>
+    <string name="backup_export_failed">Esportazione non riuscita</string>
+    <string name="backup_export_saved">Backup salvato</string>
+    <string name="backup_import_success">Backup importato con successo. Riavvio...</string>
+    <string name="backup_import_failed">Importazione non riuscita</string>
+    <string name="backup_import_title">Attenzione!</string>
+    <string name="backup_import_message">Il ripristino di un backup sostituisce le attività, i passi e le scansioni attuali che contiene. Vuoi davvero continuare?</string>
+    <string name="backup_import_confirm">Conferma importazione</string>
+    <string name="backup_share_chooser_title">Esporta backup</string>
+    <string name="backup_cloud_settings_saved">Impostazioni cloud salvate con successo</string>
+    <string name="backup_cloud_secure_storage_unavailable">L’archiviazione sicura non è disponibile, le impostazioni non sono state salvate</string>
+    <string name="backup_cloud_url_empty">L’URL non può essere vuoto</string>
+    <string name="backup_cloud_testing">Verifica della connessione...</string>
+    <string name="backup_cloud_connection_successful">Connessione riuscita!</string>
+</resources>

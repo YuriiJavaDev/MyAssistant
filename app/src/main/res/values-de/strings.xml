@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Abbrechen</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_alarms_title">Erinnerungen und Alarme</string>
+    <string name="settings_alarms_subtitle">Intervalle, Töne und Benachrichtigungsstatus</string>
+    <string name="settings_display_title">Anzeigemodus</string>
+    <string name="settings_display_subtitle">Tag / Nacht / Auto</string>
+    <string name="display_mode_title">Anzeigemodus</string>
+    <string name="display_mode_light">Hell (Tag)</string>
+    <string name="display_mode_dark">Dunkel (Nacht)</string>
+    <string name="display_mode_system">System (Auto)</string>
+    <string name="settings_design_title">App-Design</string>
+    <string name="settings_design_subtitle">Varianten für das Aussehen der Oberfläche</string>
+    <string name="design_classic_name">Klassisch</string>
+    <string name="design_classic_about">Das ursprüngliche Aussehen: Creme und Violett</string>
+    <string name="design_paper_ink_name">Papier &amp; Tinte</string>
+    <string name="design_paper_ink_about">Dünne Linien und gedeckte Geschäftstöne</string>
+    <string name="design_pastel_cloud_name">Pastellwolke</string>
+    <string name="design_pastel_cloud_about">Weich, rund und blass, mit Wolken</string>
+    <string name="design_neon_arcade_name">Neon-Arcade</string>
+    <string name="design_neon_arcade_about">Leuchtendes Neon, starker Kontrast und eine Retro-Sonne</string>
+    <string name="design_toon_name">Comic</string>
+    <string name="design_toon_about">Comic-Umrisse und eine handgeschriebene Schrift</string>
+    <string name="design_biker_name">Biker</string>
+    <string name="design_biker_about">Raues Metall, Gummi und Auspuff-Orange</string>
+    <string name="design_cockpit_name">Cockpit</string>
+    <string name="design_cockpit_about">Strenges Instrumentenbrett mit einem Segelflugzeug</string>
+    <string name="design_beach_name">Strand</string>
+    <string name="design_beach_about">Sand, Lagune, Koralle und Palmen</string>
+    <string name="design_forest_name">Zauberwald</string>
+    <string name="design_forest_about">Pergament, Gold und Waldmoos</string>
+    <string name="design_mono_block_name">Monoblock</string>
+    <string name="design_mono_block_about">Hartes Schwarz-Weiß mit einem gelben Marker</string>
+    <string name="settings_permissions_title">Systemberechtigungen</string>
+    <string name="settings_permissions_subtitle">Zugriff im Android-System verwalten</string>
+    <string-array name="filter_options">
+        <item>Alle Aufgaben</item>
+        <item>Aktiv</item>
+        <item>Erledigt</item>
+        <item>Fälligkeiten</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Status</item>
+        <item>Erstellt</item>
+        <item>Bearbeitet</item>
+        <item>Erledigt</item>
+        <item>Wichtigkeit</item>
+        <item>Frist</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galerie</string>
+    <string name="scan_clear_all">Alle löschen</string>
+    <string name="scan_cleared">Alle Scans gelöscht</string>
+    <string name="scan_empty">Noch keine Dokumente. Fotografiere eine Seite oder wähle ein Bild aus der Galerie.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Zurücksetzen</string>
+    <string name="scan_next">Weiter</string>
+    <string name="scan_back">Zurück</string>
+    <string name="scan_save">Speichern</string>
+    <string name="scan_rotate">Drehen</string>
+    <string name="scan_paper">Papier</string>
+    <string name="scan_filter_color">Farbe</string>
+    <string name="scan_filter_gray">Grau</string>
+    <string name="scan_filter_bw">S/W</string>
+    <string name="scan_tune">Licht und Kontrast</string>
+    <string name="scan_shadows">Schatten entfernen</string>
+    <string name="scan_brightness">Helligkeit</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Schärfen</string>
+    <string name="scan_page_saved">Seite gespeichert</string>
+    <string name="scan_next_page_question">Weitere Seite zu diesem Dokument hinzufügen?</string>
+    <string name="scan_page_label">Seite %d</string>
+    <string name="scan_done">Fertig</string>
+    <string name="scan_add_page">Seite hinzufügen</string>
+    <string name="scan_share_pdf">PDF teilen</string>
+    <string name="scan_pages_empty">Dieses Dokument hat keine Seiten.</string>
+    <string name="scan_saved_to_device">Datei gespeichert</string>
+    <string name="scan_share_title">Dokument teilen</string>
+    <string name="scan_rename_title">Dokument umbenennen</string>
+    <string name="scan_rename_confirm">Umbenennen</string>
+    <string name="scan_error_load">Dieses Foto kann nicht geöffnet werden</string>
+    <string name="scan_error_preview">Nicht genug Speicher für die Vorschau</string>
+    <string name="scan_error_save">Der Scan kann nicht gespeichert werden</string>
+    <string name="scan_error_export">Die Datei kann nicht vorbereitet werden</string>
+    <string name="scan_error_no_camera">Keine Kamera-App gefunden</string>
+    <string name="scan_error_no_viewer">Keine App zum Öffnen des Bildes gefunden</string>
+    <string name="scan_error_no_app">Keine App zum Teilen gefunden</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d Seite</item>
+        <item quantity="other">%d Seiten</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Seiten</item>
+        <item>Als PDF teilen</item>
+        <item>Als JPEG teilen</item>
+        <item>PDF speichern unter…</item>
+        <item>Umbenennen</item>
+        <item>Löschen</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Ansehen</item>
+        <item>JPEG speichern unter…</item>
+        <item>Nach oben</item>
+        <item>Nach unten</item>
+        <item>Seite löschen</item>
+    </string-array>
+    <string name="weather_city_hint">Stadtname in beliebiger Sprache</string>
+    <string name="weather_search">Suchen</string>
+    <string name="weather_my_location">Mein Standort</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Gefühlt</string>
+    <string name="weather_humidity">Luftfeuchtigkeit</string>
+    <string name="weather_wind">Wind</string>
+    <string name="weather_today_range">Heute</string>
+    <string name="weather_units">Einheiten</string>
+    <string name="weather_units_temperature">Temperatur</string>
+    <string name="weather_units_wind">Windgeschwindigkeit</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Meter pro Sekunde (m/s)</string>
+    <string name="weather_unit_kmh">Kilometer pro Stunde (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% beleuchtet</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Wetter wird geladen…</string>
+    <string name="weather_location_needed">Erlaube den Zugriff auf den ungefähren Standort, um das Wetter an deinem Ort zu sehen, oder suche nach einer Stadt.</string>
+    <string name="weather_allow">Erlauben</string>
+    <string name="weather_open_settings">App-Einstellungen öffnen</string>
+    <string name="weather_attribution">Wetter: Open-Meteo.com · Orte: © OpenStreetMap-Mitwirkende</string>
+    <string name="weather_choose_city">Stadt wählen</string>
+    <string name="steps_today">Heute</string>
+    <string name="steps_unit">Schritte</string>
+    <string name="steps_walk_run">Gehen %1$s · Laufen %2$s</string>
+    <string name="steps_period">Zeitraum</string>
+    <string name="steps_last_7">7 Tage</string>
+    <string name="steps_last_30">30 Tage</string>
+    <string name="steps_this_month">Dieser Monat</string>
+    <string name="steps_pick_dates">Daten wählen</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Schritte gesamt</string>
+    <string name="steps_distance">Strecke</string>
+    <string name="steps_average">Durchschnitt pro Tag</string>
+    <string name="steps_best_day">Bester Tag</string>
+    <string name="steps_walking">Schritte beim Gehen</string>
+    <string name="steps_running">Schritte beim Laufen</string>
+    <string name="steps_active_days">Tage mit Schritten</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d von %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">In diesem Zeitraum wurden keine Schritte aufgezeichnet</string>
+    <string name="steps_settings">Schritteinstellungen</string>
+    <string name="steps_settings_title">Schrittlänge</string>
+    <string name="steps_walk_length">Schrittlänge beim Gehen, cm</string>
+    <string name="steps_run_length">Schrittlänge beim Laufen, cm</string>
+    <string name="steps_run_cadence">Laufen beginnt bei, Schritte pro Minute</string>
+    <string name="steps_run_cadence_hint">Schritte in diesem Tempo oder schneller zählen als Laufen.</string>
+    <string name="steps_defaults">Standardwerte</string>
+    <string name="steps_save">Speichern</string>
+    <string name="steps_invalid_length">Gib %1$d–%2$d ein</string>
+    <string name="steps_measure_title">So misst du deine Schrittlänge</string>
+    <string name="steps_measure_text">1. Markiere vor dem ersten Schritt die Startlinie an der Schuhspitze.\n2. Gehe 10 ruhige Schritte in deinem gewohnten Tempo.\n3. Miss die Strecke von der Startlinie bis zur selben Schuhspitze nach dem 10. Schritt, in Zentimetern.\n4. Teile sie durch 10.\n5. Wiederhole das mehrmals und gib den Durchschnitt ein.\n\nMache dasselbe in deinem normalen Lauftempo, um die Schrittlänge beim Laufen zu erhalten.</string>
+    <string name="steps_no_sensor">Dieses Telefon hat keinen Schrittzähler-Sensor.</string>
+    <string name="steps_permission_needed">Erlaube den Zugriff auf körperliche Aktivität, damit das Telefon deine Schritte zählen kann.</string>
+    <string name="steps_allow">Erlauben</string>
+    <string name="steps_open_settings">App-Einstellungen öffnen</string>
+    <string name="currency_amount_hint">Betrag</string>
+    <string name="currency_swap">Tauschen ⇅</string>
+    <string name="currency_refresh">Kurse aktualisieren</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurse aktualisiert %1$s</string>
+    <string name="currency_outdated">Kein Internet. Gespeicherte Kurse werden angezeigt, aktualisiert %1$s</string>
+    <string name="currency_loading">Kurse werden geladen…</string>
+    <string name="currency_unavailable">Kurse sind nicht verfügbar. Prüfe die Internetverbindung und aktualisiere.</string>
+    <string name="currency_invalid_amount">Gib einen Betrag ein</string>
+    <string name="currency_attribution">Kurse von Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Wiss</string>
+    <string name="calculator_basic">Einfach</string>
+    <string name="calculator_degrees">Grad</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Verlauf</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Aufzeichnung starten</string>
+    <string name="flights_stop">Aufzeichnung beenden</string>
+    <string name="flights_units">Einheiten</string>
+    <string name="flights_journal">Logbuch</string>
+    <string name="flights_journal_title">Flug-Logbuch</string>
+    <string name="flights_journal_empty">Noch keine Flüge aufgezeichnet.</string>
+    <string name="flights_journal_in_progress">Dieser Flug wird noch aufgezeichnet.</string>
+    <string name="flights_report_open">Bericht öffnen</string>
+    <string name="flights_report_share">Bericht teilen</string>
+    <string name="flights_report_delete">Flug löschen</string>
+    <string name="flights_report_failed">Der Bericht konnte nicht erstellt werden.</string>
+    <string name="flights_report_no_viewer">Keine App zum Öffnen von PDF-Dateien gefunden.</string>
+    <string name="flights_delete_title">Diesen Flug löschen?</string>
+    <string name="flights_delete_message">Die Route und der Bericht werden endgültig entfernt. Du kannst den Bericht vorher irgendwohin senden, zum Beispiel auf einen USB-Stick, einen Computer oder Google Drive.</string>
+    <string name="flights_delete_save_first">Bericht speichern, dann löschen</string>
+    <string name="flights_delete_without_saving">Ohne Speichern löschen</string>
+    <string name="flights_delete_after_share_message">Wenn der Bericht am gewünschten Ort angekommen ist, kannst du den Flug jetzt löschen.</string>
+    <string name="flights_delete_after_share_confirm">Flug löschen</string>
+    <string name="flights_delete_keep">Flug behalten</string>
+    <string name="flights_units_report_limit">Berichtslimit</string>
+    <string name="flights_units_report_limit_hint">Maximale Anzahl PDF-Berichte im Logbuch, 0 für unbegrenzt</string>
+    <string name="flights_limit_full_title">Limit für PDF-Berichte erreicht</string>
+    <string name="flights_limit_full_message">Das Logbuch enthält %1$d Berichte, das ist das Limit. Um einen neuen Flug aufzuzeichnen, lösche mindestens einen Flug aus dem Logbuch. Du kannst den Bericht vorher auf einem USB-Stick, einem Computer oder in Google Drive speichern.</string>
+    <string name="flights_limit_warning_title">Du näherst dich dem Limit für PDF-Berichte!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Du kannst noch %d Flug aufzeichnen. Lösche veraltete Flüge aus dem Logbuch.</item>
+        <item quantity="other">Du kannst noch %d Flüge aufzeichnen. Lösche veraltete Flüge aus dem Logbuch.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Logbuch öffnen</string>
+    <string name="flights_journal_line">%1$s · max. %2$s · Höhe max. %3$s</string>
+    <string name="flights_units_speed">Geschwindigkeit und Strecke</string>
+    <string name="flights_units_altitude">Höhe</string>
+    <string name="flights_unit_kmh">Kilometer pro Stunde (km/h)</string>
+    <string name="flights_unit_knots">Knoten (kt, Seemeilen)</string>
+    <string name="flights_unit_ms">Meter pro Sekunde (m/s)</string>
+    <string name="flights_unit_metres">Meter (m)</string>
+    <string name="flights_unit_feet">Fuß (ft)</string>
+    <string name="flights_units_climb">Steigrate</string>
+    <string name="flights_unit_fpm">Fuß pro Minute (ft/min)</string>
+    <string name="flights_altitude_zero">Null</string>
+    <string name="flights_altitude_sea">Über dem Meeresspiegel</string>
+    <string name="flights_altitude_start">Über dem Start · „Null“ gedrückt halten zum Rückgängigmachen</string>
+    <string name="flights_sound_on">Ton: an</string>
+    <string name="flights_sound_off">Ton: aus</string>
+    <string name="flights_sound_tune">Tonabstimmung</string>
+    <string name="flights_sound_climb_start">Das Piepen beginnt bei einem Steigen von %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Tiefe Pieptöne beginnen bei einem Sinken von %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Daueralarm bei einem Sinken von %1$.1f m/s</string>
+    <string name="flights_speed_label">Geschwindigkeit</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Flugzeit</string>
+    <string name="flights_distance">Strecke</string>
+    <string name="flights_max_speed">Höchstgeschwindigkeit</string>
+    <string name="flights_avg_speed">Durchschnittsgeschwindigkeit</string>
+    <string name="flights_max_altitude">Maximale Höhe</string>
+    <string name="flights_climb_rate">Steigrate</string>
+    <string name="flights_max_g">Spitzenbelastung</string>
+    <string name="flights_status_waiting">Warte auf GPS-Signal…</string>
+    <string name="flights_location_needed">Erlaube den Zugriff auf den genauen Standort, damit Geschwindigkeit, Höhe und Route aufgezeichnet werden können.</string>
+    <string name="flights_allow">Erlauben</string>
+    <string name="flights_open_settings">App-Einstellungen öffnen</string>
+    <string name="flights_gps_off">Schalte die Ortungsdienste (GPS) ein, um einen Flug aufzuzeichnen.</string>
+    <string name="flights_disclaimer">Nur zum Spaß und aus Neugier. Verlasse dich bei Navigation oder allem, was die Sicherheit betrifft, nicht auf diese Instrumente.</string>
+</resources>

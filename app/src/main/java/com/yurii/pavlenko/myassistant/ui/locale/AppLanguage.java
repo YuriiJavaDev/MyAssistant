@@ -14,7 +14,12 @@ public final class AppLanguage {
             new AppLanguage("uk", "Українська"),
             new AppLanguage("ru", "Русский"),
             new AppLanguage("he", "עברית"),
-            new AppLanguage("ar", "العربية")
+            new AppLanguage("ar", "العربية"),
+            new AppLanguage("es", "Español"),
+            new AppLanguage("fr", "Français"),
+            new AppLanguage("de", "Deutsch"),
+            new AppLanguage("it", "Italiano"),
+            new AppLanguage("pt", "Português")
     ));
 
     private final String tag;

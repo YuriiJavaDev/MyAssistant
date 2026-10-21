@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Enviando backup para a nuvem...</string>
+    <string name="backup_cloud_restoring">Restaurando backup da nuvem...</string>
+    <string name="backup_cloud_upload_success">Backup enviado para a nuvem com sucesso</string>
+    <string name="backup_cloud_restore_success">Backup restaurado da nuvem com sucesso</string>
+    <string name="backup_cloud_restore_partly">Tarefas restauradas da nuvem (nenhum backup encontrado de: %1$s)</string>
+    <string name="backup_part_steps">passos</string>
+    <string name="backup_part_flights">voos</string>
+    <string name="backup_part_scans">digitalizações</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Erro de envio: %1$s</string>
+    <string name="backup_error_download">Erro de download: %1$s</string>
+    <string name="backup_error_unknown">Erro desconhecido</string>
+    <string name="backup_error_insecure_url">O URL deve começar com https://</string>
+    <string name="backup_error_authentication">Falha na autenticação: verifique o nome de usuário e a senha</string>
+    <string name="backup_error_server_code">O servidor respondeu com o código: %1$d</string>
+    <string name="backup_error_connection">Erro de conexão: %1$s</string>
+    <string name="backup_destination_title">Salvar backup em</string>
+    <string name="backup_destination_folder">Escolher uma pasta (dispositivo, cartão SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Compartilhar com um app</string>
+    <string name="backup_preparing">Preparando o backup...</string>
+    <string name="backup_export_failed">Falha na exportação</string>
+    <string name="backup_export_saved">Backup salvo</string>
+    <string name="backup_import_success">Backup importado com sucesso. Reiniciando...</string>
+    <string name="backup_import_failed">Falha na importação</string>
+    <string name="backup_import_title">Atenção!</string>
+    <string name="backup_import_message">Restaurar um backup substitui as tarefas, os passos e as digitalizações atuais que ele contém. Tem certeza de que deseja continuar?</string>
+    <string name="backup_import_confirm">Confirmar importação</string>
+    <string name="backup_share_chooser_title">Exportar backup</string>
+    <string name="backup_cloud_settings_saved">Configurações da nuvem salvas com sucesso</string>
+    <string name="backup_cloud_secure_storage_unavailable">O armazenamento seguro não está disponível, as configurações não foram salvas</string>
+    <string name="backup_cloud_url_empty">O URL não pode estar vazio</string>
+    <string name="backup_cloud_testing">Testando a conexão...</string>
+    <string name="backup_cloud_connection_successful">Conexão bem-sucedida!</string>
+</resources>

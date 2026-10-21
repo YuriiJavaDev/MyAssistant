@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Grabación de vuelo</string>
+    <string name="flights_notification_channel_description">Se muestra mientras se graba un vuelo</string>
+    <string name="flights_notification_title">Grabando el vuelo</string>
+    <string name="flights_notification_text">Toca para abrir los instrumentos</string>
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SO</item>
+        <item>O</item>
+        <item>NO</item>
+    </string-array>
+    <string name="flights_report_title">Informe de vuelo</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">E</string>
+    <string name="flights_report_side_west">O</string>
+    <string name="flights_report_duration">Duración</string>
+    <string name="flights_report_distance">Distancia</string>
+    <string name="flights_report_top_speed">Velocidad máxima</string>
+    <string name="flights_report_average_speed">Velocidad media</string>
+    <string name="flights_report_highest_altitude">Altitud máxima</string>
+    <string name="flights_report_best_climb">Mejor ascenso</string>
+    <string name="flights_report_worst_sink">Peor descenso</string>
+    <string name="flights_report_peak_load">Carga máxima</string>
+    <string name="flights_report_start_point">Punto de inicio</string>
+    <string name="flights_report_end_point">Punto final</string>
+    <string name="flights_report_altitude_above_start">%1$s sobre el despegue</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s sobre el nivel del mar</string>
+    <string name="flights_report_chart_altitude_above_start">Altitud (%1$s, sobre el despegue)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Altitud (%1$s, sobre el nivel del mar)</string>
+    <string name="flights_report_chart_speed">Velocidad sobre el suelo (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Mapa: Natural Earth (dominio público).</string>
+    <string name="flights_report_footer">%1$s Grabado con MyAssistant. Solo por diversión: no para navegación ni seguridad.</string>
+</resources>

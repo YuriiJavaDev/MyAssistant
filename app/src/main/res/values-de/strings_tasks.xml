@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Was ist zu tun?</string>
+    <string name="tasks_list_add">Hinzufügen</string>
+    <string name="tasks_list_delete_completed">Erledigte löschen</string>
+    <string name="tasks_list_clear_all">Alle löschen</string>
+    <string name="tasks_list_reminder_set">Erinnerung gesetzt</string>
+    <string name="tasks_statistics">Gesamt: %1$d  Erledigt: %2$d  Übrig: %3$d  Fortschritt: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Neue Aufgabe</string>
+    <string name="tasks_dialog_title_edit">Aufgabe bearbeiten</string>
+    <string name="tasks_dialog_importance">Wichtigkeitsstufe:</string>
+    <string name="tasks_dialog_deadline_label">Frist:</string>
+    <string name="tasks_dialog_deadline_select">Frist wählen</string>
+    <string name="tasks_dialog_reminder_label">Erinnerung (Datum und Uhrzeit):</string>
+    <string name="tasks_dialog_reminder_select">Datum und Uhrzeit der Erinnerung wählen</string>
+    <string name="tasks_dialog_show_timestamps">Erstellungs-/Bearbeitungsdaten anzeigen</string>
+    <string name="tasks_dialog_delete">Löschen</string>
+    <string name="tasks_dialog_save">Speichern</string>
+    <string name="tasks_dialog_clear">Leeren</string>
+    <string name="tasks_importance_normal">Normal</string>
+    <string name="tasks_importance_important">Wichtig</string>
+    <string name="tasks_importance_urgent">Dringend</string>
+    <string name="tasks_toast_created">Aufgabe erstellt</string>
+    <string name="tasks_toast_updated">Aufgabe aktualisiert</string>
+    <string name="tasks_toast_deleted">Aufgabe gelöscht</string>
+    <string name="tasks_toast_completed_deleted">Erledigte Aufgaben gelöscht</string>
+    <string name="tasks_toast_all_cleared">Alle Aufgaben gelöscht</string>
+    <string name="tasks_toast_empty_title">Die Aufgabenbeschreibung darf nicht leer sein</string>
+    <string name="tasks_toast_reminder_after_deadline">Die Erinnerung darf nicht nach der Frist liegen!</string>
+    <string name="tasks_toast_reminder_in_past">Die Erinnerung darf nicht in der Vergangenheit liegen!</string>
+    <string name="tasks_toast_reminder_cleared">Die Erinnerung wurde gelöscht, weil die Frist früher liegt!</string>
+    <string name="tasks_toast_select_deadline_first">Bitte wähle zuerst eine Frist!</string>
+    <string name="tasks_time_created">Erstellt: %1$s</string>
+    <string name="tasks_time_edited">Bearbeitet: %1$s</string>
+    <string name="tasks_time_completed">Erledigt: %1$s</string>
+    <string name="tasks_deadline_prefixed">Frist: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — noch %2$d Tag!</item>
+        <item quantity="other">%1$s — noch %2$d Tage!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d Tag überfällig!</item>
+        <item quantity="other">%1$s — %2$d Tage überfällig!</item>
+    </plurals>
+    <string name="tasks_delete_title">Löschen bestätigen</string>
+    <string name="tasks_delete_button">Löschen</string>
+    <string name="tasks_delete_nothing">Keine Objekte zum Löschen gefunden!</string>
+    <string name="tasks_delete_item_message">Möchtest du dieses Element wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden!</string>
+    <string name="tasks_delete_cannot_be_undone">Diese Aktion kann nicht rückgängig gemacht werden!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d erledigte Aufgabe löschen?</item>
+        <item quantity="other">%1$d erledigte Aufgaben löschen?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d davon hat noch eine gespeicherte Erinnerung.</item>
+        <item quantity="other">%1$d davon haben noch eine gespeicherte Erinnerung.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Die Aufgabe (%1$d) löschen?</item>
+        <item quantity="other">Alle %1$d Aufgaben löschen?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d hat eine aktive Erinnerung.</item>
+        <item quantity="other">%1$d haben aktive Erinnerungen.</item>
+    </plurals>
+    <string name="tasks_alert_title">Fristwarnung!</string>
+    <string name="tasks_alert_view_tasks">Aufgaben anzeigen</string>
+    <string name="tasks_alert_channel_name">Fristwarnungen für Aufgaben</string>
+    <string name="tasks_alert_channel_description">Dringende Fristwarnungen für Aufgaben</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Du hast %1$d überfällige Aufgabenfrist.</item>
+        <item quantity="other">Du hast %1$d überfällige Aufgabenfristen.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Achtung! Du hast %1$d Aufgabenfrist, die sofortige Aufmerksamkeit erfordert.</item>
+        <item quantity="other">Achtung! Du hast %1$d Aufgabenfristen, die sofortige Aufmerksamkeit erfordern.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Achtung! Die Frist für die Aufgabe rückt näher: %1$s</string>
+</resources>

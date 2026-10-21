@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Envoi de la sauvegarde vers le cloud...</string>
+    <string name="backup_cloud_restoring">Restauration de la sauvegarde depuis le cloud...</string>
+    <string name="backup_cloud_upload_success">Sauvegarde envoyée vers le cloud avec succès</string>
+    <string name="backup_cloud_restore_success">Sauvegarde restaurée depuis le cloud avec succès</string>
+    <string name="backup_cloud_restore_partly">Tâches restaurées depuis le cloud (aucune sauvegarde trouvée pour : %1$s)</string>
+    <string name="backup_part_steps">pas</string>
+    <string name="backup_part_flights">vols</string>
+    <string name="backup_part_scans">scans</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Erreur d’envoi : %1$s</string>
+    <string name="backup_error_download">Erreur de téléchargement : %1$s</string>
+    <string name="backup_error_unknown">Erreur inconnue</string>
+    <string name="backup_error_insecure_url">L’URL doit commencer par https://</string>
+    <string name="backup_error_authentication">Échec de l’authentification : vérifiez le nom d’utilisateur et le mot de passe</string>
+    <string name="backup_error_server_code">Le serveur a répondu avec le code : %1$d</string>
+    <string name="backup_error_connection">Erreur de connexion : %1$s</string>
+    <string name="backup_destination_title">Enregistrer la sauvegarde dans</string>
+    <string name="backup_destination_folder">Choisir un dossier (appareil, carte SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Partager avec une appli</string>
+    <string name="backup_preparing">Préparation de la sauvegarde...</string>
+    <string name="backup_export_failed">Échec de l’exportation</string>
+    <string name="backup_export_saved">Sauvegarde enregistrée</string>
+    <string name="backup_import_success">Sauvegarde importée avec succès. Redémarrage...</string>
+    <string name="backup_import_failed">Échec de l’importation</string>
+    <string name="backup_import_title">Attention !</string>
+    <string name="backup_import_message">La restauration d’une sauvegarde remplace les tâches, les pas et les scans actuels qu’elle contient. Voulez-vous vraiment continuer ?</string>
+    <string name="backup_import_confirm">Confirmer l’importation</string>
+    <string name="backup_share_chooser_title">Exporter la sauvegarde</string>
+    <string name="backup_cloud_settings_saved">Paramètres du cloud enregistrés avec succès</string>
+    <string name="backup_cloud_secure_storage_unavailable">Le stockage sécurisé n’est pas disponible, les paramètres n’ont pas été enregistrés</string>
+    <string name="backup_cloud_url_empty">L’URL ne peut pas être vide</string>
+    <string name="backup_cloud_testing">Test de la connexion...</string>
+    <string name="backup_cloud_connection_successful">Connexion réussie !</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Tâches</string>
+    <string name="app_tab_weather">Météo</string>
+    <string name="app_tab_exchange">Change</string>
+    <string name="app_tab_calculator">Calc</string>
+    <string name="app_tab_scan">Scan</string>
+    <string name="app_tab_steps">Pas</string>
+    <string name="app_tab_flights">Vols</string>
+    <string name="app_menu_settings">Paramètres</string>
+    <string name="app_menu_options">Options</string>
+    <string name="app_notifications_disabled">Les notifications sont désactivées : les rappels ne seront pas affichés</string>
+    <string name="app_overdue_tasks_format">Tâches en retard : %1$d</string>
+    <string name="app_exact_alarm_already_granted">L’autorisation des alarmes exactes est déjà accordée</string>
+    <string name="app_alarm_title">Rappels et alarmes</string>
+    <string name="app_alarm_voice_alert">Alerte vocale (TTS)</string>
+    <string name="app_alarm_full_screen">Fenêtre plein écran</string>
+    <string name="app_alarm_grant_exact">Accorder l’autorisation des alarmes exactes</string>
+    <string name="backup_menu_export">Exporter la sauvegarde</string>
+    <string name="backup_menu_import">Importer une sauvegarde</string>
+    <string name="backup_menu_cloud_settings">Paramètres du cloud et sauvegarde auto</string>
+    <string name="backup_menu_cloud_save">Enregistrer dans le cloud maintenant</string>
+    <string name="backup_menu_cloud_restore">Restaurer depuis le cloud</string>
+    <string name="backup_cloud_username_hint">Nom/E-mail</string>
+    <string name="backup_cloud_password_hint">Mot de passe</string>
+    <string name="backup_cloud_auto_backup">Activer la sauvegarde automatique quotidienne</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Quand la sauvegarde automatique est activée, le fichier de base de données de votre stockage cloud est écrasé une fois par jour par défaut.</string>
+    <string name="backup_cloud_test">Tester</string>
+    <string name="backup_cloud_save">Enregistrer</string>
+    <string name="settings_language_title">Langue</string>
+    <string name="settings_language_subtitle">Langue de l’appli</string>
+    <string name="language_system_default">Langue du système</string>
+</resources>

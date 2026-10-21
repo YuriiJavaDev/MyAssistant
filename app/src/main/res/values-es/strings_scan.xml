@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Carta</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Escaneo %1$s</string>
+    <string name="scan_delete_page_message">¿Eliminar esta página? ¡Esta acción no se puede deshacer!</string>
+    <string name="scan_delete_document_message">¿Eliminar «%1$s» con todas sus páginas? ¡Esta acción no se puede deshacer!</string>
+    <string name="scan_delete_all_message">¿Eliminar todo: %1$s con %2$s? ¡Esta acción no se puede deshacer!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d documento</item>
+        <item quantity="many">%d documentos</item>
+        <item quantity="other">%d documentos</item>
+    </plurals>
+</resources>

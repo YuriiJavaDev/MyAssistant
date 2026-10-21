@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Tareas</string>
+    <string name="app_tab_weather">Tiempo</string>
+    <string name="app_tab_exchange">Cambio</string>
+    <string name="app_tab_calculator">Calc</string>
+    <string name="app_tab_scan">Escáner</string>
+    <string name="app_tab_steps">Pasos</string>
+    <string name="app_tab_flights">Vuelos</string>
+    <string name="app_menu_settings">Ajustes</string>
+    <string name="app_menu_options">Opciones</string>
+    <string name="app_notifications_disabled">Las notificaciones están desactivadas: no se mostrarán los recordatorios</string>
+    <string name="app_overdue_tasks_format">Tareas vencidas: %1$d</string>
+    <string name="app_exact_alarm_already_granted">El permiso de alarmas exactas ya está concedido</string>
+    <string name="app_alarm_title">Recordatorios y alarmas</string>
+    <string name="app_alarm_voice_alert">Aviso por voz (TTS)</string>
+    <string name="app_alarm_full_screen">Ventana a pantalla completa</string>
+    <string name="app_alarm_grant_exact">Conceder permiso de alarmas exactas</string>
+    <string name="backup_menu_export">Exportar copia de seguridad</string>
+    <string name="backup_menu_import">Importar copia de seguridad</string>
+    <string name="backup_menu_cloud_settings">Ajustes de la nube y copia automática</string>
+    <string name="backup_menu_cloud_save">Guardar en la nube ahora</string>
+    <string name="backup_menu_cloud_restore">Restaurar desde la nube</string>
+    <string name="backup_cloud_username_hint">Nombre/Correo</string>
+    <string name="backup_cloud_password_hint">Contraseña</string>
+    <string name="backup_cloud_auto_backup">Activar copia automática diaria</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Cuando la copia automática está activada, el archivo de la base de datos en tu almacenamiento en la nube se sobrescribe una vez al día por defecto.</string>
+    <string name="backup_cloud_test">Probar</string>
+    <string name="backup_cloud_save">Guardar</string>
+    <string name="settings_language_title">Idioma</string>
+    <string name="settings_language_subtitle">Idioma de la app</string>
+    <string name="language_system_default">Predeterminado del sistema</string>
+</resources>
