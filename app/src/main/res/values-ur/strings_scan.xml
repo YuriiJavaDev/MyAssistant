@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">اصل</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">اسکین %1$s</string>
+    <string name="scan_delete_page_message">یہ صفحہ حذف کریں؟ اسے واپس نہیں لایا جا سکتا!</string>
+    <string name="scan_delete_document_message">تمام صفحات سمیت “%1$s” حذف کریں؟ اسے واپس نہیں لایا جا سکتا!</string>
+    <string name="scan_delete_all_message">سب حذف کریں: %1$s، %2$s؟ اسے واپس نہیں لایا جا سکتا!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d دستاویز</item>
+        <item quantity="other">%d دستاویز</item>
+    </plurals>
+</resources>

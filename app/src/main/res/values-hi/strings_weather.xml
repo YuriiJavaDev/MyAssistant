@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">साफ़ आसमान</string>
+    <string name="weather_description_mainly_clear">ज़्यादातर साफ़</string>
+    <string name="weather_description_partly_cloudy">आंशिक बादल</string>
+    <string name="weather_description_overcast">घने बादल</string>
+    <string name="weather_description_fog">कोहरा</string>
+    <string name="weather_description_rime_fog">पाला जमाने वाला कोहरा</string>
+    <string name="weather_description_light_drizzle">हल्की फुहार</string>
+    <string name="weather_description_drizzle">फुहार</string>
+    <string name="weather_description_dense_drizzle">घनी फुहार</string>
+    <string name="weather_description_light_freezing_drizzle">हल्की जमने वाली फुहार</string>
+    <string name="weather_description_freezing_drizzle">जमने वाली फुहार</string>
+    <string name="weather_description_slight_rain">हल्की बारिश</string>
+    <string name="weather_description_rain">बारिश</string>
+    <string name="weather_description_heavy_rain">भारी बारिश</string>
+    <string name="weather_description_light_freezing_rain">हल्की जमने वाली बारिश</string>
+    <string name="weather_description_freezing_rain">जमने वाली बारिश</string>
+    <string name="weather_description_slight_snow">हल्की बर्फ़बारी</string>
+    <string name="weather_description_snow">बर्फ़बारी</string>
+    <string name="weather_description_heavy_snow">भारी बर्फ़बारी</string>
+    <string name="weather_description_snow_grains">बर्फ़ के कण</string>
+    <string name="weather_description_light_rain_showers">हल्की बौछारें</string>
+    <string name="weather_description_rain_showers">बारिश की बौछारें</string>
+    <string name="weather_description_violent_rain_showers">तेज़ बारिश की बौछारें</string>
+    <string name="weather_description_light_snow_showers">हल्की बर्फ़ की बौछारें</string>
+    <string name="weather_description_heavy_snow_showers">भारी बर्फ़ की बौछारें</string>
+    <string name="weather_description_thunderstorm">आँधी-तूफ़ान</string>
+    <string name="weather_description_thunderstorm_with_hail">ओलों के साथ आँधी-तूफ़ान</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">भारी ओलों के साथ आँधी-तूफ़ान</string>
+    <string name="weather_description_unknown">अज्ञात</string>
+    <string name="weather_moon_phase_new_moon">अमावस्या</string>
+    <string name="weather_moon_phase_waxing_crescent">बढ़ती चंद्रकला</string>
+    <string name="weather_moon_phase_first_quarter">पहला चतुर्थांश</string>
+    <string name="weather_moon_phase_waxing_gibbous">बढ़ता चंद्रमा</string>
+    <string name="weather_moon_phase_full_moon">पूर्णिमा</string>
+    <string name="weather_moon_phase_waning_gibbous">घटता चंद्रमा</string>
+    <string name="weather_moon_phase_last_quarter">अंतिम चतुर्थांश</string>
+    <string name="weather_moon_phase_waning_crescent">घटती चंद्रकला</string>
+    <string name="weather_error_no_location">स्थान का पता नहीं चल सका। स्थान सेवाएँ चालू करें या कोई शहर खोजें।</string>
+    <string name="weather_error_city_not_found">“%1$s” के लिए कोई शहर नहीं मिला</string>
+    <string name="weather_error_no_network">मौसम लोड नहीं हो सका। इंटरनेट कनेक्शन जाँचें।</string>
+    <string name="weather_error_choose_city">सूची से शहर चुनें</string>
+    <string name="weather_current_location">वर्तमान स्थान</string>
+</resources>

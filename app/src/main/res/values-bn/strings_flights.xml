@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">ফ্লাইট রেকর্ডিং</string>
+    <string name="flights_notification_channel_description">ফ্লাইট রেকর্ড হওয়ার সময় দেখানো হয়</string>
+    <string name="flights_notification_title">ফ্লাইট রেকর্ড হচ্ছে</string>
+    <string name="flights_notification_text">যন্ত্র খুলতে আলতো চাপুন</string>
+    <string-array name="flights_cardinal_points">
+        <item>উ</item>
+        <item>উ-পূ</item>
+        <item>পূ</item>
+        <item>দ-পূ</item>
+        <item>দ</item>
+        <item>দ-প</item>
+        <item>প</item>
+        <item>উ-প</item>
+    </string-array>
+    <string name="flights_report_title">ফ্লাইট প্রতিবেদন</string>
+    <string name="flights_report_north">উ</string>
+    <string name="flights_report_side_north">উ</string>
+    <string name="flights_report_side_south">দ</string>
+    <string name="flights_report_side_east">পূ</string>
+    <string name="flights_report_side_west">প</string>
+    <string name="flights_report_duration">সময়কাল</string>
+    <string name="flights_report_distance">দূরত্ব</string>
+    <string name="flights_report_top_speed">সর্বোচ্চ গতি</string>
+    <string name="flights_report_average_speed">গড় গতি</string>
+    <string name="flights_report_highest_altitude">সর্বোচ্চ উচ্চতা</string>
+    <string name="flights_report_best_climb">সেরা ওঠা</string>
+    <string name="flights_report_worst_sink">সবচেয়ে খারাপ নামা</string>
+    <string name="flights_report_peak_load">সর্বোচ্চ ভার</string>
+    <string name="flights_report_start_point">শুরুর বিন্দু</string>
+    <string name="flights_report_end_point">শেষ বিন্দু</string>
+    <string name="flights_report_altitude_above_start">শুরু থেকে %1$s ওপরে</string>
+    <string name="flights_report_altitude_above_sea_level">সমুদ্রপৃষ্ঠ থেকে %1$s ওপরে</string>
+    <string name="flights_report_chart_altitude_above_start">উচ্চতা (%1$s, শুরু থেকে ওপরে)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">উচ্চতা (%1$s, সমুদ্রপৃষ্ঠ থেকে ওপরে)</string>
+    <string name="flights_report_chart_speed">ভূমির সাপেক্ষে গতি (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">মানচিত্র: Natural Earth (পাবলিক ডোমেইন)।</string>
+    <string name="flights_report_footer">%1$s MyAssistant-এ রেকর্ড করা। শুধু মজার জন্য: নেভিগেশন বা নিরাপত্তার জন্য নয়।</string>
+</resources>

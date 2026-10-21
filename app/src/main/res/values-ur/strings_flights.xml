@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">پرواز کی ریکارڈنگ</string>
+    <string name="flights_notification_channel_description">پرواز ریکارڈ ہوتے وقت دکھایا جاتا ہے</string>
+    <string name="flights_notification_title">پرواز ریکارڈ ہو رہی ہے</string>
+    <string name="flights_notification_text">آلات کھولنے کے لیے ٹیپ کریں</string>
+    <string-array name="flights_cardinal_points">
+        <item>ش</item>
+        <item>ش-م</item>
+        <item>م</item>
+        <item>ج-م</item>
+        <item>ج</item>
+        <item>ج-غ</item>
+        <item>غ</item>
+        <item>ش-غ</item>
+    </string-array>
+    <string name="flights_report_title">پرواز کی رپورٹ</string>
+    <string name="flights_report_north">ش</string>
+    <string name="flights_report_side_north">ش</string>
+    <string name="flights_report_side_south">ج</string>
+    <string name="flights_report_side_east">م</string>
+    <string name="flights_report_side_west">غ</string>
+    <string name="flights_report_duration">دورانیہ</string>
+    <string name="flights_report_distance">فاصلہ</string>
+    <string name="flights_report_top_speed">زیادہ سے زیادہ رفتار</string>
+    <string name="flights_report_average_speed">اوسط رفتار</string>
+    <string name="flights_report_highest_altitude">زیادہ سے زیادہ بلندی</string>
+    <string name="flights_report_best_climb">بہترین چڑھائی</string>
+    <string name="flights_report_worst_sink">بدترین گراوٹ</string>
+    <string name="flights_report_peak_load">زیادہ سے زیادہ بوجھ</string>
+    <string name="flights_report_start_point">نقطۂ آغاز</string>
+    <string name="flights_report_end_point">نقطۂ اختتام</string>
+    <string name="flights_report_altitude_above_start">آغاز سے %1$s اوپر</string>
+    <string name="flights_report_altitude_above_sea_level">سطحِ سمندر سے %1$s اوپر</string>
+    <string name="flights_report_chart_altitude_above_start">بلندی (%1$s، آغاز سے اوپر)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">بلندی (%1$s، سطحِ سمندر سے اوپر)</string>
+    <string name="flights_report_chart_speed">زمین کے لحاظ سے رفتار (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">نقشہ: Natural Earth (عوامی ملکیت)۔</string>
+    <string name="flights_report_footer">%1$s MyAssistant میں ریکارڈ کیا گیا۔ صرف تفریح کے لیے: نیویگیشن یا حفاظت کے لیے نہیں۔</string>
+</resources>

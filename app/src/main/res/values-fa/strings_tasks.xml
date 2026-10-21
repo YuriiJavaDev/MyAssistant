@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">چه کاری باید انجام شود؟</string>
+    <string name="tasks_list_add">افزودن</string>
+    <string name="tasks_list_delete_completed">حذف انجام‌شده‌ها</string>
+    <string name="tasks_list_clear_all">پاک‌کردن همه</string>
+    <string name="tasks_list_reminder_set">یادآوری تنظیم شد</string>
+    <string name="tasks_statistics">کل: %1$d  انجام‌شده: %2$d  باقی‌مانده: %3$d  پیشرفت: %4$d %%</string>
+    <string name="tasks_dialog_title_add">کار جدید</string>
+    <string name="tasks_dialog_title_edit">ویرایش کار</string>
+    <string name="tasks_dialog_importance">سطح اهمیت:</string>
+    <string name="tasks_dialog_deadline_label">مهلت:</string>
+    <string name="tasks_dialog_deadline_select">مهلت را انتخاب کنید</string>
+    <string name="tasks_dialog_reminder_label">یادآوری (تاریخ و ساعت):</string>
+    <string name="tasks_dialog_reminder_select">تاریخ و ساعت یادآوری را انتخاب کنید</string>
+    <string name="tasks_dialog_show_timestamps">نمایش تاریخ ایجاد/ویرایش</string>
+    <string name="tasks_dialog_delete">حذف</string>
+    <string name="tasks_dialog_save">ذخیره</string>
+    <string name="tasks_dialog_clear">پاک</string>
+    <string name="tasks_importance_normal">عادی</string>
+    <string name="tasks_importance_important">مهم</string>
+    <string name="tasks_importance_urgent">فوری</string>
+    <string name="tasks_toast_created">کار ایجاد شد</string>
+    <string name="tasks_toast_updated">کار به‌روز شد</string>
+    <string name="tasks_toast_deleted">کار حذف شد</string>
+    <string name="tasks_toast_completed_deleted">کارهای انجام‌شده حذف شدند</string>
+    <string name="tasks_toast_all_cleared">همهٔ کارها پاک شدند</string>
+    <string name="tasks_toast_empty_title">شرح کار نباید خالی باشد</string>
+    <string name="tasks_toast_reminder_after_deadline">یادآوری نمی‌تواند بعد از مهلت باشد!</string>
+    <string name="tasks_toast_reminder_in_past">یادآوری نمی‌تواند در گذشته باشد!</string>
+    <string name="tasks_toast_reminder_cleared">یادآوری پاک شد، زیرا مهلت زودتر است!</string>
+    <string name="tasks_toast_select_deadline_first">ابتدا مهلت را انتخاب کنید!</string>
+    <string name="tasks_time_created">ایجاد: %1$s</string>
+    <string name="tasks_time_edited">ویرایش: %1$s</string>
+    <string name="tasks_time_completed">اتمام: %1$s</string>
+    <string name="tasks_deadline_prefixed">مهلت: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d روز مانده!</item>
+        <item quantity="other">%1$s — %2$d روز مانده!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d روز تأخیر!</item>
+        <item quantity="other">%1$s — %2$d روز تأخیر!</item>
+    </plurals>
+    <string name="tasks_delete_title">تأیید حذف</string>
+    <string name="tasks_delete_button">حذف</string>
+    <string name="tasks_delete_nothing">موردی برای حذف پیدا نشد!</string>
+    <string name="tasks_delete_item_message">واقعاً می‌خواهید این مورد را حذف کنید؟ این کار قابل بازگشت نیست!</string>
+    <string name="tasks_delete_cannot_be_undone">این کار قابل بازگشت نیست!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d کار انجام‌شده حذف شود؟</item>
+        <item quantity="other">%1$d کار انجام‌شده حذف شود؟</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d مورد از آن‌ها هنوز یادآوری ذخیره‌شده دارد.</item>
+        <item quantity="other">%1$d مورد از آن‌ها هنوز یادآوری ذخیره‌شده دارد.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">همهٔ %1$d کار حذف شوند؟</item>
+        <item quantity="other">همهٔ %1$d کار حذف شوند؟</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d مورد یادآوری فعال دارد.</item>
+        <item quantity="other">%1$d مورد یادآوری فعال دارد.</item>
+    </plurals>
+    <string name="tasks_alert_title">هشدار مهلت!</string>
+    <string name="tasks_alert_view_tasks">نمایش کارها</string>
+    <string name="tasks_alert_channel_name">هشدارهای مهلت کارها</string>
+    <string name="tasks_alert_channel_description">هشدارهای فوری دربارهٔ مهلت کارها</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">تعداد مهلت‌های گذشتهٔ کارها: %1$d.</item>
+        <item quantity="other">تعداد مهلت‌های گذشتهٔ کارها: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">توجه! تعداد مهلت‌های کارهایی که فوراً نیاز به توجه دارند: %1$d.</item>
+        <item quantity="other">توجه! تعداد مهلت‌های کارهایی که فوراً نیاز به توجه دارند: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">توجه! مهلت کار نزدیک است: %1$s</string>
+</resources>

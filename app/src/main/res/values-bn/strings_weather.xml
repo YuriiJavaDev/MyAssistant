@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">পরিষ্কার আকাশ</string>
+    <string name="weather_description_mainly_clear">প্রায় পরিষ্কার</string>
+    <string name="weather_description_partly_cloudy">আংশিক মেঘলা</string>
+    <string name="weather_description_overcast">ঘন মেঘলা</string>
+    <string name="weather_description_fog">কুয়াশা</string>
+    <string name="weather_description_rime_fog">তুষারজমা কুয়াশা</string>
+    <string name="weather_description_light_drizzle">হালকা গুঁড়ি বৃষ্টি</string>
+    <string name="weather_description_drizzle">গুঁড়ি বৃষ্টি</string>
+    <string name="weather_description_dense_drizzle">ঘন গুঁড়ি বৃষ্টি</string>
+    <string name="weather_description_light_freezing_drizzle">হালকা জমাট গুঁড়ি বৃষ্টি</string>
+    <string name="weather_description_freezing_drizzle">জমাট গুঁড়ি বৃষ্টি</string>
+    <string name="weather_description_slight_rain">হালকা বৃষ্টি</string>
+    <string name="weather_description_rain">বৃষ্টি</string>
+    <string name="weather_description_heavy_rain">ভারী বৃষ্টি</string>
+    <string name="weather_description_light_freezing_rain">হালকা জমাট বৃষ্টি</string>
+    <string name="weather_description_freezing_rain">জমাট বৃষ্টি</string>
+    <string name="weather_description_slight_snow">হালকা তুষারপাত</string>
+    <string name="weather_description_snow">তুষারপাত</string>
+    <string name="weather_description_heavy_snow">ভারী তুষারপাত</string>
+    <string name="weather_description_snow_grains">তুষারকণা</string>
+    <string name="weather_description_light_rain_showers">হালকা বৃষ্টির ঝাপটা</string>
+    <string name="weather_description_rain_showers">বৃষ্টির ঝাপটা</string>
+    <string name="weather_description_violent_rain_showers">প্রবল বৃষ্টির ঝাপটা</string>
+    <string name="weather_description_light_snow_showers">হালকা তুষারের ঝাপটা</string>
+    <string name="weather_description_heavy_snow_showers">ভারী তুষারের ঝাপটা</string>
+    <string name="weather_description_thunderstorm">বজ্রঝড়</string>
+    <string name="weather_description_thunderstorm_with_hail">শিলাবৃষ্টিসহ বজ্রঝড়</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">ভারী শিলাবৃষ্টিসহ বজ্রঝড়</string>
+    <string name="weather_description_unknown">অজানা</string>
+    <string name="weather_moon_phase_new_moon">অমাবস্যা</string>
+    <string name="weather_moon_phase_waxing_crescent">বাড়ন্ত চন্দ্রকলা</string>
+    <string name="weather_moon_phase_first_quarter">প্রথম চতুর্থাংশ</string>
+    <string name="weather_moon_phase_waxing_gibbous">বাড়ন্ত চাঁদ</string>
+    <string name="weather_moon_phase_full_moon">পূর্ণিমা</string>
+    <string name="weather_moon_phase_waning_gibbous">কমন্ত চাঁদ</string>
+    <string name="weather_moon_phase_last_quarter">শেষ চতুর্থাংশ</string>
+    <string name="weather_moon_phase_waning_crescent">কমন্ত চন্দ্রকলা</string>
+    <string name="weather_error_no_location">অবস্থান নির্ধারণ করা যায়নি। লোকেশন সেবা চালু করুন অথবা একটি শহর খুঁজুন।</string>
+    <string name="weather_error_city_not_found">“%1$s”-এর জন্য কোনো শহর পাওয়া যায়নি</string>
+    <string name="weather_error_no_network">আবহাওয়া লোড করা যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন।</string>
+    <string name="weather_error_choose_city">তালিকা থেকে একটি শহর বেছে নিন</string>
+    <string name="weather_current_location">বর্তমান অবস্থান</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">क्या करना है?</string>
+    <string name="tasks_list_add">जोड़ें</string>
+    <string name="tasks_list_delete_completed">पूर्ण हटाएँ</string>
+    <string name="tasks_list_clear_all">सब साफ़ करें</string>
+    <string name="tasks_list_reminder_set">रिमाइंडर सेट हुआ</string>
+    <string name="tasks_statistics">कुल: %1$d  पूर्ण: %2$d  शेष: %3$d  प्रगति: %4$d %%</string>
+    <string name="tasks_dialog_title_add">नया कार्य</string>
+    <string name="tasks_dialog_title_edit">कार्य संपादित करें</string>
+    <string name="tasks_dialog_importance">महत्व का स्तर:</string>
+    <string name="tasks_dialog_deadline_label">समय-सीमा:</string>
+    <string name="tasks_dialog_deadline_select">समय-सीमा चुनें</string>
+    <string name="tasks_dialog_reminder_label">रिमाइंडर (तारीख़ और समय):</string>
+    <string name="tasks_dialog_reminder_select">रिमाइंडर की तारीख़ और समय चुनें</string>
+    <string name="tasks_dialog_show_timestamps">बनाने/संपादित करने की तारीख़ें दिखाएँ</string>
+    <string name="tasks_dialog_delete">हटाएँ</string>
+    <string name="tasks_dialog_save">सहेजें</string>
+    <string name="tasks_dialog_clear">साफ़ करें</string>
+    <string name="tasks_importance_normal">सामान्य</string>
+    <string name="tasks_importance_important">महत्वपूर्ण</string>
+    <string name="tasks_importance_urgent">अत्यावश्यक</string>
+    <string name="tasks_toast_created">कार्य बन गया</string>
+    <string name="tasks_toast_updated">कार्य अपडेट हुआ</string>
+    <string name="tasks_toast_deleted">कार्य हटा दिया गया</string>
+    <string name="tasks_toast_completed_deleted">पूर्ण कार्य हटा दिए गए</string>
+    <string name="tasks_toast_all_cleared">सभी कार्य साफ़ कर दिए गए</string>
+    <string name="tasks_toast_empty_title">कार्य का विवरण खाली नहीं हो सकता</string>
+    <string name="tasks_toast_reminder_after_deadline">रिमाइंडर समय-सीमा के बाद नहीं हो सकता!</string>
+    <string name="tasks_toast_reminder_in_past">रिमाइंडर बीते समय में नहीं हो सकता!</string>
+    <string name="tasks_toast_reminder_cleared">रिमाइंडर साफ़ कर दिया गया क्योंकि समय-सीमा पहले की है!</string>
+    <string name="tasks_toast_select_deadline_first">पहले समय-सीमा चुनें!</string>
+    <string name="tasks_time_created">बनाया गया: %1$s</string>
+    <string name="tasks_time_edited">संपादित: %1$s</string>
+    <string name="tasks_time_completed">पूर्ण हुआ: %1$s</string>
+    <string name="tasks_deadline_prefixed">समय-सीमा: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d दिन शेष!</item>
+        <item quantity="other">%1$s — %2$d दिन शेष!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d दिन की देरी!</item>
+        <item quantity="other">%1$s — %2$d दिन की देरी!</item>
+    </plurals>
+    <string name="tasks_delete_title">हटाने की पुष्टि</string>
+    <string name="tasks_delete_button">हटाएँ</string>
+    <string name="tasks_delete_nothing">हटाने के लिए कोई वस्तु नहीं मिली!</string>
+    <string name="tasks_delete_item_message">क्या आप सच में यह आइटम हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती!</string>
+    <string name="tasks_delete_cannot_be_undone">यह क्रिया पूर्ववत नहीं की जा सकती!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d पूर्ण कार्य हटाएँ?</item>
+        <item quantity="other">%1$d पूर्ण कार्य हटाएँ?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">इनमें से %1$d में अब भी सहेजा हुआ रिमाइंडर है।</item>
+        <item quantity="other">इनमें से %1$d में अब भी सहेजा हुआ रिमाइंडर है।</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">सभी %1$d कार्य हटाएँ?</item>
+        <item quantity="other">सभी %1$d कार्य हटाएँ?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d में सक्रिय रिमाइंडर है।</item>
+        <item quantity="other">%1$d में सक्रिय रिमाइंडर है।</item>
+    </plurals>
+    <string name="tasks_alert_title">समय-सीमा चेतावनी!</string>
+    <string name="tasks_alert_view_tasks">कार्य देखें</string>
+    <string name="tasks_alert_channel_name">कार्य समय-सीमा चेतावनियाँ</string>
+    <string name="tasks_alert_channel_description">कार्य समय-सीमाओं की अत्यावश्यक चेतावनियाँ</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">बीत चुकी कार्य समय-सीमाओं की संख्या: %1$d।</item>
+        <item quantity="other">बीत चुकी कार्य समय-सीमाओं की संख्या: %1$d।</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">ध्यान दें! तुरंत ध्यान देने वाली कार्य समय-सीमाओं की संख्या: %1$d।</item>
+        <item quantity="other">ध्यान दें! तुरंत ध्यान देने वाली कार्य समय-सीमाओं की संख्या: %1$d।</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">ध्यान दें! कार्य की समय-सीमा क़रीब आ रही है: %1$s</string>
+</resources>

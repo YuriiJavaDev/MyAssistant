@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">بیک اپ کلاؤڈ پر اپ لوڈ ہو رہا ہے...</string>
+    <string name="backup_cloud_restoring">بیک اپ کلاؤڈ سے بحال ہو رہا ہے...</string>
+    <string name="backup_cloud_upload_success">بیک اپ کلاؤڈ پر اپ لوڈ ہو گیا</string>
+    <string name="backup_cloud_restore_success">بیک اپ کلاؤڈ سے بحال ہو گیا</string>
+    <string name="backup_cloud_restore_partly">کام کلاؤڈ سے بحال ہو گئے (وہاں ان کا بیک اپ نہیں ملا: %1$s)</string>
+    <string name="backup_part_steps">قدم</string>
+    <string name="backup_part_flights">پروازیں</string>
+    <string name="backup_part_scans">اسکین</string>
+    <string name="backup_part_separator">"، "</string>
+    <string name="backup_error_upload">اپ لوڈ میں خرابی: %1$s</string>
+    <string name="backup_error_download">ڈاؤن لوڈ میں خرابی: %1$s</string>
+    <string name="backup_error_unknown">نامعلوم خرابی</string>
+    <string name="backup_error_insecure_url">URL کا https:// سے شروع ہونا ضروری ہے</string>
+    <string name="backup_error_authentication">تصدیق ناکام: صارف نام اور پاس ورڈ چیک کریں</string>
+    <string name="backup_error_server_code">سرور نے کوڈ کے ساتھ جواب دیا: %1$d</string>
+    <string name="backup_error_connection">کنکشن میں خرابی: %1$s</string>
+    <string name="backup_destination_title">بیک اپ یہاں محفوظ کریں</string>
+    <string name="backup_destination_folder">فولڈر منتخب کریں (ڈیوائس، SD کارڈ، USB، Drive...)</string>
+    <string name="backup_destination_share">ایپ کے ساتھ شیئر کریں</string>
+    <string name="backup_preparing">بیک اپ تیار ہو رہا ہے...</string>
+    <string name="backup_export_failed">برآمد ناکام ہو گئی</string>
+    <string name="backup_export_saved">بیک اپ محفوظ ہو گیا</string>
+    <string name="backup_import_success">بیک اپ کامیابی سے درآمد ہو گیا۔ دوبارہ شروع ہو رہا ہے...</string>
+    <string name="backup_import_failed">درآمد ناکام ہو گئی</string>
+    <string name="backup_import_title">خبردار!</string>
+    <string name="backup_import_message">بیک اپ بحال کرنے سے آپ کے موجودہ کام، قدم اور اسکین اس میں موجود ڈیٹا سے بدل جائیں گے۔ کیا آپ واقعی جاری رکھنا چاہتے ہیں؟</string>
+    <string name="backup_import_confirm">درآمد کی تصدیق کریں</string>
+    <string name="backup_share_chooser_title">بیک اپ برآمد کریں</string>
+    <string name="backup_cloud_settings_saved">کلاؤڈ ترتیبات محفوظ ہو گئیں</string>
+    <string name="backup_cloud_secure_storage_unavailable">محفوظ اسٹوریج دستیاب نہیں ہے، ترتیبات محفوظ نہیں ہوئیں</string>
+    <string name="backup_cloud_url_empty">URL خالی نہیں ہو سکتا</string>
+    <string name="backup_cloud_testing">کنکشن جانچا جا رہا ہے...</string>
+    <string name="backup_cloud_connection_successful">کنکشن کامیاب رہا!</string>
+</resources>
