@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Wysyłanie kopii zapasowej do chmury...</string>
+    <string name="backup_cloud_restoring">Przywracanie kopii zapasowej z chmury...</string>
+    <string name="backup_cloud_upload_success">Kopia zapasowa została wysłana do chmury</string>
+    <string name="backup_cloud_restore_success">Kopia zapasowa została przywrócona z chmury</string>
+    <string name="backup_cloud_restore_partly">Zadania przywrócone z chmury (nie znaleziono tam kopii: %1$s)</string>
+    <string name="backup_part_steps">kroków</string>
+    <string name="backup_part_flights">lotów</string>
+    <string name="backup_part_scans">skanów</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Błąd wysyłania: %1$s</string>
+    <string name="backup_error_download">Błąd pobierania: %1$s</string>
+    <string name="backup_error_unknown">Nieznany błąd</string>
+    <string name="backup_error_insecure_url">Adres URL musi zaczynać się od https://</string>
+    <string name="backup_error_authentication">Uwierzytelnianie nie powiodło się: sprawdź nazwę użytkownika i hasło</string>
+    <string name="backup_error_server_code">Serwer odpowiedział kodem: %1$d</string>
+    <string name="backup_error_connection">Błąd połączenia: %1$s</string>
+    <string name="backup_destination_title">Zapisz kopię zapasową w</string>
+    <string name="backup_destination_folder">Wybierz folder (urządzenie, karta SD, USB, Dysk...)</string>
+    <string name="backup_destination_share">Udostępnij aplikacji</string>
+    <string name="backup_preparing">Przygotowywanie kopii zapasowej...</string>
+    <string name="backup_export_failed">Eksport nie powiódł się</string>
+    <string name="backup_export_saved">Kopia zapasowa zapisana</string>
+    <string name="backup_import_success">Kopia zapasowa zaimportowana. Ponowne uruchamianie...</string>
+    <string name="backup_import_failed">Import nie powiódł się</string>
+    <string name="backup_import_title">Uwaga!</string>
+    <string name="backup_import_message">Przywrócenie kopii zapasowej zastępuje bieżące zadania, kroki i skany, które zawiera. Czy na pewno chcesz kontynuować?</string>
+    <string name="backup_import_confirm">Potwierdź import</string>
+    <string name="backup_share_chooser_title">Eksportuj kopię zapasową</string>
+    <string name="backup_cloud_settings_saved">Ustawienia chmury zostały zapisane</string>
+    <string name="backup_cloud_secure_storage_unavailable">Bezpieczne przechowywanie jest niedostępne, ustawienia nie zostały zapisane</string>
+    <string name="backup_cloud_url_empty">Adres URL nie może być pusty</string>
+    <string name="backup_cloud_testing">Testowanie połączenia...</string>
+    <string name="backup_cloud_connection_successful">Połączenie udane!</string>
+</resources>

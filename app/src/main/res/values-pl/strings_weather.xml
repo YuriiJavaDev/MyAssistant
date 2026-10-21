@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Bezchmurnie</string>
+    <string name="weather_description_mainly_clear">Przeważnie bezchmurnie</string>
+    <string name="weather_description_partly_cloudy">Częściowe zachmurzenie</string>
+    <string name="weather_description_overcast">Pochmurno</string>
+    <string name="weather_description_fog">Mgła</string>
+    <string name="weather_description_rime_fog">Mgła szronowa</string>
+    <string name="weather_description_light_drizzle">Lekka mżawka</string>
+    <string name="weather_description_drizzle">Mżawka</string>
+    <string name="weather_description_dense_drizzle">Gęsta mżawka</string>
+    <string name="weather_description_light_freezing_drizzle">Lekka marznąca mżawka</string>
+    <string name="weather_description_freezing_drizzle">Marznąca mżawka</string>
+    <string name="weather_description_slight_rain">Słaby deszcz</string>
+    <string name="weather_description_rain">Deszcz</string>
+    <string name="weather_description_heavy_rain">Silny deszcz</string>
+    <string name="weather_description_light_freezing_rain">Lekki marznący deszcz</string>
+    <string name="weather_description_freezing_rain">Marznący deszcz</string>
+    <string name="weather_description_slight_snow">Słaby śnieg</string>
+    <string name="weather_description_snow">Śnieg</string>
+    <string name="weather_description_heavy_snow">Silne opady śniegu</string>
+    <string name="weather_description_snow_grains">Ziarna śniegu</string>
+    <string name="weather_description_light_rain_showers">Słabe przelotne opady deszczu</string>
+    <string name="weather_description_rain_showers">Przelotne opady deszczu</string>
+    <string name="weather_description_violent_rain_showers">Gwałtowne ulewy</string>
+    <string name="weather_description_light_snow_showers">Słabe przelotne opady śniegu</string>
+    <string name="weather_description_heavy_snow_showers">Silne przelotne opady śniegu</string>
+    <string name="weather_description_thunderstorm">Burza</string>
+    <string name="weather_description_thunderstorm_with_hail">Burza z gradem</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Burza z silnym gradem</string>
+    <string name="weather_description_unknown">Nieznane</string>
+    <string name="weather_moon_phase_new_moon">Nów</string>
+    <string name="weather_moon_phase_waxing_crescent">Przybywający sierp</string>
+    <string name="weather_moon_phase_first_quarter">Pierwsza kwadra</string>
+    <string name="weather_moon_phase_waxing_gibbous">Przybywający księżyc</string>
+    <string name="weather_moon_phase_full_moon">Pełnia</string>
+    <string name="weather_moon_phase_waning_gibbous">Ubywający księżyc</string>
+    <string name="weather_moon_phase_last_quarter">Ostatnia kwadra</string>
+    <string name="weather_moon_phase_waning_crescent">Ubywający sierp</string>
+    <string name="weather_error_no_location">Nie można określić lokalizacji. Włącz usługi lokalizacyjne lub wyszukaj miasto.</string>
+    <string name="weather_error_city_not_found">Nie znaleziono miasta dla „%1$s”</string>
+    <string name="weather_error_no_network">Nie można załadować pogody. Sprawdź połączenie z internetem.</string>
+    <string name="weather_error_choose_city">Wybierz miasto z listy</string>
+    <string name="weather_current_location">Bieżąca lokalizacja</string>
+</resources>

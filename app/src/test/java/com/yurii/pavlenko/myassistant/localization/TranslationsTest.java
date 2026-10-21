@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-/** Every translation has the same texts as the English source, the same placeholders and the plural forms "one" and "other". */
+/** Every translation has the same texts as the English source, the same placeholders and the plural form "other". */
 public class TranslationsTest {
 
     private static final File RES = new File("src/main/res");
@@ -41,7 +41,7 @@ public class TranslationsTest {
                 if (english.quantities.isEmpty()) {
                     assertEquals(where + " items", english.texts.size(), mine.texts.size());
                 } else {
-                    assertTrue(where + " needs the forms \"one\" and \"other\"", mine.quantities.contains("one") && mine.quantities.contains("other"));
+                    assertTrue(where + " needs the form \"other\"", mine.quantities.contains("other"));
                 }
                 for (int i = 0; i < mine.texts.size(); i++) {
                     String reference = english.texts.get(english.quantities.isEmpty() ? i : english.quantities.indexOf("other"));

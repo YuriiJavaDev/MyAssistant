@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Nahrávání zálohy do cloudu...</string>
+    <string name="backup_cloud_restoring">Obnovování zálohy z cloudu...</string>
+    <string name="backup_cloud_upload_success">Záloha byla úspěšně nahrána do cloudu</string>
+    <string name="backup_cloud_restore_success">Záloha byla úspěšně obnovena z cloudu</string>
+    <string name="backup_cloud_restore_partly">Úkoly obnoveny z cloudu (nebyla tam nalezena záloha pro: %1$s)</string>
+    <string name="backup_part_steps">kroky</string>
+    <string name="backup_part_flights">lety</string>
+    <string name="backup_part_scans">skeny</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Chyba nahrávání: %1$s</string>
+    <string name="backup_error_download">Chyba stahování: %1$s</string>
+    <string name="backup_error_unknown">Neznámá chyba</string>
+    <string name="backup_error_insecure_url">Adresa URL musí začínat https://</string>
+    <string name="backup_error_authentication">Ověření selhalo: zkontrolujte uživatelské jméno a heslo</string>
+    <string name="backup_error_server_code">Server odpověděl kódem: %1$d</string>
+    <string name="backup_error_connection">Chyba připojení: %1$s</string>
+    <string name="backup_destination_title">Uložit zálohu do</string>
+    <string name="backup_destination_folder">Vybrat složku (zařízení, karta SD, USB, Disk...)</string>
+    <string name="backup_destination_share">Sdílet s aplikací</string>
+    <string name="backup_preparing">Příprava zálohy...</string>
+    <string name="backup_export_failed">Export selhal</string>
+    <string name="backup_export_saved">Záloha uložena</string>
+    <string name="backup_import_success">Záloha byla úspěšně importována. Restartování...</string>
+    <string name="backup_import_failed">Import selhal</string>
+    <string name="backup_import_title">Pozor!</string>
+    <string name="backup_import_message">Obnovení zálohy nahradí aktuální úkoly, kroky a skeny, které obsahuje. Opravdu chcete pokračovat?</string>
+    <string name="backup_import_confirm">Potvrdit import</string>
+    <string name="backup_share_chooser_title">Exportovat zálohu</string>
+    <string name="backup_cloud_settings_saved">Nastavení cloudu bylo úspěšně uloženo</string>
+    <string name="backup_cloud_secure_storage_unavailable">Zabezpečené úložiště není dostupné, nastavení nebylo uloženo</string>
+    <string name="backup_cloud_url_empty">Adresa URL nesmí být prázdná</string>
+    <string name="backup_cloud_testing">Testování připojení...</string>
+    <string name="backup_cloud_connection_successful">Připojení bylo úspěšné!</string>
+</resources>

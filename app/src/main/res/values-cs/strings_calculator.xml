@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Neplatný vstup</string>
+    <string name="calculator_error_invalid_expression">Neplatný výraz</string>
+    <string name="calculator_error_division_by_zero">Dělení nulou</string>
+    <string name="calculator_error_result_too_large">Výsledek je příliš velký</string>
+    <string name="calculator_error_undefined">Nedefinováno</string>
+    <string name="calculator_error_expression_too_long">Výraz je příliš dlouhý</string>
+    <string name="calculator_error_expression_too_complex">Výraz je příliš složitý</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Back-up uploaden naar de cloud...</string>
+    <string name="backup_cloud_restoring">Back-up herstellen uit de cloud...</string>
+    <string name="backup_cloud_upload_success">Back-up succesvol geüpload naar de cloud</string>
+    <string name="backup_cloud_restore_success">Back-up succesvol hersteld uit de cloud</string>
+    <string name="backup_cloud_restore_partly">Taken hersteld uit de cloud (daar is geen back-up gevonden van: %1$s)</string>
+    <string name="backup_part_steps">stappen</string>
+    <string name="backup_part_flights">vluchten</string>
+    <string name="backup_part_scans">scans</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Uploadfout: %1$s</string>
+    <string name="backup_error_download">Downloadfout: %1$s</string>
+    <string name="backup_error_unknown">Onbekende fout</string>
+    <string name="backup_error_insecure_url">De URL moet beginnen met https://</string>
+    <string name="backup_error_authentication">Verificatie mislukt: controleer gebruikersnaam en wachtwoord</string>
+    <string name="backup_error_server_code">Server antwoordde met code: %1$d</string>
+    <string name="backup_error_connection">Verbindingsfout: %1$s</string>
+    <string name="backup_destination_title">Back-up opslaan in</string>
+    <string name="backup_destination_folder">Kies een map (apparaat, sd-kaart, USB, Drive...)</string>
+    <string name="backup_destination_share">Delen met een app</string>
+    <string name="backup_preparing">Back-up voorbereiden...</string>
+    <string name="backup_export_failed">Exporteren mislukt</string>
+    <string name="backup_export_saved">Back-up opgeslagen</string>
+    <string name="backup_import_success">Back-up succesvol geïmporteerd. Opnieuw opstarten...</string>
+    <string name="backup_import_failed">Importeren mislukt</string>
+    <string name="backup_import_title">Let op!</string>
+    <string name="backup_import_message">Bij het herstellen van een back-up worden de huidige taken, stappen en scans vervangen door wat erin zit. Weet je zeker dat je wilt doorgaan?</string>
+    <string name="backup_import_confirm">Import bevestigen</string>
+    <string name="backup_share_chooser_title">Back-up exporteren</string>
+    <string name="backup_cloud_settings_saved">Cloudinstellingen succesvol opgeslagen</string>
+    <string name="backup_cloud_secure_storage_unavailable">Beveiligde opslag is niet beschikbaar, de instellingen zijn niet opgeslagen</string>
+    <string name="backup_cloud_url_empty">De URL mag niet leeg zijn</string>
+    <string name="backup_cloud_testing">Verbinding testen...</string>
+    <string name="backup_cloud_connection_successful">Verbinding geslaagd!</string>
+</resources>

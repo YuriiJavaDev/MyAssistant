@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Ne yapılması gerekiyor?</string>
+    <string name="tasks_list_add">Ekle</string>
+    <string name="tasks_list_delete_completed">Tamamlananları sil</string>
+    <string name="tasks_list_clear_all">Tümünü temizle</string>
+    <string name="tasks_list_reminder_set">Hatırlatıcı ayarlandı</string>
+    <string name="tasks_statistics">Toplam: %1$d  Tamamlanan: %2$d  Kalan: %3$d  İlerleme: %%%4$d</string>
+    <string name="tasks_dialog_title_add">Yeni görev</string>
+    <string name="tasks_dialog_title_edit">Görevi düzenle</string>
+    <string name="tasks_dialog_importance">Önem düzeyi:</string>
+    <string name="tasks_dialog_deadline_label">Son tarih:</string>
+    <string name="tasks_dialog_deadline_select">Son tarih seçin</string>
+    <string name="tasks_dialog_reminder_label">Hatırlatıcı (tarih ve saat):</string>
+    <string name="tasks_dialog_reminder_select">Hatırlatıcı tarihini ve saatini seçin</string>
+    <string name="tasks_dialog_show_timestamps">Oluşturma/düzenleme tarihlerini göster</string>
+    <string name="tasks_dialog_delete">Sil</string>
+    <string name="tasks_dialog_save">Kaydet</string>
+    <string name="tasks_dialog_clear">Temizle</string>
+    <string name="tasks_importance_normal">Normal</string>
+    <string name="tasks_importance_important">Önemli</string>
+    <string name="tasks_importance_urgent">Acil</string>
+    <string name="tasks_toast_created">Görev oluşturuldu</string>
+    <string name="tasks_toast_updated">Görev güncellendi</string>
+    <string name="tasks_toast_deleted">Görev silindi</string>
+    <string name="tasks_toast_completed_deleted">Tamamlanan görevler silindi</string>
+    <string name="tasks_toast_all_cleared">Tüm görevler temizlendi</string>
+    <string name="tasks_toast_empty_title">Görev açıklaması boş olamaz</string>
+    <string name="tasks_toast_reminder_after_deadline">Hatırlatıcı son tarihten sonra olamaz!</string>
+    <string name="tasks_toast_reminder_in_past">Hatırlatıcı geçmişte olamaz!</string>
+    <string name="tasks_toast_reminder_cleared">Son tarih daha erken olduğu için hatırlatıcı temizlendi!</string>
+    <string name="tasks_toast_select_deadline_first">Lütfen önce bir son tarih seçin!</string>
+    <string name="tasks_time_created">Oluşturuldu: %1$s</string>
+    <string name="tasks_time_edited">Düzenlendi: %1$s</string>
+    <string name="tasks_time_completed">Tamamlandı: %1$s</string>
+    <string name="tasks_deadline_prefixed">Son tarih: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d gün kaldı!</item>
+        <item quantity="other">%1$s — %2$d gün kaldı!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d gün gecikti!</item>
+        <item quantity="other">%1$s — %2$d gün gecikti!</item>
+    </plurals>
+    <string name="tasks_delete_title">Silme onayı</string>
+    <string name="tasks_delete_button">Sil</string>
+    <string name="tasks_delete_nothing">Silinecek nesne bulunamadı!</string>
+    <string name="tasks_delete_item_message">Bu öğeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!</string>
+    <string name="tasks_delete_cannot_be_undone">Bu işlem geri alınamaz!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d tamamlanan görev silinsin mi?</item>
+        <item quantity="other">%1$d tamamlanan görev silinsin mi?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">Bunlardan %1$d tanesinde hâlâ kayıtlı bir hatırlatıcı var.</item>
+        <item quantity="other">Bunlardan %1$d tanesinde hâlâ kayıtlı bir hatırlatıcı var.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Tüm görevler (%1$d) silinsin mi?</item>
+        <item quantity="other">%1$d görevin tümü silinsin mi?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d tanesinin etkin bir hatırlatıcısı var.</item>
+        <item quantity="other">%1$d tanesinin etkin hatırlatıcısı var.</item>
+    </plurals>
+    <string name="tasks_alert_title">Son tarih uyarısı!</string>
+    <string name="tasks_alert_view_tasks">Görevleri gör</string>
+    <string name="tasks_alert_channel_name">Görev son tarih uyarıları</string>
+    <string name="tasks_alert_channel_description">Acil görev son tarih uyarıları</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Süresi geçmiş %1$d görev son tarihiniz var.</item>
+        <item quantity="other">Süresi geçmiş %1$d görev son tarihiniz var.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Dikkat! Acil ilgi gerektiren %1$d görev son tarihiniz var.</item>
+        <item quantity="other">Dikkat! Acil ilgi gerektiren %1$d görev son tarihiniz var.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Dikkat! Şu görevin son tarihi yaklaşıyor: %1$s</string>
+</resources>

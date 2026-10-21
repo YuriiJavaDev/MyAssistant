@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Vluchtopname</string>
+    <string name="flights_notification_channel_description">Wordt getoond terwijl een vlucht wordt opgenomen</string>
+    <string name="flights_notification_title">Vlucht wordt opgenomen</string>
+    <string name="flights_notification_text">Tik om de instrumenten te openen</string>
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NO</item>
+        <item>O</item>
+        <item>ZO</item>
+        <item>Z</item>
+        <item>ZW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+    <string name="flights_report_title">Vluchtrapport</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">Z</string>
+    <string name="flights_report_side_east">O</string>
+    <string name="flights_report_side_west">W</string>
+    <string name="flights_report_duration">Duur</string>
+    <string name="flights_report_distance">Afstand</string>
+    <string name="flights_report_top_speed">Topsnelheid</string>
+    <string name="flights_report_average_speed">Gemiddelde snelheid</string>
+    <string name="flights_report_highest_altitude">Hoogste hoogte</string>
+    <string name="flights_report_best_climb">Beste stijging</string>
+    <string name="flights_report_worst_sink">Ergste daling</string>
+    <string name="flights_report_peak_load">Piekbelasting</string>
+    <string name="flights_report_start_point">Startpunt</string>
+    <string name="flights_report_end_point">Eindpunt</string>
+    <string name="flights_report_altitude_above_start">%1$s boven de start</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s boven zeeniveau</string>
+    <string name="flights_report_chart_altitude_above_start">Hoogte (%1$s, boven de start)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Hoogte (%1$s, boven zeeniveau)</string>
+    <string name="flights_report_chart_speed">Grondsnelheid (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Kaart: Natural Earth (publiek domein).</string>
+    <string name="flights_report_footer">%1$s Opgenomen met MyAssistant. Alleen voor de lol: niet voor navigatie of veiligheid.</string>
+</resources>

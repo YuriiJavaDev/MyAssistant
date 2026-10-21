@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Geçersiz giriş</string>
+    <string name="calculator_error_invalid_expression">Geçersiz ifade</string>
+    <string name="calculator_error_division_by_zero">Sıfıra bölme</string>
+    <string name="calculator_error_result_too_large">Sonuç çok büyük</string>
+    <string name="calculator_error_undefined">Tanımsız</string>
+    <string name="calculator_error_expression_too_long">İfade çok uzun</string>
+    <string name="calculator_error_expression_too_complex">İfade çok karmaşık</string>
+</resources>

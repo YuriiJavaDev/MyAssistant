@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Annuleren</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Instellingen</string>
+    <string name="settings_alarms_title">Herinneringen en alarmen</string>
+    <string name="settings_alarms_subtitle">Intervallen, geluiden en meldingsstatus</string>
+    <string name="settings_display_title">Weergavemodus</string>
+    <string name="settings_display_subtitle">Dag / Nacht / Auto</string>
+    <string name="display_mode_title">Weergavemodus</string>
+    <string name="display_mode_light">Licht (dag)</string>
+    <string name="display_mode_dark">Donker (nacht)</string>
+    <string name="display_mode_system">Systeem (auto)</string>
+    <string name="settings_design_title">App-ontwerp</string>
+    <string name="settings_design_subtitle">Varianten voor het uiterlijk van de interface</string>
+    <string name="design_classic_name">Klassiek</string>
+    <string name="design_classic_about">Het oorspronkelijke uiterlijk: crème en violet</string>
+    <string name="design_paper_ink_name">Papier en inkt</string>
+    <string name="design_paper_ink_about">Dunne lijnen en gedempte zakelijke tinten</string>
+    <string name="design_pastel_cloud_name">Pastelwolk</string>
+    <string name="design_pastel_cloud_about">Zacht, afgerond en bleek, met wolken</string>
+    <string name="design_neon_arcade_name">Neon-arcade</string>
+    <string name="design_neon_arcade_about">Fel neon, sterk contrast en een retrozon</string>
+    <string name="design_toon_name">Tekenfilm</string>
+    <string name="design_toon_about">Stripcontouren en een handgeschreven lettertype</string>
+    <string name="design_biker_name">Motorrijder</string>
+    <string name="design_biker_about">Ruw metaal, rubber en uitlaatoranje</string>
+    <string name="design_cockpit_name">Cockpit</string>
+    <string name="design_cockpit_about">Strak instrumentenpaneel met een zweefvliegtuig</string>
+    <string name="design_beach_name">Strand</string>
+    <string name="design_beach_about">Zand, lagune, koraal en palmen</string>
+    <string name="design_forest_name">Betoverd bos</string>
+    <string name="design_forest_about">Perkament, goud en bosmos</string>
+    <string name="design_mono_block_name">Monoblok</string>
+    <string name="design_mono_block_about">Hard zwart-wit met één gele markering</string>
+    <string name="settings_permissions_title">Systeemrechten</string>
+    <string name="settings_permissions_subtitle">Beheer de toegang in het Android-systeem</string>
+    <string-array name="filter_options">
+        <item>Alle taken</item>
+        <item>Actief</item>
+        <item>Voltooid</item>
+        <item>Meldingen</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A-Z</item>
+        <item>Z-A</item>
+        <item>Status</item>
+        <item>Gemaakt</item>
+        <item>Bewerkt</item>
+        <item>Voltooid</item>
+        <item>Belangrijkheid</item>
+        <item>Deadline</item>
+    </string-array>
+    <string name="scan_camera">Camera</string>
+    <string name="scan_gallery">Galerij</string>
+    <string name="scan_clear_all">Alles wissen</string>
+    <string name="scan_cleared">Alle scans verwijderd</string>
+    <string name="scan_empty">Nog geen documenten. Maak een foto van een pagina of kies er een uit de galerij.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Resetten</string>
+    <string name="scan_next">Volgende</string>
+    <string name="scan_back">Terug</string>
+    <string name="scan_save">Opslaan</string>
+    <string name="scan_rotate">Draaien</string>
+    <string name="scan_paper">Papier</string>
+    <string name="scan_filter_color">Kleur</string>
+    <string name="scan_filter_gray">Grijs</string>
+    <string name="scan_filter_bw">Z/W</string>
+    <string name="scan_tune">Licht en contrast</string>
+    <string name="scan_shadows">Schaduwen verwijderen</string>
+    <string name="scan_brightness">Helderheid</string>
+    <string name="scan_contrast">Contrast</string>
+    <string name="scan_sharpen">Scherpte</string>
+    <string name="scan_page_saved">Pagina opgeslagen</string>
+    <string name="scan_next_page_question">Nog een pagina aan dit document toevoegen?</string>
+    <string name="scan_page_label">Pagina %d</string>
+    <string name="scan_done">Klaar</string>
+    <string name="scan_add_page">Pagina toevoegen</string>
+    <string name="scan_share_pdf">PDF delen</string>
+    <string name="scan_pages_empty">Dit document heeft geen pagina’s.</string>
+    <string name="scan_saved_to_device">Bestand opgeslagen</string>
+    <string name="scan_share_title">Document delen</string>
+    <string name="scan_rename_title">Document hernoemen</string>
+    <string name="scan_rename_confirm">Hernoemen</string>
+    <string name="scan_error_load">Deze foto kan niet worden geopend</string>
+    <string name="scan_error_preview">Onvoldoende geheugen voor het voorbeeld</string>
+    <string name="scan_error_save">De scan kan niet worden opgeslagen</string>
+    <string name="scan_error_export">Het bestand kan niet worden voorbereid</string>
+    <string name="scan_error_no_camera">Geen camera-app gevonden</string>
+    <string name="scan_error_no_viewer">Geen app gevonden om de afbeelding te openen</string>
+    <string name="scan_error_no_app">Geen app gevonden om mee te delen</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d pagina</item>
+        <item quantity="other">%d pagina’s</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Pagina’s</item>
+        <item>Delen als PDF</item>
+        <item>Delen als JPEG</item>
+        <item>PDF opslaan in…</item>
+        <item>Hernoemen</item>
+        <item>Verwijderen</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Bekijken</item>
+        <item>JPEG opslaan in…</item>
+        <item>Omhoog</item>
+        <item>Omlaag</item>
+        <item>Pagina verwijderen</item>
+    </string-array>
+    <string name="weather_city_hint">Plaatsnaam in elke taal</string>
+    <string name="weather_search">Zoeken</string>
+    <string name="weather_my_location">Mijn locatie</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Voelt als</string>
+    <string name="weather_humidity">Luchtvochtigheid</string>
+    <string name="weather_wind">Wind</string>
+    <string name="weather_today_range">Vandaag</string>
+    <string name="weather_units">Eenheden</string>
+    <string name="weather_units_temperature">Temperatuur</string>
+    <string name="weather_units_wind">Windsnelheid</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Meter per seconde (m/s)</string>
+    <string name="weather_unit_kmh">Kilometer per uur (km/u)</string>
+    <string name="weather_moon_caption">%1$s · %2$d%% verlicht</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">Weer laden…</string>
+    <string name="weather_location_needed">Sta toegang tot de geschatte locatie toe om het weer op jouw plek te zien, of zoek een plaats.</string>
+    <string name="weather_allow">Toestaan</string>
+    <string name="weather_open_settings">App-instellingen openen</string>
+    <string name="weather_attribution">Weer: Open-Meteo.com · Plaatsen: © OpenStreetMap-bijdragers</string>
+    <string name="weather_choose_city">Kies een plaats</string>
+    <string name="steps_today">Vandaag</string>
+    <string name="steps_unit">stappen</string>
+    <string name="steps_walk_run">Wandelen %1$s · Hardlopen %2$s</string>
+    <string name="steps_period">Periode</string>
+    <string name="steps_last_7">7 dagen</string>
+    <string name="steps_last_30">30 dagen</string>
+    <string name="steps_this_month">Deze maand</string>
+    <string name="steps_pick_dates">Datums kiezen</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Totaal aantal stappen</string>
+    <string name="steps_distance">Afstand</string>
+    <string name="steps_average">Gemiddeld per dag</string>
+    <string name="steps_best_day">Beste dag</string>
+    <string name="steps_walking">Stappen bij wandelen</string>
+    <string name="steps_running">Stappen bij hardlopen</string>
+    <string name="steps_active_days">Dagen met stappen</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d van %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">In deze periode zijn geen stappen geregistreerd</string>
+    <string name="steps_settings">Staptinstellingen</string>
+    <string name="steps_settings_title">Staplengte</string>
+    <string name="steps_walk_length">Staplengte bij wandelen, cm</string>
+    <string name="steps_run_length">Staplengte bij hardlopen, cm</string>
+    <string name="steps_run_cadence">Hardlopen begint bij, stappen per minuut</string>
+    <string name="steps_run_cadence_hint">Stappen in dit tempo of sneller tellen als hardlopen.</string>
+    <string name="steps_defaults">Standaardwaarden</string>
+    <string name="steps_save">Opslaan</string>
+    <string name="steps_invalid_length">Voer %1$d–%2$d in</string>
+    <string name="steps_measure_title">Zo meet je je staplengte</string>
+    <string name="steps_measure_text">1. Markeer de startlijn bij de neus van je schoen vóór de eerste stap.\n2. Zet 10 rustige stappen in je gewone tempo.\n3. Meet de afstand van de startlijn tot dezelfde schoenneus na de 10e stap, in centimeters.\n4. Deel die door 10.\n5. Herhaal dit een paar keer en voer het gemiddelde in.\n\nDoe hetzelfde in je normale hardlooptempo om de staplengte bij hardlopen te krijgen.</string>
+    <string name="steps_no_sensor">Deze telefoon heeft geen stappenteller.</string>
+    <string name="steps_permission_needed">Sta toegang tot fysieke activiteit toe zodat de telefoon je stappen kan tellen.</string>
+    <string name="steps_allow">Toestaan</string>
+    <string name="steps_open_settings">App-instellingen openen</string>
+    <string name="currency_amount_hint">Bedrag</string>
+    <string name="currency_swap">Wisselen ⇅</string>
+    <string name="currency_refresh">Koersen vernieuwen</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Koersen bijgewerkt %1$s</string>
+    <string name="currency_outdated">Geen internet. Opgeslagen koersen worden getoond, bijgewerkt %1$s</string>
+    <string name="currency_loading">Koersen laden…</string>
+    <string name="currency_unavailable">Koersen zijn niet beschikbaar. Controleer de internetverbinding en vernieuw.</string>
+    <string name="currency_invalid_amount">Voer een bedrag in</string>
+    <string name="currency_attribution">Koersen van Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Wet</string>
+    <string name="calculator_basic">Basis</string>
+    <string name="calculator_degrees">Gra</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Geschiedenis</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Opname starten</string>
+    <string name="flights_stop">Opname stoppen</string>
+    <string name="flights_units">Eenheden</string>
+    <string name="flights_journal">Logboek</string>
+    <string name="flights_journal_title">Vluchtlogboek</string>
+    <string name="flights_journal_empty">Nog geen vluchten opgenomen.</string>
+    <string name="flights_journal_in_progress">Deze vlucht wordt nog opgenomen.</string>
+    <string name="flights_report_open">Rapport openen</string>
+    <string name="flights_report_share">Rapport delen</string>
+    <string name="flights_report_delete">Vlucht verwijderen</string>
+    <string name="flights_report_failed">Het rapport kon niet worden voorbereid.</string>
+    <string name="flights_report_no_viewer">Geen app gevonden die pdf-bestanden opent.</string>
+    <string name="flights_delete_title">Deze vlucht verwijderen?</string>
+    <string name="flights_delete_message">De route en het rapport worden definitief verwijderd. Je kunt het rapport eerst ergens naartoe sturen, bijvoorbeeld naar een usb-stick, een computer of Google Drive.</string>
+    <string name="flights_delete_save_first">Rapport opslaan en dan verwijderen</string>
+    <string name="flights_delete_without_saving">Verwijderen zonder opslaan</string>
+    <string name="flights_delete_after_share_message">Als het rapport op de gewenste plek is aangekomen, kun je de vlucht nu verwijderen.</string>
+    <string name="flights_delete_after_share_confirm">Vlucht verwijderen</string>
+    <string name="flights_delete_keep">Vlucht bewaren</string>
+    <string name="flights_units_report_limit">Rapportlimiet</string>
+    <string name="flights_units_report_limit_hint">Maximaal aantal pdf-rapporten in het logboek, 0 voor geen limiet</string>
+    <string name="flights_limit_full_title">Limiet voor pdf-rapporten bereikt</string>
+    <string name="flights_limit_full_message">Het logboek bevat %1$d rapporten, dat is de limiet. Verwijder minstens één vlucht uit het logboek om een nieuwe vlucht op te nemen. Je kunt het rapport eerst opslaan op een usb-stick, een computer of Google Drive.</string>
+    <string name="flights_limit_warning_title">Je nadert de limiet voor pdf-rapporten!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Je kunt nog %d vlucht opnemen. Verwijder verouderde vluchten uit het logboek.</item>
+        <item quantity="other">Je kunt nog %d vluchten opnemen. Verwijder verouderde vluchten uit het logboek.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Logboek openen</string>
+    <string name="flights_journal_line">%1$s · max. %2$s · hoogte max. %3$s</string>
+    <string name="flights_units_speed">Snelheid en afstand</string>
+    <string name="flights_units_altitude">Hoogte</string>
+    <string name="flights_unit_kmh">Kilometer per uur (km/u)</string>
+    <string name="flights_unit_knots">Knopen (kt, zeemijlen)</string>
+    <string name="flights_unit_ms">Meter per seconde (m/s)</string>
+    <string name="flights_unit_metres">Meter (m)</string>
+    <string name="flights_unit_feet">Voet (ft)</string>
+    <string name="flights_units_climb">Stijgsnelheid</string>
+    <string name="flights_unit_fpm">Voet per minuut (ft/min)</string>
+    <string name="flights_altitude_zero">Nul</string>
+    <string name="flights_altitude_sea">Boven zeeniveau</string>
+    <string name="flights_altitude_start">Boven de start · houd “Nul” ingedrukt om ongedaan te maken</string>
+    <string name="flights_sound_on">Geluid: aan</string>
+    <string name="flights_sound_off">Geluid: uit</string>
+    <string name="flights_sound_tune">Geluid afstellen</string>
+    <string name="flights_sound_climb_start">Piepen begint bij een stijging van %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Lage pieptonen beginnen bij een daling van %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Continu alarm bij een daling van %1$.1f m/s</string>
+    <string name="flights_speed_label">Snelheid</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Vliegtijd</string>
+    <string name="flights_distance">Afstand</string>
+    <string name="flights_max_speed">Topsnelheid</string>
+    <string name="flights_avg_speed">Gemiddelde snelheid</string>
+    <string name="flights_max_altitude">Hoogste hoogte</string>
+    <string name="flights_climb_rate">Stijgsnelheid</string>
+    <string name="flights_max_g">Piekbelasting</string>
+    <string name="flights_status_waiting">Wachten op GPS-signaal…</string>
+    <string name="flights_location_needed">Sta toegang tot de nauwkeurige locatie toe zodat snelheid, hoogte en route kunnen worden opgenomen.</string>
+    <string name="flights_allow">Toestaan</string>
+    <string name="flights_open_settings">App-instellingen openen</string>
+    <string name="flights_gps_off">Zet locatievoorzieningen (GPS) aan om een vlucht op te nemen.</string>
+    <string name="flights_disclaimer">Alleen voor de lol en uit nieuwsgierigheid. Vertrouw niet op deze instrumenten voor navigatie of voor iets wat de veiligheid raakt.</string>
+</resources>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Anuluj</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Ustawienia</string>
+    <string name="settings_alarms_title">Przypomnienia i alarmy</string>
+    <string name="settings_alarms_subtitle">Odstępy, dźwięki i stan powiadomień</string>
+    <string name="settings_display_title">Tryb wyświetlania</string>
+    <string name="settings_display_subtitle">Dzień / Noc / Auto</string>
+    <string name="display_mode_title">Tryb wyświetlania</string>
+    <string name="display_mode_light">Jasny (dzień)</string>
+    <string name="display_mode_dark">Ciemny (noc)</string>
+    <string name="display_mode_system">Systemowy (auto)</string>
+    <string name="settings_design_title">Wygląd aplikacji</string>
+    <string name="settings_design_subtitle">Warianty wyglądu interfejsu</string>
+    <string name="design_classic_name">Klasyczny</string>
+    <string name="design_classic_about">Oryginalny wygląd: krem i fiolet</string>
+    <string name="design_paper_ink_name">Papier i atrament</string>
+    <string name="design_paper_ink_about">Cienkie linie i stonowane biznesowe kolory</string>
+    <string name="design_pastel_cloud_name">Pastelowa chmura</string>
+    <string name="design_pastel_cloud_about">Miękki, zaokrąglony i blady, z chmurami</string>
+    <string name="design_neon_arcade_name">Neonowa arkada</string>
+    <string name="design_neon_arcade_about">Jaskrawy neon, mocny kontrast i retro słońce</string>
+    <string name="design_toon_name">Kreskówka</string>
+    <string name="design_toon_about">Komiksowe kontury i pismo odręczne</string>
+    <string name="design_biker_name">Motocyklista</string>
+    <string name="design_biker_about">Surowy metal, guma i pomarańcz z wydechu</string>
+    <string name="design_cockpit_name">Kokpit</string>
+    <string name="design_cockpit_about">Surowa tablica przyrządów z szybowcem</string>
+    <string name="design_beach_name">Plaża</string>
+    <string name="design_beach_about">Piasek, laguna, koral i palmy</string>
+    <string name="design_forest_name">Zaczarowany las</string>
+    <string name="design_forest_about">Pergamin, złoto i leśny mech</string>
+    <string name="design_mono_block_name">Monoblok</string>
+    <string name="design_mono_block_about">Ostra czerń i biel z jednym żółtym znacznikiem</string>
+    <string name="settings_permissions_title">Uprawnienia systemowe</string>
+    <string name="settings_permissions_subtitle">Zarządzaj dostępem w systemie Android</string>
+    <string-array name="filter_options">
+        <item>Wszystkie zadania</item>
+        <item>Aktywne</item>
+        <item>Ukończone</item>
+        <item>Alerty</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Status</item>
+        <item>Utworzone</item>
+        <item>Edytowane</item>
+        <item>Ukończone</item>
+        <item>Ważność</item>
+        <item>Termin</item>
+    </string-array>
+    <string name="scan_camera">Aparat</string>
+    <string name="scan_gallery">Galeria</string>
+    <string name="scan_clear_all">Wyczyść wszystko</string>
+    <string name="scan_cleared">Wszystkie skany usunięte</string>
+    <string name="scan_empty">Brak dokumentów. Zrób zdjęcie strony lub wybierz je z galerii.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Resetuj</string>
+    <string name="scan_next">Dalej</string>
+    <string name="scan_back">Wstecz</string>
+    <string name="scan_save">Zapisz</string>
+    <string name="scan_rotate">Obróć</string>
+    <string name="scan_paper">Papier</string>
+    <string name="scan_filter_color">Kolor</string>
+    <string name="scan_filter_gray">Szary</string>
+    <string name="scan_filter_bw">C/B</string>
+    <string name="scan_tune">Światło i kontrast</string>
+    <string name="scan_shadows">Usuwanie cieni</string>
+    <string name="scan_brightness">Jasność</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Ostrość</string>
+    <string name="scan_page_saved">Strona zapisana</string>
+    <string name="scan_next_page_question">Dodać kolejną stronę do tego dokumentu?</string>
+    <string name="scan_page_label">Strona %d</string>
+    <string name="scan_done">Gotowe</string>
+    <string name="scan_add_page">Dodaj stronę</string>
+    <string name="scan_share_pdf">Udostępnij PDF</string>
+    <string name="scan_pages_empty">Ten dokument nie ma stron.</string>
+    <string name="scan_saved_to_device">Plik zapisany</string>
+    <string name="scan_share_title">Udostępnij dokument</string>
+    <string name="scan_rename_title">Zmień nazwę dokumentu</string>
+    <string name="scan_rename_confirm">Zmień nazwę</string>
+    <string name="scan_error_load">Nie można otworzyć tego zdjęcia</string>
+    <string name="scan_error_preview">Za mało pamięci na podgląd</string>
+    <string name="scan_error_save">Nie można zapisać skanu</string>
+    <string name="scan_error_export">Nie można przygotować pliku</string>
+    <string name="scan_error_no_camera">Nie znaleziono aplikacji aparatu</string>
+    <string name="scan_error_no_viewer">Nie znaleziono aplikacji do otwarcia obrazu</string>
+    <string name="scan_error_no_app">Nie znaleziono aplikacji do udostępniania</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d strona</item>
+        <item quantity="few">%d strony</item>
+        <item quantity="many">%d stron</item>
+        <item quantity="other">%d strony</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Strony</item>
+        <item>Udostępnij jako PDF</item>
+        <item>Udostępnij jako JPEG</item>
+        <item>Zapisz PDF w…</item>
+        <item>Zmień nazwę</item>
+        <item>Usuń</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Pokaż</item>
+        <item>Zapisz JPEG w…</item>
+        <item>Przesuń w górę</item>
+        <item>Przesuń w dół</item>
+        <item>Usuń stronę</item>
+    </string-array>
+    <string name="weather_city_hint">Nazwa miasta w dowolnym języku</string>
+    <string name="weather_search">Szukaj</string>
+    <string name="weather_my_location">Moja lokalizacja</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Odczuwalna</string>
+    <string name="weather_humidity">Wilgotność</string>
+    <string name="weather_wind">Wiatr</string>
+    <string name="weather_today_range">Dziś</string>
+    <string name="weather_units">Jednostki</string>
+    <string name="weather_units_temperature">Temperatura</string>
+    <string name="weather_units_wind">Prędkość wiatru</string>
+    <string name="weather_unit_celsius">Celsjusz (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metry na sekundę (m/s)</string>
+    <string name="weather_unit_kmh">Kilometry na godzinę (km/h)</string>
+    <string name="weather_moon_caption">%1$s · oświetlony w %2$d%%</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">Ładowanie pogody…</string>
+    <string name="weather_location_needed">Zezwól na dostęp do przybliżonej lokalizacji, aby zobaczyć pogodę tam, gdzie jesteś, albo wyszukaj miasto.</string>
+    <string name="weather_allow">Zezwól</string>
+    <string name="weather_open_settings">Otwórz ustawienia aplikacji</string>
+    <string name="weather_attribution">Pogoda: Open-Meteo.com · Miejsca: © współtwórcy OpenStreetMap</string>
+    <string name="weather_choose_city">Wybierz miasto</string>
+    <string name="steps_today">Dziś</string>
+    <string name="steps_unit">kroków</string>
+    <string name="steps_walk_run">Chód %1$s · Bieg %2$s</string>
+    <string name="steps_period">Okres</string>
+    <string name="steps_last_7">7 dni</string>
+    <string name="steps_last_30">30 dni</string>
+    <string name="steps_this_month">Ten miesiąc</string>
+    <string name="steps_pick_dates">Wybierz daty</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Łącznie kroków</string>
+    <string name="steps_distance">Dystans</string>
+    <string name="steps_average">Średnio dziennie</string>
+    <string name="steps_best_day">Najlepszy dzień</string>
+    <string name="steps_walking">Kroki podczas chodzenia</string>
+    <string name="steps_running">Kroki podczas biegu</string>
+    <string name="steps_active_days">Dni z krokami</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d z %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">W tym okresie nie zapisano kroków</string>
+    <string name="steps_settings">Ustawienia kroków</string>
+    <string name="steps_settings_title">Długość kroku</string>
+    <string name="steps_walk_length">Długość kroku podczas chodzenia, cm</string>
+    <string name="steps_run_length">Długość kroku podczas biegu, cm</string>
+    <string name="steps_run_cadence">Bieg zaczyna się od, kroków na minutę</string>
+    <string name="steps_run_cadence_hint">Kroki w tym tempie lub szybsze są liczone jako bieg.</string>
+    <string name="steps_defaults">Domyślne</string>
+    <string name="steps_save">Zapisz</string>
+    <string name="steps_invalid_length">Wpisz %1$d–%2$d</string>
+    <string name="steps_measure_title">Jak zmierzyć długość kroku</string>
+    <string name="steps_measure_text">1. Zaznacz linię startu przy czubku buta przed pierwszym krokiem.\n2. Zrób 10 spokojnych kroków w zwykłym tempie.\n3. Zmierz odległość od linii startu do tego samego czubka buta po 10. kroku, w centymetrach.\n4. Podziel ją przez 10.\n5. Powtórz kilka razy i wpisz średnią.\n\nZrób to samo w swoim zwykłym tempie biegu, aby poznać długość kroku podczas biegu.</string>
+    <string name="steps_no_sensor">Ten telefon nie ma czujnika kroków.</string>
+    <string name="steps_permission_needed">Zezwól na dostęp do aktywności fizycznej, aby telefon mógł liczyć Twoje kroki.</string>
+    <string name="steps_allow">Zezwól</string>
+    <string name="steps_open_settings">Otwórz ustawienia aplikacji</string>
+    <string name="currency_amount_hint">Kwota</string>
+    <string name="currency_swap">Zamień ⇅</string>
+    <string name="currency_refresh">Odśwież kursy</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kursy zaktualizowano %1$s</string>
+    <string name="currency_outdated">Brak internetu. Wyświetlane są zapisane kursy, zaktualizowane %1$s</string>
+    <string name="currency_loading">Ładowanie kursów…</string>
+    <string name="currency_unavailable">Kursy są niedostępne. Sprawdź połączenie z internetem i odśwież.</string>
+    <string name="currency_invalid_amount">Wpisz kwotę</string>
+    <string name="currency_attribution">Kursy z Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Nauk</string>
+    <string name="calculator_basic">Podst</string>
+    <string name="calculator_degrees">Stop</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Historia</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Rozpocznij nagrywanie</string>
+    <string name="flights_stop">Zatrzymaj nagrywanie</string>
+    <string name="flights_units">Jednostki</string>
+    <string name="flights_journal">Dziennik</string>
+    <string name="flights_journal_title">Dziennik lotów</string>
+    <string name="flights_journal_empty">Nie nagrano jeszcze żadnych lotów.</string>
+    <string name="flights_journal_in_progress">Ten lot jest wciąż nagrywany.</string>
+    <string name="flights_report_open">Otwórz raport</string>
+    <string name="flights_report_share">Udostępnij raport</string>
+    <string name="flights_report_delete">Usuń lot</string>
+    <string name="flights_report_failed">Nie udało się przygotować raportu.</string>
+    <string name="flights_report_no_viewer">Nie znaleziono aplikacji otwierającej pliki PDF.</string>
+    <string name="flights_delete_title">Usunąć ten lot?</string>
+    <string name="flights_delete_message">Trasa i raport zostaną usunięte na zawsze. Wcześniej możesz wysłać raport gdzieś indziej, na przykład na pendrive, komputer lub Dysk Google.</string>
+    <string name="flights_delete_save_first">Zapisz raport, potem usuń</string>
+    <string name="flights_delete_without_saving">Usuń bez zapisywania</string>
+    <string name="flights_delete_after_share_message">Jeśli raport dotarł tam, gdzie chciałeś, możesz teraz usunąć lot.</string>
+    <string name="flights_delete_after_share_confirm">Usuń lot</string>
+    <string name="flights_delete_keep">Zachowaj lot</string>
+    <string name="flights_units_report_limit">Limit raportów</string>
+    <string name="flights_units_report_limit_hint">Maksymalna liczba raportów PDF w dzienniku, 0 oznacza brak limitu</string>
+    <string name="flights_limit_full_title">Osiągnięto limit raportów PDF</string>
+    <string name="flights_limit_full_message">Dziennik zawiera %1$d raportów, co jest limitem. Aby nagrać nowy lot, usuń z dziennika co najmniej jeden lot. Wcześniej możesz zapisać jego raport na pendrive, komputer lub Dysk Google.</string>
+    <string name="flights_limit_warning_title">Zbliżasz się do limitu raportów PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Możesz nagrać jeszcze %d lot. Usuń z dziennika nieaktualne loty.</item>
+        <item quantity="few">Możesz nagrać jeszcze %d loty. Usuń z dziennika nieaktualne loty.</item>
+        <item quantity="many">Możesz nagrać jeszcze %d lotów. Usuń z dziennika nieaktualne loty.</item>
+        <item quantity="other">Możesz nagrać jeszcze %d lotu. Usuń z dziennika nieaktualne loty.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Otwórz dziennik</string>
+    <string name="flights_journal_line">%1$s · maks. %2$s · wys. maks. %3$s</string>
+    <string name="flights_units_speed">Prędkość i dystans</string>
+    <string name="flights_units_altitude">Wysokość</string>
+    <string name="flights_unit_kmh">Kilometry na godzinę (km/h)</string>
+    <string name="flights_unit_knots">Węzły (kt, mile morskie)</string>
+    <string name="flights_unit_ms">Metry na sekundę (m/s)</string>
+    <string name="flights_unit_metres">Metry (m)</string>
+    <string name="flights_unit_feet">Stopy (ft)</string>
+    <string name="flights_units_climb">Prędkość wznoszenia</string>
+    <string name="flights_unit_fpm">Stopy na minutę (ft/min)</string>
+    <string name="flights_altitude_zero">Zero</string>
+    <string name="flights_altitude_sea">Nad poziomem morza</string>
+    <string name="flights_altitude_start">Nad miejscem startu · przytrzymaj „Zero”, aby cofnąć</string>
+    <string name="flights_sound_on">Dźwięk: włączony</string>
+    <string name="flights_sound_off">Dźwięk: wyłączony</string>
+    <string name="flights_sound_tune">Strojenie dźwięku</string>
+    <string name="flights_sound_climb_start">Pikanie zaczyna się przy wznoszeniu %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Niskie dźwięki zaczynają się przy opadaniu %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Ciągły alarm przy opadaniu %1$.1f m/s</string>
+    <string name="flights_speed_label">Prędkość</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Czas lotu</string>
+    <string name="flights_distance">Dystans</string>
+    <string name="flights_max_speed">Prędkość maks.</string>
+    <string name="flights_avg_speed">Prędkość średnia</string>
+    <string name="flights_max_altitude">Wysokość maks.</string>
+    <string name="flights_climb_rate">Prędkość wznoszenia</string>
+    <string name="flights_max_g">Maks. przeciążenie</string>
+    <string name="flights_status_waiting">Oczekiwanie na sygnał GPS…</string>
+    <string name="flights_location_needed">Zezwól na dostęp do dokładnej lokalizacji, aby można było nagrywać prędkość, wysokość i trasę.</string>
+    <string name="flights_allow">Zezwól</string>
+    <string name="flights_open_settings">Otwórz ustawienia aplikacji</string>
+    <string name="flights_gps_off">Włącz usługi lokalizacyjne (GPS), aby nagrać lot.</string>
+    <string name="flights_disclaimer">Tylko dla zabawy i ciekawości. Nie polegaj na tych przyrządach w nawigacji ani w niczym, co wpływa na bezpieczeństwo.</string>
+</resources>

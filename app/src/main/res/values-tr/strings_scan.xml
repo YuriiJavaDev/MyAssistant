@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Orijinal</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Tarama %1$s</string>
+    <string name="scan_delete_page_message">Bu sayfa silinsin mi? Bu işlem geri alınamaz!</string>
+    <string name="scan_delete_document_message">“%1$s” tüm sayfalarıyla silinsin mi? Bu işlem geri alınamaz!</string>
+    <string name="scan_delete_all_message">Tümü silinsin mi: %1$s ve %2$s? Bu işlem geri alınamaz!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d belge</item>
+        <item quantity="other">%d belge</item>
+    </plurals>
+</resources>

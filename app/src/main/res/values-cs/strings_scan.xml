@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Originál</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Sken %1$s</string>
+    <string name="scan_delete_page_message">Smazat tuto stránku? Tuto akci nelze vrátit zpět!</string>
+    <string name="scan_delete_document_message">Smazat „%1$s“ se všemi stránkami? Tuto akci nelze vrátit zpět!</string>
+    <string name="scan_delete_all_message">Smazat vše: %1$s, %2$s? Tuto akci nelze vrátit zpět!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d dokument</item>
+        <item quantity="few">%d dokumenty</item>
+        <item quantity="many">%d dokumentu</item>
+        <item quantity="other">%d dokumentů</item>
+    </plurals>
+</resources>

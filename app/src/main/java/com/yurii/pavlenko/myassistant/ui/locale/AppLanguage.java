@@ -19,7 +19,12 @@ public final class AppLanguage {
             new AppLanguage("fr", "Français"),
             new AppLanguage("de", "Deutsch"),
             new AppLanguage("it", "Italiano"),
-            new AppLanguage("pt", "Português")
+            new AppLanguage("pt", "Português"),
+            new AppLanguage("pl", "Polski"),
+            new AppLanguage("nl", "Nederlands"),
+            new AppLanguage("tr", "Türkçe"),
+            new AppLanguage("cs", "Čeština"),
+            new AppLanguage("sk", "Slovenčina")
     ));
 
     private final String tag;

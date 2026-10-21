@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Co trzeba zrobić?</string>
+    <string name="tasks_list_add">Dodaj</string>
+    <string name="tasks_list_delete_completed">Usuń ukończone</string>
+    <string name="tasks_list_clear_all">Wyczyść wszystko</string>
+    <string name="tasks_list_reminder_set">Przypomnienie ustawione</string>
+    <string name="tasks_statistics">Razem: %1$d  Ukończone: %2$d  Pozostało: %3$d  Postęp: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Nowe zadanie</string>
+    <string name="tasks_dialog_title_edit">Edytuj zadanie</string>
+    <string name="tasks_dialog_importance">Poziom ważności:</string>
+    <string name="tasks_dialog_deadline_label">Termin:</string>
+    <string name="tasks_dialog_deadline_select">Wybierz termin</string>
+    <string name="tasks_dialog_reminder_label">Przypomnienie (data i godzina):</string>
+    <string name="tasks_dialog_reminder_select">Wybierz datę i godzinę przypomnienia</string>
+    <string name="tasks_dialog_show_timestamps">Pokaż daty utworzenia/edycji</string>
+    <string name="tasks_dialog_delete">Usuń</string>
+    <string name="tasks_dialog_save">Zapisz</string>
+    <string name="tasks_dialog_clear">Wyczyść</string>
+    <string name="tasks_importance_normal">Normalne</string>
+    <string name="tasks_importance_important">Ważne</string>
+    <string name="tasks_importance_urgent">Pilne</string>
+    <string name="tasks_toast_created">Zadanie utworzone</string>
+    <string name="tasks_toast_updated">Zadanie zaktualizowane</string>
+    <string name="tasks_toast_deleted">Zadanie usunięte</string>
+    <string name="tasks_toast_completed_deleted">Ukończone zadania usunięte</string>
+    <string name="tasks_toast_all_cleared">Wszystkie zadania wyczyszczone</string>
+    <string name="tasks_toast_empty_title">Opis zadania nie może być pusty</string>
+    <string name="tasks_toast_reminder_after_deadline">Przypomnienie nie może być późniejsze niż termin!</string>
+    <string name="tasks_toast_reminder_in_past">Przypomnienie nie może być w przeszłości!</string>
+    <string name="tasks_toast_reminder_cleared">Przypomnienie zostało wyczyszczone, ponieważ termin jest wcześniejszy!</string>
+    <string name="tasks_toast_select_deadline_first">Najpierw wybierz termin!</string>
+    <string name="tasks_time_created">Utworzono: %1$s</string>
+    <string name="tasks_time_edited">Edytowano: %1$s</string>
+    <string name="tasks_time_completed">Ukończono: %1$s</string>
+    <string name="tasks_deadline_prefixed">Termin: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — został %2$d dzień!</item>
+        <item quantity="few">%1$s — zostały %2$d dni!</item>
+        <item quantity="many">%1$s — zostało %2$d dni!</item>
+        <item quantity="other">%1$s — zostało %2$d dnia!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — spóźnienie o %2$d dzień!</item>
+        <item quantity="few">%1$s — spóźnienie o %2$d dni!</item>
+        <item quantity="many">%1$s — spóźnienie o %2$d dni!</item>
+        <item quantity="other">%1$s — spóźnienie o %2$d dnia!</item>
+    </plurals>
+    <string name="tasks_delete_title">Potwierdzenie usunięcia</string>
+    <string name="tasks_delete_button">Usuń</string>
+    <string name="tasks_delete_nothing">Nie znaleziono obiektów do usunięcia!</string>
+    <string name="tasks_delete_item_message">Czy na pewno chcesz usunąć ten element? Tej czynności nie można cofnąć!</string>
+    <string name="tasks_delete_cannot_be_undone">Tej czynności nie można cofnąć!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Usunąć %1$d ukończone zadanie?</item>
+        <item quantity="few">Usunąć %1$d ukończone zadania?</item>
+        <item quantity="many">Usunąć %1$d ukończonych zadań?</item>
+        <item quantity="other">Usunąć %1$d ukończonego zadania?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d z nich ma jeszcze zapisane przypomnienie.</item>
+        <item quantity="few">%1$d z nich ma jeszcze zapisane przypomnienie.</item>
+        <item quantity="many">%1$d z nich ma jeszcze zapisane przypomnienie.</item>
+        <item quantity="other">%1$d z nich ma jeszcze zapisane przypomnienie.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Usunąć zadanie (%1$d)?</item>
+        <item quantity="few">Usunąć wszystkie %1$d zadania?</item>
+        <item quantity="many">Usunąć wszystkie %1$d zadań?</item>
+        <item quantity="other">Usunąć wszystkie %1$d zadania?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d ma aktywne przypomnienie.</item>
+        <item quantity="few">%1$d mają aktywne przypomnienia.</item>
+        <item quantity="many">%1$d ma aktywne przypomnienia.</item>
+        <item quantity="other">%1$d ma aktywne przypomnienia.</item>
+    </plurals>
+    <string name="tasks_alert_title">Alert terminu!</string>
+    <string name="tasks_alert_view_tasks">Pokaż zadania</string>
+    <string name="tasks_alert_channel_name">Alerty terminów zadań</string>
+    <string name="tasks_alert_channel_description">Pilne alerty terminów zadań</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Przekroczone terminy zadań: %1$d.</item>
+        <item quantity="few">Przekroczone terminy zadań: %1$d.</item>
+        <item quantity="many">Przekroczone terminy zadań: %1$d.</item>
+        <item quantity="other">Przekroczone terminy zadań: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Uwaga! Liczba terminów zadań wymagających natychmiastowej uwagi: %1$d.</item>
+        <item quantity="few">Uwaga! Liczba terminów zadań wymagających natychmiastowej uwagi: %1$d.</item>
+        <item quantity="many">Uwaga! Liczba terminów zadań wymagających natychmiastowej uwagi: %1$d.</item>
+        <item quantity="other">Uwaga! Liczba terminów zadań wymagających natychmiastowej uwagi: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Uwaga! Zbliża się termin zadania: %1$s</string>
+</resources>

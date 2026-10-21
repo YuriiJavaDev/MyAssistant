@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Açık gökyüzü</string>
+    <string name="weather_description_mainly_clear">Çoğunlukla açık</string>
+    <string name="weather_description_partly_cloudy">Parçalı bulutlu</string>
+    <string name="weather_description_overcast">Kapalı</string>
+    <string name="weather_description_fog">Sis</string>
+    <string name="weather_description_rime_fog">Kırağılı sis</string>
+    <string name="weather_description_light_drizzle">Hafif çise</string>
+    <string name="weather_description_drizzle">Çise</string>
+    <string name="weather_description_dense_drizzle">Yoğun çise</string>
+    <string name="weather_description_light_freezing_drizzle">Hafif donan çise</string>
+    <string name="weather_description_freezing_drizzle">Donan çise</string>
+    <string name="weather_description_slight_rain">Hafif yağmur</string>
+    <string name="weather_description_rain">Yağmur</string>
+    <string name="weather_description_heavy_rain">Şiddetli yağmur</string>
+    <string name="weather_description_light_freezing_rain">Hafif donan yağmur</string>
+    <string name="weather_description_freezing_rain">Donan yağmur</string>
+    <string name="weather_description_slight_snow">Hafif kar</string>
+    <string name="weather_description_snow">Kar</string>
+    <string name="weather_description_heavy_snow">Yoğun kar yağışı</string>
+    <string name="weather_description_snow_grains">Kar taneleri</string>
+    <string name="weather_description_light_rain_showers">Hafif sağanak</string>
+    <string name="weather_description_rain_showers">Sağanak</string>
+    <string name="weather_description_violent_rain_showers">Şiddetli sağanak</string>
+    <string name="weather_description_light_snow_showers">Hafif kar sağanağı</string>
+    <string name="weather_description_heavy_snow_showers">Şiddetli kar sağanağı</string>
+    <string name="weather_description_thunderstorm">Gök gürültülü fırtına</string>
+    <string name="weather_description_thunderstorm_with_hail">Dolulu gök gürültülü fırtına</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Şiddetli dolulu gök gürültülü fırtına</string>
+    <string name="weather_description_unknown">Bilinmiyor</string>
+    <string name="weather_moon_phase_new_moon">Yeni ay</string>
+    <string name="weather_moon_phase_waxing_crescent">Büyüyen hilal</string>
+    <string name="weather_moon_phase_first_quarter">İlk dördün</string>
+    <string name="weather_moon_phase_waxing_gibbous">Büyüyen şişkin ay</string>
+    <string name="weather_moon_phase_full_moon">Dolunay</string>
+    <string name="weather_moon_phase_waning_gibbous">Küçülen şişkin ay</string>
+    <string name="weather_moon_phase_last_quarter">Son dördün</string>
+    <string name="weather_moon_phase_waning_crescent">Küçülen hilal</string>
+    <string name="weather_error_no_location">Konum belirlenemiyor. Konum hizmetlerini açın veya bir şehir arayın.</string>
+    <string name="weather_error_city_not_found">“%1$s” için şehir bulunamadı</string>
+    <string name="weather_error_no_network">Hava durumu yüklenemiyor. İnternet bağlantısını kontrol edin.</string>
+    <string name="weather_error_choose_city">Listeden bir şehir seçin</string>
+    <string name="weather_current_location">Geçerli konum</string>
+</resources>
