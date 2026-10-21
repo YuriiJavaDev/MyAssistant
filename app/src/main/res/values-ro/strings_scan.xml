@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Scanare %1$s</string>
+    <string name="scan_delete_page_message">Ștergeți această pagină? Acțiunea nu poate fi anulată!</string>
+    <string name="scan_delete_document_message">Ștergeți „%1$s” cu toate paginile? Acțiunea nu poate fi anulată!</string>
+    <string name="scan_delete_all_message">Ștergeți tot: %1$s, %2$s? Acțiunea nu poate fi anulată!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d document</item>
+        <item quantity="few">%d documente</item>
+        <item quantity="other">%d de documente</item>
+    </plurals>
+</resources>

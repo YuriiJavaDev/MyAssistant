@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Date de intrare nevalide</string>
+    <string name="calculator_error_invalid_expression">Expresie nevalidă</string>
+    <string name="calculator_error_division_by_zero">Împărțire la zero</string>
+    <string name="calculator_error_result_too_large">Rezultatul este prea mare</string>
+    <string name="calculator_error_undefined">Nedefinit</string>
+    <string name="calculator_error_expression_too_long">Expresia este prea lungă</string>
+    <string name="calculator_error_expression_too_complex">Expresia este prea complexă</string>
+</resources>

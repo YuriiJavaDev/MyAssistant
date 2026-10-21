@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Шта треба урадити?</string>
+    <string name="tasks_list_add">Додај</string>
+    <string name="tasks_list_delete_completed">Обриши завршене</string>
+    <string name="tasks_list_clear_all">Обриши све</string>
+    <string name="tasks_list_reminder_set">Подсетник је постављен</string>
+    <string name="tasks_statistics">Укупно: %1$d  Завршено: %2$d  Остало: %3$d  Напредак: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Нови задатак</string>
+    <string name="tasks_dialog_title_edit">Уреди задатак</string>
+    <string name="tasks_dialog_importance">Ниво важности:</string>
+    <string name="tasks_dialog_deadline_label">Рок:</string>
+    <string name="tasks_dialog_deadline_select">Изаберите рок</string>
+    <string name="tasks_dialog_reminder_label">Подсетник (датум и време):</string>
+    <string name="tasks_dialog_reminder_select">Изаберите датум и време подсетника</string>
+    <string name="tasks_dialog_show_timestamps">Прикажи датуме прављења/измене</string>
+    <string name="tasks_dialog_delete">Обриши</string>
+    <string name="tasks_dialog_save">Сачувај</string>
+    <string name="tasks_dialog_clear">Очисти</string>
+    <string name="tasks_importance_normal">Обична</string>
+    <string name="tasks_importance_important">Важна</string>
+    <string name="tasks_importance_urgent">Хитна</string>
+    <string name="tasks_toast_created">Задатак је направљен</string>
+    <string name="tasks_toast_updated">Задатак је ажуриран</string>
+    <string name="tasks_toast_deleted">Задатак је обрисан</string>
+    <string name="tasks_toast_completed_deleted">Завршени задаци су обрисани</string>
+    <string name="tasks_toast_all_cleared">Сви задаци су обрисани</string>
+    <string name="tasks_toast_empty_title">Опис задатка не може бити празан</string>
+    <string name="tasks_toast_reminder_after_deadline">Подсетник не може бити после рока!</string>
+    <string name="tasks_toast_reminder_in_past">Подсетник не може бити у прошлости!</string>
+    <string name="tasks_toast_reminder_cleared">Подсетник је очишћен јер је рок раније!</string>
+    <string name="tasks_toast_select_deadline_first">Прво изаберите рок!</string>
+    <string name="tasks_time_created">Направљено: %1$s</string>
+    <string name="tasks_time_edited">Измењено: %1$s</string>
+    <string name="tasks_time_completed">Завршено: %1$s</string>
+    <string name="tasks_deadline_prefixed">Рок: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — остао је %2$d дан!</item>
+        <item quantity="few">%1$s — остала су %2$d дана!</item>
+        <item quantity="other">%1$s — остало је %2$d дана!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — кашњење %2$d дан!</item>
+        <item quantity="few">%1$s — кашњење %2$d дана!</item>
+        <item quantity="other">%1$s — кашњење %2$d дана!</item>
+    </plurals>
+    <string name="tasks_delete_title">Потврда брисања</string>
+    <string name="tasks_delete_button">Обриши</string>
+    <string name="tasks_delete_nothing">Није пронађен ниједан објекат за брисање!</string>
+    <string name="tasks_delete_item_message">Да ли заиста желите да обришете ову ставку? Ова радња се не може поништити!</string>
+    <string name="tasks_delete_cannot_be_undone">Ова радња се не може поништити!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Обрисати %1$d завршен задатак?</item>
+        <item quantity="few">Обрисати %1$d завршена задатка?</item>
+        <item quantity="other">Обрисати %1$d завршених задатака?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d од њих још има сачуван подсетник.</item>
+        <item quantity="few">%1$d од њих још имају сачуван подсетник.</item>
+        <item quantity="other">%1$d од њих још има сачуван подсетник.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Обрисати задатак (%1$d)?</item>
+        <item quantity="few">Обрисати сва %1$d задатка?</item>
+        <item quantity="other">Обрисати свих %1$d задатака?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d има активан подсетник.</item>
+        <item quantity="few">%1$d имају активне подсетнике.</item>
+        <item quantity="other">%1$d има активне подсетнике.</item>
+    </plurals>
+    <string name="tasks_alert_title">Упозорење о року!</string>
+    <string name="tasks_alert_view_tasks">Прикажи задатке</string>
+    <string name="tasks_alert_channel_name">Упозорења о роковима задатака</string>
+    <string name="tasks_alert_channel_description">Хитна упозорења о роковима задатака</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Број истеклих рокова задатака: %1$d.</item>
+        <item quantity="few">Број истеклих рокова задатака: %1$d.</item>
+        <item quantity="other">Број истеклих рокова задатака: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Пажња! Број рокова задатака који траже хитну пажњу: %1$d.</item>
+        <item quantity="few">Пажња! Број рокова задатака који траже хитну пажњу: %1$d.</item>
+        <item quantity="other">Пажња! Број рокова задатака који траже хитну пажњу: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Пажња! Приближава се рок задатка: %1$s</string>
+</resources>

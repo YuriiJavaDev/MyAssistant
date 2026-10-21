@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Снимање лета</string>
+    <string name="flights_notification_channel_description">Приказује се током снимања лета</string>
+    <string name="flights_notification_title">Снима се лет</string>
+    <string name="flights_notification_text">Додирните да отворите инструменте</string>
+    <string-array name="flights_cardinal_points">
+        <item>С</item>
+        <item>СИ</item>
+        <item>И</item>
+        <item>ЈИ</item>
+        <item>Ј</item>
+        <item>ЈЗ</item>
+        <item>З</item>
+        <item>СЗ</item>
+    </string-array>
+    <string name="flights_report_title">Извештај о лету</string>
+    <string name="flights_report_north">С</string>
+    <string name="flights_report_side_north">С</string>
+    <string name="flights_report_side_south">Ј</string>
+    <string name="flights_report_side_east">И</string>
+    <string name="flights_report_side_west">З</string>
+    <string name="flights_report_duration">Трајање</string>
+    <string name="flights_report_distance">Раздаљина</string>
+    <string name="flights_report_top_speed">Највећа брзина</string>
+    <string name="flights_report_average_speed">Просечна брзина</string>
+    <string name="flights_report_highest_altitude">Највећа висина</string>
+    <string name="flights_report_best_climb">Најбоље пењање</string>
+    <string name="flights_report_worst_sink">Најгоре спуштање</string>
+    <string name="flights_report_peak_load">Врховно оптерећење</string>
+    <string name="flights_report_start_point">Тачка старта</string>
+    <string name="flights_report_end_point">Тачка циља</string>
+    <string name="flights_report_altitude_above_start">%1$s изнад старта</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s изнад нивоа мора</string>
+    <string name="flights_report_chart_altitude_above_start">Висина (%1$s, изнад старта)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Висина (%1$s, изнад нивоа мора)</string>
+    <string name="flights_report_chart_speed">Брзина у односу на тло (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Мапа: Natural Earth (јавно власништво).</string>
+    <string name="flights_report_footer">%1$s Снимљено у MyAssistant. Само за забаву: не за навигацију или безбедност.</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Оригинал</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Скенирање %1$s</string>
+    <string name="scan_delete_page_message">Обрисати ову страницу? Ова радња се не може поништити!</string>
+    <string name="scan_delete_document_message">Обрисати „%1$s“ са свим страницама? Ова радња се не може поништити!</string>
+    <string name="scan_delete_all_message">Обрисати све: %1$s, %2$s? Ова радња се не може поништити!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d документ</item>
+        <item quantity="few">%d документа</item>
+        <item quantity="other">%d докумената</item>
+    </plurals>
+</resources>

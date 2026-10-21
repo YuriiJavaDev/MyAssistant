@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Mégse</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Beállítások</string>
+    <string name="settings_alarms_title">Emlékeztetők és ébresztők</string>
+    <string name="settings_alarms_subtitle">Időközök, hangok és az értesítések állapota</string>
+    <string name="settings_display_title">Megjelenítési mód</string>
+    <string name="settings_display_subtitle">Nappal / Éjszaka / Auto</string>
+    <string name="display_mode_title">Megjelenítési mód</string>
+    <string name="display_mode_light">Világos (nappal)</string>
+    <string name="display_mode_dark">Sötét (éjszaka)</string>
+    <string name="display_mode_system">Rendszer (auto)</string>
+    <string name="settings_design_title">Az alkalmazás kinézete</string>
+    <string name="settings_design_subtitle">A felület megjelenési változatai</string>
+    <string name="design_classic_name">Klasszikus</string>
+    <string name="design_classic_about">Az eredeti kinézet: krém és lila</string>
+    <string name="design_paper_ink_name">Papír és tinta</string>
+    <string name="design_paper_ink_about">Vékony vonalak és visszafogott irodai színek</string>
+    <string name="design_pastel_cloud_name">Pasztellfelhő</string>
+    <string name="design_pastel_cloud_about">Lágy, lekerekített és halvány, felhőkkel</string>
+    <string name="design_neon_arcade_name">Neon játékterem</string>
+    <string name="design_neon_arcade_about">Ragyogó neon, erős kontraszt és retró nap</string>
+    <string name="design_toon_name">Rajzfilm</string>
+    <string name="design_toon_about">Képregényes körvonalak és kézírásos betűk</string>
+    <string name="design_biker_name">Motoros</string>
+    <string name="design_biker_about">Nyers fém, gumi és kipufogó-narancs</string>
+    <string name="design_cockpit_name">Pilótafülke</string>
+    <string name="design_cockpit_about">Szigorú műszerfal vitorlázógéppel</string>
+    <string name="design_beach_name">Tengerpart</string>
+    <string name="design_beach_about">Homok, lagúna, korallok és pálmák</string>
+    <string name="design_forest_name">Elvarázsolt erdő</string>
+    <string name="design_forest_about">Pergamen, arany és erdei moha</string>
+    <string name="design_mono_block_name">Monoblokk</string>
+    <string name="design_mono_block_about">Éles fekete-fehér egyetlen sárga kiemelővel</string>
+    <string name="settings_permissions_title">Rendszerengedélyek</string>
+    <string name="settings_permissions_subtitle">Az Android-hozzáférések kezelése</string>
+    <string-array name="filter_options">
+        <item>Minden feladat</item>
+        <item>Aktív</item>
+        <item>Kész</item>
+        <item>Figyelmeztetések</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Állapot</item>
+        <item>Létrehozás</item>
+        <item>Módosítás</item>
+        <item>Befejezés</item>
+        <item>Fontosság</item>
+        <item>Határidő</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galéria</string>
+    <string name="scan_clear_all">Összes törlése</string>
+    <string name="scan_cleared">Minden szkennelés törölve</string>
+    <string name="scan_empty">Még nincsenek dokumentumok. Fényképezzen le egy oldalt, vagy válasszon fotót a galériából.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Alaphelyzet</string>
+    <string name="scan_next">Tovább</string>
+    <string name="scan_back">Vissza</string>
+    <string name="scan_save">Mentés</string>
+    <string name="scan_rotate">Forgatás</string>
+    <string name="scan_paper">Papír</string>
+    <string name="scan_filter_color">Színes</string>
+    <string name="scan_filter_gray">Szürke</string>
+    <string name="scan_filter_bw">F/F</string>
+    <string name="scan_tune">Fény és kontraszt</string>
+    <string name="scan_shadows">Árnyékeltávolítás</string>
+    <string name="scan_brightness">Fényerő</string>
+    <string name="scan_contrast">Kontraszt</string>
+    <string name="scan_sharpen">Élesítés</string>
+    <string name="scan_page_saved">Oldal elmentve</string>
+    <string name="scan_next_page_question">Hozzáad még egy oldalt a dokumentumhoz?</string>
+    <string name="scan_page_label">%d. oldal</string>
+    <string name="scan_done">Kész</string>
+    <string name="scan_add_page">Oldal hozzáadása</string>
+    <string name="scan_share_pdf">PDF küldése</string>
+    <string name="scan_pages_empty">Ebben a dokumentumban nincsenek oldalak.</string>
+    <string name="scan_saved_to_device">Fájl elmentve</string>
+    <string name="scan_share_title">Dokumentum küldése</string>
+    <string name="scan_rename_title">Dokumentum átnevezése</string>
+    <string name="scan_rename_confirm">Átnevezés</string>
+    <string name="scan_error_load">Ez a fotó nem nyitható meg</string>
+    <string name="scan_error_preview">Nincs elég memória az előnézethez</string>
+    <string name="scan_error_save">A szkennelés nem menthető</string>
+    <string name="scan_error_export">A fájl nem készíthető elő</string>
+    <string name="scan_error_no_camera">Nem található kameraalkalmazás</string>
+    <string name="scan_error_no_viewer">Nem található alkalmazás a kép megnyitásához</string>
+    <string name="scan_error_no_app">Nem található alkalmazás a küldéshez</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d oldal</item>
+        <item quantity="other">%d oldal</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Oldalak</item>
+        <item>Küldés PDF-ként</item>
+        <item>Küldés JPEG-ként</item>
+        <item>PDF mentése ide…</item>
+        <item>Átnevezés</item>
+        <item>Törlés</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Megtekintés</item>
+        <item>JPEG mentése ide…</item>
+        <item>Feljebb</item>
+        <item>Lejjebb</item>
+        <item>Oldal törlése</item>
+    </string-array>
+    <string name="weather_city_hint">A város neve tetszőleges nyelven</string>
+    <string name="weather_search">Keresés</string>
+    <string name="weather_my_location">Helyzetem</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Hőérzet</string>
+    <string name="weather_humidity">Páratartalom</string>
+    <string name="weather_wind">Szél</string>
+    <string name="weather_today_range">Ma</string>
+    <string name="weather_units">Mértékegységek</string>
+    <string name="weather_units_temperature">Hőmérséklet</string>
+    <string name="weather_units_wind">Szélsebesség</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Méter másodpercenként (m/s)</string>
+    <string name="weather_unit_kmh">Kilométer óránként (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% megvilágítva</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Az időjárás betöltése…</string>
+    <string name="weather_location_needed">Engedélyezze a hozzávetőleges helyzethez való hozzáférést, hogy lássa az időjárást ott, ahol van, vagy keressen egy várost.</string>
+    <string name="weather_allow">Engedélyezés</string>
+    <string name="weather_open_settings">Az alkalmazás beállításainak megnyitása</string>
+    <string name="weather_attribution">Időjárás: Open-Meteo.com · Helyek: © OpenStreetMap közreműködők</string>
+    <string name="weather_choose_city">Válasszon várost</string>
+    <string name="steps_today">Ma</string>
+    <string name="steps_unit">lépés</string>
+    <string name="steps_walk_run">Séta %1$s · Futás %2$s</string>
+    <string name="steps_period">Időszak</string>
+    <string name="steps_last_7">7 nap</string>
+    <string name="steps_last_30">30 nap</string>
+    <string name="steps_this_month">E hónap</string>
+    <string name="steps_pick_dates">Dátumok kiválasztása</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Összes lépés</string>
+    <string name="steps_distance">Távolság</string>
+    <string name="steps_average">Napi átlag</string>
+    <string name="steps_best_day">Legjobb nap</string>
+    <string name="steps_walking">Lépések sétánál</string>
+    <string name="steps_running">Lépések futásnál</string>
+    <string name="steps_active_days">Lépéses napok</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Ebben az időszakban nem rögzítettek lépést</string>
+    <string name="steps_settings">Lépésbeállítások</string>
+    <string name="steps_settings_title">Lépéshossz</string>
+    <string name="steps_walk_length">Lépéshossz sétánál, cm</string>
+    <string name="steps_run_length">Lépéshossz futásnál, cm</string>
+    <string name="steps_run_cadence">A futás ettől számít, lépés percenként</string>
+    <string name="steps_run_cadence_hint">Az ennél a tempónál vagy gyorsabban megtett lépések futásnak számítanak.</string>
+    <string name="steps_defaults">Alapértelmezett</string>
+    <string name="steps_save">Mentés</string>
+    <string name="steps_invalid_length">Adjon meg %1$d–%2$d közötti értéket</string>
+    <string name="steps_measure_title">Hogyan mérje meg a lépéshosszt</string>
+    <string name="steps_measure_text">1. Az első lépés előtt jelölje meg a startvonalat a cipő orránál.\n2. Tegyen meg 10 nyugodt lépést a megszokott tempójában.\n3. Mérje meg centiméterben a startvonal és a cipő ugyanazon orra közötti távolságot a 10. lépés után.\n4. Osszon el tízzel.\n5. Ismételje meg néhányszor, és adja meg az átlagot.\n\nA futási lépéshosszhoz ugyanígy járjon el a megszokott futótempójában.</string>
+    <string name="steps_no_sensor">Ez a telefon nem rendelkezik lépésérzékelővel.</string>
+    <string name="steps_permission_needed">Engedélyezze a fizikai aktivitáshoz való hozzáférést, hogy a telefon számolhassa a lépéseit.</string>
+    <string name="steps_allow">Engedélyezés</string>
+    <string name="steps_open_settings">Az alkalmazás beállításainak megnyitása</string>
+    <string name="currency_amount_hint">Összeg</string>
+    <string name="currency_swap">Csere ⇅</string>
+    <string name="currency_refresh">Árfolyamok frissítése</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Árfolyamok frissítve: %1$s</string>
+    <string name="currency_outdated">Nincs internet. A mentett árfolyamok láthatók, frissítve: %1$s</string>
+    <string name="currency_loading">Az árfolyamok betöltése…</string>
+    <string name="currency_unavailable">Az árfolyamok nem érhetők el. Ellenőrizze az internetkapcsolatot, és frissítsen.</string>
+    <string name="currency_invalid_amount">Adjon meg egy összeget</string>
+    <string name="currency_attribution">Az árfolyamok forrása: Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Tud</string>
+    <string name="calculator_basic">Alap</string>
+    <string name="calculator_degrees">Fok</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Előzmények</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Felvétel indítása</string>
+    <string name="flights_stop">Felvétel leállítása</string>
+    <string name="flights_units">Egységek</string>
+    <string name="flights_journal">Napló</string>
+    <string name="flights_journal_title">Repülési napló</string>
+    <string name="flights_journal_empty">Még nincs rögzített repülés.</string>
+    <string name="flights_journal_in_progress">Ez a repülés még felvétel alatt van.</string>
+    <string name="flights_report_open">Jelentés megnyitása</string>
+    <string name="flights_report_share">Jelentés küldése</string>
+    <string name="flights_report_delete">Repülés törlése</string>
+    <string name="flights_report_failed">A jelentést nem sikerült előkészíteni.</string>
+    <string name="flights_report_no_viewer">Nem található alkalmazás a PDF-fájlok megnyitásához.</string>
+    <string name="flights_delete_title">Törli ezt a repülést?</string>
+    <string name="flights_delete_message">Az útvonal és a jelentés véglegesen törlődik. Előtte elküldheti valahová a jelentést, például pendrive-ra, számítógépre vagy a Google Drive-ra.</string>
+    <string name="flights_delete_save_first">Jelentés mentése, majd törlés</string>
+    <string name="flights_delete_without_saving">Törlés mentés nélkül</string>
+    <string name="flights_delete_after_share_message">Ha a jelentés odaért, ahová szerette volna, most már törölheti a repülést.</string>
+    <string name="flights_delete_after_share_confirm">Repülés törlése</string>
+    <string name="flights_delete_keep">Repülés megtartása</string>
+    <string name="flights_units_report_limit">Jelentéskorlát</string>
+    <string name="flights_units_report_limit_hint">A naplóban tárolt PDF-jelentések legnagyobb száma, 0 = korlátlan</string>
+    <string name="flights_limit_full_title">Elérte a PDF-jelentések korlátját</string>
+    <string name="flights_limit_full_message">A napló %1$d jelentést tartalmaz, ez a korlát. Új repülés rögzítéséhez törölje a napló legalább egy repülését. Előtte elmentheti a jelentését pendrive-ra, számítógépre vagy a Google Drive-ra.</string>
+    <string name="flights_limit_warning_title">Közeledik a PDF-jelentések korlátjához!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Még %d repülést rögzíthet. Törölje a naplóból az elavult repüléseket.</item>
+        <item quantity="other">Még %d repülést rögzíthet. Törölje a naplóból az elavult repüléseket.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Napló megnyitása</string>
+    <string name="flights_journal_line">%1$s · max. %2$s · magasság max. %3$s</string>
+    <string name="flights_units_speed">Sebesség és távolság</string>
+    <string name="flights_units_altitude">Magasság</string>
+    <string name="flights_unit_kmh">Kilométer óránként (km/h)</string>
+    <string name="flights_unit_knots">Csomó (kt, tengeri mérföld)</string>
+    <string name="flights_unit_ms">Méter másodpercenként (m/s)</string>
+    <string name="flights_unit_metres">Méter (m)</string>
+    <string name="flights_unit_feet">Láb (ft)</string>
+    <string name="flights_units_climb">Emelkedési sebesség</string>
+    <string name="flights_unit_fpm">Láb percenként (ft/min)</string>
+    <string name="flights_altitude_zero">Nulla</string>
+    <string name="flights_altitude_sea">Tengerszint felett</string>
+    <string name="flights_altitude_start">A start felett · „Nulla” hosszan = vissza</string>
+    <string name="flights_sound_on">Hang: be</string>
+    <string name="flights_sound_off">Hang: ki</string>
+    <string name="flights_sound_tune">Hangbeállítás</string>
+    <string name="flights_sound_climb_start">A sípolás %1$.1f m/s emelkedésnél kezdődik</string>
+    <string name="flights_sound_sink_start">Az alacsony sípolás %1$.1f m/s süllyedésnél kezdődik</string>
+    <string name="flights_sound_sink_alarm">Folyamatos riasztás %1$.1f m/s süllyedésnél</string>
+    <string name="flights_speed_label">Sebesség</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Repülési idő</string>
+    <string name="flights_distance">Távolság</string>
+    <string name="flights_max_speed">Legnagyobb sebesség</string>
+    <string name="flights_avg_speed">Átlagsebesség</string>
+    <string name="flights_max_altitude">Legnagyobb magasság</string>
+    <string name="flights_climb_rate">Emelkedési sebesség</string>
+    <string name="flights_max_g">Csúcsterhelés</string>
+    <string name="flights_status_waiting">Várakozás a GPS-jelre…</string>
+    <string name="flights_location_needed">Engedélyezze a pontos helyzethez való hozzáférést a sebesség, a magasság és az útvonal rögzítéséhez.</string>
+    <string name="flights_allow">Engedélyezés</string>
+    <string name="flights_open_settings">Az alkalmazás beállításainak megnyitása</string>
+    <string name="flights_gps_off">A repülés rögzítéséhez kapcsolja be a helymeghatározást (GPS).</string>
+    <string name="flights_disclaimer">Csak szórakozásra és kíváncsiságból. Ne hagyatkozzon ezekre a műszerekre navigációhoz vagy bármi máshoz, ami a biztonságot érinti.</string>
+</resources>

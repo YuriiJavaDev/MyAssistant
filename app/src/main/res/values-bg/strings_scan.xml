@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Оригинал</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Скан %1$s</string>
+    <string name="scan_delete_page_message">Да се изтрие ли тази страница? Това действие не може да бъде отменено!</string>
+    <string name="scan_delete_document_message">Да се изтрие ли „%1$s“ с всички страници? Това действие не може да бъде отменено!</string>
+    <string name="scan_delete_all_message">Да се изтрие ли всичко: %1$s, %2$s? Това действие не може да бъде отменено!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d документ</item>
+        <item quantity="other">%d документа</item>
+    </plurals>
+</resources>

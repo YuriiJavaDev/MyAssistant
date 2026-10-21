@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Eredeti</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Szkennelés %1$s</string>
+    <string name="scan_delete_page_message">Törli ezt az oldalt? Ez a művelet nem vonható vissza!</string>
+    <string name="scan_delete_document_message">Törli a(z) „%1$s” dokumentumot az összes oldalával? Ez a művelet nem vonható vissza!</string>
+    <string name="scan_delete_all_message">Mindent töröl: %1$s, %2$s? Ez a művelet nem vonható vissza!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d dokumentum</item>
+        <item quantity="other">%d dokumentum</item>
+    </plurals>
+</resources>

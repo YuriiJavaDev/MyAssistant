@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Εργασίες</string>
+    <string name="app_tab_weather">Καιρός</string>
+    <string name="app_tab_exchange">Ισοτιμίες</string>
+    <string name="app_tab_calculator">Αριθμ.</string>
+    <string name="app_tab_scan">Σάρωση</string>
+    <string name="app_tab_steps">Βήματα</string>
+    <string name="app_tab_flights">Πτήσεις</string>
+    <string name="app_menu_settings">Ρυθμίσεις</string>
+    <string name="app_menu_options">Επιλογές</string>
+    <string name="app_notifications_disabled">Οι ειδοποιήσεις είναι απενεργοποιημένες: οι υπενθυμίσεις δεν θα εμφανίζονται</string>
+    <string name="app_overdue_tasks_format">Εκπρόθεσμες εργασίες: %1$d</string>
+    <string name="app_exact_alarm_already_granted">Το δικαίωμα για ακριβή ξυπνητήρια έχει ήδη δοθεί</string>
+    <string name="app_alarm_title">Υπενθυμίσεις και ξυπνητήρια</string>
+    <string name="app_alarm_voice_alert">Φωνητική ειδοποίηση (TTS)</string>
+    <string name="app_alarm_full_screen">Παράθυρο πλήρους οθόνης</string>
+    <string name="app_alarm_grant_exact">Παροχή δικαιώματος για ακριβή ξυπνητήρια</string>
+    <string name="backup_menu_export">Εξαγωγή αντιγράφου ασφαλείας</string>
+    <string name="backup_menu_import">Εισαγωγή αντιγράφου ασφαλείας</string>
+    <string name="backup_menu_cloud_settings">Ρυθμίσεις cloud και αυτόματο αντίγραφο</string>
+    <string name="backup_menu_cloud_save">Αποθήκευση στο cloud τώρα</string>
+    <string name="backup_menu_cloud_restore">Επαναφορά από το cloud</string>
+    <string name="backup_cloud_username_hint">Χρήστης/E-mail</string>
+    <string name="backup_cloud_password_hint">Κωδικός</string>
+    <string name="backup_cloud_auto_backup">Ενεργοποίηση ημερήσιου αυτόματου αντιγράφου</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Όταν το αυτόματο αντίγραφο είναι ενεργό, το αρχείο της βάσης δεδομένων στον αποθηκευτικό σας χώρο cloud αντικαθίσταται από προεπιλογή μία φορά την ημέρα.</string>
+    <string name="backup_cloud_test">Δοκιμή</string>
+    <string name="backup_cloud_save">Αποθήκευση</string>
+    <string name="settings_language_title">Γλώσσα</string>
+    <string name="settings_language_subtitle">Γλώσσα της εφαρμογής</string>
+    <string name="language_system_default">Προεπιλογή συστήματος</string>
+</resources>

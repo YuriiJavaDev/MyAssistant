@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Μεταφόρτωση αντιγράφου ασφαλείας στο cloud...</string>
+    <string name="backup_cloud_restoring">Επαναφορά αντιγράφου ασφαλείας από το cloud...</string>
+    <string name="backup_cloud_upload_success">Το αντίγραφο ασφαλείας μεταφορτώθηκε στο cloud</string>
+    <string name="backup_cloud_restore_success">Το αντίγραφο ασφαλείας επαναφέρθηκε από το cloud</string>
+    <string name="backup_cloud_restore_partly">Οι εργασίες επαναφέρθηκαν από το cloud (δεν βρέθηκε εκεί αντίγραφο για: %1$s)</string>
+    <string name="backup_part_steps">βήματα</string>
+    <string name="backup_part_flights">πτήσεις</string>
+    <string name="backup_part_scans">σαρώσεις</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Σφάλμα μεταφόρτωσης: %1$s</string>
+    <string name="backup_error_download">Σφάλμα λήψης: %1$s</string>
+    <string name="backup_error_unknown">Άγνωστο σφάλμα</string>
+    <string name="backup_error_insecure_url">Το URL πρέπει να ξεκινά με https://</string>
+    <string name="backup_error_authentication">Αποτυχία ταυτοποίησης: ελέγξτε το όνομα χρήστη και τον κωδικό</string>
+    <string name="backup_error_server_code">Ο διακομιστής απάντησε με κωδικό: %1$d</string>
+    <string name="backup_error_connection">Σφάλμα σύνδεσης: %1$s</string>
+    <string name="backup_destination_title">Αποθήκευση αντιγράφου ασφαλείας σε</string>
+    <string name="backup_destination_folder">Επιλογή φακέλου (συσκευή, κάρτα SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Αποστολή σε εφαρμογή</string>
+    <string name="backup_preparing">Προετοιμασία αντιγράφου ασφαλείας...</string>
+    <string name="backup_export_failed">Η εξαγωγή απέτυχε</string>
+    <string name="backup_export_saved">Το αντίγραφο ασφαλείας αποθηκεύτηκε</string>
+    <string name="backup_import_success">Το αντίγραφο ασφαλείας εισήχθη. Επανεκκίνηση...</string>
+    <string name="backup_import_failed">Η εισαγωγή απέτυχε</string>
+    <string name="backup_import_title">Προσοχή!</string>
+    <string name="backup_import_message">Η επαναφορά αντιγράφου ασφαλείας θα αντικαταστήσει τις τρέχουσες εργασίες, τα βήματα και τις σαρώσεις με αυτά που περιέχει. Θέλετε σίγουρα να συνεχίσετε;</string>
+    <string name="backup_import_confirm">Επιβεβαίωση εισαγωγής</string>
+    <string name="backup_share_chooser_title">Εξαγωγή αντιγράφου ασφαλείας</string>
+    <string name="backup_cloud_settings_saved">Οι ρυθμίσεις cloud αποθηκεύτηκαν</string>
+    <string name="backup_cloud_secure_storage_unavailable">Ο ασφαλής αποθηκευτικός χώρος δεν είναι διαθέσιμος, οι ρυθμίσεις δεν αποθηκεύτηκαν</string>
+    <string name="backup_cloud_url_empty">Το URL δεν μπορεί να είναι κενό</string>
+    <string name="backup_cloud_testing">Έλεγχος σύνδεσης...</string>
+    <string name="backup_cloud_connection_successful">Επιτυχής σύνδεση!</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Πρωτότυπο</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Σάρωση %1$s</string>
+    <string name="scan_delete_page_message">Να διαγραφεί αυτή η σελίδα; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!</string>
+    <string name="scan_delete_document_message">Να διαγραφεί το «%1$s» με όλες τις σελίδες του; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!</string>
+    <string name="scan_delete_all_message">Να διαγραφούν όλα: %1$s, %2$s; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d έγγραφο</item>
+        <item quantity="other">%d έγγραφα</item>
+    </plurals>
+</resources>

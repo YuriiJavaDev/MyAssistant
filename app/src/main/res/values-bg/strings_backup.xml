@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Качване на резервното копие в облака...</string>
+    <string name="backup_cloud_restoring">Възстановяване на резервното копие от облака...</string>
+    <string name="backup_cloud_upload_success">Резервното копие е качено в облака</string>
+    <string name="backup_cloud_restore_success">Резервното копие е възстановено от облака</string>
+    <string name="backup_cloud_restore_partly">Задачите са възстановени от облака (там не е намерено копие за: %1$s)</string>
+    <string name="backup_part_steps">стъпки</string>
+    <string name="backup_part_flights">полети</string>
+    <string name="backup_part_scans">сканирания</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Грешка при качване: %1$s</string>
+    <string name="backup_error_download">Грешка при изтегляне: %1$s</string>
+    <string name="backup_error_unknown">Неизвестна грешка</string>
+    <string name="backup_error_insecure_url">URL адресът трябва да започва с https://</string>
+    <string name="backup_error_authentication">Неуспешна автентикация: проверете потребителя и паролата</string>
+    <string name="backup_error_server_code">Сървърът отговори с код: %1$d</string>
+    <string name="backup_error_connection">Грешка при връзката: %1$s</string>
+    <string name="backup_destination_title">Запази резервното копие в</string>
+    <string name="backup_destination_folder">Избор на папка (устройство, SD карта, USB, Drive...)</string>
+    <string name="backup_destination_share">Изпрати към приложение</string>
+    <string name="backup_preparing">Подготовка на резервното копие...</string>
+    <string name="backup_export_failed">Експортът е неуспешен</string>
+    <string name="backup_export_saved">Резервното копие е запазено</string>
+    <string name="backup_import_success">Резервното копие е импортирано. Рестартиране...</string>
+    <string name="backup_import_failed">Импортът е неуспешен</string>
+    <string name="backup_import_title">Внимание!</string>
+    <string name="backup_import_message">Възстановяването на резервно копие ще замени текущите задачи, стъпки и сканирания с тези, които съдържа. Наистина ли искате да продължите?</string>
+    <string name="backup_import_confirm">Потвърди импорта</string>
+    <string name="backup_share_chooser_title">Експорт на резервно копие</string>
+    <string name="backup_cloud_settings_saved">Настройките на облака са запазени</string>
+    <string name="backup_cloud_secure_storage_unavailable">Защитеното хранилище не е налично, настройките не са запазени</string>
+    <string name="backup_cloud_url_empty">URL адресът не може да е празен</string>
+    <string name="backup_cloud_testing">Проверка на връзката...</string>
+    <string name="backup_cloud_connection_successful">Връзката е успешна!</string>
+</resources>

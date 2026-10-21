@@ -24,7 +24,12 @@ public final class AppLanguage {
             new AppLanguage("nl", "Nederlands"),
             new AppLanguage("tr", "Türkçe"),
             new AppLanguage("cs", "Čeština"),
-            new AppLanguage("sk", "Slovenčina")
+            new AppLanguage("sk", "Slovenčina"),
+            new AppLanguage("ro", "Română"),
+            new AppLanguage("hu", "Magyar"),
+            new AppLanguage("bg", "Български"),
+            new AppLanguage("el", "Ελληνικά"),
+            new AppLanguage("sr", "Српски")
     ));
 
     private final String tag;

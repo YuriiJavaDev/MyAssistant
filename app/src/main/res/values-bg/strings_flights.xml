@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Запис на полет</string>
+    <string name="flights_notification_channel_description">Показва се по време на запис на полет</string>
+    <string name="flights_notification_title">Записва се полет</string>
+    <string name="flights_notification_text">Докоснете, за да отворите уредите</string>
+    <string-array name="flights_cardinal_points">
+        <item>С</item>
+        <item>СИ</item>
+        <item>И</item>
+        <item>ЮИ</item>
+        <item>Ю</item>
+        <item>ЮЗ</item>
+        <item>З</item>
+        <item>СЗ</item>
+    </string-array>
+    <string name="flights_report_title">Отчет за полет</string>
+    <string name="flights_report_north">С</string>
+    <string name="flights_report_side_north">С</string>
+    <string name="flights_report_side_south">Ю</string>
+    <string name="flights_report_side_east">И</string>
+    <string name="flights_report_side_west">З</string>
+    <string name="flights_report_duration">Продължителност</string>
+    <string name="flights_report_distance">Разстояние</string>
+    <string name="flights_report_top_speed">Максимална скорост</string>
+    <string name="flights_report_average_speed">Средна скорост</string>
+    <string name="flights_report_highest_altitude">Максимална височина</string>
+    <string name="flights_report_best_climb">Най-добро изкачване</string>
+    <string name="flights_report_worst_sink">Най-лошо спускане</string>
+    <string name="flights_report_peak_load">Пиково натоварване</string>
+    <string name="flights_report_start_point">Точка на старта</string>
+    <string name="flights_report_end_point">Точка на финала</string>
+    <string name="flights_report_altitude_above_start">%1$s над старта</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s над морското равнище</string>
+    <string name="flights_report_chart_altitude_above_start">Височина (%1$s, над старта)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Височина (%1$s, над морското равнище)</string>
+    <string name="flights_report_chart_speed">Скорост спрямо земята (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Карта: Natural Earth (обществено достояние).</string>
+    <string name="flights_report_footer">%1$s Записано в MyAssistant. Само за забавление: не за навигация или безопасност.</string>
+</resources>

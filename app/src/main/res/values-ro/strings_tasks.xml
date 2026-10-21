@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Ce trebuie făcut?</string>
+    <string name="tasks_list_add">Adaugă</string>
+    <string name="tasks_list_delete_completed">Șterge finalizate</string>
+    <string name="tasks_list_clear_all">Șterge tot</string>
+    <string name="tasks_list_reminder_set">Memento setat</string>
+    <string name="tasks_statistics">Total: %1$d  Finalizate: %2$d  Rămase: %3$d  Progres: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Sarcină nouă</string>
+    <string name="tasks_dialog_title_edit">Editare sarcină</string>
+    <string name="tasks_dialog_importance">Nivel de importanță:</string>
+    <string name="tasks_dialog_deadline_label">Termen:</string>
+    <string name="tasks_dialog_deadline_select">Alegeți termenul</string>
+    <string name="tasks_dialog_reminder_label">Memento (dată și oră):</string>
+    <string name="tasks_dialog_reminder_select">Alegeți data și ora mementoului</string>
+    <string name="tasks_dialog_show_timestamps">Arată datele creării/modificării</string>
+    <string name="tasks_dialog_delete">Șterge</string>
+    <string name="tasks_dialog_save">Salvează</string>
+    <string name="tasks_dialog_clear">Golește</string>
+    <string name="tasks_importance_normal">Normală</string>
+    <string name="tasks_importance_important">Importantă</string>
+    <string name="tasks_importance_urgent">Urgentă</string>
+    <string name="tasks_toast_created">Sarcină creată</string>
+    <string name="tasks_toast_updated">Sarcină actualizată</string>
+    <string name="tasks_toast_deleted">Sarcină ștearsă</string>
+    <string name="tasks_toast_completed_deleted">Sarcinile finalizate au fost șterse</string>
+    <string name="tasks_toast_all_cleared">Toate sarcinile au fost șterse</string>
+    <string name="tasks_toast_empty_title">Descrierea sarcinii nu poate fi goală</string>
+    <string name="tasks_toast_reminder_after_deadline">Mementoul nu poate fi după termen!</string>
+    <string name="tasks_toast_reminder_in_past">Mementoul nu poate fi în trecut!</string>
+    <string name="tasks_toast_reminder_cleared">Mementoul a fost șters, deoarece termenul este mai devreme!</string>
+    <string name="tasks_toast_select_deadline_first">Alegeți mai întâi termenul!</string>
+    <string name="tasks_time_created">Creată: %1$s</string>
+    <string name="tasks_time_edited">Modificată: %1$s</string>
+    <string name="tasks_time_completed">Finalizată: %1$s</string>
+    <string name="tasks_deadline_prefixed">Termen: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — a mai rămas %2$d zi!</item>
+        <item quantity="few">%1$s — au mai rămas %2$d zile!</item>
+        <item quantity="other">%1$s — au mai rămas %2$d de zile!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — întârziere de %2$d zi!</item>
+        <item quantity="few">%1$s — întârziere de %2$d zile!</item>
+        <item quantity="other">%1$s — întârziere de %2$d de zile!</item>
+    </plurals>
+    <string name="tasks_delete_title">Confirmare ștergere</string>
+    <string name="tasks_delete_button">Șterge</string>
+    <string name="tasks_delete_nothing">Nu au fost găsite obiecte de șters!</string>
+    <string name="tasks_delete_item_message">Sigur doriți să ștergeți acest element? Acțiunea nu poate fi anulată!</string>
+    <string name="tasks_delete_cannot_be_undone">Acțiunea nu poate fi anulată!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Ștergeți %1$d sarcină finalizată?</item>
+        <item quantity="few">Ștergeți %1$d sarcini finalizate?</item>
+        <item quantity="other">Ștergeți %1$d de sarcini finalizate?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d dintre ele are încă un memento salvat.</item>
+        <item quantity="few">%1$d dintre ele au încă un memento salvat.</item>
+        <item quantity="other">%1$d dintre ele au încă un memento salvat.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Ștergeți sarcina (%1$d)?</item>
+        <item quantity="few">Ștergeți toate cele %1$d sarcini?</item>
+        <item quantity="other">Ștergeți toate cele %1$d de sarcini?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d are un memento activ.</item>
+        <item quantity="few">%1$d au mementouri active.</item>
+        <item quantity="other">%1$d au mementouri active.</item>
+    </plurals>
+    <string name="tasks_alert_title">Alertă de termen!</string>
+    <string name="tasks_alert_view_tasks">Vezi sarcinile</string>
+    <string name="tasks_alert_channel_name">Alerte pentru termenele sarcinilor</string>
+    <string name="tasks_alert_channel_description">Alerte urgente pentru termenele sarcinilor</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Numărul termenelor de sarcini depășite: %1$d.</item>
+        <item quantity="few">Numărul termenelor de sarcini depășite: %1$d.</item>
+        <item quantity="other">Numărul termenelor de sarcini depășite: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Atenție! Numărul termenelor de sarcini care necesită atenție imediată: %1$d.</item>
+        <item quantity="few">Atenție! Numărul termenelor de sarcini care necesită atenție imediată: %1$d.</item>
+        <item quantity="other">Atenție! Numărul termenelor de sarcini care necesită atenție imediată: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Atenție! Se apropie termenul sarcinii: %1$s</string>
+</resources>

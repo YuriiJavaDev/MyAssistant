@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Отпремање резервне копије у облак...</string>
+    <string name="backup_cloud_restoring">Враћање резервне копије из облака...</string>
+    <string name="backup_cloud_upload_success">Резервна копија је отпремљена у облак</string>
+    <string name="backup_cloud_restore_success">Резервна копија је враћена из облака</string>
+    <string name="backup_cloud_restore_partly">Задаци су враћени из облака (тамо није пронађена копија за: %1$s)</string>
+    <string name="backup_part_steps">кораци</string>
+    <string name="backup_part_flights">летови</string>
+    <string name="backup_part_scans">скенирања</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Грешка при отпремању: %1$s</string>
+    <string name="backup_error_download">Грешка при преузимању: %1$s</string>
+    <string name="backup_error_unknown">Непозната грешка</string>
+    <string name="backup_error_insecure_url">URL мора да почиње са https://</string>
+    <string name="backup_error_authentication">Потврда идентитета није успела: проверите корисничко име и лозинку</string>
+    <string name="backup_error_server_code">Сервер је одговорио кодом: %1$d</string>
+    <string name="backup_error_connection">Грешка везе: %1$s</string>
+    <string name="backup_destination_title">Сачувај резервну копију у</string>
+    <string name="backup_destination_folder">Изабери фасциклу (уређај, SD картица, USB, Drive...)</string>
+    <string name="backup_destination_share">Пошаљи апликацији</string>
+    <string name="backup_preparing">Припрема резервне копије...</string>
+    <string name="backup_export_failed">Извоз није успео</string>
+    <string name="backup_export_saved">Резервна копија је сачувана</string>
+    <string name="backup_import_success">Резервна копија је увезена. Поновно покретање...</string>
+    <string name="backup_import_failed">Увоз није успео</string>
+    <string name="backup_import_title">Пажња!</string>
+    <string name="backup_import_message">Враћање резервне копије замениће тренутне задатке, кораке и скенирања онима које садржи. Да ли заиста желите да наставите?</string>
+    <string name="backup_import_confirm">Потврди увоз</string>
+    <string name="backup_share_chooser_title">Извези резервну копију</string>
+    <string name="backup_cloud_settings_saved">Подешавања облака су сачувана</string>
+    <string name="backup_cloud_secure_storage_unavailable">Безбедно складиште није доступно, подешавања нису сачувана</string>
+    <string name="backup_cloud_url_empty">URL не може бити празан</string>
+    <string name="backup_cloud_testing">Провера везе...</string>
+    <string name="backup_cloud_connection_successful">Веза је успешна!</string>
+</resources>

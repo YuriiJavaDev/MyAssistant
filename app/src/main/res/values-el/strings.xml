@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Άκυρο</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="settings_alarms_title">Υπενθυμίσεις και ξυπνητήρια</string>
+    <string name="settings_alarms_subtitle">Διαστήματα, ήχοι και κατάσταση ειδοποιήσεων</string>
+    <string name="settings_display_title">Λειτουργία προβολής</string>
+    <string name="settings_display_subtitle">Ημέρα / Νύχτα / Αυτόματα</string>
+    <string name="display_mode_title">Λειτουργία προβολής</string>
+    <string name="display_mode_light">Φωτεινή (ημέρα)</string>
+    <string name="display_mode_dark">Σκούρα (νύχτα)</string>
+    <string name="display_mode_system">Συστήματος (αυτόματα)</string>
+    <string name="settings_design_title">Εμφάνιση εφαρμογής</string>
+    <string name="settings_design_subtitle">Παραλλαγές εμφάνισης της διεπαφής</string>
+    <string name="design_classic_name">Κλασική</string>
+    <string name="design_classic_about">Η αρχική εμφάνιση: κρεμ και μωβ</string>
+    <string name="design_paper_ink_name">Χαρτί και μελάνι</string>
+    <string name="design_paper_ink_about">Λεπτές γραμμές και διακριτικοί τόνοι γραφείου</string>
+    <string name="design_pastel_cloud_name">Παστέλ σύννεφο</string>
+    <string name="design_pastel_cloud_about">Απαλή, στρογγυλεμένη και ωχρή, με σύννεφα</string>
+    <string name="design_neon_arcade_name">Νέον αρκέιντ</string>
+    <string name="design_neon_arcade_about">Λαμπερό νέον, έντονη αντίθεση και ρετρό ήλιος</string>
+    <string name="design_toon_name">Καρτούν</string>
+    <string name="design_toon_about">Περιγράμματα κόμικς και χειρόγραφη γραφή</string>
+    <string name="design_biker_name">Μοτοσικλετιστής</string>
+    <string name="design_biker_about">Ακατέργαστο μέταλλο, λάστιχο και πορτοκαλί εξάτμισης</string>
+    <string name="design_cockpit_name">Πιλοτήριο</string>
+    <string name="design_cockpit_about">Αυστηρό ταμπλό με ανεμοπλάνο</string>
+    <string name="design_beach_name">Παραλία</string>
+    <string name="design_beach_about">Άμμος, λιμνοθάλασσα, κοράλλια και φοίνικες</string>
+    <string name="design_forest_name">Μαγεμένο δάσος</string>
+    <string name="design_forest_about">Περγαμηνή, χρυσός και δασικό βρύο</string>
+    <string name="design_mono_block_name">Μονομπλόκ</string>
+    <string name="design_mono_block_about">Έντονο ασπρόμαυρο με έναν κίτρινο μαρκαδόρο</string>
+    <string name="settings_permissions_title">Δικαιώματα συστήματος</string>
+    <string name="settings_permissions_subtitle">Διαχείριση πρόσβασης στο Android</string>
+    <string-array name="filter_options">
+        <item>Όλες οι εργασίες</item>
+        <item>Ενεργές</item>
+        <item>Ολοκληρωμένες</item>
+        <item>Ειδοποιήσεις</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>Α–Ω</item>
+        <item>Ω–Α</item>
+        <item>Κατάσταση</item>
+        <item>Δημιουργία</item>
+        <item>Τροποποίηση</item>
+        <item>Ολοκλήρωση</item>
+        <item>Σημασία</item>
+        <item>Προθεσμία</item>
+    </string-array>
+    <string name="scan_camera">Κάμερα</string>
+    <string name="scan_gallery">Συλλογή</string>
+    <string name="scan_clear_all">Διαγραφή όλων</string>
+    <string name="scan_cleared">Όλες οι σαρώσεις διαγράφηκαν</string>
+    <string name="scan_empty">Δεν υπάρχουν ακόμη έγγραφα. Φωτογραφίστε μια σελίδα ή επιλέξτε φωτογραφία από τη συλλογή.</string>
+    <string name="scan_auto">Αυτόμ.</string>
+    <string name="scan_reset">Επαναφορά</string>
+    <string name="scan_next">Επόμενο</string>
+    <string name="scan_back">Πίσω</string>
+    <string name="scan_save">Αποθήκ.</string>
+    <string name="scan_rotate">Περιστροφή</string>
+    <string name="scan_paper">Χαρτί</string>
+    <string name="scan_filter_color">Έγχρωμο</string>
+    <string name="scan_filter_gray">Γκρι</string>
+    <string name="scan_filter_bw">Α/Μ</string>
+    <string name="scan_tune">Φως και αντίθεση</string>
+    <string name="scan_shadows">Αφαίρεση σκιών</string>
+    <string name="scan_brightness">Φωτεινότητα</string>
+    <string name="scan_contrast">Αντίθεση</string>
+    <string name="scan_sharpen">Ευκρίνεια</string>
+    <string name="scan_page_saved">Η σελίδα αποθηκεύτηκε</string>
+    <string name="scan_next_page_question">Να προστεθεί άλλη σελίδα στο έγγραφο;</string>
+    <string name="scan_page_label">Σελίδα %d</string>
+    <string name="scan_done">Τέλος</string>
+    <string name="scan_add_page">Προσθήκη σελίδας</string>
+    <string name="scan_share_pdf">Αποστολή PDF</string>
+    <string name="scan_pages_empty">Αυτό το έγγραφο δεν έχει σελίδες.</string>
+    <string name="scan_saved_to_device">Το αρχείο αποθηκεύτηκε</string>
+    <string name="scan_share_title">Αποστολή εγγράφου</string>
+    <string name="scan_rename_title">Μετονομασία εγγράφου</string>
+    <string name="scan_rename_confirm">Μετονομασία</string>
+    <string name="scan_error_load">Δεν είναι δυνατό το άνοιγμα αυτής της φωτογραφίας</string>
+    <string name="scan_error_preview">Δεν υπάρχει αρκετή μνήμη για την προεπισκόπηση</string>
+    <string name="scan_error_save">Δεν είναι δυνατή η αποθήκευση της σάρωσης</string>
+    <string name="scan_error_export">Δεν είναι δυνατή η προετοιμασία του αρχείου</string>
+    <string name="scan_error_no_camera">Δεν βρέθηκε εφαρμογή κάμερας</string>
+    <string name="scan_error_no_viewer">Δεν βρέθηκε εφαρμογή για το άνοιγμα της εικόνας</string>
+    <string name="scan_error_no_app">Δεν βρέθηκε εφαρμογή για την αποστολή</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d σελίδα</item>
+        <item quantity="other">%d σελίδες</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Σελίδες</item>
+        <item>Αποστολή ως PDF</item>
+        <item>Αποστολή ως JPEG</item>
+        <item>Αποθήκευση PDF σε…</item>
+        <item>Μετονομασία</item>
+        <item>Διαγραφή</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Προβολή</item>
+        <item>Αποθήκευση JPEG σε…</item>
+        <item>Μετακίνηση πάνω</item>
+        <item>Μετακίνηση κάτω</item>
+        <item>Διαγραφή σελίδας</item>
+    </string-array>
+    <string name="weather_city_hint">Όνομα πόλης σε οποιαδήποτε γλώσσα</string>
+    <string name="weather_search">Αναζήτηση</string>
+    <string name="weather_my_location">Η θέση μου</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Αίσθηση</string>
+    <string name="weather_humidity">Υγρασία</string>
+    <string name="weather_wind">Άνεμος</string>
+    <string name="weather_today_range">Σήμερα</string>
+    <string name="weather_units">Μονάδες</string>
+    <string name="weather_units_temperature">Θερμοκρασία</string>
+    <string name="weather_units_wind">Ταχύτητα ανέμου</string>
+    <string name="weather_unit_celsius">Κελσίου (°C)</string>
+    <string name="weather_unit_fahrenheit">Φαρενάιτ (°F)</string>
+    <string name="weather_unit_ms">Μέτρα ανά δευτερόλεπτο (m/s)</string>
+    <string name="weather_unit_kmh">Χιλιόμετρα ανά ώρα (km/h)</string>
+    <string name="weather_moon_caption">%1$s · φωτισμένη %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Φόρτωση καιρού…</string>
+    <string name="weather_location_needed">Επιτρέψτε την πρόσβαση στην προσεγγιστική τοποθεσία για να βλέπετε τον καιρό εκεί που βρίσκεστε ή αναζητήστε μια πόλη.</string>
+    <string name="weather_allow">Να επιτραπεί</string>
+    <string name="weather_open_settings">Άνοιγμα ρυθμίσεων εφαρμογής</string>
+    <string name="weather_attribution">Καιρός: Open-Meteo.com · Τοποθεσίες: © συντελεστές του OpenStreetMap</string>
+    <string name="weather_choose_city">Επιλέξτε πόλη</string>
+    <string name="steps_today">Σήμερα</string>
+    <string name="steps_unit">βήματα</string>
+    <string name="steps_walk_run">Περπάτημα %1$s · Τρέξιμο %2$s</string>
+    <string name="steps_period">Περίοδος</string>
+    <string name="steps_last_7">7 ημέρες</string>
+    <string name="steps_last_30">30 ημέρες</string>
+    <string name="steps_this_month">Μήνας</string>
+    <string name="steps_pick_dates">Επιλογή ημερομηνιών</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Σύνολο βημάτων</string>
+    <string name="steps_distance">Απόσταση</string>
+    <string name="steps_average">Μέσος όρος ημέρας</string>
+    <string name="steps_best_day">Καλύτερη ημέρα</string>
+    <string name="steps_walking">Βήματα περπατήματος</string>
+    <string name="steps_running">Βήματα τρεξίματος</string>
+    <string name="steps_active_days">Ημέρες με βήματα</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d από %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Δεν καταγράφηκαν βήματα σε αυτή την περίοδο</string>
+    <string name="steps_settings">Ρυθμίσεις βημάτων</string>
+    <string name="steps_settings_title">Μήκος βήματος</string>
+    <string name="steps_walk_length">Μήκος βήματος στο περπάτημα, cm</string>
+    <string name="steps_run_length">Μήκος βήματος στο τρέξιμο, cm</string>
+    <string name="steps_run_cadence">Το τρέξιμο ξεκινά από, βήματα ανά λεπτό</string>
+    <string name="steps_run_cadence_hint">Τα βήματα με αυτόν τον ρυθμό ή ταχύτερα μετρούν ως τρέξιμο.</string>
+    <string name="steps_defaults">Προεπιλογή</string>
+    <string name="steps_save">Αποθήκ.</string>
+    <string name="steps_invalid_length">Εισαγάγετε %1$d–%2$d</string>
+    <string name="steps_measure_title">Πώς να μετρήσετε το μήκος βήματος</string>
+    <string name="steps_measure_text">1. Πριν από το πρώτο βήμα, σημαδέψτε τη γραμμή εκκίνησης στο μπροστινό μέρος του παπουτσιού.\n2. Κάντε 10 ήρεμα βήματα με τον συνηθισμένο σας ρυθμό.\n3. Μετρήστε σε εκατοστά την απόσταση από τη γραμμή εκκίνησης ως το ίδιο σημείο του παπουτσιού μετά το 10ο βήμα.\n4. Διαιρέστε με το δέκα.\n5. Επαναλάβετε μερικές φορές και εισαγάγετε τον μέσο όρο.\n\nΚάντε το ίδιο με τον συνηθισμένο σας ρυθμό τρεξίματος για να βρείτε το μήκος βήματος στο τρέξιμο.</string>
+    <string name="steps_no_sensor">Αυτό το τηλέφωνο δεν διαθέτει αισθητήρα βημάτων.</string>
+    <string name="steps_permission_needed">Επιτρέψτε την πρόσβαση στη σωματική δραστηριότητα, ώστε το τηλέφωνο να μετρά τα βήματά σας.</string>
+    <string name="steps_allow">Να επιτραπεί</string>
+    <string name="steps_open_settings">Άνοιγμα ρυθμίσεων εφαρμογής</string>
+    <string name="currency_amount_hint">Ποσό</string>
+    <string name="currency_swap">Εναλλαγή ⇅</string>
+    <string name="currency_refresh">Ανανέωση ισοτιμιών</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Οι ισοτιμίες ενημερώθηκαν %1$s</string>
+    <string name="currency_outdated">Χωρίς internet. Εμφανίζονται αποθηκευμένες ισοτιμίες, ενημερωμένες %1$s</string>
+    <string name="currency_loading">Φόρτωση ισοτιμιών…</string>
+    <string name="currency_unavailable">Οι ισοτιμίες δεν είναι διαθέσιμες. Ελέγξτε τη σύνδεση στο internet και ανανεώστε.</string>
+    <string name="currency_invalid_amount">Εισαγάγετε ένα ποσό</string>
+    <string name="currency_attribution">Ισοτιμίες από το Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Επιστ</string>
+    <string name="calculator_basic">Βασ</string>
+    <string name="calculator_degrees">Μοίρ</string>
+    <string name="calculator_radians">Ακτ</string>
+    <string name="calculator_history">Ιστορικό</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Εγγραφή</string>
+    <string name="flights_stop">Διακοπή</string>
+    <string name="flights_units">Μονάδες</string>
+    <string name="flights_journal">Αρχείο</string>
+    <string name="flights_journal_title">Ημερολόγιο πτήσεων</string>
+    <string name="flights_journal_empty">Δεν έχουν καταγραφεί ακόμη πτήσεις.</string>
+    <string name="flights_journal_in_progress">Αυτή η πτήση καταγράφεται ακόμη.</string>
+    <string name="flights_report_open">Άνοιγμα αναφοράς</string>
+    <string name="flights_report_share">Αποστολή αναφοράς</string>
+    <string name="flights_report_delete">Διαγραφή πτήσης</string>
+    <string name="flights_report_failed">Δεν ήταν δυνατή η προετοιμασία της αναφοράς.</string>
+    <string name="flights_report_no_viewer">Δεν βρέθηκε εφαρμογή για το άνοιγμα αρχείων PDF.</string>
+    <string name="flights_delete_title">Να διαγραφεί αυτή η πτήση;</string>
+    <string name="flights_delete_message">Η διαδρομή και η αναφορά θα αφαιρεθούν οριστικά. Πριν από αυτό μπορείτε να στείλετε την αναφορά κάπου, για παράδειγμα σε USB stick, σε υπολογιστή ή στο Google Drive.</string>
+    <string name="flights_delete_save_first">Αποθήκευση αναφοράς και διαγραφή</string>
+    <string name="flights_delete_without_saving">Διαγραφή χωρίς αποθήκευση</string>
+    <string name="flights_delete_after_share_message">Αν η αναφορά έφτασε εκεί που θέλατε, μπορείτε τώρα να διαγράψετε την πτήση.</string>
+    <string name="flights_delete_after_share_confirm">Διαγραφή πτήσης</string>
+    <string name="flights_delete_keep">Διατήρηση πτήσης</string>
+    <string name="flights_units_report_limit">Όριο αναφορών</string>
+    <string name="flights_units_report_limit_hint">Μέγιστος αριθμός αναφορών PDF στο ημερολόγιο, 0 για απεριόριστες</string>
+    <string name="flights_limit_full_title">Συμπληρώθηκε το όριο αναφορών PDF</string>
+    <string name="flights_limit_full_message">Το ημερολόγιο περιέχει %1$d αναφορές, που είναι το όριο. Για να καταγράψετε νέα πτήση, διαγράψτε τουλάχιστον μία πτήση από το ημερολόγιο. Πριν από αυτό μπορείτε να αποθηκεύσετε την αναφορά της σε USB stick, σε υπολογιστή ή στο Google Drive.</string>
+    <string name="flights_limit_warning_title">Πλησιάζετε το όριο αναφορών PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Μπορείτε να καταγράψετε ακόμη %d πτήση. Διαγράψτε από το ημερολόγιο τις παλιές πτήσεις.</item>
+        <item quantity="other">Μπορείτε να καταγράψετε ακόμη %d πτήσεις. Διαγράψτε από το ημερολόγιο τις παλιές πτήσεις.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Άνοιγμα ημερολογίου</string>
+    <string name="flights_journal_line">%1$s · μέγ. %2$s · ύψος μέγ. %3$s</string>
+    <string name="flights_units_speed">Ταχύτητα και απόσταση</string>
+    <string name="flights_units_altitude">Ύψος</string>
+    <string name="flights_unit_kmh">Χιλιόμετρα ανά ώρα (km/h)</string>
+    <string name="flights_unit_knots">Κόμβοι (kt, ναυτικά μίλια)</string>
+    <string name="flights_unit_ms">Μέτρα ανά δευτερόλεπτο (m/s)</string>
+    <string name="flights_unit_metres">Μέτρα (m)</string>
+    <string name="flights_unit_feet">Πόδια (ft)</string>
+    <string name="flights_units_climb">Ρυθμός ανόδου</string>
+    <string name="flights_unit_fpm">Πόδια ανά λεπτό (ft/min)</string>
+    <string name="flights_altitude_zero">Μηδέν</string>
+    <string name="flights_altitude_sea">Πάνω από τη θάλασσα</string>
+    <string name="flights_altitude_start">Πάνω από εκκίνηση · «Μηδέν» παρατ. = αναίρεση</string>
+    <string name="flights_sound_on">Ήχος: ναι</string>
+    <string name="flights_sound_off">Ήχος: όχι</string>
+    <string name="flights_sound_tune">Ρύθμιση</string>
+    <string name="flights_sound_climb_start">Τα μπιπ ξεκινούν σε άνοδο %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Τα χαμηλά μπιπ ξεκινούν σε κάθοδο %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Συνεχής συναγερμός σε κάθοδο %1$.1f m/s</string>
+    <string name="flights_speed_label">Ταχύτητα</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Διάρκεια πτήσης</string>
+    <string name="flights_distance">Απόσταση</string>
+    <string name="flights_max_speed">Μέγιστη ταχύτητα</string>
+    <string name="flights_avg_speed">Μέση ταχύτητα</string>
+    <string name="flights_max_altitude">Μέγιστο ύψος</string>
+    <string name="flights_climb_rate">Ρυθμός ανόδου</string>
+    <string name="flights_max_g">Μέγιστο φορτίο</string>
+    <string name="flights_status_waiting">Αναμονή σήματος GPS…</string>
+    <string name="flights_location_needed">Επιτρέψτε την πρόσβαση στην ακριβή τοποθεσία για να καταγράφονται η ταχύτητα, το ύψος και η διαδρομή.</string>
+    <string name="flights_allow">Να επιτραπεί</string>
+    <string name="flights_open_settings">Άνοιγμα ρυθμίσεων εφαρμογής</string>
+    <string name="flights_gps_off">Ενεργοποιήστε τις υπηρεσίες τοποθεσίας (GPS) για να καταγράψετε πτήση.</string>
+    <string name="flights_disclaimer">Μόνο για διασκέδαση και περιέργεια. Μην βασίζεστε σε αυτά τα όργανα για πλοήγηση ή για οτιδήποτε αφορά την ασφάλεια.</string>
+</resources>

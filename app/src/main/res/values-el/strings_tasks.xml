@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Τι πρέπει να γίνει;</string>
+    <string name="tasks_list_add">Προσθήκη</string>
+    <string name="tasks_list_delete_completed">Διαγρ. τελειωμένων</string>
+    <string name="tasks_list_clear_all">Διαγραφή όλων</string>
+    <string name="tasks_list_reminder_set">Η υπενθύμιση ορίστηκε</string>
+    <string name="tasks_statistics">Σύνολο: %1$d  Ολοκληρωμένες: %2$d  Απομένουν: %3$d  Πρόοδος: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Νέα εργασία</string>
+    <string name="tasks_dialog_title_edit">Επεξεργασία εργασίας</string>
+    <string name="tasks_dialog_importance">Επίπεδο σημασίας:</string>
+    <string name="tasks_dialog_deadline_label">Προθεσμία:</string>
+    <string name="tasks_dialog_deadline_select">Επιλέξτε προθεσμία</string>
+    <string name="tasks_dialog_reminder_label">Υπενθύμιση (ημερομηνία και ώρα):</string>
+    <string name="tasks_dialog_reminder_select">Επιλέξτε ημερομηνία και ώρα υπενθύμισης</string>
+    <string name="tasks_dialog_show_timestamps">Εμφάνιση ημερομηνιών δημιουργίας/τροποποίησης</string>
+    <string name="tasks_dialog_delete">Διαγραφή</string>
+    <string name="tasks_dialog_save">Αποθήκ.</string>
+    <string name="tasks_dialog_clear">Καθαρισμός</string>
+    <string name="tasks_importance_normal">Κανονική</string>
+    <string name="tasks_importance_important">Σημαντική</string>
+    <string name="tasks_importance_urgent">Επείγουσα</string>
+    <string name="tasks_toast_created">Η εργασία δημιουργήθηκε</string>
+    <string name="tasks_toast_updated">Η εργασία ενημερώθηκε</string>
+    <string name="tasks_toast_deleted">Η εργασία διαγράφηκε</string>
+    <string name="tasks_toast_completed_deleted">Οι ολοκληρωμένες εργασίες διαγράφηκαν</string>
+    <string name="tasks_toast_all_cleared">Όλες οι εργασίες διαγράφηκαν</string>
+    <string name="tasks_toast_empty_title">Η περιγραφή της εργασίας δεν μπορεί να είναι κενή</string>
+    <string name="tasks_toast_reminder_after_deadline">Η υπενθύμιση δεν μπορεί να είναι μετά την προθεσμία!</string>
+    <string name="tasks_toast_reminder_in_past">Η υπενθύμιση δεν μπορεί να είναι στο παρελθόν!</string>
+    <string name="tasks_toast_reminder_cleared">Η υπενθύμιση διαγράφηκε επειδή η προθεσμία είναι νωρίτερα!</string>
+    <string name="tasks_toast_select_deadline_first">Επιλέξτε πρώτα προθεσμία!</string>
+    <string name="tasks_time_created">Δημιουργία: %1$s</string>
+    <string name="tasks_time_edited">Τροποποίηση: %1$s</string>
+    <string name="tasks_time_completed">Ολοκλήρωση: %1$s</string>
+    <string name="tasks_deadline_prefixed">Προθεσμία: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — απομένει %2$d ημέρα!</item>
+        <item quantity="other">%1$s — απομένουν %2$d ημέρες!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — καθυστέρηση %2$d ημέρας!</item>
+        <item quantity="other">%1$s — καθυστέρηση %2$d ημερών!</item>
+    </plurals>
+    <string name="tasks_delete_title">Επιβεβαίωση διαγραφής</string>
+    <string name="tasks_delete_button">Διαγραφή</string>
+    <string name="tasks_delete_nothing">Δεν βρέθηκαν αντικείμενα για διαγραφή!</string>
+    <string name="tasks_delete_item_message">Θέλετε σίγουρα να διαγράψετε αυτό το στοιχείο; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!</string>
+    <string name="tasks_delete_cannot_be_undone">Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Να διαγραφεί %1$d ολοκληρωμένη εργασία;</item>
+        <item quantity="other">Να διαγραφούν %1$d ολοκληρωμένες εργασίες;</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d από αυτές έχει ακόμη αποθηκευμένη υπενθύμιση.</item>
+        <item quantity="other">%1$d από αυτές έχουν ακόμη αποθηκευμένες υπενθυμίσεις.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Να διαγραφεί η εργασία (%1$d);</item>
+        <item quantity="other">Να διαγραφούν και οι %1$d εργασίες;</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d έχει ενεργή υπενθύμιση.</item>
+        <item quantity="other">%1$d έχουν ενεργές υπενθυμίσεις.</item>
+    </plurals>
+    <string name="tasks_alert_title">Ειδοποίηση προθεσμίας!</string>
+    <string name="tasks_alert_view_tasks">Προβολή εργασιών</string>
+    <string name="tasks_alert_channel_name">Ειδοποιήσεις προθεσμιών εργασιών</string>
+    <string name="tasks_alert_channel_description">Επείγουσες ειδοποιήσεις για προθεσμίες εργασιών</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Αριθμός εκπρόθεσμων προθεσμιών εργασιών: %1$d.</item>
+        <item quantity="other">Αριθμός εκπρόθεσμων προθεσμιών εργασιών: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Προσοχή! Αριθμός προθεσμιών εργασιών που χρειάζονται άμεση προσοχή: %1$d.</item>
+        <item quantity="other">Προσοχή! Αριθμός προθεσμιών εργασιών που χρειάζονται άμεση προσοχή: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Προσοχή! Πλησιάζει η προθεσμία της εργασίας: %1$s</string>
+</resources>
