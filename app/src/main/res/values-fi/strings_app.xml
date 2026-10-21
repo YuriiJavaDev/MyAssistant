@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Tehtävät</string>
+    <string name="app_tab_weather">Sää</string>
+    <string name="app_tab_exchange">Kurssit</string>
+    <string name="app_tab_calculator">Laskin</string>
+    <string name="app_tab_scan">Skanni</string>
+    <string name="app_tab_steps">Askeleet</string>
+    <string name="app_tab_flights">Lennot</string>
+    <string name="app_menu_settings">Asetukset</string>
+    <string name="app_menu_options">Valinnat</string>
+    <string name="app_notifications_disabled">Ilmoitukset ovat pois päältä: muistutuksia ei näytetä</string>
+    <string name="app_overdue_tasks_format">Myöhästyneet tehtävät: %1$d</string>
+    <string name="app_exact_alarm_already_granted">Tarkkojen herätysten lupa on jo annettu</string>
+    <string name="app_alarm_title">Muistutukset ja herätykset</string>
+    <string name="app_alarm_voice_alert">Äänihälytys (TTS)</string>
+    <string name="app_alarm_full_screen">Koko näytön ikkuna</string>
+    <string name="app_alarm_grant_exact">Anna lupa tarkkoihin herätyksiin</string>
+    <string name="backup_menu_export">Vie varmuuskopio</string>
+    <string name="backup_menu_import">Tuo varmuuskopio</string>
+    <string name="backup_menu_cloud_settings">Pilviasetukset ja automaattinen kopio</string>
+    <string name="backup_menu_cloud_save">Tallenna pilveen nyt</string>
+    <string name="backup_menu_cloud_restore">Palauta pilvestä</string>
+    <string name="backup_cloud_username_hint">Käyttäjätunnus/Sähköposti</string>
+    <string name="backup_cloud_password_hint">Salasana</string>
+    <string name="backup_cloud_auto_backup">Ota päivittäinen automaattinen kopio käyttöön</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Kun automaattinen kopio on päällä, pilvitallennustilasi tietokantatiedosto korvataan oletuksena kerran päivässä.</string>
+    <string name="backup_cloud_test">Testaa</string>
+    <string name="backup_cloud_save">Tallenna</string>
+    <string name="settings_language_title">Kieli</string>
+    <string name="settings_language_subtitle">Sovelluksen kieli</string>
+    <string name="language_system_default">Järjestelmän oletus</string>
+</resources>

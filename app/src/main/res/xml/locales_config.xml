@@ -24,4 +24,5 @@
     <locale android:name="sv" />
     <locale android:name="da" />
     <locale android:name="nb" />
+    <locale android:name="fi" />
 </locale-config>

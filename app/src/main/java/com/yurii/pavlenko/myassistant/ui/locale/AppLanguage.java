@@ -33,7 +33,8 @@ public final class AppLanguage {
             new AppLanguage("hr", "Hrvatski"),
             new AppLanguage("sv", "Svenska"),
             new AppLanguage("da", "Dansk"),
-            new AppLanguage("nb", "Norsk bokmål")
+            new AppLanguage("nb", "Norsk bokmål"),
+            new AppLanguage("fi", "Suomi")
     ));
 
     private final String tag;

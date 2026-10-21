@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Peruuta</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Asetukset</string>
+    <string name="settings_alarms_title">Muistutukset ja herätykset</string>
+    <string name="settings_alarms_subtitle">Välit, äänet ja ilmoitusten tila</string>
+    <string name="settings_display_title">Näyttötila</string>
+    <string name="settings_display_subtitle">Päivä / Yö / Auto</string>
+    <string name="display_mode_title">Näyttötila</string>
+    <string name="display_mode_light">Vaalea (päivä)</string>
+    <string name="display_mode_dark">Tumma (yö)</string>
+    <string name="display_mode_system">Järjestelmä (auto)</string>
+    <string name="settings_design_title">Sovelluksen ulkoasu</string>
+    <string name="settings_design_subtitle">Käyttöliittymän ulkoasuvaihtoehdot</string>
+    <string name="design_classic_name">Klassinen</string>
+    <string name="design_classic_about">Alkuperäinen ulkoasu: kerma ja violetti</string>
+    <string name="design_paper_ink_name">Paperi ja muste</string>
+    <string name="design_paper_ink_about">Ohuita viivoja ja hillittyjä toimistosävyjä</string>
+    <string name="design_pastel_cloud_name">Pastellipilvi</string>
+    <string name="design_pastel_cloud_about">Pehmeä, pyöristetty ja vaalea, pilvillä</string>
+    <string name="design_neon_arcade_name">Neonpeliluola</string>
+    <string name="design_neon_arcade_about">Hehkuva neon, vahva kontrasti ja retroaurinko</string>
+    <string name="design_toon_name">Sarjakuva</string>
+    <string name="design_toon_about">Sarjakuvamaiset ääriviivat ja käsinkirjoitus</string>
+    <string name="design_biker_name">Moottoripyöräilijä</string>
+    <string name="design_biker_about">Raakaa metallia, kumia ja pakoputken oranssia</string>
+    <string name="design_cockpit_name">Ohjaamo</string>
+    <string name="design_cockpit_about">Ankara mittaristo purjekoneella</string>
+    <string name="design_beach_name">Ranta</string>
+    <string name="design_beach_about">Hiekkaa, laguuni, koralleja ja palmuja</string>
+    <string name="design_forest_name">Lumottu metsä</string>
+    <string name="design_forest_about">Pergamenttia, kultaa ja metsän sammalta</string>
+    <string name="design_mono_block_name">Monoblokki</string>
+    <string name="design_mono_block_about">Terävä mustavalkoinen yhdellä keltaisella korostuskynällä</string>
+    <string name="settings_permissions_title">Järjestelmän käyttöoikeudet</string>
+    <string name="settings_permissions_subtitle">Hallitse Androidin käyttöoikeuksia</string>
+    <string-array name="filter_options">
+        <item>Kaikki tehtävät</item>
+        <item>Aktiiviset</item>
+        <item>Valmiit</item>
+        <item>Varoitukset</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Ö</item>
+        <item>Ö–A</item>
+        <item>Tila</item>
+        <item>Luotu</item>
+        <item>Muokattu</item>
+        <item>Valmistunut</item>
+        <item>Tärkeys</item>
+        <item>Määräaika</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galleria</string>
+    <string name="scan_clear_all">Tyhjennä kaikki</string>
+    <string name="scan_cleared">Kaikki skannaukset poistettu</string>
+    <string name="scan_empty">Ei vielä asiakirjoja. Ota kuva sivusta tai valitse kuva galleriasta.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Palauta</string>
+    <string name="scan_next">Seuraava</string>
+    <string name="scan_back">Takaisin</string>
+    <string name="scan_save">Tallenna</string>
+    <string name="scan_rotate">Käännä</string>
+    <string name="scan_paper">Paperi</string>
+    <string name="scan_filter_color">Väri</string>
+    <string name="scan_filter_gray">Harmaa</string>
+    <string name="scan_filter_bw">M/V</string>
+    <string name="scan_tune">Valo ja kontrasti</string>
+    <string name="scan_shadows">Varjojen poisto</string>
+    <string name="scan_brightness">Kirkkaus</string>
+    <string name="scan_contrast">Kontrasti</string>
+    <string name="scan_sharpen">Terävyys</string>
+    <string name="scan_page_saved">Sivu tallennettu</string>
+    <string name="scan_next_page_question">Lisätäänkö asiakirjaan toinen sivu?</string>
+    <string name="scan_page_label">Sivu %d</string>
+    <string name="scan_done">Valmis</string>
+    <string name="scan_add_page">Lisää sivu</string>
+    <string name="scan_share_pdf">Jaa PDF</string>
+    <string name="scan_pages_empty">Tässä asiakirjassa ei ole sivuja.</string>
+    <string name="scan_saved_to_device">Tiedosto tallennettu</string>
+    <string name="scan_share_title">Jaa asiakirja</string>
+    <string name="scan_rename_title">Nimeä asiakirja uudelleen</string>
+    <string name="scan_rename_confirm">Nimeä uudelleen</string>
+    <string name="scan_error_load">Tätä kuvaa ei voi avata</string>
+    <string name="scan_error_preview">Muisti ei riitä esikatseluun</string>
+    <string name="scan_error_save">Skannausta ei voitu tallentaa</string>
+    <string name="scan_error_export">Tiedostoa ei voitu valmistella</string>
+    <string name="scan_error_no_camera">Kamerasovellusta ei löytynyt</string>
+    <string name="scan_error_no_viewer">Kuvan avaavaa sovellusta ei löytynyt</string>
+    <string name="scan_error_no_app">Jakamiseen sopivaa sovellusta ei löytynyt</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d sivu</item>
+        <item quantity="other">%d sivua</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Sivut</item>
+        <item>Jaa PDF:nä</item>
+        <item>Jaa JPEG:nä</item>
+        <item>Tallenna PDF kohteeseen…</item>
+        <item>Nimeä uudelleen</item>
+        <item>Poista</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Näytä</item>
+        <item>Tallenna JPEG kohteeseen…</item>
+        <item>Siirrä ylös</item>
+        <item>Siirrä alas</item>
+        <item>Poista sivu</item>
+    </string-array>
+    <string name="weather_city_hint">Kaupungin nimi millä tahansa kielellä</string>
+    <string name="weather_search">Hae</string>
+    <string name="weather_my_location">Sijaintini</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Tuntuu kuin</string>
+    <string name="weather_humidity">Kosteus</string>
+    <string name="weather_wind">Tuuli</string>
+    <string name="weather_today_range">Tänään</string>
+    <string name="weather_units">Yksiköt</string>
+    <string name="weather_units_temperature">Lämpötila</string>
+    <string name="weather_units_wind">Tuulen nopeus</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metriä sekunnissa (m/s)</string>
+    <string name="weather_unit_kmh">Kilometriä tunnissa (km/h)</string>
+    <string name="weather_moon_caption">%1$s · valaistu %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Ladataan säätä…</string>
+    <string name="weather_location_needed">Salli pääsy likimääräiseen sijaintiin nähdäksesi sään siellä, missä olet, tai hae kaupunkia.</string>
+    <string name="weather_allow">Salli</string>
+    <string name="weather_open_settings">Avaa sovelluksen asetukset</string>
+    <string name="weather_attribution">Sää: Open-Meteo.com · Paikat: © OpenStreetMapin tekijät</string>
+    <string name="weather_choose_city">Valitse kaupunki</string>
+    <string name="steps_today">Tänään</string>
+    <string name="steps_unit">askelta</string>
+    <string name="steps_walk_run">Kävely %1$s · Juoksu %2$s</string>
+    <string name="steps_period">Jakso</string>
+    <string name="steps_last_7">7 päivää</string>
+    <string name="steps_last_30">30 päivää</string>
+    <string name="steps_this_month">Tämä kk</string>
+    <string name="steps_pick_dates">Valitse päivät</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Askeleita yhteensä</string>
+    <string name="steps_distance">Matka</string>
+    <string name="steps_average">Keskiarvo päivässä</string>
+    <string name="steps_best_day">Paras päivä</string>
+    <string name="steps_walking">Kävelyaskeleet</string>
+    <string name="steps_running">Juoksuaskeleet</string>
+    <string name="steps_active_days">Päiviä askelilla</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Tältä jaksolta ei ole kirjattu askelia</string>
+    <string name="steps_settings">Askelasetukset</string>
+    <string name="steps_settings_title">Askelpituus</string>
+    <string name="steps_walk_length">Askelpituus kävellessä, cm</string>
+    <string name="steps_run_length">Askelpituus juostessa, cm</string>
+    <string name="steps_run_cadence">Juoksu alkaa, askelta minuutissa</string>
+    <string name="steps_run_cadence_hint">Tällä tahdilla tai nopeammin otetut askeleet lasketaan juoksuksi.</string>
+    <string name="steps_defaults">Oletus</string>
+    <string name="steps_save">Tallenna</string>
+    <string name="steps_invalid_length">Anna arvo väliltä %1$d–%2$d</string>
+    <string name="steps_measure_title">Näin mittaat askelpituutesi</string>
+    <string name="steps_measure_text">1. Merkitse lähtöviiva kengän kärjen kohdalle ennen ensimmäistä askelta.\n2. Ota 10 rauhallista askelta tavallisella tahdillasi.\n3. Mittaa senttimetreinä etäisyys lähtöviivasta samaan kengän kärkeen 10. askeleen jälkeen.\n4. Jaa kymmenellä.\n5. Toista muutaman kerran ja anna keskiarvo.\n\nToimi samoin tavallisella juoksutahdillasi saadaksesi askelpituuden juostessa.</string>
+    <string name="steps_no_sensor">Tässä puhelimessa ei ole askelmittaria.</string>
+    <string name="steps_permission_needed">Salli pääsy fyysiseen aktiivisuuteen, jotta puhelin voi laskea askeleesi.</string>
+    <string name="steps_allow">Salli</string>
+    <string name="steps_open_settings">Avaa sovelluksen asetukset</string>
+    <string name="currency_amount_hint">Summa</string>
+    <string name="currency_swap">Vaihda ⇅</string>
+    <string name="currency_refresh">Päivitä kurssit</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurssit päivitetty %1$s</string>
+    <string name="currency_outdated">Ei internetyhteyttä. Näytetään tallennetut kurssit, päivitetty %1$s</string>
+    <string name="currency_loading">Ladataan kursseja…</string>
+    <string name="currency_unavailable">Kurssit eivät ole saatavilla. Tarkista internetyhteys ja päivitä.</string>
+    <string name="currency_invalid_amount">Anna summa</string>
+    <string name="currency_attribution">Kurssit: Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Tiet</string>
+    <string name="calculator_basic">Perus</string>
+    <string name="calculator_degrees">Aste</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Historia</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Aloita tallennus</string>
+    <string name="flights_stop">Lopeta tallennus</string>
+    <string name="flights_units">Yksiköt</string>
+    <string name="flights_journal">Loki</string>
+    <string name="flights_journal_title">Lentopäiväkirja</string>
+    <string name="flights_journal_empty">Lentoja ei ole vielä tallennettu.</string>
+    <string name="flights_journal_in_progress">Tätä lentoa tallennetaan vielä.</string>
+    <string name="flights_report_open">Avaa raportti</string>
+    <string name="flights_report_share">Jaa raportti</string>
+    <string name="flights_report_delete">Poista lento</string>
+    <string name="flights_report_failed">Raporttia ei voitu valmistella.</string>
+    <string name="flights_report_no_viewer">PDF-tiedostoja avaavaa sovellusta ei löytynyt.</string>
+    <string name="flights_delete_title">Poistetaanko tämä lento?</string>
+    <string name="flights_delete_message">Reitti ja raportti poistetaan pysyvästi. Ennen sitä voit lähettää raportin jonnekin, esimerkiksi USB-tikulle, tietokoneelle tai Google Driveen.</string>
+    <string name="flights_delete_save_first">Tallenna raportti ja poista sitten</string>
+    <string name="flights_delete_without_saving">Poista tallentamatta</string>
+    <string name="flights_delete_after_share_message">Jos raportti päätyi haluamaasi paikkaan, voit nyt poistaa lennon.</string>
+    <string name="flights_delete_after_share_confirm">Poista lento</string>
+    <string name="flights_delete_keep">Säilytä lento</string>
+    <string name="flights_units_report_limit">Raporttiraja</string>
+    <string name="flights_units_report_limit_hint">PDF-raporttien enimmäismäärä lokissa, 0 = rajoittamaton</string>
+    <string name="flights_limit_full_title">PDF-raporttien raja saavutettu</string>
+    <string name="flights_limit_full_message">Loki sisältää %1$d raporttia, mikä on raja. Poista lokista vähintään yksi lento tallentaaksesi uuden. Ennen sitä voit tallentaa sen raportin USB-tikulle, tietokoneelle tai Google Driveen.</string>
+    <string name="flights_limit_warning_title">PDF-raporttien raja lähestyy!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Voit tallentaa vielä %d lennon. Poista vanhentuneet lennot lokista.</item>
+        <item quantity="other">Voit tallentaa vielä %d lentoa. Poista vanhentuneet lennot lokista.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Avaa loki</string>
+    <string name="flights_journal_line">%1$s · enint. %2$s · korkeus enint. %3$s</string>
+    <string name="flights_units_speed">Nopeus ja matka</string>
+    <string name="flights_units_altitude">Korkeus</string>
+    <string name="flights_unit_kmh">Kilometriä tunnissa (km/h)</string>
+    <string name="flights_unit_knots">Solmua (kt, meripeninkulmaa)</string>
+    <string name="flights_unit_ms">Metriä sekunnissa (m/s)</string>
+    <string name="flights_unit_metres">Metriä (m)</string>
+    <string name="flights_unit_feet">Jalkaa (ft)</string>
+    <string name="flights_units_climb">Nousunopeus</string>
+    <string name="flights_unit_fpm">Jalkaa minuutissa (ft/min)</string>
+    <string name="flights_altitude_zero">Nollaus</string>
+    <string name="flights_altitude_sea">Merenpinnasta</string>
+    <string name="flights_altitude_start">Lähdöstä · peruuta pitämällä ”Nollaus” painettuna</string>
+    <string name="flights_sound_on">Ääni: päällä</string>
+    <string name="flights_sound_off">Ääni: pois</string>
+    <string name="flights_sound_tune">Äänen säätö</string>
+    <string name="flights_sound_climb_start">Piippaus alkaa nousussa %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Matala piippaus alkaa laskussa %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Jatkuva hälytys laskussa %1$.1f m/s</string>
+    <string name="flights_speed_label">Nopeus</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Lennon kesto</string>
+    <string name="flights_distance">Matka</string>
+    <string name="flights_max_speed">Huippunopeus</string>
+    <string name="flights_avg_speed">Keskinopeus</string>
+    <string name="flights_max_altitude">Suurin korkeus</string>
+    <string name="flights_climb_rate">Nousunopeus</string>
+    <string name="flights_max_g">Huippukuormitus</string>
+    <string name="flights_status_waiting">Odotetaan GPS-signaalia…</string>
+    <string name="flights_location_needed">Salli pääsy tarkkaan sijaintiin, jotta nopeus, korkeus ja reitti voidaan tallentaa.</string>
+    <string name="flights_allow">Salli</string>
+    <string name="flights_open_settings">Avaa sovelluksen asetukset</string>
+    <string name="flights_gps_off">Ota sijaintipalvelut (GPS) käyttöön tallentaaksesi lennon.</string>
+    <string name="flights_disclaimer">Vain huvin ja uteliaisuuden vuoksi. Älä luota näihin mittareihin navigoinnissa tai missään turvallisuuteen vaikuttavassa.</string>
+</resources>
