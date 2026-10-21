@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Klar himmel</string>
+    <string name="weather_description_mainly_clear">For det meste klart</string>
+    <string name="weather_description_partly_cloudy">Delvis skyet</string>
+    <string name="weather_description_overcast">Overskyet</string>
+    <string name="weather_description_fog">Tåke</string>
+    <string name="weather_description_rime_fog">Rimtåke</string>
+    <string name="weather_description_light_drizzle">Lett yr</string>
+    <string name="weather_description_drizzle">Yr</string>
+    <string name="weather_description_dense_drizzle">Tett yr</string>
+    <string name="weather_description_light_freezing_drizzle">Lett underkjølt yr</string>
+    <string name="weather_description_freezing_drizzle">Underkjølt yr</string>
+    <string name="weather_description_slight_rain">Lett regn</string>
+    <string name="weather_description_rain">Regn</string>
+    <string name="weather_description_heavy_rain">Kraftig regn</string>
+    <string name="weather_description_light_freezing_rain">Lett underkjølt regn</string>
+    <string name="weather_description_freezing_rain">Underkjølt regn</string>
+    <string name="weather_description_slight_snow">Lett snøfall</string>
+    <string name="weather_description_snow">Snøfall</string>
+    <string name="weather_description_heavy_snow">Kraftig snøfall</string>
+    <string name="weather_description_snow_grains">Snøkorn</string>
+    <string name="weather_description_light_rain_showers">Lette regnbyger</string>
+    <string name="weather_description_rain_showers">Regnbyger</string>
+    <string name="weather_description_violent_rain_showers">Kraftige regnbyger</string>
+    <string name="weather_description_light_snow_showers">Lette snøbyger</string>
+    <string name="weather_description_heavy_snow_showers">Kraftige snøbyger</string>
+    <string name="weather_description_thunderstorm">Tordenvær</string>
+    <string name="weather_description_thunderstorm_with_hail">Tordenvær med hagl</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Tordenvær med kraftig hagl</string>
+    <string name="weather_description_unknown">Ukjent</string>
+    <string name="weather_moon_phase_new_moon">Nymåne</string>
+    <string name="weather_moon_phase_waxing_crescent">Voksende månesigd</string>
+    <string name="weather_moon_phase_first_quarter">Første kvarter</string>
+    <string name="weather_moon_phase_waxing_gibbous">Voksende måne</string>
+    <string name="weather_moon_phase_full_moon">Fullmåne</string>
+    <string name="weather_moon_phase_waning_gibbous">Minkende måne</string>
+    <string name="weather_moon_phase_last_quarter">Siste kvarter</string>
+    <string name="weather_moon_phase_waning_crescent">Minkende månesigd</string>
+    <string name="weather_error_no_location">Posisjonen kan ikke fastslås. Slå på posisjonstjenester, eller søk etter en by.</string>
+    <string name="weather_error_city_not_found">Fant ingen by for «%1$s»</string>
+    <string name="weather_error_no_network">Været kan ikke lastes. Sjekk internettforbindelsen.</string>
+    <string name="weather_error_choose_city">Velg en by fra listen</string>
+    <string name="weather_current_location">Gjeldende posisjon</string>
+</resources>

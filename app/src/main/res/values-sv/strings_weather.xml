@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Klar himmel</string>
+    <string name="weather_description_mainly_clear">Mestadels klart</string>
+    <string name="weather_description_partly_cloudy">Delvis molnigt</string>
+    <string name="weather_description_overcast">Mulet</string>
+    <string name="weather_description_fog">Dimma</string>
+    <string name="weather_description_rime_fog">Rimfrostdimma</string>
+    <string name="weather_description_light_drizzle">Lätt duggregn</string>
+    <string name="weather_description_drizzle">Duggregn</string>
+    <string name="weather_description_dense_drizzle">Tätt duggregn</string>
+    <string name="weather_description_light_freezing_drizzle">Lätt underkylt duggregn</string>
+    <string name="weather_description_freezing_drizzle">Underkylt duggregn</string>
+    <string name="weather_description_slight_rain">Lätt regn</string>
+    <string name="weather_description_rain">Regn</string>
+    <string name="weather_description_heavy_rain">Kraftigt regn</string>
+    <string name="weather_description_light_freezing_rain">Lätt underkylt regn</string>
+    <string name="weather_description_freezing_rain">Underkylt regn</string>
+    <string name="weather_description_slight_snow">Lätt snöfall</string>
+    <string name="weather_description_snow">Snöfall</string>
+    <string name="weather_description_heavy_snow">Kraftigt snöfall</string>
+    <string name="weather_description_snow_grains">Snökorn</string>
+    <string name="weather_description_light_rain_showers">Lätta regnskurar</string>
+    <string name="weather_description_rain_showers">Regnskurar</string>
+    <string name="weather_description_violent_rain_showers">Kraftiga regnskurar</string>
+    <string name="weather_description_light_snow_showers">Lätta snöbyar</string>
+    <string name="weather_description_heavy_snow_showers">Kraftiga snöbyar</string>
+    <string name="weather_description_thunderstorm">Åska</string>
+    <string name="weather_description_thunderstorm_with_hail">Åska med hagel</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Åska med kraftigt hagel</string>
+    <string name="weather_description_unknown">Okänt</string>
+    <string name="weather_moon_phase_new_moon">Nymåne</string>
+    <string name="weather_moon_phase_waxing_crescent">Tilltagande skära</string>
+    <string name="weather_moon_phase_first_quarter">Första kvarteret</string>
+    <string name="weather_moon_phase_waxing_gibbous">Tilltagande måne</string>
+    <string name="weather_moon_phase_full_moon">Fullmåne</string>
+    <string name="weather_moon_phase_waning_gibbous">Avtagande måne</string>
+    <string name="weather_moon_phase_last_quarter">Sista kvarteret</string>
+    <string name="weather_moon_phase_waning_crescent">Avtagande skära</string>
+    <string name="weather_error_no_location">Platsen kunde inte fastställas. Aktivera platstjänster eller sök efter en stad.</string>
+    <string name="weather_error_city_not_found">Ingen stad hittades för ”%1$s”</string>
+    <string name="weather_error_no_network">Vädret kunde inte läsas in. Kontrollera internetanslutningen.</string>
+    <string name="weather_error_choose_city">Välj en stad i listan</string>
+    <string name="weather_current_location">Aktuell plats</string>
+</resources>

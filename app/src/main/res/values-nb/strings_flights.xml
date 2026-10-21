@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Flyopptak</string>
+    <string name="flights_notification_channel_description">Vises mens en flyvning tas opp</string>
+    <string name="flights_notification_title">Tar opp en flyvning</string>
+    <string name="flights_notification_text">Trykk for å åpne instrumentene</string>
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NØ</item>
+        <item>Ø</item>
+        <item>SØ</item>
+        <item>S</item>
+        <item>SV</item>
+        <item>V</item>
+        <item>NV</item>
+    </string-array>
+    <string name="flights_report_title">Flyrapport</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">Ø</string>
+    <string name="flights_report_side_west">V</string>
+    <string name="flights_report_duration">Varighet</string>
+    <string name="flights_report_distance">Avstand</string>
+    <string name="flights_report_top_speed">Toppfart</string>
+    <string name="flights_report_average_speed">Snittfart</string>
+    <string name="flights_report_highest_altitude">Største høyde</string>
+    <string name="flights_report_best_climb">Beste stigning</string>
+    <string name="flights_report_worst_sink">Verste synking</string>
+    <string name="flights_report_peak_load">Toppbelastning</string>
+    <string name="flights_report_start_point">Startpunkt</string>
+    <string name="flights_report_end_point">Sluttpunkt</string>
+    <string name="flights_report_altitude_above_start">%1$s over start</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s over havet</string>
+    <string name="flights_report_chart_altitude_above_start">Høyde (%1$s, over start)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Høyde (%1$s, over havet)</string>
+    <string name="flights_report_chart_speed">Fart over bakken (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Kart: Natural Earth (offentlig eiendom).</string>
+    <string name="flights_report_footer">%1$s Tatt opp i MyAssistant. Bare for moro: ikke til navigasjon eller sikkerhet.</string>
+</resources>

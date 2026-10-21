@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Laddar upp säkerhetskopia till molnet...</string>
+    <string name="backup_cloud_restoring">Återställer säkerhetskopia från molnet...</string>
+    <string name="backup_cloud_upload_success">Säkerhetskopian laddades upp till molnet</string>
+    <string name="backup_cloud_restore_success">Säkerhetskopian återställdes från molnet</string>
+    <string name="backup_cloud_restore_partly">Uppgifter återställdes från molnet (ingen kopia hittades där för: %1$s)</string>
+    <string name="backup_part_steps">steg</string>
+    <string name="backup_part_flights">flygningar</string>
+    <string name="backup_part_scans">skanningar</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Uppladdningsfel: %1$s</string>
+    <string name="backup_error_download">Nedladdningsfel: %1$s</string>
+    <string name="backup_error_unknown">Okänt fel</string>
+    <string name="backup_error_insecure_url">URL:en måste börja med https://</string>
+    <string name="backup_error_authentication">Autentiseringen misslyckades: kontrollera användarnamn och lösenord</string>
+    <string name="backup_error_server_code">Servern svarade med kod: %1$d</string>
+    <string name="backup_error_connection">Anslutningsfel: %1$s</string>
+    <string name="backup_destination_title">Spara säkerhetskopian i</string>
+    <string name="backup_destination_folder">Välj mapp (enhet, SD-kort, USB, Drive...)</string>
+    <string name="backup_destination_share">Dela med app</string>
+    <string name="backup_preparing">Förbereder säkerhetskopia...</string>
+    <string name="backup_export_failed">Exporten misslyckades</string>
+    <string name="backup_export_saved">Säkerhetskopian har sparats</string>
+    <string name="backup_import_success">Säkerhetskopian importerades. Startar om...</string>
+    <string name="backup_import_failed">Importen misslyckades</string>
+    <string name="backup_import_title">Varning!</string>
+    <string name="backup_import_message">Att återställa en säkerhetskopia ersätter dina nuvarande uppgifter, steg och skanningar med de som finns i den. Vill du verkligen fortsätta?</string>
+    <string name="backup_import_confirm">Bekräfta import</string>
+    <string name="backup_share_chooser_title">Exportera säkerhetskopia</string>
+    <string name="backup_cloud_settings_saved">Molninställningarna har sparats</string>
+    <string name="backup_cloud_secure_storage_unavailable">Säker lagring är inte tillgänglig, inställningarna sparades inte</string>
+    <string name="backup_cloud_url_empty">URL:en får inte vara tom</string>
+    <string name="backup_cloud_testing">Testar anslutningen...</string>
+    <string name="backup_cloud_connection_successful">Anslutningen lyckades!</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Scanning %1$s</string>
+    <string name="scan_delete_page_message">Slet denne side? Dette kan ikke fortrydes!</string>
+    <string name="scan_delete_document_message">Slet „%1$s” med alle sider? Dette kan ikke fortrydes!</string>
+    <string name="scan_delete_all_message">Slet alt: %1$s, %2$s? Dette kan ikke fortrydes!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokumenter</item>
+    </plurals>
+</resources>

@@ -29,7 +29,11 @@ public final class AppLanguage {
             new AppLanguage("hu", "Magyar"),
             new AppLanguage("bg", "Български"),
             new AppLanguage("el", "Ελληνικά"),
-            new AppLanguage("sr", "Српски")
+            new AppLanguage("sr", "Српски"),
+            new AppLanguage("hr", "Hrvatski"),
+            new AppLanguage("sv", "Svenska"),
+            new AppLanguage("da", "Dansk"),
+            new AppLanguage("nb", "Norsk bokmål")
     ));
 
     private final String tag;

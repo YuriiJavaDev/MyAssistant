@@ -20,4 +20,8 @@
     <locale android:name="bg" />
     <locale android:name="el" />
     <locale android:name="sr" />
+    <locale android:name="hr" />
+    <locale android:name="sv" />
+    <locale android:name="da" />
+    <locale android:name="nb" />
 </locale-config>

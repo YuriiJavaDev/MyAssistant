@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Učitavanje sigurnosne kopije u oblak...</string>
+    <string name="backup_cloud_restoring">Vraćanje sigurnosne kopije iz oblaka...</string>
+    <string name="backup_cloud_upload_success">Sigurnosna kopija uspješno je učitana u oblak</string>
+    <string name="backup_cloud_restore_success">Sigurnosna kopija uspješno je vraćena iz oblaka</string>
+    <string name="backup_cloud_restore_partly">Zadaci su vraćeni iz oblaka (ondje nije pronađena kopija za: %1$s)</string>
+    <string name="backup_part_steps">koraci</string>
+    <string name="backup_part_flights">letovi</string>
+    <string name="backup_part_scans">skeniranja</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Pogreška pri učitavanju: %1$s</string>
+    <string name="backup_error_download">Pogreška pri preuzimanju: %1$s</string>
+    <string name="backup_error_unknown">Nepoznata pogreška</string>
+    <string name="backup_error_insecure_url">URL mora počinjati s https://</string>
+    <string name="backup_error_authentication">Provjera autentičnosti nije uspjela: provjerite korisničko ime i lozinku</string>
+    <string name="backup_error_server_code">Poslužitelj je odgovorio kodom: %1$d</string>
+    <string name="backup_error_connection">Pogreška veze: %1$s</string>
+    <string name="backup_destination_title">Spremi sigurnosnu kopiju u</string>
+    <string name="backup_destination_folder">Odaberi mapu (uređaj, SD kartica, USB, Drive...)</string>
+    <string name="backup_destination_share">Pošalji aplikaciji</string>
+    <string name="backup_preparing">Priprema sigurnosne kopije...</string>
+    <string name="backup_export_failed">Izvoz nije uspio</string>
+    <string name="backup_export_saved">Sigurnosna kopija je spremljena</string>
+    <string name="backup_import_success">Sigurnosna kopija uspješno je uvezena. Ponovno pokretanje...</string>
+    <string name="backup_import_failed">Uvoz nije uspio</string>
+    <string name="backup_import_title">Pozor!</string>
+    <string name="backup_import_message">Vraćanje sigurnosne kopije zamijenit će trenutačne zadatke, korake i skeniranja onima koje sadrži. Želite li doista nastaviti?</string>
+    <string name="backup_import_confirm">Potvrdi uvoz</string>
+    <string name="backup_share_chooser_title">Izvezi sigurnosnu kopiju</string>
+    <string name="backup_cloud_settings_saved">Postavke oblaka uspješno su spremljene</string>
+    <string name="backup_cloud_secure_storage_unavailable">Sigurna pohrana nije dostupna, postavke nisu spremljene</string>
+    <string name="backup_cloud_url_empty">URL ne smije biti prazan</string>
+    <string name="backup_cloud_testing">Provjera veze...</string>
+    <string name="backup_cloud_connection_successful">Veza je uspješna!</string>
+</resources>

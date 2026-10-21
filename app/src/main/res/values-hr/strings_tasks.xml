@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Što treba učiniti?</string>
+    <string name="tasks_list_add">Dodaj</string>
+    <string name="tasks_list_delete_completed">Obriši dovršene</string>
+    <string name="tasks_list_clear_all">Obriši sve</string>
+    <string name="tasks_list_reminder_set">Podsjetnik je postavljen</string>
+    <string name="tasks_statistics">Ukupno: %1$d  Dovršeno: %2$d  Preostalo: %3$d  Napredak: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Novi zadatak</string>
+    <string name="tasks_dialog_title_edit">Uredi zadatak</string>
+    <string name="tasks_dialog_importance">Razina važnosti:</string>
+    <string name="tasks_dialog_deadline_label">Rok:</string>
+    <string name="tasks_dialog_deadline_select">Odaberite rok</string>
+    <string name="tasks_dialog_reminder_label">Podsjetnik (datum i vrijeme):</string>
+    <string name="tasks_dialog_reminder_select">Odaberite datum i vrijeme podsjetnika</string>
+    <string name="tasks_dialog_show_timestamps">Prikaži datume izrade/izmjene</string>
+    <string name="tasks_dialog_delete">Obriši</string>
+    <string name="tasks_dialog_save">Spremi</string>
+    <string name="tasks_dialog_clear">Očisti</string>
+    <string name="tasks_importance_normal">Obična</string>
+    <string name="tasks_importance_important">Važna</string>
+    <string name="tasks_importance_urgent">Hitna</string>
+    <string name="tasks_toast_created">Zadatak je izrađen</string>
+    <string name="tasks_toast_updated">Zadatak je ažuriran</string>
+    <string name="tasks_toast_deleted">Zadatak je obrisan</string>
+    <string name="tasks_toast_completed_deleted">Dovršeni zadaci su obrisani</string>
+    <string name="tasks_toast_all_cleared">Svi zadaci su obrisani</string>
+    <string name="tasks_toast_empty_title">Opis zadatka ne smije biti prazan</string>
+    <string name="tasks_toast_reminder_after_deadline">Podsjetnik ne smije biti nakon roka!</string>
+    <string name="tasks_toast_reminder_in_past">Podsjetnik ne smije biti u prošlosti!</string>
+    <string name="tasks_toast_reminder_cleared">Podsjetnik je očišćen jer je rok raniji!</string>
+    <string name="tasks_toast_select_deadline_first">Prvo odaberite rok!</string>
+    <string name="tasks_time_created">Izrađeno: %1$s</string>
+    <string name="tasks_time_edited">Izmijenjeno: %1$s</string>
+    <string name="tasks_time_completed">Dovršeno: %1$s</string>
+    <string name="tasks_deadline_prefixed">Rok: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — preostao je %2$d dan!</item>
+        <item quantity="few">%1$s — preostala su %2$d dana!</item>
+        <item quantity="other">%1$s — preostalo je %2$d dana!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — kašnjenje %2$d dan!</item>
+        <item quantity="few">%1$s — kašnjenje %2$d dana!</item>
+        <item quantity="other">%1$s — kašnjenje %2$d dana!</item>
+    </plurals>
+    <string name="tasks_delete_title">Potvrda brisanja</string>
+    <string name="tasks_delete_button">Obriši</string>
+    <string name="tasks_delete_nothing">Nema pronađenih objekata za brisanje!</string>
+    <string name="tasks_delete_item_message">Želite li doista obrisati ovu stavku? Ova se radnja ne može poništiti!</string>
+    <string name="tasks_delete_cannot_be_undone">Ova se radnja ne može poništiti!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Obrisati %1$d dovršeni zadatak?</item>
+        <item quantity="few">Obrisati %1$d dovršena zadatka?</item>
+        <item quantity="other">Obrisati %1$d dovršenih zadataka?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d od njih još ima spremljen podsjetnik.</item>
+        <item quantity="few">%1$d od njih još imaju spremljen podsjetnik.</item>
+        <item quantity="other">%1$d od njih još ima spremljen podsjetnik.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Obrisati zadatak (%1$d)?</item>
+        <item quantity="few">Obrisati sva %1$d zadatka?</item>
+        <item quantity="other">Obrisati svih %1$d zadataka?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d ima aktivan podsjetnik.</item>
+        <item quantity="few">%1$d imaju aktivne podsjetnike.</item>
+        <item quantity="other">%1$d ima aktivne podsjetnike.</item>
+    </plurals>
+    <string name="tasks_alert_title">Upozorenje o roku!</string>
+    <string name="tasks_alert_view_tasks">Prikaži zadatke</string>
+    <string name="tasks_alert_channel_name">Upozorenja o rokovima zadataka</string>
+    <string name="tasks_alert_channel_description">Hitna upozorenja o rokovima zadataka</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Broj isteklih rokova zadataka: %1$d.</item>
+        <item quantity="few">Broj isteklih rokova zadataka: %1$d.</item>
+        <item quantity="other">Broj isteklih rokova zadataka: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Pozor! Broj rokova zadataka koji zahtijevaju hitnu pozornost: %1$d.</item>
+        <item quantity="few">Pozor! Broj rokova zadataka koji zahtijevaju hitnu pozornost: %1$d.</item>
+        <item quantity="other">Pozor! Broj rokova zadataka koji zahtijevaju hitnu pozornost: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Pozor! Približava se rok zadatka: %1$s</string>
+</resources>

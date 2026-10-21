@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Avbryt</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Inställningar</string>
+    <string name="settings_alarms_title">Påminnelser och larm</string>
+    <string name="settings_alarms_subtitle">Intervall, ljud och aviseringsstatus</string>
+    <string name="settings_display_title">Visningsläge</string>
+    <string name="settings_display_subtitle">Dag / Natt / Auto</string>
+    <string name="display_mode_title">Visningsläge</string>
+    <string name="display_mode_light">Ljust (dag)</string>
+    <string name="display_mode_dark">Mörkt (natt)</string>
+    <string name="display_mode_system">System (auto)</string>
+    <string name="settings_design_title">Appens utseende</string>
+    <string name="settings_design_subtitle">Varianter av gränssnittets utseende</string>
+    <string name="design_classic_name">Klassisk</string>
+    <string name="design_classic_about">Det ursprungliga utseendet: kräm och lila</string>
+    <string name="design_paper_ink_name">Papper och bläck</string>
+    <string name="design_paper_ink_about">Tunna linjer och dämpade kontorstoner</string>
+    <string name="design_pastel_cloud_name">Pastellmoln</string>
+    <string name="design_pastel_cloud_about">Mjuk, rundad och blek, med moln</string>
+    <string name="design_neon_arcade_name">Neonarkad</string>
+    <string name="design_neon_arcade_about">Glödande neon, stark kontrast och retrosol</string>
+    <string name="design_toon_name">Tecknad</string>
+    <string name="design_toon_about">Serieliknande konturer och handskrift</string>
+    <string name="design_biker_name">Motorcyklist</string>
+    <string name="design_biker_about">Rått metall, gummi och avgasorange</string>
+    <string name="design_cockpit_name">Cockpit</string>
+    <string name="design_cockpit_about">Stram instrumentpanel med segelflygplan</string>
+    <string name="design_beach_name">Strand</string>
+    <string name="design_beach_about">Sand, lagun, koraller och palmer</string>
+    <string name="design_forest_name">Förtrollad skog</string>
+    <string name="design_forest_about">Pergament, guld och skogsmossa</string>
+    <string name="design_mono_block_name">Monoblock</string>
+    <string name="design_mono_block_about">Skarpt svartvitt med en enda gul överstrykningspenna</string>
+    <string name="settings_permissions_title">Systembehörigheter</string>
+    <string name="settings_permissions_subtitle">Hantera åtkomst i Android</string>
+    <string-array name="filter_options">
+        <item>Alla uppgifter</item>
+        <item>Aktiva</item>
+        <item>Slutförda</item>
+        <item>Varningar</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Ö</item>
+        <item>Ö–A</item>
+        <item>Status</item>
+        <item>Skapad</item>
+        <item>Ändrad</item>
+        <item>Slutförd</item>
+        <item>Vikt</item>
+        <item>Frist</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galleri</string>
+    <string name="scan_clear_all">Rensa allt</string>
+    <string name="scan_cleared">Alla skanningar har raderats</string>
+    <string name="scan_empty">Inga dokument än. Fota en sida eller välj ett foto från galleriet.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Återställ</string>
+    <string name="scan_next">Nästa</string>
+    <string name="scan_back">Tillbaka</string>
+    <string name="scan_save">Spara</string>
+    <string name="scan_rotate">Rotera</string>
+    <string name="scan_paper">Papper</string>
+    <string name="scan_filter_color">Färg</string>
+    <string name="scan_filter_gray">Grå</string>
+    <string name="scan_filter_bw">S/V</string>
+    <string name="scan_tune">Ljus och kontrast</string>
+    <string name="scan_shadows">Skuggborttagning</string>
+    <string name="scan_brightness">Ljusstyrka</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Skärpa</string>
+    <string name="scan_page_saved">Sidan har sparats</string>
+    <string name="scan_next_page_question">Lägga till en sida till i dokumentet?</string>
+    <string name="scan_page_label">Sida %d</string>
+    <string name="scan_done">Klart</string>
+    <string name="scan_add_page">Lägg till sida</string>
+    <string name="scan_share_pdf">Dela PDF</string>
+    <string name="scan_pages_empty">Det här dokumentet har inga sidor.</string>
+    <string name="scan_saved_to_device">Filen har sparats</string>
+    <string name="scan_share_title">Dela dokument</string>
+    <string name="scan_rename_title">Byt namn på dokument</string>
+    <string name="scan_rename_confirm">Byt namn</string>
+    <string name="scan_error_load">Det går inte att öppna det här fotot</string>
+    <string name="scan_error_preview">Inte tillräckligt med minne för förhandsvisning</string>
+    <string name="scan_error_save">Skanningen kunde inte sparas</string>
+    <string name="scan_error_export">Filen kunde inte förberedas</string>
+    <string name="scan_error_no_camera">Ingen kameraapp hittades</string>
+    <string name="scan_error_no_viewer">Ingen app för att öppna bilden hittades</string>
+    <string name="scan_error_no_app">Ingen app för delning hittades</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d sida</item>
+        <item quantity="other">%d sidor</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Sidor</item>
+        <item>Dela som PDF</item>
+        <item>Dela som JPEG</item>
+        <item>Spara PDF i…</item>
+        <item>Byt namn</item>
+        <item>Radera</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Visa</item>
+        <item>Spara JPEG i…</item>
+        <item>Flytta upp</item>
+        <item>Flytta ned</item>
+        <item>Radera sida</item>
+    </string-array>
+    <string name="weather_city_hint">Stadens namn på valfritt språk</string>
+    <string name="weather_search">Sök</string>
+    <string name="weather_my_location">Min plats</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Känns som</string>
+    <string name="weather_humidity">Luftfuktighet</string>
+    <string name="weather_wind">Vind</string>
+    <string name="weather_today_range">Idag</string>
+    <string name="weather_units">Enheter</string>
+    <string name="weather_units_temperature">Temperatur</string>
+    <string name="weather_units_wind">Vindhastighet</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Meter per sekund (m/s)</string>
+    <string name="weather_unit_kmh">Kilometer per timme (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% belyst</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Läser in vädret…</string>
+    <string name="weather_location_needed">Tillåt åtkomst till din ungefärliga plats för att se vädret där du är, eller sök efter en stad.</string>
+    <string name="weather_allow">Tillåt</string>
+    <string name="weather_open_settings">Öppna appens inställningar</string>
+    <string name="weather_attribution">Väder: Open-Meteo.com · Platser: © OpenStreetMap-bidragsgivare</string>
+    <string name="weather_choose_city">Välj en stad</string>
+    <string name="steps_today">Idag</string>
+    <string name="steps_unit">steg</string>
+    <string name="steps_walk_run">Gång %1$s · Löpning %2$s</string>
+    <string name="steps_period">Period</string>
+    <string name="steps_last_7">7 dagar</string>
+    <string name="steps_last_30">30 dagar</string>
+    <string name="steps_this_month">Månad</string>
+    <string name="steps_pick_dates">Välj datum</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Totalt antal steg</string>
+    <string name="steps_distance">Avstånd</string>
+    <string name="steps_average">Snitt per dag</string>
+    <string name="steps_best_day">Bästa dag</string>
+    <string name="steps_walking">Steg vid gång</string>
+    <string name="steps_running">Steg vid löpning</string>
+    <string name="steps_active_days">Dagar med steg</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d av %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Inga steg registrerades under den här perioden</string>
+    <string name="steps_settings">Steginställningar</string>
+    <string name="steps_settings_title">Steglängd</string>
+    <string name="steps_walk_length">Steglängd vid gång, cm</string>
+    <string name="steps_run_length">Steglängd vid löpning, cm</string>
+    <string name="steps_run_cadence">Löpning börjar från, steg per minut</string>
+    <string name="steps_run_cadence_hint">Steg i den här takten eller snabbare räknas som löpning.</string>
+    <string name="steps_defaults">Standard</string>
+    <string name="steps_save">Spara</string>
+    <string name="steps_invalid_length">Ange %1$d–%2$d</string>
+    <string name="steps_measure_title">Så mäter du din steglängd</string>
+    <string name="steps_measure_text">1. Markera en startlinje vid skospetsen före första steget.\n2. Ta 10 lugna steg i din vanliga takt.\n3. Mät avståndet i centimeter från startlinjen till samma skospets efter det 10:e steget.\n4. Dela med tio.\n5. Upprepa några gånger och ange genomsnittet.\n\nGör likadant i din vanliga löptakt för att få steglängden vid löpning.</string>
+    <string name="steps_no_sensor">Den här telefonen har ingen stegsensor.</string>
+    <string name="steps_permission_needed">Tillåt åtkomst till fysisk aktivitet så att telefonen kan räkna dina steg.</string>
+    <string name="steps_allow">Tillåt</string>
+    <string name="steps_open_settings">Öppna appens inställningar</string>
+    <string name="currency_amount_hint">Belopp</string>
+    <string name="currency_swap">Växla ⇅</string>
+    <string name="currency_refresh">Uppdatera kurser</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurser uppdaterade %1$s</string>
+    <string name="currency_outdated">Inget internet. Visar sparade kurser, uppdaterade %1$s</string>
+    <string name="currency_loading">Läser in kurser…</string>
+    <string name="currency_unavailable">Kurserna är inte tillgängliga. Kontrollera internetanslutningen och uppdatera.</string>
+    <string name="currency_invalid_amount">Ange ett belopp</string>
+    <string name="currency_attribution">Kurser från Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Vet</string>
+    <string name="calculator_basic">Bas</string>
+    <string name="calculator_degrees">Grd</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Historik</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Starta inspelning</string>
+    <string name="flights_stop">Stoppa inspelning</string>
+    <string name="flights_units">Enheter</string>
+    <string name="flights_journal">Logg</string>
+    <string name="flights_journal_title">Flygloggbok</string>
+    <string name="flights_journal_empty">Inga flygningar har spelats in än.</string>
+    <string name="flights_journal_in_progress">Den här flygningen spelas fortfarande in.</string>
+    <string name="flights_report_open">Öppna rapport</string>
+    <string name="flights_report_share">Dela rapport</string>
+    <string name="flights_report_delete">Radera flygning</string>
+    <string name="flights_report_failed">Rapporten kunde inte förberedas.</string>
+    <string name="flights_report_no_viewer">Ingen app för att öppna PDF-filer hittades.</string>
+    <string name="flights_delete_title">Radera den här flygningen?</string>
+    <string name="flights_delete_message">Rutten och rapporten tas bort permanent. Innan dess kan du skicka rapporten någonstans, till exempel till ett USB-minne, en dator eller Google Drive.</string>
+    <string name="flights_delete_save_first">Spara rapporten och radera sedan</string>
+    <string name="flights_delete_without_saving">Radera utan att spara</string>
+    <string name="flights_delete_after_share_message">Om rapporten kom dit du ville kan du nu radera flygningen.</string>
+    <string name="flights_delete_after_share_confirm">Radera flygning</string>
+    <string name="flights_delete_keep">Behåll flygning</string>
+    <string name="flights_units_report_limit">Rapportgräns</string>
+    <string name="flights_units_report_limit_hint">Högsta antal PDF-rapporter i loggen, 0 för obegränsat</string>
+    <string name="flights_limit_full_title">Gränsen för PDF-rapporter är nådd</string>
+    <string name="flights_limit_full_message">Loggen innehåller %1$d rapporter, vilket är gränsen. Radera minst en flygning ur loggen för att spela in en ny. Innan dess kan du spara dess rapport på ett USB-minne, en dator eller Google Drive.</string>
+    <string name="flights_limit_warning_title">Du närmar dig gränsen för PDF-rapporter!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Du kan spela in %d flygning till. Radera föråldrade flygningar ur loggen.</item>
+        <item quantity="other">Du kan spela in %d flygningar till. Radera föråldrade flygningar ur loggen.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Öppna loggen</string>
+    <string name="flights_journal_line">%1$s · max %2$s · höjd max %3$s</string>
+    <string name="flights_units_speed">Hastighet och avstånd</string>
+    <string name="flights_units_altitude">Höjd</string>
+    <string name="flights_unit_kmh">Kilometer per timme (km/h)</string>
+    <string name="flights_unit_knots">Knop (kt, nautiska mil)</string>
+    <string name="flights_unit_ms">Meter per sekund (m/s)</string>
+    <string name="flights_unit_metres">Meter (m)</string>
+    <string name="flights_unit_feet">Fot (ft)</string>
+    <string name="flights_units_climb">Stighastighet</string>
+    <string name="flights_unit_fpm">Fot per minut (ft/min)</string>
+    <string name="flights_altitude_zero">Noll</string>
+    <string name="flights_altitude_sea">Över havet</string>
+    <string name="flights_altitude_start">Över start · håll in ”Noll” för att ångra</string>
+    <string name="flights_sound_on">Ljud: på</string>
+    <string name="flights_sound_off">Ljud: av</string>
+    <string name="flights_sound_tune">Justera ljud</string>
+    <string name="flights_sound_climb_start">Pipen börjar vid stigning på %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Låga pip börjar vid sjunkning på %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Ihållande larm vid sjunkning på %1$.1f m/s</string>
+    <string name="flights_speed_label">Fart</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Flygtid</string>
+    <string name="flights_distance">Avstånd</string>
+    <string name="flights_max_speed">Maxhastighet</string>
+    <string name="flights_avg_speed">Medelhastighet</string>
+    <string name="flights_max_altitude">Maxhöjd</string>
+    <string name="flights_climb_rate">Stighastighet</string>
+    <string name="flights_max_g">Toppbelastning</string>
+    <string name="flights_status_waiting">Väntar på GPS-signal…</string>
+    <string name="flights_location_needed">Tillåt åtkomst till exakt plats för att spela in hastighet, höjd och rutt.</string>
+    <string name="flights_allow">Tillåt</string>
+    <string name="flights_open_settings">Öppna appens inställningar</string>
+    <string name="flights_gps_off">Aktivera platstjänster (GPS) för att spela in en flygning.</string>
+    <string name="flights_disclaimer">Endast för nöje och nyfikenhet. Förlita dig inte på de här instrumenten för navigering eller något som rör säkerhet.</string>
+</resources>

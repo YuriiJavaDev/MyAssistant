@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Hva må gjøres?</string>
+    <string name="tasks_list_add">Legg til</string>
+    <string name="tasks_list_delete_completed">Slett fullførte</string>
+    <string name="tasks_list_clear_all">Tøm alt</string>
+    <string name="tasks_list_reminder_set">Påminnelse er satt</string>
+    <string name="tasks_statistics">Totalt: %1$d  Fullført: %2$d  Igjen: %3$d  Fremdrift: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Ny oppgave</string>
+    <string name="tasks_dialog_title_edit">Rediger oppgave</string>
+    <string name="tasks_dialog_importance">Viktighetsnivå:</string>
+    <string name="tasks_dialog_deadline_label">Frist:</string>
+    <string name="tasks_dialog_deadline_select">Velg frist</string>
+    <string name="tasks_dialog_reminder_label">Påminnelse (dato og klokkeslett):</string>
+    <string name="tasks_dialog_reminder_select">Velg dato og klokkeslett for påminnelsen</string>
+    <string name="tasks_dialog_show_timestamps">Vis datoer for opprettelse/endring</string>
+    <string name="tasks_dialog_delete">Slett</string>
+    <string name="tasks_dialog_save">Lagre</string>
+    <string name="tasks_dialog_clear">Tøm</string>
+    <string name="tasks_importance_normal">Vanlig</string>
+    <string name="tasks_importance_important">Viktig</string>
+    <string name="tasks_importance_urgent">Haster</string>
+    <string name="tasks_toast_created">Oppgaven er opprettet</string>
+    <string name="tasks_toast_updated">Oppgaven er oppdatert</string>
+    <string name="tasks_toast_deleted">Oppgaven er slettet</string>
+    <string name="tasks_toast_completed_deleted">Fullførte oppgaver er slettet</string>
+    <string name="tasks_toast_all_cleared">Alle oppgaver er tømt</string>
+    <string name="tasks_toast_empty_title">Oppgavebeskrivelsen kan ikke være tom</string>
+    <string name="tasks_toast_reminder_after_deadline">Påminnelsen kan ikke ligge etter fristen!</string>
+    <string name="tasks_toast_reminder_in_past">Påminnelsen kan ikke ligge i fortiden!</string>
+    <string name="tasks_toast_reminder_cleared">Påminnelsen er fjernet fordi fristen er tidligere!</string>
+    <string name="tasks_toast_select_deadline_first">Velg først en frist!</string>
+    <string name="tasks_time_created">Opprettet: %1$s</string>
+    <string name="tasks_time_edited">Endret: %1$s</string>
+    <string name="tasks_time_completed">Fullført: %1$s</string>
+    <string name="tasks_deadline_prefixed">Frist: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d dag igjen!</item>
+        <item quantity="other">%1$s — %2$d dager igjen!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d dag forsinket!</item>
+        <item quantity="other">%1$s — %2$d dager forsinket!</item>
+    </plurals>
+    <string name="tasks_delete_title">Bekreft sletting</string>
+    <string name="tasks_delete_button">Slett</string>
+    <string name="tasks_delete_nothing">Fant ingen objekter å slette!</string>
+    <string name="tasks_delete_item_message">Vil du virkelig slette dette elementet? Dette kan ikke angres!</string>
+    <string name="tasks_delete_cannot_be_undone">Dette kan ikke angres!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Slette %1$d fullført oppgave?</item>
+        <item quantity="other">Slette %1$d fullførte oppgaver?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d av dem har fortsatt en lagret påminnelse.</item>
+        <item quantity="other">%1$d av dem har fortsatt en lagret påminnelse.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Slette oppgaven (%1$d)?</item>
+        <item quantity="other">Slette alle %1$d oppgavene?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d har en aktiv påminnelse.</item>
+        <item quantity="other">%1$d har aktive påminnelser.</item>
+    </plurals>
+    <string name="tasks_alert_title">Fristvarsel!</string>
+    <string name="tasks_alert_view_tasks">Vis oppgaver</string>
+    <string name="tasks_alert_channel_name">Varsler om oppgavefrister</string>
+    <string name="tasks_alert_channel_description">Haste varsler om oppgavefrister</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Antall oversittede oppgavefrister: %1$d.</item>
+        <item quantity="other">Antall oversittede oppgavefrister: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Obs! Antall oppgavefrister som krever umiddelbar oppmerksomhet: %1$d.</item>
+        <item quantity="other">Obs! Antall oppgavefrister som krever umiddelbar oppmerksomhet: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Obs! Oppgavens frist nærmer seg: %1$s</string>
+</resources>
