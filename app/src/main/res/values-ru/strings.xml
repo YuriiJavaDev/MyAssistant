@@ -76,7 +76,7 @@
     <string name="scan_page_label">Страница %d</string>
     <string name="scan_done">Готово</string>
     <string name="scan_add_page">Добавить страницу</string>
-    <string name="scan_share_pdf">Поделиться PDF</string>
+    <string name="scan_share_pdf">Передать PDF</string>
     <string name="scan_pages_empty">В этом документе нет страниц.</string>
     <string name="scan_saved_to_device">Файл сохранён</string>
     <string name="scan_share_title">Поделиться документом</string>
@@ -189,7 +189,7 @@
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
     <string name="flights_start">Начать запись</string>
-    <string name="flights_stop">Остановить запись</string>
+    <string name="flights_stop">Завершить запись</string>
     <string name="flights_units">Единицы</string>
     <string name="flights_journal">Журнал</string>
     <string name="flights_journal_title">Журнал полётов</string>
@@ -231,10 +231,10 @@
     <string name="flights_unit_fpm">Футы в минуту (ft/min)</string>
     <string name="flights_altitude_zero">Ноль</string>
     <string name="flights_altitude_sea">Над уровнем моря</string>
-    <string name="flights_altitude_start">Над стартом · удерживайте «Ноль», чтобы отменить</string>
+    <string name="flights_altitude_start">Над стартом · удержание «Ноль» отменяет</string>
     <string name="flights_sound_on">Звук: вкл.</string>
     <string name="flights_sound_off">Звук: выкл.</string>
-    <string name="flights_sound_tune">Настройка звука</string>
+    <string name="flights_sound_tune">Настр. звука</string>
     <string name="flights_sound_climb_start">Сигнал начинается при наборе высоты %1$.1f м/с</string>
     <string name="flights_sound_sink_start">Низкие сигналы начинаются при снижении %1$.1f м/с</string>
     <string name="flights_sound_sink_alarm">Непрерывная тревога при снижении %1$.1f м/с</string>
@@ -245,7 +245,7 @@
     <string name="flights_max_speed">Макс. скорость</string>
     <string name="flights_avg_speed">Средняя скорость</string>
     <string name="flights_max_altitude">Наибольшая высота</string>
-    <string name="flights_climb_rate">Скорость набора высоты</string>
+    <string name="flights_climb_rate">Скороподъёмность</string>
     <string name="flights_max_g">Пиковая нагрузка</string>
     <string name="flights_status_waiting">Ожидание сигнала GPS…</string>
     <string name="flights_location_needed">Разрешите доступ к точному местоположению, чтобы записывать скорость, высоту и маршрут.</string>

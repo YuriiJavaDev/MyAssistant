@@ -2,7 +2,7 @@
 <resources>
     <string name="tasks_list_input_hint">Wat moet er gebeuren?</string>
     <string name="tasks_list_add">Toevoegen</string>
-    <string name="tasks_list_delete_completed">Voltooide verwijderen</string>
+    <string name="tasks_list_delete_completed">Voltooide wissen</string>
     <string name="tasks_list_clear_all">Alles wissen</string>
     <string name="tasks_list_reminder_set">Herinnering ingesteld</string>
     <string name="tasks_statistics">Totaal: %1$d  Voltooid: %2$d  Over: %3$d  Voortgang: %4$d%%</string>
@@ -14,7 +14,7 @@
     <string name="tasks_dialog_reminder_label">Herinnering (datum en tijd):</string>
     <string name="tasks_dialog_reminder_select">Kies datum en tijd van de herinnering</string>
     <string name="tasks_dialog_show_timestamps">Aanmaak-/bewerkdatums tonen</string>
-    <string name="tasks_dialog_delete">Verwijderen</string>
+    <string name="tasks_dialog_delete">Wissen</string>
     <string name="tasks_dialog_save">Opslaan</string>
     <string name="tasks_dialog_clear">Wissen</string>
     <string name="tasks_importance_normal">Normaal</string>

@@ -76,7 +76,7 @@
     <string name="scan_page_label">Page %d</string>
     <string name="scan_done">Terminé</string>
     <string name="scan_add_page">Ajouter une page</string>
-    <string name="scan_share_pdf">Partager le PDF</string>
+    <string name="scan_share_pdf">Partager PDF</string>
     <string name="scan_pages_empty">Ce document ne contient aucune page.</string>
     <string name="scan_saved_to_device">Fichier enregistré</string>
     <string name="scan_share_title">Partager le document</string>
@@ -159,7 +159,7 @@
     <string name="steps_run_length">Longueur du pas à la course, cm</string>
     <string name="steps_run_cadence">La course commence à, pas par minute</string>
     <string name="steps_run_cadence_hint">Les pas à ce rythme ou plus vite sont comptés comme de la course.</string>
-    <string name="steps_defaults">Valeurs par défaut</string>
+    <string name="steps_defaults">Par défaut</string>
     <string name="steps_save">Enregistrer</string>
     <string name="steps_invalid_length">Saisissez %1$d–%2$d</string>
     <string name="steps_measure_title">Comment mesurer la longueur de votre pas</string>
@@ -187,8 +187,8 @@
     <string name="calculator_memory_format">M : %1$s</string>
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
-    <string name="flights_start">Démarrer l’enregistrement</string>
-    <string name="flights_stop">Arrêter l’enregistrement</string>
+    <string name="flights_start">Enregistrer</string>
+    <string name="flights_stop">Arrêter</string>
     <string name="flights_units">Unités</string>
     <string name="flights_journal">Journal</string>
     <string name="flights_journal_title">Journal de vol</string>
@@ -229,7 +229,7 @@
     <string name="flights_unit_fpm">Pieds par minute (ft/min)</string>
     <string name="flights_altitude_zero">Zéro</string>
     <string name="flights_altitude_sea">Au-dessus du niveau de la mer</string>
-    <string name="flights_altitude_start">Au-dessus du départ · maintenez « Zéro » pour annuler</string>
+    <string name="flights_altitude_start">Au-dessus du départ · « Zéro » maintenu : annuler</string>
     <string name="flights_sound_on">Son : activé</string>
     <string name="flights_sound_off">Son : désactivé</string>
     <string name="flights_sound_tune">Réglage du son</string>

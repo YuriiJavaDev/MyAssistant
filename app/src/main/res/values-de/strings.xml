@@ -137,7 +137,7 @@
     <string name="steps_period">Zeitraum</string>
     <string name="steps_last_7">7 Tage</string>
     <string name="steps_last_30">30 Tage</string>
-    <string name="steps_this_month">Dieser Monat</string>
+    <string name="steps_this_month">Monat</string>
     <string name="steps_pick_dates">Daten wählen</string>
     <string name="steps_range_format">%1$s – %2$s</string>
     <string name="steps_total">Schritte gesamt</string>
@@ -186,8 +186,8 @@
     <string name="calculator_memory_format">M: %1$s</string>
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
-    <string name="flights_start">Aufzeichnung starten</string>
-    <string name="flights_stop">Aufzeichnung beenden</string>
+    <string name="flights_start">Aufzeichnen</string>
+    <string name="flights_stop">Stoppen</string>
     <string name="flights_units">Einheiten</string>
     <string name="flights_journal">Logbuch</string>
     <string name="flights_journal_title">Flug-Logbuch</string>
@@ -227,19 +227,19 @@
     <string name="flights_unit_fpm">Fuß pro Minute (ft/min)</string>
     <string name="flights_altitude_zero">Null</string>
     <string name="flights_altitude_sea">Über dem Meeresspiegel</string>
-    <string name="flights_altitude_start">Über dem Start · „Null“ gedrückt halten zum Rückgängigmachen</string>
+    <string name="flights_altitude_start">Über Start · „Null“ lang drücken = zurück</string>
     <string name="flights_sound_on">Ton: an</string>
     <string name="flights_sound_off">Ton: aus</string>
     <string name="flights_sound_tune">Tonabstimmung</string>
     <string name="flights_sound_climb_start">Das Piepen beginnt bei einem Steigen von %1$.1f m/s</string>
     <string name="flights_sound_sink_start">Tiefe Pieptöne beginnen bei einem Sinken von %1$.1f m/s</string>
     <string name="flights_sound_sink_alarm">Daueralarm bei einem Sinken von %1$.1f m/s</string>
-    <string name="flights_speed_label">Geschwindigkeit</string>
+    <string name="flights_speed_label">Tempo</string>
     <string name="flights_g_label">G</string>
     <string name="flights_time">Flugzeit</string>
     <string name="flights_distance">Strecke</string>
     <string name="flights_max_speed">Höchstgeschwindigkeit</string>
-    <string name="flights_avg_speed">Durchschnittsgeschwindigkeit</string>
+    <string name="flights_avg_speed">Ø Geschwindigkeit</string>
     <string name="flights_max_altitude">Maximale Höhe</string>
     <string name="flights_climb_rate">Steigrate</string>
     <string name="flights_max_g">Spitzenbelastung</string>

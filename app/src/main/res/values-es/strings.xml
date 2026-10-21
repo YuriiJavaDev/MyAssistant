@@ -159,7 +159,7 @@
     <string name="steps_run_length">Longitud del paso al correr, cm</string>
     <string name="steps_run_cadence">Correr empieza en, pasos por minuto</string>
     <string name="steps_run_cadence_hint">Los pasos a este ritmo o más rápido se cuentan como correr.</string>
-    <string name="steps_defaults">Valores por defecto</string>
+    <string name="steps_defaults">Predeterminado</string>
     <string name="steps_save">Guardar</string>
     <string name="steps_invalid_length">Introduce %1$d–%2$d</string>
     <string name="steps_measure_title">Cómo medir la longitud de tu paso</string>
@@ -230,9 +230,9 @@
     <string name="flights_altitude_zero">Cero</string>
     <string name="flights_altitude_sea">Sobre el nivel del mar</string>
     <string name="flights_altitude_start">Sobre el despegue · mantén «Cero» para deshacer</string>
-    <string name="flights_sound_on">Sonido: activado</string>
-    <string name="flights_sound_off">Sonido: desactivado</string>
-    <string name="flights_sound_tune">Ajuste del sonido</string>
+    <string name="flights_sound_on">Sonido: on</string>
+    <string name="flights_sound_off">Sonido: off</string>
+    <string name="flights_sound_tune">Ajustar sonido</string>
     <string name="flights_sound_climb_start">Los pitidos empiezan con un ascenso de %1$.1f m/s</string>
     <string name="flights_sound_sink_start">Los pitidos graves empiezan con un descenso de %1$.1f m/s</string>
     <string name="flights_sound_sink_alarm">Alarma continua con un descenso de %1$.1f m/s</string>

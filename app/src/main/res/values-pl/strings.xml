@@ -76,7 +76,7 @@
     <string name="scan_page_label">Strona %d</string>
     <string name="scan_done">Gotowe</string>
     <string name="scan_add_page">Dodaj stronę</string>
-    <string name="scan_share_pdf">Udostępnij PDF</string>
+    <string name="scan_share_pdf">Wyślij PDF</string>
     <string name="scan_pages_empty">Ten dokument nie ma stron.</string>
     <string name="scan_saved_to_device">Plik zapisany</string>
     <string name="scan_share_title">Udostępnij dokument</string>
@@ -146,7 +146,7 @@
     <string name="steps_distance">Dystans</string>
     <string name="steps_average">Średnio dziennie</string>
     <string name="steps_best_day">Najlepszy dzień</string>
-    <string name="steps_walking">Kroki podczas chodzenia</string>
+    <string name="steps_walking">Kroki w marszu</string>
     <string name="steps_running">Kroki podczas biegu</string>
     <string name="steps_active_days">Dni z krokami</string>
     <string name="steps_average_value">%1$s (%2$s)</string>
@@ -188,8 +188,8 @@
     <string name="calculator_memory_format">M: %1$s</string>
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
-    <string name="flights_start">Rozpocznij nagrywanie</string>
-    <string name="flights_stop">Zatrzymaj nagrywanie</string>
+    <string name="flights_start">Nagrywaj</string>
+    <string name="flights_stop">Zatrzymaj</string>
     <string name="flights_units">Jednostki</string>
     <string name="flights_journal">Dziennik</string>
     <string name="flights_journal_title">Dziennik lotów</string>
@@ -232,9 +232,9 @@
     <string name="flights_altitude_zero">Zero</string>
     <string name="flights_altitude_sea">Nad poziomem morza</string>
     <string name="flights_altitude_start">Nad miejscem startu · przytrzymaj „Zero”, aby cofnąć</string>
-    <string name="flights_sound_on">Dźwięk: włączony</string>
-    <string name="flights_sound_off">Dźwięk: wyłączony</string>
-    <string name="flights_sound_tune">Strojenie dźwięku</string>
+    <string name="flights_sound_on">Dźwięk: wł.</string>
+    <string name="flights_sound_off">Dźwięk: wył.</string>
+    <string name="flights_sound_tune">Ustaw dźwięk</string>
     <string name="flights_sound_climb_start">Pikanie zaczyna się przy wznoszeniu %1$.1f m/s</string>
     <string name="flights_sound_sink_start">Niskie dźwięki zaczynają się przy opadaniu %1$.1f m/s</string>
     <string name="flights_sound_sink_alarm">Ciągły alarm przy opadaniu %1$.1f m/s</string>

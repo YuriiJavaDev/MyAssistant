@@ -76,7 +76,7 @@
     <string name="scan_page_label">Сторінка %d</string>
     <string name="scan_done">Готово</string>
     <string name="scan_add_page">Додати сторінку</string>
-    <string name="scan_share_pdf">Поділитися PDF</string>
+    <string name="scan_share_pdf">Передати PDF</string>
     <string name="scan_pages_empty">У цьому документі немає сторінок.</string>
     <string name="scan_saved_to_device">Файл збережено</string>
     <string name="scan_share_title">Поділитися документом</string>
@@ -160,7 +160,7 @@
     <string name="steps_run_length">Довжина кроку при бігу, см</string>
     <string name="steps_run_cadence">Біг починається від, кроків за хвилину</string>
     <string name="steps_run_cadence_hint">Кроки в такому темпі або швидше рахуються як біг.</string>
-    <string name="steps_defaults">За замовчуванням</string>
+    <string name="steps_defaults">Типові</string>
     <string name="steps_save">Зберегти</string>
     <string name="steps_invalid_length">Введіть %1$d–%2$d</string>
     <string name="steps_measure_title">Як виміряти довжину кроку</string>
@@ -234,7 +234,7 @@
     <string name="flights_altitude_start">Над стартом · утримуйте «Нуль», щоб скасувати</string>
     <string name="flights_sound_on">Звук: увімк.</string>
     <string name="flights_sound_off">Звук: вимк.</string>
-    <string name="flights_sound_tune">Налаштування звуку</string>
+    <string name="flights_sound_tune">Налашт. звуку</string>
     <string name="flights_sound_climb_start">Сигнал починається при підйомі %1$.1f м/с</string>
     <string name="flights_sound_sink_start">Низькі сигнали починаються при зниженні %1$.1f м/с</string>
     <string name="flights_sound_sink_alarm">Безперервна тривога при зниженні %1$.1f м/с</string>

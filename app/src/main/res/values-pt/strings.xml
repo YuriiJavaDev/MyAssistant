@@ -76,7 +76,7 @@
     <string name="scan_page_label">Página %d</string>
     <string name="scan_done">Concluir</string>
     <string name="scan_add_page">Adicionar página</string>
-    <string name="scan_share_pdf">Compartilhar PDF</string>
+    <string name="scan_share_pdf">Enviar PDF</string>
     <string name="scan_pages_empty">Este documento não tem páginas.</string>
     <string name="scan_saved_to_device">Arquivo salvo</string>
     <string name="scan_share_title">Compartilhar documento</string>

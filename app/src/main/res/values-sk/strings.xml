@@ -139,7 +139,7 @@
     <string name="steps_period">Obdobie</string>
     <string name="steps_last_7">7 dní</string>
     <string name="steps_last_30">30 dní</string>
-    <string name="steps_this_month">Tento mesiac</string>
+    <string name="steps_this_month">Mesiac</string>
     <string name="steps_pick_dates">Vybrať dátumy</string>
     <string name="steps_range_format">%1$s – %2$s</string>
     <string name="steps_total">Spolu krokov</string>

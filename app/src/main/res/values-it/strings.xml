@@ -138,7 +138,7 @@
     <string name="steps_period">Periodo</string>
     <string name="steps_last_7">7 giorni</string>
     <string name="steps_last_30">30 giorni</string>
-    <string name="steps_this_month">Questo mese</string>
+    <string name="steps_this_month">Mese</string>
     <string name="steps_pick_dates">Scegli le date</string>
     <string name="steps_range_format">%1$s – %2$s</string>
     <string name="steps_total">Passi totali</string>
@@ -188,7 +188,7 @@
     <string name="calculator_preview_format">= %1$s</string>
     <string name="calculator_last_format">%1$s = %2$s</string>
     <string name="flights_start">Avvia registrazione</string>
-    <string name="flights_stop">Interrompi registrazione</string>
+    <string name="flights_stop">Interrompi</string>
     <string name="flights_units">Unità</string>
     <string name="flights_journal">Diario</string>
     <string name="flights_journal_title">Diario di volo</string>
@@ -231,8 +231,8 @@
     <string name="flights_altitude_sea">Sul livello del mare</string>
     <string name="flights_altitude_start">Sopra il decollo · tieni premuto «Zero» per annullare</string>
     <string name="flights_sound_on">Suono: attivo</string>
-    <string name="flights_sound_off">Suono: disattivato</string>
-    <string name="flights_sound_tune">Regolazione del suono</string>
+    <string name="flights_sound_off">Suono: spento</string>
+    <string name="flights_sound_tune">Regola suono</string>
     <string name="flights_sound_climb_start">I bip iniziano con una salita di %1$.1f m/s</string>
     <string name="flights_sound_sink_start">I bip bassi iniziano con una discesa di %1$.1f m/s</string>
     <string name="flights_sound_sink_alarm">Allarme continuo con una discesa di %1$.1f m/s</string>

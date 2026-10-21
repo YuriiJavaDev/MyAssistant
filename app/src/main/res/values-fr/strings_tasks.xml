@@ -2,7 +2,7 @@
 <resources>
     <string name="tasks_list_input_hint">Que faut-il faire ?</string>
     <string name="tasks_list_add">Ajouter</string>
-    <string name="tasks_list_delete_completed">Supprimer les terminées</string>
+    <string name="tasks_list_delete_completed">Suppr. terminées</string>
     <string name="tasks_list_clear_all">Tout effacer</string>
     <string name="tasks_list_reminder_set">Rappel défini</string>
     <string name="tasks_statistics">Total : %1$d  Terminées : %2$d  Restantes : %3$d  Progression : %4$d %%</string>

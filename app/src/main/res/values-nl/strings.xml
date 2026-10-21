@@ -158,7 +158,7 @@
     <string name="steps_run_length">Staplengte bij hardlopen, cm</string>
     <string name="steps_run_cadence">Hardlopen begint bij, stappen per minuut</string>
     <string name="steps_run_cadence_hint">Stappen in dit tempo of sneller tellen als hardlopen.</string>
-    <string name="steps_defaults">Standaardwaarden</string>
+    <string name="steps_defaults">Standaard</string>
     <string name="steps_save">Opslaan</string>
     <string name="steps_invalid_length">Voer %1$d–%2$d in</string>
     <string name="steps_measure_title">Zo meet je je staplengte</string>
@@ -227,7 +227,7 @@
     <string name="flights_unit_fpm">Voet per minuut (ft/min)</string>
     <string name="flights_altitude_zero">Nul</string>
     <string name="flights_altitude_sea">Boven zeeniveau</string>
-    <string name="flights_altitude_start">Boven de start · houd “Nul” ingedrukt om ongedaan te maken</string>
+    <string name="flights_altitude_start">Boven start · houd “Nul” ingedrukt = ongedaan</string>
     <string name="flights_sound_on">Geluid: aan</string>
     <string name="flights_sound_off">Geluid: uit</string>
     <string name="flights_sound_tune">Geluid afstellen</string>

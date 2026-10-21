@@ -227,7 +227,7 @@
     <string name="flights_unit_fpm">Dakikada fit (ft/dk)</string>
     <string name="flights_altitude_zero">Sıfır</string>
     <string name="flights_altitude_sea">Deniz seviyesinden</string>
-    <string name="flights_altitude_start">Kalkış noktasından · geri almak için “Sıfır”a basılı tutun</string>
+    <string name="flights_altitude_start">Kalkıştan · geri almak için “Sıfır”a basılı tutun</string>
     <string name="flights_sound_on">Ses: açık</string>
     <string name="flights_sound_off">Ses: kapalı</string>
     <string name="flights_sound_tune">Ses ayarı</string>
