@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">正在將備份上傳到雲端...</string>
+    <string name="backup_cloud_restoring">正在從雲端還原備份...</string>
+    <string name="backup_cloud_upload_success">備份已成功上傳到雲端</string>
+    <string name="backup_cloud_restore_success">備份已成功從雲端還原</string>
+    <string name="backup_cloud_restore_partly">任務已從雲端還原（雲端未找到以下內容的備份：%1$s）</string>
+    <string name="backup_part_steps">步數</string>
+    <string name="backup_part_flights">飛行</string>
+    <string name="backup_part_scans">掃描檔</string>
+    <string name="backup_part_separator">"、"</string>
+    <string name="backup_error_upload">上傳錯誤：%1$s</string>
+    <string name="backup_error_download">下載錯誤：%1$s</string>
+    <string name="backup_error_unknown">未知錯誤</string>
+    <string name="backup_error_insecure_url">URL 必須以 https:// 開頭</string>
+    <string name="backup_error_authentication">身份驗證失敗：請檢查使用者名稱和密碼</string>
+    <string name="backup_error_server_code">伺服器返回代碼：%1$d</string>
+    <string name="backup_error_connection">連線錯誤：%1$s</string>
+    <string name="backup_destination_title">將備份儲存到</string>
+    <string name="backup_destination_folder">選擇資料夾（裝置、SD 卡、USB、雲端硬碟……）</string>
+    <string name="backup_destination_share">分享給應用程式</string>
+    <string name="backup_preparing">正在準備備份...</string>
+    <string name="backup_export_failed">匯出失敗</string>
+    <string name="backup_export_saved">備份已儲存</string>
+    <string name="backup_import_success">備份已成功匯入。正在重新啟動...</string>
+    <string name="backup_import_failed">匯入失敗</string>
+    <string name="backup_import_title">注意！</string>
+    <string name="backup_import_message">還原備份會用其中的資料替換當前的任務、步數和掃描檔。確定要繼續嗎？</string>
+    <string name="backup_import_confirm">確認匯入</string>
+    <string name="backup_share_chooser_title">匯出備份</string>
+    <string name="backup_cloud_settings_saved">雲端設定已成功儲存</string>
+    <string name="backup_cloud_secure_storage_unavailable">安全存儲不可用，設定未儲存</string>
+    <string name="backup_cloud_url_empty">URL 不能為空</string>
+    <string name="backup_cloud_testing">正在測試連線...</string>
+    <string name="backup_cloud_connection_successful">連線成功！</string>
+</resources>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Չեղարկել</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Կարգավորումներ</string>
+    <string name="settings_alarms_title">Հիշեցումներ և զարթուցիչներ</string>
+    <string name="settings_alarms_subtitle">Ընդմիջումներ, ձայներ և ծանուցումների կարգավիճակ</string>
+    <string name="settings_display_title">Ցուցադրման ռեժիմ</string>
+    <string name="settings_display_subtitle">Ցերեկ / գիշեր / ավտոմատ</string>
+    <string name="display_mode_title">Ցուցադրման ռեժիմ</string>
+    <string name="display_mode_light">Լուսավոր (ցերեկ)</string>
+    <string name="display_mode_dark">Մուգ (գիշեր)</string>
+    <string name="display_mode_system">Ըստ համակարգի (ավտո)</string>
+    <string name="settings_design_title">Հավելվածի տեսքը</string>
+    <string name="settings_design_subtitle">Ինտերֆեյսի ոճի ընտրություն</string>
+    <string name="design_classic_name">Դասական</string>
+    <string name="design_classic_about">Սկզբնական տեսքը՝ կրեմագույն և մանուշակագույն</string>
+    <string name="design_paper_ink_name">Թուղթ և թանաք</string>
+    <string name="design_paper_ink_about">Բարակ գծեր և հանգիստ գրասենյակային երանգներ</string>
+    <string name="design_pastel_cloud_name">Պաստելե ամպ</string>
+    <string name="design_pastel_cloud_about">Փափուկ, կլորավուն և գունատ՝ ամպերով</string>
+    <string name="design_neon_arcade_name">Նեոնային արկադա</string>
+    <string name="design_neon_arcade_about">Վառ նեոն, բարձր կոնտրաստ և ռետրո արև</string>
+    <string name="design_toon_name">Մուլտֆիլմ</string>
+    <string name="design_toon_about">Կոմիքսի ուրվագծեր և ձեռագիր տառատեսակ</string>
+    <string name="design_biker_name">Բայկեր</string>
+    <string name="design_biker_about">Կոպիտ մետաղ, ռետին և արտանետիչի նարնջագույն</string>
+    <string name="design_cockpit_name">Օդաչուի խցիկ</string>
+    <string name="design_cockpit_about">Խիստ սարքերի վահանակ՝ ճախրանավով</string>
+    <string name="design_beach_name">Լողափ</string>
+    <string name="design_beach_about">Ավազ, ծովածոց, կորալներ և արմավենիներ</string>
+    <string name="design_forest_name">Կախարդական անտառ</string>
+    <string name="design_forest_about">Մագաղաթ, ոսկի և անտառի մամուռ</string>
+    <string name="design_mono_block_name">Մոնոբլոկ</string>
+    <string name="design_mono_block_about">Խիստ սև ու սպիտակ՝ մեկ դեղին մարկերով</string>
+    <string name="settings_permissions_title">Համակարգի թույլտվություններ</string>
+    <string name="settings_permissions_subtitle">Հասանելիության կառավարում Android-ում</string>
+    <string-array name="filter_options">
+        <item>Բոլորը</item>
+        <item>Ընթացիկ</item>
+        <item>Ավարտված</item>
+        <item>Զգուշացումներ</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>Ա–Ֆ</item>
+        <item>Ֆ–Ա</item>
+        <item>Կարգավիճակ</item>
+        <item>Ստեղծման ամսաթիվ</item>
+        <item>Փոփոխության օր</item>
+        <item>Ավարտի ամսաթիվ</item>
+        <item>Կարևորություն</item>
+        <item>Վերջնաժամկետ</item>
+    </string-array>
+    <string name="scan_camera">Տեսախցիկ</string>
+    <string name="scan_gallery">Պատկերասրահ</string>
+    <string name="scan_clear_all">Ջնջել բոլորը</string>
+    <string name="scan_cleared">Բոլոր սկանները ջնջվեցին</string>
+    <string name="scan_empty">Փաստաթղթեր դեռ չկան։ Լուսանկարեք էջը կամ ընտրեք պատկեր պատկերասրահից</string>
+    <string name="scan_auto">Ավտո</string>
+    <string name="scan_reset">Զրոյացնել</string>
+    <string name="scan_next">Առաջ</string>
+    <string name="scan_back">Հետ</string>
+    <string name="scan_save">Պահել</string>
+    <string name="scan_rotate">Պտտել</string>
+    <string name="scan_paper">Թուղթ</string>
+    <string name="scan_filter_color">Գույն</string>
+    <string name="scan_filter_gray">Մոխրագ.</string>
+    <string name="scan_filter_bw">Ս/Ս</string>
+    <string name="scan_tune">Լույս և կոնտրաստ</string>
+    <string name="scan_shadows">Հեռացնել ստվերները</string>
+    <string name="scan_brightness">Պայծառություն</string>
+    <string name="scan_contrast">Կոնտրաստ</string>
+    <string name="scan_sharpen">Հստակություն</string>
+    <string name="scan_page_saved">Էջը պահվեց</string>
+    <string name="scan_next_page_question">Փաստաթղթին ավելացնե՞լ ևս մեկ էջ</string>
+    <string name="scan_page_label">Էջ %d</string>
+    <string name="scan_done">Պատրաստ է</string>
+    <string name="scan_add_page">Ավելացնել էջ</string>
+    <string name="scan_share_pdf">Ուղարկել PDF</string>
+    <string name="scan_pages_empty">Այս փաստաթղթում էջեր չկան</string>
+    <string name="scan_saved_to_device">Ֆայլը պահվեց</string>
+    <string name="scan_share_title">Կիսվել փաստաթղթով</string>
+    <string name="scan_rename_title">Վերանվանել փաստաթուղթը</string>
+    <string name="scan_rename_confirm">Վերանվանել</string>
+    <string name="scan_error_load">Այս պատկերը չհաջողվեց բացել</string>
+    <string name="scan_error_preview">Նախադիտման համար հիշողությունը բավարար չէ</string>
+    <string name="scan_error_save">Սկանը չհաջողվեց պահել</string>
+    <string name="scan_error_export">Ֆայլը չհաջողվեց պատրաստել</string>
+    <string name="scan_error_no_camera">Տեսախցիկի հավելվածը չի գտնվել</string>
+    <string name="scan_error_no_viewer">Պատկերը բացելու հավելված չի գտնվել</string>
+    <string name="scan_error_no_app">Կիսվելու հավելված չի գտնվել</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d էջ</item>
+        <item quantity="other">%d էջ</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Էջեր</item>
+        <item>Կիսվել որպես PDF</item>
+        <item>Կիսվել որպես JPEG</item>
+        <item>Պահել PDF-ը…</item>
+        <item>Վերանվանել</item>
+        <item>Ջնջել</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Դիտել</item>
+        <item>Պահել JPEG-ը…</item>
+        <item>Տեղափոխել վերև</item>
+        <item>Տեղափոխել ներքև</item>
+        <item>Ջնջել էջը</item>
+    </string-array>
+    <string name="weather_city_hint">Քաղաքի անունը ցանկացած լեզվով</string>
+    <string name="weather_search">Որոնել</string>
+    <string name="weather_my_location">Իմ գտնվելու վայրը</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Զգացվում է</string>
+    <string name="weather_humidity">Խոնավություն</string>
+    <string name="weather_wind">Քամի</string>
+    <string name="weather_today_range">Այսօր</string>
+    <string name="weather_units">Միավորներ</string>
+    <string name="weather_units_temperature">Ջերմաստիճան</string>
+    <string name="weather_units_wind">Քամու արագություն</string>
+    <string name="weather_unit_celsius">Ցելսիուս (°C)</string>
+    <string name="weather_unit_fahrenheit">Ֆարենհայթ (°F)</string>
+    <string name="weather_unit_ms">Մետր վայրկյանում (m/s)</string>
+    <string name="weather_unit_kmh">Կիլոմետր ժամում (km/h)</string>
+    <string name="weather_moon_caption">%1$s · լուսավորված է %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Եղանակը բեռնվում է…</string>
+    <string name="weather_location_needed">Թույլատրեք մոտավոր դիրքի հասանելիությունը՝ ձեր մոտ եղանակը տեսնելու համար, կամ որոնեք քաղաք</string>
+    <string name="weather_allow">Թույլատրել</string>
+    <string name="weather_open_settings">Բացել հավելվածի կարգավորումները</string>
+    <string name="weather_attribution">Եղանակ՝ Open-Meteo.com · Վայրեր՝ © OpenStreetMap-ի մասնակիցներ</string>
+    <string name="weather_choose_city">Ընտրեք քաղաք</string>
+    <string name="steps_today">Այսօր</string>
+    <string name="steps_unit">քայլ</string>
+    <string name="steps_walk_run">քայլք %1$s · վազք %2$s</string>
+    <string name="steps_period">Ժամանակահատված</string>
+    <string name="steps_last_7">7 օր</string>
+    <string name="steps_last_30">30 օր</string>
+    <string name="steps_this_month">Ամիս</string>
+    <string name="steps_pick_dates">Ընտրեք ամսաթվերը</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Ընդամենը քայլեր</string>
+    <string name="steps_distance">Տարածություն</string>
+    <string name="steps_average">Միջինը օրական</string>
+    <string name="steps_best_day">Լավագույն օրը</string>
+    <string name="steps_walking">Քայլեր քայլելիս</string>
+    <string name="steps_running">Քայլեր վազելիս</string>
+    <string name="steps_active_days">Օրեր քայլերով</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d՝ %2$d-ից</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Այս ժամանակահատվածում քայլեր գրանցված չեն</string>
+    <string name="steps_settings">Քայլերի կարգավորումներ</string>
+    <string name="steps_settings_title">Քայլի երկարություն</string>
+    <string name="steps_walk_length">Քայլի երկարությունը քայլելիս, սմ</string>
+    <string name="steps_run_length">Քայլի երկարությունը վազելիս, սմ</string>
+    <string name="steps_run_cadence">Վազք է համարվում սկսած, քայլ րոպեում</string>
+    <string name="steps_run_cadence_hint">Այս կամ ավելի արագ տեմպով քայլերը համարվում են վազք</string>
+    <string name="steps_defaults">Լռելյայն</string>
+    <string name="steps_save">Պահել</string>
+    <string name="steps_invalid_length">Մուտքագրեք արժեք %1$d–%2$d</string>
+    <string name="steps_measure_title">Ինչպես չափել քայլի երկարությունը</string>
+    <string name="steps_measure_text">1. Առաջին քայլից առաջ կոշիկի ծայրի մոտ նշեք սկզբնական գիծը։\n2. Քայլեք 10 հանգիստ քայլ ձեր սովորական արագությամբ։\n3. Տասներորդ քայլից հետո չափեք հեռավորությունը սկզբնական գծից մինչև նույն կոշիկի ծայրը սանտիմետրերով։\n4. Բաժանեք տասի։\n5. Կրկնեք մի քանի անգամ և մուտքագրեք միջինը։\n\nՎազքի քայլի երկարության համար արեք նույնը՝ ձեր սովորական վազքի տեմպով։</string>
+    <string name="steps_no_sensor">Այս հեռախոսը քայլերի սենսոր չունի</string>
+    <string name="steps_permission_needed">Թույլատրեք ֆիզիկական ակտիվության հասանելիությունը, որպեսզի հեռախոսը հաշվի ձեր քայլերը</string>
+    <string name="steps_allow">Թույլատրել</string>
+    <string name="steps_open_settings">Բացել հավելվածի կարգավորումները</string>
+    <string name="currency_amount_hint">Գումար</string>
+    <string name="currency_swap">Փոխել ⇅</string>
+    <string name="currency_refresh">Թարմացնել փոխարժեքը</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Փոխարժեքը թարմացվել է՝ %1$s</string>
+    <string name="currency_outdated">Ինտերնետ չկա, ցուցադրվում է պահված փոխարժեքը՝ %1$s</string>
+    <string name="currency_loading">Փոխարժեքները բեռնվում են…</string>
+    <string name="currency_unavailable">Փոխարժեքները հասանելի չեն։ Ստուգեք ինտերնետը և թարմացրեք</string>
+    <string name="currency_invalid_amount">Մուտքագրեք գումարը</string>
+    <string name="currency_attribution">Փոխարժեքներ՝ Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Գիտ.</string>
+    <string name="calculator_basic">Հիմն.</string>
+    <string name="calculator_degrees">Աստ.</string>
+    <string name="calculator_radians">Ռադիան</string>
+    <string name="calculator_history">Պատմություն</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Սկսել</string>
+    <string name="flights_stop">Կանգ</string>
+    <string name="flights_units">Միավոր</string>
+    <string name="flights_journal">Մատյան</string>
+    <string name="flights_journal_title">Թռիչքների մատյան</string>
+    <string name="flights_journal_empty">Գրանցված թռիչքներ դեռ չկան</string>
+    <string name="flights_journal_in_progress">Այս թռիչքը դեռ գրանցվում է</string>
+    <string name="flights_report_open">Բացել հաշվետվությունը</string>
+    <string name="flights_report_share">Կիսվել հաշվետվությամբ</string>
+    <string name="flights_report_delete">Ջնջել թռիչքը</string>
+    <string name="flights_report_failed">Հաշվետվությունը չհաջողվեց պատրաստել</string>
+    <string name="flights_report_no_viewer">PDF ֆայլը բացելու հավելված չի գտնվել</string>
+    <string name="flights_delete_title">Ջնջե՞լ այս թռիչքը</string>
+    <string name="flights_delete_message">Ուղին և հաշվետվությունը կջնջվեն ընդմիշտ։ Մինչ այդ կարող եք հաշվետվությունն ուղարկել այլ տեղ, օրինակ՝ ֆլեշկա, համակարգիչ կամ Google Drive</string>
+    <string name="flights_delete_save_first">Պահել հաշվետվությունը և ջնջել</string>
+    <string name="flights_delete_without_saving">Ջնջել առանց պահելու</string>
+    <string name="flights_delete_after_share_message">Եթե հաշվետվությունը հասել է անհրաժեշտ տեղ, հիմա կարող եք ջնջել թռիչքը</string>
+    <string name="flights_delete_after_share_confirm">Ջնջել թռիչքը</string>
+    <string name="flights_delete_keep">Թողնել թռիչքը</string>
+    <string name="flights_units_report_limit">Հաշվետվությունների սահմանաչափ</string>
+    <string name="flights_units_report_limit_hint">PDF հաշվետվությունների առավելագույն քանակը մատյանում։ 0-ն նշանակում է առանց սահմանի</string>
+    <string name="flights_limit_full_title">PDF հաշվետվությունների սահմանաչափը լրացել է</string>
+    <string name="flights_limit_full_message">Մատյանում %1$d հաշվետվություն կա, դա սահմանաչափն է։ Նոր թռիչք գրանցելու համար մատյանից ջնջեք առնվազն մեկ թռիչք։ Մինչ այդ դրա հաշվետվությունը կարող եք պահել ֆլեշկայում, համակարգչում կամ Google Drive-ում</string>
+    <string name="flights_limit_warning_title">PDF հաշվետվությունների սահմանաչափը մոտ է լրանալուն։</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Կարող եք գրանցել ևս %d թռիչք։ Ջնջեք հին թռիչքները մատյանից</item>
+        <item quantity="other">Կարող եք գրանցել ևս %d թռիչք։ Ջնջեք հին թռիչքները մատյանից</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Բացել մատյանը</string>
+    <string name="flights_journal_line">%1$s · առավ. %2$s · առավ. բարձրություն %3$s</string>
+    <string name="flights_units_speed">Արագություն և տարածություն</string>
+    <string name="flights_units_altitude">Բարձրություն</string>
+    <string name="flights_unit_kmh">Կիլոմետր ժամում (km/h)</string>
+    <string name="flights_unit_knots">Հանգույց (kt, ծովային մղոն)</string>
+    <string name="flights_unit_ms">Մետր վայրկյանում (m/s)</string>
+    <string name="flights_unit_metres">Մետր (m)</string>
+    <string name="flights_unit_feet">Ոտնաչափ (ft)</string>
+    <string name="flights_units_climb">Վերելքի արագություն</string>
+    <string name="flights_unit_fpm">Ոտնաչափ րոպեում (ft/min)</string>
+    <string name="flights_altitude_zero">Զրո</string>
+    <string name="flights_altitude_sea">Ծովի մակերևույթից</string>
+    <string name="flights_altitude_start">Մեկնարկից · չեղարկել՝ սեղմած «Զրո»</string>
+    <string name="flights_sound_on">Ձայն՝ միաց.</string>
+    <string name="flights_sound_off">Ձայն՝ անջ.</string>
+    <string name="flights_sound_tune">Ձայնը</string>
+    <string name="flights_sound_climb_start">Ազդանշանն սկսվում է %1$.1f m/s վերելքից</string>
+    <string name="flights_sound_sink_start">Ցածր ազդանշանն սկսվում է %1$.1f m/s իջեցումից</string>
+    <string name="flights_sound_sink_alarm">Անընդհատ տագնապ %1$.1f m/s իջեցման դեպքում</string>
+    <string name="flights_speed_label">Արագություն</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Թռիչքի ժամանակը</string>
+    <string name="flights_distance">Տարածություն</string>
+    <string name="flights_max_speed">Առավ. արագություն</string>
+    <string name="flights_avg_speed">Միջին արագություն</string>
+    <string name="flights_max_altitude">Առավ. բարձրություն</string>
+    <string name="flights_climb_rate">Վերելքի արագություն</string>
+    <string name="flights_max_g">Առավ. G</string>
+    <string name="flights_status_waiting">Սպասում ենք GPS ազդանշանին…</string>
+    <string name="flights_location_needed">Թույլատրեք ճշգրիտ դիրքի հասանելիությունը՝ արագությունը, բարձրությունը և ուղին գրանցելու համար</string>
+    <string name="flights_allow">Թույլատրել</string>
+    <string name="flights_open_settings">Բացել հավելվածի կարգավորումները</string>
+    <string name="flights_gps_off">Թռիչքը գրանցելու համար միացրեք դիրքի ծառայությունները (GPS)</string>
+    <string name="flights_disclaimer">Միայն զվարճանքի և հետաքրքրասիրության համար։ Մի ապավինեք այս գործիքներին նավիգացիայի կամ անվտանգության հարցերում</string>
+</resources>

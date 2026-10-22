@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Perekaman penerbangan</string>
+    <string name="flights_notification_channel_description">Ditampilkan saat penerbangan direkam</string>
+    <string name="flights_notification_title">Merekam penerbangan</string>
+    <string name="flights_notification_text">Ketuk untuk membuka instrumen</string>
+    <string-array name="flights_cardinal_points">
+        <item>U</item>
+        <item>TL</item>
+        <item>T</item>
+        <item>TG</item>
+        <item>S</item>
+        <item>BD</item>
+        <item>B</item>
+        <item>BL</item>
+    </string-array>
+    <string name="flights_report_title">Laporan penerbangan</string>
+    <string name="flights_report_north">U</string>
+    <string name="flights_report_side_north">U</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">T</string>
+    <string name="flights_report_side_west">B</string>
+    <string name="flights_report_duration">Durasi</string>
+    <string name="flights_report_distance">Jarak</string>
+    <string name="flights_report_top_speed">Kecepatan tertinggi</string>
+    <string name="flights_report_average_speed">Kecepatan rata-rata</string>
+    <string name="flights_report_highest_altitude">Ketinggian tertinggi</string>
+    <string name="flights_report_best_climb">Naik terbaik</string>
+    <string name="flights_report_worst_sink">Turun terburuk</string>
+    <string name="flights_report_peak_load">Beban puncak</string>
+    <string name="flights_report_start_point">Titik awal</string>
+    <string name="flights_report_end_point">Titik akhir</string>
+    <string name="flights_report_altitude_above_start">%1$s di atas titik awal</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s di atas permukaan laut</string>
+    <string name="flights_report_chart_altitude_above_start">Ketinggian (%1$s, di atas titik awal)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Ketinggian (%1$s, di atas permukaan laut)</string>
+    <string name="flights_report_chart_speed">Kecepatan terhadap tanah (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Peta: Natural Earth (domain publik)</string>
+    <string name="flights_report_footer">%1$s Direkam di MyAssistant hanya untuk hiburan: bukan untuk navigasi atau keselamatan</string>
+</resources>

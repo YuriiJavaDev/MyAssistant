@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Բնօրինակ</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Սկան %1$s</string>
+    <string name="scan_delete_page_message">Ջնջե՞լ այս էջը։ Այս գործողությունը հնարավոր չէ չեղարկել։</string>
+    <string name="scan_delete_document_message">Ջնջե՞լ «%1$s» փաստաթուղթը բոլոր էջերով։ Այս գործողությունը հնարավոր չէ չեղարկել։</string>
+    <string name="scan_delete_all_message">Ջնջե՞լ ամեն ինչ՝ %1$s, %2$s։ Այս գործողությունը հնարավոր չէ չեղարկել։</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d փաստաթուղթ</item>
+        <item quantity="other">%d փաստաթուղթ</item>
+    </plurals>
+</resources>

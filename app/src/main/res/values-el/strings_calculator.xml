@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Μη έγκυρη είσοδος</string>
+    <string name="calculator_error_invalid_expression">Μη έγκυρη παράσταση</string>
+    <string name="calculator_error_division_by_zero">Διαίρεση με το μηδέν</string>
+    <string name="calculator_error_result_too_large">Το αποτέλεσμα είναι πολύ μεγάλο</string>
+    <string name="calculator_error_undefined">Απροσδιόριστο</string>
+    <string name="calculator_error_expression_too_long">Η παράσταση είναι πολύ μεγάλη</string>
+    <string name="calculator_error_expression_too_complex">Η παράσταση είναι πολύ σύνθετη</string>
+</resources>

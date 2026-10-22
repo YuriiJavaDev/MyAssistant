@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Hủy</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Cài đặt</string>
+    <string name="settings_alarms_title">Nhắc nhở và báo thức</string>
+    <string name="settings_alarms_subtitle">Khoảng thời gian, âm thanh và trạng thái thông báo</string>
+    <string name="settings_display_title">Chế độ hiển thị</string>
+    <string name="settings_display_subtitle">Ngày / Đêm / Tự động</string>
+    <string name="display_mode_title">Chế độ hiển thị</string>
+    <string name="display_mode_light">Sáng (ngày)</string>
+    <string name="display_mode_dark">Tối (đêm)</string>
+    <string name="display_mode_system">Theo hệ thống (tự động)</string>
+    <string name="settings_design_title">Giao diện ứng dụng</string>
+    <string name="settings_design_subtitle">Các kiểu giao diện</string>
+    <string name="design_classic_name">Cổ điển</string>
+    <string name="design_classic_about">Giao diện gốc: kem và tím</string>
+    <string name="design_paper_ink_name">Giấy và mực</string>
+    <string name="design_paper_ink_about">Nét mảnh và tông màu văn phòng trầm</string>
+    <string name="design_pastel_cloud_name">Mây pastel</string>
+    <string name="design_pastel_cloud_about">Mềm mại, bo tròn và nhạt, có những đám mây</string>
+    <string name="design_neon_arcade_name">Arcade neon</string>
+    <string name="design_neon_arcade_about">Neon rực rỡ, tương phản mạnh và mặt trời cổ điển</string>
+    <string name="design_toon_name">Hoạt hình</string>
+    <string name="design_toon_about">Đường viền truyện tranh và chữ viết tay</string>
+    <string name="design_biker_name">Biker</string>
+    <string name="design_biker_about">Kim loại thô, cao su và màu cam của ống xả</string>
+    <string name="design_cockpit_name">Buồng lái</string>
+    <string name="design_cockpit_about">Bảng đồng hồ nghiêm nghị với tàu lượn</string>
+    <string name="design_beach_name">Bãi biển</string>
+    <string name="design_beach_about">Cát, đầm phá, san hô và cây cọ</string>
+    <string name="design_forest_name">Rừng phép thuật</string>
+    <string name="design_forest_about">Giấy da, vàng và rêu rừng</string>
+    <string name="design_mono_block_name">Monoblock</string>
+    <string name="design_mono_block_about">Đen trắng sắc nét với một bút dạ quang vàng</string>
+    <string name="settings_permissions_title">Quyền hệ thống</string>
+    <string name="settings_permissions_subtitle">Quản lý quyền truy cập trong Android</string>
+    <string-array name="filter_options">
+        <item>Tất cả công việc</item>
+        <item>Đang làm</item>
+        <item>Đã xong</item>
+        <item>Cảnh báo</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Trạng thái</item>
+        <item>Ngày tạo</item>
+        <item>Ngày sửa</item>
+        <item>Ngày xong</item>
+        <item>Mức quan trọng</item>
+        <item>Hạn chót</item>
+    </string-array>
+    <string name="scan_camera">Máy ảnh</string>
+    <string name="scan_gallery">Thư viện</string>
+    <string name="scan_clear_all">Xóa tất cả</string>
+    <string name="scan_cleared">Đã xóa tất cả bản quét</string>
+    <string name="scan_empty">Chưa có tài liệu nào. Hãy chụp một trang hoặc chọn ảnh từ thư viện.</string>
+    <string name="scan_auto">Tự động</string>
+    <string name="scan_reset">Đặt lại</string>
+    <string name="scan_next">Tiếp</string>
+    <string name="scan_back">Quay lại</string>
+    <string name="scan_save">Lưu</string>
+    <string name="scan_rotate">Xoay</string>
+    <string name="scan_paper">Giấy</string>
+    <string name="scan_filter_color">Màu</string>
+    <string name="scan_filter_gray">Xám</string>
+    <string name="scan_filter_bw">Đen trắng</string>
+    <string name="scan_tune">Ánh sáng và tương phản</string>
+    <string name="scan_shadows">Xóa bóng</string>
+    <string name="scan_brightness">Độ sáng</string>
+    <string name="scan_contrast">Độ tương phản</string>
+    <string name="scan_sharpen">Độ nét</string>
+    <string name="scan_page_saved">Đã lưu trang</string>
+    <string name="scan_next_page_question">Thêm một trang nữa vào tài liệu?</string>
+    <string name="scan_page_label">Trang %d</string>
+    <string name="scan_done">Xong</string>
+    <string name="scan_add_page">Thêm trang</string>
+    <string name="scan_share_pdf">Gửi PDF</string>
+    <string name="scan_pages_empty">Tài liệu này không có trang nào.</string>
+    <string name="scan_saved_to_device">Đã lưu tệp</string>
+    <string name="scan_share_title">Chia sẻ tài liệu</string>
+    <string name="scan_rename_title">Đổi tên tài liệu</string>
+    <string name="scan_rename_confirm">Đổi tên</string>
+    <string name="scan_error_load">Không thể mở ảnh này</string>
+    <string name="scan_error_preview">Không đủ bộ nhớ để xem trước</string>
+    <string name="scan_error_save">Không thể lưu bản quét</string>
+    <string name="scan_error_export">Không thể chuẩn bị tệp</string>
+    <string name="scan_error_no_camera">Không tìm thấy ứng dụng máy ảnh</string>
+    <string name="scan_error_no_viewer">Không tìm thấy ứng dụng để mở ảnh</string>
+    <string name="scan_error_no_app">Không tìm thấy ứng dụng để chia sẻ</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d trang</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Các trang</item>
+        <item>Chia sẻ dưới dạng PDF</item>
+        <item>Chia sẻ dưới dạng JPEG</item>
+        <item>Lưu PDF vào…</item>
+        <item>Đổi tên</item>
+        <item>Xóa</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Xem</item>
+        <item>Lưu JPEG vào…</item>
+        <item>Chuyển lên</item>
+        <item>Chuyển xuống</item>
+        <item>Xóa trang</item>
+    </string-array>
+    <string name="weather_city_hint">Tên thành phố bằng bất kỳ ngôn ngữ nào</string>
+    <string name="weather_search">Tìm</string>
+    <string name="weather_my_location">Vị trí của tôi</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Cảm giác như</string>
+    <string name="weather_humidity">Độ ẩm</string>
+    <string name="weather_wind">Gió</string>
+    <string name="weather_today_range">Hôm nay</string>
+    <string name="weather_units">Đơn vị</string>
+    <string name="weather_units_temperature">Nhiệt độ</string>
+    <string name="weather_units_wind">Tốc độ gió</string>
+    <string name="weather_unit_celsius">Độ C (°C)</string>
+    <string name="weather_unit_fahrenheit">Độ F (°F)</string>
+    <string name="weather_unit_ms">Mét trên giây (m/s)</string>
+    <string name="weather_unit_kmh">Kilômét trên giờ (km/h)</string>
+    <string name="weather_moon_caption">%1$s · sáng %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Đang tải thời tiết…</string>
+    <string name="weather_location_needed">Hãy cho phép truy cập vị trí gần đúng để xem thời tiết tại nơi bạn đang ở, hoặc tìm một thành phố.</string>
+    <string name="weather_allow">Cho phép</string>
+    <string name="weather_open_settings">Mở cài đặt ứng dụng</string>
+    <string name="weather_attribution">Thời tiết: Open-Meteo.com · Địa điểm: © những người đóng góp OpenStreetMap</string>
+    <string name="weather_choose_city">Chọn thành phố</string>
+    <string name="steps_today">Hôm nay</string>
+    <string name="steps_unit">bước</string>
+    <string name="steps_walk_run">Đi bộ %1$s · Chạy %2$s</string>
+    <string name="steps_period">Khoảng thời gian</string>
+    <string name="steps_last_7">7 ngày</string>
+    <string name="steps_last_30">30 ngày</string>
+    <string name="steps_this_month">Tháng này</string>
+    <string name="steps_pick_dates">Chọn ngày</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Tổng số bước</string>
+    <string name="steps_distance">Quãng đường</string>
+    <string name="steps_average">Trung bình mỗi ngày</string>
+    <string name="steps_best_day">Ngày tốt nhất</string>
+    <string name="steps_walking">Bước khi đi bộ</string>
+    <string name="steps_running">Bước khi chạy</string>
+    <string name="steps_active_days">Số ngày có bước</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d trên %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Không có bước nào được ghi nhận trong khoảng thời gian này</string>
+    <string name="steps_settings">Cài đặt bước chân</string>
+    <string name="steps_settings_title">Chiều dài bước</string>
+    <string name="steps_walk_length">Chiều dài bước khi đi bộ, cm</string>
+    <string name="steps_run_length">Chiều dài bước khi chạy, cm</string>
+    <string name="steps_run_cadence">Tính là chạy từ, bước mỗi phút</string>
+    <string name="steps_run_cadence_hint">Các bước ở nhịp này hoặc nhanh hơn được tính là chạy.</string>
+    <string name="steps_defaults">Mặc định</string>
+    <string name="steps_save">Lưu</string>
+    <string name="steps_invalid_length">Nhập từ %1$d đến %2$d</string>
+    <string name="steps_measure_title">Cách đo chiều dài bước</string>
+    <string name="steps_measure_text">1. Trước bước đầu tiên, đánh dấu vạch xuất phát ở mũi giày.\n2. Đi 10 bước bình thản với tốc độ quen thuộc của bạn.\n3. Sau bước thứ 10, đo khoảng cách từ vạch xuất phát đến đúng vị trí mũi giày đó bằng xentimét.\n4. Chia cho mười.\n5. Lặp lại vài lần và nhập giá trị trung bình.\n\nĐể biết chiều dài bước khi chạy, hãy làm tương tự với tốc độ chạy quen thuộc của bạn.</string>
+    <string name="steps_no_sensor">Điện thoại này không có cảm biến bước chân.</string>
+    <string name="steps_permission_needed">Hãy cho phép truy cập hoạt động thể chất để điện thoại đếm bước chân của bạn.</string>
+    <string name="steps_allow">Cho phép</string>
+    <string name="steps_open_settings">Mở cài đặt ứng dụng</string>
+    <string name="currency_amount_hint">Số tiền</string>
+    <string name="currency_swap">Đổi chỗ ⇅</string>
+    <string name="currency_refresh">Làm mới tỷ giá</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Tỷ giá cập nhật %1$s</string>
+    <string name="currency_outdated">Không có Internet. Đang hiển thị tỷ giá đã lưu, cập nhật %1$s</string>
+    <string name="currency_loading">Đang tải tỷ giá…</string>
+    <string name="currency_unavailable">Không có tỷ giá. Hãy kiểm tra kết nối Internet rồi làm mới.</string>
+    <string name="currency_invalid_amount">Nhập số tiền</string>
+    <string name="currency_attribution">Tỷ giá từ Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">KH</string>
+    <string name="calculator_basic">CB</string>
+    <string name="calculator_degrees">Độ</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Lịch sử</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Bắt đầu ghi</string>
+    <string name="flights_stop">Dừng ghi</string>
+    <string name="flights_units">Đơn vị</string>
+    <string name="flights_journal">Nhật ký</string>
+    <string name="flights_journal_title">Nhật ký bay</string>
+    <string name="flights_journal_empty">Chưa có chuyến bay nào được ghi.</string>
+    <string name="flights_journal_in_progress">Chuyến bay này vẫn đang được ghi.</string>
+    <string name="flights_report_open">Mở báo cáo</string>
+    <string name="flights_report_share">Chia sẻ báo cáo</string>
+    <string name="flights_report_delete">Xóa chuyến bay</string>
+    <string name="flights_report_failed">Không thể chuẩn bị báo cáo.</string>
+    <string name="flights_report_no_viewer">Không tìm thấy ứng dụng để mở tệp PDF.</string>
+    <string name="flights_delete_title">Xóa chuyến bay này?</string>
+    <string name="flights_delete_message">Lộ trình và báo cáo sẽ bị xóa vĩnh viễn. Trước đó, bạn có thể gửi báo cáo đến nơi khác, chẳng hạn USB, máy tính hoặc Google Drive.</string>
+    <string name="flights_delete_save_first">Lưu báo cáo rồi xóa</string>
+    <string name="flights_delete_without_saving">Xóa mà không lưu</string>
+    <string name="flights_delete_after_share_message">Nếu báo cáo đã đến nơi bạn muốn, giờ bạn có thể xóa chuyến bay.</string>
+    <string name="flights_delete_after_share_confirm">Xóa chuyến bay</string>
+    <string name="flights_delete_keep">Giữ chuyến bay</string>
+    <string name="flights_units_report_limit">Giới hạn báo cáo</string>
+    <string name="flights_units_report_limit_hint">Số báo cáo PDF tối đa trong nhật ký, 0 là không giới hạn</string>
+    <string name="flights_limit_full_title">Đã đạt giới hạn báo cáo PDF</string>
+    <string name="flights_limit_full_message">Nhật ký có %1$d báo cáo, đúng bằng giới hạn. Để ghi chuyến bay mới, hãy xóa ít nhất một chuyến bay khỏi nhật ký. Trước đó, bạn có thể lưu báo cáo của nó vào USB, máy tính hoặc Google Drive.</string>
+    <string name="flights_limit_warning_title">Bạn sắp đạt giới hạn báo cáo PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">Bạn còn có thể ghi thêm %d chuyến bay. Hãy xóa các chuyến bay cũ khỏi nhật ký.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Mở nhật ký</string>
+    <string name="flights_journal_line">%1$s · tối đa %2$s · độ cao tối đa %3$s</string>
+    <string name="flights_units_speed">Tốc độ và quãng đường</string>
+    <string name="flights_units_altitude">Độ cao</string>
+    <string name="flights_unit_kmh">Kilômét trên giờ (km/h)</string>
+    <string name="flights_unit_knots">Hải lý/giờ (kt)</string>
+    <string name="flights_unit_ms">Mét trên giây (m/s)</string>
+    <string name="flights_unit_metres">Mét (m)</string>
+    <string name="flights_unit_feet">Feet (ft)</string>
+    <string name="flights_units_climb">Tốc độ lên cao</string>
+    <string name="flights_unit_fpm">Feet trên phút (ft/min)</string>
+    <string name="flights_altitude_zero">Về 0</string>
+    <string name="flights_altitude_sea">So với biển</string>
+    <string name="flights_altitude_start">So với điểm xuất phát · giữ “Về 0” để hoàn tác</string>
+    <string name="flights_sound_on">Âm: bật</string>
+    <string name="flights_sound_off">Âm: tắt</string>
+    <string name="flights_sound_tune">Chỉnh âm</string>
+    <string name="flights_sound_climb_start">Tiếng bíp bắt đầu khi lên %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Tiếng bíp trầm bắt đầu khi xuống %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Báo động liên tục khi xuống %1$.1f m/s</string>
+    <string name="flights_speed_label">Tốc độ</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Thời gian bay</string>
+    <string name="flights_distance">Quãng đường</string>
+    <string name="flights_max_speed">Tốc độ tối đa</string>
+    <string name="flights_avg_speed">Tốc độ trung bình</string>
+    <string name="flights_max_altitude">Độ cao tối đa</string>
+    <string name="flights_climb_rate">Tốc độ lên cao</string>
+    <string name="flights_max_g">Tải trọng đỉnh</string>
+    <string name="flights_status_waiting">Đang chờ tín hiệu GPS…</string>
+    <string name="flights_location_needed">Hãy cho phép truy cập vị trí chính xác để ghi tốc độ, độ cao và lộ trình.</string>
+    <string name="flights_allow">Cho phép</string>
+    <string name="flights_open_settings">Mở cài đặt ứng dụng</string>
+    <string name="flights_gps_off">Hãy bật dịch vụ định vị (GPS) để ghi chuyến bay.</string>
+    <string name="flights_disclaimer">Chỉ để giải trí và thỏa trí tò mò. Đừng dựa vào các thiết bị này để dẫn đường hay bất cứ việc gì liên quan đến an toàn.</string>
+</resources>

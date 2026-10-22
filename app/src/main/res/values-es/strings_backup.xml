@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Subiendo copia de seguridad a la nube...</string>
+    <string name="backup_cloud_restoring">Restaurando copia de seguridad desde la nube...</string>
+    <string name="backup_cloud_upload_success">Copia de seguridad subida a la nube correctamente</string>
+    <string name="backup_cloud_restore_success">Copia de seguridad restaurada desde la nube correctamente</string>
+    <string name="backup_cloud_restore_partly">Tareas restauradas desde la nube (no se encontró allí copia de: %1$s)</string>
+    <string name="backup_part_steps">pasos</string>
+    <string name="backup_part_flights">vuelos</string>
+    <string name="backup_part_scans">escaneos</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Error de subida: %1$s</string>
+    <string name="backup_error_download">Error de descarga: %1$s</string>
+    <string name="backup_error_unknown">Error desconocido</string>
+    <string name="backup_error_insecure_url">La URL debe empezar por https://</string>
+    <string name="backup_error_authentication">Error de autenticación: comprueba el usuario y la contraseña</string>
+    <string name="backup_error_server_code">El servidor respondió con el código: %1$d</string>
+    <string name="backup_error_connection">Error de conexión: %1$s</string>
+    <string name="backup_destination_title">Guardar copia en</string>
+    <string name="backup_destination_folder">Elegir una carpeta (dispositivo, tarjeta SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Compartir con una app</string>
+    <string name="backup_preparing">Preparando copia de seguridad...</string>
+    <string name="backup_export_failed">Error al exportar</string>
+    <string name="backup_export_saved">Copia de seguridad guardada</string>
+    <string name="backup_import_success">Copia de seguridad importada correctamente. Reiniciando...</string>
+    <string name="backup_import_failed">Error al importar</string>
+    <string name="backup_import_title">¡Atención!</string>
+    <string name="backup_import_message">Restaurar una copia de seguridad reemplaza las tareas, los pasos y los escaneos actuales que contiene. ¿Seguro que quieres continuar?</string>
+    <string name="backup_import_confirm">Confirmar importación</string>
+    <string name="backup_share_chooser_title">Exportar copia de seguridad</string>
+    <string name="backup_cloud_settings_saved">Ajustes de la nube guardados correctamente</string>
+    <string name="backup_cloud_secure_storage_unavailable">El almacenamiento seguro no está disponible, los ajustes no se guardaron</string>
+    <string name="backup_cloud_url_empty">La URL no puede estar vacía</string>
+    <string name="backup_cloud_testing">Probando la conexión...</string>
+    <string name="backup_cloud_connection_successful">¡Conexión correcta!</string>
+</resources>

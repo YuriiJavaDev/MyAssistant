@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Wat moet er gebeuren?</string>
+    <string name="tasks_list_add">Toevoegen</string>
+    <string name="tasks_list_delete_completed">Voltooide wissen</string>
+    <string name="tasks_list_clear_all">Alles wissen</string>
+    <string name="tasks_list_reminder_set">Herinnering ingesteld</string>
+    <string name="tasks_statistics">Totaal: %1$d  Voltooid: %2$d  Over: %3$d  Voortgang: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Nieuwe taak</string>
+    <string name="tasks_dialog_title_edit">Taak bewerken</string>
+    <string name="tasks_dialog_importance">Belangrijkheidsniveau:</string>
+    <string name="tasks_dialog_deadline_label">Deadline:</string>
+    <string name="tasks_dialog_deadline_select">Kies een deadline</string>
+    <string name="tasks_dialog_reminder_label">Herinnering (datum en tijd):</string>
+    <string name="tasks_dialog_reminder_select">Kies datum en tijd van de herinnering</string>
+    <string name="tasks_dialog_show_timestamps">Aanmaak-/bewerkdatums tonen</string>
+    <string name="tasks_dialog_delete">Wissen</string>
+    <string name="tasks_dialog_save">Opslaan</string>
+    <string name="tasks_dialog_clear">Wissen</string>
+    <string name="tasks_importance_normal">Normaal</string>
+    <string name="tasks_importance_important">Belangrijk</string>
+    <string name="tasks_importance_urgent">Dringend</string>
+    <string name="tasks_toast_created">Taak aangemaakt</string>
+    <string name="tasks_toast_updated">Taak bijgewerkt</string>
+    <string name="tasks_toast_deleted">Taak verwijderd</string>
+    <string name="tasks_toast_completed_deleted">Voltooide taken verwijderd</string>
+    <string name="tasks_toast_all_cleared">Alle taken gewist</string>
+    <string name="tasks_toast_empty_title">De taakbeschrijving mag niet leeg zijn</string>
+    <string name="tasks_toast_reminder_after_deadline">De herinnering mag niet na de deadline liggen!</string>
+    <string name="tasks_toast_reminder_in_past">De herinnering mag niet in het verleden liggen!</string>
+    <string name="tasks_toast_reminder_cleared">De herinnering is gewist omdat de deadline eerder is!</string>
+    <string name="tasks_toast_select_deadline_first">Kies eerst een deadline!</string>
+    <string name="tasks_time_created">Aangemaakt: %1$s</string>
+    <string name="tasks_time_edited">Bewerkt: %1$s</string>
+    <string name="tasks_time_completed">Voltooid: %1$s</string>
+    <string name="tasks_deadline_prefixed">Deadline: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — nog %2$d dag!</item>
+        <item quantity="other">%1$s — nog %2$d dagen!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d dag te laat!</item>
+        <item quantity="other">%1$s — %2$d dagen te laat!</item>
+    </plurals>
+    <string name="tasks_delete_title">Verwijdering bevestigen</string>
+    <string name="tasks_delete_button">Verwijderen</string>
+    <string name="tasks_delete_nothing">Geen objecten gevonden om te verwijderen!</string>
+    <string name="tasks_delete_item_message">Weet je zeker dat je dit item wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt!</string>
+    <string name="tasks_delete_cannot_be_undone">Deze actie kan niet ongedaan worden gemaakt!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d voltooide taak verwijderen?</item>
+        <item quantity="other">%1$d voltooide taken verwijderen?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d daarvan heeft nog een opgeslagen herinnering.</item>
+        <item quantity="other">%1$d daarvan hebben nog een opgeslagen herinnering.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">De taak (%1$d) verwijderen?</item>
+        <item quantity="other">Alle %1$d taken verwijderen?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d heeft een actieve herinnering.</item>
+        <item quantity="other">%1$d hebben actieve herinneringen.</item>
+    </plurals>
+    <string name="tasks_alert_title">Deadlinemelding!</string>
+    <string name="tasks_alert_view_tasks">Taken bekijken</string>
+    <string name="tasks_alert_channel_name">Deadlinemeldingen voor taken</string>
+    <string name="tasks_alert_channel_description">Dringende deadlinemeldingen voor taken</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Je hebt %1$d verstreken taakdeadline.</item>
+        <item quantity="other">Je hebt %1$d verstreken taakdeadlines.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Let op! Je hebt %1$d taakdeadline die onmiddellijke aandacht vereist.</item>
+        <item quantity="other">Let op! Je hebt %1$d taakdeadlines die onmiddellijke aandacht vereisen.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Let op! De deadline nadert voor de taak: %1$s</string>
+</resources>

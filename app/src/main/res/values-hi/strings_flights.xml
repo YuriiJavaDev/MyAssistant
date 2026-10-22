@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">उड़ान रिकॉर्डिंग</string>
+    <string name="flights_notification_channel_description">उड़ान रिकॉर्ड होते समय दिखता है</string>
+    <string name="flights_notification_title">उड़ान रिकॉर्ड हो रही है</string>
+    <string name="flights_notification_text">उपकरण खोलने के लिए टैप करें</string>
+    <string-array name="flights_cardinal_points">
+        <item>उ</item>
+        <item>उ-पू</item>
+        <item>पू</item>
+        <item>द-पू</item>
+        <item>द</item>
+        <item>द-प</item>
+        <item>प</item>
+        <item>उ-प</item>
+    </string-array>
+    <string name="flights_report_title">उड़ान रिपोर्ट</string>
+    <string name="flights_report_north">उ</string>
+    <string name="flights_report_side_north">उ</string>
+    <string name="flights_report_side_south">द</string>
+    <string name="flights_report_side_east">पू</string>
+    <string name="flights_report_side_west">प</string>
+    <string name="flights_report_duration">अवधि</string>
+    <string name="flights_report_distance">दूरी</string>
+    <string name="flights_report_top_speed">अधिकतम गति</string>
+    <string name="flights_report_average_speed">औसत गति</string>
+    <string name="flights_report_highest_altitude">अधिकतम ऊँचाई</string>
+    <string name="flights_report_best_climb">सबसे अच्छी चढ़ाई</string>
+    <string name="flights_report_worst_sink">सबसे बुरी गिरावट</string>
+    <string name="flights_report_peak_load">अधिकतम भार</string>
+    <string name="flights_report_start_point">प्रारंभिक बिंदु</string>
+    <string name="flights_report_end_point">अंतिम बिंदु</string>
+    <string name="flights_report_altitude_above_start">शुरुआत से %1$s ऊपर</string>
+    <string name="flights_report_altitude_above_sea_level">समुद्र तल से %1$s ऊपर</string>
+    <string name="flights_report_chart_altitude_above_start">ऊँचाई (%1$s, शुरुआत से ऊपर)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">ऊँचाई (%1$s, समुद्र तल से ऊपर)</string>
+    <string name="flights_report_chart_speed">ज़मीन के सापेक्ष गति (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">मानचित्र: Natural Earth (सार्वजनिक डोमेन)।</string>
+    <string name="flights_report_footer">%1$s MyAssistant में रिकॉर्ड किया गया। केवल मनोरंजन के लिए: नेविगेशन या सुरक्षा के लिए नहीं।</string>
+</resources>

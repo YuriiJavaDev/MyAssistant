@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Oppgaver</string>
+    <string name="app_tab_weather">Vær</string>
+    <string name="app_tab_exchange">Kurser</string>
+    <string name="app_tab_calculator">Kalk.</string>
+    <string name="app_tab_scan">Scan</string>
+    <string name="app_tab_steps">Skritt</string>
+    <string name="app_tab_flights">Flyging</string>
+    <string name="app_menu_settings">Innstillinger</string>
+    <string name="app_menu_options">Valg</string>
+    <string name="app_notifications_disabled">Varsler er slått av: påminnelser vises ikke</string>
+    <string name="app_overdue_tasks_format">Forfalte oppgaver: %1$d</string>
+    <string name="app_exact_alarm_already_granted">Tillatelsen til nøyaktige alarmer er allerede gitt</string>
+    <string name="app_alarm_title">Påminnelser og alarmer</string>
+    <string name="app_alarm_voice_alert">Stemmevarsel (TTS)</string>
+    <string name="app_alarm_full_screen">Fullskjermvindu</string>
+    <string name="app_alarm_grant_exact">Gi tillatelse til nøyaktige alarmer</string>
+    <string name="backup_menu_export">Eksporter sikkerhetskopi</string>
+    <string name="backup_menu_import">Importer sikkerhetskopi</string>
+    <string name="backup_menu_cloud_settings">Skyinnstillinger og automatisk kopi</string>
+    <string name="backup_menu_cloud_save">Lagre i skyen nå</string>
+    <string name="backup_menu_cloud_restore">Gjenopprett fra skyen</string>
+    <string name="backup_cloud_username_hint">Brukernavn/E-post</string>
+    <string name="backup_cloud_password_hint">Passord</string>
+    <string name="backup_cloud_auto_backup">Slå på daglig automatisk kopi</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Når automatisk kopi er slått på, overskrives databasefilen i skylagringen din som standard én gang om dagen.</string>
+    <string name="backup_cloud_test">Test</string>
+    <string name="backup_cloud_save">Lagre</string>
+    <string name="settings_language_title">Språk</string>
+    <string name="settings_language_subtitle">Appens språk</string>
+</resources>

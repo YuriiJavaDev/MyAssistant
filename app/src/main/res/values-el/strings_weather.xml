@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Αίθριος ουρανός</string>
+    <string name="weather_description_mainly_clear">Κυρίως αίθριος</string>
+    <string name="weather_description_partly_cloudy">Μερικώς νεφελώδης</string>
+    <string name="weather_description_overcast">Συννεφιά</string>
+    <string name="weather_description_fog">Ομίχλη</string>
+    <string name="weather_description_rime_fog">Ομίχλη με πάχνη</string>
+    <string name="weather_description_light_drizzle">Ασθενές ψιλόβροχο</string>
+    <string name="weather_description_drizzle">Ψιλόβροχο</string>
+    <string name="weather_description_dense_drizzle">Έντονο ψιλόβροχο</string>
+    <string name="weather_description_light_freezing_drizzle">Ασθενές παγωμένο ψιλόβροχο</string>
+    <string name="weather_description_freezing_drizzle">Παγωμένο ψιλόβροχο</string>
+    <string name="weather_description_slight_rain">Ασθενής βροχή</string>
+    <string name="weather_description_rain">Βροχή</string>
+    <string name="weather_description_heavy_rain">Ισχυρή βροχή</string>
+    <string name="weather_description_light_freezing_rain">Ασθενής παγωμένη βροχή</string>
+    <string name="weather_description_freezing_rain">Παγωμένη βροχή</string>
+    <string name="weather_description_slight_snow">Ασθενής χιονόπτωση</string>
+    <string name="weather_description_snow">Χιονόπτωση</string>
+    <string name="weather_description_heavy_snow">Ισχυρή χιονόπτωση</string>
+    <string name="weather_description_snow_grains">Κόκκοι χιονιού</string>
+    <string name="weather_description_light_rain_showers">Ασθενείς βροχοπτώσεις</string>
+    <string name="weather_description_rain_showers">Βροχοπτώσεις</string>
+    <string name="weather_description_violent_rain_showers">Ισχυρές βροχοπτώσεις</string>
+    <string name="weather_description_light_snow_showers">Ασθενείς χιονοπτώσεις</string>
+    <string name="weather_description_heavy_snow_showers">Ισχυρές χιονοπτώσεις</string>
+    <string name="weather_description_thunderstorm">Καταιγίδα</string>
+    <string name="weather_description_thunderstorm_with_hail">Καταιγίδα με χαλάζι</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Καταιγίδα με ισχυρό χαλάζι</string>
+    <string name="weather_description_unknown">Άγνωστο</string>
+    <string name="weather_moon_phase_new_moon">Νέα σελήνη</string>
+    <string name="weather_moon_phase_waxing_crescent">Αύξων μηνίσκος</string>
+    <string name="weather_moon_phase_first_quarter">Πρώτο τέταρτο</string>
+    <string name="weather_moon_phase_waxing_gibbous">Αύξουσα σελήνη</string>
+    <string name="weather_moon_phase_full_moon">Πανσέληνος</string>
+    <string name="weather_moon_phase_waning_gibbous">Φθίνουσα σελήνη</string>
+    <string name="weather_moon_phase_last_quarter">Τελευταίο τέταρτο</string>
+    <string name="weather_moon_phase_waning_crescent">Φθίνων μηνίσκος</string>
+    <string name="weather_error_no_location">Δεν είναι δυνατός ο εντοπισμός της τοποθεσίας. Ενεργοποιήστε τις υπηρεσίες τοποθεσίας ή αναζητήστε μια πόλη.</string>
+    <string name="weather_error_city_not_found">Δεν βρέθηκε πόλη για «%1$s»</string>
+    <string name="weather_error_no_network">Δεν είναι δυνατή η φόρτωση του καιρού. Ελέγξτε τη σύνδεση στο internet.</string>
+    <string name="weather_error_choose_city">Επιλέξτε πόλη από τη λίστα</string>
+    <string name="weather_current_location">Τρέχουσα τοποθεσία</string>
+</resources>

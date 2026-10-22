@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Entrée non valide</string>
+    <string name="calculator_error_invalid_expression">Expression non valide</string>
+    <string name="calculator_error_division_by_zero">Division par zéro</string>
+    <string name="calculator_error_result_too_large">Le résultat est trop grand</string>
+    <string name="calculator_error_undefined">Indéfini</string>
+    <string name="calculator_error_expression_too_long">L’expression est trop longue</string>
+    <string name="calculator_error_expression_too_complex">L’expression est trop complexe</string>
+</resources>

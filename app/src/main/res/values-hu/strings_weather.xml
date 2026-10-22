@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Derült ég</string>
+    <string name="weather_description_mainly_clear">Többnyire derült</string>
+    <string name="weather_description_partly_cloudy">Részben felhős</string>
+    <string name="weather_description_overcast">Borult</string>
+    <string name="weather_description_fog">Köd</string>
+    <string name="weather_description_rime_fog">Zúzmarás köd</string>
+    <string name="weather_description_light_drizzle">Gyenge szitálás</string>
+    <string name="weather_description_drizzle">Szitálás</string>
+    <string name="weather_description_dense_drizzle">Sűrű szitálás</string>
+    <string name="weather_description_light_freezing_drizzle">Gyenge ónos szitálás</string>
+    <string name="weather_description_freezing_drizzle">Ónos szitálás</string>
+    <string name="weather_description_slight_rain">Gyenge eső</string>
+    <string name="weather_description_rain">Eső</string>
+    <string name="weather_description_heavy_rain">Erős eső</string>
+    <string name="weather_description_light_freezing_rain">Gyenge ónos eső</string>
+    <string name="weather_description_freezing_rain">Ónos eső</string>
+    <string name="weather_description_slight_snow">Gyenge havazás</string>
+    <string name="weather_description_snow">Havazás</string>
+    <string name="weather_description_heavy_snow">Erős havazás</string>
+    <string name="weather_description_snow_grains">Hószemek</string>
+    <string name="weather_description_light_rain_showers">Gyenge zápor</string>
+    <string name="weather_description_rain_showers">Zápor</string>
+    <string name="weather_description_violent_rain_showers">Heves zápor</string>
+    <string name="weather_description_light_snow_showers">Gyenge hózápor</string>
+    <string name="weather_description_heavy_snow_showers">Erős hózápor</string>
+    <string name="weather_description_thunderstorm">Zivatar</string>
+    <string name="weather_description_thunderstorm_with_hail">Zivatar jégesővel</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Zivatar erős jégesővel</string>
+    <string name="weather_description_unknown">Ismeretlen</string>
+    <string name="weather_moon_phase_new_moon">Újhold</string>
+    <string name="weather_moon_phase_waxing_crescent">Növekvő sarló</string>
+    <string name="weather_moon_phase_first_quarter">Első negyed</string>
+    <string name="weather_moon_phase_waxing_gibbous">Növekvő hold</string>
+    <string name="weather_moon_phase_full_moon">Telihold</string>
+    <string name="weather_moon_phase_waning_gibbous">Fogyó hold</string>
+    <string name="weather_moon_phase_last_quarter">Utolsó negyed</string>
+    <string name="weather_moon_phase_waning_crescent">Fogyó sarló</string>
+    <string name="weather_error_no_location">A helyzet nem határozható meg. Kapcsolja be a helymeghatározást, vagy keressen egy várost.</string>
+    <string name="weather_error_city_not_found">Nem található város a(z) „%1$s” kifejezésre</string>
+    <string name="weather_error_no_network">Az időjárás nem tölthető be. Ellenőrizze az internetkapcsolatot.</string>
+    <string name="weather_error_choose_city">Válasszon várost a listából</string>
+    <string name="weather_current_location">Jelenlegi helyzet</string>
+</resources>

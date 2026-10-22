@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">إلغاء</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_alarms_title">التذكيرات والتنبيهات</string>
+    <string name="settings_alarms_subtitle">الفواصل والأصوات وحالة الإشعارات</string>
+    <string name="settings_display_title">وضع العرض</string>
+    <string name="settings_display_subtitle">نهاري / ليلي / تلقائي</string>
+    <string name="display_mode_title">وضع العرض</string>
+    <string name="display_mode_light">فاتح (نهاري)</string>
+    <string name="display_mode_dark">داكن (ليلي)</string>
+    <string name="display_mode_system">النظام (تلقائي)</string>
+    <string name="settings_design_title">تصميم التطبيق</string>
+    <string name="settings_design_subtitle">خيارات مظهر الواجهة</string>
+    <string name="design_classic_name">كلاسيكي</string>
+    <string name="design_classic_about">المظهر الأصلي: كريمي وبنفسجي</string>
+    <string name="design_paper_ink_name">ورق وحبر</string>
+    <string name="design_paper_ink_about">خطوط رفيعة وألوان عملية هادئة</string>
+    <string name="design_pastel_cloud_name">سحابة باستيل</string>
+    <string name="design_pastel_cloud_about">ناعم ومستدير وباهت مع سحب</string>
+    <string name="design_neon_arcade_name">أركيد نيون</string>
+    <string name="design_neon_arcade_about">نيون ساطع وتباين قوي وشمس على الطراز القديم</string>
+    <string name="design_toon_name">كرتوني</string>
+    <string name="design_toon_about">حدود على طريقة القصص المصورة وخط يدوي</string>
+    <string name="design_biker_name">دراج</string>
+    <string name="design_biker_about">معدن خشن ومطاط وبرتقالي العادم</string>
+    <string name="design_cockpit_name">قمرة القيادة</string>
+    <string name="design_cockpit_about">لوحة عدادات صارمة مع طائرة شراعية</string>
+    <string name="design_beach_name">شاطئ</string>
+    <string name="design_beach_about">رمل وبحيرة ومرجان ونخيل</string>
+    <string name="design_forest_name">الغابة المسحورة</string>
+    <string name="design_forest_about">رق وذهب وطحلب الغابة</string>
+    <string name="design_mono_block_name">مونو بلوك</string>
+    <string name="design_mono_block_about">أبيض وأسود حاد مع علامة صفراء واحدة</string>
+    <string name="settings_permissions_title">أذونات النظام</string>
+    <string name="settings_permissions_subtitle">إدارة الوصول في نظام أندرويد</string>
+    <string-array name="filter_options">
+        <item>كل المهام</item>
+        <item>النشطة</item>
+        <item>المكتملة</item>
+        <item>التذكيرات</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>أ–ي</item>
+        <item>ي–أ</item>
+        <item>الحالة</item>
+        <item>الإنشاء</item>
+        <item>التعديل</item>
+        <item>المكتملة</item>
+        <item>الأهمية</item>
+        <item>الموعد النهائي</item>
+    </string-array>
+    <string name="scan_camera">الكاميرا</string>
+    <string name="scan_gallery">المعرض</string>
+    <string name="scan_clear_all">مسح الكل</string>
+    <string name="scan_cleared">تم حذف كل الممسوحات</string>
+    <string name="scan_empty">لا توجد مستندات بعد. صوّر صفحة أو اختر صورة من المعرض.</string>
+    <string name="scan_auto">تلقائي</string>
+    <string name="scan_reset">إعادة ضبط</string>
+    <string name="scan_next">التالي</string>
+    <string name="scan_back">رجوع</string>
+    <string name="scan_save">حفظ</string>
+    <string name="scan_rotate">تدوير</string>
+    <string name="scan_paper">الورق</string>
+    <string name="scan_filter_color">ألوان</string>
+    <string name="scan_filter_gray">رمادي</string>
+    <string name="scan_filter_bw">أبيض وأسود</string>
+    <string name="scan_tune">الإضاءة والتباين</string>
+    <string name="scan_shadows">إزالة الظلال</string>
+    <string name="scan_brightness">السطوع</string>
+    <string name="scan_contrast">التباين</string>
+    <string name="scan_sharpen">زيادة الحدة</string>
+    <string name="scan_page_saved">تم حفظ الصفحة</string>
+    <string name="scan_next_page_question">هل تريد إضافة صفحة أخرى إلى هذا المستند؟</string>
+    <string name="scan_page_label">صفحة %d</string>
+    <string name="scan_done">تم</string>
+    <string name="scan_add_page">إضافة صفحة</string>
+    <string name="scan_share_pdf">مشاركة PDF</string>
+    <string name="scan_pages_empty">لا توجد صفحات في هذا المستند.</string>
+    <string name="scan_saved_to_device">تم حفظ الملف</string>
+    <string name="scan_share_title">مشاركة المستند</string>
+    <string name="scan_rename_title">إعادة تسمية المستند</string>
+    <string name="scan_rename_confirm">إعادة تسمية</string>
+    <string name="scan_error_load">تعذّر فتح هذه الصورة</string>
+    <string name="scan_error_preview">لا توجد ذاكرة كافية للمعاينة</string>
+    <string name="scan_error_save">تعذّر حفظ الممسوحة</string>
+    <string name="scan_error_export">تعذّر تجهيز الملف</string>
+    <string name="scan_error_no_camera">لم يتم العثور على تطبيق كاميرا</string>
+    <string name="scan_error_no_viewer">لم يتم العثور على تطبيق لفتح الصورة</string>
+    <string name="scan_error_no_app">لم يتم العثور على تطبيق للمشاركة معه</string>
+    <plurals name="scan_pages">
+        <item quantity="zero">%d صفحة</item>
+        <item quantity="one">صفحة واحدة</item>
+        <item quantity="two">صفحتان</item>
+        <item quantity="few">%d صفحات</item>
+        <item quantity="many">%d صفحة</item>
+        <item quantity="other">%d صفحة</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>الصفحات</item>
+        <item>مشاركة كملف PDF</item>
+        <item>مشاركة كصورة JPEG</item>
+        <item>حفظ PDF في…</item>
+        <item>إعادة تسمية</item>
+        <item>حذف</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>عرض</item>
+        <item>حفظ JPEG في…</item>
+        <item>نقل لأعلى</item>
+        <item>نقل لأسفل</item>
+        <item>حذف الصفحة</item>
+    </string-array>
+    <string name="weather_city_hint">اسم المدينة بأي لغة</string>
+    <string name="weather_search">بحث</string>
+    <string name="weather_my_location">موقعي</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">يبدو كأنه</string>
+    <string name="weather_humidity">الرطوبة</string>
+    <string name="weather_wind">الرياح</string>
+    <string name="weather_today_range">اليوم</string>
+    <string name="weather_units">الوحدات</string>
+    <string name="weather_units_temperature">درجة الحرارة</string>
+    <string name="weather_units_wind">سرعة الرياح</string>
+    <string name="weather_unit_celsius">سيليزية (°C)</string>
+    <string name="weather_unit_fahrenheit">فهرنهايت (°F)</string>
+    <string name="weather_unit_ms">متر في الثانية (م/ث)</string>
+    <string name="weather_unit_kmh">كيلومتر في الساعة (كم/س)</string>
+    <string name="weather_moon_caption">%1$s · مضاء بنسبة %2$d%%</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">جارٍ تحميل الطقس…</string>
+    <string name="weather_location_needed">اسمح بالوصول إلى الموقع التقريبي لرؤية الطقس في مكانك، أو ابحث عن مدينة.</string>
+    <string name="weather_allow">السماح</string>
+    <string name="weather_open_settings">فتح إعدادات التطبيق</string>
+    <string name="weather_attribution">الطقس: Open-Meteo.com · الأماكن: © مساهمو OpenStreetMap</string>
+    <string name="weather_choose_city">اختر مدينة</string>
+    <string name="steps_today">اليوم</string>
+    <string name="steps_unit">خطوة</string>
+    <string name="steps_walk_run">مشي %1$s · جري %2$s</string>
+    <string name="steps_period">الفترة</string>
+    <string name="steps_last_7">7 أيام</string>
+    <string name="steps_last_30">30 يومًا</string>
+    <string name="steps_this_month">هذا الشهر</string>
+    <string name="steps_pick_dates">اختيار التواريخ</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">إجمالي الخطوات</string>
+    <string name="steps_distance">المسافة</string>
+    <string name="steps_average">المتوسط اليومي</string>
+    <string name="steps_best_day">أفضل يوم</string>
+    <string name="steps_walking">خطوات المشي</string>
+    <string name="steps_running">خطوات الجري</string>
+    <string name="steps_active_days">أيام فيها خطوات</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d من %2$d</string>
+    <string name="steps_distance_km">%1$.2f كم</string>
+    <string name="steps_no_data">لم تُسجَّل خطوات في هذه الفترة</string>
+    <string name="steps_settings">إعدادات الخطوات</string>
+    <string name="steps_settings_title">طول الخطوة</string>
+    <string name="steps_walk_length">طول خطوة المشي، سم</string>
+    <string name="steps_run_length">طول خطوة الجري، سم</string>
+    <string name="steps_run_cadence">يبدأ الجري من، خطوة في الدقيقة</string>
+    <string name="steps_run_cadence_hint">تُحتسب الخطوات بهذا الإيقاع أو أسرع على أنها جري.</string>
+    <string name="steps_defaults">الافتراضي</string>
+    <string name="steps_save">حفظ</string>
+    <string name="steps_invalid_length">أدخل %1$d–%2$d</string>
+    <string name="steps_measure_title">كيف تقيس طول خطوتك</string>
+    <string name="steps_measure_text">1. ضع علامة لخط البداية عند مقدمة حذائك قبل الخطوة الأولى.\n2. امشِ 10 خطوات هادئة بإيقاعك المعتاد.\n3. قس المسافة من خط البداية إلى مقدمة الحذاء نفسها بعد الخطوة العاشرة، بالسنتيمترات.\n4. اقسمها على 10.\n5. كرر ذلك عدة مرات وأدخل المتوسط.\n\nافعل الشيء نفسه بإيقاع جريك المعتاد لتحصل على طول خطوة الجري.</string>
+    <string name="steps_no_sensor">لا يحتوي هذا الهاتف على مستشعر خطوات.</string>
+    <string name="steps_permission_needed">اسمح بالوصول إلى النشاط البدني ليتمكن الهاتف من عدّ خطواتك.</string>
+    <string name="steps_allow">السماح</string>
+    <string name="steps_open_settings">فتح إعدادات التطبيق</string>
+    <string name="currency_amount_hint">المبلغ</string>
+    <string name="currency_swap">تبديل ⇅</string>
+    <string name="currency_refresh">تحديث الأسعار</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">تم تحديث الأسعار %1$s</string>
+    <string name="currency_outdated">لا يوجد إنترنت. تُعرض أسعار محفوظة، حُدّثت %1$s</string>
+    <string name="currency_loading">جارٍ تحميل الأسعار…</string>
+    <string name="currency_unavailable">الأسعار غير متاحة. تحقق من اتصال الإنترنت وحدّث.</string>
+    <string name="currency_invalid_amount">أدخل مبلغًا</string>
+    <string name="currency_attribution">الأسعار من Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">علمي</string>
+    <string name="calculator_basic">عادي</string>
+    <string name="calculator_degrees">درجات</string>
+    <string name="calculator_radians">راديان</string>
+    <string name="calculator_history">السجل</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">بدء التسجيل</string>
+    <string name="flights_stop">إيقاف التسجيل</string>
+    <string name="flights_units">الوحدات</string>
+    <string name="flights_journal">السجل</string>
+    <string name="flights_journal_title">سجل الرحلات</string>
+    <string name="flights_journal_empty">لم تُسجَّل رحلات بعد.</string>
+    <string name="flights_journal_in_progress">هذه الرحلة لا يزال يجري تسجيلها.</string>
+    <string name="flights_report_open">فتح التقرير</string>
+    <string name="flights_report_share">مشاركة التقرير</string>
+    <string name="flights_report_delete">حذف الرحلة</string>
+    <string name="flights_report_failed">تعذّر تجهيز التقرير.</string>
+    <string name="flights_report_no_viewer">لم يتم العثور على تطبيق يفتح ملفات PDF.</string>
+    <string name="flights_delete_title">حذف هذه الرحلة؟</string>
+    <string name="flights_delete_message">سيُحذف المسار والتقرير نهائيًا. يمكنك أولًا إرسال التقرير إلى مكان ما، مثل ذاكرة فلاش أو حاسوب أو Google Drive.</string>
+    <string name="flights_delete_save_first">حفظ التقرير ثم الحذف</string>
+    <string name="flights_delete_without_saving">حذف دون حفظ</string>
+    <string name="flights_delete_after_share_message">إذا وصل التقرير إلى المكان الذي تريده، يمكنك حذف الرحلة الآن.</string>
+    <string name="flights_delete_after_share_confirm">حذف الرحلة</string>
+    <string name="flights_delete_keep">الاحتفاظ بالرحلة</string>
+    <string name="flights_units_report_limit">حد التقارير</string>
+    <string name="flights_units_report_limit_hint">أقصى عدد لتقارير PDF في السجل، 0 بلا حد</string>
+    <string name="flights_limit_full_title">تم بلوغ حد تقارير PDF</string>
+    <string name="flights_limit_full_message">يحتوي السجل على %1$d تقريرًا، وهذا هو الحد. لتسجيل رحلة جديدة، احذف رحلة واحدة على الأقل من السجل. يمكنك أولًا حفظ تقريرها على ذاكرة فلاش أو حاسوب أو Google Drive.</string>
+    <string name="flights_limit_warning_title">اقتربت من حد تقارير PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="zero">لا يمكنك تسجيل رحلات أخرى. احذف الرحلات القديمة من السجل.</item>
+        <item quantity="one">يمكنك تسجيل رحلة واحدة أخرى. احذف الرحلات القديمة من السجل.</item>
+        <item quantity="two">يمكنك تسجيل رحلتين أخريين. احذف الرحلات القديمة من السجل.</item>
+        <item quantity="few">يمكنك تسجيل %d رحلات أخرى. احذف الرحلات القديمة من السجل.</item>
+        <item quantity="many">يمكنك تسجيل %d رحلة أخرى. احذف الرحلات القديمة من السجل.</item>
+        <item quantity="other">يمكنك تسجيل %d رحلة أخرى. احذف الرحلات القديمة من السجل.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">فتح السجل</string>
+    <string name="flights_journal_line">%1$s · أقصى سرعة %2$s · أقصى ارتفاع %3$s</string>
+    <string name="flights_units_speed">السرعة والمسافة</string>
+    <string name="flights_units_altitude">الارتفاع</string>
+    <string name="flights_unit_kmh">كيلومتر في الساعة (كم/س)</string>
+    <string name="flights_unit_knots">عقدة (kt، ميل بحري)</string>
+    <string name="flights_unit_ms">متر في الثانية (م/ث)</string>
+    <string name="flights_unit_metres">متر (م)</string>
+    <string name="flights_unit_feet">قدم (ft)</string>
+    <string name="flights_units_climb">معدل الصعود</string>
+    <string name="flights_unit_fpm">قدم في الدقيقة (ft/min)</string>
+    <string name="flights_altitude_zero">صفر</string>
+    <string name="flights_altitude_sea">فوق مستوى سطح البحر</string>
+    <string name="flights_altitude_start">فوق نقطة الإقلاع · اضغط مطولًا على «صفر» للتراجع</string>
+    <string name="flights_sound_on">الصوت: يعمل</string>
+    <string name="flights_sound_off">الصوت: متوقف</string>
+    <string name="flights_sound_tune">ضبط الصوت</string>
+    <string name="flights_sound_climb_start">يبدأ الصفير عند صعود %1$.1f م/ث</string>
+    <string name="flights_sound_sink_start">تبدأ الصفارات المنخفضة عند هبوط %1$.1f م/ث</string>
+    <string name="flights_sound_sink_alarm">إنذار متواصل عند هبوط %1$.1f م/ث</string>
+    <string name="flights_speed_label">السرعة</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">زمن الرحلة</string>
+    <string name="flights_distance">المسافة</string>
+    <string name="flights_max_speed">أقصى سرعة</string>
+    <string name="flights_avg_speed">متوسط السرعة</string>
+    <string name="flights_max_altitude">أعلى ارتفاع</string>
+    <string name="flights_climb_rate">معدل الصعود</string>
+    <string name="flights_max_g">أقصى حِمل</string>
+    <string name="flights_status_waiting">بانتظار إشارة GPS…</string>
+    <string name="flights_location_needed">اسمح بالوصول إلى الموقع الدقيق لكي تُسجَّل السرعة والارتفاع والمسار.</string>
+    <string name="flights_allow">السماح</string>
+    <string name="flights_open_settings">فتح إعدادات التطبيق</string>
+    <string name="flights_gps_off">شغّل خدمات الموقع (GPS) لتسجيل رحلة.</string>
+    <string name="flights_disclaimer">للمتعة والفضول فقط. لا تعتمد على هذه الأدوات في الملاحة أو أي شيء يؤثر على السلامة.</string>
+</resources>

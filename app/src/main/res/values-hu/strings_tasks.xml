@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Mit kell csinálni?</string>
+    <string name="tasks_list_add">Hozzáad</string>
+    <string name="tasks_list_delete_completed">Kész törlése</string>
+    <string name="tasks_list_clear_all">Összes törlése</string>
+    <string name="tasks_list_reminder_set">Emlékeztető beállítva</string>
+    <string name="tasks_statistics">Összesen: %1$d  Kész: %2$d  Hátra: %3$d  Haladás: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Új feladat</string>
+    <string name="tasks_dialog_title_edit">Feladat szerkesztése</string>
+    <string name="tasks_dialog_importance">Fontossági szint:</string>
+    <string name="tasks_dialog_deadline_label">Határidő:</string>
+    <string name="tasks_dialog_deadline_select">Válasszon határidőt</string>
+    <string name="tasks_dialog_reminder_label">Emlékeztető (dátum és idő):</string>
+    <string name="tasks_dialog_reminder_select">Válassza ki az emlékeztető dátumát és idejét</string>
+    <string name="tasks_dialog_show_timestamps">Létrehozás/módosítás dátumának megjelenítése</string>
+    <string name="tasks_dialog_delete">Törlés</string>
+    <string name="tasks_dialog_save">Mentés</string>
+    <string name="tasks_dialog_clear">Törlés</string>
+    <string name="tasks_importance_normal">Normál</string>
+    <string name="tasks_importance_important">Fontos</string>
+    <string name="tasks_importance_urgent">Sürgős</string>
+    <string name="tasks_toast_created">Feladat létrehozva</string>
+    <string name="tasks_toast_updated">Feladat frissítve</string>
+    <string name="tasks_toast_deleted">Feladat törölve</string>
+    <string name="tasks_toast_completed_deleted">A kész feladatok törölve</string>
+    <string name="tasks_toast_all_cleared">Minden feladat törölve</string>
+    <string name="tasks_toast_empty_title">A feladat leírása nem lehet üres</string>
+    <string name="tasks_toast_reminder_after_deadline">Az emlékeztető nem lehet a határidő után!</string>
+    <string name="tasks_toast_reminder_in_past">Az emlékeztető nem lehet a múltban!</string>
+    <string name="tasks_toast_reminder_cleared">Az emlékeztető törlődött, mert a határidő korábbi!</string>
+    <string name="tasks_toast_select_deadline_first">Először válasszon határidőt!</string>
+    <string name="tasks_time_created">Létrehozva: %1$s</string>
+    <string name="tasks_time_edited">Módosítva: %1$s</string>
+    <string name="tasks_time_completed">Befejezve: %1$s</string>
+    <string name="tasks_deadline_prefixed">Határidő: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — még %2$d nap van hátra!</item>
+        <item quantity="other">%1$s — még %2$d nap van hátra!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d napos késés!</item>
+        <item quantity="other">%1$s — %2$d napos késés!</item>
+    </plurals>
+    <string name="tasks_delete_title">Törlés megerősítése</string>
+    <string name="tasks_delete_button">Törlés</string>
+    <string name="tasks_delete_nothing">Nincs törölhető objektum!</string>
+    <string name="tasks_delete_item_message">Biztosan törli ezt az elemet? Ez a művelet nem vonható vissza!</string>
+    <string name="tasks_delete_cannot_be_undone">Ez a művelet nem vonható vissza!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Töröl %1$d kész feladatot?</item>
+        <item quantity="other">Töröl %1$d kész feladatot?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">Közülük %1$d feladathoz még tartozik mentett emlékeztető.</item>
+        <item quantity="other">Közülük %1$d feladathoz még tartozik mentett emlékeztető.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Töröl mind a(z) %1$d feladatot?</item>
+        <item quantity="other">Töröl mind a(z) %1$d feladatot?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d feladathoz aktív emlékeztető tartozik.</item>
+        <item quantity="other">%1$d feladathoz aktív emlékeztető tartozik.</item>
+    </plurals>
+    <string name="tasks_alert_title">Határidő-figyelmeztetés!</string>
+    <string name="tasks_alert_view_tasks">Feladatok megtekintése</string>
+    <string name="tasks_alert_channel_name">Feladathatáridő-figyelmeztetések</string>
+    <string name="tasks_alert_channel_description">Sürgős figyelmeztetések a feladatok határidejéről</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Lejárt feladathatáridők száma: %1$d.</item>
+        <item quantity="other">Lejárt feladathatáridők száma: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Figyelem! Azonnali figyelmet igénylő feladathatáridők száma: %1$d.</item>
+        <item quantity="other">Figyelem! Azonnali figyelmet igénylő feladathatáridők száma: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Figyelem! Közeleg a feladat határideje: %1$s</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Înregistrare zbor</string>
+    <string name="flights_notification_channel_description">Afișat în timpul înregistrării unui zbor</string>
+    <string name="flights_notification_title">Se înregistrează un zbor</string>
+    <string name="flights_notification_text">Atingeți pentru a deschide instrumentele</string>
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SV</item>
+        <item>V</item>
+        <item>NV</item>
+    </string-array>
+    <string name="flights_report_title">Raport de zbor</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">E</string>
+    <string name="flights_report_side_west">V</string>
+    <string name="flights_report_duration">Durată</string>
+    <string name="flights_report_distance">Distanță</string>
+    <string name="flights_report_top_speed">Viteză maximă</string>
+    <string name="flights_report_average_speed">Viteză medie</string>
+    <string name="flights_report_highest_altitude">Altitudine maximă</string>
+    <string name="flights_report_best_climb">Cea mai bună urcare</string>
+    <string name="flights_report_worst_sink">Cea mai rapidă coborâre</string>
+    <string name="flights_report_peak_load">Sarcină maximă</string>
+    <string name="flights_report_start_point">Punct de start</string>
+    <string name="flights_report_end_point">Punct de sosire</string>
+    <string name="flights_report_altitude_above_start">%1$s deasupra startului</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s deasupra nivelului mării</string>
+    <string name="flights_report_chart_altitude_above_start">Altitudine (%1$s, deasupra startului)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Altitudine (%1$s, deasupra nivelului mării)</string>
+    <string name="flights_report_chart_speed">Viteza față de sol (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Hartă: Natural Earth (domeniu public).</string>
+    <string name="flights_report_footer">%1$s Înregistrat în MyAssistant. Doar pentru distracție: nu pentru navigație sau siguranță.</string>
+</resources>

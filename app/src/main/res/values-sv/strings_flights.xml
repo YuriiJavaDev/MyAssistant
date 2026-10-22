@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Flyginspelning</string>
+    <string name="flights_notification_channel_description">Visas medan en flygning spelas in</string>
+    <string name="flights_notification_title">Spelar in en flygning</string>
+    <string name="flights_notification_text">Tryck för att öppna instrumenten</string>
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NO</item>
+        <item>O</item>
+        <item>SO</item>
+        <item>S</item>
+        <item>SV</item>
+        <item>V</item>
+        <item>NV</item>
+    </string-array>
+    <string name="flights_report_title">Flygrapport</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">O</string>
+    <string name="flights_report_side_west">V</string>
+    <string name="flights_report_duration">Varaktighet</string>
+    <string name="flights_report_distance">Avstånd</string>
+    <string name="flights_report_top_speed">Topphastighet</string>
+    <string name="flights_report_average_speed">Medelhastighet</string>
+    <string name="flights_report_highest_altitude">Högsta höjd</string>
+    <string name="flights_report_best_climb">Bästa stigning</string>
+    <string name="flights_report_worst_sink">Sämsta sjunkning</string>
+    <string name="flights_report_peak_load">Toppbelastning</string>
+    <string name="flights_report_start_point">Startpunkt</string>
+    <string name="flights_report_end_point">Slutpunkt</string>
+    <string name="flights_report_altitude_above_start">%1$s över start</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s över havet</string>
+    <string name="flights_report_chart_altitude_above_start">Höjd (%1$s, över start)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Höjd (%1$s, över havet)</string>
+    <string name="flights_report_chart_speed">Fart över mark (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Karta: Natural Earth (allmän egendom).</string>
+    <string name="flights_report_footer">%1$s Inspelad i MyAssistant. Endast för nöje: inte för navigering eller säkerhet.</string>
+</resources>

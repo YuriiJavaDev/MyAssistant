@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">ضبط پرواز</string>
+    <string name="flights_notification_channel_description">هنگام ضبط پرواز نمایش داده می‌شود</string>
+    <string name="flights_notification_title">در حال ضبط پرواز</string>
+    <string name="flights_notification_text">برای باز کردن ابزارها ضربه بزنید</string>
+    <string-array name="flights_cardinal_points">
+        <item>ش</item>
+        <item>ش-ر</item>
+        <item>ر</item>
+        <item>ج-ر</item>
+        <item>ج</item>
+        <item>ج-غ</item>
+        <item>غ</item>
+        <item>ش-غ</item>
+    </string-array>
+    <string name="flights_report_title">گزارش پرواز</string>
+    <string name="flights_report_north">ش</string>
+    <string name="flights_report_side_north">ش</string>
+    <string name="flights_report_side_south">ج</string>
+    <string name="flights_report_side_east">ر</string>
+    <string name="flights_report_side_west">غ</string>
+    <string name="flights_report_duration">مدت</string>
+    <string name="flights_report_distance">مسافت</string>
+    <string name="flights_report_top_speed">بیشینهٔ سرعت</string>
+    <string name="flights_report_average_speed">سرعت میانگین</string>
+    <string name="flights_report_highest_altitude">بیشینهٔ ارتفاع</string>
+    <string name="flights_report_best_climb">بهترین صعود</string>
+    <string name="flights_report_worst_sink">بدترین نزول</string>
+    <string name="flights_report_peak_load">بیشینهٔ بار</string>
+    <string name="flights_report_start_point">نقطهٔ شروع</string>
+    <string name="flights_report_end_point">نقطهٔ پایان</string>
+    <string name="flights_report_altitude_above_start">%1$s بالاتر از مبدأ</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s بالاتر از سطح دریا</string>
+    <string name="flights_report_chart_altitude_above_start">ارتفاع (%1$s، بالاتر از مبدأ)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">ارتفاع (%1$s، بالاتر از سطح دریا)</string>
+    <string name="flights_report_chart_speed">سرعت نسبت به زمین (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">نقشه: Natural Earth (مالکیت عمومی).</string>
+    <string name="flights_report_footer">%1$s ضبط‌شده در MyAssistant. فقط برای سرگرمی: نه برای ناوبری یا ایمنی.</string>
+</resources>

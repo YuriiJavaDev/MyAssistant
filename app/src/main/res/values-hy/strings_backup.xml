@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Պահուստային օրինակը բեռնվում է ամպ...</string>
+    <string name="backup_cloud_restoring">Պահուստային օրինակը վերականգնվում է ամպից...</string>
+    <string name="backup_cloud_upload_success">Պահուստային օրինակը բեռնվեց ամպ</string>
+    <string name="backup_cloud_restore_success">Պահուստային օրինակը վերականգնվեց ամպից</string>
+    <string name="backup_cloud_restore_partly">Առաջադրանքները վերականգնվեցին ամպից (պահուստային օրինակ չի գտնվել՝ %1$s)</string>
+    <string name="backup_part_steps">քայլեր</string>
+    <string name="backup_part_flights">թռիչքներ</string>
+    <string name="backup_part_scans">սկաններ</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Բեռնման սխալ՝ %1$s</string>
+    <string name="backup_error_download">Ներբեռնման սխալ՝ %1$s</string>
+    <string name="backup_error_unknown">Անհայտ սխալ</string>
+    <string name="backup_error_insecure_url">URL-ը պետք է սկսվի https://-ով</string>
+    <string name="backup_error_authentication">Նույնականացումը ձախողվեց՝ ստուգեք օգտանունը և գաղտնաբառը</string>
+    <string name="backup_error_server_code">Սերվերը պատասխանեց կոդով՝ %1$d</string>
+    <string name="backup_error_connection">Կապի սխալ՝ %1$s</string>
+    <string name="backup_destination_title">Պահել պահուստային օրինակը</string>
+    <string name="backup_destination_folder">Ընտրեք թղթապանակ (սարք, SD քարտ, USB, Drive...)</string>
+    <string name="backup_destination_share">Կիսվել հավելվածով</string>
+    <string name="backup_preparing">Պահուստային օրինակը պատրաստվում է...</string>
+    <string name="backup_export_failed">Արտահանումը ձախողվեց</string>
+    <string name="backup_export_saved">Պահուստային օրինակը պահվեց</string>
+    <string name="backup_import_success">Պահուստային օրինակը հաջողությամբ ներմուծվեց։ Վերագործարկում...</string>
+    <string name="backup_import_failed">Ներմուծումը ձախողվեց</string>
+    <string name="backup_import_title">Ուշադրություն։</string>
+    <string name="backup_import_message">Պահուստային օրինակի վերականգնումը ընթացիկ առաջադրանքներն, քայլերն ու սկանները կփոխարինի նրանում պահվածով։ Շարունակե՞լ</string>
+    <string name="backup_import_confirm">Հաստատել ներմուծումը</string>
+    <string name="backup_share_chooser_title">Արտահանել պահուստային օրինակը</string>
+    <string name="backup_cloud_settings_saved">Ամպի կարգավորումները պահվեցին</string>
+    <string name="backup_cloud_secure_storage_unavailable">Անվտանգ պահոցը հասանելի չէ, կարգավորումները չպահվեցին</string>
+    <string name="backup_cloud_url_empty">URL-ը չի կարող դատարկ լինել</string>
+    <string name="backup_cloud_testing">Կապը ստուգվում է...</string>
+    <string name="backup_cloud_connection_successful">Կապը հաջողվեց։</string>
+</resources>

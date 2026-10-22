@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">ต้นฉบับ</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">สแกน %1$s</string>
+    <string name="scan_delete_page_message">ลบหน้านี้ไหม การกระทำนี้ย้อนกลับไม่ได้!</string>
+    <string name="scan_delete_document_message">ลบ “%1$s” พร้อมทุกหน้าไหม การกระทำนี้ย้อนกลับไม่ได้!</string>
+    <string name="scan_delete_all_message">ลบทั้งหมด: %1$s, %2$s ไหม การกระทำนี้ย้อนกลับไม่ได้!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="other">%d เอกสาร</item>
+    </plurals>
+</resources>

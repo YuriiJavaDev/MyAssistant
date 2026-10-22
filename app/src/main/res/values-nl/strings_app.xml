@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Taken</string>
+    <string name="app_tab_weather">Weer</string>
+    <string name="app_tab_exchange">Koersen</string>
+    <string name="app_tab_calculator">Calc</string>
+    <string name="app_tab_scan">Scan</string>
+    <string name="app_tab_steps">Stappen</string>
+    <string name="app_tab_flights">Vluchten</string>
+    <string name="app_menu_settings">Instellingen</string>
+    <string name="app_menu_options">Opties</string>
+    <string name="app_notifications_disabled">Meldingen zijn uitgeschakeld: herinneringen worden niet getoond</string>
+    <string name="app_overdue_tasks_format">Verlopen taken: %1$d</string>
+    <string name="app_exact_alarm_already_granted">De toestemming voor exacte alarmen is al verleend</string>
+    <string name="app_alarm_title">Herinneringen en alarmen</string>
+    <string name="app_alarm_voice_alert">Spraakmelding (TTS)</string>
+    <string name="app_alarm_full_screen">Pop-up op volledig scherm</string>
+    <string name="app_alarm_grant_exact">Toestemming voor exacte alarmen verlenen</string>
+    <string name="backup_menu_export">Back-up exporteren</string>
+    <string name="backup_menu_import">Back-up importeren</string>
+    <string name="backup_menu_cloud_settings">Cloudinstellingen en automatische back-up</string>
+    <string name="backup_menu_cloud_save">Nu opslaan in de cloud</string>
+    <string name="backup_menu_cloud_restore">Herstellen uit de cloud</string>
+    <string name="backup_cloud_username_hint">Naam/E-mail</string>
+    <string name="backup_cloud_password_hint">Wachtwoord</string>
+    <string name="backup_cloud_auto_backup">Dagelijkse automatische back-up inschakelen</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Als automatische back-up is ingeschakeld, wordt het databasebestand in je cloudopslag standaard één keer per dag overschreven.</string>
+    <string name="backup_cloud_test">Testen</string>
+    <string name="backup_cloud_save">Opslaan</string>
+    <string name="settings_language_title">Taal</string>
+    <string name="settings_language_subtitle">Taal van de app</string>
+</resources>

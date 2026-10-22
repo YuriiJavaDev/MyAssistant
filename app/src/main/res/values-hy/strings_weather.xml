@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Պարզ երկինք</string>
+    <string name="weather_description_mainly_clear">Հիմնականում պարզ</string>
+    <string name="weather_description_partly_cloudy">Մասամբ ամպամած</string>
+    <string name="weather_description_overcast">Ամպամած</string>
+    <string name="weather_description_fog">Մառախուղ</string>
+    <string name="weather_description_rime_fog">Սառցակալող մառախուղ</string>
+    <string name="weather_description_light_drizzle">Թեթև մաղող անձրև</string>
+    <string name="weather_description_drizzle">Մաղող անձրև</string>
+    <string name="weather_description_dense_drizzle">Սաստիկ մաղող անձրև</string>
+    <string name="weather_description_light_freezing_drizzle">Թեթև սառցակալող մաղանք</string>
+    <string name="weather_description_freezing_drizzle">Սառցակալող մաղանք</string>
+    <string name="weather_description_slight_rain">Թույլ անձրև</string>
+    <string name="weather_description_rain">Անձրև</string>
+    <string name="weather_description_heavy_rain">Հորդ անձրև</string>
+    <string name="weather_description_light_freezing_rain">Թեթև սառցակալող անձրև</string>
+    <string name="weather_description_freezing_rain">Սառցակալող անձրև</string>
+    <string name="weather_description_slight_snow">Թույլ ձյուն</string>
+    <string name="weather_description_snow">Ձյուն</string>
+    <string name="weather_description_heavy_snow">Առատ ձյուն</string>
+    <string name="weather_description_snow_grains">Ձյան հատիկներ</string>
+    <string name="weather_description_light_rain_showers">Թեթև տեղատարափ</string>
+    <string name="weather_description_rain_showers">Տեղատարափ</string>
+    <string name="weather_description_violent_rain_showers">Սաստիկ տեղատարափ</string>
+    <string name="weather_description_light_snow_showers">Թեթև ձյան տեղումներ</string>
+    <string name="weather_description_heavy_snow_showers">Սաստիկ ձյան տեղումներ</string>
+    <string name="weather_description_thunderstorm">Ամպրոպ</string>
+    <string name="weather_description_thunderstorm_with_hail">Ամպրոպ կարկուտով</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Ամպրոպ խոշոր կարկուտով</string>
+    <string name="weather_description_unknown">Անհայտ</string>
+    <string name="weather_moon_phase_new_moon">Նորալուսին</string>
+    <string name="weather_moon_phase_waxing_crescent">Աճող մահիկ</string>
+    <string name="weather_moon_phase_first_quarter">Առաջին քառորդ</string>
+    <string name="weather_moon_phase_waxing_gibbous">Աճող լուսին</string>
+    <string name="weather_moon_phase_full_moon">Լիալուսին</string>
+    <string name="weather_moon_phase_waning_gibbous">Նվազող լուսին</string>
+    <string name="weather_moon_phase_last_quarter">Վերջին քառորդ</string>
+    <string name="weather_moon_phase_waning_crescent">Նվազող մահիկ</string>
+    <string name="weather_error_no_location">Դիրքը չհաջողվեց որոշել։ Միացրեք դիրքի ծառայությունները կամ որոնեք քաղաք</string>
+    <string name="weather_error_city_not_found">«%1$s» համար քաղաք չի գտնվել</string>
+    <string name="weather_error_no_network">Եղանակը չհաջողվեց բեռնել։ Ստուգեք ինտերնետը</string>
+    <string name="weather_error_choose_city">Ընտրեք քաղաք ցանկից</string>
+    <string name="weather_current_location">Ընթացիկ դիրքը</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Co je potřeba udělat?</string>
+    <string name="tasks_list_add">Přidat</string>
+    <string name="tasks_list_delete_completed">Smazat dokončené</string>
+    <string name="tasks_list_clear_all">Vymazat vše</string>
+    <string name="tasks_list_reminder_set">Připomínka nastavena</string>
+    <string name="tasks_statistics">Celkem: %1$d  Dokončeno: %2$d  Zbývá: %3$d  Průběh: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Nový úkol</string>
+    <string name="tasks_dialog_title_edit">Upravit úkol</string>
+    <string name="tasks_dialog_importance">Úroveň důležitosti:</string>
+    <string name="tasks_dialog_deadline_label">Termín:</string>
+    <string name="tasks_dialog_deadline_select">Vyberte termín</string>
+    <string name="tasks_dialog_reminder_label">Připomínka (datum a čas):</string>
+    <string name="tasks_dialog_reminder_select">Vyberte datum a čas připomínky</string>
+    <string name="tasks_dialog_show_timestamps">Zobrazit data vytvoření/úpravy</string>
+    <string name="tasks_dialog_delete">Smazat</string>
+    <string name="tasks_dialog_save">Uložit</string>
+    <string name="tasks_dialog_clear">Vymazat</string>
+    <string name="tasks_importance_normal">Běžná</string>
+    <string name="tasks_importance_important">Důležitá</string>
+    <string name="tasks_importance_urgent">Naléhavá</string>
+    <string name="tasks_toast_created">Úkol vytvořen</string>
+    <string name="tasks_toast_updated">Úkol aktualizován</string>
+    <string name="tasks_toast_deleted">Úkol smazán</string>
+    <string name="tasks_toast_completed_deleted">Dokončené úkoly smazány</string>
+    <string name="tasks_toast_all_cleared">Všechny úkoly vymazány</string>
+    <string name="tasks_toast_empty_title">Popis úkolu nesmí být prázdný</string>
+    <string name="tasks_toast_reminder_after_deadline">Připomínka nesmí být později než termín!</string>
+    <string name="tasks_toast_reminder_in_past">Připomínka nesmí být v minulosti!</string>
+    <string name="tasks_toast_reminder_cleared">Připomínka byla vymazána, protože termín je dřívější!</string>
+    <string name="tasks_toast_select_deadline_first">Nejprve vyberte termín!</string>
+    <string name="tasks_time_created">Vytvořeno: %1$s</string>
+    <string name="tasks_time_edited">Upraveno: %1$s</string>
+    <string name="tasks_time_completed">Dokončeno: %1$s</string>
+    <string name="tasks_deadline_prefixed">Termín: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — zbývá %2$d den!</item>
+        <item quantity="few">%1$s — zbývají %2$d dny!</item>
+        <item quantity="many">%1$s — zbývá %2$d dne!</item>
+        <item quantity="other">%1$s — zbývá %2$d dní!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — zpoždění %2$d den!</item>
+        <item quantity="few">%1$s — zpoždění %2$d dny!</item>
+        <item quantity="many">%1$s — zpoždění %2$d dne!</item>
+        <item quantity="other">%1$s — zpoždění %2$d dní!</item>
+    </plurals>
+    <string name="tasks_delete_title">Potvrzení smazání</string>
+    <string name="tasks_delete_button">Smazat</string>
+    <string name="tasks_delete_nothing">Nebyly nalezeny žádné objekty ke smazání!</string>
+    <string name="tasks_delete_item_message">Opravdu chcete tuto položku smazat? Tuto akci nelze vrátit zpět!</string>
+    <string name="tasks_delete_cannot_be_undone">Tuto akci nelze vrátit zpět!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Smazat %1$d dokončený úkol?</item>
+        <item quantity="few">Smazat %1$d dokončené úkoly?</item>
+        <item quantity="many">Smazat %1$d dokončeného úkolu?</item>
+        <item quantity="other">Smazat %1$d dokončených úkolů?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d z nich má stále uloženou připomínku.</item>
+        <item quantity="few">%1$d z nich mají stále uloženou připomínku.</item>
+        <item quantity="many">%1$d z nich má stále uloženou připomínku.</item>
+        <item quantity="other">%1$d z nich má stále uloženou připomínku.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Smazat úkol (%1$d)?</item>
+        <item quantity="few">Smazat všechny %1$d úkoly?</item>
+        <item quantity="many">Smazat všech %1$d úkolu?</item>
+        <item quantity="other">Smazat všech %1$d úkolů?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d má aktivní připomínku.</item>
+        <item quantity="few">%1$d mají aktivní připomínky.</item>
+        <item quantity="many">%1$d má aktivní připomínky.</item>
+        <item quantity="other">%1$d má aktivní připomínky.</item>
+    </plurals>
+    <string name="tasks_alert_title">Upozornění na termín!</string>
+    <string name="tasks_alert_view_tasks">Zobrazit úkoly</string>
+    <string name="tasks_alert_channel_name">Upozornění na termíny úkolů</string>
+    <string name="tasks_alert_channel_description">Naléhavá upozornění na termíny úkolů</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Počet termínů úkolů po splatnosti: %1$d.</item>
+        <item quantity="few">Počet termínů úkolů po splatnosti: %1$d.</item>
+        <item quantity="many">Počet termínů úkolů po splatnosti: %1$d.</item>
+        <item quantity="other">Počet termínů úkolů po splatnosti: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Pozor! Počet termínů úkolů vyžadujících okamžitou pozornost: %1$d.</item>
+        <item quantity="few">Pozor! Počet termínů úkolů vyžadujících okamžitou pozornost: %1$d.</item>
+        <item quantity="many">Pozor! Počet termínů úkolů vyžadujících okamžitou pozornost: %1$d.</item>
+        <item quantity="other">Pozor! Počet termínů úkolů vyžadujících okamžitou pozornost: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Pozor! Blíží se termín úkolu: %1$s</string>
+</resources>

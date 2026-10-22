@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Céu limpo</string>
+    <string name="weather_description_mainly_clear">Predominantemente limpo</string>
+    <string name="weather_description_partly_cloudy">Parcialmente nublado</string>
+    <string name="weather_description_overcast">Encoberto</string>
+    <string name="weather_description_fog">Neblina</string>
+    <string name="weather_description_rime_fog">Neblina com geada</string>
+    <string name="weather_description_light_drizzle">Garoa fraca</string>
+    <string name="weather_description_drizzle">Garoa</string>
+    <string name="weather_description_dense_drizzle">Garoa densa</string>
+    <string name="weather_description_light_freezing_drizzle">Garoa congelante fraca</string>
+    <string name="weather_description_freezing_drizzle">Garoa congelante</string>
+    <string name="weather_description_slight_rain">Chuva fraca</string>
+    <string name="weather_description_rain">Chuva</string>
+    <string name="weather_description_heavy_rain">Chuva forte</string>
+    <string name="weather_description_light_freezing_rain">Chuva congelante fraca</string>
+    <string name="weather_description_freezing_rain">Chuva congelante</string>
+    <string name="weather_description_slight_snow">Neve fraca</string>
+    <string name="weather_description_snow">Neve</string>
+    <string name="weather_description_heavy_snow">Neve forte</string>
+    <string name="weather_description_snow_grains">Grãos de neve</string>
+    <string name="weather_description_light_rain_showers">Pancadas de chuva fracas</string>
+    <string name="weather_description_rain_showers">Pancadas de chuva</string>
+    <string name="weather_description_violent_rain_showers">Pancadas de chuva violentas</string>
+    <string name="weather_description_light_snow_showers">Pancadas de neve fracas</string>
+    <string name="weather_description_heavy_snow_showers">Pancadas de neve fortes</string>
+    <string name="weather_description_thunderstorm">Tempestade</string>
+    <string name="weather_description_thunderstorm_with_hail">Tempestade com granizo</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Tempestade com granizo forte</string>
+    <string name="weather_description_unknown">Desconhecido</string>
+    <string name="weather_moon_phase_new_moon">Lua nova</string>
+    <string name="weather_moon_phase_waxing_crescent">Lua crescente</string>
+    <string name="weather_moon_phase_first_quarter">Quarto crescente</string>
+    <string name="weather_moon_phase_waxing_gibbous">Crescente gibosa</string>
+    <string name="weather_moon_phase_full_moon">Lua cheia</string>
+    <string name="weather_moon_phase_waning_gibbous">Minguante gibosa</string>
+    <string name="weather_moon_phase_last_quarter">Quarto minguante</string>
+    <string name="weather_moon_phase_waning_crescent">Lua minguante</string>
+    <string name="weather_error_no_location">Não foi possível determinar a localização. Ative os serviços de localização ou pesquise uma cidade.</string>
+    <string name="weather_error_city_not_found">Nenhuma cidade encontrada para «%1$s»</string>
+    <string name="weather_error_no_network">Não foi possível carregar o clima. Verifique a conexão com a internet.</string>
+    <string name="weather_error_choose_city">Escolha uma cidade da lista</string>
+    <string name="weather_current_location">Localização atual</string>
+</resources>

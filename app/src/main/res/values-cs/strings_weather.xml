@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Jasná obloha</string>
+    <string name="weather_description_mainly_clear">Převážně jasno</string>
+    <string name="weather_description_partly_cloudy">Polojasno</string>
+    <string name="weather_description_overcast">Zataženo</string>
+    <string name="weather_description_fog">Mlha</string>
+    <string name="weather_description_rime_fog">Namrzající mlha</string>
+    <string name="weather_description_light_drizzle">Slabé mrholení</string>
+    <string name="weather_description_drizzle">Mrholení</string>
+    <string name="weather_description_dense_drizzle">Husté mrholení</string>
+    <string name="weather_description_light_freezing_drizzle">Slabé namrzající mrholení</string>
+    <string name="weather_description_freezing_drizzle">Namrzající mrholení</string>
+    <string name="weather_description_slight_rain">Slabý déšť</string>
+    <string name="weather_description_rain">Déšť</string>
+    <string name="weather_description_heavy_rain">Silný déšť</string>
+    <string name="weather_description_light_freezing_rain">Slabý namrzající déšť</string>
+    <string name="weather_description_freezing_rain">Namrzající déšť</string>
+    <string name="weather_description_slight_snow">Slabé sněžení</string>
+    <string name="weather_description_snow">Sníh</string>
+    <string name="weather_description_heavy_snow">Silné sněžení</string>
+    <string name="weather_description_snow_grains">Sněhová zrna</string>
+    <string name="weather_description_light_rain_showers">Slabé dešťové přeháňky</string>
+    <string name="weather_description_rain_showers">Dešťové přeháňky</string>
+    <string name="weather_description_violent_rain_showers">Silné dešťové přeháňky</string>
+    <string name="weather_description_light_snow_showers">Slabé sněhové přeháňky</string>
+    <string name="weather_description_heavy_snow_showers">Silné sněhové přeháňky</string>
+    <string name="weather_description_thunderstorm">Bouřka</string>
+    <string name="weather_description_thunderstorm_with_hail">Bouřka s kroupami</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Bouřka se silnými kroupami</string>
+    <string name="weather_description_unknown">Neznámé</string>
+    <string name="weather_moon_phase_new_moon">Nov</string>
+    <string name="weather_moon_phase_waxing_crescent">Dorůstající srpek</string>
+    <string name="weather_moon_phase_first_quarter">První čtvrt</string>
+    <string name="weather_moon_phase_waxing_gibbous">Dorůstající měsíc</string>
+    <string name="weather_moon_phase_full_moon">Úplněk</string>
+    <string name="weather_moon_phase_waning_gibbous">Couvající měsíc</string>
+    <string name="weather_moon_phase_last_quarter">Poslední čtvrt</string>
+    <string name="weather_moon_phase_waning_crescent">Ubývající srpek</string>
+    <string name="weather_error_no_location">Polohu nelze určit. Zapněte služby určování polohy nebo vyhledejte město.</string>
+    <string name="weather_error_city_not_found">Pro „%1$s“ nebylo nalezeno žádné město</string>
+    <string name="weather_error_no_network">Počasí nelze načíst. Zkontrolujte připojení k internetu.</string>
+    <string name="weather_error_choose_city">Vyberte město ze seznamu</string>
+    <string name="weather_current_location">Aktuální poloha</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">کام</string>
+    <string name="app_tab_weather">موسم</string>
+    <string name="app_tab_exchange">نرخ</string>
+    <string name="app_tab_calculator">حساب</string>
+    <string name="app_tab_scan">اسکین</string>
+    <string name="app_tab_steps">قدم</string>
+    <string name="app_tab_flights">پروازیں</string>
+    <string name="app_menu_settings">ترتیبات</string>
+    <string name="app_menu_options">اختیارات</string>
+    <string name="app_notifications_disabled">اطلاعات بند ہیں: یاد دہانیاں نہیں دکھائی جائیں گی</string>
+    <string name="app_overdue_tasks_format">مقررہ تاریخ گزر چکے کام: %1$d</string>
+    <string name="app_exact_alarm_already_granted">درست الارم کی اجازت پہلے ہی دی جا چکی ہے</string>
+    <string name="app_alarm_title">یاد دہانیاں اور الارم</string>
+    <string name="app_alarm_voice_alert">آواز کا انتباہ (TTS)</string>
+    <string name="app_alarm_full_screen">فل اسکرین ونڈو</string>
+    <string name="app_alarm_grant_exact">درست الارم کی اجازت دیں</string>
+    <string name="backup_menu_export">بیک اپ برآمد کریں</string>
+    <string name="backup_menu_import">بیک اپ درآمد کریں</string>
+    <string name="backup_menu_cloud_settings">کلاؤڈ ترتیبات اور خودکار بیک اپ</string>
+    <string name="backup_menu_cloud_save">ابھی کلاؤڈ میں محفوظ کریں</string>
+    <string name="backup_menu_cloud_restore">کلاؤڈ سے بحال کریں</string>
+    <string name="backup_cloud_username_hint">صارف نام/ای میل</string>
+    <string name="backup_cloud_password_hint">پاس ورڈ</string>
+    <string name="backup_cloud_auto_backup">روزانہ خودکار بیک اپ چالو کریں</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ خودکار بیک اپ چالو ہونے پر آپ کے کلاؤڈ اسٹوریج میں ڈیٹا بیس فائل بطور ڈیفالٹ دن میں ایک بار بدل دی جاتی ہے۔</string>
+    <string name="backup_cloud_test">جانچیں</string>
+    <string name="backup_cloud_save">محفوظ</string>
+    <string name="settings_language_title">زبان</string>
+    <string name="settings_language_subtitle">ایپ کی زبان</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">الأصلي</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">ممسوحة %1$s</string>
+    <string name="scan_delete_page_message">حذف هذه الصفحة؟ لا يمكن التراجع عن هذا الإجراء!</string>
+    <string name="scan_delete_document_message">حذف «%1$s» بكل صفحاته؟ لا يمكن التراجع عن هذا الإجراء!</string>
+    <string name="scan_delete_all_message">حذف الكل: %1$s، %2$s؟ لا يمكن التراجع عن هذا الإجراء!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="zero">%d مستند</item>
+        <item quantity="one">مستند واحد</item>
+        <item quantity="two">مستندان</item>
+        <item quantity="few">%d مستندات</item>
+        <item quantity="many">%d مستندًا</item>
+        <item quantity="other">%d مستند</item>
+    </plurals>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">რა უნდა გაკეთდეს</string>
+    <string name="tasks_list_add">დამატება</string>
+    <string name="tasks_list_delete_completed">წაშლა: მზადაა</string>
+    <string name="tasks_list_clear_all">ყველას წაშლა</string>
+    <string name="tasks_list_reminder_set">შეხსენება დაყენებულია</string>
+    <string name="tasks_statistics">სულ: %1$d  დასრულებული: %2$d  დარჩენილი: %3$d  პროგრესი: %4$d %%</string>
+    <string name="tasks_dialog_title_add">ახალი ამოცანა</string>
+    <string name="tasks_dialog_title_edit">ამოცანის რედაქტირება</string>
+    <string name="tasks_dialog_importance">მნიშვნელობის დონე:</string>
+    <string name="tasks_dialog_deadline_label">ვადა:</string>
+    <string name="tasks_dialog_deadline_select">აირჩიეთ ვადა</string>
+    <string name="tasks_dialog_reminder_label">შეხსენება (თარიღი და დრო):</string>
+    <string name="tasks_dialog_reminder_select">აირჩიეთ შეხსენების თარიღი და დრო</string>
+    <string name="tasks_dialog_show_timestamps">შექმნის/ცვლილების თარიღების ჩვენება</string>
+    <string name="tasks_dialog_delete">წაშლა</string>
+    <string name="tasks_dialog_save">შენახვა</string>
+    <string name="tasks_dialog_clear">გასუფთავება</string>
+    <string name="tasks_importance_normal">ჩვეულებრივი</string>
+    <string name="tasks_importance_important">მნიშვნელოვანი</string>
+    <string name="tasks_importance_urgent">სასწრაფო</string>
+    <string name="tasks_toast_created">ამოცანა შეიქმნა</string>
+    <string name="tasks_toast_updated">ამოცანა განახლდა</string>
+    <string name="tasks_toast_deleted">ამოცანა წაიშალა</string>
+    <string name="tasks_toast_completed_deleted">დასრულებული ამოცანები წაიშალა</string>
+    <string name="tasks_toast_all_cleared">ყველა ამოცანა წაიშალა</string>
+    <string name="tasks_toast_empty_title">ამოცანის აღწერა არ შეიძლება იყოს ცარიელი</string>
+    <string name="tasks_toast_reminder_after_deadline">შეხსენება ვადის შემდეგ ვერ იქნება!</string>
+    <string name="tasks_toast_reminder_in_past">შეხსენება წარსულში ვერ იქნება!</string>
+    <string name="tasks_toast_reminder_cleared">შეხსენება წაიშალა, რადგან ვადა უფრო ადრეა!</string>
+    <string name="tasks_toast_select_deadline_first">ჯერ აირჩიეთ ვადა!</string>
+    <string name="tasks_time_created">შეიქმნა: %1$s</string>
+    <string name="tasks_time_edited">შეიცვალა: %1$s</string>
+    <string name="tasks_time_completed">დასრულდა: %1$s</string>
+    <string name="tasks_deadline_prefixed">ვადა: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — დარჩა %2$d დღე!</item>
+        <item quantity="other">%1$s — დარჩა %2$d დღე!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d დღით გადაცდა!</item>
+        <item quantity="other">%1$s — %2$d დღით გადაცდა!</item>
+    </plurals>
+    <string name="tasks_delete_title">წაშლის დადასტურება</string>
+    <string name="tasks_delete_button">წაშლა</string>
+    <string name="tasks_delete_nothing">წასაშლელი არაფერია!</string>
+    <string name="tasks_delete_item_message">ნამდვილად გსურთ ამ ელემენტის წაშლა? მოქმედება შეუქცევადია!</string>
+    <string name="tasks_delete_cannot_be_undone">მოქმედება შეუქცევადია!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">წაიშალოს %1$d დასრულებული ამოცანა?</item>
+        <item quantity="other">წაიშალოს %1$d დასრულებული ამოცანა?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">მათგან %1$d ამოცანას შენახული შეხსენება აქვს</item>
+        <item quantity="other">მათგან %1$d ამოცანას შენახული შეხსენება აქვს</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">წაიშალოს ყველა %1$d ამოცანა?</item>
+        <item quantity="other">წაიშალოს ყველა %1$d ამოცანა?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d ამოცანას აქტიური შეხსენება აქვს</item>
+        <item quantity="other">%1$d ამოცანას აქტიური შეხსენება აქვს</item>
+    </plurals>
+    <string name="tasks_alert_title">ვადის გაფრთხილება!</string>
+    <string name="tasks_alert_view_tasks">ამოცანების ნახვა</string>
+    <string name="tasks_alert_channel_name">ამოცანების ვადების გაფრთხილებები</string>
+    <string name="tasks_alert_channel_description">სასწრაფო შეტყობინებები ამოცანების ვადების შესახებ</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">ვადაგასული ამოცანები: %1$d</item>
+        <item quantity="other">ვადაგასული ამოცანები: %1$d</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">ყურადღება! ამოცანების ვადები, რომლებსაც დაუყოვნებლივ ყურადღება სჭირდება: %1$d</item>
+        <item quantity="other">ყურადღება! ამოცანების ვადები, რომლებსაც დაუყოვნებლივ ყურადღება სჭირდება: %1$d</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">ყურადღება! ამოცანის ვადა ახლოვდება: %1$s</string>
+</resources>

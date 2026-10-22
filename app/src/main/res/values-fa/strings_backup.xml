@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">در حال بارگذاری پشتیبان در ابر...</string>
+    <string name="backup_cloud_restoring">در حال بازیابی پشتیبان از ابر...</string>
+    <string name="backup_cloud_upload_success">پشتیبان با موفقیت در ابر بارگذاری شد</string>
+    <string name="backup_cloud_restore_success">پشتیبان با موفقیت از ابر بازیابی شد</string>
+    <string name="backup_cloud_restore_partly">کارها از ابر بازیابی شدند (پشتیبانی برای این موارد آنجا پیدا نشد: %1$s)</string>
+    <string name="backup_part_steps">قدم‌ها</string>
+    <string name="backup_part_flights">پروازها</string>
+    <string name="backup_part_scans">اسکن‌ها</string>
+    <string name="backup_part_separator">"، "</string>
+    <string name="backup_error_upload">خطای بارگذاری: %1$s</string>
+    <string name="backup_error_download">خطای دانلود: %1$s</string>
+    <string name="backup_error_unknown">خطای ناشناخته</string>
+    <string name="backup_error_insecure_url">نشانی URL باید با https:// شروع شود</string>
+    <string name="backup_error_authentication">احراز هویت ناموفق بود: نام کاربری و گذرواژه را بررسی کنید</string>
+    <string name="backup_error_server_code">سرور با این کد پاسخ داد: %1$d</string>
+    <string name="backup_error_connection">خطای اتصال: %1$s</string>
+    <string name="backup_destination_title">ذخیرهٔ پشتیبان در</string>
+    <string name="backup_destination_folder">انتخاب پوشه (دستگاه، کارت SD، USB، Drive...)</string>
+    <string name="backup_destination_share">اشتراک‌گذاری با برنامه</string>
+    <string name="backup_preparing">در حال آماده‌سازی پشتیبان...</string>
+    <string name="backup_export_failed">برون‌بری ناموفق بود</string>
+    <string name="backup_export_saved">پشتیبان ذخیره شد</string>
+    <string name="backup_import_success">پشتیبان با موفقیت درون‌ریزی شد. در حال راه‌اندازی مجدد...</string>
+    <string name="backup_import_failed">درون‌ریزی ناموفق بود</string>
+    <string name="backup_import_title">توجه!</string>
+    <string name="backup_import_message">بازیابی پشتیبان، کارها، قدم‌ها و اسکن‌های فعلی شما را با آنچه در آن است جایگزین می‌کند. واقعاً می‌خواهید ادامه دهید؟</string>
+    <string name="backup_import_confirm">تأیید درون‌ریزی</string>
+    <string name="backup_share_chooser_title">برون‌بری پشتیبان</string>
+    <string name="backup_cloud_settings_saved">تنظیمات ابر با موفقیت ذخیره شد</string>
+    <string name="backup_cloud_secure_storage_unavailable">حافظهٔ امن در دسترس نیست، تنظیمات ذخیره نشد</string>
+    <string name="backup_cloud_url_empty">نشانی URL نباید خالی باشد</string>
+    <string name="backup_cloud_testing">در حال آزمایش اتصال...</string>
+    <string name="backup_cloud_connection_successful">اتصال موفق بود!</string>
+</resources>

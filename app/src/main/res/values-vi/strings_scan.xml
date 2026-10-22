@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Bản gốc</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Bản quét %1$s</string>
+    <string name="scan_delete_page_message">Xóa trang này? Không thể hoàn tác thao tác này!</string>
+    <string name="scan_delete_document_message">Xóa “%1$s” cùng tất cả các trang? Không thể hoàn tác thao tác này!</string>
+    <string name="scan_delete_all_message">Xóa tất cả: %1$s, %2$s? Không thể hoàn tác thao tác này!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="other">%d tài liệu</item>
+    </plurals>
+</resources>

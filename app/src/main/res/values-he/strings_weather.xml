@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">שמיים בהירים</string>
+    <string name="weather_description_mainly_clear">בהיר ברובו</string>
+    <string name="weather_description_partly_cloudy">מעונן חלקית</string>
+    <string name="weather_description_overcast">מעונן</string>
+    <string name="weather_description_fog">ערפל</string>
+    <string name="weather_description_rime_fog">ערפל כפור</string>
+    <string name="weather_description_light_drizzle">טפטוף קל</string>
+    <string name="weather_description_drizzle">טפטוף</string>
+    <string name="weather_description_dense_drizzle">טפטוף כבד</string>
+    <string name="weather_description_light_freezing_drizzle">טפטוף קפוא קל</string>
+    <string name="weather_description_freezing_drizzle">טפטוף קפוא</string>
+    <string name="weather_description_slight_rain">גשם קל</string>
+    <string name="weather_description_rain">גשם</string>
+    <string name="weather_description_heavy_rain">גשם כבד</string>
+    <string name="weather_description_light_freezing_rain">גשם קפוא קל</string>
+    <string name="weather_description_freezing_rain">גשם קפוא</string>
+    <string name="weather_description_slight_snow">שלג קל</string>
+    <string name="weather_description_snow">שלג</string>
+    <string name="weather_description_heavy_snow">שלג כבד</string>
+    <string name="weather_description_snow_grains">גרגרי שלג</string>
+    <string name="weather_description_light_rain_showers">ממטרים קלים</string>
+    <string name="weather_description_rain_showers">ממטרים</string>
+    <string name="weather_description_violent_rain_showers">ממטרים עזים</string>
+    <string name="weather_description_light_snow_showers">ממטרי שלג קלים</string>
+    <string name="weather_description_heavy_snow_showers">ממטרי שלג כבדים</string>
+    <string name="weather_description_thunderstorm">סופת רעמים</string>
+    <string name="weather_description_thunderstorm_with_hail">סופת רעמים עם ברד</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">סופת רעמים עם ברד כבד</string>
+    <string name="weather_description_unknown">לא ידוע</string>
+    <string name="weather_moon_phase_new_moon">מולד הירח</string>
+    <string name="weather_moon_phase_waxing_crescent">סהר גדל</string>
+    <string name="weather_moon_phase_first_quarter">רבע ראשון</string>
+    <string name="weather_moon_phase_waxing_gibbous">ירח גדל</string>
+    <string name="weather_moon_phase_full_moon">ירח מלא</string>
+    <string name="weather_moon_phase_waning_gibbous">ירח הולך ופוחת</string>
+    <string name="weather_moon_phase_last_quarter">רבע אחרון</string>
+    <string name="weather_moon_phase_waning_crescent">סהר הולך ופוחת</string>
+    <string name="weather_error_no_location">לא ניתן לקבוע את המיקום. הפעילו שירותי מיקום או חפשו עיר.</string>
+    <string name="weather_error_city_not_found">לא נמצאה עיר עבור \"%1$s\"</string>
+    <string name="weather_error_no_network">לא ניתן לטעון את מזג האוויר. בדקו את חיבור האינטרנט.</string>
+    <string name="weather_error_choose_city">בחרו עיר מהרשימה</string>
+    <string name="weather_current_location">המיקום הנוכחי</string>
+</resources>

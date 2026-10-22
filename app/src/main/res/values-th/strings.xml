@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">ยกเลิก</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">การตั้งค่า</string>
+    <string name="settings_alarms_title">การเตือนและนาฬิกาปลุก</string>
+    <string name="settings_alarms_subtitle">ช่วงเวลา เสียง และสถานะการแจ้งเตือน</string>
+    <string name="settings_display_title">โหมดการแสดงผล</string>
+    <string name="settings_display_subtitle">กลางวัน / กลางคืน / อัตโนมัติ</string>
+    <string name="display_mode_title">โหมดการแสดงผล</string>
+    <string name="display_mode_light">สว่าง (กลางวัน)</string>
+    <string name="display_mode_dark">มืด (กลางคืน)</string>
+    <string name="display_mode_system">ตามระบบ (อัตโนมัติ)</string>
+    <string name="settings_design_title">รูปลักษณ์ของแอป</string>
+    <string name="settings_design_subtitle">ตัวเลือกรูปลักษณ์ของอินเทอร์เฟซ</string>
+    <string name="design_classic_name">คลาสสิก</string>
+    <string name="design_classic_about">รูปลักษณ์เดิม: สีครีมและม่วง</string>
+    <string name="design_paper_ink_name">กระดาษและหมึก</string>
+    <string name="design_paper_ink_about">เส้นบางและโทนสีสำนักงานที่สงบ</string>
+    <string name="design_pastel_cloud_name">เมฆพาสเทล</string>
+    <string name="design_pastel_cloud_about">นุ่มนวล มน และซีด พร้อมก้อนเมฆ</string>
+    <string name="design_neon_arcade_name">อาร์เคดนีออน</string>
+    <string name="design_neon_arcade_about">นีออนสว่างจ้า คอนทราสต์สูง และดวงอาทิตย์สไตล์เรโทร</string>
+    <string name="design_toon_name">การ์ตูน</string>
+    <string name="design_toon_about">เส้นขอบแบบคอมิกและตัวอักษรลายมือ</string>
+    <string name="design_biker_name">ไบเกอร์</string>
+    <string name="design_biker_about">โลหะดิบ ยาง และสีส้มของท่อไอเสีย</string>
+    <string name="design_cockpit_name">ห้องนักบิน</string>
+    <string name="design_cockpit_about">แผงหน้าปัดเคร่งขรึมพร้อมเครื่องร่อน</string>
+    <string name="design_beach_name">ชายหาด</string>
+    <string name="design_beach_about">ทราย ลากูน ปะการัง และต้นปาล์ม</string>
+    <string name="design_forest_name">ป่าเวทมนตร์</string>
+    <string name="design_forest_about">กระดาษหนัง สีทอง และมอสในป่า</string>
+    <string name="design_mono_block_name">โมโนบล็อก</string>
+    <string name="design_mono_block_about">ขาวดำคมชัดพร้อมปากกาเน้นข้อความสีเหลืองหนึ่งด้าม</string>
+    <string name="settings_permissions_title">สิทธิ์ของระบบ</string>
+    <string name="settings_permissions_subtitle">จัดการการเข้าถึงใน Android</string>
+    <string-array name="filter_options">
+        <item>งานทั้งหมด</item>
+        <item>กำลังทำ</item>
+        <item>เสร็จแล้ว</item>
+        <item>คำเตือน</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>สถานะ</item>
+        <item>วันที่สร้าง</item>
+        <item>วันที่แก้ไข</item>
+        <item>วันที่เสร็จ</item>
+        <item>ความสำคัญ</item>
+        <item>กำหนดส่ง</item>
+    </string-array>
+    <string name="scan_camera">กล้อง</string>
+    <string name="scan_gallery">แกลเลอรี</string>
+    <string name="scan_clear_all">ล้างทั้งหมด</string>
+    <string name="scan_cleared">ลบการสแกนทั้งหมดแล้ว</string>
+    <string name="scan_empty">ยังไม่มีเอกสาร ถ่ายภาพหน้ากระดาษหรือเลือกรูปจากแกลเลอรี</string>
+    <string name="scan_auto">อัตโนมัติ</string>
+    <string name="scan_reset">รีเซ็ต</string>
+    <string name="scan_next">ถัดไป</string>
+    <string name="scan_back">กลับ</string>
+    <string name="scan_save">บันทึก</string>
+    <string name="scan_rotate">หมุน</string>
+    <string name="scan_paper">กระดาษ</string>
+    <string name="scan_filter_color">สี</string>
+    <string name="scan_filter_gray">เทา</string>
+    <string name="scan_filter_bw">ขาวดำ</string>
+    <string name="scan_tune">แสงและคอนทราสต์</string>
+    <string name="scan_shadows">ลบเงา</string>
+    <string name="scan_brightness">ความสว่าง</string>
+    <string name="scan_contrast">คอนทราสต์</string>
+    <string name="scan_sharpen">ความคมชัด</string>
+    <string name="scan_page_saved">บันทึกหน้าแล้ว</string>
+    <string name="scan_next_page_question">เพิ่มอีกหน้าในเอกสารไหม</string>
+    <string name="scan_page_label">หน้า %d</string>
+    <string name="scan_done">เสร็จสิ้น</string>
+    <string name="scan_add_page">เพิ่มหน้า</string>
+    <string name="scan_share_pdf">ส่ง PDF</string>
+    <string name="scan_pages_empty">เอกสารนี้ไม่มีหน้า</string>
+    <string name="scan_saved_to_device">บันทึกไฟล์แล้ว</string>
+    <string name="scan_share_title">แชร์เอกสาร</string>
+    <string name="scan_rename_title">เปลี่ยนชื่อเอกสาร</string>
+    <string name="scan_rename_confirm">เปลี่ยนชื่อ</string>
+    <string name="scan_error_load">ไม่สามารถเปิดรูปนี้ได้</string>
+    <string name="scan_error_preview">หน่วยความจำไม่พอสำหรับการดูตัวอย่าง</string>
+    <string name="scan_error_save">ไม่สามารถบันทึกการสแกนได้</string>
+    <string name="scan_error_export">ไม่สามารถเตรียมไฟล์ได้</string>
+    <string name="scan_error_no_camera">ไม่พบแอปกล้อง</string>
+    <string name="scan_error_no_viewer">ไม่พบแอปสำหรับเปิดรูปภาพ</string>
+    <string name="scan_error_no_app">ไม่พบแอปสำหรับแชร์</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d หน้า</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>หน้า</item>
+        <item>แชร์เป็น PDF</item>
+        <item>แชร์เป็น JPEG</item>
+        <item>บันทึก PDF ไปที่…</item>
+        <item>เปลี่ยนชื่อ</item>
+        <item>ลบ</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>ดู</item>
+        <item>บันทึก JPEG ไปที่…</item>
+        <item>ย้ายขึ้น</item>
+        <item>ย้ายลง</item>
+        <item>ลบหน้า</item>
+    </string-array>
+    <string name="weather_city_hint">ชื่อเมืองในภาษาใดก็ได้</string>
+    <string name="weather_search">ค้นหา</string>
+    <string name="weather_my_location">ตำแหน่งของฉัน</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">รู้สึกเหมือน</string>
+    <string name="weather_humidity">ความชื้น</string>
+    <string name="weather_wind">ลม</string>
+    <string name="weather_today_range">วันนี้</string>
+    <string name="weather_units">หน่วย</string>
+    <string name="weather_units_temperature">อุณหภูมิ</string>
+    <string name="weather_units_wind">ความเร็วลม</string>
+    <string name="weather_unit_celsius">เซลเซียส (°C)</string>
+    <string name="weather_unit_fahrenheit">ฟาเรนไฮต์ (°F)</string>
+    <string name="weather_unit_ms">เมตรต่อวินาที (m/s)</string>
+    <string name="weather_unit_kmh">กิโลเมตรต่อชั่วโมง (km/h)</string>
+    <string name="weather_moon_caption">%1$s · สว่าง %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">กำลังโหลดสภาพอากาศ…</string>
+    <string name="weather_location_needed">อนุญาตการเข้าถึงตำแหน่งโดยประมาณเพื่อดูสภาพอากาศที่คุณอยู่ หรือค้นหาเมือง</string>
+    <string name="weather_allow">อนุญาต</string>
+    <string name="weather_open_settings">เปิดการตั้งค่าแอป</string>
+    <string name="weather_attribution">สภาพอากาศ: Open-Meteo.com · สถานที่: © ผู้ร่วมพัฒนา OpenStreetMap</string>
+    <string name="weather_choose_city">เลือกเมือง</string>
+    <string name="steps_today">วันนี้</string>
+    <string name="steps_unit">ก้าว</string>
+    <string name="steps_walk_run">เดิน %1$s · วิ่ง %2$s</string>
+    <string name="steps_period">ช่วงเวลา</string>
+    <string name="steps_last_7">7 วัน</string>
+    <string name="steps_last_30">30 วัน</string>
+    <string name="steps_this_month">เดือนนี้</string>
+    <string name="steps_pick_dates">เลือกวันที่</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">จำนวนก้าวรวม</string>
+    <string name="steps_distance">ระยะทาง</string>
+    <string name="steps_average">เฉลี่ยต่อวัน</string>
+    <string name="steps_best_day">วันที่ดีที่สุด</string>
+    <string name="steps_walking">ก้าวเดิน</string>
+    <string name="steps_running">ก้าววิ่ง</string>
+    <string name="steps_active_days">วันที่มีก้าว</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d จาก %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">ไม่มีก้าวที่บันทึกไว้ในช่วงเวลานี้</string>
+    <string name="steps_settings">ตั้งค่าก้าว</string>
+    <string name="steps_settings_title">ความยาวก้าว</string>
+    <string name="steps_walk_length">ความยาวก้าวขณะเดิน, cm</string>
+    <string name="steps_run_length">ความยาวก้าวขณะวิ่ง, cm</string>
+    <string name="steps_run_cadence">เริ่มนับเป็นวิ่งที่, ก้าวต่อนาที</string>
+    <string name="steps_run_cadence_hint">ก้าวที่เร็วเท่ากับหรือมากกว่าจังหวะนี้จะนับเป็นการวิ่ง</string>
+    <string name="steps_defaults">ค่าเริ่มต้น</string>
+    <string name="steps_save">บันทึก</string>
+    <string name="steps_invalid_length">ป้อนค่า %1$d–%2$d</string>
+    <string name="steps_measure_title">วิธีวัดความยาวก้าว</string>
+    <string name="steps_measure_text">1. ก่อนก้าวแรก ให้ทำเครื่องหมายเส้นเริ่มต้นตรงปลายรองเท้า\n2. เดิน 10 ก้าวอย่างสบาย ๆ ด้วยความเร็วปกติของคุณ\n3. หลังก้าวที่ 10 วัดระยะจากเส้นเริ่มต้นถึงปลายรองเท้าตำแหน่งเดิมเป็นเซนติเมตร\n4. หารด้วยสิบ\n5. ทำซ้ำสองสามครั้งแล้วป้อนค่าเฉลี่ย\n\nหากต้องการความยาวก้าวขณะวิ่ง ให้ทำแบบเดียวกันด้วยจังหวะวิ่งปกติของคุณ</string>
+    <string name="steps_no_sensor">โทรศัพท์เครื่องนี้ไม่มีเซนเซอร์นับก้าว</string>
+    <string name="steps_permission_needed">อนุญาตการเข้าถึงกิจกรรมทางกายเพื่อให้โทรศัพท์นับก้าวของคุณได้</string>
+    <string name="steps_allow">อนุญาต</string>
+    <string name="steps_open_settings">เปิดการตั้งค่าแอป</string>
+    <string name="currency_amount_hint">จำนวนเงิน</string>
+    <string name="currency_swap">สลับ ⇅</string>
+    <string name="currency_refresh">รีเฟรชอัตรา</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">อัปเดตอัตราเมื่อ %1$s</string>
+    <string name="currency_outdated">ไม่มีอินเทอร์เน็ต กำลังแสดงอัตราที่บันทึกไว้ อัปเดตเมื่อ %1$s</string>
+    <string name="currency_loading">กำลังโหลดอัตรา…</string>
+    <string name="currency_unavailable">ไม่มีข้อมูลอัตรา ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วรีเฟรช</string>
+    <string name="currency_invalid_amount">ป้อนจำนวนเงิน</string>
+    <string name="currency_attribution">อัตราจาก Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">วิทย์</string>
+    <string name="calculator_basic">ทั่วไป</string>
+    <string name="calculator_degrees">องศา</string>
+    <string name="calculator_radians">เรเดียน</string>
+    <string name="calculator_history">ประวัติ</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">เริ่มบันทึก</string>
+    <string name="flights_stop">หยุดบันทึก</string>
+    <string name="flights_units">หน่วย</string>
+    <string name="flights_journal">บันทึก</string>
+    <string name="flights_journal_title">สมุดบันทึกการบิน</string>
+    <string name="flights_journal_empty">ยังไม่มีเที่ยวบินที่บันทึกไว้</string>
+    <string name="flights_journal_in_progress">เที่ยวบินนี้ยังอยู่ระหว่างการบันทึก</string>
+    <string name="flights_report_open">เปิดรายงาน</string>
+    <string name="flights_report_share">แชร์รายงาน</string>
+    <string name="flights_report_delete">ลบเที่ยวบิน</string>
+    <string name="flights_report_failed">ไม่สามารถเตรียมรายงานได้</string>
+    <string name="flights_report_no_viewer">ไม่พบแอปสำหรับเปิดไฟล์ PDF</string>
+    <string name="flights_delete_title">ลบเที่ยวบินนี้ไหม</string>
+    <string name="flights_delete_message">เส้นทางและรายงานจะถูกลบถาวร ก่อนหน้านั้นคุณสามารถส่งรายงานไปที่อื่นได้ เช่น แฟลชไดรฟ์ คอมพิวเตอร์ หรือ Google Drive</string>
+    <string name="flights_delete_save_first">บันทึกรายงานแล้วลบ</string>
+    <string name="flights_delete_without_saving">ลบโดยไม่บันทึก</string>
+    <string name="flights_delete_after_share_message">หากรายงานไปถึงที่ที่ต้องการแล้ว ตอนนี้คุณลบเที่ยวบินได้</string>
+    <string name="flights_delete_after_share_confirm">ลบเที่ยวบิน</string>
+    <string name="flights_delete_keep">เก็บเที่ยวบินไว้</string>
+    <string name="flights_units_report_limit">ขีดจำกัดรายงาน</string>
+    <string name="flights_units_report_limit_hint">จำนวนรายงาน PDF สูงสุดในสมุดบันทึก 0 คือไม่จำกัด</string>
+    <string name="flights_limit_full_title">ถึงขีดจำกัดรายงาน PDF แล้ว</string>
+    <string name="flights_limit_full_message">สมุดบันทึกมีรายงาน %1$d ฉบับ ซึ่งเป็นขีดจำกัด หากต้องการบันทึกเที่ยวบินใหม่ ให้ลบเที่ยวบินออกจากสมุดบันทึกอย่างน้อยหนึ่งเที่ยว ก่อนหน้านั้นคุณสามารถบันทึกรายงานของเที่ยวบินนั้นลงแฟลชไดรฟ์ คอมพิวเตอร์ หรือ Google Drive</string>
+    <string name="flights_limit_warning_title">ใกล้ถึงขีดจำกัดรายงาน PDF แล้ว!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">คุณบันทึกเที่ยวบินได้อีก %d เที่ยว ลบเที่ยวบินเก่าออกจากสมุดบันทึก</item>
+    </plurals>
+    <string name="flights_limit_open_journal">เปิดสมุดบันทึก</string>
+    <string name="flights_journal_line">%1$s · สูงสุด %2$s · ความสูงสูงสุด %3$s</string>
+    <string name="flights_units_speed">ความเร็วและระยะทาง</string>
+    <string name="flights_units_altitude">ความสูง</string>
+    <string name="flights_unit_kmh">กิโลเมตรต่อชั่วโมง (km/h)</string>
+    <string name="flights_unit_knots">นอต (kt, ไมล์ทะเล)</string>
+    <string name="flights_unit_ms">เมตรต่อวินาที (m/s)</string>
+    <string name="flights_unit_metres">เมตร (m)</string>
+    <string name="flights_unit_feet">ฟุต (ft)</string>
+    <string name="flights_units_climb">อัตราการไต่</string>
+    <string name="flights_unit_fpm">ฟุตต่อนาที (ft/min)</string>
+    <string name="flights_altitude_zero">ศูนย์</string>
+    <string name="flights_altitude_sea">เหนือระดับน้ำทะเล</string>
+    <string name="flights_altitude_start">เหนือจุดเริ่ม · กด “ศูนย์” ค้างเพื่อยกเลิก</string>
+    <string name="flights_sound_on">เสียง: เปิด</string>
+    <string name="flights_sound_off">เสียง: ปิด</string>
+    <string name="flights_sound_tune">ปรับเสียง</string>
+    <string name="flights_sound_climb_start">เสียงบี๊ปเริ่มเมื่อไต่ %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">เสียงบี๊ปต่ำเริ่มเมื่อลด %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">เสียงเตือนต่อเนื่องเมื่อลด %1$.1f m/s</string>
+    <string name="flights_speed_label">ความเร็ว</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">เวลาบิน</string>
+    <string name="flights_distance">ระยะทาง</string>
+    <string name="flights_max_speed">ความเร็วสูงสุด</string>
+    <string name="flights_avg_speed">ความเร็วเฉลี่ย</string>
+    <string name="flights_max_altitude">ความสูงสูงสุด</string>
+    <string name="flights_climb_rate">อัตราการไต่</string>
+    <string name="flights_max_g">แรงบรรทุกสูงสุด</string>
+    <string name="flights_status_waiting">กำลังรอสัญญาณ GPS…</string>
+    <string name="flights_location_needed">อนุญาตการเข้าถึงตำแหน่งที่แม่นยำเพื่อบันทึกความเร็ว ความสูง และเส้นทาง</string>
+    <string name="flights_allow">อนุญาต</string>
+    <string name="flights_open_settings">เปิดการตั้งค่าแอป</string>
+    <string name="flights_gps_off">เปิดบริการตำแหน่ง (GPS) เพื่อบันทึกเที่ยวบิน</string>
+    <string name="flights_disclaimer">เพื่อความสนุกและความอยากรู้เท่านั้น อย่าพึ่งพาเครื่องมือเหล่านี้ในการนำทางหรือสิ่งใดที่เกี่ยวกับความปลอดภัย</string>
+</resources>

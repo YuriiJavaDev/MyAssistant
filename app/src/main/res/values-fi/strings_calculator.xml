@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Virheellinen syöte</string>
+    <string name="calculator_error_invalid_expression">Virheellinen lauseke</string>
+    <string name="calculator_error_division_by_zero">Jako nollalla</string>
+    <string name="calculator_error_result_too_large">Tulos on liian suuri</string>
+    <string name="calculator_error_undefined">Määrittelemätön</string>
+    <string name="calculator_error_expression_too_long">Lauseke on liian pitkä</string>
+    <string name="calculator_error_expression_too_complex">Lauseke on liian monimutkainen</string>
+</resources>

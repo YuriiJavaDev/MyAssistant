@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">Ogiltig inmatning</string>
+    <string name="calculator_error_invalid_expression">Ogiltigt uttryck</string>
+    <string name="calculator_error_division_by_zero">Division med noll</string>
+    <string name="calculator_error_result_too_large">Resultatet är för stort</string>
+    <string name="calculator_error_undefined">Odefinierat</string>
+    <string name="calculator_error_expression_too_long">Uttrycket är för långt</string>
+    <string name="calculator_error_expression_too_complex">Uttrycket är för komplext</string>
+</resources>

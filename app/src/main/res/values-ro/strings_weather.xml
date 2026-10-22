@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Cer senin</string>
+    <string name="weather_description_mainly_clear">În mare parte senin</string>
+    <string name="weather_description_partly_cloudy">Parțial noros</string>
+    <string name="weather_description_overcast">Înnorat</string>
+    <string name="weather_description_fog">Ceață</string>
+    <string name="weather_description_rime_fog">Ceață cu depunere de chiciură</string>
+    <string name="weather_description_light_drizzle">Burniță ușoară</string>
+    <string name="weather_description_drizzle">Burniță</string>
+    <string name="weather_description_dense_drizzle">Burniță deasă</string>
+    <string name="weather_description_light_freezing_drizzle">Burniță înghețată ușoară</string>
+    <string name="weather_description_freezing_drizzle">Burniță înghețată</string>
+    <string name="weather_description_slight_rain">Ploaie slabă</string>
+    <string name="weather_description_rain">Ploaie</string>
+    <string name="weather_description_heavy_rain">Ploaie puternică</string>
+    <string name="weather_description_light_freezing_rain">Ploaie înghețată slabă</string>
+    <string name="weather_description_freezing_rain">Ploaie înghețată</string>
+    <string name="weather_description_slight_snow">Ninsoare slabă</string>
+    <string name="weather_description_snow">Ninsoare</string>
+    <string name="weather_description_heavy_snow">Ninsoare puternică</string>
+    <string name="weather_description_snow_grains">Cristale de zăpadă</string>
+    <string name="weather_description_light_rain_showers">Averse slabe de ploaie</string>
+    <string name="weather_description_rain_showers">Averse de ploaie</string>
+    <string name="weather_description_violent_rain_showers">Averse puternice de ploaie</string>
+    <string name="weather_description_light_snow_showers">Averse slabe de zăpadă</string>
+    <string name="weather_description_heavy_snow_showers">Averse puternice de zăpadă</string>
+    <string name="weather_description_thunderstorm">Furtună</string>
+    <string name="weather_description_thunderstorm_with_hail">Furtună cu grindină</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Furtună cu grindină puternică</string>
+    <string name="weather_description_unknown">Necunoscut</string>
+    <string name="weather_moon_phase_new_moon">Lună nouă</string>
+    <string name="weather_moon_phase_waxing_crescent">Semilună crescătoare</string>
+    <string name="weather_moon_phase_first_quarter">Primul pătrar</string>
+    <string name="weather_moon_phase_waxing_gibbous">Lună gibbosă crescătoare</string>
+    <string name="weather_moon_phase_full_moon">Lună plină</string>
+    <string name="weather_moon_phase_waning_gibbous">Lună gibbosă descrescătoare</string>
+    <string name="weather_moon_phase_last_quarter">Ultimul pătrar</string>
+    <string name="weather_moon_phase_waning_crescent">Semilună descrescătoare</string>
+    <string name="weather_error_no_location">Locația nu poate fi determinată. Activați serviciile de localizare sau căutați un oraș.</string>
+    <string name="weather_error_city_not_found">Nu a fost găsit niciun oraș pentru „%1$s”</string>
+    <string name="weather_error_no_network">Vremea nu poate fi încărcată. Verificați conexiunea la internet.</string>
+    <string name="weather_error_choose_city">Alegeți un oraș din listă</string>
+    <string name="weather_current_location">Locația curentă</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">מה צריך לעשות?</string>
+    <string name="tasks_list_add">הוספה</string>
+    <string name="tasks_list_delete_completed">מחיקת שהושלמו</string>
+    <string name="tasks_list_clear_all">נקה הכול</string>
+    <string name="tasks_list_reminder_set">תזכורת נקבעה</string>
+    <string name="tasks_statistics">סה״כ: %1$d  הושלמו: %2$d  נותרו: %3$d  התקדמות: %4$d%%</string>
+    <string name="tasks_dialog_title_add">משימה חדשה</string>
+    <string name="tasks_dialog_title_edit">עריכת משימה</string>
+    <string name="tasks_dialog_importance">רמת חשיבות:</string>
+    <string name="tasks_dialog_deadline_label">מועד יעד:</string>
+    <string name="tasks_dialog_deadline_select">בחירת מועד יעד</string>
+    <string name="tasks_dialog_reminder_label">תזכורת (תאריך ושעה):</string>
+    <string name="tasks_dialog_reminder_select">בחירת תאריך ושעה לתזכורת</string>
+    <string name="tasks_dialog_show_timestamps">הצגת תאריכי יצירה/עריכה</string>
+    <string name="tasks_dialog_delete">מחיקה</string>
+    <string name="tasks_dialog_save">שמירה</string>
+    <string name="tasks_dialog_clear">ניקוי</string>
+    <string name="tasks_importance_normal">רגילה</string>
+    <string name="tasks_importance_important">חשובה</string>
+    <string name="tasks_importance_urgent">דחופה</string>
+    <string name="tasks_toast_created">המשימה נוצרה</string>
+    <string name="tasks_toast_updated">המשימה עודכנה</string>
+    <string name="tasks_toast_deleted">המשימה נמחקה</string>
+    <string name="tasks_toast_completed_deleted">המשימות שהושלמו נמחקו</string>
+    <string name="tasks_toast_all_cleared">כל המשימות נוקו</string>
+    <string name="tasks_toast_empty_title">תיאור המשימה לא יכול להיות ריק</string>
+    <string name="tasks_toast_reminder_after_deadline">התזכורת לא יכולה להיות אחרי מועד היעד!</string>
+    <string name="tasks_toast_reminder_in_past">התזכורת לא יכולה להיות בעבר!</string>
+    <string name="tasks_toast_reminder_cleared">התזכורת נוקתה כי מועד היעד מוקדם יותר!</string>
+    <string name="tasks_toast_select_deadline_first">בחרו קודם מועד יעד!</string>
+    <string name="tasks_time_created">נוצר: %1$s</string>
+    <string name="tasks_time_edited">נערך: %1$s</string>
+    <string name="tasks_time_completed">הושלם: %1$s</string>
+    <string name="tasks_deadline_prefixed">מועד יעד: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — נשאר יום %2$d!</item>
+        <item quantity="two">%1$s — נותרו %2$d ימים!</item>
+        <item quantity="many">%1$s — נותרו %2$d ימים!</item>
+        <item quantity="other">%1$s — נותרו %2$d ימים!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — איחור של יום %2$d!</item>
+        <item quantity="two">%1$s — איחור של %2$d ימים!</item>
+        <item quantity="many">%1$s — איחור של %2$d ימים!</item>
+        <item quantity="other">%1$s — איחור של %2$d ימים!</item>
+    </plurals>
+    <string name="tasks_delete_title">אישור מחיקה</string>
+    <string name="tasks_delete_button">מחיקה</string>
+    <string name="tasks_delete_nothing">לא נמצאו פריטים למחיקה!</string>
+    <string name="tasks_delete_item_message">האם אתם בטוחים שברצונכם למחוק פריט זה? לא ניתן לבטל פעולה זו!</string>
+    <string name="tasks_delete_cannot_be_undone">לא ניתן לבטל פעולה זו!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">למחוק משימה אחת שהושלמה (%1$d)?</item>
+        <item quantity="two">למחוק %1$d משימות שהושלמו?</item>
+        <item quantity="many">למחוק %1$d משימות שהושלמו?</item>
+        <item quantity="other">למחוק %1$d משימות שהושלמו?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">לאחת מהן (%1$d) עדיין יש תזכורת שמורה.</item>
+        <item quantity="two">ל-%1$d מהן עדיין יש תזכורת שמורה.</item>
+        <item quantity="many">ל-%1$d מהן עדיין יש תזכורת שמורה.</item>
+        <item quantity="other">ל-%1$d מהן עדיין יש תזכורת שמורה.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">למחוק את המשימה היחידה (%1$d)?</item>
+        <item quantity="two">למחוק את כל %1$d המשימות?</item>
+        <item quantity="many">למחוק את כל %1$d המשימות?</item>
+        <item quantity="other">למחוק את כל %1$d המשימות?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">ל-%1$d יש תזכורת פעילה.</item>
+        <item quantity="two">ל-%1$d יש תזכורות פעילות.</item>
+        <item quantity="many">ל-%1$d יש תזכורות פעילות.</item>
+        <item quantity="other">ל-%1$d יש תזכורות פעילות.</item>
+    </plurals>
+    <string name="tasks_alert_title">התראת מועד יעד!</string>
+    <string name="tasks_alert_view_tasks">הצגת משימות</string>
+    <string name="tasks_alert_channel_name">התראות מועדי יעד של משימות</string>
+    <string name="tasks_alert_channel_description">התראות דחופות על מועדי יעד של משימות</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">יש לכם מועד יעד שחלף: %1$d.</item>
+        <item quantity="two">יש לכם מועדי יעד שחלפו: %1$d.</item>
+        <item quantity="many">יש לכם מועדי יעד שחלפו: %1$d.</item>
+        <item quantity="other">יש לכם מועדי יעד שחלפו: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">שימו לב! יש לכם מועד יעד אחד של משימה שדורש טיפול מיידי.</item>
+        <item quantity="two">שימו לב! יש לכם %1$d מועדי יעד של משימות שדורשים טיפול מיידי.</item>
+        <item quantity="many">שימו לב! יש לכם %1$d מועדי יעד של משימות שדורשים טיפול מיידי.</item>
+        <item quantity="other">שימו לב! יש לכם %1$d מועדי יעד של משימות שדורשים טיפול מיידי.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">שימו לב! מועד היעד של המשימה מתקרב: %1$s</string>
+</resources>

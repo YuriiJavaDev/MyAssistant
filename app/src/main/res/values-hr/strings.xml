@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Odustani</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Postavke</string>
+    <string name="settings_alarms_title">Podsjetnici i alarmi</string>
+    <string name="settings_alarms_subtitle">Intervali, zvukovi i stanje obavijesti</string>
+    <string name="settings_display_title">Način prikaza</string>
+    <string name="settings_display_subtitle">Dan / Noć / Auto</string>
+    <string name="display_mode_title">Način prikaza</string>
+    <string name="display_mode_light">Svijetli (dan)</string>
+    <string name="display_mode_dark">Tamni (noć)</string>
+    <string name="display_mode_system">Sustavski (auto)</string>
+    <string name="settings_design_title">Izgled aplikacije</string>
+    <string name="settings_design_subtitle">Varijante izgleda sučelja</string>
+    <string name="design_classic_name">Klasični</string>
+    <string name="design_classic_about">Izvorni izgled: krem i ljubičasta</string>
+    <string name="design_paper_ink_name">Papir i tinta</string>
+    <string name="design_paper_ink_about">Tanke linije i prigušeni poslovni tonovi</string>
+    <string name="design_pastel_cloud_name">Pastelni oblak</string>
+    <string name="design_pastel_cloud_about">Mekan, zaobljen i blijed, s oblacima</string>
+    <string name="design_neon_arcade_name">Neonska arkada</string>
+    <string name="design_neon_arcade_about">Blistav neon, snažan kontrast i retro sunce</string>
+    <string name="design_toon_name">Crtani</string>
+    <string name="design_toon_about">Konture iz stripa i rukopisno pismo</string>
+    <string name="design_biker_name">Motociklist</string>
+    <string name="design_biker_about">Grubi metal, guma i narančasta ispušne cijevi</string>
+    <string name="design_cockpit_name">Kokpit</string>
+    <string name="design_cockpit_about">Stroga instrument ploča s jedrilicom</string>
+    <string name="design_beach_name">Plaža</string>
+    <string name="design_beach_about">Pijesak, laguna, koralji i palme</string>
+    <string name="design_forest_name">Začarana šuma</string>
+    <string name="design_forest_about">Pergament, zlato i šumska mahovina</string>
+    <string name="design_mono_block_name">Monoblok</string>
+    <string name="design_mono_block_about">Oštro crno-bijelo s jednim žutim markerom</string>
+    <string name="settings_permissions_title">Sustavska dopuštenja</string>
+    <string name="settings_permissions_subtitle">Upravljanje pristupom u Androidu</string>
+    <string-array name="filter_options">
+        <item>Svi zadaci</item>
+        <item>Aktivni</item>
+        <item>Dovršeni</item>
+        <item>Upozorenja</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Ž</item>
+        <item>Ž–A</item>
+        <item>Status</item>
+        <item>Izrada</item>
+        <item>Izmjena</item>
+        <item>Dovršetak</item>
+        <item>Važnost</item>
+        <item>Rok</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galerija</string>
+    <string name="scan_clear_all">Obriši sve</string>
+    <string name="scan_cleared">Sva skeniranja su obrisana</string>
+    <string name="scan_empty">Još nema dokumenata. Fotografirajte stranicu ili odaberite fotografiju iz galerije.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Poništi</string>
+    <string name="scan_next">Dalje</string>
+    <string name="scan_back">Natrag</string>
+    <string name="scan_save">Spremi</string>
+    <string name="scan_rotate">Zakreni</string>
+    <string name="scan_paper">Papir</string>
+    <string name="scan_filter_color">Boja</string>
+    <string name="scan_filter_gray">Sivo</string>
+    <string name="scan_filter_bw">C/B</string>
+    <string name="scan_tune">Svjetlina i kontrast</string>
+    <string name="scan_shadows">Uklanjanje sjena</string>
+    <string name="scan_brightness">Svjetlina</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Oštrina</string>
+    <string name="scan_page_saved">Stranica je spremljena</string>
+    <string name="scan_next_page_question">Dodati još jednu stranicu dokumentu?</string>
+    <string name="scan_page_label">Stranica %d</string>
+    <string name="scan_done">Gotovo</string>
+    <string name="scan_add_page">Dodaj stranicu</string>
+    <string name="scan_share_pdf">Pošalji PDF</string>
+    <string name="scan_pages_empty">Ovaj dokument nema stranica.</string>
+    <string name="scan_saved_to_device">Datoteka je spremljena</string>
+    <string name="scan_share_title">Slanje dokumenta</string>
+    <string name="scan_rename_title">Preimenovanje dokumenta</string>
+    <string name="scan_rename_confirm">Preimenuj</string>
+    <string name="scan_error_load">Ova se fotografija ne može otvoriti</string>
+    <string name="scan_error_preview">Nema dovoljno memorije za pregled</string>
+    <string name="scan_error_save">Skeniranje se ne može spremiti</string>
+    <string name="scan_error_export">Datoteka se ne može pripremiti</string>
+    <string name="scan_error_no_camera">Nije pronađena aplikacija za kameru</string>
+    <string name="scan_error_no_viewer">Nije pronađena aplikacija za otvaranje slike</string>
+    <string name="scan_error_no_app">Nije pronađena aplikacija za slanje</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d stranica</item>
+        <item quantity="few">%d stranice</item>
+        <item quantity="other">%d stranica</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Stranice</item>
+        <item>Pošalji kao PDF</item>
+        <item>Pošalji kao JPEG</item>
+        <item>Spremi PDF u…</item>
+        <item>Preimenuj</item>
+        <item>Obriši</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Prikaži</item>
+        <item>Spremi JPEG u…</item>
+        <item>Pomakni gore</item>
+        <item>Pomakni dolje</item>
+        <item>Obriši stranicu</item>
+    </string-array>
+    <string name="weather_city_hint">Naziv grada na bilo kojem jeziku</string>
+    <string name="weather_search">Traži</string>
+    <string name="weather_my_location">Moja lokacija</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Osjeti se kao</string>
+    <string name="weather_humidity">Vlažnost</string>
+    <string name="weather_wind">Vjetar</string>
+    <string name="weather_today_range">Danas</string>
+    <string name="weather_units">Jedinice</string>
+    <string name="weather_units_temperature">Temperatura</string>
+    <string name="weather_units_wind">Brzina vjetra</string>
+    <string name="weather_unit_celsius">Celzijus (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metara u sekundi (m/s)</string>
+    <string name="weather_unit_kmh">Kilometara na sat (km/h)</string>
+    <string name="weather_moon_caption">%1$s · osvijetljeno %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Učitavanje vremena…</string>
+    <string name="weather_location_needed">Dopustite pristup približnoj lokaciji da biste vidjeli vrijeme tamo gdje se nalazite ili potražite grad.</string>
+    <string name="weather_allow">Dopusti</string>
+    <string name="weather_open_settings">Otvori postavke aplikacije</string>
+    <string name="weather_attribution">Vrijeme: Open-Meteo.com · Mjesta: © suradnici OpenStreetMapa</string>
+    <string name="weather_choose_city">Odaberite grad</string>
+    <string name="steps_today">Danas</string>
+    <string name="steps_unit">koraka</string>
+    <string name="steps_walk_run">Hodanje %1$s · Trčanje %2$s</string>
+    <string name="steps_period">Razdoblje</string>
+    <string name="steps_last_7">7 dana</string>
+    <string name="steps_last_30">30 dana</string>
+    <string name="steps_this_month">Ovaj mjesec</string>
+    <string name="steps_pick_dates">Odaberi datume</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Ukupno koraka</string>
+    <string name="steps_distance">Udaljenost</string>
+    <string name="steps_average">Prosjek po danu</string>
+    <string name="steps_best_day">Najbolji dan</string>
+    <string name="steps_walking">Koraci pri hodanju</string>
+    <string name="steps_running">Koraci pri trčanju</string>
+    <string name="steps_active_days">Dani s koracima</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d od %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">U ovom razdoblju nisu zabilježeni koraci</string>
+    <string name="steps_settings">Postavke koraka</string>
+    <string name="steps_settings_title">Duljina koraka</string>
+    <string name="steps_walk_length">Duljina koraka pri hodanju, cm</string>
+    <string name="steps_run_length">Duljina koraka pri trčanju, cm</string>
+    <string name="steps_run_cadence">Trčanje počinje od, koraka u minuti</string>
+    <string name="steps_run_cadence_hint">Koraci u ovom tempu ili brže računaju se kao trčanje.</string>
+    <string name="steps_defaults">Zadano</string>
+    <string name="steps_save">Spremi</string>
+    <string name="steps_invalid_length">Unesite %1$d–%2$d</string>
+    <string name="steps_measure_title">Kako izmjeriti duljinu koraka</string>
+    <string name="steps_measure_text">1. Prije prvog koraka označite startnu liniju uz vrh cipele.\n2. Napravite 10 mirnih koraka uobičajenim tempom.\n3. Izmjerite u centimetrima udaljenost od startne linije do istog vrha cipele nakon 10. koraka.\n4. Podijelite s deset.\n5. Ponovite nekoliko puta i unesite prosjek.\n\nIsto učinite uobičajenim tempom trčanja kako biste dobili duljinu koraka pri trčanju.</string>
+    <string name="steps_no_sensor">Ovaj telefon nema senzor koraka.</string>
+    <string name="steps_permission_needed">Dopustite pristup tjelesnoj aktivnosti kako bi telefon mogao brojiti vaše korake.</string>
+    <string name="steps_allow">Dopusti</string>
+    <string name="steps_open_settings">Otvori postavke aplikacije</string>
+    <string name="currency_amount_hint">Iznos</string>
+    <string name="currency_swap">Zamijeni ⇅</string>
+    <string name="currency_refresh">Osvježi tečajeve</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Tečajevi ažurirani %1$s</string>
+    <string name="currency_outdated">Nema interneta. Prikazani su spremljeni tečajevi, ažurirani %1$s</string>
+    <string name="currency_loading">Učitavanje tečajeva…</string>
+    <string name="currency_unavailable">Tečajevi nisu dostupni. Provjerite internetsku vezu i osvježite.</string>
+    <string name="currency_invalid_amount">Unesite iznos</string>
+    <string name="currency_attribution">Tečajevi s Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Zn</string>
+    <string name="calculator_basic">Osn</string>
+    <string name="calculator_degrees">Stup</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Povijest</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Snimaj</string>
+    <string name="flights_stop">Zaustavi</string>
+    <string name="flights_units">Jedinice</string>
+    <string name="flights_journal">Dnevnik</string>
+    <string name="flights_journal_title">Dnevnik letova</string>
+    <string name="flights_journal_empty">Još nema zabilježenih letova.</string>
+    <string name="flights_journal_in_progress">Ovaj se let još snima.</string>
+    <string name="flights_report_open">Otvori izvješće</string>
+    <string name="flights_report_share">Pošalji izvješće</string>
+    <string name="flights_report_delete">Obriši let</string>
+    <string name="flights_report_failed">Izvješće se nije moglo pripremiti.</string>
+    <string name="flights_report_no_viewer">Nije pronađena aplikacija za otvaranje PDF datoteka.</string>
+    <string name="flights_delete_title">Obrisati ovaj let?</string>
+    <string name="flights_delete_message">Ruta i izvješće bit će trajno uklonjeni. Prije toga izvješće možete poslati negdje, primjerice na USB stick, računalo ili Google Drive.</string>
+    <string name="flights_delete_save_first">Spremi izvješće, pa obriši</string>
+    <string name="flights_delete_without_saving">Obriši bez spremanja</string>
+    <string name="flights_delete_after_share_message">Ako je izvješće stiglo gdje ste željeli, sada možete obrisati let.</string>
+    <string name="flights_delete_after_share_confirm">Obriši let</string>
+    <string name="flights_delete_keep">Zadrži let</string>
+    <string name="flights_units_report_limit">Ograničenje izvješća</string>
+    <string name="flights_units_report_limit_hint">Najveći broj PDF izvješća u dnevniku, 0 za bez ograničenja</string>
+    <string name="flights_limit_full_title">Dosegnuto je ograničenje PDF izvješća</string>
+    <string name="flights_limit_full_message">Dnevnik sadrži %1$d izvješća, što je ograničenje. Da biste snimili novi let, obrišite barem jedan let iz dnevnika. Prije toga možete spremiti njegovo izvješće na USB stick, računalo ili Google Drive.</string>
+    <string name="flights_limit_warning_title">Približavate se ograničenju PDF izvješća!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Možete snimiti još %d let. Obrišite zastarjele letove iz dnevnika.</item>
+        <item quantity="few">Možete snimiti još %d leta. Obrišite zastarjele letove iz dnevnika.</item>
+        <item quantity="other">Možete snimiti još %d letova. Obrišite zastarjele letove iz dnevnika.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Otvori dnevnik</string>
+    <string name="flights_journal_line">%1$s · maks. %2$s · visina maks. %3$s</string>
+    <string name="flights_units_speed">Brzina i udaljenost</string>
+    <string name="flights_units_altitude">Visina</string>
+    <string name="flights_unit_kmh">Kilometara na sat (km/h)</string>
+    <string name="flights_unit_knots">Čvorovi (kt, nautičke milje)</string>
+    <string name="flights_unit_ms">Metara u sekundi (m/s)</string>
+    <string name="flights_unit_metres">Metri (m)</string>
+    <string name="flights_unit_feet">Stope (ft)</string>
+    <string name="flights_units_climb">Brzina penjanja</string>
+    <string name="flights_unit_fpm">Stopa u minuti (ft/min)</string>
+    <string name="flights_altitude_zero">Nula</string>
+    <string name="flights_altitude_sea">Iznad mora</string>
+    <string name="flights_altitude_start">Iznad starta · držite „Nula” za poništavanje</string>
+    <string name="flights_sound_on">Zvuk: uklj.</string>
+    <string name="flights_sound_off">Zvuk: isklj.</string>
+    <string name="flights_sound_tune">Podesi zvuk</string>
+    <string name="flights_sound_climb_start">Pištanje počinje pri penjanju od %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Nisko pištanje počinje pri spuštanju od %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Neprekidni alarm pri spuštanju od %1$.1f m/s</string>
+    <string name="flights_speed_label">Brzina</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Vrijeme leta</string>
+    <string name="flights_distance">Udaljenost</string>
+    <string name="flights_max_speed">Najveća brzina</string>
+    <string name="flights_avg_speed">Prosječna brzina</string>
+    <string name="flights_max_altitude">Najveća visina</string>
+    <string name="flights_climb_rate">Brzina penjanja</string>
+    <string name="flights_max_g">Vršno opterećenje</string>
+    <string name="flights_status_waiting">Čekanje GPS signala…</string>
+    <string name="flights_location_needed">Dopustite pristup točnoj lokaciji kako bi se bilježile brzina, visina i ruta.</string>
+    <string name="flights_allow">Dopusti</string>
+    <string name="flights_open_settings">Otvori postavke aplikacije</string>
+    <string name="flights_gps_off">Uključite usluge lokacije (GPS) kako biste snimili let.</string>
+    <string name="flights_disclaimer">Samo za zabavu i radoznalost. Ne oslanjajte se na ove instrumente za navigaciju ni za išta što utječe na sigurnost.</string>
+</resources>

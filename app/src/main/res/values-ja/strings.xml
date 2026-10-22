@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">キャンセル</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_alarms_title">リマインダーとアラーム</string>
+    <string name="settings_alarms_subtitle">間隔、サウンド、通知の状態</string>
+    <string name="settings_display_title">表示モード</string>
+    <string name="settings_display_subtitle">昼 / 夜 / 自動</string>
+    <string name="display_mode_title">表示モード</string>
+    <string name="display_mode_light">ライト（昼）</string>
+    <string name="display_mode_dark">ダーク（夜）</string>
+    <string name="display_mode_system">システム（自動）</string>
+    <string name="settings_design_title">アプリの外観</string>
+    <string name="settings_design_subtitle">インターフェースの外観バリエーション</string>
+    <string name="design_classic_name">クラシック</string>
+    <string name="design_classic_about">元の外観：クリームとパープル</string>
+    <string name="design_paper_ink_name">紙とインク</string>
+    <string name="design_paper_ink_about">細い線と落ち着いたオフィスカラー</string>
+    <string name="design_pastel_cloud_name">パステルクラウド</string>
+    <string name="design_pastel_cloud_about">やわらかく丸みのある淡い雲の外観</string>
+    <string name="design_neon_arcade_name">ネオンアーケード</string>
+    <string name="design_neon_arcade_about">まばゆいネオン、強いコントラスト、レトロな太陽</string>
+    <string name="design_toon_name">カートゥーン</string>
+    <string name="design_toon_about">コミック調の輪郭と手書き風の文字</string>
+    <string name="design_biker_name">バイカー</string>
+    <string name="design_biker_about">無骨な金属、ゴム、マフラーのオレンジ</string>
+    <string name="design_cockpit_name">コックピット</string>
+    <string name="design_cockpit_about">グライダー付きの硬派な計器盤</string>
+    <string name="design_beach_name">ビーチ</string>
+    <string name="design_beach_about">砂浜、ラグーン、サンゴ、ヤシの木</string>
+    <string name="design_forest_name">魔法の森</string>
+    <string name="design_forest_about">羊皮紙、金、森の苔</string>
+    <string name="design_mono_block_name">モノブロック</string>
+    <string name="design_mono_block_about">黄色の蛍光ペン1本だけを添えたシャープな白黒</string>
+    <string name="settings_permissions_title">システムの権限</string>
+    <string name="settings_permissions_subtitle">Android でのアクセスを管理</string>
+    <string-array name="filter_options">
+        <item>すべてのタスク</item>
+        <item>進行中</item>
+        <item>完了</item>
+        <item>警告</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>状態</item>
+        <item>作成日</item>
+        <item>更新日</item>
+        <item>完了日</item>
+        <item>重要度</item>
+        <item>期限</item>
+    </string-array>
+    <string name="scan_camera">カメラ</string>
+    <string name="scan_gallery">ギャラリー</string>
+    <string name="scan_clear_all">すべて消去</string>
+    <string name="scan_cleared">すべてのスキャンを削除しました</string>
+    <string name="scan_empty">ドキュメントはまだありません。ページを撮影するか、ギャラリーから写真を選んでください。</string>
+    <string name="scan_auto">自動</string>
+    <string name="scan_reset">リセット</string>
+    <string name="scan_next">次へ</string>
+    <string name="scan_back">戻る</string>
+    <string name="scan_save">保存</string>
+    <string name="scan_rotate">回転</string>
+    <string name="scan_paper">用紙</string>
+    <string name="scan_filter_color">カラー</string>
+    <string name="scan_filter_gray">グレー</string>
+    <string name="scan_filter_bw">白黒</string>
+    <string name="scan_tune">明るさとコントラスト</string>
+    <string name="scan_shadows">影の除去</string>
+    <string name="scan_brightness">明るさ</string>
+    <string name="scan_contrast">コントラスト</string>
+    <string name="scan_sharpen">シャープ</string>
+    <string name="scan_page_saved">ページを保存しました</string>
+    <string name="scan_next_page_question">ドキュメントにもう1ページ追加しますか？</string>
+    <string name="scan_page_label">%d ページ</string>
+    <string name="scan_done">完了</string>
+    <string name="scan_add_page">ページを追加</string>
+    <string name="scan_share_pdf">PDFを共有</string>
+    <string name="scan_pages_empty">このドキュメントにはページがありません。</string>
+    <string name="scan_saved_to_device">ファイルを保存しました</string>
+    <string name="scan_share_title">ドキュメントを共有</string>
+    <string name="scan_rename_title">ドキュメント名の変更</string>
+    <string name="scan_rename_confirm">名前を変更</string>
+    <string name="scan_error_load">この写真を開けません</string>
+    <string name="scan_error_preview">プレビューに必要なメモリが足りません</string>
+    <string name="scan_error_save">スキャンを保存できませんでした</string>
+    <string name="scan_error_export">ファイルを準備できませんでした</string>
+    <string name="scan_error_no_camera">カメラアプリが見つかりません</string>
+    <string name="scan_error_no_viewer">画像を開けるアプリが見つかりません</string>
+    <string name="scan_error_no_app">共有できるアプリが見つかりません</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d ページ</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>ページ</item>
+        <item>PDFとして共有</item>
+        <item>JPEGとして共有</item>
+        <item>PDFの保存先…</item>
+        <item>名前を変更</item>
+        <item>削除</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>表示</item>
+        <item>JPEGの保存先…</item>
+        <item>上へ移動</item>
+        <item>下へ移動</item>
+        <item>ページを削除</item>
+    </string-array>
+    <string name="weather_city_hint">任意の言語で都市名を入力</string>
+    <string name="weather_search">検索</string>
+    <string name="weather_my_location">現在地</string>
+    <string name="weather_country_format">（%1$s）</string>
+    <string name="weather_feels_like">体感温度</string>
+    <string name="weather_humidity">湿度</string>
+    <string name="weather_wind">風</string>
+    <string name="weather_today_range">今日</string>
+    <string name="weather_units">単位</string>
+    <string name="weather_units_temperature">気温</string>
+    <string name="weather_units_wind">風速</string>
+    <string name="weather_unit_celsius">摂氏 (°C)</string>
+    <string name="weather_unit_fahrenheit">華氏 (°F)</string>
+    <string name="weather_unit_ms">メートル毎秒 (m/s)</string>
+    <string name="weather_unit_kmh">キロメートル毎時 (km/h)</string>
+    <string name="weather_moon_caption">%1$s · 照明率 %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">天気を読み込み中…</string>
+    <string name="weather_location_needed">現在地の天気を表示するには、おおよその位置情報へのアクセスを許可するか、都市を検索してください。</string>
+    <string name="weather_allow">許可</string>
+    <string name="weather_open_settings">アプリの設定を開く</string>
+    <string name="weather_attribution">天気：Open-Meteo.com · 場所：© OpenStreetMap contributors</string>
+    <string name="weather_choose_city">都市を選択</string>
+    <string name="steps_today">今日</string>
+    <string name="steps_unit">歩</string>
+    <string name="steps_walk_run">歩行 %1$s · ランニング %2$s</string>
+    <string name="steps_period">期間</string>
+    <string name="steps_last_7">7日間</string>
+    <string name="steps_last_30">30日間</string>
+    <string name="steps_this_month">今月</string>
+    <string name="steps_pick_dates">日付を選択</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">総歩数</string>
+    <string name="steps_distance">距離</string>
+    <string name="steps_average">1日の平均</string>
+    <string name="steps_best_day">ベストの日</string>
+    <string name="steps_walking">歩行の歩数</string>
+    <string name="steps_running">ランニングの歩数</string>
+    <string name="steps_active_days">歩数のある日</string>
+    <string name="steps_average_value">%1$s（%2$s）</string>
+    <string name="steps_best_day_value">%1$s（%2$s）</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">この期間に記録された歩数はありません</string>
+    <string name="steps_settings">歩数の設定</string>
+    <string name="steps_settings_title">歩幅</string>
+    <string name="steps_walk_length">歩行時の歩幅、cm</string>
+    <string name="steps_run_length">ランニング時の歩幅、cm</string>
+    <string name="steps_run_cadence">ランニングとみなす歩数、歩/分</string>
+    <string name="steps_run_cadence_hint">このペース以上の歩数はランニングとして数えられます。</string>
+    <string name="steps_defaults">初期値</string>
+    <string name="steps_save">保存</string>
+    <string name="steps_invalid_length">%1$d～%2$dで入力してください</string>
+    <string name="steps_measure_title">歩幅の測り方</string>
+    <string name="steps_measure_text">1. 最初の一歩の前に、つま先の位置にスタートラインを引きます。\n2. いつもの速さで落ち着いて10歩歩きます。\n3. 10歩目の後、スタートラインから同じつま先の位置までの距離をセンチメートルで測ります。\n4. それを10で割ります。\n5. 数回繰り返して、平均値を入力します。\n\nランニング時の歩幅は、いつものランニングのペースで同じように測ってください。</string>
+    <string name="steps_no_sensor">この端末には歩数センサーがありません。</string>
+    <string name="steps_permission_needed">端末が歩数を数えられるように、身体活動へのアクセスを許可してください。</string>
+    <string name="steps_allow">許可</string>
+    <string name="steps_open_settings">アプリの設定を開く</string>
+    <string name="currency_amount_hint">金額</string>
+    <string name="currency_swap">入れ替え ⇅</string>
+    <string name="currency_refresh">レートを更新</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">レートの更新日時：%1$s</string>
+    <string name="currency_outdated">オフラインです。保存済みのレートを表示中（更新日時：%1$s）</string>
+    <string name="currency_loading">レートを読み込み中…</string>
+    <string name="currency_unavailable">レートを取得できません。インターネット接続を確認して更新してください。</string>
+    <string name="currency_invalid_amount">金額を入力してください</string>
+    <string name="currency_attribution">レート提供：Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">関数</string>
+    <string name="calculator_basic">標準</string>
+    <string name="calculator_degrees">度</string>
+    <string name="calculator_radians">ラジアン</string>
+    <string name="calculator_history">履歴</string>
+    <string name="calculator_memory_format">M：%1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">記録開始</string>
+    <string name="flights_stop">記録停止</string>
+    <string name="flights_units">単位</string>
+    <string name="flights_journal">ログ</string>
+    <string name="flights_journal_title">フライトログ</string>
+    <string name="flights_journal_empty">記録されたフライトはまだありません。</string>
+    <string name="flights_journal_in_progress">このフライトはまだ記録中です。</string>
+    <string name="flights_report_open">レポートを開く</string>
+    <string name="flights_report_share">レポートを共有</string>
+    <string name="flights_report_delete">フライトを削除</string>
+    <string name="flights_report_failed">レポートを準備できませんでした。</string>
+    <string name="flights_report_no_viewer">PDFファイルを開けるアプリが見つかりません。</string>
+    <string name="flights_delete_title">このフライトを削除しますか？</string>
+    <string name="flights_delete_message">ルートとレポートは完全に削除されます。その前に、USBメモリ、パソコン、Googleドライブなどにレポートを送ることができます。</string>
+    <string name="flights_delete_save_first">レポートを保存してから削除</string>
+    <string name="flights_delete_without_saving">保存せずに削除</string>
+    <string name="flights_delete_after_share_message">レポートが目的の場所に届いていれば、フライトを削除できます。</string>
+    <string name="flights_delete_after_share_confirm">フライトを削除</string>
+    <string name="flights_delete_keep">フライトを残す</string>
+    <string name="flights_units_report_limit">レポート上限</string>
+    <string name="flights_units_report_limit_hint">ログ内のPDFレポートの最大数。0で無制限</string>
+    <string name="flights_limit_full_title">PDFレポートの上限に達しました</string>
+    <string name="flights_limit_full_message">ログには上限の%1$d件のレポートがあります。新しいフライトを記録するには、ログから少なくとも1件のフライトを削除してください。その前に、そのレポートをUSBメモリ、パソコン、Googleドライブに保存できます。</string>
+    <string name="flights_limit_warning_title">PDFレポートの上限が近づいています！</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">あと%d回のフライトを記録できます。古いフライトをログから削除してください。</item>
+    </plurals>
+    <string name="flights_limit_open_journal">ログを開く</string>
+    <string name="flights_journal_line">%1$s · 最高 %2$s · 最大高度 %3$s</string>
+    <string name="flights_units_speed">速度と距離</string>
+    <string name="flights_units_altitude">高度</string>
+    <string name="flights_unit_kmh">キロメートル毎時 (km/h)</string>
+    <string name="flights_unit_knots">ノット (kt、海里)</string>
+    <string name="flights_unit_ms">メートル毎秒 (m/s)</string>
+    <string name="flights_unit_metres">メートル (m)</string>
+    <string name="flights_unit_feet">フィート (ft)</string>
+    <string name="flights_units_climb">上昇率</string>
+    <string name="flights_unit_fpm">フィート毎分 (ft/min)</string>
+    <string name="flights_altitude_zero">ゼロ</string>
+    <string name="flights_altitude_sea">海抜</string>
+    <string name="flights_altitude_start">出発地点基準 · 「ゼロ」長押しで取り消し</string>
+    <string name="flights_sound_on">音：オン</string>
+    <string name="flights_sound_off">音：オフ</string>
+    <string name="flights_sound_tune">音の調整</string>
+    <string name="flights_sound_climb_start">上昇 %1$.1f m/s でビープ音を開始</string>
+    <string name="flights_sound_sink_start">降下 %1$.1f m/s で低いビープ音を開始</string>
+    <string name="flights_sound_sink_alarm">降下 %1$.1f m/s で連続アラーム</string>
+    <string name="flights_speed_label">速度</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">飛行時間</string>
+    <string name="flights_distance">距離</string>
+    <string name="flights_max_speed">最高速度</string>
+    <string name="flights_avg_speed">平均速度</string>
+    <string name="flights_max_altitude">最大高度</string>
+    <string name="flights_climb_rate">上昇率</string>
+    <string name="flights_max_g">最大荷重</string>
+    <string name="flights_status_waiting">GPS信号を待っています…</string>
+    <string name="flights_location_needed">速度、高度、ルートを記録するには、正確な位置情報へのアクセスを許可してください。</string>
+    <string name="flights_allow">許可</string>
+    <string name="flights_open_settings">アプリの設定を開く</string>
+    <string name="flights_gps_off">フライトを記録するには、位置情報サービス (GPS) をオンにしてください。</string>
+    <string name="flights_disclaimer">娯楽と好奇心のためだけのものです。ナビゲーションや安全に関わることには、これらの計器に頼らないでください。</string>
+</resources>

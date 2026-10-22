@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">آسمان صاف</string>
+    <string name="weather_description_mainly_clear">عمدتاً صاف</string>
+    <string name="weather_description_partly_cloudy">نیمه‌ابری</string>
+    <string name="weather_description_overcast">ابری</string>
+    <string name="weather_description_fog">مه</string>
+    <string name="weather_description_rime_fog">مه یخ‌زده</string>
+    <string name="weather_description_light_drizzle">نم‌نم باران ضعیف</string>
+    <string name="weather_description_drizzle">نم‌نم باران</string>
+    <string name="weather_description_dense_drizzle">نم‌نم باران شدید</string>
+    <string name="weather_description_light_freezing_drizzle">نم‌نم باران یخ‌زدهٔ ضعیف</string>
+    <string name="weather_description_freezing_drizzle">نم‌نم باران یخ‌زده</string>
+    <string name="weather_description_slight_rain">باران ضعیف</string>
+    <string name="weather_description_rain">باران</string>
+    <string name="weather_description_heavy_rain">باران شدید</string>
+    <string name="weather_description_light_freezing_rain">باران یخ‌زدهٔ ضعیف</string>
+    <string name="weather_description_freezing_rain">باران یخ‌زده</string>
+    <string name="weather_description_slight_snow">برف ضعیف</string>
+    <string name="weather_description_snow">برف</string>
+    <string name="weather_description_heavy_snow">برف شدید</string>
+    <string name="weather_description_snow_grains">دانه‌های برف</string>
+    <string name="weather_description_light_rain_showers">رگبار ضعیف</string>
+    <string name="weather_description_rain_showers">رگبار</string>
+    <string name="weather_description_violent_rain_showers">رگبار شدید</string>
+    <string name="weather_description_light_snow_showers">بارش برف ضعیف</string>
+    <string name="weather_description_heavy_snow_showers">بارش برف شدید</string>
+    <string name="weather_description_thunderstorm">رعد و برق</string>
+    <string name="weather_description_thunderstorm_with_hail">رعد و برق با تگرگ</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">رعد و برق با تگرگ شدید</string>
+    <string name="weather_description_unknown">نامشخص</string>
+    <string name="weather_moon_phase_new_moon">ماه نو</string>
+    <string name="weather_moon_phase_waxing_crescent">هلال رو‌به‌رشد</string>
+    <string name="weather_moon_phase_first_quarter">تربیع اول</string>
+    <string name="weather_moon_phase_waxing_gibbous">بدر رو‌به‌رشد</string>
+    <string name="weather_moon_phase_full_moon">ماه کامل</string>
+    <string name="weather_moon_phase_waning_gibbous">بدر رو‌به‌کاهش</string>
+    <string name="weather_moon_phase_last_quarter">تربیع آخر</string>
+    <string name="weather_moon_phase_waning_crescent">هلال رو‌به‌کاهش</string>
+    <string name="weather_error_no_location">مکان تعیین نشد. سرویس‌های مکان را روشن کنید یا شهری را جست‌وجو کنید.</string>
+    <string name="weather_error_city_not_found">شهری برای «%1$s» پیدا نشد</string>
+    <string name="weather_error_no_network">وضعیت هوا بارگذاری نشد. اتصال اینترنت را بررسی کنید.</string>
+    <string name="weather_error_choose_city">شهری را از فهرست انتخاب کنید</string>
+    <string name="weather_current_location">مکان فعلی</string>
+</resources>

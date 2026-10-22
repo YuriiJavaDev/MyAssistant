@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Lennon tallennus</string>
+    <string name="flights_notification_channel_description">Näytetään lentoa tallennettaessa</string>
+    <string name="flights_notification_title">Lentoa tallennetaan</string>
+    <string name="flights_notification_text">Avaa mittarit napauttamalla</string>
+    <string-array name="flights_cardinal_points">
+        <item>P</item>
+        <item>KO</item>
+        <item>I</item>
+        <item>KA</item>
+        <item>E</item>
+        <item>LO</item>
+        <item>L</item>
+        <item>LU</item>
+    </string-array>
+    <string name="flights_report_title">Lentoraportti</string>
+    <string name="flights_report_north">P</string>
+    <string name="flights_report_side_north">P</string>
+    <string name="flights_report_side_south">E</string>
+    <string name="flights_report_side_east">I</string>
+    <string name="flights_report_side_west">L</string>
+    <string name="flights_report_duration">Kesto</string>
+    <string name="flights_report_distance">Matka</string>
+    <string name="flights_report_top_speed">Huippunopeus</string>
+    <string name="flights_report_average_speed">Keskinopeus</string>
+    <string name="flights_report_highest_altitude">Suurin korkeus</string>
+    <string name="flights_report_best_climb">Paras nousu</string>
+    <string name="flights_report_worst_sink">Huonoin lasku</string>
+    <string name="flights_report_peak_load">Huippukuormitus</string>
+    <string name="flights_report_start_point">Lähtöpiste</string>
+    <string name="flights_report_end_point">Päätepiste</string>
+    <string name="flights_report_altitude_above_start">%1$s lähdön yläpuolella</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s merenpinnan yläpuolella</string>
+    <string name="flights_report_chart_altitude_above_start">Korkeus (%1$s, lähdön yläpuolella)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Korkeus (%1$s, merenpinnan yläpuolella)</string>
+    <string name="flights_report_chart_speed">Maanopeus (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Kartta: Natural Earth (public domain).</string>
+    <string name="flights_report_footer">%1$s Tallennettu MyAssistantilla. Vain huvin vuoksi: ei navigointiin tai turvallisuuteen.</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">需要做什么？</string>
+    <string name="tasks_list_add">添加</string>
+    <string name="tasks_list_delete_completed">删除已完成</string>
+    <string name="tasks_list_clear_all">全部清除</string>
+    <string name="tasks_list_reminder_set">已设置提醒</string>
+    <string name="tasks_statistics">总计：%1$d  已完成：%2$d  剩余：%3$d  进度：%4$d %%</string>
+    <string name="tasks_dialog_title_add">新任务</string>
+    <string name="tasks_dialog_title_edit">编辑任务</string>
+    <string name="tasks_dialog_importance">重要程度：</string>
+    <string name="tasks_dialog_deadline_label">截止日期：</string>
+    <string name="tasks_dialog_deadline_select">选择截止日期</string>
+    <string name="tasks_dialog_reminder_label">提醒（日期和时间）：</string>
+    <string name="tasks_dialog_reminder_select">选择提醒的日期和时间</string>
+    <string name="tasks_dialog_show_timestamps">显示创建/修改日期</string>
+    <string name="tasks_dialog_delete">删除</string>
+    <string name="tasks_dialog_save">保存</string>
+    <string name="tasks_dialog_clear">清除</string>
+    <string name="tasks_importance_normal">普通</string>
+    <string name="tasks_importance_important">重要</string>
+    <string name="tasks_importance_urgent">紧急</string>
+    <string name="tasks_toast_created">任务已创建</string>
+    <string name="tasks_toast_updated">任务已更新</string>
+    <string name="tasks_toast_deleted">任务已删除</string>
+    <string name="tasks_toast_completed_deleted">已完成的任务已删除</string>
+    <string name="tasks_toast_all_cleared">所有任务已清除</string>
+    <string name="tasks_toast_empty_title">任务描述不能为空</string>
+    <string name="tasks_toast_reminder_after_deadline">提醒不能晚于截止日期！</string>
+    <string name="tasks_toast_reminder_in_past">提醒不能设在过去！</string>
+    <string name="tasks_toast_reminder_cleared">由于截止日期更早，提醒已被清除！</string>
+    <string name="tasks_toast_select_deadline_first">请先选择截止日期！</string>
+    <string name="tasks_time_created">创建于：%1$s</string>
+    <string name="tasks_time_edited">修改于：%1$s</string>
+    <string name="tasks_time_completed">完成于：%1$s</string>
+    <string name="tasks_deadline_prefixed">截止日期：%1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="other">%1$s — 还剩 %2$d 天！</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="other">%1$s — 已逾期 %2$d 天！</item>
+    </plurals>
+    <string name="tasks_delete_title">确认删除</string>
+    <string name="tasks_delete_button">删除</string>
+    <string name="tasks_delete_nothing">没有可删除的对象！</string>
+    <string name="tasks_delete_item_message">确定要删除此项吗？此操作无法撤销！</string>
+    <string name="tasks_delete_cannot_be_undone">此操作无法撤销！</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="other">删除 %1$d 个已完成的任务？</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="other">其中 %1$d 个仍保留着提醒。</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="other">删除全部 %1$d 个任务？</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="other">其中 %1$d 个有生效的提醒。</item>
+    </plurals>
+    <string name="tasks_alert_title">截止日期警报！</string>
+    <string name="tasks_alert_view_tasks">查看任务</string>
+    <string name="tasks_alert_channel_name">任务截止日期警报</string>
+    <string name="tasks_alert_channel_description">任务截止日期的紧急警报</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="other">已过期的任务截止日期数量：%1$d。</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="other">注意！需要立即处理的任务截止日期数量：%1$d。</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">注意！任务截止日期临近：%1$s</string>
+</resources>

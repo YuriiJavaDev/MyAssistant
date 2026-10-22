@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Backup wird in die Cloud hochgeladen...</string>
+    <string name="backup_cloud_restoring">Backup wird aus der Cloud wiederhergestellt...</string>
+    <string name="backup_cloud_upload_success">Backup erfolgreich in die Cloud hochgeladen</string>
+    <string name="backup_cloud_restore_success">Backup erfolgreich aus der Cloud wiederhergestellt</string>
+    <string name="backup_cloud_restore_partly">Aufgaben aus der Cloud wiederhergestellt (dort wurde kein Backup gefunden für: %1$s)</string>
+    <string name="backup_part_steps">Schritte</string>
+    <string name="backup_part_flights">Flüge</string>
+    <string name="backup_part_scans">Scans</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Upload-Fehler: %1$s</string>
+    <string name="backup_error_download">Download-Fehler: %1$s</string>
+    <string name="backup_error_unknown">Unbekannter Fehler</string>
+    <string name="backup_error_insecure_url">Die URL muss mit https:// beginnen</string>
+    <string name="backup_error_authentication">Authentifizierung fehlgeschlagen: Prüfe Benutzername und Passwort</string>
+    <string name="backup_error_server_code">Der Server antwortete mit dem Code: %1$d</string>
+    <string name="backup_error_connection">Verbindungsfehler: %1$s</string>
+    <string name="backup_destination_title">Backup speichern unter</string>
+    <string name="backup_destination_folder">Ordner wählen (Gerät, SD-Karte, USB, Drive...)</string>
+    <string name="backup_destination_share">Mit einer App teilen</string>
+    <string name="backup_preparing">Backup wird vorbereitet...</string>
+    <string name="backup_export_failed">Export fehlgeschlagen</string>
+    <string name="backup_export_saved">Backup gespeichert</string>
+    <string name="backup_import_success">Backup erfolgreich importiert. Neustart...</string>
+    <string name="backup_import_failed">Import fehlgeschlagen</string>
+    <string name="backup_import_title">Achtung!</string>
+    <string name="backup_import_message">Beim Wiederherstellen eines Backups werden die aktuellen Aufgaben, Schritte und Scans, die es enthält, ersetzt. Möchtest du wirklich fortfahren?</string>
+    <string name="backup_import_confirm">Import bestätigen</string>
+    <string name="backup_share_chooser_title">Backup exportieren</string>
+    <string name="backup_cloud_settings_saved">Cloud-Einstellungen erfolgreich gespeichert</string>
+    <string name="backup_cloud_secure_storage_unavailable">Sicherer Speicher ist nicht verfügbar, die Einstellungen wurden nicht gespeichert</string>
+    <string name="backup_cloud_url_empty">Die URL darf nicht leer sein</string>
+    <string name="backup_cloud_testing">Verbindung wird getestet...</string>
+    <string name="backup_cloud_connection_successful">Verbindung erfolgreich!</string>
+</resources>

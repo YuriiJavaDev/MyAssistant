@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Nahrávanie zálohy do cloudu...</string>
+    <string name="backup_cloud_restoring">Obnovovanie zálohy z cloudu...</string>
+    <string name="backup_cloud_upload_success">Záloha bola úspešne nahraná do cloudu</string>
+    <string name="backup_cloud_restore_success">Záloha bola úspešne obnovená z cloudu</string>
+    <string name="backup_cloud_restore_partly">Úlohy obnovené z cloudu (nenašla sa tam záloha pre: %1$s)</string>
+    <string name="backup_part_steps">kroky</string>
+    <string name="backup_part_flights">lety</string>
+    <string name="backup_part_scans">skeny</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Chyba nahrávania: %1$s</string>
+    <string name="backup_error_download">Chyba sťahovania: %1$s</string>
+    <string name="backup_error_unknown">Neznáma chyba</string>
+    <string name="backup_error_insecure_url">Adresa URL musí začínať https://</string>
+    <string name="backup_error_authentication">Overenie zlyhalo: skontrolujte používateľské meno a heslo</string>
+    <string name="backup_error_server_code">Server odpovedal kódom: %1$d</string>
+    <string name="backup_error_connection">Chyba pripojenia: %1$s</string>
+    <string name="backup_destination_title">Uložiť zálohu do</string>
+    <string name="backup_destination_folder">Vybrať priečinok (zariadenie, karta SD, USB, Disk...)</string>
+    <string name="backup_destination_share">Zdieľať s aplikáciou</string>
+    <string name="backup_preparing">Príprava zálohy...</string>
+    <string name="backup_export_failed">Export zlyhal</string>
+    <string name="backup_export_saved">Záloha uložená</string>
+    <string name="backup_import_success">Záloha bola úspešne importovaná. Reštartovanie...</string>
+    <string name="backup_import_failed">Import zlyhal</string>
+    <string name="backup_import_title">Pozor!</string>
+    <string name="backup_import_message">Obnovenie zálohy nahradí aktuálne úlohy, kroky a skeny, ktoré obsahuje. Naozaj chcete pokračovať?</string>
+    <string name="backup_import_confirm">Potvrdiť import</string>
+    <string name="backup_share_chooser_title">Exportovať zálohu</string>
+    <string name="backup_cloud_settings_saved">Nastavenia cloudu boli úspešne uložené</string>
+    <string name="backup_cloud_secure_storage_unavailable">Zabezpečené úložisko nie je dostupné, nastavenia neboli uložené</string>
+    <string name="backup_cloud_url_empty">Adresa URL nesmie byť prázdna</string>
+    <string name="backup_cloud_testing">Testovanie pripojenia...</string>
+    <string name="backup_cloud_connection_successful">Pripojenie bolo úspešné!</string>
+</resources>

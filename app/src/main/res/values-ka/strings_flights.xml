@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">ფრენის ჩაწერა</string>
+    <string name="flights_notification_channel_description">ჩანს ფრენის ჩაწერისას</string>
+    <string name="flights_notification_title">ფრენა იწერება</string>
+    <string name="flights_notification_text">შეეხეთ ხელსაწყოების გასახსნელად</string>
+    <string-array name="flights_cardinal_points">
+        <item>ჩ</item>
+        <item>ჩა</item>
+        <item>ა</item>
+        <item>სა</item>
+        <item>ს</item>
+        <item>სდ</item>
+        <item>დ</item>
+        <item>ჩდ</item>
+    </string-array>
+    <string name="flights_report_title">ფრენის ანგარიში</string>
+    <string name="flights_report_north">ჩ</string>
+    <string name="flights_report_side_north">ჩ</string>
+    <string name="flights_report_side_south">ს</string>
+    <string name="flights_report_side_east">ა</string>
+    <string name="flights_report_side_west">დ</string>
+    <string name="flights_report_duration">ხანგრძლივობა</string>
+    <string name="flights_report_distance">მანძილი</string>
+    <string name="flights_report_top_speed">მაქსიმალური სიჩქარე</string>
+    <string name="flights_report_average_speed">საშუალო სიჩქარე</string>
+    <string name="flights_report_highest_altitude">უმაღლესი სიმაღლე</string>
+    <string name="flights_report_best_climb">საუკეთესო ასვლა</string>
+    <string name="flights_report_worst_sink">უარესი დაშვება</string>
+    <string name="flights_report_peak_load">პიკური გადატვირთვა</string>
+    <string name="flights_report_start_point">დაწყების წერტილი</string>
+    <string name="flights_report_end_point">დასრულების წერტილი</string>
+    <string name="flights_report_altitude_above_start">%1$s სტარტზე მაღლა</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s ზღვის დონიდან</string>
+    <string name="flights_report_chart_altitude_above_start">სიმაღლე (%1$s, სტარტიდან)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">სიმაღლე (%1$s, ზღვის დონიდან)</string>
+    <string name="flights_report_chart_speed">სიჩქარე მიწასთან მიმართ (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">რუკა: Natural Earth (საჯარო სივრცე)</string>
+    <string name="flights_report_footer">%1$s ჩაწერილია MyAssistant-ში მხოლოდ გასართობად: ნავიგაციისა და უსაფრთხოებისთვის არ გამოდგება</string>
+</resources>

@@ -15,12 +15,12 @@ public final class AppLocale {
     private AppLocale() {
     }
 
-    /** The language chosen in the app, otherwise the language of the device. */
+    /** The language chosen in the app, English until one is chosen. */
     @NonNull
     public static Locale current() {
         LocaleListCompat appLocales = AppCompatDelegate.getApplicationLocales();
         Locale locale = appLocales.isEmpty() ? null : appLocales.get(0);
-        return locale != null ? locale : Locale.getDefault();
+        return locale != null ? locale : Locale.ENGLISH;
     }
 
     /** A context whose resources are in the language of the app, whatever the system language is. */

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">入力が無効です</string>
+    <string name="calculator_error_invalid_expression">式が無効です</string>
+    <string name="calculator_error_division_by_zero">ゼロで割ることはできません</string>
+    <string name="calculator_error_result_too_large">結果が大きすぎます</string>
+    <string name="calculator_error_undefined">定義されていません</string>
+    <string name="calculator_error_expression_too_long">式が長すぎます</string>
+    <string name="calculator_error_expression_too_complex">式が複雑すぎます</string>
+</resources>

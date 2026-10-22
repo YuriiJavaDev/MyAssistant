@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Cần làm gì?</string>
+    <string name="tasks_list_add">Thêm</string>
+    <string name="tasks_list_delete_completed">Xóa việc xong</string>
+    <string name="tasks_list_clear_all">Xóa tất cả</string>
+    <string name="tasks_list_reminder_set">Đã đặt nhắc nhở</string>
+    <string name="tasks_statistics">Tổng: %1$d  Đã xong: %2$d  Còn lại: %3$d  Tiến độ: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Công việc mới</string>
+    <string name="tasks_dialog_title_edit">Sửa công việc</string>
+    <string name="tasks_dialog_importance">Mức độ quan trọng:</string>
+    <string name="tasks_dialog_deadline_label">Hạn chót:</string>
+    <string name="tasks_dialog_deadline_select">Chọn hạn chót</string>
+    <string name="tasks_dialog_reminder_label">Nhắc nhở (ngày và giờ):</string>
+    <string name="tasks_dialog_reminder_select">Chọn ngày và giờ nhắc nhở</string>
+    <string name="tasks_dialog_show_timestamps">Hiện ngày tạo/sửa</string>
+    <string name="tasks_dialog_delete">Xóa</string>
+    <string name="tasks_dialog_save">Lưu</string>
+    <string name="tasks_dialog_clear">Xóa</string>
+    <string name="tasks_importance_normal">Bình thường</string>
+    <string name="tasks_importance_important">Quan trọng</string>
+    <string name="tasks_importance_urgent">Khẩn cấp</string>
+    <string name="tasks_toast_created">Đã tạo công việc</string>
+    <string name="tasks_toast_updated">Đã cập nhật công việc</string>
+    <string name="tasks_toast_deleted">Đã xóa công việc</string>
+    <string name="tasks_toast_completed_deleted">Đã xóa các công việc đã xong</string>
+    <string name="tasks_toast_all_cleared">Đã xóa tất cả công việc</string>
+    <string name="tasks_toast_empty_title">Mô tả công việc không được để trống</string>
+    <string name="tasks_toast_reminder_after_deadline">Nhắc nhở không được sau hạn chót!</string>
+    <string name="tasks_toast_reminder_in_past">Nhắc nhở không được ở quá khứ!</string>
+    <string name="tasks_toast_reminder_cleared">Đã xóa nhắc nhở vì hạn chót sớm hơn!</string>
+    <string name="tasks_toast_select_deadline_first">Hãy chọn hạn chót trước!</string>
+    <string name="tasks_time_created">Tạo: %1$s</string>
+    <string name="tasks_time_edited">Sửa: %1$s</string>
+    <string name="tasks_time_completed">Hoàn thành: %1$s</string>
+    <string name="tasks_deadline_prefixed">Hạn chót: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="other">%1$s — còn %2$d ngày!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="other">%1$s — trễ %2$d ngày!</item>
+    </plurals>
+    <string name="tasks_delete_title">Xác nhận xóa</string>
+    <string name="tasks_delete_button">Xóa</string>
+    <string name="tasks_delete_nothing">Không tìm thấy đối tượng nào để xóa!</string>
+    <string name="tasks_delete_item_message">Bạn có chắc muốn xóa mục này? Không thể hoàn tác thao tác này!</string>
+    <string name="tasks_delete_cannot_be_undone">Không thể hoàn tác thao tác này!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="other">Xóa %1$d công việc đã xong?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="other">Trong đó %1$d việc vẫn còn nhắc nhở đã lưu.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="other">Xóa tất cả %1$d công việc?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="other">%1$d việc có nhắc nhở đang hoạt động.</item>
+    </plurals>
+    <string name="tasks_alert_title">Cảnh báo hạn chót!</string>
+    <string name="tasks_alert_view_tasks">Xem công việc</string>
+    <string name="tasks_alert_channel_name">Cảnh báo hạn chót công việc</string>
+    <string name="tasks_alert_channel_description">Cảnh báo khẩn về hạn chót công việc</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="other">Số hạn chót công việc đã quá hạn: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="other">Chú ý! Số hạn chót công việc cần xử lý ngay: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Chú ý! Hạn chót công việc đang đến gần: %1$s</string>
+</resources>

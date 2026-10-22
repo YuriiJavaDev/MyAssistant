@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Mitä pitää tehdä?</string>
+    <string name="tasks_list_add">Lisää</string>
+    <string name="tasks_list_delete_completed">Poista valmiit</string>
+    <string name="tasks_list_clear_all">Tyhjennä kaikki</string>
+    <string name="tasks_list_reminder_set">Muistutus asetettu</string>
+    <string name="tasks_statistics">Yhteensä: %1$d  Valmiit: %2$d  Jäljellä: %3$d  Edistyminen: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Uusi tehtävä</string>
+    <string name="tasks_dialog_title_edit">Muokkaa tehtävää</string>
+    <string name="tasks_dialog_importance">Tärkeystaso:</string>
+    <string name="tasks_dialog_deadline_label">Määräaika:</string>
+    <string name="tasks_dialog_deadline_select">Valitse määräaika</string>
+    <string name="tasks_dialog_reminder_label">Muistutus (päivä ja aika):</string>
+    <string name="tasks_dialog_reminder_select">Valitse muistutuksen päivä ja aika</string>
+    <string name="tasks_dialog_show_timestamps">Näytä luonti- ja muokkauspäivät</string>
+    <string name="tasks_dialog_delete">Poista</string>
+    <string name="tasks_dialog_save">Tallenna</string>
+    <string name="tasks_dialog_clear">Tyhjennä</string>
+    <string name="tasks_importance_normal">Tavallinen</string>
+    <string name="tasks_importance_important">Tärkeä</string>
+    <string name="tasks_importance_urgent">Kiireellinen</string>
+    <string name="tasks_toast_created">Tehtävä luotu</string>
+    <string name="tasks_toast_updated">Tehtävä päivitetty</string>
+    <string name="tasks_toast_deleted">Tehtävä poistettu</string>
+    <string name="tasks_toast_completed_deleted">Valmiit tehtävät poistettu</string>
+    <string name="tasks_toast_all_cleared">Kaikki tehtävät tyhjennetty</string>
+    <string name="tasks_toast_empty_title">Tehtävän kuvaus ei voi olla tyhjä</string>
+    <string name="tasks_toast_reminder_after_deadline">Muistutus ei voi olla määräajan jälkeen!</string>
+    <string name="tasks_toast_reminder_in_past">Muistutus ei voi olla menneisyydessä!</string>
+    <string name="tasks_toast_reminder_cleared">Muistutus tyhjennettiin, koska määräaika on aiemmin!</string>
+    <string name="tasks_toast_select_deadline_first">Valitse ensin määräaika!</string>
+    <string name="tasks_time_created">Luotu: %1$s</string>
+    <string name="tasks_time_edited">Muokattu: %1$s</string>
+    <string name="tasks_time_completed">Valmistunut: %1$s</string>
+    <string name="tasks_deadline_prefixed">Määräaika: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d päivä jäljellä!</item>
+        <item quantity="other">%1$s — %2$d päivää jäljellä!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d päivä myöhässä!</item>
+        <item quantity="other">%1$s — %2$d päivää myöhässä!</item>
+    </plurals>
+    <string name="tasks_delete_title">Vahvista poisto</string>
+    <string name="tasks_delete_button">Poista</string>
+    <string name="tasks_delete_nothing">Poistettavia kohteita ei löytynyt!</string>
+    <string name="tasks_delete_item_message">Haluatko varmasti poistaa tämän kohteen? Tätä ei voi perua!</string>
+    <string name="tasks_delete_cannot_be_undone">Tätä ei voi perua!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Poistetaanko %1$d valmis tehtävä?</item>
+        <item quantity="other">Poistetaanko %1$d valmista tehtävää?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d niistä sisältää yhä tallennetun muistutuksen.</item>
+        <item quantity="other">%1$d niistä sisältää yhä tallennetun muistutuksen.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Poistetaanko tehtävä (%1$d)?</item>
+        <item quantity="other">Poistetaanko kaikki %1$d tehtävää?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d:llä on aktiivinen muistutus.</item>
+        <item quantity="other">%1$d:llä on aktiivinen muistutus.</item>
+    </plurals>
+    <string name="tasks_alert_title">Määräaikahälytys!</string>
+    <string name="tasks_alert_view_tasks">Näytä tehtävät</string>
+    <string name="tasks_alert_channel_name">Tehtävien määräaikahälytykset</string>
+    <string name="tasks_alert_channel_description">Kiireelliset hälytykset tehtävien määräajoista</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Umpeutuneita tehtävien määräaikoja: %1$d.</item>
+        <item quantity="other">Umpeutuneita tehtävien määräaikoja: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Huomio! Heti huomiota vaativia tehtävien määräaikoja: %1$d.</item>
+        <item quantity="other">Huomio! Heti huomiota vaativia tehtävien määräaikoja: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Huomio! Tehtävän määräaika lähestyy: %1$s</string>
+</resources>

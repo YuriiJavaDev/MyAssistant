@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Que faut-il faire ?</string>
+    <string name="tasks_list_add">Ajouter</string>
+    <string name="tasks_list_delete_completed">Suppr. terminées</string>
+    <string name="tasks_list_clear_all">Tout effacer</string>
+    <string name="tasks_list_reminder_set">Rappel défini</string>
+    <string name="tasks_statistics">Total : %1$d  Terminées : %2$d  Restantes : %3$d  Progression : %4$d %%</string>
+    <string name="tasks_dialog_title_add">Nouvelle tâche</string>
+    <string name="tasks_dialog_title_edit">Modifier la tâche</string>
+    <string name="tasks_dialog_importance">Niveau d’importance :</string>
+    <string name="tasks_dialog_deadline_label">Échéance :</string>
+    <string name="tasks_dialog_deadline_select">Choisir une échéance</string>
+    <string name="tasks_dialog_reminder_label">Rappel (date et heure) :</string>
+    <string name="tasks_dialog_reminder_select">Choisir la date et l’heure du rappel</string>
+    <string name="tasks_dialog_show_timestamps">Afficher les dates de création/modification</string>
+    <string name="tasks_dialog_delete">Supprimer</string>
+    <string name="tasks_dialog_save">Enregistrer</string>
+    <string name="tasks_dialog_clear">Effacer</string>
+    <string name="tasks_importance_normal">Normale</string>
+    <string name="tasks_importance_important">Importante</string>
+    <string name="tasks_importance_urgent">Urgente</string>
+    <string name="tasks_toast_created">Tâche créée</string>
+    <string name="tasks_toast_updated">Tâche mise à jour</string>
+    <string name="tasks_toast_deleted">Tâche supprimée</string>
+    <string name="tasks_toast_completed_deleted">Tâches terminées supprimées</string>
+    <string name="tasks_toast_all_cleared">Toutes les tâches effacées</string>
+    <string name="tasks_toast_empty_title">La description de la tâche ne peut pas être vide</string>
+    <string name="tasks_toast_reminder_after_deadline">Le rappel ne peut pas être postérieur à l’échéance !</string>
+    <string name="tasks_toast_reminder_in_past">Le rappel ne peut pas être dans le passé !</string>
+    <string name="tasks_toast_reminder_cleared">Le rappel a été effacé car l’échéance est antérieure !</string>
+    <string name="tasks_toast_select_deadline_first">Choisissez d’abord une échéance !</string>
+    <string name="tasks_time_created">Créée : %1$s</string>
+    <string name="tasks_time_edited">Modifiée : %1$s</string>
+    <string name="tasks_time_completed">Terminée : %1$s</string>
+    <string name="tasks_deadline_prefixed">Échéance : %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — il reste %2$d jour !</item>
+        <item quantity="many">%1$s — il reste %2$d jours !</item>
+        <item quantity="other">%1$s — il reste %2$d jours !</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — en retard de %2$d jour !</item>
+        <item quantity="many">%1$s — en retard de %2$d jours !</item>
+        <item quantity="other">%1$s — en retard de %2$d jours !</item>
+    </plurals>
+    <string name="tasks_delete_title">Confirmation de suppression</string>
+    <string name="tasks_delete_button">Supprimer</string>
+    <string name="tasks_delete_nothing">Aucun objet à supprimer !</string>
+    <string name="tasks_delete_item_message">Voulez-vous vraiment supprimer cet élément ? Cette action est irréversible !</string>
+    <string name="tasks_delete_cannot_be_undone">Cette action est irréversible !</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Supprimer %1$d tâche terminée ?</item>
+        <item quantity="many">Supprimer %1$d tâches terminées ?</item>
+        <item quantity="other">Supprimer %1$d tâches terminées ?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d d’entre elles a encore un rappel enregistré.</item>
+        <item quantity="many">%1$d d’entre elles ont encore un rappel enregistré.</item>
+        <item quantity="other">%1$d d’entre elles ont encore un rappel enregistré.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Supprimer la tâche (%1$d) ?</item>
+        <item quantity="many">Supprimer les %1$d tâches ?</item>
+        <item quantity="other">Supprimer les %1$d tâches ?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d a un rappel actif.</item>
+        <item quantity="many">%1$d ont des rappels actifs.</item>
+        <item quantity="other">%1$d ont des rappels actifs.</item>
+    </plurals>
+    <string name="tasks_alert_title">Alerte d’échéance !</string>
+    <string name="tasks_alert_view_tasks">Voir les tâches</string>
+    <string name="tasks_alert_channel_name">Alertes d’échéance des tâches</string>
+    <string name="tasks_alert_channel_description">Alertes urgentes d’échéance des tâches</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Vous avez %1$d échéance de tâche dépassée.</item>
+        <item quantity="many">Vous avez %1$d échéances de tâches dépassées.</item>
+        <item quantity="other">Vous avez %1$d échéances de tâches dépassées.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Attention ! Vous avez %1$d échéance de tâche nécessitant une attention immédiate.</item>
+        <item quantity="many">Attention ! Vous avez %1$d échéances de tâches nécessitant une attention immédiate.</item>
+        <item quantity="other">Attention ! Vous avez %1$d échéances de tâches nécessitant une attention immédiate.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Attention ! L’échéance approche pour la tâche : %1$s</string>
+</resources>

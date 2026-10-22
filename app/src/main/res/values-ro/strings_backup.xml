@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Se încarcă copia de rezervă în cloud...</string>
+    <string name="backup_cloud_restoring">Se restaurează copia de rezervă din cloud...</string>
+    <string name="backup_cloud_upload_success">Copia de rezervă a fost încărcată în cloud</string>
+    <string name="backup_cloud_restore_success">Copia de rezervă a fost restaurată din cloud</string>
+    <string name="backup_cloud_restore_partly">Sarcinile au fost restaurate din cloud (nu s-a găsit acolo nicio copie pentru: %1$s)</string>
+    <string name="backup_part_steps">pași</string>
+    <string name="backup_part_flights">zboruri</string>
+    <string name="backup_part_scans">scanări</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Eroare la încărcare: %1$s</string>
+    <string name="backup_error_download">Eroare la descărcare: %1$s</string>
+    <string name="backup_error_unknown">Eroare necunoscută</string>
+    <string name="backup_error_insecure_url">Adresa URL trebuie să înceapă cu https://</string>
+    <string name="backup_error_authentication">Autentificare eșuată: verificați utilizatorul și parola</string>
+    <string name="backup_error_server_code">Serverul a răspuns cu codul: %1$d</string>
+    <string name="backup_error_connection">Eroare de conexiune: %1$s</string>
+    <string name="backup_destination_title">Salvează copia de rezervă în</string>
+    <string name="backup_destination_folder">Alege un dosar (dispozitiv, card SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Trimite către o aplicație</string>
+    <string name="backup_preparing">Se pregătește copia de rezervă...</string>
+    <string name="backup_export_failed">Exportul a eșuat</string>
+    <string name="backup_export_saved">Copia de rezervă a fost salvată</string>
+    <string name="backup_import_success">Copia de rezervă a fost importată. Repornire...</string>
+    <string name="backup_import_failed">Importul a eșuat</string>
+    <string name="backup_import_title">Atenție!</string>
+    <string name="backup_import_message">Restaurarea unei copii de rezervă va înlocui sarcinile, pașii și scanările curente cu cele pe care le conține. Sigur doriți să continuați?</string>
+    <string name="backup_import_confirm">Confirmă importul</string>
+    <string name="backup_share_chooser_title">Exportă copia de rezervă</string>
+    <string name="backup_cloud_settings_saved">Setările cloud au fost salvate</string>
+    <string name="backup_cloud_secure_storage_unavailable">Spațiul de stocare securizat nu este disponibil, setările nu au fost salvate</string>
+    <string name="backup_cloud_url_empty">Adresa URL nu poate fi goală</string>
+    <string name="backup_cloud_testing">Se testează conexiunea...</string>
+    <string name="backup_cloud_connection_successful">Conexiune reușită!</string>
+</resources>

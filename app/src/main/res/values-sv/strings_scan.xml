@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Skanning %1$s</string>
+    <string name="scan_delete_page_message">Radera den här sidan? Det här går inte att ångra!</string>
+    <string name="scan_delete_document_message">Radera ”%1$s” med alla sidor? Det här går inte att ångra!</string>
+    <string name="scan_delete_all_message">Radera allt: %1$s, %2$s? Det här går inte att ångra!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d dokument</item>
+        <item quantity="other">%d dokument</item>
+    </plurals>
+</resources>

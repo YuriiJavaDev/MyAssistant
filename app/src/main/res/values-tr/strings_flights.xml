@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Uçuş kaydı</string>
+    <string name="flights_notification_channel_description">Bir uçuş kaydedilirken gösterilir</string>
+    <string name="flights_notification_title">Uçuş kaydediliyor</string>
+    <string name="flights_notification_text">Göstergeleri açmak için dokunun</string>
+    <string-array name="flights_cardinal_points">
+        <item>K</item>
+        <item>KD</item>
+        <item>D</item>
+        <item>GD</item>
+        <item>G</item>
+        <item>GB</item>
+        <item>B</item>
+        <item>KB</item>
+    </string-array>
+    <string name="flights_report_title">Uçuş raporu</string>
+    <string name="flights_report_north">K</string>
+    <string name="flights_report_side_north">K</string>
+    <string name="flights_report_side_south">G</string>
+    <string name="flights_report_side_east">D</string>
+    <string name="flights_report_side_west">B</string>
+    <string name="flights_report_duration">Süre</string>
+    <string name="flights_report_distance">Mesafe</string>
+    <string name="flights_report_top_speed">En yüksek hız</string>
+    <string name="flights_report_average_speed">Ortalama hız</string>
+    <string name="flights_report_highest_altitude">En yüksek irtifa</string>
+    <string name="flights_report_best_climb">En iyi tırmanış</string>
+    <string name="flights_report_worst_sink">En kötü alçalma</string>
+    <string name="flights_report_peak_load">Tepe yük</string>
+    <string name="flights_report_start_point">Başlangıç noktası</string>
+    <string name="flights_report_end_point">Bitiş noktası</string>
+    <string name="flights_report_altitude_above_start">Kalkışın %1$s üzerinde</string>
+    <string name="flights_report_altitude_above_sea_level">Deniz seviyesinden %1$s</string>
+    <string name="flights_report_chart_altitude_above_start">Yükseklik (%1$s, kalkıştan)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Yükseklik (%1$s, deniz seviyesinden)</string>
+    <string name="flights_report_chart_speed">Yer hızı (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Harita: Natural Earth (kamu malı).</string>
+    <string name="flights_report_footer">%1$s MyAssistant ile kaydedildi. Yalnızca eğlence için: navigasyon veya güvenlik için değil.</string>
+</resources>

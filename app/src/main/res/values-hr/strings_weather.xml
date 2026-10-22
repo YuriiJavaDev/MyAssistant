@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Vedro nebo</string>
+    <string name="weather_description_mainly_clear">Pretežno vedro</string>
+    <string name="weather_description_partly_cloudy">Djelomično oblačno</string>
+    <string name="weather_description_overcast">Oblačno</string>
+    <string name="weather_description_fog">Magla</string>
+    <string name="weather_description_rime_fog">Magla s ledenim iglicama</string>
+    <string name="weather_description_light_drizzle">Slaba rosulja</string>
+    <string name="weather_description_drizzle">Rosulja</string>
+    <string name="weather_description_dense_drizzle">Jaka rosulja</string>
+    <string name="weather_description_light_freezing_drizzle">Slaba ledena rosulja</string>
+    <string name="weather_description_freezing_drizzle">Ledena rosulja</string>
+    <string name="weather_description_slight_rain">Slaba kiša</string>
+    <string name="weather_description_rain">Kiša</string>
+    <string name="weather_description_heavy_rain">Jaka kiša</string>
+    <string name="weather_description_light_freezing_rain">Slaba ledena kiša</string>
+    <string name="weather_description_freezing_rain">Ledena kiša</string>
+    <string name="weather_description_slight_snow">Slab snijeg</string>
+    <string name="weather_description_snow">Snijeg</string>
+    <string name="weather_description_heavy_snow">Jak snijeg</string>
+    <string name="weather_description_snow_grains">Snježna zrnca</string>
+    <string name="weather_description_light_rain_showers">Slabi pljuskovi</string>
+    <string name="weather_description_rain_showers">Pljuskovi</string>
+    <string name="weather_description_violent_rain_showers">Jaki pljuskovi</string>
+    <string name="weather_description_light_snow_showers">Slabi snježni pljuskovi</string>
+    <string name="weather_description_heavy_snow_showers">Jaki snježni pljuskovi</string>
+    <string name="weather_description_thunderstorm">Grmljavina</string>
+    <string name="weather_description_thunderstorm_with_hail">Grmljavina s tučom</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Grmljavina s jakom tučom</string>
+    <string name="weather_description_unknown">Nepoznato</string>
+    <string name="weather_moon_phase_new_moon">Mlađak</string>
+    <string name="weather_moon_phase_waxing_crescent">Rastući srp</string>
+    <string name="weather_moon_phase_first_quarter">Prva četvrt</string>
+    <string name="weather_moon_phase_waxing_gibbous">Rastući mjesec</string>
+    <string name="weather_moon_phase_full_moon">Uštap</string>
+    <string name="weather_moon_phase_waning_gibbous">Padajući mjesec</string>
+    <string name="weather_moon_phase_last_quarter">Zadnja četvrt</string>
+    <string name="weather_moon_phase_waning_crescent">Padajući srp</string>
+    <string name="weather_error_no_location">Lokacija se ne može odrediti. Uključite usluge lokacije ili potražite grad.</string>
+    <string name="weather_error_city_not_found">Nije pronađen grad za „%1$s”</string>
+    <string name="weather_error_no_network">Vrijeme se ne može učitati. Provjerite internetsku vezu.</string>
+    <string name="weather_error_choose_city">Odaberite grad s popisa</string>
+    <string name="weather_current_location">Trenutačna lokacija</string>
+</resources>

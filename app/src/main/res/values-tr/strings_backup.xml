@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Yedek buluta yükleniyor...</string>
+    <string name="backup_cloud_restoring">Yedek buluttan geri yükleniyor...</string>
+    <string name="backup_cloud_upload_success">Yedek buluta başarıyla yüklendi</string>
+    <string name="backup_cloud_restore_success">Yedek buluttan başarıyla geri yüklendi</string>
+    <string name="backup_cloud_restore_partly">Görevler buluttan geri yüklendi (orada şunların yedeği bulunamadı: %1$s)</string>
+    <string name="backup_part_steps">adımlar</string>
+    <string name="backup_part_flights">uçuşlar</string>
+    <string name="backup_part_scans">taramalar</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Yükleme hatası: %1$s</string>
+    <string name="backup_error_download">İndirme hatası: %1$s</string>
+    <string name="backup_error_unknown">Bilinmeyen hata</string>
+    <string name="backup_error_insecure_url">URL https:// ile başlamalıdır</string>
+    <string name="backup_error_authentication">Kimlik doğrulama başarısız: kullanıcı adını ve parolayı kontrol edin</string>
+    <string name="backup_error_server_code">Sunucu şu kodla yanıt verdi: %1$d</string>
+    <string name="backup_error_connection">Bağlantı hatası: %1$s</string>
+    <string name="backup_destination_title">Yedeği şuraya kaydet</string>
+    <string name="backup_destination_folder">Klasör seç (cihaz, SD kart, USB, Drive...)</string>
+    <string name="backup_destination_share">Bir uygulamayla paylaş</string>
+    <string name="backup_preparing">Yedek hazırlanıyor...</string>
+    <string name="backup_export_failed">Dışa aktarma başarısız</string>
+    <string name="backup_export_saved">Yedek kaydedildi</string>
+    <string name="backup_import_success">Yedek başarıyla içe aktarıldı. Yeniden başlatılıyor...</string>
+    <string name="backup_import_failed">İçe aktarma başarısız</string>
+    <string name="backup_import_title">Dikkat!</string>
+    <string name="backup_import_message">Bir yedeği geri yüklemek, içindeki mevcut görevleri, adımları ve taramaları değiştirir. Devam etmek istediğinizden emin misiniz?</string>
+    <string name="backup_import_confirm">İçe aktarmayı onayla</string>
+    <string name="backup_share_chooser_title">Yedeği dışa aktar</string>
+    <string name="backup_cloud_settings_saved">Bulut ayarları başarıyla kaydedildi</string>
+    <string name="backup_cloud_secure_storage_unavailable">Güvenli depolama kullanılamıyor, ayarlar kaydedilmedi</string>
+    <string name="backup_cloud_url_empty">URL boş olamaz</string>
+    <string name="backup_cloud_testing">Bağlantı sınanıyor...</string>
+    <string name="backup_cloud_connection_successful">Bağlantı başarılı!</string>
+</resources>

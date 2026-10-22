@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">飛行記錄</string>
+    <string name="flights_notification_channel_description">記錄飛行時顯示</string>
+    <string name="flights_notification_title">正在記錄飛行</string>
+    <string name="flights_notification_text">點選以開啟儀表</string>
+    <string-array name="flights_cardinal_points">
+        <item>北</item>
+        <item>東北</item>
+        <item>東</item>
+        <item>東南</item>
+        <item>南</item>
+        <item>西南</item>
+        <item>西</item>
+        <item>西北</item>
+    </string-array>
+    <string name="flights_report_title">飛行報告</string>
+    <string name="flights_report_north">北</string>
+    <string name="flights_report_side_north">北</string>
+    <string name="flights_report_side_south">南</string>
+    <string name="flights_report_side_east">東</string>
+    <string name="flights_report_side_west">西</string>
+    <string name="flights_report_duration">時長</string>
+    <string name="flights_report_distance">距離</string>
+    <string name="flights_report_top_speed">最高速度</string>
+    <string name="flights_report_average_speed">平均速度</string>
+    <string name="flights_report_highest_altitude">最大高度</string>
+    <string name="flights_report_best_climb">最佳爬升</string>
+    <string name="flights_report_worst_sink">最差下降</string>
+    <string name="flights_report_peak_load">峰值載荷</string>
+    <string name="flights_report_start_point">起點</string>
+    <string name="flights_report_end_point">終點</string>
+    <string name="flights_report_altitude_above_start">高於起點 %1$s</string>
+    <string name="flights_report_altitude_above_sea_level">海拔 %1$s</string>
+    <string name="flights_report_chart_altitude_above_start">高度（%1$s，相對起點）</string>
+    <string name="flights_report_chart_altitude_above_sea_level">高度（%1$s，海拔）</string>
+    <string name="flights_report_chart_speed">地速（%1$s）</string>
+    <string name="flights_report_map_credit_coastline">地圖：Natural Earth（公有領域）。</string>
+    <string name="flights_report_footer">%1$s 由 MyAssistant 記錄。僅供娛樂：不可用於導航或安全用途。</string>
+</resources>

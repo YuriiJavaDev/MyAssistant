@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Záznam letu</string>
+    <string name="flights_notification_channel_description">Zobrazuje se při záznamu letu</string>
+    <string name="flights_notification_title">Zaznamenává se let</string>
+    <string name="flights_notification_text">Klepnutím otevřete přístroje</string>
+    <string-array name="flights_cardinal_points">
+        <item>S</item>
+        <item>SV</item>
+        <item>V</item>
+        <item>JV</item>
+        <item>J</item>
+        <item>JZ</item>
+        <item>Z</item>
+        <item>SZ</item>
+    </string-array>
+    <string name="flights_report_title">Zpráva o letu</string>
+    <string name="flights_report_north">S</string>
+    <string name="flights_report_side_north">S</string>
+    <string name="flights_report_side_south">J</string>
+    <string name="flights_report_side_east">V</string>
+    <string name="flights_report_side_west">Z</string>
+    <string name="flights_report_duration">Trvání</string>
+    <string name="flights_report_distance">Vzdálenost</string>
+    <string name="flights_report_top_speed">Maximální rychlost</string>
+    <string name="flights_report_average_speed">Průměrná rychlost</string>
+    <string name="flights_report_highest_altitude">Nejvyšší výška</string>
+    <string name="flights_report_best_climb">Nejlepší stoupání</string>
+    <string name="flights_report_worst_sink">Nejhorší klesání</string>
+    <string name="flights_report_peak_load">Špičkové zatížení</string>
+    <string name="flights_report_start_point">Místo startu</string>
+    <string name="flights_report_end_point">Místo cíle</string>
+    <string name="flights_report_altitude_above_start">%1$s nad startem</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s nad mořem</string>
+    <string name="flights_report_chart_altitude_above_start">Výška (%1$s, nad startem)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Výška (%1$s, nad mořem)</string>
+    <string name="flights_report_chart_speed">Rychlost vůči zemi (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Mapa: Natural Earth (volné dílo).</string>
+    <string name="flights_report_footer">%1$s Zaznamenáno v MyAssistant. Jen pro zábavu: ne pro navigaci ani bezpečnost.</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">কী করতে হবে?</string>
+    <string name="tasks_list_add">যোগ করুন</string>
+    <string name="tasks_list_delete_completed">সম্পন্ন মুছুন</string>
+    <string name="tasks_list_clear_all">সব মুছুন</string>
+    <string name="tasks_list_reminder_set">রিমাইন্ডার সেট হয়েছে</string>
+    <string name="tasks_statistics">মোট: %1$d  সম্পন্ন: %2$d  বাকি: %3$d  অগ্রগতি: %4$d %%</string>
+    <string name="tasks_dialog_title_add">নতুন কাজ</string>
+    <string name="tasks_dialog_title_edit">কাজ সম্পাদনা</string>
+    <string name="tasks_dialog_importance">গুরুত্বের স্তর:</string>
+    <string name="tasks_dialog_deadline_label">শেষ তারিখ:</string>
+    <string name="tasks_dialog_deadline_select">শেষ তারিখ বাছুন</string>
+    <string name="tasks_dialog_reminder_label">রিমাইন্ডার (তারিখ ও সময়):</string>
+    <string name="tasks_dialog_reminder_select">রিমাইন্ডারের তারিখ ও সময় বাছুন</string>
+    <string name="tasks_dialog_show_timestamps">তৈরি/সম্পাদনার তারিখ দেখান</string>
+    <string name="tasks_dialog_delete">মুছুন</string>
+    <string name="tasks_dialog_save">সংরক্ষণ</string>
+    <string name="tasks_dialog_clear">পরিষ্কার</string>
+    <string name="tasks_importance_normal">সাধারণ</string>
+    <string name="tasks_importance_important">গুরুত্বপূর্ণ</string>
+    <string name="tasks_importance_urgent">জরুরি</string>
+    <string name="tasks_toast_created">কাজ তৈরি হয়েছে</string>
+    <string name="tasks_toast_updated">কাজ আপডেট হয়েছে</string>
+    <string name="tasks_toast_deleted">কাজ মুছে ফেলা হয়েছে</string>
+    <string name="tasks_toast_completed_deleted">সম্পন্ন কাজ মুছে ফেলা হয়েছে</string>
+    <string name="tasks_toast_all_cleared">সব কাজ মুছে ফেলা হয়েছে</string>
+    <string name="tasks_toast_empty_title">কাজের বিবরণ ফাঁকা থাকতে পারবে না</string>
+    <string name="tasks_toast_reminder_after_deadline">রিমাইন্ডার শেষ তারিখের পরে হতে পারবে না!</string>
+    <string name="tasks_toast_reminder_in_past">রিমাইন্ডার অতীতে হতে পারবে না!</string>
+    <string name="tasks_toast_reminder_cleared">শেষ তারিখ আগে হওয়ায় রিমাইন্ডার মুছে ফেলা হয়েছে!</string>
+    <string name="tasks_toast_select_deadline_first">আগে শেষ তারিখ বাছুন!</string>
+    <string name="tasks_time_created">তৈরি: %1$s</string>
+    <string name="tasks_time_edited">সম্পাদিত: %1$s</string>
+    <string name="tasks_time_completed">সম্পন্ন হয়েছে: %1$s</string>
+    <string name="tasks_deadline_prefixed">শেষ তারিখ: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — আর %2$d দিন বাকি!</item>
+        <item quantity="other">%1$s — আর %2$d দিন বাকি!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d দিন দেরি!</item>
+        <item quantity="other">%1$s — %2$d দিন দেরি!</item>
+    </plurals>
+    <string name="tasks_delete_title">মোছার নিশ্চিতকরণ</string>
+    <string name="tasks_delete_button">মুছুন</string>
+    <string name="tasks_delete_nothing">মোছার মতো কোনো বস্তু পাওয়া যায়নি!</string>
+    <string name="tasks_delete_item_message">আপনি কি সত্যিই এই আইটেমটি মুছতে চান? এটি ফেরানো যাবে না!</string>
+    <string name="tasks_delete_cannot_be_undone">এটি ফেরানো যাবে না!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$dটি সম্পন্ন কাজ মুছবেন?</item>
+        <item quantity="other">%1$dটি সম্পন্ন কাজ মুছবেন?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">এর মধ্যে %1$dটিতে এখনও সংরক্ষিত রিমাইন্ডার আছে।</item>
+        <item quantity="other">এর মধ্যে %1$dটিতে এখনও সংরক্ষিত রিমাইন্ডার আছে।</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">সব %1$dটি কাজ মুছবেন?</item>
+        <item quantity="other">সব %1$dটি কাজ মুছবেন?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$dটিতে সক্রিয় রিমাইন্ডার আছে।</item>
+        <item quantity="other">%1$dটিতে সক্রিয় রিমাইন্ডার আছে।</item>
+    </plurals>
+    <string name="tasks_alert_title">শেষ তারিখের সতর্কতা!</string>
+    <string name="tasks_alert_view_tasks">কাজ দেখুন</string>
+    <string name="tasks_alert_channel_name">কাজের শেষ তারিখের সতর্কতা</string>
+    <string name="tasks_alert_channel_description">কাজের শেষ তারিখের জরুরি সতর্কতা</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">পেরিয়ে যাওয়া কাজের শেষ তারিখের সংখ্যা: %1$d।</item>
+        <item quantity="other">পেরিয়ে যাওয়া কাজের শেষ তারিখের সংখ্যা: %1$d।</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">মনোযোগ দিন! এখনই মনোযোগ প্রয়োজন এমন কাজের শেষ তারিখের সংখ্যা: %1$d।</item>
+        <item quantity="other">মনোযোগ দিন! এখনই মনোযোগ প্রয়োজন এমন কাজের শেষ তারিখের সংখ্যা: %1$d।</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">মনোযোগ দিন! কাজের শেষ তারিখ ঘনিয়ে আসছে: %1$s</string>
+</resources>

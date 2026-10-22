@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">ท้องฟ้าแจ่มใส</string>
+    <string name="weather_description_mainly_clear">ส่วนใหญ่แจ่มใส</string>
+    <string name="weather_description_partly_cloudy">มีเมฆบางส่วน</string>
+    <string name="weather_description_overcast">มีเมฆมาก</string>
+    <string name="weather_description_fog">หมอก</string>
+    <string name="weather_description_rime_fog">หมอกน้ำค้างแข็ง</string>
+    <string name="weather_description_light_drizzle">ฝนปรอยเบา</string>
+    <string name="weather_description_drizzle">ฝนปรอย</string>
+    <string name="weather_description_dense_drizzle">ฝนปรอยหนา</string>
+    <string name="weather_description_light_freezing_drizzle">ฝนปรอยเยือกแข็งเบา</string>
+    <string name="weather_description_freezing_drizzle">ฝนปรอยเยือกแข็ง</string>
+    <string name="weather_description_slight_rain">ฝนเล็กน้อย</string>
+    <string name="weather_description_rain">ฝน</string>
+    <string name="weather_description_heavy_rain">ฝนหนัก</string>
+    <string name="weather_description_light_freezing_rain">ฝนเยือกแข็งเบา</string>
+    <string name="weather_description_freezing_rain">ฝนเยือกแข็ง</string>
+    <string name="weather_description_slight_snow">หิมะเล็กน้อย</string>
+    <string name="weather_description_snow">หิมะ</string>
+    <string name="weather_description_heavy_snow">หิมะหนัก</string>
+    <string name="weather_description_snow_grains">เม็ดหิมะ</string>
+    <string name="weather_description_light_rain_showers">ฝนซู่เบา</string>
+    <string name="weather_description_rain_showers">ฝนซู่</string>
+    <string name="weather_description_violent_rain_showers">ฝนซู่รุนแรง</string>
+    <string name="weather_description_light_snow_showers">หิมะซู่เบา</string>
+    <string name="weather_description_heavy_snow_showers">หิมะซู่หนัก</string>
+    <string name="weather_description_thunderstorm">พายุฝนฟ้าคะนอง</string>
+    <string name="weather_description_thunderstorm_with_hail">พายุฝนฟ้าคะนองพร้อมลูกเห็บ</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">พายุฝนฟ้าคะนองพร้อมลูกเห็บใหญ่</string>
+    <string name="weather_description_unknown">ไม่ทราบ</string>
+    <string name="weather_moon_phase_new_moon">เดือนมืด</string>
+    <string name="weather_moon_phase_waxing_crescent">เสี้ยวข้างขึ้น</string>
+    <string name="weather_moon_phase_first_quarter">ครึ่งดวงข้างขึ้น</string>
+    <string name="weather_moon_phase_waxing_gibbous">ค่อนดวงข้างขึ้น</string>
+    <string name="weather_moon_phase_full_moon">วันเพ็ญ</string>
+    <string name="weather_moon_phase_waning_gibbous">ค่อนดวงข้างแรม</string>
+    <string name="weather_moon_phase_last_quarter">ครึ่งดวงข้างแรม</string>
+    <string name="weather_moon_phase_waning_crescent">เสี้ยวข้างแรม</string>
+    <string name="weather_error_no_location">ไม่สามารถระบุตำแหน่งได้ เปิดบริการตำแหน่งหรือค้นหาเมือง</string>
+    <string name="weather_error_city_not_found">ไม่พบเมืองสำหรับ “%1$s”</string>
+    <string name="weather_error_no_network">ไม่สามารถโหลดสภาพอากาศได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="weather_error_choose_city">เลือกเมืองจากรายการ</string>
+    <string name="weather_current_location">ตำแหน่งปัจจุบัน</string>
+</resources>

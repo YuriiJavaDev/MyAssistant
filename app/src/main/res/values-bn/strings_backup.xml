@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">ব্যাকআপ ক্লাউডে আপলোড হচ্ছে...</string>
+    <string name="backup_cloud_restoring">ক্লাউড থেকে ব্যাকআপ পুনরুদ্ধার হচ্ছে...</string>
+    <string name="backup_cloud_upload_success">ব্যাকআপ ক্লাউডে আপলোড হয়েছে</string>
+    <string name="backup_cloud_restore_success">ব্যাকআপ ক্লাউড থেকে পুনরুদ্ধার হয়েছে</string>
+    <string name="backup_cloud_restore_partly">কাজ ক্লাউড থেকে পুনরুদ্ধার হয়েছে (সেখানে এগুলোর ব্যাকআপ পাওয়া যায়নি: %1$s)</string>
+    <string name="backup_part_steps">পদক্ষেপ</string>
+    <string name="backup_part_flights">ফ্লাইট</string>
+    <string name="backup_part_scans">স্ক্যান</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">আপলোড ত্রুটি: %1$s</string>
+    <string name="backup_error_download">ডাউনলোড ত্রুটি: %1$s</string>
+    <string name="backup_error_unknown">অজানা ত্রুটি</string>
+    <string name="backup_error_insecure_url">URL অবশ্যই https:// দিয়ে শুরু হতে হবে</string>
+    <string name="backup_error_authentication">প্রমাণীকরণ ব্যর্থ: ব্যবহারকারীর নাম ও পাসওয়ার্ড পরীক্ষা করুন</string>
+    <string name="backup_error_server_code">সার্ভার কোড দিয়ে উত্তর দিয়েছে: %1$d</string>
+    <string name="backup_error_connection">সংযোগ ত্রুটি: %1$s</string>
+    <string name="backup_destination_title">ব্যাকআপ এখানে সংরক্ষণ করুন</string>
+    <string name="backup_destination_folder">ফোল্ডার বাছুন (ডিভাইস, SD কার্ড, USB, Drive...)</string>
+    <string name="backup_destination_share">অ্যাপের সঙ্গে শেয়ার করুন</string>
+    <string name="backup_preparing">ব্যাকআপ প্রস্তুত হচ্ছে...</string>
+    <string name="backup_export_failed">এক্সপোর্ট ব্যর্থ হয়েছে</string>
+    <string name="backup_export_saved">ব্যাকআপ সংরক্ষিত হয়েছে</string>
+    <string name="backup_import_success">ব্যাকআপ সফলভাবে ইমপোর্ট হয়েছে। রিস্টার্ট হচ্ছে...</string>
+    <string name="backup_import_failed">ইমপোর্ট ব্যর্থ হয়েছে</string>
+    <string name="backup_import_title">সাবধান!</string>
+    <string name="backup_import_message">ব্যাকআপ পুনরুদ্ধার করলে আপনার বর্তমান কাজ, পদক্ষেপ ও স্ক্যান তাতে থাকা তথ্য দিয়ে প্রতিস্থাপিত হবে। আপনি কি সত্যিই চালিয়ে যেতে চান?</string>
+    <string name="backup_import_confirm">ইমপোর্ট নিশ্চিত করুন</string>
+    <string name="backup_share_chooser_title">ব্যাকআপ এক্সপোর্ট করুন</string>
+    <string name="backup_cloud_settings_saved">ক্লাউড সেটিংস সংরক্ষিত হয়েছে</string>
+    <string name="backup_cloud_secure_storage_unavailable">নিরাপদ স্টোরেজ পাওয়া যাচ্ছে না, সেটিংস সংরক্ষিত হয়নি</string>
+    <string name="backup_cloud_url_empty">URL ফাঁকা থাকতে পারবে না</string>
+    <string name="backup_cloud_testing">সংযোগ পরীক্ষা হচ্ছে...</string>
+    <string name="backup_cloud_connection_successful">সংযোগ সফল!</string>
+</resources>

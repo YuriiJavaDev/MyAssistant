@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">ორიგინალი</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">სკანი %1$s</string>
+    <string name="scan_delete_page_message">წაიშალოს ეს გვერდი? მოქმედება შეუქცევადია!</string>
+    <string name="scan_delete_document_message">წაიშალოს „%1$s“ ყველა გვერდითურთ? მოქმედება შეუქცევადია!</string>
+    <string name="scan_delete_all_message">წაიშალოს ყველაფერი: %1$s, %2$s? მოქმედება შეუქცევადია!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d დოკუმენტი</item>
+        <item quantity="other">%d დოკუმენტი</item>
+    </plurals>
+</resources>

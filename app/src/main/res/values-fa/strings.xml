@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">لغو</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">تنظیمات</string>
+    <string name="settings_alarms_title">یادآوری‌ها و هشدارها</string>
+    <string name="settings_alarms_subtitle">فاصله‌ها، صداها و وضعیت اعلان‌ها</string>
+    <string name="settings_display_title">حالت نمایش</string>
+    <string name="settings_display_subtitle">روز / شب / خودکار</string>
+    <string name="display_mode_title">حالت نمایش</string>
+    <string name="display_mode_light">روشن (روز)</string>
+    <string name="display_mode_dark">تیره (شب)</string>
+    <string name="display_mode_system">سیستم (خودکار)</string>
+    <string name="settings_design_title">ظاهر برنامه</string>
+    <string name="settings_design_subtitle">گزینه‌های ظاهر رابط</string>
+    <string name="design_classic_name">کلاسیک</string>
+    <string name="design_classic_about">ظاهر اصلی: کِرِم و بنفش</string>
+    <string name="design_paper_ink_name">کاغذ و جوهر</string>
+    <string name="design_paper_ink_about">خطوط نازک و رنگ‌های ملایم اداری</string>
+    <string name="design_pastel_cloud_name">ابر پاستلی</string>
+    <string name="design_pastel_cloud_about">نرم، گرد و کم‌رنگ، با ابرها</string>
+    <string name="design_neon_arcade_name">آرکید نئون</string>
+    <string name="design_neon_arcade_about">نئون درخشان، تضاد شدید و خورشید رترو</string>
+    <string name="design_toon_name">کارتونی</string>
+    <string name="design_toon_about">حاشیه‌های کمیک و دست‌خط</string>
+    <string name="design_biker_name">موتورسوار</string>
+    <string name="design_biker_about">فلز خام، لاستیک و نارنجیِ اگزوز</string>
+    <string name="design_cockpit_name">کابین خلبان</string>
+    <string name="design_cockpit_about">صفحه ابزار جدی با گلایدر</string>
+    <string name="design_beach_name">ساحل</string>
+    <string name="design_beach_about">ماسه، تالاب، مرجان و نخل</string>
+    <string name="design_forest_name">جنگل افسون‌شده</string>
+    <string name="design_forest_about">پوست آهو، طلا و خزهٔ جنگلی</string>
+    <string name="design_mono_block_name">تک‌بلوک</string>
+    <string name="design_mono_block_about">سیاه و سفید تیز با یک ماژیک زرد</string>
+    <string name="settings_permissions_title">مجوزهای سیستم</string>
+    <string name="settings_permissions_subtitle">مدیریت دسترسی‌ها در Android</string>
+    <string-array name="filter_options">
+        <item>همهٔ کارها</item>
+        <item>فعال</item>
+        <item>انجام‌شده</item>
+        <item>هشدارها</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>الف–ی</item>
+        <item>ی–الف</item>
+        <item>وضعیت</item>
+        <item>ایجاد</item>
+        <item>ویرایش</item>
+        <item>اتمام</item>
+        <item>اهمیت</item>
+        <item>مهلت</item>
+    </string-array>
+    <string name="scan_camera">دوربین</string>
+    <string name="scan_gallery">گالری</string>
+    <string name="scan_clear_all">پاک‌کردن همه</string>
+    <string name="scan_cleared">همهٔ اسکن‌ها حذف شدند</string>
+    <string name="scan_empty">هنوز سندی وجود ندارد. از یک صفحه عکس بگیرید یا از گالری عکسی انتخاب کنید.</string>
+    <string name="scan_auto">خودکار</string>
+    <string name="scan_reset">بازنشانی</string>
+    <string name="scan_next">بعدی</string>
+    <string name="scan_back">بازگشت</string>
+    <string name="scan_save">ذخیره</string>
+    <string name="scan_rotate">چرخاندن</string>
+    <string name="scan_paper">کاغذ</string>
+    <string name="scan_filter_color">رنگی</string>
+    <string name="scan_filter_gray">خاکستری</string>
+    <string name="scan_filter_bw">س/س</string>
+    <string name="scan_tune">نور و کنتراست</string>
+    <string name="scan_shadows">حذف سایه</string>
+    <string name="scan_brightness">روشنایی</string>
+    <string name="scan_contrast">کنتراست</string>
+    <string name="scan_sharpen">وضوح</string>
+    <string name="scan_page_saved">صفحه ذخیره شد</string>
+    <string name="scan_next_page_question">صفحهٔ دیگری به سند افزوده شود؟</string>
+    <string name="scan_page_label">صفحهٔ %d</string>
+    <string name="scan_done">تمام</string>
+    <string name="scan_add_page">افزودن صفحه</string>
+    <string name="scan_share_pdf">ارسال PDF</string>
+    <string name="scan_pages_empty">این سند صفحه‌ای ندارد.</string>
+    <string name="scan_saved_to_device">فایل ذخیره شد</string>
+    <string name="scan_share_title">ارسال سند</string>
+    <string name="scan_rename_title">تغییر نام سند</string>
+    <string name="scan_rename_confirm">تغییر نام</string>
+    <string name="scan_error_load">این عکس باز نمی‌شود</string>
+    <string name="scan_error_preview">حافظه برای پیش‌نمایش کافی نیست</string>
+    <string name="scan_error_save">اسکن ذخیره نشد</string>
+    <string name="scan_error_export">فایل آماده نشد</string>
+    <string name="scan_error_no_camera">برنامهٔ دوربین پیدا نشد</string>
+    <string name="scan_error_no_viewer">برنامه‌ای برای باز کردن تصویر پیدا نشد</string>
+    <string name="scan_error_no_app">برنامه‌ای برای اشتراک‌گذاری پیدا نشد</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d صفحه</item>
+        <item quantity="other">%d صفحه</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>صفحه‌ها</item>
+        <item>ارسال به‌صورت PDF</item>
+        <item>ارسال به‌صورت JPEG</item>
+        <item>ذخیرهٔ PDF در…</item>
+        <item>تغییر نام</item>
+        <item>حذف</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>مشاهده</item>
+        <item>ذخیرهٔ JPEG در…</item>
+        <item>انتقال به بالا</item>
+        <item>انتقال به پایین</item>
+        <item>حذف صفحه</item>
+    </string-array>
+    <string name="weather_city_hint">نام شهر به هر زبانی</string>
+    <string name="weather_search">جست‌وجو</string>
+    <string name="weather_my_location">مکان من</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">احساس می‌شود</string>
+    <string name="weather_humidity">رطوبت</string>
+    <string name="weather_wind">باد</string>
+    <string name="weather_today_range">امروز</string>
+    <string name="weather_units">واحدها</string>
+    <string name="weather_units_temperature">دما</string>
+    <string name="weather_units_wind">سرعت باد</string>
+    <string name="weather_unit_celsius">سانتی‌گراد (°C)</string>
+    <string name="weather_unit_fahrenheit">فارنهایت (°F)</string>
+    <string name="weather_unit_ms">متر بر ثانیه (m/s)</string>
+    <string name="weather_unit_kmh">کیلومتر بر ساعت (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% روشن</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">در حال بارگذاری وضعیت هوا…</string>
+    <string name="weather_location_needed">برای دیدن وضعیت هوا در مکانی که هستید، دسترسی به مکان تقریبی را مجاز کنید یا شهری را جست‌وجو کنید.</string>
+    <string name="weather_allow">مجاز کردن</string>
+    <string name="weather_open_settings">باز کردن تنظیمات برنامه</string>
+    <string name="weather_attribution">وضعیت هوا: Open-Meteo.com · مکان‌ها: © مشارکت‌کنندگان OpenStreetMap</string>
+    <string name="weather_choose_city">یک شهر انتخاب کنید</string>
+    <string name="steps_today">امروز</string>
+    <string name="steps_unit">قدم</string>
+    <string name="steps_walk_run">پیاده‌روی %1$s · دویدن %2$s</string>
+    <string name="steps_period">بازه</string>
+    <string name="steps_last_7">۷ روز</string>
+    <string name="steps_last_30">۳۰ روز</string>
+    <string name="steps_this_month">این ماه</string>
+    <string name="steps_pick_dates">انتخاب تاریخ‌ها</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">مجموع قدم‌ها</string>
+    <string name="steps_distance">مسافت</string>
+    <string name="steps_average">میانگین روزانه</string>
+    <string name="steps_best_day">بهترین روز</string>
+    <string name="steps_walking">قدم‌های پیاده‌روی</string>
+    <string name="steps_running">قدم‌های دویدن</string>
+    <string name="steps_active_days">روزهای دارای قدم</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d از %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">در این بازه قدمی ثبت نشده است</string>
+    <string name="steps_settings">تنظیمات قدم</string>
+    <string name="steps_settings_title">طول قدم</string>
+    <string name="steps_walk_length">طول قدم در پیاده‌روی، cm</string>
+    <string name="steps_run_length">طول قدم در دویدن، cm</string>
+    <string name="steps_run_cadence">شروع دویدن از، قدم در دقیقه</string>
+    <string name="steps_run_cadence_hint">قدم‌ها با این آهنگ یا سریع‌تر، دویدن به حساب می‌آیند.</string>
+    <string name="steps_defaults">پیش‌فرض</string>
+    <string name="steps_save">ذخیره</string>
+    <string name="steps_invalid_length">عددی بین %1$d تا %2$d وارد کنید</string>
+    <string name="steps_measure_title">طول قدم را چگونه اندازه بگیریم</string>
+    <string name="steps_measure_text">۱. پیش از قدم اول، کنار نوک کفش خط شروع بکشید.\n۲. با سرعت معمولی خود ۱۰ قدم آرام بردارید.\n۳. پس از قدم دهم، فاصلهٔ خط شروع تا همان نوک کفش را به سانتی‌متر اندازه بگیرید.\n۴. آن را بر ده تقسیم کنید.\n۵. چند بار تکرار کنید و میانگین را وارد کنید.\n\nبرای طول قدم در دویدن، همین کار را با سرعت معمول دویدن خود انجام دهید.</string>
+    <string name="steps_no_sensor">این گوشی حسگر قدم‌شمار ندارد.</string>
+    <string name="steps_permission_needed">دسترسی به فعالیت بدنی را مجاز کنید تا گوشی بتواند قدم‌های شما را بشمارد.</string>
+    <string name="steps_allow">مجاز کردن</string>
+    <string name="steps_open_settings">باز کردن تنظیمات برنامه</string>
+    <string name="currency_amount_hint">مبلغ</string>
+    <string name="currency_swap">جابه‌جایی ⇅</string>
+    <string name="currency_refresh">به‌روزرسانی نرخ‌ها</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">نرخ‌ها در %1$s به‌روز شدند</string>
+    <string name="currency_outdated">اینترنت نیست. نرخ‌های ذخیره‌شده نمایش داده می‌شوند، به‌روزرسانی در %1$s</string>
+    <string name="currency_loading">در حال بارگذاری نرخ‌ها…</string>
+    <string name="currency_unavailable">نرخ‌ها در دسترس نیستند. اتصال اینترنت را بررسی و دوباره تلاش کنید.</string>
+    <string name="currency_invalid_amount">یک مبلغ وارد کنید</string>
+    <string name="currency_attribution">نرخ‌ها از Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">علمی</string>
+    <string name="calculator_basic">ساده</string>
+    <string name="calculator_degrees">درجه</string>
+    <string name="calculator_radians">رادیان</string>
+    <string name="calculator_history">تاریخچه</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">شروع ضبط</string>
+    <string name="flights_stop">توقف ضبط</string>
+    <string name="flights_units">واحدها</string>
+    <string name="flights_journal">گزارش</string>
+    <string name="flights_journal_title">دفتر پرواز</string>
+    <string name="flights_journal_empty">هنوز پروازی ضبط نشده است.</string>
+    <string name="flights_journal_in_progress">این پرواز هنوز در حال ضبط است.</string>
+    <string name="flights_report_open">باز کردن گزارش</string>
+    <string name="flights_report_share">ارسال گزارش</string>
+    <string name="flights_report_delete">حذف پرواز</string>
+    <string name="flights_report_failed">گزارش آماده نشد.</string>
+    <string name="flights_report_no_viewer">برنامه‌ای برای باز کردن فایل‌های PDF پیدا نشد.</string>
+    <string name="flights_delete_title">این پرواز حذف شود؟</string>
+    <string name="flights_delete_message">مسیر و گزارش برای همیشه حذف می‌شوند. پیش از آن می‌توانید گزارش را جایی بفرستید، مثلاً به حافظهٔ USB، رایانه یا Google Drive.</string>
+    <string name="flights_delete_save_first">ذخیرهٔ گزارش و سپس حذف</string>
+    <string name="flights_delete_without_saving">حذف بدون ذخیره</string>
+    <string name="flights_delete_after_share_message">اگر گزارش به جایی که می‌خواستید رسید، اکنون می‌توانید پرواز را حذف کنید.</string>
+    <string name="flights_delete_after_share_confirm">حذف پرواز</string>
+    <string name="flights_delete_keep">نگه‌داشتن پرواز</string>
+    <string name="flights_units_report_limit">سقف گزارش‌ها</string>
+    <string name="flights_units_report_limit_hint">بیشترین تعداد گزارش PDF در دفتر، ۰ یعنی نامحدود</string>
+    <string name="flights_limit_full_title">سقف گزارش‌های PDF پر شده است</string>
+    <string name="flights_limit_full_message">دفتر پرواز %1$d گزارش دارد که همان سقف است. برای ضبط پرواز جدید دست‌کم یک پرواز را از دفتر حذف کنید. پیش از آن می‌توانید گزارش آن را در حافظهٔ USB، رایانه یا Google Drive ذخیره کنید.</string>
+    <string name="flights_limit_warning_title">به سقف گزارش‌های PDF نزدیک می‌شوید!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">می‌توانید %d پرواز دیگر ضبط کنید. پروازهای قدیمی را از دفتر حذف کنید.</item>
+        <item quantity="other">می‌توانید %d پرواز دیگر ضبط کنید. پروازهای قدیمی را از دفتر حذف کنید.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">باز کردن دفتر</string>
+    <string name="flights_journal_line">%1$s · حداکثر %2$s · ارتفاع حداکثر %3$s</string>
+    <string name="flights_units_speed">سرعت و مسافت</string>
+    <string name="flights_units_altitude">ارتفاع</string>
+    <string name="flights_unit_kmh">کیلومتر بر ساعت (km/h)</string>
+    <string name="flights_unit_knots">گره (kt، مایل دریایی)</string>
+    <string name="flights_unit_ms">متر بر ثانیه (m/s)</string>
+    <string name="flights_unit_metres">متر (m)</string>
+    <string name="flights_unit_feet">فوت (ft)</string>
+    <string name="flights_units_climb">نرخ صعود</string>
+    <string name="flights_unit_fpm">فوت بر دقیقه (ft/min)</string>
+    <string name="flights_altitude_zero">صفر</string>
+    <string name="flights_altitude_sea">از سطح دریا</string>
+    <string name="flights_altitude_start">بالاتر از مبدأ · برای لغو «صفر» را نگه دارید</string>
+    <string name="flights_sound_on">صدا: روشن</string>
+    <string name="flights_sound_off">صدا: خاموش</string>
+    <string name="flights_sound_tune">تنظیم صدا</string>
+    <string name="flights_sound_climb_start">بوق با صعود %1$.1f m/s شروع می‌شود</string>
+    <string name="flights_sound_sink_start">بوق کوتاه با نزول %1$.1f m/s شروع می‌شود</string>
+    <string name="flights_sound_sink_alarm">هشدار پیوسته با نزول %1$.1f m/s</string>
+    <string name="flights_speed_label">سرعت</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">مدت پرواز</string>
+    <string name="flights_distance">مسافت</string>
+    <string name="flights_max_speed">بیشینهٔ سرعت</string>
+    <string name="flights_avg_speed">سرعت میانگین</string>
+    <string name="flights_max_altitude">بیشینهٔ ارتفاع</string>
+    <string name="flights_climb_rate">نرخ صعود</string>
+    <string name="flights_max_g">بیشینهٔ بار</string>
+    <string name="flights_status_waiting">در انتظار سیگنال GPS…</string>
+    <string name="flights_location_needed">برای ضبط سرعت، ارتفاع و مسیر، دسترسی به مکان دقیق را مجاز کنید.</string>
+    <string name="flights_allow">مجاز کردن</string>
+    <string name="flights_open_settings">باز کردن تنظیمات برنامه</string>
+    <string name="flights_gps_off">برای ضبط پرواز، سرویس‌های مکان (GPS) را روشن کنید.</string>
+    <string name="flights_disclaimer">فقط برای سرگرمی و کنجکاوی. برای ناوبری یا هر چیزی که به ایمنی مربوط است به این ابزارها تکیه نکنید.</string>
+</resources>

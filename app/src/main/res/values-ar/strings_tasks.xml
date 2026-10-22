@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">ما الذي يجب إنجازه؟</string>
+    <string name="tasks_list_add">إضافة</string>
+    <string name="tasks_list_delete_completed">حذف المكتملة</string>
+    <string name="tasks_list_clear_all">مسح الكل</string>
+    <string name="tasks_list_reminder_set">تم ضبط التذكير</string>
+    <string name="tasks_statistics">الإجمالي: %1$d  المكتملة: %2$d  المتبقية: %3$d  التقدم: %4$d%%</string>
+    <string name="tasks_dialog_title_add">مهمة جديدة</string>
+    <string name="tasks_dialog_title_edit">تعديل المهمة</string>
+    <string name="tasks_dialog_importance">مستوى الأهمية:</string>
+    <string name="tasks_dialog_deadline_label">الموعد النهائي:</string>
+    <string name="tasks_dialog_deadline_select">اختر موعدًا نهائيًا</string>
+    <string name="tasks_dialog_reminder_label">التذكير (التاريخ والوقت):</string>
+    <string name="tasks_dialog_reminder_select">اختر تاريخ التذكير ووقته</string>
+    <string name="tasks_dialog_show_timestamps">إظهار تواريخ الإنشاء/التعديل</string>
+    <string name="tasks_dialog_delete">حذف</string>
+    <string name="tasks_dialog_save">حفظ</string>
+    <string name="tasks_dialog_clear">مسح</string>
+    <string name="tasks_importance_normal">عادية</string>
+    <string name="tasks_importance_important">مهمة</string>
+    <string name="tasks_importance_urgent">عاجلة</string>
+    <string name="tasks_toast_created">تم إنشاء المهمة</string>
+    <string name="tasks_toast_updated">تم تحديث المهمة</string>
+    <string name="tasks_toast_deleted">تم حذف المهمة</string>
+    <string name="tasks_toast_completed_deleted">تم حذف المهام المكتملة</string>
+    <string name="tasks_toast_all_cleared">تم مسح كل المهام</string>
+    <string name="tasks_toast_empty_title">لا يمكن أن يكون وصف المهمة فارغًا</string>
+    <string name="tasks_toast_reminder_after_deadline">لا يمكن أن يكون التذكير بعد الموعد النهائي!</string>
+    <string name="tasks_toast_reminder_in_past">لا يمكن أن يكون التذكير في الماضي!</string>
+    <string name="tasks_toast_reminder_cleared">تم مسح التذكير لأن الموعد النهائي أبكر!</string>
+    <string name="tasks_toast_select_deadline_first">اختر الموعد النهائي أولًا!</string>
+    <string name="tasks_time_created">أُنشئت: %1$s</string>
+    <string name="tasks_time_edited">عُدّلت: %1$s</string>
+    <string name="tasks_time_completed">اكتملت: %1$s</string>
+    <string name="tasks_deadline_prefixed">الموعد النهائي: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="zero">%1$s — متبقٍّ %2$d يوم!</item>
+        <item quantity="one">%1$s — متبقٍّ يوم واحد!</item>
+        <item quantity="two">%1$s — متبقٍّ يومان!</item>
+        <item quantity="few">%1$s — متبقٍّ %2$d أيام!</item>
+        <item quantity="many">%1$s — متبقٍّ %2$d يومًا!</item>
+        <item quantity="other">%1$s — متبقٍّ %2$d يوم!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="zero">%1$s — متأخرة بمقدار %2$d يوم!</item>
+        <item quantity="one">%1$s — متأخرة بمقدار يوم واحد!</item>
+        <item quantity="two">%1$s — متأخرة بمقدار يومين!</item>
+        <item quantity="few">%1$s — متأخرة بمقدار %2$d أيام!</item>
+        <item quantity="many">%1$s — متأخرة بمقدار %2$d يومًا!</item>
+        <item quantity="other">%1$s — متأخرة بمقدار %2$d يوم!</item>
+    </plurals>
+    <string name="tasks_delete_title">تأكيد الحذف</string>
+    <string name="tasks_delete_button">حذف</string>
+    <string name="tasks_delete_nothing">لا توجد عناصر للحذف!</string>
+    <string name="tasks_delete_item_message">هل أنت متأكد أنك تريد حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء!</string>
+    <string name="tasks_delete_cannot_be_undone">لا يمكن التراجع عن هذا الإجراء!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="zero">حذف %1$d مهمة مكتملة؟</item>
+        <item quantity="one">حذف مهمة مكتملة واحدة؟</item>
+        <item quantity="two">حذف مهمتين مكتملتين؟</item>
+        <item quantity="few">حذف %1$d مهام مكتملة؟</item>
+        <item quantity="many">حذف %1$d مهمة مكتملة؟</item>
+        <item quantity="other">حذف %1$d مهمة مكتملة؟</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="zero">لا يزال لدى %1$d منها تذكير محفوظ.</item>
+        <item quantity="one">لا يزال لدى إحداها تذكير محفوظ.</item>
+        <item quantity="two">لا يزال لدى اثنتين منها تذكير محفوظ.</item>
+        <item quantity="few">لا يزال لدى %1$d منها تذكير محفوظ.</item>
+        <item quantity="many">لا يزال لدى %1$d منها تذكير محفوظ.</item>
+        <item quantity="other">لا يزال لدى %1$d منها تذكير محفوظ.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="zero">حذف كل المهام (%1$d)؟</item>
+        <item quantity="one">حذف المهمة الوحيدة؟</item>
+        <item quantity="two">حذف المهمتين؟</item>
+        <item quantity="few">حذف كل المهام الـ%1$d؟</item>
+        <item quantity="many">حذف كل المهام الـ%1$d؟</item>
+        <item quantity="other">حذف كل المهام الـ%1$d؟</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="zero">لا توجد تذكيرات نشطة.</item>
+        <item quantity="one">لدى إحداها تذكير نشط.</item>
+        <item quantity="two">لدى اثنتين منها تذكير نشط.</item>
+        <item quantity="few">لدى %1$d منها تذكيرات نشطة.</item>
+        <item quantity="many">لدى %1$d منها تذكيرات نشطة.</item>
+        <item quantity="other">لدى %1$d منها تذكيرات نشطة.</item>
+    </plurals>
+    <string name="tasks_alert_title">تنبيه الموعد النهائي!</string>
+    <string name="tasks_alert_view_tasks">عرض المهام</string>
+    <string name="tasks_alert_channel_name">تنبيهات المواعيد النهائية للمهام</string>
+    <string name="tasks_alert_channel_description">تنبيهات عاجلة بالمواعيد النهائية للمهام</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="zero">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+        <item quantity="one">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+        <item quantity="two">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+        <item quantity="few">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+        <item quantity="many">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+        <item quantity="other">لديك مواعيد نهائية متأخرة للمهام: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="zero">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+        <item quantity="one">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+        <item quantity="two">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+        <item quantity="few">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+        <item quantity="many">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+        <item quantity="other">انتبه! لديك %1$d من المواعيد النهائية للمهام تتطلب اهتمامًا فوريًا.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">انتبه! اقترب الموعد النهائي للمهمة: %1$s</string>
+</resources>

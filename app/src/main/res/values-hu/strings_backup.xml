@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Biztonsági mentés feltöltése a felhőbe...</string>
+    <string name="backup_cloud_restoring">Biztonsági mentés visszaállítása a felhőből...</string>
+    <string name="backup_cloud_upload_success">A biztonsági mentés sikeresen feltöltve a felhőbe</string>
+    <string name="backup_cloud_restore_success">A biztonsági mentés sikeresen visszaállítva a felhőből</string>
+    <string name="backup_cloud_restore_partly">A feladatok visszaállítva a felhőből (ehhez nem található ott mentés: %1$s)</string>
+    <string name="backup_part_steps">lépések</string>
+    <string name="backup_part_flights">repülések</string>
+    <string name="backup_part_scans">szkennelések</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Feltöltési hiba: %1$s</string>
+    <string name="backup_error_download">Letöltési hiba: %1$s</string>
+    <string name="backup_error_unknown">Ismeretlen hiba</string>
+    <string name="backup_error_insecure_url">Az URL-nek https://-sel kell kezdődnie</string>
+    <string name="backup_error_authentication">A hitelesítés sikertelen: ellenőrizze a felhasználónevet és a jelszót</string>
+    <string name="backup_error_server_code">A szerver kódja: %1$d</string>
+    <string name="backup_error_connection">Kapcsolódási hiba: %1$s</string>
+    <string name="backup_destination_title">A biztonsági mentés helye</string>
+    <string name="backup_destination_folder">Mappa kiválasztása (eszköz, SD-kártya, USB, Drive...)</string>
+    <string name="backup_destination_share">Küldés alkalmazásnak</string>
+    <string name="backup_preparing">Biztonsági mentés előkészítése...</string>
+    <string name="backup_export_failed">Az exportálás sikertelen</string>
+    <string name="backup_export_saved">Biztonsági mentés elmentve</string>
+    <string name="backup_import_success">A biztonsági mentés sikeresen importálva. Újraindítás...</string>
+    <string name="backup_import_failed">Az importálás sikertelen</string>
+    <string name="backup_import_title">Figyelem!</string>
+    <string name="backup_import_message">A biztonsági mentés visszaállítása a jelenlegi feladatokat, lépéseket és szkenneléseket a mentésben lévőkre cseréli. Biztosan folytatja?</string>
+    <string name="backup_import_confirm">Importálás megerősítése</string>
+    <string name="backup_share_chooser_title">Biztonsági mentés exportálása</string>
+    <string name="backup_cloud_settings_saved">A felhőbeállítások sikeresen elmentve</string>
+    <string name="backup_cloud_secure_storage_unavailable">A biztonságos tárhely nem érhető el, a beállítások nem lettek elmentve</string>
+    <string name="backup_cloud_url_empty">Az URL nem lehet üres</string>
+    <string name="backup_cloud_testing">Kapcsolat tesztelése...</string>
+    <string name="backup_cloud_connection_successful">Sikeres kapcsolat!</string>
+</resources>

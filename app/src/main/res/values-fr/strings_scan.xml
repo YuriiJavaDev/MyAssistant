@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Original</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Scan %1$s</string>
+    <string name="scan_delete_page_message">Supprimer cette page ? Cette action est irréversible !</string>
+    <string name="scan_delete_document_message">Supprimer « %1$s » avec toutes ses pages ? Cette action est irréversible !</string>
+    <string name="scan_delete_all_message">Supprimer tout : %1$s avec %2$s ? Cette action est irréversible !</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d document</item>
+        <item quantity="many">%d documents</item>
+        <item quantity="other">%d documents</item>
+    </plurals>
+</resources>

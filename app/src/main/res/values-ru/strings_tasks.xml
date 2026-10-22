@@ -2,7 +2,7 @@
 <resources>
     <string name="tasks_list_input_hint">Что нужно сделать?</string>
     <string name="tasks_list_add">Добавить</string>
-    <string name="tasks_list_delete_completed">Удалить выполненные</string>
+    <string name="tasks_list_delete_completed">Удалить сделанные</string>
     <string name="tasks_list_clear_all">Очистить всё</string>
     <string name="tasks_list_reminder_set">Напоминание установлено</string>
     <string name="tasks_statistics">Всего: %1$d  Выполнено: %2$d  Осталось: %3$d  Прогресс: %4$d%%</string>

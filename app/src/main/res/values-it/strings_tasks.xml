@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Cosa c’è da fare?</string>
+    <string name="tasks_list_add">Aggiungi</string>
+    <string name="tasks_list_delete_completed">Elimina completate</string>
+    <string name="tasks_list_clear_all">Cancella tutto</string>
+    <string name="tasks_list_reminder_set">Promemoria impostato</string>
+    <string name="tasks_statistics">Totale: %1$d  Completate: %2$d  Rimaste: %3$d  Avanzamento: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Nuova attività</string>
+    <string name="tasks_dialog_title_edit">Modifica attività</string>
+    <string name="tasks_dialog_importance">Livello di importanza:</string>
+    <string name="tasks_dialog_deadline_label">Scadenza:</string>
+    <string name="tasks_dialog_deadline_select">Scegli una scadenza</string>
+    <string name="tasks_dialog_reminder_label">Promemoria (data e ora):</string>
+    <string name="tasks_dialog_reminder_select">Scegli data e ora del promemoria</string>
+    <string name="tasks_dialog_show_timestamps">Mostra le date di creazione/modifica</string>
+    <string name="tasks_dialog_delete">Elimina</string>
+    <string name="tasks_dialog_save">Salva</string>
+    <string name="tasks_dialog_clear">Cancella</string>
+    <string name="tasks_importance_normal">Normale</string>
+    <string name="tasks_importance_important">Importante</string>
+    <string name="tasks_importance_urgent">Urgente</string>
+    <string name="tasks_toast_created">Attività creata</string>
+    <string name="tasks_toast_updated">Attività aggiornata</string>
+    <string name="tasks_toast_deleted">Attività eliminata</string>
+    <string name="tasks_toast_completed_deleted">Attività completate eliminate</string>
+    <string name="tasks_toast_all_cleared">Tutte le attività cancellate</string>
+    <string name="tasks_toast_empty_title">La descrizione dell’attività non può essere vuota</string>
+    <string name="tasks_toast_reminder_after_deadline">Il promemoria non può essere successivo alla scadenza!</string>
+    <string name="tasks_toast_reminder_in_past">Il promemoria non può essere nel passato!</string>
+    <string name="tasks_toast_reminder_cleared">Il promemoria è stato cancellato perché la scadenza è precedente!</string>
+    <string name="tasks_toast_select_deadline_first">Scegli prima una scadenza!</string>
+    <string name="tasks_time_created">Creata: %1$s</string>
+    <string name="tasks_time_edited">Modificata: %1$s</string>
+    <string name="tasks_time_completed">Completata: %1$s</string>
+    <string name="tasks_deadline_prefixed">Scadenza: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — manca %2$d giorno!</item>
+        <item quantity="many">%1$s — mancano %2$d giorni!</item>
+        <item quantity="other">%1$s — mancano %2$d giorni!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — in ritardo di %2$d giorno!</item>
+        <item quantity="many">%1$s — in ritardo di %2$d giorni!</item>
+        <item quantity="other">%1$s — in ritardo di %2$d giorni!</item>
+    </plurals>
+    <string name="tasks_delete_title">Conferma eliminazione</string>
+    <string name="tasks_delete_button">Elimina</string>
+    <string name="tasks_delete_nothing">Nessun oggetto da eliminare!</string>
+    <string name="tasks_delete_item_message">Vuoi davvero eliminare questo elemento? Questa azione non può essere annullata!</string>
+    <string name="tasks_delete_cannot_be_undone">Questa azione non può essere annullata!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Eliminare %1$d attività completata?</item>
+        <item quantity="many">Eliminare %1$d attività completate?</item>
+        <item quantity="other">Eliminare %1$d attività completate?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d di esse ha ancora un promemoria salvato.</item>
+        <item quantity="many">%1$d di esse hanno ancora un promemoria salvato.</item>
+        <item quantity="other">%1$d di esse hanno ancora un promemoria salvato.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Eliminare l’attività (%1$d)?</item>
+        <item quantity="many">Eliminare tutte le %1$d attività?</item>
+        <item quantity="other">Eliminare tutte le %1$d attività?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d ha un promemoria attivo.</item>
+        <item quantity="many">%1$d hanno promemoria attivi.</item>
+        <item quantity="other">%1$d hanno promemoria attivi.</item>
+    </plurals>
+    <string name="tasks_alert_title">Avviso di scadenza!</string>
+    <string name="tasks_alert_view_tasks">Vedi attività</string>
+    <string name="tasks_alert_channel_name">Avvisi di scadenza delle attività</string>
+    <string name="tasks_alert_channel_description">Avvisi urgenti di scadenza delle attività</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Hai %1$d scadenza di attività superata.</item>
+        <item quantity="many">Hai %1$d scadenze di attività superate.</item>
+        <item quantity="other">Hai %1$d scadenze di attività superate.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Attenzione! Hai %1$d scadenza di attività che richiede attenzione immediata.</item>
+        <item quantity="many">Attenzione! Hai %1$d scadenze di attività che richiedono attenzione immediata.</item>
+        <item quantity="other">Attenzione! Hai %1$d scadenze di attività che richiedono attenzione immediata.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Attenzione! La scadenza si avvicina per l’attività: %1$s</string>
+</resources>

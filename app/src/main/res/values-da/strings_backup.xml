@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Uploader sikkerhedskopi til skyen...</string>
+    <string name="backup_cloud_restoring">Gendanner sikkerhedskopi fra skyen...</string>
+    <string name="backup_cloud_upload_success">Sikkerhedskopien blev uploadet til skyen</string>
+    <string name="backup_cloud_restore_success">Sikkerhedskopien blev gendannet fra skyen</string>
+    <string name="backup_cloud_restore_partly">Opgaver blev gendannet fra skyen (der blev ikke fundet nogen kopi af: %1$s)</string>
+    <string name="backup_part_steps">skridt</string>
+    <string name="backup_part_flights">flyvninger</string>
+    <string name="backup_part_scans">scanninger</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Uploadfejl: %1$s</string>
+    <string name="backup_error_download">Downloadfejl: %1$s</string>
+    <string name="backup_error_unknown">Ukendt fejl</string>
+    <string name="backup_error_insecure_url">URL\'en skal starte med https://</string>
+    <string name="backup_error_authentication">Godkendelse mislykkedes: tjek brugernavn og adgangskode</string>
+    <string name="backup_error_server_code">Serveren svarede med kode: %1$d</string>
+    <string name="backup_error_connection">Forbindelsesfejl: %1$s</string>
+    <string name="backup_destination_title">Gem sikkerhedskopi i</string>
+    <string name="backup_destination_folder">Vælg mappe (enhed, SD-kort, USB, Drev...)</string>
+    <string name="backup_destination_share">Del med app</string>
+    <string name="backup_preparing">Forbereder sikkerhedskopi...</string>
+    <string name="backup_export_failed">Eksport mislykkedes</string>
+    <string name="backup_export_saved">Sikkerhedskopien er gemt</string>
+    <string name="backup_import_success">Sikkerhedskopien blev importeret. Genstarter...</string>
+    <string name="backup_import_failed">Import mislykkedes</string>
+    <string name="backup_import_title">Pas på!</string>
+    <string name="backup_import_message">Gendannelse af en sikkerhedskopi erstatter dine nuværende opgaver, skridt og scanninger med dem, den indeholder. Vil du virkelig fortsætte?</string>
+    <string name="backup_import_confirm">Bekræft import</string>
+    <string name="backup_share_chooser_title">Eksportér sikkerhedskopi</string>
+    <string name="backup_cloud_settings_saved">Skyindstillingerne er gemt</string>
+    <string name="backup_cloud_secure_storage_unavailable">Sikker lagring er ikke tilgængelig, indstillingerne blev ikke gemt</string>
+    <string name="backup_cloud_url_empty">URL\'en må ikke være tom</string>
+    <string name="backup_cloud_testing">Tester forbindelsen...</string>
+    <string name="backup_cloud_connection_successful">Forbindelsen lykkedes!</string>
+</resources>

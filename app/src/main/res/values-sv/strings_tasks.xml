@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Vad behöver göras?</string>
+    <string name="tasks_list_add">Lägg till</string>
+    <string name="tasks_list_delete_completed">Radera slutförda</string>
+    <string name="tasks_list_clear_all">Rensa allt</string>
+    <string name="tasks_list_reminder_set">Påminnelse inställd</string>
+    <string name="tasks_statistics">Totalt: %1$d  Slutförda: %2$d  Kvar: %3$d  Framsteg: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Ny uppgift</string>
+    <string name="tasks_dialog_title_edit">Redigera uppgift</string>
+    <string name="tasks_dialog_importance">Viktighetsnivå:</string>
+    <string name="tasks_dialog_deadline_label">Frist:</string>
+    <string name="tasks_dialog_deadline_select">Välj frist</string>
+    <string name="tasks_dialog_reminder_label">Påminnelse (datum och tid):</string>
+    <string name="tasks_dialog_reminder_select">Välj datum och tid för påminnelsen</string>
+    <string name="tasks_dialog_show_timestamps">Visa datum för skapande/ändring</string>
+    <string name="tasks_dialog_delete">Radera</string>
+    <string name="tasks_dialog_save">Spara</string>
+    <string name="tasks_dialog_clear">Rensa</string>
+    <string name="tasks_importance_normal">Vanlig</string>
+    <string name="tasks_importance_important">Viktig</string>
+    <string name="tasks_importance_urgent">Brådskande</string>
+    <string name="tasks_toast_created">Uppgiften har skapats</string>
+    <string name="tasks_toast_updated">Uppgiften har uppdaterats</string>
+    <string name="tasks_toast_deleted">Uppgiften har raderats</string>
+    <string name="tasks_toast_completed_deleted">Slutförda uppgifter har raderats</string>
+    <string name="tasks_toast_all_cleared">Alla uppgifter har rensats</string>
+    <string name="tasks_toast_empty_title">Uppgiftens beskrivning får inte vara tom</string>
+    <string name="tasks_toast_reminder_after_deadline">Påminnelsen får inte vara efter fristen!</string>
+    <string name="tasks_toast_reminder_in_past">Påminnelsen får inte vara i det förflutna!</string>
+    <string name="tasks_toast_reminder_cleared">Påminnelsen rensades eftersom fristen är tidigare!</string>
+    <string name="tasks_toast_select_deadline_first">Välj först en frist!</string>
+    <string name="tasks_time_created">Skapad: %1$s</string>
+    <string name="tasks_time_edited">Ändrad: %1$s</string>
+    <string name="tasks_time_completed">Slutförd: %1$s</string>
+    <string name="tasks_deadline_prefixed">Frist: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d dag kvar!</item>
+        <item quantity="other">%1$s — %2$d dagar kvar!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d dag försenad!</item>
+        <item quantity="other">%1$s — %2$d dagar försenad!</item>
+    </plurals>
+    <string name="tasks_delete_title">Bekräfta radering</string>
+    <string name="tasks_delete_button">Radera</string>
+    <string name="tasks_delete_nothing">Inga objekt att radera hittades!</string>
+    <string name="tasks_delete_item_message">Vill du verkligen radera det här objektet? Det här går inte att ångra!</string>
+    <string name="tasks_delete_cannot_be_undone">Det här går inte att ångra!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Radera %1$d slutförd uppgift?</item>
+        <item quantity="other">Radera %1$d slutförda uppgifter?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d av dem har fortfarande en sparad påminnelse.</item>
+        <item quantity="other">%1$d av dem har fortfarande en sparad påminnelse.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Radera uppgiften (%1$d)?</item>
+        <item quantity="other">Radera alla %1$d uppgifter?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d har en aktiv påminnelse.</item>
+        <item quantity="other">%1$d har aktiva påminnelser.</item>
+    </plurals>
+    <string name="tasks_alert_title">Fristvarning!</string>
+    <string name="tasks_alert_view_tasks">Visa uppgifter</string>
+    <string name="tasks_alert_channel_name">Varningar för uppgiftsfrister</string>
+    <string name="tasks_alert_channel_description">Brådskande varningar för uppgiftsfrister</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Antal passerade uppgiftsfrister: %1$d.</item>
+        <item quantity="other">Antal passerade uppgiftsfrister: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Observera! Antal uppgiftsfrister som kräver omedelbar uppmärksamhet: %1$d.</item>
+        <item quantity="other">Observera! Antal uppgiftsfrister som kräver omedelbar uppmärksamhet: %1$d.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Observera! Uppgiftens frist närmar sig: %1$s</string>
+</resources>

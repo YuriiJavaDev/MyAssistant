@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Avbryt</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Innstillinger</string>
+    <string name="settings_alarms_title">Påminnelser og alarmer</string>
+    <string name="settings_alarms_subtitle">Intervaller, lyder og status for varsler</string>
+    <string name="settings_display_title">Visningsmodus</string>
+    <string name="settings_display_subtitle">Dag / Natt / Auto</string>
+    <string name="display_mode_title">Visningsmodus</string>
+    <string name="display_mode_light">Lys (dag)</string>
+    <string name="display_mode_dark">Mørk (natt)</string>
+    <string name="display_mode_system">System (auto)</string>
+    <string name="settings_design_title">Appens utseende</string>
+    <string name="settings_design_subtitle">Varianter av grensesnittets utseende</string>
+    <string name="design_classic_name">Klassisk</string>
+    <string name="design_classic_about">Det opprinnelige utseendet: krem og lilla</string>
+    <string name="design_paper_ink_name">Papir og blekk</string>
+    <string name="design_paper_ink_about">Tynne streker og dempede kontortoner</string>
+    <string name="design_pastel_cloud_name">Pastellsky</string>
+    <string name="design_pastel_cloud_about">Myk, avrundet og blek, med skyer</string>
+    <string name="design_neon_arcade_name">Neonarkade</string>
+    <string name="design_neon_arcade_about">Glødende neon, sterk kontrast og retrosol</string>
+    <string name="design_toon_name">Tegnefilm</string>
+    <string name="design_toon_about">Tegneserieomriss og håndskrift</string>
+    <string name="design_biker_name">Motorsyklist</string>
+    <string name="design_biker_about">Rått metall, gummi og eksosoransje</string>
+    <string name="design_cockpit_name">Cockpit</string>
+    <string name="design_cockpit_about">Stram instrumentpanel med seilfly</string>
+    <string name="design_beach_name">Strand</string>
+    <string name="design_beach_about">Sand, lagune, koraller og palmer</string>
+    <string name="design_forest_name">Fortryllet skog</string>
+    <string name="design_forest_about">Pergament, gull og skogmose</string>
+    <string name="design_mono_block_name">Monoblokk</string>
+    <string name="design_mono_block_about">Skarpt svart-hvitt med én gul markeringspenn</string>
+    <string name="settings_permissions_title">Systemtillatelser</string>
+    <string name="settings_permissions_subtitle">Administrer tilgang i Android</string>
+    <string-array name="filter_options">
+        <item>Alle oppgaver</item>
+        <item>Aktive</item>
+        <item>Fullførte</item>
+        <item>Varsler</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Å</item>
+        <item>Å–A</item>
+        <item>Status</item>
+        <item>Opprettet</item>
+        <item>Endret</item>
+        <item>Fullført</item>
+        <item>Viktighet</item>
+        <item>Frist</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galleri</string>
+    <string name="scan_clear_all">Tøm alt</string>
+    <string name="scan_cleared">Alle skanninger er slettet</string>
+    <string name="scan_empty">Ingen dokumenter ennå. Ta bilde av en side, eller velg et bilde fra galleriet.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Tilbakestill</string>
+    <string name="scan_next">Neste</string>
+    <string name="scan_back">Tilbake</string>
+    <string name="scan_save">Lagre</string>
+    <string name="scan_rotate">Roter</string>
+    <string name="scan_paper">Papir</string>
+    <string name="scan_filter_color">Farge</string>
+    <string name="scan_filter_gray">Grå</string>
+    <string name="scan_filter_bw">S/H</string>
+    <string name="scan_tune">Lys og kontrast</string>
+    <string name="scan_shadows">Fjerning av skygger</string>
+    <string name="scan_brightness">Lysstyrke</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Skarphet</string>
+    <string name="scan_page_saved">Siden er lagret</string>
+    <string name="scan_next_page_question">Legge til en side til i dokumentet?</string>
+    <string name="scan_page_label">Side %d</string>
+    <string name="scan_done">Ferdig</string>
+    <string name="scan_add_page">Legg til side</string>
+    <string name="scan_share_pdf">Del PDF</string>
+    <string name="scan_pages_empty">Dette dokumentet har ingen sider.</string>
+    <string name="scan_saved_to_device">Filen er lagret</string>
+    <string name="scan_share_title">Del dokument</string>
+    <string name="scan_rename_title">Gi dokumentet nytt navn</string>
+    <string name="scan_rename_confirm">Gi nytt navn</string>
+    <string name="scan_error_load">Dette bildet kan ikke åpnes</string>
+    <string name="scan_error_preview">Ikke nok minne til forhåndsvisning</string>
+    <string name="scan_error_save">Skanningen kunne ikke lagres</string>
+    <string name="scan_error_export">Filen kunne ikke klargjøres</string>
+    <string name="scan_error_no_camera">Fant ingen kameraapp</string>
+    <string name="scan_error_no_viewer">Fant ingen app som kan åpne bildet</string>
+    <string name="scan_error_no_app">Fant ingen app for deling</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d side</item>
+        <item quantity="other">%d sider</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Sider</item>
+        <item>Del som PDF</item>
+        <item>Del som JPEG</item>
+        <item>Lagre PDF i…</item>
+        <item>Gi nytt navn</item>
+        <item>Slett</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Vis</item>
+        <item>Lagre JPEG i…</item>
+        <item>Flytt opp</item>
+        <item>Flytt ned</item>
+        <item>Slett side</item>
+    </string-array>
+    <string name="weather_city_hint">Bynavn på et hvilket som helst språk</string>
+    <string name="weather_search">Søk</string>
+    <string name="weather_my_location">Min posisjon</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Føles som</string>
+    <string name="weather_humidity">Luftfuktighet</string>
+    <string name="weather_wind">Vind</string>
+    <string name="weather_today_range">I dag</string>
+    <string name="weather_units">Enheter</string>
+    <string name="weather_units_temperature">Temperatur</string>
+    <string name="weather_units_wind">Vindhastighet</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Meter per sekund (m/s)</string>
+    <string name="weather_unit_kmh">Kilometer i timen (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% opplyst</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Laster været…</string>
+    <string name="weather_location_needed">Gi tilgang til omtrentlig posisjon for å se været der du er, eller søk etter en by.</string>
+    <string name="weather_allow">Tillat</string>
+    <string name="weather_open_settings">Åpne appinnstillinger</string>
+    <string name="weather_attribution">Vær: Open-Meteo.com · Steder: © OpenStreetMap-bidragsytere</string>
+    <string name="weather_choose_city">Velg en by</string>
+    <string name="steps_today">I dag</string>
+    <string name="steps_unit">skritt</string>
+    <string name="steps_walk_run">Gange %1$s · Løping %2$s</string>
+    <string name="steps_period">Periode</string>
+    <string name="steps_last_7">7 dager</string>
+    <string name="steps_last_30">30 dager</string>
+    <string name="steps_this_month">Måned</string>
+    <string name="steps_pick_dates">Velg datoer</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Skritt totalt</string>
+    <string name="steps_distance">Avstand</string>
+    <string name="steps_average">Snitt per dag</string>
+    <string name="steps_best_day">Beste dag</string>
+    <string name="steps_walking">Skritt ved gange</string>
+    <string name="steps_running">Skritt ved løping</string>
+    <string name="steps_active_days">Dager med skritt</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d av %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Ingen skritt ble registrert i denne perioden</string>
+    <string name="steps_settings">Skrittinnstillinger</string>
+    <string name="steps_settings_title">Skrittlengde</string>
+    <string name="steps_walk_length">Skrittlengde ved gange, cm</string>
+    <string name="steps_run_length">Skrittlengde ved løping, cm</string>
+    <string name="steps_run_cadence">Løping starter fra, skritt per minutt</string>
+    <string name="steps_run_cadence_hint">Skritt i dette tempoet eller raskere regnes som løping.</string>
+    <string name="steps_defaults">Standard</string>
+    <string name="steps_save">Lagre</string>
+    <string name="steps_invalid_length">Skriv inn %1$d–%2$d</string>
+    <string name="steps_measure_title">Slik måler du skrittlengden</string>
+    <string name="steps_measure_text">1. Merk en startstrek ved skospissen før første skritt.\n2. Ta 10 rolige skritt i ditt vanlige tempo.\n3. Mål avstanden i centimeter fra startstreken til samme skospiss etter det 10. skrittet.\n4. Del på ti.\n5. Gjenta noen ganger og skriv inn gjennomsnittet.\n\nGjør det samme i ditt vanlige løpetempo for å finne skrittlengden ved løping.</string>
+    <string name="steps_no_sensor">Denne telefonen har ingen skrittsensor.</string>
+    <string name="steps_permission_needed">Gi tilgang til fysisk aktivitet slik at telefonen kan telle skrittene dine.</string>
+    <string name="steps_allow">Tillat</string>
+    <string name="steps_open_settings">Åpne appinnstillinger</string>
+    <string name="currency_amount_hint">Beløp</string>
+    <string name="currency_swap">Bytt ⇅</string>
+    <string name="currency_refresh">Oppdater kurser</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurser oppdatert %1$s</string>
+    <string name="currency_outdated">Ingen internett. Viser lagrede kurser, oppdatert %1$s</string>
+    <string name="currency_loading">Laster kurser…</string>
+    <string name="currency_unavailable">Kursene er ikke tilgjengelige. Sjekk internettforbindelsen og oppdater.</string>
+    <string name="currency_invalid_amount">Skriv inn et beløp</string>
+    <string name="currency_attribution">Kurser fra Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Vit</string>
+    <string name="calculator_basic">Bas</string>
+    <string name="calculator_degrees">Grad</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Historikk</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Start opptak</string>
+    <string name="flights_stop">Stopp opptak</string>
+    <string name="flights_units">Enheter</string>
+    <string name="flights_journal">Loggbok</string>
+    <string name="flights_journal_title">Flyloggbok</string>
+    <string name="flights_journal_empty">Ingen flyvninger er tatt opp ennå.</string>
+    <string name="flights_journal_in_progress">Denne flyvningen tas fortsatt opp.</string>
+    <string name="flights_report_open">Åpne rapport</string>
+    <string name="flights_report_share">Del rapport</string>
+    <string name="flights_report_delete">Slett flyvning</string>
+    <string name="flights_report_failed">Rapporten kunne ikke klargjøres.</string>
+    <string name="flights_report_no_viewer">Fant ingen app som kan åpne PDF-filer.</string>
+    <string name="flights_delete_title">Slette denne flyvningen?</string>
+    <string name="flights_delete_message">Ruten og rapporten fjernes for godt. Før det kan du sende rapporten et sted, for eksempel til en USB-pinne, en datamaskin eller Google Disk.</string>
+    <string name="flights_delete_save_first">Lagre rapporten, og slett deretter</string>
+    <string name="flights_delete_without_saving">Slett uten å lagre</string>
+    <string name="flights_delete_after_share_message">Hvis rapporten kom frem dit du ville, kan du nå slette flyvningen.</string>
+    <string name="flights_delete_after_share_confirm">Slett flyvning</string>
+    <string name="flights_delete_keep">Behold flyvning</string>
+    <string name="flights_units_report_limit">Rapportgrense</string>
+    <string name="flights_units_report_limit_hint">Maksimalt antall PDF-rapporter i loggboken, 0 for ubegrenset</string>
+    <string name="flights_limit_full_title">Grensen for PDF-rapporter er nådd</string>
+    <string name="flights_limit_full_message">Loggboken inneholder %1$d rapporter, som er grensen. Slett minst én flyvning fra loggboken for å ta opp en ny. Før det kan du lagre rapporten på en USB-pinne, en datamaskin eller Google Disk.</string>
+    <string name="flights_limit_warning_title">Du nærmer deg grensen for PDF-rapporter!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Du kan ta opp %d flyvning til. Slett utdaterte flyvninger fra loggboken.</item>
+        <item quantity="other">Du kan ta opp %d flyvninger til. Slett utdaterte flyvninger fra loggboken.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Åpne loggbok</string>
+    <string name="flights_journal_line">%1$s · maks %2$s · høyde maks %3$s</string>
+    <string name="flights_units_speed">Hastighet og avstand</string>
+    <string name="flights_units_altitude">Høyde</string>
+    <string name="flights_unit_kmh">Kilometer i timen (km/h)</string>
+    <string name="flights_unit_knots">Knop (kt, nautiske mil)</string>
+    <string name="flights_unit_ms">Meter per sekund (m/s)</string>
+    <string name="flights_unit_metres">Meter (m)</string>
+    <string name="flights_unit_feet">Fot (ft)</string>
+    <string name="flights_units_climb">Stigehastighet</string>
+    <string name="flights_unit_fpm">Fot per minutt (ft/min)</string>
+    <string name="flights_altitude_zero">Null</string>
+    <string name="flights_altitude_sea">Over havet</string>
+    <string name="flights_altitude_start">Over start · hold «Null» inne for å angre</string>
+    <string name="flights_sound_on">Lyd: på</string>
+    <string name="flights_sound_off">Lyd: av</string>
+    <string name="flights_sound_tune">Juster lyd</string>
+    <string name="flights_sound_climb_start">Pipene starter ved stigning på %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Lave pip starter ved synking på %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Vedvarende alarm ved synking på %1$.1f m/s</string>
+    <string name="flights_speed_label">Fart</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Flytid</string>
+    <string name="flights_distance">Avstand</string>
+    <string name="flights_max_speed">Toppfart</string>
+    <string name="flights_avg_speed">Snittfart</string>
+    <string name="flights_max_altitude">Maks. høyde</string>
+    <string name="flights_climb_rate">Stigehastighet</string>
+    <string name="flights_max_g">Toppbelastning</string>
+    <string name="flights_status_waiting">Venter på GPS-signal…</string>
+    <string name="flights_location_needed">Gi tilgang til nøyaktig posisjon for å ta opp hastighet, høyde og rute.</string>
+    <string name="flights_allow">Tillat</string>
+    <string name="flights_open_settings">Åpne appinnstillinger</string>
+    <string name="flights_gps_off">Slå på posisjonstjenester (GPS) for å ta opp en flyvning.</string>
+    <string name="flights_disclaimer">Bare for moro og nysgjerrighet. Ikke stol på disse instrumentene til navigasjon eller noe som gjelder sikkerhet.</string>
+</resources>

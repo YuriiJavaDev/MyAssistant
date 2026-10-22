@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Laster opp sikkerhetskopi til skyen...</string>
+    <string name="backup_cloud_restoring">Gjenoppretter sikkerhetskopi fra skyen...</string>
+    <string name="backup_cloud_upload_success">Sikkerhetskopien ble lastet opp til skyen</string>
+    <string name="backup_cloud_restore_success">Sikkerhetskopien ble gjenopprettet fra skyen</string>
+    <string name="backup_cloud_restore_partly">Oppgaver ble gjenopprettet fra skyen (fant ingen kopi der for: %1$s)</string>
+    <string name="backup_part_steps">skritt</string>
+    <string name="backup_part_flights">flyvninger</string>
+    <string name="backup_part_scans">skanninger</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Opplastingsfeil: %1$s</string>
+    <string name="backup_error_download">Nedlastingsfeil: %1$s</string>
+    <string name="backup_error_unknown">Ukjent feil</string>
+    <string name="backup_error_insecure_url">URL-en må starte med https://</string>
+    <string name="backup_error_authentication">Autentiseringen mislyktes: sjekk brukernavn og passord</string>
+    <string name="backup_error_server_code">Serveren svarte med kode: %1$d</string>
+    <string name="backup_error_connection">Tilkoblingsfeil: %1$s</string>
+    <string name="backup_destination_title">Lagre sikkerhetskopien i</string>
+    <string name="backup_destination_folder">Velg mappe (enhet, SD-kort, USB, Disk...)</string>
+    <string name="backup_destination_share">Del med app</string>
+    <string name="backup_preparing">Klargjør sikkerhetskopi...</string>
+    <string name="backup_export_failed">Eksporten mislyktes</string>
+    <string name="backup_export_saved">Sikkerhetskopien er lagret</string>
+    <string name="backup_import_success">Sikkerhetskopien ble importert. Starter på nytt...</string>
+    <string name="backup_import_failed">Importen mislyktes</string>
+    <string name="backup_import_title">Obs!</string>
+    <string name="backup_import_message">Gjenoppretting av en sikkerhetskopi erstatter dagens oppgaver, skritt og skanninger med de som ligger i den. Vil du virkelig fortsette?</string>
+    <string name="backup_import_confirm">Bekreft import</string>
+    <string name="backup_share_chooser_title">Eksporter sikkerhetskopi</string>
+    <string name="backup_cloud_settings_saved">Skyinnstillingene er lagret</string>
+    <string name="backup_cloud_secure_storage_unavailable">Sikker lagring er ikke tilgjengelig, innstillingene ble ikke lagret</string>
+    <string name="backup_cloud_url_empty">URL-en kan ikke være tom</string>
+    <string name="backup_cloud_testing">Tester tilkoblingen...</string>
+    <string name="backup_cloud_connection_successful">Tilkoblingen lyktes!</string>
+</resources>

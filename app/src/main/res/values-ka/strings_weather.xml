@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">მოწმენდილი ცა</string>
+    <string name="weather_description_mainly_clear">უმეტესად მოწმენდილი</string>
+    <string name="weather_description_partly_cloudy">ნაწილობრივ მოღრუბლული</string>
+    <string name="weather_description_overcast">მოღრუბლული</string>
+    <string name="weather_description_fog">ნისლი</string>
+    <string name="weather_description_rime_fog">ჭირხლიანი ნისლი</string>
+    <string name="weather_description_light_drizzle">მსუბუქი ბურბუშელა წვიმა</string>
+    <string name="weather_description_drizzle">ბურბუშელა წვიმა</string>
+    <string name="weather_description_dense_drizzle">ძლიერი ბურბუშელა წვიმა</string>
+    <string name="weather_description_light_freezing_drizzle">მსუბუქი ყინულოვანი ბურბუშელა</string>
+    <string name="weather_description_freezing_drizzle">ყინულოვანი ბურბუშელა</string>
+    <string name="weather_description_slight_rain">მცირე წვიმა</string>
+    <string name="weather_description_rain">წვიმა</string>
+    <string name="weather_description_heavy_rain">ძლიერი წვიმა</string>
+    <string name="weather_description_light_freezing_rain">მსუბუქი ყინულოვანი წვიმა</string>
+    <string name="weather_description_freezing_rain">ყინულოვანი წვიმა</string>
+    <string name="weather_description_slight_snow">მცირე თოვლი</string>
+    <string name="weather_description_snow">თოვლი</string>
+    <string name="weather_description_heavy_snow">ძლიერი თოვლი</string>
+    <string name="weather_description_snow_grains">თოვლის მარცვლები</string>
+    <string name="weather_description_light_rain_showers">მსუბუქი კოკისპირული წვიმა</string>
+    <string name="weather_description_rain_showers">კოკისპირული წვიმა</string>
+    <string name="weather_description_violent_rain_showers">ძლიერი კოკისპირული წვიმა</string>
+    <string name="weather_description_light_snow_showers">მსუბუქი თოვლის ჩაქ-ჩაქი</string>
+    <string name="weather_description_heavy_snow_showers">ძლიერი თოვლის ჩაქ-ჩაქი</string>
+    <string name="weather_description_thunderstorm">ჭექა-ქუხილი</string>
+    <string name="weather_description_thunderstorm_with_hail">ჭექა-ქუხილი სეტყვით</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">ჭექა-ქუხილი ძლიერი სეტყვით</string>
+    <string name="weather_description_unknown">უცნობია</string>
+    <string name="weather_moon_phase_new_moon">ახალმთვარე</string>
+    <string name="weather_moon_phase_waxing_crescent">მზარდი ნამგალა</string>
+    <string name="weather_moon_phase_first_quarter">პირველი მეოთხედი</string>
+    <string name="weather_moon_phase_waxing_gibbous">მზარდი მთვარე</string>
+    <string name="weather_moon_phase_full_moon">სავსემთვარე</string>
+    <string name="weather_moon_phase_waning_gibbous">კლებადი მთვარე</string>
+    <string name="weather_moon_phase_last_quarter">ბოლო მეოთხედი</string>
+    <string name="weather_moon_phase_waning_crescent">კლებადი ნამგალა</string>
+    <string name="weather_error_no_location">მდებარეობის დადგენა ვერ მოხერხდა. ჩართეთ მდებარეობის სერვისები ან მოძებნეთ ქალაქი</string>
+    <string name="weather_error_city_not_found">„%1$s“-ისთვის ქალაქი ვერ მოიძებნა</string>
+    <string name="weather_error_no_network">ამინდის ჩატვირთვა ვერ მოხერხდა. შეამოწმეთ ინტერნეტი</string>
+    <string name="weather_error_choose_city">აირჩიეთ ქალაქი სიიდან</string>
+    <string name="weather_current_location">მიმდინარე მდებარეობა</string>
+</resources>

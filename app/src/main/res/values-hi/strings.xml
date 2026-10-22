@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">रद्द करें</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">सेटिंग</string>
+    <string name="settings_alarms_title">रिमाइंडर और अलार्म</string>
+    <string name="settings_alarms_subtitle">अंतराल, ध्वनियाँ और सूचनाओं की स्थिति</string>
+    <string name="settings_display_title">डिस्प्ले मोड</string>
+    <string name="settings_display_subtitle">दिन / रात / ऑटो</string>
+    <string name="display_mode_title">डिस्प्ले मोड</string>
+    <string name="display_mode_light">हल्का (दिन)</string>
+    <string name="display_mode_dark">गहरा (रात)</string>
+    <string name="display_mode_system">सिस्टम (ऑटो)</string>
+    <string name="settings_design_title">ऐप का रूप</string>
+    <string name="settings_design_subtitle">इंटरफ़ेस के रूप के विकल्प</string>
+    <string name="design_classic_name">क्लासिक</string>
+    <string name="design_classic_about">मूल रूप: क्रीम और बैंगनी</string>
+    <string name="design_paper_ink_name">काग़ज़ और स्याही</string>
+    <string name="design_paper_ink_about">पतली रेखाएँ और संयमित ऑफ़िस रंग</string>
+    <string name="design_pastel_cloud_name">पेस्टल बादल</string>
+    <string name="design_pastel_cloud_about">कोमल, गोल और हल्का, बादलों के साथ</string>
+    <string name="design_neon_arcade_name">नियॉन आर्केड</string>
+    <string name="design_neon_arcade_about">चमकता नियॉन, गहरा कंट्रास्ट और रेट्रो सूरज</string>
+    <string name="design_toon_name">कार्टून</string>
+    <string name="design_toon_about">कॉमिक जैसी रेखाएँ और हाथ की लिखावट</string>
+    <string name="design_biker_name">बाइकर</string>
+    <string name="design_biker_about">खुरदरी धातु, रबर और साइलेंसर का नारंगी</string>
+    <string name="design_cockpit_name">कॉकपिट</string>
+    <string name="design_cockpit_about">ग्लाइडर के साथ सख़्त इंस्ट्रूमेंट पैनल</string>
+    <string name="design_beach_name">समुद्र तट</string>
+    <string name="design_beach_about">रेत, लैगून, मूँगे और ताड़ के पेड़</string>
+    <string name="design_forest_name">जादुई जंगल</string>
+    <string name="design_forest_about">चर्मपत्र, सोना और जंगल की काई</string>
+    <string name="design_mono_block_name">मोनोब्लॉक</string>
+    <string name="design_mono_block_about">एक पीले हाइलाइटर के साथ तीखा श्वेत-श्याम</string>
+    <string name="settings_permissions_title">सिस्टम अनुमतियाँ</string>
+    <string name="settings_permissions_subtitle">Android में पहुँच प्रबंधित करें</string>
+    <string-array name="filter_options">
+        <item>सभी कार्य</item>
+        <item>सक्रिय</item>
+        <item>पूर्ण</item>
+        <item>चेतावनियाँ</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>अ–ह</item>
+        <item>ह–अ</item>
+        <item>स्थिति</item>
+        <item>बनाए गए</item>
+        <item>संपादित</item>
+        <item>पूर्ण हुए</item>
+        <item>महत्व</item>
+        <item>समय-सीमा</item>
+    </string-array>
+    <string name="scan_camera">कैमरा</string>
+    <string name="scan_gallery">गैलरी</string>
+    <string name="scan_clear_all">सब साफ़ करें</string>
+    <string name="scan_cleared">सभी स्कैन हटा दिए गए</string>
+    <string name="scan_empty">अभी कोई दस्तावेज़ नहीं है। किसी पन्ने की फ़ोटो लें या गैलरी से फ़ोटो चुनें।</string>
+    <string name="scan_auto">ऑटो</string>
+    <string name="scan_reset">रीसेट</string>
+    <string name="scan_next">आगे</string>
+    <string name="scan_back">पीछे</string>
+    <string name="scan_save">सहेजें</string>
+    <string name="scan_rotate">घुमाएँ</string>
+    <string name="scan_paper">काग़ज़</string>
+    <string name="scan_filter_color">रंगीन</string>
+    <string name="scan_filter_gray">ग्रे</string>
+    <string name="scan_filter_bw">श्या/श्वे</string>
+    <string name="scan_tune">रोशनी और कंट्रास्ट</string>
+    <string name="scan_shadows">छाया हटाना</string>
+    <string name="scan_brightness">चमक</string>
+    <string name="scan_contrast">कंट्रास्ट</string>
+    <string name="scan_sharpen">शार्पनेस</string>
+    <string name="scan_page_saved">पन्ना सहेजा गया</string>
+    <string name="scan_next_page_question">दस्तावेज़ में एक और पन्ना जोड़ें?</string>
+    <string name="scan_page_label">पन्ना %d</string>
+    <string name="scan_done">हो गया</string>
+    <string name="scan_add_page">पन्ना जोड़ें</string>
+    <string name="scan_share_pdf">PDF भेजें</string>
+    <string name="scan_pages_empty">इस दस्तावेज़ में कोई पन्ना नहीं है।</string>
+    <string name="scan_saved_to_device">फ़ाइल सहेजी गई</string>
+    <string name="scan_share_title">दस्तावेज़ भेजें</string>
+    <string name="scan_rename_title">दस्तावेज़ का नाम बदलें</string>
+    <string name="scan_rename_confirm">नाम बदलें</string>
+    <string name="scan_error_load">यह फ़ोटो खोली नहीं जा सकती</string>
+    <string name="scan_error_preview">पूर्वावलोकन के लिए पर्याप्त मेमोरी नहीं है</string>
+    <string name="scan_error_save">स्कैन सहेजा नहीं जा सका</string>
+    <string name="scan_error_export">फ़ाइल तैयार नहीं की जा सकी</string>
+    <string name="scan_error_no_camera">कोई कैमरा ऐप नहीं मिला</string>
+    <string name="scan_error_no_viewer">छवि खोलने के लिए कोई ऐप नहीं मिला</string>
+    <string name="scan_error_no_app">साझा करने के लिए कोई ऐप नहीं मिला</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d पन्ने</item>
+        <item quantity="other">%d पन्ने</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>पन्ने</item>
+        <item>PDF के रूप में भेजें</item>
+        <item>JPEG के रूप में भेजें</item>
+        <item>PDF यहाँ सहेजें…</item>
+        <item>नाम बदलें</item>
+        <item>हटाएँ</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>देखें</item>
+        <item>JPEG यहाँ सहेजें…</item>
+        <item>ऊपर ले जाएँ</item>
+        <item>नीचे ले जाएँ</item>
+        <item>पन्ना हटाएँ</item>
+    </string-array>
+    <string name="weather_city_hint">किसी भी भाषा में शहर का नाम</string>
+    <string name="weather_search">खोजें</string>
+    <string name="weather_my_location">मेरा स्थान</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">महसूस होता है</string>
+    <string name="weather_humidity">आर्द्रता</string>
+    <string name="weather_wind">हवा</string>
+    <string name="weather_today_range">आज</string>
+    <string name="weather_units">इकाइयाँ</string>
+    <string name="weather_units_temperature">तापमान</string>
+    <string name="weather_units_wind">हवा की गति</string>
+    <string name="weather_unit_celsius">सेल्सियस (°C)</string>
+    <string name="weather_unit_fahrenheit">फ़ारेनहाइट (°F)</string>
+    <string name="weather_unit_ms">मीटर प्रति सेकंड (m/s)</string>
+    <string name="weather_unit_kmh">किलोमीटर प्रति घंटा (km/h)</string>
+    <string name="weather_moon_caption">%1$s · %2$d %% प्रकाशित</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">मौसम लोड हो रहा है…</string>
+    <string name="weather_location_needed">जहाँ आप हैं वहाँ का मौसम देखने के लिए अनुमानित स्थान की पहुँच दें, या कोई शहर खोजें।</string>
+    <string name="weather_allow">अनुमति दें</string>
+    <string name="weather_open_settings">ऐप सेटिंग खोलें</string>
+    <string name="weather_attribution">मौसम: Open-Meteo.com · स्थान: © OpenStreetMap योगदानकर्ता</string>
+    <string name="weather_choose_city">शहर चुनें</string>
+    <string name="steps_today">आज</string>
+    <string name="steps_unit">कदम</string>
+    <string name="steps_walk_run">चलना %1$s · दौड़ना %2$s</string>
+    <string name="steps_period">अवधि</string>
+    <string name="steps_last_7">7 दिन</string>
+    <string name="steps_last_30">30 दिन</string>
+    <string name="steps_this_month">यह माह</string>
+    <string name="steps_pick_dates">तारीख़ें चुनें</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">कुल कदम</string>
+    <string name="steps_distance">दूरी</string>
+    <string name="steps_average">दैनिक औसत</string>
+    <string name="steps_best_day">सर्वश्रेष्ठ दिन</string>
+    <string name="steps_walking">चलते समय के कदम</string>
+    <string name="steps_running">दौड़ते समय के कदम</string>
+    <string name="steps_active_days">कदमों वाले दिन</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%2$d में से %1$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">इस अवधि में कोई कदम दर्ज नहीं हुए</string>
+    <string name="steps_settings">कदम सेटिंग</string>
+    <string name="steps_settings_title">कदम की लंबाई</string>
+    <string name="steps_walk_length">चलते समय कदम की लंबाई, cm</string>
+    <string name="steps_run_length">दौड़ते समय कदम की लंबाई, cm</string>
+    <string name="steps_run_cadence">दौड़ना यहाँ से शुरू, कदम प्रति मिनट</string>
+    <string name="steps_run_cadence_hint">इस गति या इससे तेज़ कदम दौड़ना गिने जाते हैं।</string>
+    <string name="steps_defaults">डिफ़ॉल्ट</string>
+    <string name="steps_save">सहेजें</string>
+    <string name="steps_invalid_length">%1$d–%2$d दर्ज करें</string>
+    <string name="steps_measure_title">कदम की लंबाई कैसे मापें</string>
+    <string name="steps_measure_text">1. पहला कदम रखने से पहले जूते के अगले सिरे के पास शुरुआती रेखा खींचें।\n2. अपनी सामान्य गति से 10 शांत कदम चलें।\n3. 10वें कदम के बाद शुरुआती रेखा से जूते के उसी सिरे तक की दूरी सेंटीमीटर में नापें।\n4. उसे दस से भाग दें।\n5. कई बार दोहराएँ और औसत दर्ज करें।\n\nदौड़ने के कदम की लंबाई जानने के लिए अपनी सामान्य दौड़ की गति से यही करें।</string>
+    <string name="steps_no_sensor">इस फ़ोन में स्टेप सेंसर नहीं है।</string>
+    <string name="steps_permission_needed">फ़ोन आपके कदम गिन सके, इसके लिए शारीरिक गतिविधि की पहुँच दें।</string>
+    <string name="steps_allow">अनुमति दें</string>
+    <string name="steps_open_settings">ऐप सेटिंग खोलें</string>
+    <string name="currency_amount_hint">राशि</string>
+    <string name="currency_swap">अदला-बदली ⇅</string>
+    <string name="currency_refresh">दरें ताज़ा करें</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">दरें %1$s को अपडेट हुईं</string>
+    <string name="currency_outdated">इंटरनेट नहीं है। सहेजी हुई दरें दिख रही हैं, %1$s को अपडेट हुईं</string>
+    <string name="currency_loading">दरें लोड हो रही हैं…</string>
+    <string name="currency_unavailable">दरें उपलब्ध नहीं हैं। इंटरनेट कनेक्शन जाँचें और ताज़ा करें।</string>
+    <string name="currency_invalid_amount">राशि दर्ज करें</string>
+    <string name="currency_attribution">दरें Exchange Rate API से · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">वैज्ञा</string>
+    <string name="calculator_basic">सामा</string>
+    <string name="calculator_degrees">डिग्री</string>
+    <string name="calculator_radians">रेडि</string>
+    <string name="calculator_history">इतिहास</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">रिकॉर्डिंग शुरू</string>
+    <string name="flights_stop">रिकॉर्डिंग रोकें</string>
+    <string name="flights_units">इकाइयाँ</string>
+    <string name="flights_journal">लॉग</string>
+    <string name="flights_journal_title">उड़ान लॉग</string>
+    <string name="flights_journal_empty">अभी कोई उड़ान रिकॉर्ड नहीं हुई है।</string>
+    <string name="flights_journal_in_progress">यह उड़ान अभी रिकॉर्ड हो रही है।</string>
+    <string name="flights_report_open">रिपोर्ट खोलें</string>
+    <string name="flights_report_share">रिपोर्ट भेजें</string>
+    <string name="flights_report_delete">उड़ान हटाएँ</string>
+    <string name="flights_report_failed">रिपोर्ट तैयार नहीं की जा सकी।</string>
+    <string name="flights_report_no_viewer">PDF फ़ाइलें खोलने के लिए कोई ऐप नहीं मिला।</string>
+    <string name="flights_delete_title">यह उड़ान हटाएँ?</string>
+    <string name="flights_delete_message">मार्ग और रिपोर्ट हमेशा के लिए हट जाएँगे। उससे पहले आप रिपोर्ट कहीं भेज सकते हैं, जैसे USB ड्राइव, कंप्यूटर या Google Drive पर।</string>
+    <string name="flights_delete_save_first">रिपोर्ट सहेजें, फिर हटाएँ</string>
+    <string name="flights_delete_without_saving">बिना सहेजे हटाएँ</string>
+    <string name="flights_delete_after_share_message">अगर रिपोर्ट वहाँ पहुँच गई जहाँ आप चाहते थे, तो अब आप उड़ान हटा सकते हैं।</string>
+    <string name="flights_delete_after_share_confirm">उड़ान हटाएँ</string>
+    <string name="flights_delete_keep">उड़ान रखें</string>
+    <string name="flights_units_report_limit">रिपोर्ट सीमा</string>
+    <string name="flights_units_report_limit_hint">लॉग में PDF रिपोर्ट की अधिकतम संख्या, 0 का मतलब असीमित</string>
+    <string name="flights_limit_full_title">PDF रिपोर्ट की सीमा पूरी हो गई</string>
+    <string name="flights_limit_full_message">लॉग में %1$d रिपोर्ट हैं, जो सीमा है। नई उड़ान रिकॉर्ड करने के लिए लॉग से कम से कम एक उड़ान हटाएँ। उससे पहले आप उसकी रिपोर्ट USB ड्राइव, कंप्यूटर या Google Drive पर सहेज सकते हैं।</string>
+    <string name="flights_limit_warning_title">आप PDF रिपोर्ट की सीमा के क़रीब हैं!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">आप %d उड़ान और रिकॉर्ड कर सकते हैं। लॉग से पुरानी उड़ानें हटाएँ।</item>
+        <item quantity="other">आप %d उड़ान और रिकॉर्ड कर सकते हैं। लॉग से पुरानी उड़ानें हटाएँ।</item>
+    </plurals>
+    <string name="flights_limit_open_journal">लॉग खोलें</string>
+    <string name="flights_journal_line">%1$s · अधिकतम %2$s · ऊँचाई अधिकतम %3$s</string>
+    <string name="flights_units_speed">गति और दूरी</string>
+    <string name="flights_units_altitude">ऊँचाई</string>
+    <string name="flights_unit_kmh">किलोमीटर प्रति घंटा (km/h)</string>
+    <string name="flights_unit_knots">नॉट (kt, समुद्री मील)</string>
+    <string name="flights_unit_ms">मीटर प्रति सेकंड (m/s)</string>
+    <string name="flights_unit_metres">मीटर (m)</string>
+    <string name="flights_unit_feet">फ़ीट (ft)</string>
+    <string name="flights_units_climb">चढ़ाई की दर</string>
+    <string name="flights_unit_fpm">फ़ीट प्रति मिनट (ft/min)</string>
+    <string name="flights_altitude_zero">शून्य</string>
+    <string name="flights_altitude_sea">समुद्र तल से</string>
+    <string name="flights_altitude_start">शुरुआत से ऊपर · पूर्ववत करने के लिए “शून्य” दबाए रखें</string>
+    <string name="flights_sound_on">ध्वनि: चालू</string>
+    <string name="flights_sound_off">ध्वनि: बंद</string>
+    <string name="flights_sound_tune">ध्वनि सेट</string>
+    <string name="flights_sound_climb_start">%1$.1f m/s की चढ़ाई पर बीप शुरू होती है</string>
+    <string name="flights_sound_sink_start">%1$.1f m/s की गिरावट पर धीमी बीप शुरू होती है</string>
+    <string name="flights_sound_sink_alarm">%1$.1f m/s की गिरावट पर लगातार अलार्म</string>
+    <string name="flights_speed_label">गति</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">उड़ान का समय</string>
+    <string name="flights_distance">दूरी</string>
+    <string name="flights_max_speed">अधिकतम गति</string>
+    <string name="flights_avg_speed">औसत गति</string>
+    <string name="flights_max_altitude">अधिकतम ऊँचाई</string>
+    <string name="flights_climb_rate">चढ़ाई की दर</string>
+    <string name="flights_max_g">अधिकतम भार</string>
+    <string name="flights_status_waiting">GPS सिग्नल का इंतज़ार…</string>
+    <string name="flights_location_needed">गति, ऊँचाई और मार्ग रिकॉर्ड करने के लिए सटीक स्थान की पहुँच दें।</string>
+    <string name="flights_allow">अनुमति दें</string>
+    <string name="flights_open_settings">ऐप सेटिंग खोलें</string>
+    <string name="flights_gps_off">उड़ान रिकॉर्ड करने के लिए स्थान सेवाएँ (GPS) चालू करें।</string>
+    <string name="flights_disclaimer">केवल मनोरंजन और जिज्ञासा के लिए। नेविगेशन या सुरक्षा से जुड़ी किसी भी चीज़ के लिए इन उपकरणों पर भरोसा न करें।</string>
+</resources>

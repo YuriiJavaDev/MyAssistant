@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Repülésfelvétel</string>
+    <string name="flights_notification_channel_description">Repülés rögzítése közben jelenik meg</string>
+    <string name="flights_notification_title">Repülés rögzítése folyamatban</string>
+    <string name="flights_notification_text">Koppintson a műszerek megnyitásához</string>
+    <string-array name="flights_cardinal_points">
+        <item>É</item>
+        <item>ÉK</item>
+        <item>K</item>
+        <item>DK</item>
+        <item>D</item>
+        <item>DNY</item>
+        <item>NY</item>
+        <item>ÉNY</item>
+    </string-array>
+    <string name="flights_report_title">Repülési jelentés</string>
+    <string name="flights_report_north">É</string>
+    <string name="flights_report_side_north">É</string>
+    <string name="flights_report_side_south">D</string>
+    <string name="flights_report_side_east">K</string>
+    <string name="flights_report_side_west">NY</string>
+    <string name="flights_report_duration">Időtartam</string>
+    <string name="flights_report_distance">Távolság</string>
+    <string name="flights_report_top_speed">Legnagyobb sebesség</string>
+    <string name="flights_report_average_speed">Átlagsebesség</string>
+    <string name="flights_report_highest_altitude">Legnagyobb magasság</string>
+    <string name="flights_report_best_climb">Legjobb emelkedés</string>
+    <string name="flights_report_worst_sink">Legrosszabb süllyedés</string>
+    <string name="flights_report_peak_load">Csúcsterhelés</string>
+    <string name="flights_report_start_point">Rajtpont</string>
+    <string name="flights_report_end_point">Célpont</string>
+    <string name="flights_report_altitude_above_start">%1$s a start felett</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s a tengerszint felett</string>
+    <string name="flights_report_chart_altitude_above_start">Magasság (%1$s, a start felett)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Magasság (%1$s, a tengerszint felett)</string>
+    <string name="flights_report_chart_speed">Földhöz viszonyított sebesség (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Térkép: Natural Earth (közkincs).</string>
+    <string name="flights_report_footer">%1$s Rögzítve a MyAssistantban. Csak szórakozásra: nem navigációra vagy biztonságra.</string>
+</resources>

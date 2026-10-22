@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Zrušit</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Nastavení</string>
+    <string name="settings_alarms_title">Připomínky a budíky</string>
+    <string name="settings_alarms_subtitle">Intervaly, zvuky a stav oznámení</string>
+    <string name="settings_display_title">Režim zobrazení</string>
+    <string name="settings_display_subtitle">Den / Noc / Auto</string>
+    <string name="display_mode_title">Režim zobrazení</string>
+    <string name="display_mode_light">Světlý (den)</string>
+    <string name="display_mode_dark">Tmavý (noc)</string>
+    <string name="display_mode_system">Systémový (auto)</string>
+    <string name="settings_design_title">Vzhled aplikace</string>
+    <string name="settings_design_subtitle">Varianty vzhledu rozhraní</string>
+    <string name="design_classic_name">Klasický</string>
+    <string name="design_classic_about">Původní vzhled: krémová a fialová</string>
+    <string name="design_paper_ink_name">Papír a inkoust</string>
+    <string name="design_paper_ink_about">Tenké linky a tlumené obchodní tóny</string>
+    <string name="design_pastel_cloud_name">Pastelový mrak</string>
+    <string name="design_pastel_cloud_about">Měkký, zaoblený a bledý, s mraky</string>
+    <string name="design_neon_arcade_name">Neonová herna</string>
+    <string name="design_neon_arcade_about">Zářivý neon, silný kontrast a retro slunce</string>
+    <string name="design_toon_name">Kreslený</string>
+    <string name="design_toon_about">Komiksové obrysy a rukopisné písmo</string>
+    <string name="design_biker_name">Motorkář</string>
+    <string name="design_biker_about">Hrubý kov, guma a oranžová výfuku</string>
+    <string name="design_cockpit_name">Kokpit</string>
+    <string name="design_cockpit_about">Přísný palubní panel s větroněm</string>
+    <string name="design_beach_name">Pláž</string>
+    <string name="design_beach_about">Písek, laguna, korály a palmy</string>
+    <string name="design_forest_name">Zakletý les</string>
+    <string name="design_forest_about">Pergamen, zlato a lesní mech</string>
+    <string name="design_mono_block_name">Monoblok</string>
+    <string name="design_mono_block_about">Ostrá černobílá s jedním žlutým zvýrazňovačem</string>
+    <string name="settings_permissions_title">Systémová oprávnění</string>
+    <string name="settings_permissions_subtitle">Správa přístupu v systému Android</string>
+    <string-array name="filter_options">
+        <item>Všechny úkoly</item>
+        <item>Aktivní</item>
+        <item>Dokončené</item>
+        <item>Upozornění</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Stav</item>
+        <item>Vytvořené</item>
+        <item>Upravené</item>
+        <item>Dokončené</item>
+        <item>Důležitost</item>
+        <item>Termín</item>
+    </string-array>
+    <string name="scan_camera">Fotoaparát</string>
+    <string name="scan_gallery">Galerie</string>
+    <string name="scan_clear_all">Vymazat vše</string>
+    <string name="scan_cleared">Všechny skeny smazány</string>
+    <string name="scan_empty">Zatím žádné dokumenty. Vyfoťte stránku nebo vyberte fotku z galerie.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Obnovit</string>
+    <string name="scan_next">Další</string>
+    <string name="scan_back">Zpět</string>
+    <string name="scan_save">Uložit</string>
+    <string name="scan_rotate">Otočit</string>
+    <string name="scan_paper">Papír</string>
+    <string name="scan_filter_color">Barva</string>
+    <string name="scan_filter_gray">Šedá</string>
+    <string name="scan_filter_bw">Č/B</string>
+    <string name="scan_tune">Světlo a kontrast</string>
+    <string name="scan_shadows">Odstranění stínů</string>
+    <string name="scan_brightness">Jas</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Ostrost</string>
+    <string name="scan_page_saved">Stránka uložena</string>
+    <string name="scan_next_page_question">Přidat do dokumentu další stránku?</string>
+    <string name="scan_page_label">Stránka %d</string>
+    <string name="scan_done">Hotovo</string>
+    <string name="scan_add_page">Přidat stránku</string>
+    <string name="scan_share_pdf">Sdílet PDF</string>
+    <string name="scan_pages_empty">Tento dokument nemá žádné stránky.</string>
+    <string name="scan_saved_to_device">Soubor uložen</string>
+    <string name="scan_share_title">Sdílet dokument</string>
+    <string name="scan_rename_title">Přejmenovat dokument</string>
+    <string name="scan_rename_confirm">Přejmenovat</string>
+    <string name="scan_error_load">Tuto fotku nelze otevřít</string>
+    <string name="scan_error_preview">Nedostatek paměti pro náhled</string>
+    <string name="scan_error_save">Sken nelze uložit</string>
+    <string name="scan_error_export">Soubor nelze připravit</string>
+    <string name="scan_error_no_camera">Nebyla nalezena aplikace fotoaparátu</string>
+    <string name="scan_error_no_viewer">Nebyla nalezena aplikace pro otevření obrázku</string>
+    <string name="scan_error_no_app">Nebyla nalezena aplikace pro sdílení</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d stránka</item>
+        <item quantity="few">%d stránky</item>
+        <item quantity="many">%d stránky</item>
+        <item quantity="other">%d stránek</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Stránky</item>
+        <item>Sdílet jako PDF</item>
+        <item>Sdílet jako JPEG</item>
+        <item>Uložit PDF do…</item>
+        <item>Přejmenovat</item>
+        <item>Smazat</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Zobrazit</item>
+        <item>Uložit JPEG do…</item>
+        <item>Přesunout nahoru</item>
+        <item>Přesunout dolů</item>
+        <item>Smazat stránku</item>
+    </string-array>
+    <string name="weather_city_hint">Název města v libovolném jazyce</string>
+    <string name="weather_search">Hledat</string>
+    <string name="weather_my_location">Moje poloha</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Pocitově</string>
+    <string name="weather_humidity">Vlhkost</string>
+    <string name="weather_wind">Vítr</string>
+    <string name="weather_today_range">Dnes</string>
+    <string name="weather_units">Jednotky</string>
+    <string name="weather_units_temperature">Teplota</string>
+    <string name="weather_units_wind">Rychlost větru</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metry za sekundu (m/s)</string>
+    <string name="weather_unit_kmh">Kilometry za hodinu (km/h)</string>
+    <string name="weather_moon_caption">%1$s · osvětleno %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Načítání počasí…</string>
+    <string name="weather_location_needed">Povolte přístup k přibližné poloze, abyste viděli počasí tam, kde jste, nebo vyhledejte město.</string>
+    <string name="weather_allow">Povolit</string>
+    <string name="weather_open_settings">Otevřít nastavení aplikace</string>
+    <string name="weather_attribution">Počasí: Open-Meteo.com · Místa: © přispěvatelé OpenStreetMap</string>
+    <string name="weather_choose_city">Vyberte město</string>
+    <string name="steps_today">Dnes</string>
+    <string name="steps_unit">kroků</string>
+    <string name="steps_walk_run">Chůze %1$s · Běh %2$s</string>
+    <string name="steps_period">Období</string>
+    <string name="steps_last_7">7 dní</string>
+    <string name="steps_last_30">30 dní</string>
+    <string name="steps_this_month">Tento měsíc</string>
+    <string name="steps_pick_dates">Vybrat data</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Celkem kroků</string>
+    <string name="steps_distance">Vzdálenost</string>
+    <string name="steps_average">Průměr za den</string>
+    <string name="steps_best_day">Nejlepší den</string>
+    <string name="steps_walking">Kroky při chůzi</string>
+    <string name="steps_running">Kroky při běhu</string>
+    <string name="steps_active_days">Dny s kroky</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d z %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">V tomto období nebyly zaznamenány žádné kroky</string>
+    <string name="steps_settings">Nastavení kroků</string>
+    <string name="steps_settings_title">Délka kroku</string>
+    <string name="steps_walk_length">Délka kroku při chůzi, cm</string>
+    <string name="steps_run_length">Délka kroku při běhu, cm</string>
+    <string name="steps_run_cadence">Běh začíná od, kroků za minutu</string>
+    <string name="steps_run_cadence_hint">Kroky v tomto tempu nebo rychlejší se počítají jako běh.</string>
+    <string name="steps_defaults">Výchozí</string>
+    <string name="steps_save">Uložit</string>
+    <string name="steps_invalid_length">Zadejte %1$d–%2$d</string>
+    <string name="steps_measure_title">Jak změřit délku kroku</string>
+    <string name="steps_measure_text">1. Před prvním krokem označte startovní čáru u špičky boty.\n2. Udělejte 10 klidných kroků svým obvyklým tempem.\n3. Změřte vzdálenost od startovní čáry ke stejné špičce boty po 10. kroku v centimetrech.\n4. Vydělte ji deseti.\n5. Opakujte několikrát a zadejte průměr.\n\nStejně postupujte při svém běžném běžeckém tempu, abyste zjistili délku kroku při běhu.</string>
+    <string name="steps_no_sensor">Tento telefon nemá senzor kroků.</string>
+    <string name="steps_permission_needed">Povolte přístup k fyzické aktivitě, aby telefon mohl počítat vaše kroky.</string>
+    <string name="steps_allow">Povolit</string>
+    <string name="steps_open_settings">Otevřít nastavení aplikace</string>
+    <string name="currency_amount_hint">Částka</string>
+    <string name="currency_swap">Prohodit ⇅</string>
+    <string name="currency_refresh">Obnovit kurzy</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurzy aktualizovány %1$s</string>
+    <string name="currency_outdated">Bez internetu. Zobrazeny uložené kurzy, aktualizované %1$s</string>
+    <string name="currency_loading">Načítání kurzů…</string>
+    <string name="currency_unavailable">Kurzy nejsou k dispozici. Zkontrolujte připojení k internetu a obnovte.</string>
+    <string name="currency_invalid_amount">Zadejte částku</string>
+    <string name="currency_attribution">Kurzy z Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Věd</string>
+    <string name="calculator_basic">Zákl</string>
+    <string name="calculator_degrees">Stup</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Historie</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Spustit záznam</string>
+    <string name="flights_stop">Zastavit záznam</string>
+    <string name="flights_units">Jednotky</string>
+    <string name="flights_journal">Deník</string>
+    <string name="flights_journal_title">Letový deník</string>
+    <string name="flights_journal_empty">Zatím nebyly zaznamenány žádné lety.</string>
+    <string name="flights_journal_in_progress">Tento let se stále nahrává.</string>
+    <string name="flights_report_open">Otevřít zprávu</string>
+    <string name="flights_report_share">Sdílet zprávu</string>
+    <string name="flights_report_delete">Smazat let</string>
+    <string name="flights_report_failed">Zprávu se nepodařilo připravit.</string>
+    <string name="flights_report_no_viewer">Nebyla nalezena aplikace pro otevírání souborů PDF.</string>
+    <string name="flights_delete_title">Smazat tento let?</string>
+    <string name="flights_delete_message">Trasa a zpráva budou nenávratně odstraněny. Předtím můžete zprávu někam poslat, například na flash disk, do počítače nebo na Disk Google.</string>
+    <string name="flights_delete_save_first">Uložit zprávu a pak smazat</string>
+    <string name="flights_delete_without_saving">Smazat bez uložení</string>
+    <string name="flights_delete_after_share_message">Pokud zpráva dorazila, kam jste chtěli, můžete let nyní smazat.</string>
+    <string name="flights_delete_after_share_confirm">Smazat let</string>
+    <string name="flights_delete_keep">Ponechat let</string>
+    <string name="flights_units_report_limit">Limit zpráv</string>
+    <string name="flights_units_report_limit_hint">Maximální počet zpráv PDF v deníku, 0 bez limitu</string>
+    <string name="flights_limit_full_title">Dosažen limit zpráv PDF</string>
+    <string name="flights_limit_full_message">Deník obsahuje %1$d zpráv, což je limit. Chcete-li zaznamenat nový let, smažte z deníku alespoň jeden let. Předtím můžete jeho zprávu uložit na flash disk, do počítače nebo na Disk Google.</string>
+    <string name="flights_limit_warning_title">Blížíte se limitu zpráv PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Můžete zaznamenat ještě %d let. Smažte z deníku zastaralé lety.</item>
+        <item quantity="few">Můžete zaznamenat ještě %d lety. Smažte z deníku zastaralé lety.</item>
+        <item quantity="many">Můžete zaznamenat ještě %d letu. Smažte z deníku zastaralé lety.</item>
+        <item quantity="other">Můžete zaznamenat ještě %d letů. Smažte z deníku zastaralé lety.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Otevřít deník</string>
+    <string name="flights_journal_line">%1$s · max. %2$s · výška max. %3$s</string>
+    <string name="flights_units_speed">Rychlost a vzdálenost</string>
+    <string name="flights_units_altitude">Výška</string>
+    <string name="flights_unit_kmh">Kilometry za hodinu (km/h)</string>
+    <string name="flights_unit_knots">Uzly (kt, námořní míle)</string>
+    <string name="flights_unit_ms">Metry za sekundu (m/s)</string>
+    <string name="flights_unit_metres">Metry (m)</string>
+    <string name="flights_unit_feet">Stopy (ft)</string>
+    <string name="flights_units_climb">Rychlost stoupání</string>
+    <string name="flights_unit_fpm">Stopy za minutu (ft/min)</string>
+    <string name="flights_altitude_zero">Nula</string>
+    <string name="flights_altitude_sea">Nad mořem</string>
+    <string name="flights_altitude_start">Nad startem · podržením „Nula“ vrátíte zpět</string>
+    <string name="flights_sound_on">Zvuk: zapnut</string>
+    <string name="flights_sound_off">Zvuk: vypnut</string>
+    <string name="flights_sound_tune">Ladění zvuku</string>
+    <string name="flights_sound_climb_start">Pípání začíná při stoupání %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Nízké pípání začíná při klesání %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Nepřetržitý alarm při klesání %1$.1f m/s</string>
+    <string name="flights_speed_label">Rychlost</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Doba letu</string>
+    <string name="flights_distance">Vzdálenost</string>
+    <string name="flights_max_speed">Maximální rychlost</string>
+    <string name="flights_avg_speed">Průměrná rychlost</string>
+    <string name="flights_max_altitude">Nejvyšší výška</string>
+    <string name="flights_climb_rate">Rychlost stoupání</string>
+    <string name="flights_max_g">Špičkové zatížení</string>
+    <string name="flights_status_waiting">Čekání na signál GPS…</string>
+    <string name="flights_location_needed">Povolte přístup k přesné poloze, aby bylo možné zaznamenávat rychlost, výšku a trasu.</string>
+    <string name="flights_allow">Povolit</string>
+    <string name="flights_open_settings">Otevřít nastavení aplikace</string>
+    <string name="flights_gps_off">Zapněte služby určování polohy (GPS), abyste mohli zaznamenat let.</string>
+    <string name="flights_disclaimer">Jen pro zábavu a zvědavost. Nespoléhejte se na tyto přístroje při navigaci ani při ničem, co ovlivňuje bezpečnost.</string>
+</resources>

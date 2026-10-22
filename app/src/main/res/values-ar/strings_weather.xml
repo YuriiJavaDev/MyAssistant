@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">سماء صافية</string>
+    <string name="weather_description_mainly_clear">صافٍ في الغالب</string>
+    <string name="weather_description_partly_cloudy">غائم جزئيًا</string>
+    <string name="weather_description_overcast">ملبّد بالغيوم</string>
+    <string name="weather_description_fog">ضباب</string>
+    <string name="weather_description_rime_fog">ضباب صقيعي</string>
+    <string name="weather_description_light_drizzle">رذاذ خفيف</string>
+    <string name="weather_description_drizzle">رذاذ</string>
+    <string name="weather_description_dense_drizzle">رذاذ كثيف</string>
+    <string name="weather_description_light_freezing_drizzle">رذاذ متجمد خفيف</string>
+    <string name="weather_description_freezing_drizzle">رذاذ متجمد</string>
+    <string name="weather_description_slight_rain">مطر خفيف</string>
+    <string name="weather_description_rain">مطر</string>
+    <string name="weather_description_heavy_rain">مطر غزير</string>
+    <string name="weather_description_light_freezing_rain">مطر متجمد خفيف</string>
+    <string name="weather_description_freezing_rain">مطر متجمد</string>
+    <string name="weather_description_slight_snow">ثلج خفيف</string>
+    <string name="weather_description_snow">ثلج</string>
+    <string name="weather_description_heavy_snow">ثلوج كثيفة</string>
+    <string name="weather_description_snow_grains">حبيبات ثلج</string>
+    <string name="weather_description_light_rain_showers">زخات مطر خفيفة</string>
+    <string name="weather_description_rain_showers">زخات مطر</string>
+    <string name="weather_description_violent_rain_showers">زخات مطر عنيفة</string>
+    <string name="weather_description_light_snow_showers">زخات ثلج خفيفة</string>
+    <string name="weather_description_heavy_snow_showers">زخات ثلج كثيفة</string>
+    <string name="weather_description_thunderstorm">عاصفة رعدية</string>
+    <string name="weather_description_thunderstorm_with_hail">عاصفة رعدية مع برد</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">عاصفة رعدية مع برد كثيف</string>
+    <string name="weather_description_unknown">غير معروف</string>
+    <string name="weather_moon_phase_new_moon">محاق</string>
+    <string name="weather_moon_phase_waxing_crescent">هلال متزايد</string>
+    <string name="weather_moon_phase_first_quarter">التربيع الأول</string>
+    <string name="weather_moon_phase_waxing_gibbous">أحدب متزايد</string>
+    <string name="weather_moon_phase_full_moon">بدر</string>
+    <string name="weather_moon_phase_waning_gibbous">أحدب متناقص</string>
+    <string name="weather_moon_phase_last_quarter">التربيع الأخير</string>
+    <string name="weather_moon_phase_waning_crescent">هلال متناقص</string>
+    <string name="weather_error_no_location">تعذّر تحديد الموقع. شغّل خدمات الموقع أو ابحث عن مدينة.</string>
+    <string name="weather_error_city_not_found">لم يتم العثور على مدينة باسم \"%1$s\"</string>
+    <string name="weather_error_no_network">تعذّر تحميل الطقس. تحقق من اتصال الإنترنت.</string>
+    <string name="weather_error_choose_city">اختر مدينة من القائمة</string>
+    <string name="weather_current_location">الموقع الحالي</string>
+</resources>

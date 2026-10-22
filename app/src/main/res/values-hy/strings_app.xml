@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Առաջ.</string>
+    <string name="app_tab_weather">Եղանակ</string>
+    <string name="app_tab_exchange">Փոխար.</string>
+    <string name="app_tab_calculator">Հաշվիչ</string>
+    <string name="app_tab_scan">Սկան</string>
+    <string name="app_tab_steps">Քայլեր</string>
+    <string name="app_tab_flights">Թռիչք</string>
+    <string name="app_menu_settings">Կարգավորումներ</string>
+    <string name="app_menu_options">Ընտրանքներ</string>
+    <string name="app_notifications_disabled">Ծանուցումներն անջատված են. հիշեցումներ չեն ցուցադրվի</string>
+    <string name="app_overdue_tasks_format">Ժամկետանց առաջադրանքներ՝ %1$d</string>
+    <string name="app_exact_alarm_already_granted">Ճշգրիտ զարթուցիչի թույլտվությունն արդեն տրված է</string>
+    <string name="app_alarm_title">Հիշեցումներ և զարթուցիչներ</string>
+    <string name="app_alarm_voice_alert">Ձայնային ծանուցում (TTS)</string>
+    <string name="app_alarm_full_screen">Լիաէկրան պատուհան</string>
+    <string name="app_alarm_grant_exact">Տալ ճշգրիտ զարթուցիչի թույլտվություն</string>
+    <string name="backup_menu_export">Արտահանել պահուստային օրինակը</string>
+    <string name="backup_menu_import">Ներմուծել պահուստային օրինակը</string>
+    <string name="backup_menu_cloud_settings">Ամպի կարգավորումներ և ավտոպահուստ</string>
+    <string name="backup_menu_cloud_save">Պահել ամպում հիմա</string>
+    <string name="backup_menu_cloud_restore">Վերականգնել ամպից</string>
+    <string name="backup_cloud_username_hint">Օգտանուն/էլ. փոստ</string>
+    <string name="backup_cloud_password_hint">Գաղտնաբառ</string>
+    <string name="backup_cloud_auto_backup">Միացնել օրական ավտոպահուստը</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Երբ ավտոպահուստը միացված է, ձեր ամպային պահոցի տվյալների բազայի ֆայլը լռելյայն օրը մեկ անգամ վրագրվում է</string>
+    <string name="backup_cloud_test">Ստուգել</string>
+    <string name="backup_cloud_save">Պահել</string>
+    <string name="settings_language_title">Լեզու</string>
+    <string name="settings_language_subtitle">Հավելվածի լեզուն</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Καταγραφή πτήσης</string>
+    <string name="flights_notification_channel_description">Εμφανίζεται κατά την καταγραφή πτήσης</string>
+    <string name="flights_notification_title">Καταγράφεται πτήση</string>
+    <string name="flights_notification_text">Πατήστε για να ανοίξουν τα όργανα</string>
+    <string-array name="flights_cardinal_points">
+        <item>Β</item>
+        <item>ΒΑ</item>
+        <item>Α</item>
+        <item>ΝΑ</item>
+        <item>Ν</item>
+        <item>ΝΔ</item>
+        <item>Δ</item>
+        <item>ΒΔ</item>
+    </string-array>
+    <string name="flights_report_title">Αναφορά πτήσης</string>
+    <string name="flights_report_north">Β</string>
+    <string name="flights_report_side_north">Β</string>
+    <string name="flights_report_side_south">Ν</string>
+    <string name="flights_report_side_east">Α</string>
+    <string name="flights_report_side_west">Δ</string>
+    <string name="flights_report_duration">Διάρκεια</string>
+    <string name="flights_report_distance">Απόσταση</string>
+    <string name="flights_report_top_speed">Μέγιστη ταχύτητα</string>
+    <string name="flights_report_average_speed">Μέση ταχύτητα</string>
+    <string name="flights_report_highest_altitude">Μέγιστο ύψος</string>
+    <string name="flights_report_best_climb">Καλύτερη άνοδος</string>
+    <string name="flights_report_worst_sink">Χειρότερη κάθοδος</string>
+    <string name="flights_report_peak_load">Μέγιστο φορτίο</string>
+    <string name="flights_report_start_point">Σημείο εκκίνησης</string>
+    <string name="flights_report_end_point">Σημείο τερματισμού</string>
+    <string name="flights_report_altitude_above_start">%1$s πάνω από την εκκίνηση</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s πάνω από την επιφάνεια της θάλασσας</string>
+    <string name="flights_report_chart_altitude_above_start">Ύψος (%1$s, πάνω από την εκκίνηση)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Ύψος (%1$s, πάνω από την επιφάνεια της θάλασσας)</string>
+    <string name="flights_report_chart_speed">Ταχύτητα ως προς το έδαφος (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Χάρτης: Natural Earth (κοινό κτήμα).</string>
+    <string name="flights_report_footer">%1$s Καταγράφηκε στο MyAssistant. Μόνο για διασκέδαση: όχι για πλοήγηση ή ασφάλεια.</string>
+</resources>

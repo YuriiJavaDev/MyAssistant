@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Origineel</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Scan %1$s</string>
+    <string name="scan_delete_page_message">Deze pagina verwijderen? Deze actie kan niet ongedaan worden gemaakt!</string>
+    <string name="scan_delete_document_message">“%1$s” met alle pagina’s verwijderen? Deze actie kan niet ongedaan worden gemaakt!</string>
+    <string name="scan_delete_all_message">Alles verwijderen: %1$s met %2$s? Deze actie kan niet ongedaan worden gemaakt!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="one">%d document</item>
+        <item quantity="other">%d documenten</item>
+    </plurals>
+</resources>

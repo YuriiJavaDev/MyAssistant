@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">비행 기록</string>
+    <string name="flights_notification_channel_description">비행을 기록하는 동안 표시됩니다</string>
+    <string name="flights_notification_title">비행을 기록하는 중</string>
+    <string name="flights_notification_text">눌러서 계기 열기</string>
+    <string-array name="flights_cardinal_points">
+        <item>북</item>
+        <item>북동</item>
+        <item>동</item>
+        <item>남동</item>
+        <item>남</item>
+        <item>남서</item>
+        <item>서</item>
+        <item>북서</item>
+    </string-array>
+    <string name="flights_report_title">비행 보고서</string>
+    <string name="flights_report_north">북</string>
+    <string name="flights_report_side_north">북</string>
+    <string name="flights_report_side_south">남</string>
+    <string name="flights_report_side_east">동</string>
+    <string name="flights_report_side_west">서</string>
+    <string name="flights_report_duration">소요 시간</string>
+    <string name="flights_report_distance">거리</string>
+    <string name="flights_report_top_speed">최고 속도</string>
+    <string name="flights_report_average_speed">평균 속도</string>
+    <string name="flights_report_highest_altitude">최대 고도</string>
+    <string name="flights_report_best_climb">최고 상승</string>
+    <string name="flights_report_worst_sink">최대 하강</string>
+    <string name="flights_report_peak_load">최대 하중</string>
+    <string name="flights_report_start_point">출발 지점</string>
+    <string name="flights_report_end_point">도착 지점</string>
+    <string name="flights_report_altitude_above_start">출발점보다 %1$s 위</string>
+    <string name="flights_report_altitude_above_sea_level">해발 %1$s</string>
+    <string name="flights_report_chart_altitude_above_start">고도 (%1$s, 출발점 기준)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">고도 (%1$s, 해발)</string>
+    <string name="flights_report_chart_speed">대지 속도 (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">지도: Natural Earth (퍼블릭 도메인).</string>
+    <string name="flights_report_footer">%1$s MyAssistant로 기록됨. 오락 전용: 항법이나 안전용이 아닙니다.</string>
+</resources>

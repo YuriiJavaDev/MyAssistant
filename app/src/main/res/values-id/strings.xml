@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Batal</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_alarms_title">Pengingat dan alarm</string>
+    <string name="settings_alarms_subtitle">Interval, suara, dan status notifikasi</string>
+    <string name="settings_display_title">Mode tampilan</string>
+    <string name="settings_display_subtitle">Siang / malam / otomatis</string>
+    <string name="display_mode_title">Mode tampilan</string>
+    <string name="display_mode_light">Terang (siang)</string>
+    <string name="display_mode_dark">Gelap (malam)</string>
+    <string name="display_mode_system">Ikuti sistem (otomatis)</string>
+    <string name="settings_design_title">Tampilan aplikasi</string>
+    <string name="settings_design_subtitle">Pilihan gaya antarmuka</string>
+    <string name="design_classic_name">Klasik</string>
+    <string name="design_classic_about">Tampilan awal: krem dan ungu</string>
+    <string name="design_paper_ink_name">Kertas dan tinta</string>
+    <string name="design_paper_ink_about">Garis tipis dan warna kantor yang tenang</string>
+    <string name="design_pastel_cloud_name">Awan pastel</string>
+    <string name="design_pastel_cloud_about">Lembut, bulat, dan pucat dengan awan</string>
+    <string name="design_neon_arcade_name">Arkade neon</string>
+    <string name="design_neon_arcade_about">Neon terang, kontras tinggi, dan matahari retro</string>
+    <string name="design_toon_name">Kartun</string>
+    <string name="design_toon_about">Garis tepi ala komik dan huruf tulisan tangan</string>
+    <string name="design_biker_name">Biker</string>
+    <string name="design_biker_about">Logam kasar, karet, dan oranye knalpot</string>
+    <string name="design_cockpit_name">Kokpit</string>
+    <string name="design_cockpit_about">Panel instrumen yang tegas dengan pesawat layang</string>
+    <string name="design_beach_name">Pantai</string>
+    <string name="design_beach_about">Pasir, laguna, karang, dan pohon palem</string>
+    <string name="design_forest_name">Hutan ajaib</string>
+    <string name="design_forest_about">Perkamen, emas, dan lumut hutan</string>
+    <string name="design_mono_block_name">Monoblok</string>
+    <string name="design_mono_block_about">Hitam putih tegas dengan satu stabilo kuning</string>
+    <string name="settings_permissions_title">Izin sistem</string>
+    <string name="settings_permissions_subtitle">Kelola akses di Android</string>
+    <string-array name="filter_options">
+        <item>Semua tugas</item>
+        <item>Aktif</item>
+        <item>Selesai</item>
+        <item>Peringatan</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Status</item>
+        <item>Tanggal dibuat</item>
+        <item>Tanggal diubah</item>
+        <item>Tanggal selesai</item>
+        <item>Prioritas</item>
+        <item>Tenggat</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galeri</string>
+    <string name="scan_clear_all">Hapus semua</string>
+    <string name="scan_cleared">Semua pindaian dihapus</string>
+    <string name="scan_empty">Belum ada dokumen. Foto sebuah halaman atau pilih gambar dari galeri</string>
+    <string name="scan_auto">Otomatis</string>
+    <string name="scan_reset">Reset</string>
+    <string name="scan_next">Lanjut</string>
+    <string name="scan_back">Kembali</string>
+    <string name="scan_save">Simpan</string>
+    <string name="scan_rotate">Putar</string>
+    <string name="scan_paper">Kertas</string>
+    <string name="scan_filter_color">Warna</string>
+    <string name="scan_filter_gray">Abu-abu</string>
+    <string name="scan_filter_bw">H&amp;P</string>
+    <string name="scan_tune">Cahaya dan kontras</string>
+    <string name="scan_shadows">Hapus bayangan</string>
+    <string name="scan_brightness">Kecerahan</string>
+    <string name="scan_contrast">Kontras</string>
+    <string name="scan_sharpen">Ketajaman</string>
+    <string name="scan_page_saved">Halaman disimpan</string>
+    <string name="scan_next_page_question">Tambahkan halaman lain ke dokumen?</string>
+    <string name="scan_page_label">Halaman %d</string>
+    <string name="scan_done">Selesai</string>
+    <string name="scan_add_page">Tambah halaman</string>
+    <string name="scan_share_pdf">Kirim PDF</string>
+    <string name="scan_pages_empty">Dokumen ini tidak memiliki halaman</string>
+    <string name="scan_saved_to_device">File disimpan</string>
+    <string name="scan_share_title">Bagikan dokumen</string>
+    <string name="scan_rename_title">Ganti nama dokumen</string>
+    <string name="scan_rename_confirm">Ganti nama</string>
+    <string name="scan_error_load">Gambar ini tidak dapat dibuka</string>
+    <string name="scan_error_preview">Memori tidak cukup untuk pratinjau</string>
+    <string name="scan_error_save">Pindaian tidak dapat disimpan</string>
+    <string name="scan_error_export">File tidak dapat disiapkan</string>
+    <string name="scan_error_no_camera">Aplikasi kamera tidak ditemukan</string>
+    <string name="scan_error_no_viewer">Tidak ada aplikasi untuk membuka gambar</string>
+    <string name="scan_error_no_app">Tidak ada aplikasi untuk membagikan</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d halaman</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Halaman</item>
+        <item>Bagikan sebagai PDF</item>
+        <item>Bagikan sebagai JPEG</item>
+        <item>Simpan PDF ke…</item>
+        <item>Ganti nama</item>
+        <item>Hapus</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Lihat</item>
+        <item>Simpan JPEG ke…</item>
+        <item>Pindah ke atas</item>
+        <item>Pindah ke bawah</item>
+        <item>Hapus halaman</item>
+    </string-array>
+    <string name="weather_city_hint">Nama kota dalam bahasa apa pun</string>
+    <string name="weather_search">Cari</string>
+    <string name="weather_my_location">Lokasi saya</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Terasa seperti</string>
+    <string name="weather_humidity">Kelembapan</string>
+    <string name="weather_wind">Angin</string>
+    <string name="weather_today_range">Hari ini</string>
+    <string name="weather_units">Satuan</string>
+    <string name="weather_units_temperature">Suhu</string>
+    <string name="weather_units_wind">Kecepatan angin</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Meter per detik (m/s)</string>
+    <string name="weather_unit_kmh">Kilometer per jam (km/h)</string>
+    <string name="weather_moon_caption">%1$s · menyala %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Memuat cuaca…</string>
+    <string name="weather_location_needed">Izinkan akses ke perkiraan lokasi untuk melihat cuaca di tempat Anda, atau cari sebuah kota</string>
+    <string name="weather_allow">Izinkan</string>
+    <string name="weather_open_settings">Buka pengaturan aplikasi</string>
+    <string name="weather_attribution">Cuaca: Open-Meteo.com · Tempat: © kontributor OpenStreetMap</string>
+    <string name="weather_choose_city">Pilih kota</string>
+    <string name="steps_today">Hari ini</string>
+    <string name="steps_unit">langkah</string>
+    <string name="steps_walk_run">jalan %1$s · lari %2$s</string>
+    <string name="steps_period">Periode</string>
+    <string name="steps_last_7">7 hari</string>
+    <string name="steps_last_30">30 hari</string>
+    <string name="steps_this_month">Bulan ini</string>
+    <string name="steps_pick_dates">Pilih tanggal</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Total langkah</string>
+    <string name="steps_distance">Jarak</string>
+    <string name="steps_average">Rata-rata per hari</string>
+    <string name="steps_best_day">Hari terbaik</string>
+    <string name="steps_walking">Langkah jalan</string>
+    <string name="steps_running">Langkah lari</string>
+    <string name="steps_active_days">Hari dengan langkah</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d dari %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Tidak ada langkah tercatat pada periode ini</string>
+    <string name="steps_settings">Pengaturan langkah</string>
+    <string name="steps_settings_title">Panjang langkah</string>
+    <string name="steps_walk_length">Panjang langkah saat jalan, cm</string>
+    <string name="steps_run_length">Panjang langkah saat lari, cm</string>
+    <string name="steps_run_cadence">Dihitung sebagai lari mulai dari, langkah per menit</string>
+    <string name="steps_run_cadence_hint">Langkah dengan irama ini atau lebih cepat dihitung sebagai lari</string>
+    <string name="steps_defaults">Bawaan</string>
+    <string name="steps_save">Simpan</string>
+    <string name="steps_invalid_length">Masukkan nilai %1$d–%2$d</string>
+    <string name="steps_measure_title">Cara mengukur panjang langkah</string>
+    <string name="steps_measure_text">1. Sebelum langkah pertama, tandai garis awal di ujung sepatu.\n2. Berjalanlah 10 langkah santai dengan kecepatan biasa.\n3. Setelah langkah ke-10, ukur jarak dari garis awal ke ujung sepatu yang sama dalam sentimeter.\n4. Bagi dengan sepuluh.\n5. Ulangi beberapa kali dan masukkan rata-ratanya.\n\nUntuk panjang langkah lari, lakukan hal yang sama dengan irama lari biasa Anda.</string>
+    <string name="steps_no_sensor">Ponsel ini tidak memiliki sensor langkah</string>
+    <string name="steps_permission_needed">Izinkan akses aktivitas fisik agar ponsel dapat menghitung langkah Anda</string>
+    <string name="steps_allow">Izinkan</string>
+    <string name="steps_open_settings">Buka pengaturan aplikasi</string>
+    <string name="currency_amount_hint">Jumlah</string>
+    <string name="currency_swap">Tukar ⇅</string>
+    <string name="currency_refresh">Perbarui kurs</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurs diperbarui %1$s</string>
+    <string name="currency_outdated">Tidak ada internet, menampilkan kurs tersimpan dari %1$s</string>
+    <string name="currency_loading">Memuat kurs…</string>
+    <string name="currency_unavailable">Kurs tidak tersedia. Periksa koneksi internet lalu perbarui</string>
+    <string name="currency_invalid_amount">Masukkan jumlah</string>
+    <string name="currency_attribution">Kurs dari Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Ilmiah</string>
+    <string name="calculator_basic">Dasar</string>
+    <string name="calculator_degrees">Derajat</string>
+    <string name="calculator_radians">Radian</string>
+    <string name="calculator_history">Riwayat</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Mulai</string>
+    <string name="flights_stop">Stop</string>
+    <string name="flights_units">Satuan</string>
+    <string name="flights_journal">Jurnal</string>
+    <string name="flights_journal_title">Jurnal penerbangan</string>
+    <string name="flights_journal_empty">Belum ada penerbangan yang direkam</string>
+    <string name="flights_journal_in_progress">Penerbangan ini sedang direkam</string>
+    <string name="flights_report_open">Buka laporan</string>
+    <string name="flights_report_share">Bagikan laporan</string>
+    <string name="flights_report_delete">Hapus penerbangan</string>
+    <string name="flights_report_failed">Laporan tidak dapat disiapkan</string>
+    <string name="flights_report_no_viewer">Tidak ada aplikasi untuk membuka file PDF</string>
+    <string name="flights_delete_title">Hapus penerbangan ini?</string>
+    <string name="flights_delete_message">Jalur dan laporannya akan dihapus permanen. Sebelumnya Anda dapat mengirim laporan ke tempat lain, misalnya flash disk, komputer, atau Google Drive</string>
+    <string name="flights_delete_save_first">Simpan laporan lalu hapus</string>
+    <string name="flights_delete_without_saving">Hapus tanpa menyimpan</string>
+    <string name="flights_delete_after_share_message">Jika laporan sudah sampai ke tujuan, sekarang Anda dapat menghapus penerbangan</string>
+    <string name="flights_delete_after_share_confirm">Hapus penerbangan</string>
+    <string name="flights_delete_keep">Simpan penerbangan</string>
+    <string name="flights_units_report_limit">Batas laporan</string>
+    <string name="flights_units_report_limit_hint">Jumlah maksimum laporan PDF di jurnal. 0 berarti tanpa batas</string>
+    <string name="flights_limit_full_title">Batas laporan PDF tercapai</string>
+    <string name="flights_limit_full_message">Jurnal berisi %1$d laporan, yaitu batasnya. Untuk merekam penerbangan baru, hapus setidaknya satu penerbangan dari jurnal. Sebelumnya Anda dapat menyimpan laporannya ke flash disk, komputer, atau Google Drive</string>
+    <string name="flights_limit_warning_title">Batas laporan PDF hampir tercapai!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">Anda masih dapat merekam %d penerbangan. Hapus penerbangan lama dari jurnal</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Buka jurnal</string>
+    <string name="flights_journal_line">%1$s · maks %2$s · ketinggian maks %3$s</string>
+    <string name="flights_units_speed">Kecepatan dan jarak</string>
+    <string name="flights_units_altitude">Ketinggian</string>
+    <string name="flights_unit_kmh">Kilometer per jam (km/h)</string>
+    <string name="flights_unit_knots">Knot (kt, mil laut)</string>
+    <string name="flights_unit_ms">Meter per detik (m/s)</string>
+    <string name="flights_unit_metres">Meter (m)</string>
+    <string name="flights_unit_feet">Kaki (ft)</string>
+    <string name="flights_units_climb">Laju naik</string>
+    <string name="flights_unit_fpm">Kaki per menit (ft/min)</string>
+    <string name="flights_altitude_zero">Nol</string>
+    <string name="flights_altitude_sea">Di atas permukaan laut</string>
+    <string name="flights_altitude_start">Di atas titik awal · tahan “Nol” untuk membatalkan</string>
+    <string name="flights_sound_on">Suara: nyala</string>
+    <string name="flights_sound_off">Suara: mati</string>
+    <string name="flights_sound_tune">Atur suara</string>
+    <string name="flights_sound_climb_start">Bip mulai saat naik %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Bip rendah mulai saat turun %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Alarm terus-menerus saat turun %1$.1f m/s</string>
+    <string name="flights_speed_label">Kecepatan</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Waktu terbang</string>
+    <string name="flights_distance">Jarak</string>
+    <string name="flights_max_speed">Kecepatan maks</string>
+    <string name="flights_avg_speed">Kecepatan rata-rata</string>
+    <string name="flights_max_altitude">Ketinggian maks</string>
+    <string name="flights_climb_rate">Laju naik</string>
+    <string name="flights_max_g">Beban maks</string>
+    <string name="flights_status_waiting">Menunggu sinyal GPS…</string>
+    <string name="flights_location_needed">Izinkan akses ke lokasi akurat untuk merekam kecepatan, ketinggian, dan jalur</string>
+    <string name="flights_allow">Izinkan</string>
+    <string name="flights_open_settings">Buka pengaturan aplikasi</string>
+    <string name="flights_gps_off">Aktifkan layanan lokasi (GPS) untuk merekam penerbangan</string>
+    <string name="flights_disclaimer">Hanya untuk hiburan dan rasa ingin tahu. Jangan mengandalkan alat ini untuk navigasi atau hal yang menyangkut keselamatan</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">ასლი ღრუბელში იტვირთება...</string>
+    <string name="backup_cloud_restoring">ასლი ღრუბლიდან აღდგება...</string>
+    <string name="backup_cloud_upload_success">ასლი ღრუბელში აიტვირთა</string>
+    <string name="backup_cloud_restore_success">ასლი ღრუბლიდან აღდგა</string>
+    <string name="backup_cloud_restore_partly">ამოცანები ღრუბლიდან აღდგა (ასლი ვერ მოიძებნა: %1$s)</string>
+    <string name="backup_part_steps">ნაბიჯები</string>
+    <string name="backup_part_flights">ფრენები</string>
+    <string name="backup_part_scans">სკანები</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">ატვირთვის შეცდომა: %1$s</string>
+    <string name="backup_error_download">ჩამოტვირთვის შეცდომა: %1$s</string>
+    <string name="backup_error_unknown">უცნობი შეცდომა</string>
+    <string name="backup_error_insecure_url">URL უნდა იწყებოდეს https://-ით</string>
+    <string name="backup_error_authentication">ავტორიზაცია ვერ მოხერხდა: შეამოწმეთ მომხმარებლის სახელი და პაროლი</string>
+    <string name="backup_error_server_code">სერვერმა უპასუხა კოდით: %1$d</string>
+    <string name="backup_error_connection">კავშირის შეცდომა: %1$s</string>
+    <string name="backup_destination_title">ასლის შენახვა</string>
+    <string name="backup_destination_folder">აირჩიეთ საქაღალდე (მოწყობილობა, SD ბარათი, USB, Drive...)</string>
+    <string name="backup_destination_share">აპში გაზიარება</string>
+    <string name="backup_preparing">ასლი მზადდება...</string>
+    <string name="backup_export_failed">ექსპორტი ვერ მოხერხდა</string>
+    <string name="backup_export_saved">ასლი შეინახა</string>
+    <string name="backup_import_success">ასლი წარმატებით დაიმპორტდა. ხელახლა იწყება...</string>
+    <string name="backup_import_failed">იმპორტი ვერ მოხერხდა</string>
+    <string name="backup_import_title">ყურადღება!</string>
+    <string name="backup_import_message">ასლის აღდგენა მიმდინარე ამოცანებს, ნაბიჯებსა და სკანებს მასში შენახული მონაცემებით ჩაანაცვლებს. გავაგრძელოთ?</string>
+    <string name="backup_import_confirm">იმპორტის დადასტურება</string>
+    <string name="backup_share_chooser_title">ასლის ექსპორტი</string>
+    <string name="backup_cloud_settings_saved">ღრუბლის პარამეტრები შეინახა</string>
+    <string name="backup_cloud_secure_storage_unavailable">დაცული საცავი მიუწვდომელია, პარამეტრები არ შეინახა</string>
+    <string name="backup_cloud_url_empty">URL არ შეიძლება იყოს ცარიელი</string>
+    <string name="backup_cloud_testing">კავშირი მოწმდება...</string>
+    <string name="backup_cloud_connection_successful">კავშირი წარმატებულია!</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculator_error_invalid_input">輸入無效</string>
+    <string name="calculator_error_invalid_expression">表達式無效</string>
+    <string name="calculator_error_division_by_zero">除以零</string>
+    <string name="calculator_error_result_too_large">結果過大</string>
+    <string name="calculator_error_undefined">未定義</string>
+    <string name="calculator_error_expression_too_long">表達式過長</string>
+    <string name="calculator_error_expression_too_complex">表達式過於復雜</string>
+</resources>

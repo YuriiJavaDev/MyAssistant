@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">งาน</string>
+    <string name="app_tab_weather">อากาศ</string>
+    <string name="app_tab_exchange">อัตรา</string>
+    <string name="app_tab_calculator">คิดเลข</string>
+    <string name="app_tab_scan">สแกน</string>
+    <string name="app_tab_steps">ก้าว</string>
+    <string name="app_tab_flights">เที่ยวบิน</string>
+    <string name="app_menu_settings">การตั้งค่า</string>
+    <string name="app_menu_options">ตัวเลือก</string>
+    <string name="app_notifications_disabled">ปิดการแจ้งเตือนอยู่: จะไม่แสดงการเตือน</string>
+    <string name="app_overdue_tasks_format">งานที่เลยกำหนด: %1$d</string>
+    <string name="app_exact_alarm_already_granted">ให้สิทธิ์นาฬิกาปลุกแบบแม่นยำแล้ว</string>
+    <string name="app_alarm_title">การเตือนและนาฬิกาปลุก</string>
+    <string name="app_alarm_voice_alert">การแจ้งเตือนด้วยเสียง (TTS)</string>
+    <string name="app_alarm_full_screen">หน้าต่างเต็มหน้าจอ</string>
+    <string name="app_alarm_grant_exact">ให้สิทธิ์นาฬิกาปลุกแบบแม่นยำ</string>
+    <string name="backup_menu_export">ส่งออกข้อมูลสำรอง</string>
+    <string name="backup_menu_import">นำเข้าข้อมูลสำรอง</string>
+    <string name="backup_menu_cloud_settings">การตั้งค่าคลาวด์และการสำรองอัตโนมัติ</string>
+    <string name="backup_menu_cloud_save">บันทึกลงคลาวด์ตอนนี้</string>
+    <string name="backup_menu_cloud_restore">กู้คืนจากคลาวด์</string>
+    <string name="backup_cloud_username_hint">ชื่อผู้ใช้/อีเมล</string>
+    <string name="backup_cloud_password_hint">รหัสผ่าน</string>
+    <string name="backup_cloud_auto_backup">เปิดการสำรองอัตโนมัติรายวัน</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ เมื่อเปิดการสำรองอัตโนมัติ ไฟล์ฐานข้อมูลในที่เก็บข้อมูลคลาวด์ของคุณจะถูกเขียนทับวันละครั้งตามค่าเริ่มต้น</string>
+    <string name="backup_cloud_test">ทดสอบ</string>
+    <string name="backup_cloud_save">บันทึก</string>
+    <string name="settings_language_title">ภาษา</string>
+    <string name="settings_language_subtitle">ภาษาของแอป</string>
+</resources>

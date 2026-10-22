@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">کیا کرنا ہے؟</string>
+    <string name="tasks_list_add">شامل کریں</string>
+    <string name="tasks_list_delete_completed">مکمل حذف کریں</string>
+    <string name="tasks_list_clear_all">سب صاف کریں</string>
+    <string name="tasks_list_reminder_set">یاد دہانی مقرر ہو گئی</string>
+    <string name="tasks_statistics">کل: %1$d  مکمل: %2$d  باقی: %3$d  پیش رفت: %4$d %%</string>
+    <string name="tasks_dialog_title_add">نیا کام</string>
+    <string name="tasks_dialog_title_edit">کام میں ترمیم</string>
+    <string name="tasks_dialog_importance">اہمیت کی سطح:</string>
+    <string name="tasks_dialog_deadline_label">آخری تاریخ:</string>
+    <string name="tasks_dialog_deadline_select">آخری تاریخ منتخب کریں</string>
+    <string name="tasks_dialog_reminder_label">یاد دہانی (تاریخ اور وقت):</string>
+    <string name="tasks_dialog_reminder_select">یاد دہانی کی تاریخ اور وقت منتخب کریں</string>
+    <string name="tasks_dialog_show_timestamps">تخلیق/ترمیم کی تاریخیں دکھائیں</string>
+    <string name="tasks_dialog_delete">حذف</string>
+    <string name="tasks_dialog_save">محفوظ</string>
+    <string name="tasks_dialog_clear">صاف</string>
+    <string name="tasks_importance_normal">عام</string>
+    <string name="tasks_importance_important">اہم</string>
+    <string name="tasks_importance_urgent">فوری</string>
+    <string name="tasks_toast_created">کام بن گیا</string>
+    <string name="tasks_toast_updated">کام اپ ڈیٹ ہو گیا</string>
+    <string name="tasks_toast_deleted">کام حذف ہو گیا</string>
+    <string name="tasks_toast_completed_deleted">مکمل کام حذف ہو گئے</string>
+    <string name="tasks_toast_all_cleared">تمام کام صاف ہو گئے</string>
+    <string name="tasks_toast_empty_title">کام کی تفصیل خالی نہیں ہو سکتی</string>
+    <string name="tasks_toast_reminder_after_deadline">یاد دہانی آخری تاریخ کے بعد نہیں ہو سکتی!</string>
+    <string name="tasks_toast_reminder_in_past">یاد دہانی ماضی میں نہیں ہو سکتی!</string>
+    <string name="tasks_toast_reminder_cleared">آخری تاریخ پہلے ہونے کی وجہ سے یاد دہانی صاف کر دی گئی!</string>
+    <string name="tasks_toast_select_deadline_first">پہلے آخری تاریخ منتخب کریں!</string>
+    <string name="tasks_time_created">بنایا گیا: %1$s</string>
+    <string name="tasks_time_edited">ترمیم شدہ: %1$s</string>
+    <string name="tasks_time_completed">مکمل ہوا: %1$s</string>
+    <string name="tasks_deadline_prefixed">آخری تاریخ: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — %2$d دن باقی!</item>
+        <item quantity="other">%1$s — %2$d دن باقی!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d دن کی تاخیر!</item>
+        <item quantity="other">%1$s — %2$d دن کی تاخیر!</item>
+    </plurals>
+    <string name="tasks_delete_title">حذف کی تصدیق</string>
+    <string name="tasks_delete_button">حذف کریں</string>
+    <string name="tasks_delete_nothing">حذف کرنے کے لیے کوئی چیز نہیں ملی!</string>
+    <string name="tasks_delete_item_message">کیا آپ واقعی یہ آئٹم حذف کرنا چاہتے ہیں؟ اسے واپس نہیں لایا جا سکتا!</string>
+    <string name="tasks_delete_cannot_be_undone">اسے واپس نہیں لایا جا سکتا!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">%1$d مکمل کام حذف کریں؟</item>
+        <item quantity="other">%1$d مکمل کام حذف کریں؟</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">ان میں سے %1$d میں اب بھی محفوظ یاد دہانی ہے۔</item>
+        <item quantity="other">ان میں سے %1$d میں اب بھی محفوظ یاد دہانی ہے۔</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">تمام %1$d کام حذف کریں؟</item>
+        <item quantity="other">تمام %1$d کام حذف کریں؟</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d میں فعال یاد دہانی ہے۔</item>
+        <item quantity="other">%1$d میں فعال یاد دہانی ہے۔</item>
+    </plurals>
+    <string name="tasks_alert_title">آخری تاریخ کا انتباہ!</string>
+    <string name="tasks_alert_view_tasks">کام دیکھیں</string>
+    <string name="tasks_alert_channel_name">کاموں کی آخری تاریخ کے انتباہات</string>
+    <string name="tasks_alert_channel_description">کاموں کی آخری تاریخوں کے فوری انتباہات</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">گزر چکی کاموں کی آخری تاریخوں کی تعداد: %1$d۔</item>
+        <item quantity="other">گزر چکی کاموں کی آخری تاریخوں کی تعداد: %1$d۔</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">توجہ فرمائیں! فوری توجہ طلب کاموں کی آخری تاریخوں کی تعداد: %1$d۔</item>
+        <item quantity="other">توجہ فرمائیں! فوری توجہ طلب کاموں کی آخری تاریخوں کی تعداد: %1$d۔</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">توجہ فرمائیں! کام کی آخری تاریخ قریب آ رہی ہے: %1$s</string>
+</resources>

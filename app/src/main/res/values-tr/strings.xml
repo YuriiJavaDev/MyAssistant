@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">İptal</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_alarms_title">Hatırlatıcılar ve alarmlar</string>
+    <string name="settings_alarms_subtitle">Aralıklar, sesler ve bildirim durumu</string>
+    <string name="settings_display_title">Görünüm modu</string>
+    <string name="settings_display_subtitle">Gündüz / Gece / Otomatik</string>
+    <string name="display_mode_title">Görünüm modu</string>
+    <string name="display_mode_light">Açık (gündüz)</string>
+    <string name="display_mode_dark">Koyu (gece)</string>
+    <string name="display_mode_system">Sistem (otomatik)</string>
+    <string name="settings_design_title">Uygulama tasarımı</string>
+    <string name="settings_design_subtitle">Arayüz görünümü seçenekleri</string>
+    <string name="design_classic_name">Klasik</string>
+    <string name="design_classic_about">Orijinal görünüm: krem ve mor</string>
+    <string name="design_paper_ink_name">Kâğıt ve mürekkep</string>
+    <string name="design_paper_ink_about">İnce çizgiler ve sönük iş tonları</string>
+    <string name="design_pastel_cloud_name">Pastel bulut</string>
+    <string name="design_pastel_cloud_about">Yumuşak, yuvarlak ve soluk, bulutlarla</string>
+    <string name="design_neon_arcade_name">Neon atari salonu</string>
+    <string name="design_neon_arcade_about">Parlak neon, güçlü kontrast ve retro bir güneş</string>
+    <string name="design_toon_name">Çizgi film</string>
+    <string name="design_toon_about">Çizgi roman konturları ve el yazısı yazı tipi</string>
+    <string name="design_biker_name">Motorcu</string>
+    <string name="design_biker_about">Kaba metal, lastik ve egzoz turuncusu</string>
+    <string name="design_cockpit_name">Kokpit</string>
+    <string name="design_cockpit_about">Bir planörlü, sert bir gösterge paneli</string>
+    <string name="design_beach_name">Plaj</string>
+    <string name="design_beach_about">Kum, lagün, mercan ve palmiyeler</string>
+    <string name="design_forest_name">Büyülü orman</string>
+    <string name="design_forest_about">Parşömen, altın ve orman yosunu</string>
+    <string name="design_mono_block_name">Mono blok</string>
+    <string name="design_mono_block_about">Tek sarı işaretçili sert siyah beyaz</string>
+    <string name="settings_permissions_title">Sistem izinleri</string>
+    <string name="settings_permissions_subtitle">Android sisteminde erişimi yönetin</string>
+    <string-array name="filter_options">
+        <item>Tüm görevler</item>
+        <item>Etkin</item>
+        <item>Tamamlanan</item>
+        <item>Uyarılar</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A-Z</item>
+        <item>Z-A</item>
+        <item>Durum</item>
+        <item>Oluşturulma</item>
+        <item>Düzenlenme</item>
+        <item>Tamamlanma</item>
+        <item>Önem</item>
+        <item>Son tarih</item>
+    </string-array>
+    <string name="scan_camera">Kamera</string>
+    <string name="scan_gallery">Galeri</string>
+    <string name="scan_clear_all">Tümünü temizle</string>
+    <string name="scan_cleared">Tüm taramalar silindi</string>
+    <string name="scan_empty">Henüz belge yok. Bir sayfanın fotoğrafını çekin veya galeriden seçin.</string>
+    <string name="scan_auto">Otomatik</string>
+    <string name="scan_reset">Sıfırla</string>
+    <string name="scan_next">İleri</string>
+    <string name="scan_back">Geri</string>
+    <string name="scan_save">Kaydet</string>
+    <string name="scan_rotate">Döndür</string>
+    <string name="scan_paper">Kâğıt</string>
+    <string name="scan_filter_color">Renkli</string>
+    <string name="scan_filter_gray">Gri</string>
+    <string name="scan_filter_bw">S/B</string>
+    <string name="scan_tune">Işık ve kontrast</string>
+    <string name="scan_shadows">Gölge giderme</string>
+    <string name="scan_brightness">Parlaklık</string>
+    <string name="scan_contrast">Kontrast</string>
+    <string name="scan_sharpen">Keskinlik</string>
+    <string name="scan_page_saved">Sayfa kaydedildi</string>
+    <string name="scan_next_page_question">Bu belgeye başka bir sayfa eklensin mi?</string>
+    <string name="scan_page_label">Sayfa %d</string>
+    <string name="scan_done">Bitti</string>
+    <string name="scan_add_page">Sayfa ekle</string>
+    <string name="scan_share_pdf">PDF paylaş</string>
+    <string name="scan_pages_empty">Bu belgede sayfa yok.</string>
+    <string name="scan_saved_to_device">Dosya kaydedildi</string>
+    <string name="scan_share_title">Belgeyi paylaş</string>
+    <string name="scan_rename_title">Belgeyi yeniden adlandır</string>
+    <string name="scan_rename_confirm">Yeniden adlandır</string>
+    <string name="scan_error_load">Bu fotoğraf açılamıyor</string>
+    <string name="scan_error_preview">Önizleme için yeterli bellek yok</string>
+    <string name="scan_error_save">Tarama kaydedilemiyor</string>
+    <string name="scan_error_export">Dosya hazırlanamıyor</string>
+    <string name="scan_error_no_camera">Kamera uygulaması bulunamadı</string>
+    <string name="scan_error_no_viewer">Görseli açacak uygulama bulunamadı</string>
+    <string name="scan_error_no_app">Paylaşılacak uygulama bulunamadı</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d sayfa</item>
+        <item quantity="other">%d sayfa</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Sayfalar</item>
+        <item>PDF olarak paylaş</item>
+        <item>JPEG olarak paylaş</item>
+        <item>PDF\'yi şuraya kaydet…</item>
+        <item>Yeniden adlandır</item>
+        <item>Sil</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Görüntüle</item>
+        <item>JPEG\'i şuraya kaydet…</item>
+        <item>Yukarı taşı</item>
+        <item>Aşağı taşı</item>
+        <item>Sayfayı sil</item>
+    </string-array>
+    <string name="weather_city_hint">Herhangi bir dilde şehir adı</string>
+    <string name="weather_search">Ara</string>
+    <string name="weather_my_location">Konumum</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Hissedilen</string>
+    <string name="weather_humidity">Nem</string>
+    <string name="weather_wind">Rüzgâr</string>
+    <string name="weather_today_range">Bugün</string>
+    <string name="weather_units">Birimler</string>
+    <string name="weather_units_temperature">Sıcaklık</string>
+    <string name="weather_units_wind">Rüzgâr hızı</string>
+    <string name="weather_unit_celsius">Santigrat (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Saniyede metre (m/s)</string>
+    <string name="weather_unit_kmh">Saatte kilometre (km/sa)</string>
+    <string name="weather_moon_caption">%1$s · %%%2$d aydınlık</string>
+    <string name="weather_humidity_value">%%%1$d</string>
+    <string name="weather_loading">Hava durumu yükleniyor…</string>
+    <string name="weather_location_needed">Bulunduğunuz yerdeki hava durumunu görmek için yaklaşık konuma erişime izin verin veya bir şehir arayın.</string>
+    <string name="weather_allow">İzin ver</string>
+    <string name="weather_open_settings">Uygulama ayarlarını aç</string>
+    <string name="weather_attribution">Hava durumu: Open-Meteo.com · Yerler: © OpenStreetMap katkıda bulunanlar</string>
+    <string name="weather_choose_city">Şehir seçin</string>
+    <string name="steps_today">Bugün</string>
+    <string name="steps_unit">adım</string>
+    <string name="steps_walk_run">Yürüyüş %1$s · Koşu %2$s</string>
+    <string name="steps_period">Dönem</string>
+    <string name="steps_last_7">7 gün</string>
+    <string name="steps_last_30">30 gün</string>
+    <string name="steps_this_month">Bu ay</string>
+    <string name="steps_pick_dates">Tarih seç</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Toplam adım</string>
+    <string name="steps_distance">Mesafe</string>
+    <string name="steps_average">Günlük ortalama</string>
+    <string name="steps_best_day">En iyi gün</string>
+    <string name="steps_walking">Yürüyüş adımları</string>
+    <string name="steps_running">Koşu adımları</string>
+    <string name="steps_active_days">Adım atılan günler</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Bu dönemde kayıtlı adım yok</string>
+    <string name="steps_settings">Adım ayarları</string>
+    <string name="steps_settings_title">Adım uzunluğu</string>
+    <string name="steps_walk_length">Yürürken adım uzunluğu, cm</string>
+    <string name="steps_run_length">Koşarken adım uzunluğu, cm</string>
+    <string name="steps_run_cadence">Koşu şu hızdan başlar, dakikada adım</string>
+    <string name="steps_run_cadence_hint">Bu hızda veya daha hızlı atılan adımlar koşu olarak sayılır.</string>
+    <string name="steps_defaults">Varsayılanlar</string>
+    <string name="steps_save">Kaydet</string>
+    <string name="steps_invalid_length">%1$d–%2$d girin</string>
+    <string name="steps_measure_title">Adım uzunluğunuzu nasıl ölçersiniz</string>
+    <string name="steps_measure_text">1. İlk adımdan önce ayakkabınızın burnunda başlangıç çizgisini işaretleyin.\n2. Her zamanki hızınızda 10 sakin adım atın.\n3. Başlangıç çizgisinden 10. adımdan sonra aynı ayakkabı burnuna kadar olan mesafeyi santimetre olarak ölçün.\n4. Bunu 10\'a bölün.\n5. Birkaç kez tekrarlayın ve ortalamayı girin.\n\nKoşu adım uzunluğunu bulmak için aynısını normal koşu hızınızda yapın.</string>
+    <string name="steps_no_sensor">Bu telefonda adım sayar sensörü yok.</string>
+    <string name="steps_permission_needed">Telefonun adımlarınızı sayabilmesi için fiziksel aktivite erişimine izin verin.</string>
+    <string name="steps_allow">İzin ver</string>
+    <string name="steps_open_settings">Uygulama ayarlarını aç</string>
+    <string name="currency_amount_hint">Tutar</string>
+    <string name="currency_swap">Değiştir ⇅</string>
+    <string name="currency_refresh">Kurları yenile</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Kurlar güncellendi %1$s</string>
+    <string name="currency_outdated">İnternet yok. Kayıtlı kurlar gösteriliyor, güncelleme %1$s</string>
+    <string name="currency_loading">Kurlar yükleniyor…</string>
+    <string name="currency_unavailable">Kurlar kullanılamıyor. İnternet bağlantısını kontrol edip yenileyin.</string>
+    <string name="currency_invalid_amount">Bir tutar girin</string>
+    <string name="currency_attribution">Kurlar: Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Bilim</string>
+    <string name="calculator_basic">Temel</string>
+    <string name="calculator_degrees">Der</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Geçmiş</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Kaydı başlat</string>
+    <string name="flights_stop">Kaydı durdur</string>
+    <string name="flights_units">Birimler</string>
+    <string name="flights_journal">Günlük</string>
+    <string name="flights_journal_title">Uçuş günlüğü</string>
+    <string name="flights_journal_empty">Henüz kaydedilmiş uçuş yok.</string>
+    <string name="flights_journal_in_progress">Bu uçuş hâlâ kaydediliyor.</string>
+    <string name="flights_report_open">Raporu aç</string>
+    <string name="flights_report_share">Raporu paylaş</string>
+    <string name="flights_report_delete">Uçuşu sil</string>
+    <string name="flights_report_failed">Rapor hazırlanamadı.</string>
+    <string name="flights_report_no_viewer">PDF dosyalarını açan bir uygulama bulunamadı.</string>
+    <string name="flights_delete_title">Bu uçuş silinsin mi?</string>
+    <string name="flights_delete_message">Rota ve rapor kalıcı olarak silinecek. Önce raporu bir yere gönderebilirsiniz, örneğin bir flaş belleğe, bilgisayara veya Google Drive\'a.</string>
+    <string name="flights_delete_save_first">Raporu kaydet, sonra sil</string>
+    <string name="flights_delete_without_saving">Kaydetmeden sil</string>
+    <string name="flights_delete_after_share_message">Rapor istediğiniz yere ulaştıysa uçuşu şimdi silebilirsiniz.</string>
+    <string name="flights_delete_after_share_confirm">Uçuşu sil</string>
+    <string name="flights_delete_keep">Uçuşu koru</string>
+    <string name="flights_units_report_limit">Rapor sınırı</string>
+    <string name="flights_units_report_limit_hint">Günlükteki en fazla PDF rapor sayısı, 0 sınırsız</string>
+    <string name="flights_limit_full_title">PDF rapor sınırına ulaşıldı</string>
+    <string name="flights_limit_full_message">Günlükte %1$d rapor var, bu sınırdır. Yeni bir uçuş kaydetmek için günlükten en az bir uçuşu silin. Önce raporunu bir flaş belleğe, bilgisayara veya Google Drive\'a kaydedebilirsiniz.</string>
+    <string name="flights_limit_warning_title">PDF rapor sınırına yaklaşıyorsunuz!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Daha %d uçuş kaydedebilirsiniz. Günlükten eski uçuşları silin.</item>
+        <item quantity="other">Daha %d uçuş kaydedebilirsiniz. Günlükten eski uçuşları silin.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Günlüğü aç</string>
+    <string name="flights_journal_line">%1$s · maks. %2$s · yükseklik maks. %3$s</string>
+    <string name="flights_units_speed">Hız ve mesafe</string>
+    <string name="flights_units_altitude">Yükseklik</string>
+    <string name="flights_unit_kmh">Saatte kilometre (km/sa)</string>
+    <string name="flights_unit_knots">Knot (kt, deniz mili)</string>
+    <string name="flights_unit_ms">Saniyede metre (m/s)</string>
+    <string name="flights_unit_metres">Metre (m)</string>
+    <string name="flights_unit_feet">Fit (ft)</string>
+    <string name="flights_units_climb">Tırmanma hızı</string>
+    <string name="flights_unit_fpm">Dakikada fit (ft/dk)</string>
+    <string name="flights_altitude_zero">Sıfır</string>
+    <string name="flights_altitude_sea">Deniz seviyesinden</string>
+    <string name="flights_altitude_start">Kalkıştan · geri almak için “Sıfır”a basılı tutun</string>
+    <string name="flights_sound_on">Ses: açık</string>
+    <string name="flights_sound_off">Ses: kapalı</string>
+    <string name="flights_sound_tune">Ses ayarı</string>
+    <string name="flights_sound_climb_start">Bip sesi %1$.1f m/s tırmanışta başlar</string>
+    <string name="flights_sound_sink_start">Alçak bip sesleri %1$.1f m/s alçalmada başlar</string>
+    <string name="flights_sound_sink_alarm">%1$.1f m/s alçalmada sürekli alarm</string>
+    <string name="flights_speed_label">Hız</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Uçuş süresi</string>
+    <string name="flights_distance">Mesafe</string>
+    <string name="flights_max_speed">En yüksek hız</string>
+    <string name="flights_avg_speed">Ortalama hız</string>
+    <string name="flights_max_altitude">En yüksek irtifa</string>
+    <string name="flights_climb_rate">Tırmanma hızı</string>
+    <string name="flights_max_g">Tepe yük</string>
+    <string name="flights_status_waiting">GPS sinyali bekleniyor…</string>
+    <string name="flights_location_needed">Hızın, yüksekliğin ve rotanın kaydedilebilmesi için kesin konuma erişime izin verin.</string>
+    <string name="flights_allow">İzin ver</string>
+    <string name="flights_open_settings">Uygulama ayarlarını aç</string>
+    <string name="flights_gps_off">Uçuş kaydetmek için konum hizmetlerini (GPS) açın.</string>
+    <string name="flights_disclaimer">Yalnızca eğlence ve merak içindir. Bu göstergelere navigasyon veya güvenliği etkileyen herhangi bir şey için güvenmeyin.</string>
+</resources>

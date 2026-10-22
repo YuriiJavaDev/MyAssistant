@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Anulează</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Setări</string>
+    <string name="settings_alarms_title">Mementouri și alarme</string>
+    <string name="settings_alarms_subtitle">Intervale, sunete și starea notificărilor</string>
+    <string name="settings_display_title">Mod de afișare</string>
+    <string name="settings_display_subtitle">Zi / Noapte / Auto</string>
+    <string name="display_mode_title">Mod de afișare</string>
+    <string name="display_mode_light">Luminos (zi)</string>
+    <string name="display_mode_dark">Întunecat (noapte)</string>
+    <string name="display_mode_system">Sistem (auto)</string>
+    <string name="settings_design_title">Aspectul aplicației</string>
+    <string name="settings_design_subtitle">Variante de aspect ale interfeței</string>
+    <string name="design_classic_name">Clasic</string>
+    <string name="design_classic_about">Aspectul inițial: crem și violet</string>
+    <string name="design_paper_ink_name">Hârtie și cerneală</string>
+    <string name="design_paper_ink_about">Linii fine și tonuri sobre de birou</string>
+    <string name="design_pastel_cloud_name">Nor pastel</string>
+    <string name="design_pastel_cloud_about">Blând, rotunjit și pal, cu nori</string>
+    <string name="design_neon_arcade_name">Arcadă neon</string>
+    <string name="design_neon_arcade_about">Neon strălucitor, contrast puternic și soare retro</string>
+    <string name="design_toon_name">Desen animat</string>
+    <string name="design_toon_about">Contururi de benzi desenate și scris de mână</string>
+    <string name="design_biker_name">Motociclist</string>
+    <string name="design_biker_about">Metal brut, cauciuc și portocaliul țevii de eșapament</string>
+    <string name="design_cockpit_name">Cabină de pilotaj</string>
+    <string name="design_cockpit_about">Tablou de bord auster cu planor</string>
+    <string name="design_beach_name">Plajă</string>
+    <string name="design_beach_about">Nisip, lagună, corali și palmieri</string>
+    <string name="design_forest_name">Pădure fermecată</string>
+    <string name="design_forest_about">Pergament, aur și mușchi de pădure</string>
+    <string name="design_mono_block_name">Monobloc</string>
+    <string name="design_mono_block_about">Alb-negru tăios cu un singur marker galben</string>
+    <string name="settings_permissions_title">Permisiuni de sistem</string>
+    <string name="settings_permissions_subtitle">Gestionați accesul în Android</string>
+    <string-array name="filter_options">
+        <item>Toate sarcinile</item>
+        <item>Active</item>
+        <item>Finalizate</item>
+        <item>Alerte</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>Stare</item>
+        <item>Creare</item>
+        <item>Modificare</item>
+        <item>Finalizare</item>
+        <item>Importanță</item>
+        <item>Termen</item>
+    </string-array>
+    <string name="scan_camera">Cameră</string>
+    <string name="scan_gallery">Galerie</string>
+    <string name="scan_clear_all">Șterge tot</string>
+    <string name="scan_cleared">Toate scanările au fost șterse</string>
+    <string name="scan_empty">Încă nu există documente. Fotografiați o pagină sau alegeți o fotografie din galerie.</string>
+    <string name="scan_auto">Auto</string>
+    <string name="scan_reset">Resetare</string>
+    <string name="scan_next">Înainte</string>
+    <string name="scan_back">Înapoi</string>
+    <string name="scan_save">Salvare</string>
+    <string name="scan_rotate">Rotire</string>
+    <string name="scan_paper">Hârtie</string>
+    <string name="scan_filter_color">Color</string>
+    <string name="scan_filter_gray">Gri</string>
+    <string name="scan_filter_bw">A/N</string>
+    <string name="scan_tune">Lumină și contrast</string>
+    <string name="scan_shadows">Eliminarea umbrelor</string>
+    <string name="scan_brightness">Luminozitate</string>
+    <string name="scan_contrast">Contrast</string>
+    <string name="scan_sharpen">Claritate</string>
+    <string name="scan_page_saved">Pagină salvată</string>
+    <string name="scan_next_page_question">Adăugați altă pagină la document?</string>
+    <string name="scan_page_label">Pagina %d</string>
+    <string name="scan_done">Gata</string>
+    <string name="scan_add_page">Adaugă pagină</string>
+    <string name="scan_share_pdf">Trimite PDF</string>
+    <string name="scan_pages_empty">Acest document nu are pagini.</string>
+    <string name="scan_saved_to_device">Fișier salvat</string>
+    <string name="scan_share_title">Trimite documentul</string>
+    <string name="scan_rename_title">Redenumește documentul</string>
+    <string name="scan_rename_confirm">Redenumește</string>
+    <string name="scan_error_load">Această fotografie nu poate fi deschisă</string>
+    <string name="scan_error_preview">Memorie insuficientă pentru previzualizare</string>
+    <string name="scan_error_save">Scanarea nu poate fi salvată</string>
+    <string name="scan_error_export">Fișierul nu poate fi pregătit</string>
+    <string name="scan_error_no_camera">Nu a fost găsită nicio aplicație de cameră</string>
+    <string name="scan_error_no_viewer">Nu a fost găsită nicio aplicație pentru deschiderea imaginii</string>
+    <string name="scan_error_no_app">Nu a fost găsită nicio aplicație pentru trimitere</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d pagină</item>
+        <item quantity="few">%d pagini</item>
+        <item quantity="other">%d de pagini</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Pagini</item>
+        <item>Trimite ca PDF</item>
+        <item>Trimite ca JPEG</item>
+        <item>Salvează PDF în…</item>
+        <item>Redenumește</item>
+        <item>Șterge</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Vizualizare</item>
+        <item>Salvează JPEG în…</item>
+        <item>Mută mai sus</item>
+        <item>Mută mai jos</item>
+        <item>Șterge pagina</item>
+    </string-array>
+    <string name="weather_city_hint">Numele orașului în orice limbă</string>
+    <string name="weather_search">Caută</string>
+    <string name="weather_my_location">Locația mea</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Se simte ca</string>
+    <string name="weather_humidity">Umiditate</string>
+    <string name="weather_wind">Vânt</string>
+    <string name="weather_today_range">Astăzi</string>
+    <string name="weather_units">Unități</string>
+    <string name="weather_units_temperature">Temperatură</string>
+    <string name="weather_units_wind">Viteza vântului</string>
+    <string name="weather_unit_celsius">Celsius (°C)</string>
+    <string name="weather_unit_fahrenheit">Fahrenheit (°F)</string>
+    <string name="weather_unit_ms">Metri pe secundă (m/s)</string>
+    <string name="weather_unit_kmh">Kilometri pe oră (km/h)</string>
+    <string name="weather_moon_caption">%1$s · iluminată %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">Se încarcă vremea…</string>
+    <string name="weather_location_needed">Permiteți accesul la locația aproximativă pentru a vedea vremea de unde vă aflați sau căutați un oraș.</string>
+    <string name="weather_allow">Permite</string>
+    <string name="weather_open_settings">Deschide setările aplicației</string>
+    <string name="weather_attribution">Vremea: Open-Meteo.com · Locuri: © colaboratorii OpenStreetMap</string>
+    <string name="weather_choose_city">Alegeți un oraș</string>
+    <string name="steps_today">Astăzi</string>
+    <string name="steps_unit">pași</string>
+    <string name="steps_walk_run">Mers %1$s · Alergare %2$s</string>
+    <string name="steps_period">Perioadă</string>
+    <string name="steps_last_7">7 zile</string>
+    <string name="steps_last_30">30 de zile</string>
+    <string name="steps_this_month">Luna asta</string>
+    <string name="steps_pick_dates">Alege datele</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Total pași</string>
+    <string name="steps_distance">Distanță</string>
+    <string name="steps_average">Medie pe zi</string>
+    <string name="steps_best_day">Cea mai bună zi</string>
+    <string name="steps_walking">Pași la mers</string>
+    <string name="steps_running">Pași la alergare</string>
+    <string name="steps_active_days">Zile cu pași</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d din %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">Nu au fost înregistrați pași în această perioadă</string>
+    <string name="steps_settings">Setări pași</string>
+    <string name="steps_settings_title">Lungimea pasului</string>
+    <string name="steps_walk_length">Lungimea pasului la mers, cm</string>
+    <string name="steps_run_length">Lungimea pasului la alergare, cm</string>
+    <string name="steps_run_cadence">Alergarea începe de la, pași pe minut</string>
+    <string name="steps_run_cadence_hint">Pașii la acest ritm sau mai rapizi se numără ca alergare.</string>
+    <string name="steps_defaults">Implicit</string>
+    <string name="steps_save">Salvare</string>
+    <string name="steps_invalid_length">Introduceți %1$d–%2$d</string>
+    <string name="steps_measure_title">Cum se măsoară lungimea pasului</string>
+    <string name="steps_measure_text">1. Înainte de primul pas, marcați linia de start în dreptul vârfului pantofului.\n2. Faceți 10 pași calmi, în ritmul obișnuit.\n3. Măsurați în centimetri distanța de la linia de start până la același vârf de pantof după al 10-lea pas.\n4. Împărțiți-o la zece.\n5. Repetați de câteva ori și introduceți media.\n\nProcedați la fel în ritmul obișnuit de alergare pentru a afla lungimea pasului la alergare.</string>
+    <string name="steps_no_sensor">Acest telefon nu are senzor de pași.</string>
+    <string name="steps_permission_needed">Permiteți accesul la activitatea fizică pentru ca telefonul să vă poată număra pașii.</string>
+    <string name="steps_allow">Permite</string>
+    <string name="steps_open_settings">Deschide setările aplicației</string>
+    <string name="currency_amount_hint">Sumă</string>
+    <string name="currency_swap">Inversare ⇅</string>
+    <string name="currency_refresh">Actualizează cursurile</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Cursuri actualizate %1$s</string>
+    <string name="currency_outdated">Fără internet. Se afișează cursurile salvate, actualizate %1$s</string>
+    <string name="currency_loading">Se încarcă cursurile…</string>
+    <string name="currency_unavailable">Cursurile nu sunt disponibile. Verificați conexiunea la internet și reîncercați.</string>
+    <string name="currency_invalid_amount">Introduceți o sumă</string>
+    <string name="currency_attribution">Cursuri de la Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Șt</string>
+    <string name="calculator_basic">Bază</string>
+    <string name="calculator_degrees">Grd</string>
+    <string name="calculator_radians">Rad</string>
+    <string name="calculator_history">Istoric</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Înregistrează</string>
+    <string name="flights_stop">Oprește</string>
+    <string name="flights_units">Unități</string>
+    <string name="flights_journal">Jurnal</string>
+    <string name="flights_journal_title">Jurnal de zbor</string>
+    <string name="flights_journal_empty">Încă nu au fost înregistrate zboruri.</string>
+    <string name="flights_journal_in_progress">Acest zbor este încă în curs de înregistrare.</string>
+    <string name="flights_report_open">Deschide raportul</string>
+    <string name="flights_report_share">Trimite raportul</string>
+    <string name="flights_report_delete">Șterge zborul</string>
+    <string name="flights_report_failed">Raportul nu a putut fi pregătit.</string>
+    <string name="flights_report_no_viewer">Nu a fost găsită nicio aplicație pentru deschiderea fișierelor PDF.</string>
+    <string name="flights_delete_title">Ștergeți acest zbor?</string>
+    <string name="flights_delete_message">Traseul și raportul vor fi eliminate definitiv. Înainte, puteți trimite raportul undeva, de exemplu pe un stick USB, pe calculator sau pe Google Drive.</string>
+    <string name="flights_delete_save_first">Salvează raportul, apoi șterge</string>
+    <string name="flights_delete_without_saving">Șterge fără salvare</string>
+    <string name="flights_delete_after_share_message">Dacă raportul a ajuns unde voiați, puteți șterge acum zborul.</string>
+    <string name="flights_delete_after_share_confirm">Șterge zborul</string>
+    <string name="flights_delete_keep">Păstrează zborul</string>
+    <string name="flights_units_report_limit">Limită de rapoarte</string>
+    <string name="flights_units_report_limit_hint">Numărul maxim de rapoarte PDF din jurnal, 0 pentru nelimitat</string>
+    <string name="flights_limit_full_title">Limita de rapoarte PDF a fost atinsă</string>
+    <string name="flights_limit_full_message">Jurnalul conține %1$d rapoarte, adică limita. Pentru a înregistra un zbor nou, ștergeți din jurnal cel puțin un zbor. Înainte, puteți salva raportul acestuia pe un stick USB, pe calculator sau pe Google Drive.</string>
+    <string name="flights_limit_warning_title">Vă apropiați de limita de rapoarte PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Mai puteți înregistra %d zbor. Ștergeți din jurnal zborurile vechi.</item>
+        <item quantity="few">Mai puteți înregistra %d zboruri. Ștergeți din jurnal zborurile vechi.</item>
+        <item quantity="other">Mai puteți înregistra %d de zboruri. Ștergeți din jurnal zborurile vechi.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Deschide jurnalul</string>
+    <string name="flights_journal_line">%1$s · max. %2$s · altitudine max. %3$s</string>
+    <string name="flights_units_speed">Viteză și distanță</string>
+    <string name="flights_units_altitude">Altitudine</string>
+    <string name="flights_unit_kmh">Kilometri pe oră (km/h)</string>
+    <string name="flights_unit_knots">Noduri (kt, mile marine)</string>
+    <string name="flights_unit_ms">Metri pe secundă (m/s)</string>
+    <string name="flights_unit_metres">Metri (m)</string>
+    <string name="flights_unit_feet">Picioare (ft)</string>
+    <string name="flights_units_climb">Viteza de urcare</string>
+    <string name="flights_unit_fpm">Picioare pe minut (ft/min)</string>
+    <string name="flights_altitude_zero">Zero</string>
+    <string name="flights_altitude_sea">Deasupra mării</string>
+    <string name="flights_altitude_start">Deasupra startului · „Zero” apăsat lung = anulare</string>
+    <string name="flights_sound_on">Sunet: pornit</string>
+    <string name="flights_sound_off">Sunet: oprit</string>
+    <string name="flights_sound_tune">Reglaj sunet</string>
+    <string name="flights_sound_climb_start">Bipurile încep la urcare de %1$.1f m/s</string>
+    <string name="flights_sound_sink_start">Bipurile joase încep la coborâre de %1$.1f m/s</string>
+    <string name="flights_sound_sink_alarm">Alarmă continuă la coborâre de %1$.1f m/s</string>
+    <string name="flights_speed_label">Viteză</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Durata zborului</string>
+    <string name="flights_distance">Distanță</string>
+    <string name="flights_max_speed">Viteză maximă</string>
+    <string name="flights_avg_speed">Viteză medie</string>
+    <string name="flights_max_altitude">Altitudine maximă</string>
+    <string name="flights_climb_rate">Viteză de urcare</string>
+    <string name="flights_max_g">Sarcină maximă</string>
+    <string name="flights_status_waiting">Se așteaptă semnalul GPS…</string>
+    <string name="flights_location_needed">Permiteți accesul la locația exactă pentru a înregistra viteza, altitudinea și traseul.</string>
+    <string name="flights_allow">Permite</string>
+    <string name="flights_open_settings">Deschide setările aplicației</string>
+    <string name="flights_gps_off">Activați serviciile de localizare (GPS) pentru a înregistra un zbor.</string>
+    <string name="flights_disclaimer">Doar pentru distracție și curiozitate. Nu vă bazați pe aceste instrumente pentru navigație sau pentru orice ține de siguranță.</string>
+</resources>

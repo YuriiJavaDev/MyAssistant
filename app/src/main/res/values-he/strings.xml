@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">ביטול</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">הגדרות</string>
+    <string name="settings_alarms_title">תזכורות והתראות</string>
+    <string name="settings_alarms_subtitle">מרווחים, צלילים ומצב ההודעות</string>
+    <string name="settings_display_title">מצב תצוגה</string>
+    <string name="settings_display_subtitle">יום / לילה / אוטומטי</string>
+    <string name="display_mode_title">מצב תצוגה</string>
+    <string name="display_mode_light">בהיר (יום)</string>
+    <string name="display_mode_dark">כהה (לילה)</string>
+    <string name="display_mode_system">מערכת (אוטומטי)</string>
+    <string name="settings_design_title">עיצוב האפליקציה</string>
+    <string name="settings_design_subtitle">גרסאות עיצוב לממשק</string>
+    <string name="design_classic_name">קלאסי</string>
+    <string name="design_classic_about">המראה המקורי: קרם וסגול</string>
+    <string name="design_paper_ink_name">נייר ודיו</string>
+    <string name="design_paper_ink_about">קווים דקים וגוונים עסקיים מרוסנים</string>
+    <string name="design_pastel_cloud_name">ענן פסטל</string>
+    <string name="design_pastel_cloud_about">רך, מעוגל ועדין, עם עננים</string>
+    <string name="design_neon_arcade_name">ארקייד ניאון</string>
+    <string name="design_neon_arcade_about">ניאון בוהק, ניגודיות חזקה ושמש רטרו</string>
+    <string name="design_toon_name">קריקטורה</string>
+    <string name="design_toon_about">קווי מתאר כמו בקומיקס וגופן בכתב יד</string>
+    <string name="design_biker_name">רוכב אופנוע</string>
+    <string name="design_biker_about">מתכת גסה, גומי וכתום של פליטה</string>
+    <string name="design_cockpit_name">תא טייס</string>
+    <string name="design_cockpit_about">לוח מחוונים קפדני עם דאון</string>
+    <string name="design_beach_name">חוף</string>
+    <string name="design_beach_about">חול, לגונה, אלמוגים ודקלים</string>
+    <string name="design_forest_name">יער קסום</string>
+    <string name="design_forest_about">קלף, זהב וטחב יער</string>
+    <string name="design_mono_block_name">מונו בלוק</string>
+    <string name="design_mono_block_about">שחור ולבן חד עם סמן צהוב אחד</string>
+    <string name="settings_permissions_title">הרשאות מערכת</string>
+    <string name="settings_permissions_subtitle">ניהול הגישה במערכת אנדרואיד</string>
+    <string-array name="filter_options">
+        <item>כל המשימות</item>
+        <item>פעילות</item>
+        <item>הושלמו</item>
+        <item>תזכורות</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>א׳–ת׳</item>
+        <item>ת׳–א׳</item>
+        <item>סטטוס</item>
+        <item>נוצרו</item>
+        <item>נערכו</item>
+        <item>הושלמו</item>
+        <item>חשיבות</item>
+        <item>מועד יעד</item>
+    </string-array>
+    <string name="scan_camera">מצלמה</string>
+    <string name="scan_gallery">גלריה</string>
+    <string name="scan_clear_all">נקה הכול</string>
+    <string name="scan_cleared">כל הסריקות נמחקו</string>
+    <string name="scan_empty">עדיין אין מסמכים. צלמו דף או בחרו תמונה מהגלריה.</string>
+    <string name="scan_auto">אוטומטי</string>
+    <string name="scan_reset">איפוס</string>
+    <string name="scan_next">הבא</string>
+    <string name="scan_back">חזרה</string>
+    <string name="scan_save">שמירה</string>
+    <string name="scan_rotate">סיבוב</string>
+    <string name="scan_paper">נייר</string>
+    <string name="scan_filter_color">צבע</string>
+    <string name="scan_filter_gray">אפור</string>
+    <string name="scan_filter_bw">שחור-לבן</string>
+    <string name="scan_tune">תאורה וניגודיות</string>
+    <string name="scan_shadows">הסרת צללים</string>
+    <string name="scan_brightness">בהירות</string>
+    <string name="scan_contrast">ניגודיות</string>
+    <string name="scan_sharpen">חידוד</string>
+    <string name="scan_page_saved">הדף נשמר</string>
+    <string name="scan_next_page_question">להוסיף דף נוסף למסמך זה?</string>
+    <string name="scan_page_label">דף %d</string>
+    <string name="scan_done">סיום</string>
+    <string name="scan_add_page">הוספת דף</string>
+    <string name="scan_share_pdf">שיתוף PDF</string>
+    <string name="scan_pages_empty">במסמך זה אין דפים.</string>
+    <string name="scan_saved_to_device">הקובץ נשמר</string>
+    <string name="scan_share_title">שיתוף מסמך</string>
+    <string name="scan_rename_title">שינוי שם המסמך</string>
+    <string name="scan_rename_confirm">שינוי שם</string>
+    <string name="scan_error_load">לא ניתן לפתוח את התמונה</string>
+    <string name="scan_error_preview">אין מספיק זיכרון לתצוגה מקדימה</string>
+    <string name="scan_error_save">לא ניתן לשמור את הסריקה</string>
+    <string name="scan_error_export">לא ניתן להכין את הקובץ</string>
+    <string name="scan_error_no_camera">לא נמצאה אפליקציית מצלמה</string>
+    <string name="scan_error_no_viewer">לא נמצאה אפליקציה לפתיחת התמונה</string>
+    <string name="scan_error_no_app">לא נמצאה אפליקציה לשיתוף</string>
+    <plurals name="scan_pages">
+        <item quantity="one">דף %d</item>
+        <item quantity="two">%d דפים</item>
+        <item quantity="many">%d דפים</item>
+        <item quantity="other">%d דפים</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>דפים</item>
+        <item>שיתוף כ-PDF</item>
+        <item>שיתוף כ-JPEG</item>
+        <item>שמירת PDF ב…</item>
+        <item>שינוי שם</item>
+        <item>מחיקה</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>הצגה</item>
+        <item>שמירת JPEG ב…</item>
+        <item>הזזה למעלה</item>
+        <item>הזזה למטה</item>
+        <item>מחיקת דף</item>
+    </string-array>
+    <string name="weather_city_hint">שם עיר בכל שפה</string>
+    <string name="weather_search">חיפוש</string>
+    <string name="weather_my_location">המיקום שלי</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">מרגיש כמו</string>
+    <string name="weather_humidity">לחות</string>
+    <string name="weather_wind">רוח</string>
+    <string name="weather_today_range">היום</string>
+    <string name="weather_units">יחידות</string>
+    <string name="weather_units_temperature">טמפרטורה</string>
+    <string name="weather_units_wind">מהירות הרוח</string>
+    <string name="weather_unit_celsius">צלזיוס (°C)</string>
+    <string name="weather_unit_fahrenheit">פרנהייט (°F)</string>
+    <string name="weather_unit_ms">מטרים בשנייה (מ׳/ש׳)</string>
+    <string name="weather_unit_kmh">קילומטרים בשעה (קמ״ש)</string>
+    <string name="weather_moon_caption">%1$s · %2$d%% מואר</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">טוען מזג אוויר…</string>
+    <string name="weather_location_needed">אפשרו גישה למיקום המשוער כדי לראות את מזג האוויר במקומכם, או חפשו עיר.</string>
+    <string name="weather_allow">אפשר</string>
+    <string name="weather_open_settings">פתיחת הגדרות האפליקציה</string>
+    <string name="weather_attribution">מזג אוויר: Open-Meteo.com · מקומות: © תורמי OpenStreetMap</string>
+    <string name="weather_choose_city">בחירת עיר</string>
+    <string name="steps_today">היום</string>
+    <string name="steps_unit">צעדים</string>
+    <string name="steps_walk_run">הליכה %1$s · ריצה %2$s</string>
+    <string name="steps_period">תקופה</string>
+    <string name="steps_last_7">7 ימים</string>
+    <string name="steps_last_30">30 ימים</string>
+    <string name="steps_this_month">החודש</string>
+    <string name="steps_pick_dates">בחירת תאריכים</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">סך הצעדים</string>
+    <string name="steps_distance">מרחק</string>
+    <string name="steps_average">ממוצע ליום</string>
+    <string name="steps_best_day">היום הטוב ביותר</string>
+    <string name="steps_walking">צעדי הליכה</string>
+    <string name="steps_running">צעדי ריצה</string>
+    <string name="steps_active_days">ימים עם צעדים</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d מתוך %2$d</string>
+    <string name="steps_distance_km">%1$.2f ק״מ</string>
+    <string name="steps_no_data">לא נרשמו צעדים בתקופה זו</string>
+    <string name="steps_settings">הגדרות צעדים</string>
+    <string name="steps_settings_title">אורך צעד</string>
+    <string name="steps_walk_length">אורך צעד בהליכה, ס״מ</string>
+    <string name="steps_run_length">אורך צעד בריצה, ס״מ</string>
+    <string name="steps_run_cadence">הריצה מתחילה מ-, צעדים בדקה</string>
+    <string name="steps_run_cadence_hint">צעדים בקצב הזה או מהר יותר נספרים כריצה.</string>
+    <string name="steps_defaults">ברירת מחדל</string>
+    <string name="steps_save">שמירה</string>
+    <string name="steps_invalid_length">הזינו %1$d–%2$d</string>
+    <string name="steps_measure_title">איך למדוד את אורך הצעד</string>
+    <string name="steps_measure_text">1. סמנו קו התחלה ליד קצה הנעל לפני הצעד הראשון.\n2. לכו 10 צעדים רגועים בקצב הרגיל שלכם.\n3. מדדו את המרחק מקו ההתחלה אל אותו קצה נעל אחרי הצעד ה-10, בסנטימטרים.\n4. חלקו ב-10.\n5. חזרו על כך כמה פעמים והזינו את הממוצע.\n\nעשו את אותו הדבר בקצב הריצה הרגיל שלכם כדי לקבל את אורך הצעד בריצה.</string>
+    <string name="steps_no_sensor">בטלפון הזה אין חיישן צעדים.</string>
+    <string name="steps_permission_needed">אפשרו גישה לפעילות גופנית כדי שהטלפון יוכל לספור את הצעדים שלכם.</string>
+    <string name="steps_allow">אפשר</string>
+    <string name="steps_open_settings">פתיחת הגדרות האפליקציה</string>
+    <string name="currency_amount_hint">סכום</string>
+    <string name="currency_swap">החלפה ⇅</string>
+    <string name="currency_refresh">רענון שערים</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">השערים עודכנו %1$s</string>
+    <string name="currency_outdated">אין אינטרנט. מוצגים שערים שמורים, שעודכנו %1$s</string>
+    <string name="currency_loading">טוען שערים…</string>
+    <string name="currency_unavailable">השערים אינם זמינים. בדקו את חיבור האינטרנט ורעננו.</string>
+    <string name="currency_invalid_amount">הזינו סכום</string>
+    <string name="currency_attribution">השערים מ-Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">מדעי</string>
+    <string name="calculator_basic">רגיל</string>
+    <string name="calculator_degrees">מעלות</string>
+    <string name="calculator_radians">רדיאן</string>
+    <string name="calculator_history">היסטוריה</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">התחלת הקלטה</string>
+    <string name="flights_stop">עצירת הקלטה</string>
+    <string name="flights_units">יחידות</string>
+    <string name="flights_journal">יומן</string>
+    <string name="flights_journal_title">יומן טיסות</string>
+    <string name="flights_journal_empty">עדיין לא נרשמו טיסות.</string>
+    <string name="flights_journal_in_progress">הטיסה הזו עדיין מוקלטת.</string>
+    <string name="flights_report_open">פתיחת הדוח</string>
+    <string name="flights_report_share">שיתוף הדוח</string>
+    <string name="flights_report_delete">מחיקת טיסה</string>
+    <string name="flights_report_failed">לא ניתן היה להכין את הדוח.</string>
+    <string name="flights_report_no_viewer">לא נמצאה אפליקציה לפתיחת קובצי PDF.</string>
+    <string name="flights_delete_title">למחוק את הטיסה?</string>
+    <string name="flights_delete_message">המסלול והדוח יימחקו לצמיתות. אפשר קודם לשלוח את הדוח למקום כלשהו, למשל להתקן אחסון, למחשב או ל-Google Drive.</string>
+    <string name="flights_delete_save_first">שמירת הדוח ואז מחיקה</string>
+    <string name="flights_delete_without_saving">מחיקה בלי לשמור</string>
+    <string name="flights_delete_after_share_message">אם הדוח הגיע למקום הרצוי, אפשר למחוק את הטיסה עכשיו.</string>
+    <string name="flights_delete_after_share_confirm">מחיקת הטיסה</string>
+    <string name="flights_delete_keep">להשאיר את הטיסה</string>
+    <string name="flights_units_report_limit">מגבלת דוחות</string>
+    <string name="flights_units_report_limit_hint">מספר דוחות ה-PDF המרבי ביומן, 0 ללא הגבלה</string>
+    <string name="flights_limit_full_title">הגעתם למגבלת דוחות ה-PDF</string>
+    <string name="flights_limit_full_message">ביומן יש %1$d דוחות, וזו המגבלה. כדי להקליט טיסה חדשה, מחקו מהיומן לפחות טיסה אחת. אפשר קודם לשמור את הדוח שלה בהתקן אחסון, במחשב או ב-Google Drive.</string>
+    <string name="flights_limit_warning_title">אתם מתקרבים למגבלת דוחות ה-PDF!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">אפשר להקליט עוד טיסה %d. מחקו מהיומן טיסות ישנות.</item>
+        <item quantity="two">אפשר להקליט עוד %d טיסות. מחקו מהיומן טיסות ישנות.</item>
+        <item quantity="many">אפשר להקליט עוד %d טיסות. מחקו מהיומן טיסות ישנות.</item>
+        <item quantity="other">אפשר להקליט עוד %d טיסות. מחקו מהיומן טיסות ישנות.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">פתיחת היומן</string>
+    <string name="flights_journal_line">%1$s · מהירות עד %2$s · גובה עד %3$s</string>
+    <string name="flights_units_speed">מהירות ומרחק</string>
+    <string name="flights_units_altitude">גובה</string>
+    <string name="flights_unit_kmh">קילומטרים בשעה (קמ״ש)</string>
+    <string name="flights_unit_knots">קשרים (kt, מייל ימי)</string>
+    <string name="flights_unit_ms">מטרים בשנייה (מ׳/ש׳)</string>
+    <string name="flights_unit_metres">מטרים (מ׳)</string>
+    <string name="flights_unit_feet">רגל (ft)</string>
+    <string name="flights_units_climb">קצב טיפוס</string>
+    <string name="flights_unit_fpm">רגל בדקה (ft/min)</string>
+    <string name="flights_altitude_zero">אפס</string>
+    <string name="flights_altitude_sea">מעל פני הים</string>
+    <string name="flights_altitude_start">מעל נקודת ההמראה · החזיקו \"אפס\" כדי לבטל</string>
+    <string name="flights_sound_on">צליל: פועל</string>
+    <string name="flights_sound_off">צליל: כבוי</string>
+    <string name="flights_sound_tune">כוונון צליל</string>
+    <string name="flights_sound_climb_start">הצפצוף מתחיל בטיפוס של %1$.1f מ׳/ש׳</string>
+    <string name="flights_sound_sink_start">צפצופים נמוכים מתחילים בצניחה של %1$.1f מ׳/ש׳</string>
+    <string name="flights_sound_sink_alarm">אזעקה רציפה בצניחה של %1$.1f מ׳/ש׳</string>
+    <string name="flights_speed_label">מהירות</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">זמן טיסה</string>
+    <string name="flights_distance">מרחק</string>
+    <string name="flights_max_speed">מהירות מרבית</string>
+    <string name="flights_avg_speed">מהירות ממוצעת</string>
+    <string name="flights_max_altitude">הגובה הרב ביותר</string>
+    <string name="flights_climb_rate">קצב טיפוס</string>
+    <string name="flights_max_g">עומס שיא</string>
+    <string name="flights_status_waiting">ממתין לאות GPS…</string>
+    <string name="flights_location_needed">אפשרו גישה למיקום מדויק כדי שניתן יהיה להקליט מהירות, גובה ומסלול.</string>
+    <string name="flights_allow">אפשר</string>
+    <string name="flights_open_settings">פתיחת הגדרות האפליקציה</string>
+    <string name="flights_gps_off">הפעילו שירותי מיקום (GPS) כדי להקליט טיסה.</string>
+    <string name="flights_disclaimer">לשעשוע ולסקרנות בלבד. אל תסתמכו על המכשירים האלה לניווט או לכל דבר שמשפיע על הבטיחות.</string>
+</resources>

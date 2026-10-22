@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">¿Qué hay que hacer?</string>
+    <string name="tasks_list_add">Añadir</string>
+    <string name="tasks_list_delete_completed">Borrar completadas</string>
+    <string name="tasks_list_clear_all">Borrar todo</string>
+    <string name="tasks_list_reminder_set">Recordatorio establecido</string>
+    <string name="tasks_statistics">Total: %1$d  Completadas: %2$d  Quedan: %3$d  Progreso: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Nueva tarea</string>
+    <string name="tasks_dialog_title_edit">Editar tarea</string>
+    <string name="tasks_dialog_importance">Nivel de importancia:</string>
+    <string name="tasks_dialog_deadline_label">Fecha límite:</string>
+    <string name="tasks_dialog_deadline_select">Elige una fecha límite</string>
+    <string name="tasks_dialog_reminder_label">Recordatorio (fecha y hora):</string>
+    <string name="tasks_dialog_reminder_select">Elige la fecha y hora del recordatorio</string>
+    <string name="tasks_dialog_show_timestamps">Mostrar fechas de creación/edición</string>
+    <string name="tasks_dialog_delete">Eliminar</string>
+    <string name="tasks_dialog_save">Guardar</string>
+    <string name="tasks_dialog_clear">Borrar</string>
+    <string name="tasks_importance_normal">Normal</string>
+    <string name="tasks_importance_important">Importante</string>
+    <string name="tasks_importance_urgent">Urgente</string>
+    <string name="tasks_toast_created">Tarea creada</string>
+    <string name="tasks_toast_updated">Tarea actualizada</string>
+    <string name="tasks_toast_deleted">Tarea eliminada</string>
+    <string name="tasks_toast_completed_deleted">Tareas completadas eliminadas</string>
+    <string name="tasks_toast_all_cleared">Todas las tareas borradas</string>
+    <string name="tasks_toast_empty_title">La descripción de la tarea no puede estar vacía</string>
+    <string name="tasks_toast_reminder_after_deadline">¡El recordatorio no puede ser posterior a la fecha límite!</string>
+    <string name="tasks_toast_reminder_in_past">¡El recordatorio no puede estar en el pasado!</string>
+    <string name="tasks_toast_reminder_cleared">¡El recordatorio se borró porque la fecha límite es anterior!</string>
+    <string name="tasks_toast_select_deadline_first">¡Elige primero una fecha límite!</string>
+    <string name="tasks_time_created">Creada: %1$s</string>
+    <string name="tasks_time_edited">Editada: %1$s</string>
+    <string name="tasks_time_completed">Completada: %1$s</string>
+    <string name="tasks_deadline_prefixed">Fecha límite: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — ¡queda %2$d día!</item>
+        <item quantity="many">%1$s — ¡quedan %2$d días!</item>
+        <item quantity="other">%1$s — ¡quedan %2$d días!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — ¡vencida hace %2$d día!</item>
+        <item quantity="many">%1$s — ¡vencida hace %2$d días!</item>
+        <item quantity="other">%1$s — ¡vencida hace %2$d días!</item>
+    </plurals>
+    <string name="tasks_delete_title">Confirmar eliminación</string>
+    <string name="tasks_delete_button">Eliminar</string>
+    <string name="tasks_delete_nothing">¡No hay objetos que eliminar!</string>
+    <string name="tasks_delete_item_message">¿Seguro que quieres eliminar este elemento? ¡Esta acción no se puede deshacer!</string>
+    <string name="tasks_delete_cannot_be_undone">¡Esta acción no se puede deshacer!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">¿Eliminar %1$d tarea completada?</item>
+        <item quantity="many">¿Eliminar %1$d tareas completadas?</item>
+        <item quantity="other">¿Eliminar %1$d tareas completadas?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">%1$d de ellas aún tiene un recordatorio guardado.</item>
+        <item quantity="many">%1$d de ellas aún tienen un recordatorio guardado.</item>
+        <item quantity="other">%1$d de ellas aún tienen un recordatorio guardado.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">¿Eliminar la tarea (%1$d)?</item>
+        <item quantity="many">¿Eliminar las %1$d tareas?</item>
+        <item quantity="other">¿Eliminar las %1$d tareas?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d tiene un recordatorio activo.</item>
+        <item quantity="many">%1$d tienen recordatorios activos.</item>
+        <item quantity="other">%1$d tienen recordatorios activos.</item>
+    </plurals>
+    <string name="tasks_alert_title">¡Aviso de fecha límite!</string>
+    <string name="tasks_alert_view_tasks">Ver tareas</string>
+    <string name="tasks_alert_channel_name">Avisos de fechas límite de tareas</string>
+    <string name="tasks_alert_channel_description">Avisos urgentes de fechas límite de tareas</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Tienes %1$d fecha límite de tarea vencida.</item>
+        <item quantity="many">Tienes %1$d fechas límite de tareas vencidas.</item>
+        <item quantity="other">Tienes %1$d fechas límite de tareas vencidas.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">¡Atención! Tienes %1$d fecha límite de tarea que requiere atención inmediata.</item>
+        <item quantity="many">¡Atención! Tienes %1$d fechas límite de tareas que requieren atención inmediata.</item>
+        <item quantity="other">¡Atención! Tienes %1$d fechas límite de tareas que requieren atención inmediata.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">¡Atención! Se acerca la fecha límite de la tarea: %1$s</string>
+</resources>

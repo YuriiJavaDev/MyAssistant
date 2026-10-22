@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Lähetetään varmuuskopiota pilveen...</string>
+    <string name="backup_cloud_restoring">Palautetaan varmuuskopiota pilvestä...</string>
+    <string name="backup_cloud_upload_success">Varmuuskopio lähetettiin pilveen</string>
+    <string name="backup_cloud_restore_success">Varmuuskopio palautettiin pilvestä</string>
+    <string name="backup_cloud_restore_partly">Tehtävät palautettiin pilvestä (sieltä ei löytynyt kopiota kohteille: %1$s)</string>
+    <string name="backup_part_steps">askeleet</string>
+    <string name="backup_part_flights">lennot</string>
+    <string name="backup_part_scans">skannaukset</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Lähetysvirhe: %1$s</string>
+    <string name="backup_error_download">Latausvirhe: %1$s</string>
+    <string name="backup_error_unknown">Tuntematon virhe</string>
+    <string name="backup_error_insecure_url">URL-osoitteen on alettava merkinnällä https://</string>
+    <string name="backup_error_authentication">Todennus epäonnistui: tarkista käyttäjätunnus ja salasana</string>
+    <string name="backup_error_server_code">Palvelin vastasi koodilla: %1$d</string>
+    <string name="backup_error_connection">Yhteysvirhe: %1$s</string>
+    <string name="backup_destination_title">Tallenna varmuuskopio kohteeseen</string>
+    <string name="backup_destination_folder">Valitse kansio (laite, SD-kortti, USB, Drive...)</string>
+    <string name="backup_destination_share">Jaa sovellukselle</string>
+    <string name="backup_preparing">Valmistellaan varmuuskopiota...</string>
+    <string name="backup_export_failed">Vienti epäonnistui</string>
+    <string name="backup_export_saved">Varmuuskopio tallennettu</string>
+    <string name="backup_import_success">Varmuuskopio tuotiin. Käynnistetään uudelleen...</string>
+    <string name="backup_import_failed">Tuonti epäonnistui</string>
+    <string name="backup_import_title">Huomio!</string>
+    <string name="backup_import_message">Varmuuskopion palauttaminen korvaa nykyiset tehtävät, askeleet ja skannaukset sen sisältämillä. Haluatko varmasti jatkaa?</string>
+    <string name="backup_import_confirm">Vahvista tuonti</string>
+    <string name="backup_share_chooser_title">Vie varmuuskopio</string>
+    <string name="backup_cloud_settings_saved">Pilviasetukset tallennettu</string>
+    <string name="backup_cloud_secure_storage_unavailable">Suojattu tallennustila ei ole käytettävissä, asetuksia ei tallennettu</string>
+    <string name="backup_cloud_url_empty">URL-osoite ei voi olla tyhjä</string>
+    <string name="backup_cloud_testing">Testataan yhteyttä...</string>
+    <string name="backup_cloud_connection_successful">Yhteys onnistui!</string>
+</resources>

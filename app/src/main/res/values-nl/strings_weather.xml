@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Heldere hemel</string>
+    <string name="weather_description_mainly_clear">Overwegend helder</string>
+    <string name="weather_description_partly_cloudy">Half bewolkt</string>
+    <string name="weather_description_overcast">Bewolkt</string>
+    <string name="weather_description_fog">Mist</string>
+    <string name="weather_description_rime_fog">Rijpmist</string>
+    <string name="weather_description_light_drizzle">Lichte motregen</string>
+    <string name="weather_description_drizzle">Motregen</string>
+    <string name="weather_description_dense_drizzle">Zware motregen</string>
+    <string name="weather_description_light_freezing_drizzle">Lichte ijzel-motregen</string>
+    <string name="weather_description_freezing_drizzle">IJzel-motregen</string>
+    <string name="weather_description_slight_rain">Lichte regen</string>
+    <string name="weather_description_rain">Regen</string>
+    <string name="weather_description_heavy_rain">Zware regen</string>
+    <string name="weather_description_light_freezing_rain">Lichte ijzelregen</string>
+    <string name="weather_description_freezing_rain">IJzelregen</string>
+    <string name="weather_description_slight_snow">Lichte sneeuw</string>
+    <string name="weather_description_snow">Sneeuw</string>
+    <string name="weather_description_heavy_snow">Zware sneeuwval</string>
+    <string name="weather_description_snow_grains">Sneeuwkorrels</string>
+    <string name="weather_description_light_rain_showers">Lichte regenbuien</string>
+    <string name="weather_description_rain_showers">Regenbuien</string>
+    <string name="weather_description_violent_rain_showers">Zware regenbuien</string>
+    <string name="weather_description_light_snow_showers">Lichte sneeuwbuien</string>
+    <string name="weather_description_heavy_snow_showers">Zware sneeuwbuien</string>
+    <string name="weather_description_thunderstorm">Onweer</string>
+    <string name="weather_description_thunderstorm_with_hail">Onweer met hagel</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Onweer met zware hagel</string>
+    <string name="weather_description_unknown">Onbekend</string>
+    <string name="weather_moon_phase_new_moon">Nieuwe maan</string>
+    <string name="weather_moon_phase_waxing_crescent">Wassende sikkel</string>
+    <string name="weather_moon_phase_first_quarter">Eerste kwartier</string>
+    <string name="weather_moon_phase_waxing_gibbous">Wassende maan</string>
+    <string name="weather_moon_phase_full_moon">Volle maan</string>
+    <string name="weather_moon_phase_waning_gibbous">Afnemende maan</string>
+    <string name="weather_moon_phase_last_quarter">Laatste kwartier</string>
+    <string name="weather_moon_phase_waning_crescent">Afnemende sikkel</string>
+    <string name="weather_error_no_location">De locatie kan niet worden bepaald. Zet locatievoorzieningen aan of zoek een plaats.</string>
+    <string name="weather_error_city_not_found">Geen plaats gevonden voor “%1$s”</string>
+    <string name="weather_error_no_network">Het weer kan niet worden geladen. Controleer de internetverbinding.</string>
+    <string name="weather_error_choose_city">Kies een plaats uit de lijst</string>
+    <string name="weather_current_location">Huidige locatie</string>
+</resources>
