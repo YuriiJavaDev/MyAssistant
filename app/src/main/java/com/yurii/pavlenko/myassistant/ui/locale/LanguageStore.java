@@ -27,7 +27,7 @@ public final class LanguageStore {
         if (chosen.isEmpty() || chosen.get(0) == null) {
             return DEFAULT_TAG;
         }
-        String language = chosen.get(0).getLanguage();
+        String language = modernCode(chosen.get(0).getLanguage());
         String tag = chosen.get(0).toLanguageTag();
         for (AppLanguage candidate : AppLanguage.all()) {
             if (candidate.getTag().equalsIgnoreCase(tag)) {
@@ -40,6 +40,18 @@ public final class LanguageStore {
             }
         }
         return DEFAULT_TAG;
+    }
+
+    /** Java still reports the old codes of Hebrew and Indonesian, while the list uses the current ones. */
+    private static String modernCode(String language) {
+        switch (language) {
+            case "iw":
+                return "he";
+            case "in":
+                return "id";
+            default:
+                return language;
+        }
     }
 
     /** Chooses the language of the app. */
