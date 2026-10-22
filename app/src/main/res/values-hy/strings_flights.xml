@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Թռիչքի գրանցում</string>
+    <string name="flights_notification_channel_description">Ցուցադրվում է թռիչքի գրանցման ընթացքում</string>
+    <string name="flights_notification_title">Թռիչքը գրանցվում է</string>
+    <string name="flights_notification_text">Հպեք գործիքները բացելու համար</string>
+    <string-array name="flights_cardinal_points">
+        <item>Հս</item>
+        <item>Հս-Արլ</item>
+        <item>Արլ</item>
+        <item>Հվ-Արլ</item>
+        <item>Հվ</item>
+        <item>Հվ-Արմ</item>
+        <item>Արմ</item>
+        <item>Հս-Արմ</item>
+    </string-array>
+    <string name="flights_report_title">Թռիչքի հաշվետվություն</string>
+    <string name="flights_report_north">Հս</string>
+    <string name="flights_report_side_north">Հս</string>
+    <string name="flights_report_side_south">Հվ</string>
+    <string name="flights_report_side_east">Արլ</string>
+    <string name="flights_report_side_west">Արմ</string>
+    <string name="flights_report_duration">Տևողություն</string>
+    <string name="flights_report_distance">Տարածություն</string>
+    <string name="flights_report_top_speed">Առավելագույն արագություն</string>
+    <string name="flights_report_average_speed">Միջին արագություն</string>
+    <string name="flights_report_highest_altitude">Ամենաբարձր բարձրություն</string>
+    <string name="flights_report_best_climb">Լավագույն վերելք</string>
+    <string name="flights_report_worst_sink">Ամենավատ իջեցում</string>
+    <string name="flights_report_peak_load">Գագաթնային գերբեռնվածություն</string>
+    <string name="flights_report_start_point">Մեկնարկային կետ</string>
+    <string name="flights_report_end_point">Վերջնակետ</string>
+    <string name="flights_report_altitude_above_start">%1$s մեկնարկից վեր</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s ծովի մակերևույթից</string>
+    <string name="flights_report_chart_altitude_above_start">Բարձրություն (%1$s, մեկնարկից)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Բարձրություն (%1$s, ծովի մակերևույթից)</string>
+    <string name="flights_report_chart_speed">Արագություն գետնի նկատմամբ (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Քարտեզ՝ Natural Earth (հանրային սեփականություն)</string>
+    <string name="flights_report_footer">%1$s Գրանցված է MyAssistant-ում միայն զվարճանքի համար. նավիգացիայի կամ անվտանգության համար չէ</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Ինչ պետք է անել</string>
+    <string name="tasks_list_add">Ավելացնել</string>
+    <string name="tasks_list_delete_completed">Ջնջել ավարտվածը</string>
+    <string name="tasks_list_clear_all">Մաքրել ամբողջը</string>
+    <string name="tasks_list_reminder_set">Հիշեցումը սահմանված է</string>
+    <string name="tasks_statistics">Ընդամենը՝ %1$d  Ավարտված՝ %2$d  Մնացել է՝ %3$d  Առաջընթաց՝ %4$d %%</string>
+    <string name="tasks_dialog_title_add">Նոր առաջադրանք</string>
+    <string name="tasks_dialog_title_edit">Խմբագրել առաջադրանքը</string>
+    <string name="tasks_dialog_importance">Կարևորության աստիճան՝</string>
+    <string name="tasks_dialog_deadline_label">Վերջնաժամկետ՝</string>
+    <string name="tasks_dialog_deadline_select">Ընտրեք վերջնաժամկետը</string>
+    <string name="tasks_dialog_reminder_label">Հիշեցում (ամսաթիվ և ժամ)՝</string>
+    <string name="tasks_dialog_reminder_select">Ընտրեք հիշեցման ամսաթիվը և ժամը</string>
+    <string name="tasks_dialog_show_timestamps">Ցուցադրել ստեղծման/փոփոխման ամսաթվերը</string>
+    <string name="tasks_dialog_delete">Ջնջել</string>
+    <string name="tasks_dialog_save">Պահել</string>
+    <string name="tasks_dialog_clear">Մաքրել</string>
+    <string name="tasks_importance_normal">Սովորական</string>
+    <string name="tasks_importance_important">Կարևոր</string>
+    <string name="tasks_importance_urgent">Շտապ</string>
+    <string name="tasks_toast_created">Առաջադրանքը ստեղծվեց</string>
+    <string name="tasks_toast_updated">Առաջադրանքը թարմացվեց</string>
+    <string name="tasks_toast_deleted">Առաջադրանքը ջնջվեց</string>
+    <string name="tasks_toast_completed_deleted">Ավարտված առաջադրանքները ջնջվեցին</string>
+    <string name="tasks_toast_all_cleared">Բոլոր առաջադրանքները ջնջվեցին</string>
+    <string name="tasks_toast_empty_title">Առաջադրանքի նկարագրությունը չի կարող դատարկ լինել</string>
+    <string name="tasks_toast_reminder_after_deadline">Հիշեցումը չի կարող լինել վերջնաժամկետից հետո։</string>
+    <string name="tasks_toast_reminder_in_past">Հիշեցումը չի կարող լինել անցյալում։</string>
+    <string name="tasks_toast_reminder_cleared">Հիշեցումը մաքրվեց, քանի որ վերջնաժամկետն ավելի շուտ է։</string>
+    <string name="tasks_toast_select_deadline_first">Նախ ընտրեք վերջնաժամկետը։</string>
+    <string name="tasks_time_created">Ստեղծվել է՝ %1$s</string>
+    <string name="tasks_time_edited">Փոփոխվել է՝ %1$s</string>
+    <string name="tasks_time_completed">Ավարտվել է՝ %1$s</string>
+    <string name="tasks_deadline_prefixed">Վերջնաժամկետ՝ %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — մնաց %2$d օր։</item>
+        <item quantity="other">%1$s — մնաց %2$d օր։</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — %2$d օրով ուշացած է։</item>
+        <item quantity="other">%1$s — %2$d օրով ուշացած է։</item>
+    </plurals>
+    <string name="tasks_delete_title">Հաստատեք ջնջումը</string>
+    <string name="tasks_delete_button">Ջնջել</string>
+    <string name="tasks_delete_nothing">Ջնջելու ոչինչ չկա։</string>
+    <string name="tasks_delete_item_message">Իսկապե՞ս ուզում եք ջնջել այս տարրը։ Այս գործողությունը հնարավոր չէ չեղարկել։</string>
+    <string name="tasks_delete_cannot_be_undone">Այս գործողությունը հնարավոր չէ չեղարկել։</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Ջնջե՞լ %1$d ավարտված առաջադրանք</item>
+        <item quantity="other">Ջնջե՞լ %1$d ավարտված առաջադրանք</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">Դրանցից %1$d-ն ունի պահված հիշեցում</item>
+        <item quantity="other">Դրանցից %1$d-ն ունի պահված հիշեցում</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Ջնջե՞լ բոլոր %1$d առաջադրանքները</item>
+        <item quantity="other">Ջնջե՞լ բոլոր %1$d առաջադրանքները</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d առաջադրանք ունի ակտիվ հիշեցում</item>
+        <item quantity="other">%1$d առաջադրանք ունի ակտիվ հիշեցում</item>
+    </plurals>
+    <string name="tasks_alert_title">Վերջնաժամկետի զգուշացում։</string>
+    <string name="tasks_alert_view_tasks">Դիտել առաջադրանքները</string>
+    <string name="tasks_alert_channel_name">Առաջադրանքների վերջնաժամկետների զգուշացումներ</string>
+    <string name="tasks_alert_channel_description">Շտապ ծանուցումներ առաջադրանքների վերջնաժամկետների մասին</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">Ժամկետանց առաջադրանքներ՝ %1$d</item>
+        <item quantity="other">Ժամկետանց առաջադրանքներ՝ %1$d</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Ուշադրություն։ Անհապաղ ուշադրության կարիք ունեցող առաջադրանքներ՝ %1$d</item>
+        <item quantity="other">Ուշադրություն։ Անհապաղ ուշադրության կարիք ունեցող առաջադրանքներ՝ %1$d</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Ուշադրություն։ Մոտենում է առաջադրանքի վերջնաժամկետը՝ %1$s</string>
+</resources>

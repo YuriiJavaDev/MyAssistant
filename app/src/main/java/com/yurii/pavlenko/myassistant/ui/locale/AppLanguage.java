@@ -46,7 +46,8 @@ public final class AppLanguage {
             new AppLanguage("vi", "Tiếng Việt"),
             new AppLanguage("th", "ไทย"),
             new AppLanguage("id", "Bahasa Indonesia"),
-            new AppLanguage("ka", "ქართული")
+            new AppLanguage("ka", "ქართული"),
+            new AppLanguage("hy", "Հայերեն")
     ));
 
     private final String tag;
