@@ -271,7 +271,7 @@ MyAssistant is **proprietary software, sold under a single-purchase license**. I
 - You buy it once and may use it on your own devices for personal purposes, without time limits and without a subscription.
 - You may not copy, resell, rent, sublicense, redistribute, publish modified or unmodified builds, or remove the author's notices.
 - You may not reverse engineer it, except where the law explicitly allows it.
-- The software is provided "as is", without warranty.
+- The software is provided "as is", without warranty. Bug reports are welcome and are fixed where possible, but without any obligation or deadline.
 
 The full legal text is in [LICENSE](LICENSE).
 
