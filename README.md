@@ -1,10 +1,10 @@
 # MyAssistant
 
 **Seven everyday tools in one Android app: tasks, weather, currency, calculator, document scanner, step counter and a flight instrument panel.**
-No ads. No trackers. No account. Available in 36 languages, including right-to-left ones.
+No ads. No trackers. No account. Available in 38 languages, including right-to-left ones.
 
 [![Platform](https://img.shields.io/badge/platform-Android%207.0%2B-3DDC84)](#requirements)
-[![Languages](https://img.shields.io/badge/languages-36-blue)](#languages)
+[![Languages](https://img.shields.io/badge/languages-38-blue)](#languages)
 [![Ads](https://img.shields.io/badge/ads-none-success)](#terms-of-use)
 [![License](https://img.shields.io/badge/license-proprietary%2C%20single%20purchase-lightgrey)](LICENSE)
 
@@ -33,7 +33,7 @@ One app instead of seven. Everything is built around the same ideas:
 - **Simple and fast.** Native Android (Java), no heavy frameworks, no work on the main thread that can block it.
 - **Private by design.** No advertising, no analytics, no sign-up. Your tasks, steps, scans and flights stay on your phone.
 - **Yours to keep.** Back everything up to a file or to your own WebDAV cloud storage and restore it on another phone.
-- **For everyone.** 36 languages, dark and light mode, ten visual designs, and full right-to-left support.
+- **For everyone.** 38 languages, dark and light mode, ten visual designs, and full right-to-left support.
 - **Paid once.** One purchase, no subscription, no in-app advertising.
 
 ## Features by module
@@ -177,7 +177,7 @@ flowchart LR
 | UI | Material Components, ConstraintLayout, custom drawn views |
 | Storage | Room 2.6 with migrations, encrypted preferences |
 | Background work | WorkManager, foreground service, exact alarms |
-| Localization | per-app language (`AppCompatDelegate`), 36 languages, right-to-left |
+| Localization | per-app language (`AppCompatDelegate`), 38 languages, right-to-left |
 | Tests | JUnit unit tests for the logic of every module and for translations |
 
 ## Project structure
@@ -206,7 +206,7 @@ MyAssistant/
 │       │   └── res/
 │       │       ├── layout/, layout-land/        portrait and landscape layouts
 │       │       ├── values/                      default (English) texts, colours, styles
-│       │       ├── values-<language>/           translations, 35 languages
+│       │       ├── values-<language>/           translations, 37 languages
 │       │       └── xml/locales_config.xml       list of app languages
 │       └── test/                                unit tests (logic and translations)
 ├── tools/
