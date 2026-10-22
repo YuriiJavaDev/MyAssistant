@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">保存</string>
     <string name="settings_language_title">言語</string>
     <string name="settings_language_subtitle">アプリの言語</string>
-    <string name="language_system_default">システムの既定</string>
 </resources>

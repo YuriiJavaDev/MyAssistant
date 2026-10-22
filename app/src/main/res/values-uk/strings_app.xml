@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Зберегти</string>
     <string name="settings_language_title">Мова</string>
     <string name="settings_language_subtitle">Мова застосунку</string>
-    <string name="language_system_default">Системна</string>
 </resources>

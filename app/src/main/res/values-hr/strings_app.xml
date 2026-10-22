@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Spremi</string>
     <string name="settings_language_title">Jezik</string>
     <string name="settings_language_subtitle">Jezik aplikacije</string>
-    <string name="language_system_default">Zadano sustava</string>
 </resources>

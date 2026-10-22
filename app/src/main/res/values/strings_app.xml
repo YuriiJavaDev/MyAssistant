@@ -35,5 +35,4 @@
 
     <string name="settings_language_title">Language</string>
     <string name="settings_language_subtitle">Language of the app</string>
-    <string name="language_system_default">System default</string>
 </resources>

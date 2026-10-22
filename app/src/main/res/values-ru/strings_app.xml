@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Сохранить</string>
     <string name="settings_language_title">Язык</string>
     <string name="settings_language_subtitle">Язык приложения</string>
-    <string name="language_system_default">Системный</string>
 </resources>

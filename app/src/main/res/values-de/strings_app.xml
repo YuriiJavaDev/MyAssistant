@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Speichern</string>
     <string name="settings_language_title">Sprache</string>
     <string name="settings_language_subtitle">Sprache der App</string>
-    <string name="language_system_default">Systemstandard</string>
 </resources>

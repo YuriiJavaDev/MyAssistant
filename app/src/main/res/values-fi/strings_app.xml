@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Tallenna</string>
     <string name="settings_language_title">Kieli</string>
     <string name="settings_language_subtitle">Sovelluksen kieli</string>
-    <string name="language_system_default">Järjestelmän oletus</string>
 </resources>

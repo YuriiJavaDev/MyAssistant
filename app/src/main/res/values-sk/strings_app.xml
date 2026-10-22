@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Uložiť</string>
     <string name="settings_language_title">Jazyk</string>
     <string name="settings_language_subtitle">Jazyk aplikácie</string>
-    <string name="language_system_default">Predvolený systémový</string>
 </resources>

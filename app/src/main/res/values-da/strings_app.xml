@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Gem</string>
     <string name="settings_language_title">Sprog</string>
     <string name="settings_language_subtitle">Appens sprog</string>
-    <string name="language_system_default">Systemets standard</string>
 </resources>

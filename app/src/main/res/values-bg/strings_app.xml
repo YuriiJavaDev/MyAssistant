@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Запис</string>
     <string name="settings_language_title">Език</string>
     <string name="settings_language_subtitle">Език на приложението</string>
-    <string name="language_system_default">По подразбиране на системата</string>
 </resources>

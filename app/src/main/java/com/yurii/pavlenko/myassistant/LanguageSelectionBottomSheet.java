@@ -19,7 +19,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.yurii.pavlenko.myassistant.ui.locale.AppLanguage;
 import com.yurii.pavlenko.myassistant.ui.locale.LanguageStore;
 
-/** Bottom sheet for choosing the language of the application, or following the language of the device. */
+/** Bottom sheet for choosing the language of the application. */
 public class LanguageSelectionBottomSheet extends BottomSheetDialogFragment {
 
     @Nullable
@@ -29,7 +29,6 @@ public class LanguageSelectionBottomSheet extends BottomSheetDialogFragment {
         LinearLayout list = view.findViewById(R.id.languageList);
         String chosen = LanguageStore.chosenTag();
 
-        list.addView(createOption(inflater, list, getString(R.string.language_system_default), null, chosen == null));
         for (AppLanguage language : AppLanguage.all()) {
             list.addView(createOption(inflater, list, language.getNativeName(), language.getTag(),
                     language.getTag().equals(chosen)));
@@ -37,7 +36,7 @@ public class LanguageSelectionBottomSheet extends BottomSheetDialogFragment {
         return view;
     }
 
-    private View createOption(LayoutInflater inflater, ViewGroup parent, String name, @Nullable String tag, boolean selected) {
+    private View createOption(LayoutInflater inflater, ViewGroup parent, String name, String tag, boolean selected) {
         View option = inflater.inflate(R.layout.item_language_option, parent, false);
         ((RadioButton) option.findViewById(R.id.languageRadio)).setChecked(selected);
         ((TextView) option.findViewById(R.id.languageName)).setText(name);
@@ -45,7 +44,7 @@ public class LanguageSelectionBottomSheet extends BottomSheetDialogFragment {
         return option;
     }
 
-    private void choose(@Nullable String tag) {
+    private void choose(String tag) {
         dismiss();
         Fragment settingsSheet = getParentFragmentManager().findFragmentByTag("SettingsBottomSheet");
         if (settingsSheet instanceof BottomSheetDialogFragment) {

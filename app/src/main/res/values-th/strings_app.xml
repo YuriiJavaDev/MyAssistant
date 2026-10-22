@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">บันทึก</string>
     <string name="settings_language_title">ภาษา</string>
     <string name="settings_language_subtitle">ภาษาของแอป</string>
-    <string name="language_system_default">ค่าเริ่มต้นของระบบ</string>
 </resources>

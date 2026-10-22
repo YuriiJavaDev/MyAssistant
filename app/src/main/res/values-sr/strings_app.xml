@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Сачувај</string>
     <string name="settings_language_title">Језик</string>
     <string name="settings_language_subtitle">Језик апликације</string>
-    <string name="language_system_default">Подразумевани системски</string>
 </resources>

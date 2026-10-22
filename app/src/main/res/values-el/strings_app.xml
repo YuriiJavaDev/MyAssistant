@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Αποθήκευση</string>
     <string name="settings_language_title">Γλώσσα</string>
     <string name="settings_language_subtitle">Γλώσσα της εφαρμογής</string>
-    <string name="language_system_default">Προεπιλογή συστήματος</string>
 </resources>

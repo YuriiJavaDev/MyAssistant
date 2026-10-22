@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Opslaan</string>
     <string name="settings_language_title">Taal</string>
     <string name="settings_language_subtitle">Taal van de app</string>
-    <string name="language_system_default">Systeemstandaard</string>
 </resources>

@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">儲存</string>
     <string name="settings_language_title">語言</string>
     <string name="settings_language_subtitle">應用程式語言</string>
-    <string name="language_system_default">跟隨系統</string>
 </resources>

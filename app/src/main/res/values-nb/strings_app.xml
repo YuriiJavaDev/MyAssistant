@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Lagre</string>
     <string name="settings_language_title">Språk</string>
     <string name="settings_language_subtitle">Appens språk</string>
-    <string name="language_system_default">Systemets standard</string>
 </resources>

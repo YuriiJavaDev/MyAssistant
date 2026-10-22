@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">Lưu</string>
     <string name="settings_language_title">Ngôn ngữ</string>
     <string name="settings_language_subtitle">Ngôn ngữ ứng dụng</string>
-    <string name="language_system_default">Mặc định của hệ thống</string>
 </resources>

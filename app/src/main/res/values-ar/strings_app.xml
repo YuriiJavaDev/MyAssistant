@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">حفظ</string>
     <string name="settings_language_title">اللغة</string>
     <string name="settings_language_subtitle">لغة التطبيق</string>
-    <string name="language_system_default">لغة النظام</string>
 </resources>

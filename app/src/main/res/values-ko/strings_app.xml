@@ -29,5 +29,4 @@
     <string name="backup_cloud_save">저장</string>
     <string name="settings_language_title">언어</string>
     <string name="settings_language_subtitle">앱 언어</string>
-    <string name="language_system_default">시스템 기본값</string>
 </resources>
