@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">გაუქმება</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">პარამეტრები</string>
+    <string name="settings_alarms_title">შეხსენებები და მაღვიძარები</string>
+    <string name="settings_alarms_subtitle">ინტერვალები, ხმები და შეტყობინებების სტატუსი</string>
+    <string name="settings_display_title">ჩვენების რეჟიმი</string>
+    <string name="settings_display_subtitle">დღე / ღამე / ავტომატური</string>
+    <string name="display_mode_title">ჩვენების რეჟიმი</string>
+    <string name="display_mode_light">ღია (დღე)</string>
+    <string name="display_mode_dark">მუქი (ღამე)</string>
+    <string name="display_mode_system">სისტემის მიხედვით (ავტო)</string>
+    <string name="settings_design_title">აპის იერსახე</string>
+    <string name="settings_design_subtitle">ინტერფეისის სტილის არჩევა</string>
+    <string name="design_classic_name">კლასიკური</string>
+    <string name="design_classic_about">თავდაპირველი იერსახე: კრემისფერი და იისფერი</string>
+    <string name="design_paper_ink_name">ქაღალდი და მელანი</string>
+    <string name="design_paper_ink_about">თხელი ხაზები და მშვიდი საოფისე ფერები</string>
+    <string name="design_pastel_cloud_name">პასტელის ღრუბელი</string>
+    <string name="design_pastel_cloud_about">რბილი, მომრგვალო და ფერმკრთალი ღრუბლებით</string>
+    <string name="design_neon_arcade_name">ნეონის არკადა</string>
+    <string name="design_neon_arcade_about">კაშკაშა ნეონი, მაღალი კონტრასტი და რეტრო მზე</string>
+    <string name="design_toon_name">მულტფილმი</string>
+    <string name="design_toon_about">კომიქსის კონტურები და ხელნაწერი შრიფტი</string>
+    <string name="design_biker_name">ბაიკერი</string>
+    <string name="design_biker_about">უხეში ლითონი, რეზინი და გამონაბოლქვის ნარინჯისფერი</string>
+    <string name="design_cockpit_name">კაბინა</string>
+    <string name="design_cockpit_about">მკაცრი ხელსაწყოების პანელი პლანერით</string>
+    <string name="design_beach_name">სანაპირო</string>
+    <string name="design_beach_about">ქვიშა, ლაგუნა, მარჯანი და პალმები</string>
+    <string name="design_forest_name">ჯადოსნური ტყე</string>
+    <string name="design_forest_about">პერგამენტი, ოქრო და ტყის ხავსი</string>
+    <string name="design_mono_block_name">მონობლოკი</string>
+    <string name="design_mono_block_about">მკვეთრი შავ-თეთრი ერთი ყვითელი მარკერით</string>
+    <string name="settings_permissions_title">სისტემის ნებართვები</string>
+    <string name="settings_permissions_subtitle">წვდომის მართვა Android-ში</string>
+    <string-array name="filter_options">
+        <item>ყველა ამოცანა</item>
+        <item>აქტიური</item>
+        <item>დასრულებული</item>
+        <item>გაფრთხილებები</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>ა–ჰ</item>
+        <item>ჰ–ა</item>
+        <item>სტატუსი</item>
+        <item>შექმნის თარიღი</item>
+        <item>ცვლილების თარიღი</item>
+        <item>დასრულების თარიღი</item>
+        <item>მნიშვნელობა</item>
+        <item>ვადა</item>
+    </string-array>
+    <string name="scan_camera">კამერა</string>
+    <string name="scan_gallery">გალერეა</string>
+    <string name="scan_clear_all">ყველას წაშლა</string>
+    <string name="scan_cleared">ყველა სკანი წაიშალა</string>
+    <string name="scan_empty">დოკუმენტები ჯერ არ არის. გადაუღეთ ფოტო გვერდს ან აირჩიეთ სურათი გალერეიდან</string>
+    <string name="scan_auto">ავტო</string>
+    <string name="scan_reset">დაბრუნება</string>
+    <string name="scan_next">შემდეგი</string>
+    <string name="scan_back">უკან</string>
+    <string name="scan_save">შენახვა</string>
+    <string name="scan_rotate">შებრუნება</string>
+    <string name="scan_paper">ქაღალდი</string>
+    <string name="scan_filter_color">ფერი</string>
+    <string name="scan_filter_gray">რუხი</string>
+    <string name="scan_filter_bw">შ/თ</string>
+    <string name="scan_tune">სინათლე და კონტრასტი</string>
+    <string name="scan_shadows">ჩრდილების მოცილება</string>
+    <string name="scan_brightness">სიკაშკაშე</string>
+    <string name="scan_contrast">კონტრასტი</string>
+    <string name="scan_sharpen">სიმკვეთრე</string>
+    <string name="scan_page_saved">გვერდი შეინახა</string>
+    <string name="scan_next_page_question">დავამატოთ კიდევ ერთი გვერდი დოკუმენტს?</string>
+    <string name="scan_page_label">გვერდი %d</string>
+    <string name="scan_done">მზადაა</string>
+    <string name="scan_add_page">გვერდის დამატება</string>
+    <string name="scan_share_pdf">PDF გაგზავნა</string>
+    <string name="scan_pages_empty">ამ დოკუმენტს გვერდები არ აქვს</string>
+    <string name="scan_saved_to_device">ფაილი შეინახა</string>
+    <string name="scan_share_title">დოკუმენტის გაზიარება</string>
+    <string name="scan_rename_title">დოკუმენტის სახელის შეცვლა</string>
+    <string name="scan_rename_confirm">სახელის შეცვლა</string>
+    <string name="scan_error_load">ამ სურათის გახსნა ვერ მოხერხდა</string>
+    <string name="scan_error_preview">გადახედვისთვის მეხსიერება არ არის საკმარისი</string>
+    <string name="scan_error_save">სკანის შენახვა ვერ მოხერხდა</string>
+    <string name="scan_error_export">ფაილის მომზადება ვერ მოხერხდა</string>
+    <string name="scan_error_no_camera">კამერის აპი ვერ მოიძებნა</string>
+    <string name="scan_error_no_viewer">სურათის გასახსნელი აპი ვერ მოიძებნა</string>
+    <string name="scan_error_no_app">გასაზიარებელი აპი ვერ მოიძებნა</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d გვერდი</item>
+        <item quantity="other">%d გვერდი</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>გვერდები</item>
+        <item>გაზიარება PDF-ად</item>
+        <item>გაზიარება JPEG-ად</item>
+        <item>PDF-ის შენახვა…</item>
+        <item>სახელის შეცვლა</item>
+        <item>წაშლა</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>ნახვა</item>
+        <item>JPEG-ის შენახვა…</item>
+        <item>ზემოთ აწევა</item>
+        <item>ქვემოთ ჩამოწევა</item>
+        <item>გვერდის წაშლა</item>
+    </string-array>
+    <string name="weather_city_hint">ქალაქის სახელი ნებისმიერ ენაზე</string>
+    <string name="weather_search">ძებნა</string>
+    <string name="weather_my_location">ჩემი მდებარეობა</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">იგრძნობა როგორც</string>
+    <string name="weather_humidity">ტენიანობა</string>
+    <string name="weather_wind">ქარი</string>
+    <string name="weather_today_range">დღეს</string>
+    <string name="weather_units">ერთეულები</string>
+    <string name="weather_units_temperature">ტემპერატურა</string>
+    <string name="weather_units_wind">ქარის სიჩქარე</string>
+    <string name="weather_unit_celsius">ცელსიუსი (°C)</string>
+    <string name="weather_unit_fahrenheit">ფარენჰაიტი (°F)</string>
+    <string name="weather_unit_ms">მეტრი წამში (m/s)</string>
+    <string name="weather_unit_kmh">კილომეტრი საათში (km/h)</string>
+    <string name="weather_moon_caption">%1$s · განათებულია %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">ამინდი იტვირთება…</string>
+    <string name="weather_location_needed">დაუშვით მიახლოებითი მდებარეობის წვდომა, რომ ნახოთ ამინდი თქვენთან, ან მოძებნეთ ქალაქი</string>
+    <string name="weather_allow">დაშვება</string>
+    <string name="weather_open_settings">აპის პარამეტრების გახსნა</string>
+    <string name="weather_attribution">ამინდი: Open-Meteo.com · ადგილები: © OpenStreetMap-ის კონტრიბუტორები</string>
+    <string name="weather_choose_city">აირჩიეთ ქალაქი</string>
+    <string name="steps_today">დღეს</string>
+    <string name="steps_unit">ნაბიჯი</string>
+    <string name="steps_walk_run">ფეხით %1$s · ირბენა %2$s</string>
+    <string name="steps_period">პერიოდი</string>
+    <string name="steps_last_7">7 დღე</string>
+    <string name="steps_last_30">30 დღე</string>
+    <string name="steps_this_month">თვე</string>
+    <string name="steps_pick_dates">აირჩიეთ თარიღები</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">სულ ნაბიჯი</string>
+    <string name="steps_distance">მანძილი</string>
+    <string name="steps_average">საშუალოდ დღეში</string>
+    <string name="steps_best_day">საუკეთესო დღე</string>
+    <string name="steps_walking">ნაბიჯები სიარულისას</string>
+    <string name="steps_running">ნაბიჯები სირბილისას</string>
+    <string name="steps_active_days">დღეები ნაბიჯებით</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d %2$d-დან</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">ამ პერიოდში ნაბიჯები ჩაწერილი არ არის</string>
+    <string name="steps_settings">ნაბიჯების პარამეტრები</string>
+    <string name="steps_settings_title">ნაბიჯის სიგრძე</string>
+    <string name="steps_walk_length">ნაბიჯის სიგრძე სიარულისას, სმ</string>
+    <string name="steps_run_length">ნაბიჯის სიგრძე სირბილისას, სმ</string>
+    <string name="steps_run_cadence">სირბილად ითვლება, ნაბიჯი წუთში, დან</string>
+    <string name="steps_run_cadence_hint">ამ ტემპის ან უფრო სწრაფი ნაბიჯები სირბილად ითვლება</string>
+    <string name="steps_defaults">ნაგულისხმევი</string>
+    <string name="steps_save">შენახვა</string>
+    <string name="steps_invalid_length">შეიყვანეთ მნიშვნელობა %1$d–%2$d</string>
+    <string name="steps_measure_title">როგორ გავზომოთ ნაბიჯის სიგრძე</string>
+    <string name="steps_measure_text">1. პირველ ნაბიჯამდე ფეხსაცმლის თითთან დაადეთ საწყისი ხაზი.\n2. გაიარეთ 10 მშვიდი ნაბიჯი თქვენი ჩვეული სიჩქარით.\n3. მეათე ნაბიჯის შემდეგ გაზომეთ მანძილი საწყისი ხაზიდან იმავე ფეხსაცმლის თითამდე სანტიმეტრებში.\n4. გაყავით ათზე.\n5. გაიმეორეთ რამდენჯერმე და შეიყვანეთ საშუალო.\n\nსირბილისას ნაბიჯის სიგრძისთვის გააკეთეთ იგივე თქვენი ჩვეული სირბილის ტემპით.</string>
+    <string name="steps_no_sensor">ამ ტელეფონს ნაბიჯების სენსორი არ აქვს</string>
+    <string name="steps_permission_needed">დაუშვით ფიზიკური აქტივობის წვდომა, რომ ტელეფონმა ნაბიჯები დათვალოს</string>
+    <string name="steps_allow">დაშვება</string>
+    <string name="steps_open_settings">აპის პარამეტრების გახსნა</string>
+    <string name="currency_amount_hint">თანხა</string>
+    <string name="currency_swap">შებრუნება ⇅</string>
+    <string name="currency_refresh">კურსის განახლება</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">კურსი განახლდა: %1$s</string>
+    <string name="currency_outdated">ინტერნეტი არ არის, ნაჩვენებია შენახული კურსი: %1$s</string>
+    <string name="currency_loading">კურსები იტვირთება…</string>
+    <string name="currency_unavailable">კურსები მიუწვდომელია. შეამოწმეთ ინტერნეტი და განაახლეთ</string>
+    <string name="currency_invalid_amount">შეიყვანეთ თანხა</string>
+    <string name="currency_attribution">კურსები: Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">სამეცნ.</string>
+    <string name="calculator_basic">ძირითადი</string>
+    <string name="calculator_degrees">გრადუსი</string>
+    <string name="calculator_radians">რადიანი</string>
+    <string name="calculator_history">ისტორია</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">დაწყება</string>
+    <string name="flights_stop">შეწყვეტა</string>
+    <string name="flights_units">ერთეული</string>
+    <string name="flights_journal">ჟურნალი</string>
+    <string name="flights_journal_title">ფრენების ჟურნალი</string>
+    <string name="flights_journal_empty">ჩაწერილი ფრენები ჯერ არ არის</string>
+    <string name="flights_journal_in_progress">ეს ფრენა ამჟამად იწერება</string>
+    <string name="flights_report_open">ანგარიშის გახსნა</string>
+    <string name="flights_report_share">ანგარიშის გაზიარება</string>
+    <string name="flights_report_delete">ფრენის წაშლა</string>
+    <string name="flights_report_failed">ანგარიშის მომზადება ვერ მოხერხდა</string>
+    <string name="flights_report_no_viewer">PDF-ფაილის გასახსნელი აპი ვერ მოიძებნა</string>
+    <string name="flights_delete_title">წაიშალოს ეს ფრენა?</string>
+    <string name="flights_delete_message">ტრეკი და ანგარიში სამუდამოდ წაიშლება. მანამდე ანგარიში შეგიძლიათ სხვაგან გააგზავნოთ, მაგალითად, ფლეშ-დრაივზე, კომპიუტერზე ან Google Drive-ზე</string>
+    <string name="flights_delete_save_first">ანგარიშის შენახვა და წაშლა</string>
+    <string name="flights_delete_without_saving">წაშლა შენახვის გარეშე</string>
+    <string name="flights_delete_after_share_message">თუ ანგარიში საჭირო ადგილას მივიდა, ახლა ფრენის წაშლა შეგიძლიათ</string>
+    <string name="flights_delete_after_share_confirm">ფრენის წაშლა</string>
+    <string name="flights_delete_keep">ფრენის დატოვება</string>
+    <string name="flights_units_report_limit">ანგარიშების ლიმიტი</string>
+    <string name="flights_units_report_limit_hint">PDF-ანგარიშების მაქსიმალური რაოდენობა ჟურნალში. 0 ნიშნავს შეუზღუდავს</string>
+    <string name="flights_limit_full_title">PDF-ანგარიშების ლიმიტი ამოიწურა</string>
+    <string name="flights_limit_full_message">ჟურნალში %1$d ანგარიშია, ანუ ლიმიტი. ახალი ფრენის ჩასაწერად ჟურნალიდან ერთი ფრენა მაინც წაშალეთ. მანამდე მისი ანგარიში შეგიძლიათ შეინახოთ ფლეშ-დრაივზე, კომპიუტერზე ან Google Drive-ზე</string>
+    <string name="flights_limit_warning_title">PDF-ანგარიშების ლიმიტი თითქმის ამოიწურა!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">კიდევ %d ფრენის ჩაწერა შეგიძლიათ. წაშალეთ ძველი ფრენები ჟურნალიდან</item>
+        <item quantity="other">კიდევ %d ფრენის ჩაწერა შეგიძლიათ. წაშალეთ ძველი ფრენები ჟურნალიდან</item>
+    </plurals>
+    <string name="flights_limit_open_journal">ჟურნალის გახსნა</string>
+    <string name="flights_journal_line">%1$s · მაქს. %2$s · მაქს. სიმაღლე %3$s</string>
+    <string name="flights_units_speed">სიჩქარე და მანძილი</string>
+    <string name="flights_units_altitude">სიმაღლე</string>
+    <string name="flights_unit_kmh">კილომეტრი საათში (km/h)</string>
+    <string name="flights_unit_knots">კვანძი (kt, საზღვაო მილი)</string>
+    <string name="flights_unit_ms">მეტრი წამში (m/s)</string>
+    <string name="flights_unit_metres">მეტრი (m)</string>
+    <string name="flights_unit_feet">ფუტი (ft)</string>
+    <string name="flights_units_climb">ასვლის სიჩქარე</string>
+    <string name="flights_unit_fpm">ფუტი წუთში (ft/min)</string>
+    <string name="flights_altitude_zero">ნული</string>
+    <string name="flights_altitude_sea">ზღვის დონიდან</string>
+    <string name="flights_altitude_start">სტარტიდან · გასაუქმებლად გეჭიროთ „ნული“</string>
+    <string name="flights_sound_on">ხმა: ჩართ.</string>
+    <string name="flights_sound_off">ხმა: გამორთ.</string>
+    <string name="flights_sound_tune">ხმის გამართვა</string>
+    <string name="flights_sound_climb_start">სიგნალი იწყება %1$.1f m/s ასვლისას</string>
+    <string name="flights_sound_sink_start">დაბალი სიგნალი იწყება %1$.1f m/s დაშვებისას</string>
+    <string name="flights_sound_sink_alarm">უწყვეტი განგაში %1$.1f m/s დაშვებისას</string>
+    <string name="flights_speed_label">სიჩქარე</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">ფრენის დრო</string>
+    <string name="flights_distance">მანძილი</string>
+    <string name="flights_max_speed">მაქს. სიჩქარე</string>
+    <string name="flights_avg_speed">საშ. სიჩქარე</string>
+    <string name="flights_max_altitude">მაქს. სიმაღლე</string>
+    <string name="flights_climb_rate">ასვლის სიჩქარე</string>
+    <string name="flights_max_g">მაქს. გადატვირთვა</string>
+    <string name="flights_status_waiting">GPS სიგნალის მოლოდინი…</string>
+    <string name="flights_location_needed">დაუშვით ზუსტი მდებარეობის წვდომა სიჩქარის, სიმაღლისა და ტრეკის ჩასაწერად</string>
+    <string name="flights_allow">დაშვება</string>
+    <string name="flights_open_settings">აპის პარამეტრების გახსნა</string>
+    <string name="flights_gps_off">ფრენის ჩასაწერად ჩართეთ მდებარეობის სერვისები (GPS)</string>
+    <string name="flights_disclaimer">მხოლოდ გასართობად და ცნობისმოყვარეობისთვის. ამ ხელსაწყოებს ნავიგაციისა და უსაფრთხოებისთვის ნუ დაეყრდნობით</string>
+</resources>
