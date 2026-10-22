@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">맑음</string>
+    <string name="weather_description_mainly_clear">대체로 맑음</string>
+    <string name="weather_description_partly_cloudy">구름 조금</string>
+    <string name="weather_description_overcast">흐림</string>
+    <string name="weather_description_fog">안개</string>
+    <string name="weather_description_rime_fog">상고대 안개</string>
+    <string name="weather_description_light_drizzle">약한 이슬비</string>
+    <string name="weather_description_drizzle">이슬비</string>
+    <string name="weather_description_dense_drizzle">짙은 이슬비</string>
+    <string name="weather_description_light_freezing_drizzle">약한 어는 이슬비</string>
+    <string name="weather_description_freezing_drizzle">어는 이슬비</string>
+    <string name="weather_description_slight_rain">약한 비</string>
+    <string name="weather_description_rain">비</string>
+    <string name="weather_description_heavy_rain">강한 비</string>
+    <string name="weather_description_light_freezing_rain">약한 어는 비</string>
+    <string name="weather_description_freezing_rain">어는 비</string>
+    <string name="weather_description_slight_snow">약한 눈</string>
+    <string name="weather_description_snow">눈</string>
+    <string name="weather_description_heavy_snow">강한 눈</string>
+    <string name="weather_description_snow_grains">싸락눈</string>
+    <string name="weather_description_light_rain_showers">약한 소나기</string>
+    <string name="weather_description_rain_showers">소나기</string>
+    <string name="weather_description_violent_rain_showers">강한 소나기</string>
+    <string name="weather_description_light_snow_showers">약한 눈 소나기</string>
+    <string name="weather_description_heavy_snow_showers">강한 눈 소나기</string>
+    <string name="weather_description_thunderstorm">뇌우</string>
+    <string name="weather_description_thunderstorm_with_hail">우박을 동반한 뇌우</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">큰 우박을 동반한 뇌우</string>
+    <string name="weather_description_unknown">알 수 없음</string>
+    <string name="weather_moon_phase_new_moon">삭</string>
+    <string name="weather_moon_phase_waxing_crescent">초승달</string>
+    <string name="weather_moon_phase_first_quarter">상현달</string>
+    <string name="weather_moon_phase_waxing_gibbous">차오르는 달</string>
+    <string name="weather_moon_phase_full_moon">보름달</string>
+    <string name="weather_moon_phase_waning_gibbous">기우는 달</string>
+    <string name="weather_moon_phase_last_quarter">하현달</string>
+    <string name="weather_moon_phase_waning_crescent">그믐달</string>
+    <string name="weather_error_no_location">위치를 확인할 수 없습니다. 위치 서비스를 켜거나 도시를 검색하세요.</string>
+    <string name="weather_error_city_not_found">“%1$s”에 해당하는 도시를 찾을 수 없습니다</string>
+    <string name="weather_error_no_network">날씨를 불러올 수 없습니다. 인터넷 연결을 확인하세요.</string>
+    <string name="weather_error_choose_city">목록에서 도시를 선택하세요</string>
+    <string name="weather_current_location">현재 위치</string>
+</resources>

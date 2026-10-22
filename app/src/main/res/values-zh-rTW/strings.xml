@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">取消</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_alarms_title">提醒和鬧鐘</string>
+    <string name="settings_alarms_subtitle">間隔、聲音和通知狀態</string>
+    <string name="settings_display_title">顯示模式</string>
+    <string name="settings_display_subtitle">白天 / 夜間 / 自動</string>
+    <string name="display_mode_title">顯示模式</string>
+    <string name="display_mode_light">淺色（白天）</string>
+    <string name="display_mode_dark">深色（夜間）</string>
+    <string name="display_mode_system">跟隨系統（自動）</string>
+    <string name="settings_design_title">應用程式外觀</string>
+    <string name="settings_design_subtitle">界面外觀方案</string>
+    <string name="design_classic_name">經典</string>
+    <string name="design_classic_about">原始外觀：奶油色與紫色</string>
+    <string name="design_paper_ink_name">紙與墨</string>
+    <string name="design_paper_ink_about">細線條與沉穩的辦公色調</string>
+    <string name="design_pastel_cloud_name">粉彩雲朵</string>
+    <string name="design_pastel_cloud_about">柔和、圓潤、淡雅，帶有雲朵</string>
+    <string name="design_neon_arcade_name">霓虹街機</string>
+    <string name="design_neon_arcade_about">炫目霓虹、強烈對比與復古太陽</string>
+    <string name="design_toon_name">卡通</string>
+    <string name="design_toon_about">漫畫式輪廓與手寫字體</string>
+    <string name="design_biker_name">摩托車手</string>
+    <string name="design_biker_about">粗獷金屬、橡膠與排氣管橙色</string>
+    <string name="design_cockpit_name">駕駛艙</string>
+    <string name="design_cockpit_about">帶滑翔機的嚴謹儀表盤</string>
+    <string name="design_beach_name">海灘</string>
+    <string name="design_beach_about">沙灘、瀉湖、珊瑚和棕櫚樹</string>
+    <string name="design_forest_name">魔法森林</string>
+    <string name="design_forest_about">羊皮紙、金色與森林苔蘚</string>
+    <string name="design_mono_block_name">單色塊</string>
+    <string name="design_mono_block_about">銳利的黑白配一支黃色熒光筆</string>
+    <string name="settings_permissions_title">系統權限</string>
+    <string name="settings_permissions_subtitle">管理 Android 中的存取權限</string>
+    <string-array name="filter_options">
+        <item>全部任務</item>
+        <item>進行中</item>
+        <item>已完成</item>
+        <item>提醒</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>狀態</item>
+        <item>創建時間</item>
+        <item>修改時間</item>
+        <item>完成時間</item>
+        <item>重要性</item>
+        <item>截止日期</item>
+    </string-array>
+    <string name="scan_camera">相機</string>
+    <string name="scan_gallery">相簿</string>
+    <string name="scan_clear_all">全部清除</string>
+    <string name="scan_cleared">所有掃描檔已刪除</string>
+    <string name="scan_empty">還沒有文件。拍攝一頁或從相簿中選擇照片。</string>
+    <string name="scan_auto">自動</string>
+    <string name="scan_reset">重置</string>
+    <string name="scan_next">下一步</string>
+    <string name="scan_back">返回</string>
+    <string name="scan_save">儲存</string>
+    <string name="scan_rotate">旋轉</string>
+    <string name="scan_paper">紙張</string>
+    <string name="scan_filter_color">彩色</string>
+    <string name="scan_filter_gray">灰度</string>
+    <string name="scan_filter_bw">黑白</string>
+    <string name="scan_tune">光線和對比度</string>
+    <string name="scan_shadows">去除陰影</string>
+    <string name="scan_brightness">亮度</string>
+    <string name="scan_contrast">對比度</string>
+    <string name="scan_sharpen">銳化</string>
+    <string name="scan_page_saved">頁面已儲存</string>
+    <string name="scan_next_page_question">再添加一頁到文件嗎？</string>
+    <string name="scan_page_label">第 %d 頁</string>
+    <string name="scan_done">完成</string>
+    <string name="scan_add_page">添加頁面</string>
+    <string name="scan_share_pdf">分享 PDF</string>
+    <string name="scan_pages_empty">此文件沒有頁面。</string>
+    <string name="scan_saved_to_device">檔案已儲存</string>
+    <string name="scan_share_title">分享文件</string>
+    <string name="scan_rename_title">重命名文件</string>
+    <string name="scan_rename_confirm">重命名</string>
+    <string name="scan_error_load">無法開啟這張照片</string>
+    <string name="scan_error_preview">記憶體不足，無法預覽</string>
+    <string name="scan_error_save">無法儲存掃描檔</string>
+    <string name="scan_error_export">無法準備檔案</string>
+    <string name="scan_error_no_camera">未找到相機應用程式</string>
+    <string name="scan_error_no_viewer">未找到可開啟圖片的應用程式</string>
+    <string name="scan_error_no_app">未找到可用於分享的應用程式</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d 頁</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>頁面</item>
+        <item>以 PDF 分享</item>
+        <item>以 JPEG 分享</item>
+        <item>將 PDF 儲存到…</item>
+        <item>重命名</item>
+        <item>刪除</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>查看</item>
+        <item>將 JPEG 儲存到…</item>
+        <item>上移</item>
+        <item>下移</item>
+        <item>刪除頁面</item>
+    </string-array>
+    <string name="weather_city_hint">任意語言的城市名稱</string>
+    <string name="weather_search">搜尋</string>
+    <string name="weather_my_location">我的位置</string>
+    <string name="weather_country_format">（%1$s）</string>
+    <string name="weather_feels_like">體感溫度</string>
+    <string name="weather_humidity">濕度</string>
+    <string name="weather_wind">風</string>
+    <string name="weather_today_range">今天</string>
+    <string name="weather_units">單位</string>
+    <string name="weather_units_temperature">溫度</string>
+    <string name="weather_units_wind">風速</string>
+    <string name="weather_unit_celsius">攝氏度 (°C)</string>
+    <string name="weather_unit_fahrenheit">華氏度 (°F)</string>
+    <string name="weather_unit_ms">米/秒 (m/s)</string>
+    <string name="weather_unit_kmh">千米/小時 (km/h)</string>
+    <string name="weather_moon_caption">%1$s · 照亮 %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">正在載入天氣…</string>
+    <string name="weather_location_needed">允許存取大致位置以查看您所在地的天氣，或搜尋一個城市。</string>
+    <string name="weather_allow">允許</string>
+    <string name="weather_open_settings">開啟應用程式設定</string>
+    <string name="weather_attribution">天氣：Open-Meteo.com · 地點：© OpenStreetMap 貢獻者</string>
+    <string name="weather_choose_city">選擇城市</string>
+    <string name="steps_today">今天</string>
+    <string name="steps_unit">步</string>
+    <string name="steps_walk_run">步行 %1$s · 跑步 %2$s</string>
+    <string name="steps_period">時間段</string>
+    <string name="steps_last_7">7 天</string>
+    <string name="steps_last_30">30 天</string>
+    <string name="steps_this_month">本月</string>
+    <string name="steps_pick_dates">選擇日期</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">總步數</string>
+    <string name="steps_distance">距離</string>
+    <string name="steps_average">日均</string>
+    <string name="steps_best_day">最佳一天</string>
+    <string name="steps_walking">步行步數</string>
+    <string name="steps_running">跑步步數</string>
+    <string name="steps_active_days">有步數的天數</string>
+    <string name="steps_average_value">%1$s（%2$s）</string>
+    <string name="steps_best_day_value">%1$s（%2$s）</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">此時間段內沒有記錄到步數</string>
+    <string name="steps_settings">步數設定</string>
+    <string name="steps_settings_title">步長</string>
+    <string name="steps_walk_length">步行步長，cm</string>
+    <string name="steps_run_length">跑步步長，cm</string>
+    <string name="steps_run_cadence">步頻達到多少算跑步，步/分鐘</string>
+    <string name="steps_run_cadence_hint">達到或超過此步頻的步數將計為跑步。</string>
+    <string name="steps_defaults">預設</string>
+    <string name="steps_save">儲存</string>
+    <string name="steps_invalid_length">請輸入 %1$d–%2$d</string>
+    <string name="steps_measure_title">如何測量步長</string>
+    <string name="steps_measure_text">1. 邁出第一步前，在鞋尖處標記起點線。\n2. 以平時的速度平穩走 10 步。\n3. 走完第 10 步後，量出起點線到同一鞋尖的距離（單位：厘米）。\n4. 除以 10。\n5. 重復幾次，輸入平均值。\n\n要得到跑步步長，請以平時的跑步速度同樣操作。</string>
+    <string name="steps_no_sensor">這支手機沒有計步感測器。</string>
+    <string name="steps_permission_needed">請允許存取身體活動，以便手機統計您的步數。</string>
+    <string name="steps_allow">允許</string>
+    <string name="steps_open_settings">開啟應用程式設定</string>
+    <string name="currency_amount_hint">金額</string>
+    <string name="currency_swap">互換 ⇅</string>
+    <string name="currency_refresh">重新整理匯率</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">匯率更新於 %1$s</string>
+    <string name="currency_outdated">無網路。顯示已儲存的匯率，更新於 %1$s</string>
+    <string name="currency_loading">正在載入匯率…</string>
+    <string name="currency_unavailable">匯率不可用。請檢查網路連線後重新整理。</string>
+    <string name="currency_invalid_amount">請輸入金額</string>
+    <string name="currency_attribution">匯率來自 Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">科學</string>
+    <string name="calculator_basic">基本</string>
+    <string name="calculator_degrees">度</string>
+    <string name="calculator_radians">弧度</string>
+    <string name="calculator_history">歷史</string>
+    <string name="calculator_memory_format">M：%1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">開始記錄</string>
+    <string name="flights_stop">停止記錄</string>
+    <string name="flights_units">單位</string>
+    <string name="flights_journal">日誌</string>
+    <string name="flights_journal_title">飛行日誌</string>
+    <string name="flights_journal_empty">尚未記錄任何飛行。</string>
+    <string name="flights_journal_in_progress">這次飛行仍在記錄中。</string>
+    <string name="flights_report_open">開啟報告</string>
+    <string name="flights_report_share">分享報告</string>
+    <string name="flights_report_delete">刪除飛行</string>
+    <string name="flights_report_failed">無法準備報告。</string>
+    <string name="flights_report_no_viewer">未找到可開啟 PDF 檔案的應用程式。</string>
+    <string name="flights_delete_title">刪除這次飛行？</string>
+    <string name="flights_delete_message">航線和報告將被永久刪除。在此之前，您可以將報告傳送到別處，例如 USB 隨身碟、電腦或 Google 雲端硬碟。</string>
+    <string name="flights_delete_save_first">先儲存報告再刪除</string>
+    <string name="flights_delete_without_saving">不儲存直接刪除</string>
+    <string name="flights_delete_after_share_message">如果報告已到達您想要的位置，現在可以刪除這次飛行。</string>
+    <string name="flights_delete_after_share_confirm">刪除飛行</string>
+    <string name="flights_delete_keep">保留飛行</string>
+    <string name="flights_units_report_limit">報告上限</string>
+    <string name="flights_units_report_limit_hint">日誌中 PDF 報告的最大數量，0 表示不限</string>
+    <string name="flights_limit_full_title">已達到 PDF 報告上限</string>
+    <string name="flights_limit_full_message">日誌中有 %1$d 份報告，已達上限。要記錄新的飛行，請至少從日誌中刪除一次飛行。在此之前，您可以將其報告儲存到 USB 隨身碟、電腦或 Google 雲端硬碟。</string>
+    <string name="flights_limit_warning_title">PDF 報告即將達到上限！</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">您還可以記錄 %d 次飛行。請從日誌中刪除過時的飛行。</item>
+    </plurals>
+    <string name="flights_limit_open_journal">開啟日誌</string>
+    <string name="flights_journal_line">%1$s · 最高 %2$s · 最大高度 %3$s</string>
+    <string name="flights_units_speed">速度和距離</string>
+    <string name="flights_units_altitude">高度</string>
+    <string name="flights_unit_kmh">千米/小時 (km/h)</string>
+    <string name="flights_unit_knots">節 (kt，海裡)</string>
+    <string name="flights_unit_ms">米/秒 (m/s)</string>
+    <string name="flights_unit_metres">米 (m)</string>
+    <string name="flights_unit_feet">英尺 (ft)</string>
+    <string name="flights_units_climb">爬升率</string>
+    <string name="flights_unit_fpm">英尺/分鐘 (ft/min)</string>
+    <string name="flights_altitude_zero">歸零</string>
+    <string name="flights_altitude_sea">海拔</string>
+    <string name="flights_altitude_start">相對起點 · 長按“歸零”可撤銷</string>
+    <string name="flights_sound_on">聲音：開</string>
+    <string name="flights_sound_off">聲音：關</string>
+    <string name="flights_sound_tune">聲音調節</string>
+    <string name="flights_sound_climb_start">爬升 %1$.1f m/s 時開始嗶聲</string>
+    <string name="flights_sound_sink_start">下降 %1$.1f m/s 時開始低音嗶聲</string>
+    <string name="flights_sound_sink_alarm">下降 %1$.1f m/s 時持續警報</string>
+    <string name="flights_speed_label">速度</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">飛行時間</string>
+    <string name="flights_distance">距離</string>
+    <string name="flights_max_speed">最高速度</string>
+    <string name="flights_avg_speed">平均速度</string>
+    <string name="flights_max_altitude">最大高度</string>
+    <string name="flights_climb_rate">爬升率</string>
+    <string name="flights_max_g">峰值載荷</string>
+    <string name="flights_status_waiting">正在等待 GPS 信號…</string>
+    <string name="flights_location_needed">請允許存取精確位置，以記錄速度、高度和航線。</string>
+    <string name="flights_allow">允許</string>
+    <string name="flights_open_settings">開啟應用程式設定</string>
+    <string name="flights_gps_off">請開啟定位服務 (GPS) 以記錄飛行。</string>
+    <string name="flights_disclaimer">僅供娛樂和好奇之用。請勿依賴這些儀表進行導航或任何涉及安全的事項。</string>
+</resources>

@@ -29,4 +29,8 @@
     <locale android:name="bn" />
     <locale android:name="ur" />
     <locale android:name="fa" />
+    <locale android:name="zh-CN" />
+    <locale android:name="zh-TW" />
+    <locale android:name="ja" />
+    <locale android:name="ko" />
 </locale-config>

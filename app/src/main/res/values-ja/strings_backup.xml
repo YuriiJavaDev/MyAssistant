@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">バックアップをクラウドにアップロード中...</string>
+    <string name="backup_cloud_restoring">クラウドからバックアップを復元中...</string>
+    <string name="backup_cloud_upload_success">バックアップをクラウドにアップロードしました</string>
+    <string name="backup_cloud_restore_success">クラウドからバックアップを復元しました</string>
+    <string name="backup_cloud_restore_partly">クラウドからタスクを復元しました（次のバックアップは見つかりませんでした：%1$s）</string>
+    <string name="backup_part_steps">歩数</string>
+    <string name="backup_part_flights">フライト</string>
+    <string name="backup_part_scans">スキャン</string>
+    <string name="backup_part_separator">"、"</string>
+    <string name="backup_error_upload">アップロードエラー：%1$s</string>
+    <string name="backup_error_download">ダウンロードエラー：%1$s</string>
+    <string name="backup_error_unknown">不明なエラー</string>
+    <string name="backup_error_insecure_url">URLは https:// で始まる必要があります</string>
+    <string name="backup_error_authentication">認証に失敗しました：ユーザー名とパスワードを確認してください</string>
+    <string name="backup_error_server_code">サーバーの応答コード：%1$d</string>
+    <string name="backup_error_connection">接続エラー：%1$s</string>
+    <string name="backup_destination_title">バックアップの保存先</string>
+    <string name="backup_destination_folder">フォルダを選択（端末、SDカード、USB、ドライブなど）</string>
+    <string name="backup_destination_share">アプリと共有</string>
+    <string name="backup_preparing">バックアップを準備中...</string>
+    <string name="backup_export_failed">エクスポートに失敗しました</string>
+    <string name="backup_export_saved">バックアップを保存しました</string>
+    <string name="backup_import_success">バックアップをインポートしました。再起動します...</string>
+    <string name="backup_import_failed">インポートに失敗しました</string>
+    <string name="backup_import_title">ご注意ください！</string>
+    <string name="backup_import_message">バックアップを復元すると、現在のタスク、歩数、スキャンがバックアップ内のデータに置き換えられます。続行してもよろしいですか？</string>
+    <string name="backup_import_confirm">インポートを確定</string>
+    <string name="backup_share_chooser_title">バックアップをエクスポート</string>
+    <string name="backup_cloud_settings_saved">クラウド設定を保存しました</string>
+    <string name="backup_cloud_secure_storage_unavailable">安全なストレージを利用できないため、設定を保存できませんでした</string>
+    <string name="backup_cloud_url_empty">URLを空にすることはできません</string>
+    <string name="backup_cloud_testing">接続をテスト中...</string>
+    <string name="backup_cloud_connection_successful">接続に成功しました！</string>
+</resources>

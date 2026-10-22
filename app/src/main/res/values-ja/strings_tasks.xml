@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">何をしますか？</string>
+    <string name="tasks_list_add">追加</string>
+    <string name="tasks_list_delete_completed">完了分を削除</string>
+    <string name="tasks_list_clear_all">すべて消去</string>
+    <string name="tasks_list_reminder_set">リマインダーを設定しました</string>
+    <string name="tasks_statistics">合計：%1$d  完了：%2$d  残り：%3$d  進捗：%4$d %%</string>
+    <string name="tasks_dialog_title_add">新しいタスク</string>
+    <string name="tasks_dialog_title_edit">タスクを編集</string>
+    <string name="tasks_dialog_importance">重要度：</string>
+    <string name="tasks_dialog_deadline_label">期限：</string>
+    <string name="tasks_dialog_deadline_select">期限を選択</string>
+    <string name="tasks_dialog_reminder_label">リマインダー（日付と時刻）：</string>
+    <string name="tasks_dialog_reminder_select">リマインダーの日付と時刻を選択</string>
+    <string name="tasks_dialog_show_timestamps">作成日・更新日を表示</string>
+    <string name="tasks_dialog_delete">削除</string>
+    <string name="tasks_dialog_save">保存</string>
+    <string name="tasks_dialog_clear">クリア</string>
+    <string name="tasks_importance_normal">通常</string>
+    <string name="tasks_importance_important">重要</string>
+    <string name="tasks_importance_urgent">緊急</string>
+    <string name="tasks_toast_created">タスクを作成しました</string>
+    <string name="tasks_toast_updated">タスクを更新しました</string>
+    <string name="tasks_toast_deleted">タスクを削除しました</string>
+    <string name="tasks_toast_completed_deleted">完了したタスクを削除しました</string>
+    <string name="tasks_toast_all_cleared">すべてのタスクを消去しました</string>
+    <string name="tasks_toast_empty_title">タスクの内容を空にすることはできません</string>
+    <string name="tasks_toast_reminder_after_deadline">リマインダーは期限より後にできません！</string>
+    <string name="tasks_toast_reminder_in_past">リマインダーを過去にすることはできません！</string>
+    <string name="tasks_toast_reminder_cleared">期限のほうが早いため、リマインダーをクリアしました！</string>
+    <string name="tasks_toast_select_deadline_first">先に期限を選択してください！</string>
+    <string name="tasks_time_created">作成：%1$s</string>
+    <string name="tasks_time_edited">更新：%1$s</string>
+    <string name="tasks_time_completed">完了：%1$s</string>
+    <string name="tasks_deadline_prefixed">期限：%1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="other">%1$s — 残り%2$d日！</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="other">%1$s — %2$d日遅れ！</item>
+    </plurals>
+    <string name="tasks_delete_title">削除の確認</string>
+    <string name="tasks_delete_button">削除</string>
+    <string name="tasks_delete_nothing">削除するオブジェクトが見つかりません！</string>
+    <string name="tasks_delete_item_message">この項目を本当に削除しますか？この操作は元に戻せません！</string>
+    <string name="tasks_delete_cannot_be_undone">この操作は元に戻せません！</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="other">完了したタスク%1$d件を削除しますか？</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="other">そのうち%1$d件にはリマインダーが保存されたままです。</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="other">すべてのタスク%1$d件を削除しますか？</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="other">そのうち%1$d件には有効なリマインダーがあります。</item>
+    </plurals>
+    <string name="tasks_alert_title">期限アラート！</string>
+    <string name="tasks_alert_view_tasks">タスクを表示</string>
+    <string name="tasks_alert_channel_name">タスク期限のアラート</string>
+    <string name="tasks_alert_channel_description">タスク期限の緊急アラート</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="other">期限を過ぎたタスクの数：%1$d。</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="other">ご注意ください！すぐに対応が必要なタスク期限の数：%1$d。</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">ご注意ください！タスクの期限が近づいています：%1$s</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">任务</string>
+    <string name="app_tab_weather">天气</string>
+    <string name="app_tab_exchange">汇率</string>
+    <string name="app_tab_calculator">计算器</string>
+    <string name="app_tab_scan">扫描</string>
+    <string name="app_tab_steps">步数</string>
+    <string name="app_tab_flights">飞行</string>
+    <string name="app_menu_settings">设置</string>
+    <string name="app_menu_options">选项</string>
+    <string name="app_notifications_disabled">通知已关闭：不会显示提醒</string>
+    <string name="app_overdue_tasks_format">已逾期的任务：%1$d</string>
+    <string name="app_exact_alarm_already_granted">已授予精确闹钟权限</string>
+    <string name="app_alarm_title">提醒和闹钟</string>
+    <string name="app_alarm_voice_alert">语音提醒 (TTS)</string>
+    <string name="app_alarm_full_screen">全屏窗口</string>
+    <string name="app_alarm_grant_exact">授予精确闹钟权限</string>
+    <string name="backup_menu_export">导出备份</string>
+    <string name="backup_menu_import">导入备份</string>
+    <string name="backup_menu_cloud_settings">云设置和自动备份</string>
+    <string name="backup_menu_cloud_save">立即保存到云端</string>
+    <string name="backup_menu_cloud_restore">从云端恢复</string>
+    <string name="backup_cloud_username_hint">用户名/电子邮箱</string>
+    <string name="backup_cloud_password_hint">密码</string>
+    <string name="backup_cloud_auto_backup">开启每日自动备份</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ 开启自动备份后，云存储中的数据库文件默认每天覆盖一次。</string>
+    <string name="backup_cloud_test">测试</string>
+    <string name="backup_cloud_save">保存</string>
+    <string name="settings_language_title">语言</string>
+    <string name="settings_language_subtitle">应用语言</string>
+    <string name="language_system_default">跟随系统</string>
+</resources>

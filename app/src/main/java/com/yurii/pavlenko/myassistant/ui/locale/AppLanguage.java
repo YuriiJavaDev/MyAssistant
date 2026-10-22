@@ -38,7 +38,11 @@ public final class AppLanguage {
             new AppLanguage("hi", "हिन्दी"),
             new AppLanguage("bn", "বাংলা"),
             new AppLanguage("ur", "اردو"),
-            new AppLanguage("fa", "فارسی")
+            new AppLanguage("fa", "فارسی"),
+            new AppLanguage("zh-CN", "简体中文"),
+            new AppLanguage("zh-TW", "繁體中文"),
+            new AppLanguage("ja", "日本語"),
+            new AppLanguage("ko", "한국어")
     ));
 
     private final String tag;

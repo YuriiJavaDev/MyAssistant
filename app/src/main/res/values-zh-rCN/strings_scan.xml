@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">原始大小</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">扫描 %1$s</string>
+    <string name="scan_delete_page_message">删除此页？此操作无法撤销！</string>
+    <string name="scan_delete_document_message">删除“%1$s”及其所有页面？此操作无法撤销！</string>
+    <string name="scan_delete_all_message">全部删除：%1$s，%2$s？此操作无法撤销！</string>
+    <plurals name="scan_documents_count">
+        <item quantity="other">%d 份文档</item>
+    </plurals>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">正在将备份上传到云端...</string>
+    <string name="backup_cloud_restoring">正在从云端恢复备份...</string>
+    <string name="backup_cloud_upload_success">备份已成功上传到云端</string>
+    <string name="backup_cloud_restore_success">备份已成功从云端恢复</string>
+    <string name="backup_cloud_restore_partly">任务已从云端恢复（云端未找到以下内容的备份：%1$s）</string>
+    <string name="backup_part_steps">步数</string>
+    <string name="backup_part_flights">飞行</string>
+    <string name="backup_part_scans">扫描件</string>
+    <string name="backup_part_separator">"、"</string>
+    <string name="backup_error_upload">上传错误：%1$s</string>
+    <string name="backup_error_download">下载错误：%1$s</string>
+    <string name="backup_error_unknown">未知错误</string>
+    <string name="backup_error_insecure_url">URL 必须以 https:// 开头</string>
+    <string name="backup_error_authentication">身份验证失败：请检查用户名和密码</string>
+    <string name="backup_error_server_code">服务器返回代码：%1$d</string>
+    <string name="backup_error_connection">连接错误：%1$s</string>
+    <string name="backup_destination_title">将备份保存到</string>
+    <string name="backup_destination_folder">选择文件夹（设备、SD 卡、USB、云端硬盘……）</string>
+    <string name="backup_destination_share">分享给应用</string>
+    <string name="backup_preparing">正在准备备份...</string>
+    <string name="backup_export_failed">导出失败</string>
+    <string name="backup_export_saved">备份已保存</string>
+    <string name="backup_import_success">备份已成功导入。正在重启...</string>
+    <string name="backup_import_failed">导入失败</string>
+    <string name="backup_import_title">注意！</string>
+    <string name="backup_import_message">恢复备份会用其中的数据替换当前的任务、步数和扫描件。确定要继续吗？</string>
+    <string name="backup_import_confirm">确认导入</string>
+    <string name="backup_share_chooser_title">导出备份</string>
+    <string name="backup_cloud_settings_saved">云设置已成功保存</string>
+    <string name="backup_cloud_secure_storage_unavailable">安全存储不可用，设置未保存</string>
+    <string name="backup_cloud_url_empty">URL 不能为空</string>
+    <string name="backup_cloud_testing">正在测试连接...</string>
+    <string name="backup_cloud_connection_successful">连接成功！</string>
+</resources>

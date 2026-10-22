@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">취소</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">설정</string>
+    <string name="settings_alarms_title">알림 및 알람</string>
+    <string name="settings_alarms_subtitle">간격, 소리 및 알림 상태</string>
+    <string name="settings_display_title">화면 모드</string>
+    <string name="settings_display_subtitle">낮 / 밤 / 자동</string>
+    <string name="display_mode_title">화면 모드</string>
+    <string name="display_mode_light">밝게 (낮)</string>
+    <string name="display_mode_dark">어둡게 (밤)</string>
+    <string name="display_mode_system">시스템 (자동)</string>
+    <string name="settings_design_title">앱 디자인</string>
+    <string name="settings_design_subtitle">인터페이스 디자인 옵션</string>
+    <string name="design_classic_name">클래식</string>
+    <string name="design_classic_about">기본 디자인: 크림색과 보라색</string>
+    <string name="design_paper_ink_name">종이와 잉크</string>
+    <string name="design_paper_ink_about">가는 선과 차분한 사무용 색감</string>
+    <string name="design_pastel_cloud_name">파스텔 구름</string>
+    <string name="design_pastel_cloud_about">부드럽고 둥글며 옅은 구름 디자인</string>
+    <string name="design_neon_arcade_name">네온 아케이드</string>
+    <string name="design_neon_arcade_about">눈부신 네온, 강한 대비, 레트로 태양</string>
+    <string name="design_toon_name">카툰</string>
+    <string name="design_toon_about">만화풍 윤곽선과 손글씨</string>
+    <string name="design_biker_name">바이커</string>
+    <string name="design_biker_about">거친 금속, 고무, 배기관 주황색</string>
+    <string name="design_cockpit_name">조종석</string>
+    <string name="design_cockpit_about">글라이더가 있는 엄격한 계기판</string>
+    <string name="design_beach_name">해변</string>
+    <string name="design_beach_about">모래, 석호, 산호, 야자수</string>
+    <string name="design_forest_name">마법의 숲</string>
+    <string name="design_forest_about">양피지, 금색, 숲의 이끼</string>
+    <string name="design_mono_block_name">모노블록</string>
+    <string name="design_mono_block_about">노란 형광펜 하나만 더한 선명한 흑백</string>
+    <string name="settings_permissions_title">시스템 권한</string>
+    <string name="settings_permissions_subtitle">Android 접근 권한 관리</string>
+    <string-array name="filter_options">
+        <item>모든 작업</item>
+        <item>진행 중</item>
+        <item>완료</item>
+        <item>경고</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>A–Z</item>
+        <item>Z–A</item>
+        <item>상태</item>
+        <item>생성일</item>
+        <item>수정일</item>
+        <item>완료일</item>
+        <item>중요도</item>
+        <item>마감일</item>
+    </string-array>
+    <string name="scan_camera">카메라</string>
+    <string name="scan_gallery">갤러리</string>
+    <string name="scan_clear_all">모두 지우기</string>
+    <string name="scan_cleared">모든 스캔을 삭제했습니다</string>
+    <string name="scan_empty">아직 문서가 없습니다. 페이지를 촬영하거나 갤러리에서 사진을 선택하세요.</string>
+    <string name="scan_auto">자동</string>
+    <string name="scan_reset">초기화</string>
+    <string name="scan_next">다음</string>
+    <string name="scan_back">뒤로</string>
+    <string name="scan_save">저장</string>
+    <string name="scan_rotate">회전</string>
+    <string name="scan_paper">용지</string>
+    <string name="scan_filter_color">컬러</string>
+    <string name="scan_filter_gray">회색조</string>
+    <string name="scan_filter_bw">흑백</string>
+    <string name="scan_tune">밝기 및 대비</string>
+    <string name="scan_shadows">그림자 제거</string>
+    <string name="scan_brightness">밝기</string>
+    <string name="scan_contrast">대비</string>
+    <string name="scan_sharpen">선명도</string>
+    <string name="scan_page_saved">페이지를 저장했습니다</string>
+    <string name="scan_next_page_question">문서에 페이지를 더 추가할까요?</string>
+    <string name="scan_page_label">%d페이지</string>
+    <string name="scan_done">완료</string>
+    <string name="scan_add_page">페이지 추가</string>
+    <string name="scan_share_pdf">PDF 공유</string>
+    <string name="scan_pages_empty">이 문서에는 페이지가 없습니다.</string>
+    <string name="scan_saved_to_device">파일을 저장했습니다</string>
+    <string name="scan_share_title">문서 공유</string>
+    <string name="scan_rename_title">문서 이름 바꾸기</string>
+    <string name="scan_rename_confirm">이름 바꾸기</string>
+    <string name="scan_error_load">이 사진을 열 수 없습니다</string>
+    <string name="scan_error_preview">미리보기에 필요한 메모리가 부족합니다</string>
+    <string name="scan_error_save">스캔을 저장할 수 없습니다</string>
+    <string name="scan_error_export">파일을 준비할 수 없습니다</string>
+    <string name="scan_error_no_camera">카메라 앱을 찾을 수 없습니다</string>
+    <string name="scan_error_no_viewer">이미지를 열 수 있는 앱을 찾을 수 없습니다</string>
+    <string name="scan_error_no_app">공유할 수 있는 앱을 찾을 수 없습니다</string>
+    <plurals name="scan_pages">
+        <item quantity="other">%d페이지</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>페이지</item>
+        <item>PDF로 공유</item>
+        <item>JPEG로 공유</item>
+        <item>PDF 저장 위치…</item>
+        <item>이름 바꾸기</item>
+        <item>삭제</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>보기</item>
+        <item>JPEG 저장 위치…</item>
+        <item>위로 이동</item>
+        <item>아래로 이동</item>
+        <item>페이지 삭제</item>
+    </string-array>
+    <string name="weather_city_hint">어떤 언어로든 도시 이름 입력</string>
+    <string name="weather_search">검색</string>
+    <string name="weather_my_location">내 위치</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">체감</string>
+    <string name="weather_humidity">습도</string>
+    <string name="weather_wind">바람</string>
+    <string name="weather_today_range">오늘</string>
+    <string name="weather_units">단위</string>
+    <string name="weather_units_temperature">온도</string>
+    <string name="weather_units_wind">풍속</string>
+    <string name="weather_unit_celsius">섭씨 (°C)</string>
+    <string name="weather_unit_fahrenheit">화씨 (°F)</string>
+    <string name="weather_unit_ms">미터/초 (m/s)</string>
+    <string name="weather_unit_kmh">킬로미터/시 (km/h)</string>
+    <string name="weather_moon_caption">%1$s · 조명률 %2$d %%</string>
+    <string name="weather_humidity_value">%1$d %%</string>
+    <string name="weather_loading">날씨를 불러오는 중…</string>
+    <string name="weather_location_needed">현재 위치의 날씨를 보려면 대략적인 위치 접근을 허용하거나 도시를 검색하세요.</string>
+    <string name="weather_allow">허용</string>
+    <string name="weather_open_settings">앱 설정 열기</string>
+    <string name="weather_attribution">날씨: Open-Meteo.com · 장소: © OpenStreetMap 기여자</string>
+    <string name="weather_choose_city">도시 선택</string>
+    <string name="steps_today">오늘</string>
+    <string name="steps_unit">걸음</string>
+    <string name="steps_walk_run">걷기 %1$s · 달리기 %2$s</string>
+    <string name="steps_period">기간</string>
+    <string name="steps_last_7">7일</string>
+    <string name="steps_last_30">30일</string>
+    <string name="steps_this_month">이번 달</string>
+    <string name="steps_pick_dates">날짜 선택</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">총 걸음 수</string>
+    <string name="steps_distance">거리</string>
+    <string name="steps_average">일 평균</string>
+    <string name="steps_best_day">최고의 날</string>
+    <string name="steps_walking">걷기 걸음 수</string>
+    <string name="steps_running">달리기 걸음 수</string>
+    <string name="steps_active_days">걸음이 있는 날</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d / %2$d</string>
+    <string name="steps_distance_km">%1$.2f km</string>
+    <string name="steps_no_data">이 기간에 기록된 걸음이 없습니다</string>
+    <string name="steps_settings">걸음 설정</string>
+    <string name="steps_settings_title">보폭</string>
+    <string name="steps_walk_length">걸을 때 보폭, cm</string>
+    <string name="steps_run_length">달릴 때 보폭, cm</string>
+    <string name="steps_run_cadence">달리기로 보는 기준, 분당 걸음 수</string>
+    <string name="steps_run_cadence_hint">이 속도 이상의 걸음은 달리기로 계산됩니다.</string>
+    <string name="steps_defaults">기본값</string>
+    <string name="steps_save">저장</string>
+    <string name="steps_invalid_length">%1$d–%2$d 사이로 입력하세요</string>
+    <string name="steps_measure_title">보폭 측정 방법</string>
+    <string name="steps_measure_text">1. 첫 걸음을 내딛기 전에 발끝 위치에 출발선을 표시합니다.\n2. 평소 속도로 차분히 10걸음 걷습니다.\n3. 10걸음째 이후, 출발선에서 같은 발끝까지의 거리를 센티미터로 잽니다.\n4. 그 값을 10으로 나눕니다.\n5. 몇 번 반복해서 평균값을 입력합니다.\n\n달릴 때의 보폭은 평소 달리는 속도로 같은 방법으로 측정하세요.</string>
+    <string name="steps_no_sensor">이 휴대전화에는 걸음 센서가 없습니다.</string>
+    <string name="steps_permission_needed">휴대전화가 걸음 수를 셀 수 있도록 신체 활동 접근을 허용하세요.</string>
+    <string name="steps_allow">허용</string>
+    <string name="steps_open_settings">앱 설정 열기</string>
+    <string name="currency_amount_hint">금액</string>
+    <string name="currency_swap">바꾸기 ⇅</string>
+    <string name="currency_refresh">환율 새로고침</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">환율 업데이트: %1$s</string>
+    <string name="currency_outdated">인터넷에 연결되어 있지 않습니다. 저장된 환율을 표시합니다 (업데이트: %1$s)</string>
+    <string name="currency_loading">환율을 불러오는 중…</string>
+    <string name="currency_unavailable">환율을 사용할 수 없습니다. 인터넷 연결을 확인하고 새로고침하세요.</string>
+    <string name="currency_invalid_amount">금액을 입력하세요</string>
+    <string name="currency_attribution">환율 제공: Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">공학</string>
+    <string name="calculator_basic">기본</string>
+    <string name="calculator_degrees">도</string>
+    <string name="calculator_radians">라디안</string>
+    <string name="calculator_history">기록</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">기록 시작</string>
+    <string name="flights_stop">기록 중지</string>
+    <string name="flights_units">단위</string>
+    <string name="flights_journal">로그</string>
+    <string name="flights_journal_title">비행 일지</string>
+    <string name="flights_journal_empty">아직 기록된 비행이 없습니다.</string>
+    <string name="flights_journal_in_progress">이 비행은 아직 기록 중입니다.</string>
+    <string name="flights_report_open">보고서 열기</string>
+    <string name="flights_report_share">보고서 공유</string>
+    <string name="flights_report_delete">비행 삭제</string>
+    <string name="flights_report_failed">보고서를 준비할 수 없습니다.</string>
+    <string name="flights_report_no_viewer">PDF 파일을 열 수 있는 앱을 찾을 수 없습니다.</string>
+    <string name="flights_delete_title">이 비행을 삭제할까요?</string>
+    <string name="flights_delete_message">경로와 보고서가 영구적으로 삭제됩니다. 그 전에 USB 드라이브, 컴퓨터, Google 드라이브 등으로 보고서를 보낼 수 있습니다.</string>
+    <string name="flights_delete_save_first">보고서를 저장한 후 삭제</string>
+    <string name="flights_delete_without_saving">저장하지 않고 삭제</string>
+    <string name="flights_delete_after_share_message">보고서가 원하는 곳에 도착했다면 이제 비행을 삭제해도 됩니다.</string>
+    <string name="flights_delete_after_share_confirm">비행 삭제</string>
+    <string name="flights_delete_keep">비행 유지</string>
+    <string name="flights_units_report_limit">보고서 한도</string>
+    <string name="flights_units_report_limit_hint">일지에 보관할 PDF 보고서 최대 개수, 0은 무제한</string>
+    <string name="flights_limit_full_title">PDF 보고서 한도에 도달했습니다</string>
+    <string name="flights_limit_full_message">일지에 한도인 %1$d개의 보고서가 있습니다. 새 비행을 기록하려면 일지에서 비행을 하나 이상 삭제하세요. 그 전에 해당 보고서를 USB 드라이브, 컴퓨터 또는 Google 드라이브에 저장할 수 있습니다.</string>
+    <string name="flights_limit_warning_title">PDF 보고서 한도에 가까워지고 있습니다!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="other">%d번 더 비행을 기록할 수 있습니다. 일지에서 오래된 비행을 삭제하세요.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">일지 열기</string>
+    <string name="flights_journal_line">%1$s · 최고 %2$s · 최대 고도 %3$s</string>
+    <string name="flights_units_speed">속도 및 거리</string>
+    <string name="flights_units_altitude">고도</string>
+    <string name="flights_unit_kmh">킬로미터/시 (km/h)</string>
+    <string name="flights_unit_knots">노트 (kt, 해리)</string>
+    <string name="flights_unit_ms">미터/초 (m/s)</string>
+    <string name="flights_unit_metres">미터 (m)</string>
+    <string name="flights_unit_feet">피트 (ft)</string>
+    <string name="flights_units_climb">상승률</string>
+    <string name="flights_unit_fpm">피트/분 (ft/min)</string>
+    <string name="flights_altitude_zero">영점</string>
+    <string name="flights_altitude_sea">해발</string>
+    <string name="flights_altitude_start">출발점 기준 · “영점”을 길게 눌러 취소</string>
+    <string name="flights_sound_on">소리: 켜짐</string>
+    <string name="flights_sound_off">소리: 꺼짐</string>
+    <string name="flights_sound_tune">소리 조정</string>
+    <string name="flights_sound_climb_start">%1$.1f m/s 상승 시 경고음 시작</string>
+    <string name="flights_sound_sink_start">%1$.1f m/s 하강 시 낮은 경고음 시작</string>
+    <string name="flights_sound_sink_alarm">%1$.1f m/s 하강 시 연속 알람</string>
+    <string name="flights_speed_label">속도</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">비행 시간</string>
+    <string name="flights_distance">거리</string>
+    <string name="flights_max_speed">최고 속도</string>
+    <string name="flights_avg_speed">평균 속도</string>
+    <string name="flights_max_altitude">최대 고도</string>
+    <string name="flights_climb_rate">상승률</string>
+    <string name="flights_max_g">최대 하중</string>
+    <string name="flights_status_waiting">GPS 신호를 기다리는 중…</string>
+    <string name="flights_location_needed">속도, 고도, 경로를 기록하려면 정확한 위치 접근을 허용하세요.</string>
+    <string name="flights_allow">허용</string>
+    <string name="flights_open_settings">앱 설정 열기</string>
+    <string name="flights_gps_off">비행을 기록하려면 위치 서비스(GPS)를 켜세요.</string>
+    <string name="flights_disclaimer">오락과 호기심을 위한 용도입니다. 항법이나 안전과 관련된 일에는 이 계기를 의존하지 마세요.</string>
+</resources>
