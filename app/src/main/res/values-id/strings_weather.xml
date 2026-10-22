@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Langit cerah</string>
+    <string name="weather_description_mainly_clear">Sebagian besar cerah</string>
+    <string name="weather_description_partly_cloudy">Berawan sebagian</string>
+    <string name="weather_description_overcast">Mendung</string>
+    <string name="weather_description_fog">Kabut</string>
+    <string name="weather_description_rime_fog">Kabut es</string>
+    <string name="weather_description_light_drizzle">Gerimis ringan</string>
+    <string name="weather_description_drizzle">Gerimis</string>
+    <string name="weather_description_dense_drizzle">Gerimis lebat</string>
+    <string name="weather_description_light_freezing_drizzle">Gerimis beku ringan</string>
+    <string name="weather_description_freezing_drizzle">Gerimis beku</string>
+    <string name="weather_description_slight_rain">Hujan ringan</string>
+    <string name="weather_description_rain">Hujan</string>
+    <string name="weather_description_heavy_rain">Hujan lebat</string>
+    <string name="weather_description_light_freezing_rain">Hujan beku ringan</string>
+    <string name="weather_description_freezing_rain">Hujan beku</string>
+    <string name="weather_description_slight_snow">Salju ringan</string>
+    <string name="weather_description_snow">Salju</string>
+    <string name="weather_description_heavy_snow">Salju lebat</string>
+    <string name="weather_description_snow_grains">Butiran salju</string>
+    <string name="weather_description_light_rain_showers">Hujan sebentar ringan</string>
+    <string name="weather_description_rain_showers">Hujan sebentar</string>
+    <string name="weather_description_violent_rain_showers">Hujan sebentar deras</string>
+    <string name="weather_description_light_snow_showers">Salju sebentar ringan</string>
+    <string name="weather_description_heavy_snow_showers">Salju sebentar lebat</string>
+    <string name="weather_description_thunderstorm">Badai petir</string>
+    <string name="weather_description_thunderstorm_with_hail">Badai petir dengan hujan es</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Badai petir dengan hujan es lebat</string>
+    <string name="weather_description_unknown">Tidak diketahui</string>
+    <string name="weather_moon_phase_new_moon">Bulan baru</string>
+    <string name="weather_moon_phase_waxing_crescent">Sabit awal</string>
+    <string name="weather_moon_phase_first_quarter">Kuartir pertama</string>
+    <string name="weather_moon_phase_waxing_gibbous">Cembung awal</string>
+    <string name="weather_moon_phase_full_moon">Bulan purnama</string>
+    <string name="weather_moon_phase_waning_gibbous">Cembung akhir</string>
+    <string name="weather_moon_phase_last_quarter">Kuartir terakhir</string>
+    <string name="weather_moon_phase_waning_crescent">Sabit akhir</string>
+    <string name="weather_error_no_location">Lokasi tidak dapat ditentukan. Aktifkan layanan lokasi atau cari kota</string>
+    <string name="weather_error_city_not_found">Kota untuk “%1$s” tidak ditemukan</string>
+    <string name="weather_error_no_network">Cuaca tidak dapat dimuat. Periksa koneksi internet</string>
+    <string name="weather_error_choose_city">Pilih kota dari daftar</string>
+    <string name="weather_current_location">Lokasi saat ini</string>
+</resources>

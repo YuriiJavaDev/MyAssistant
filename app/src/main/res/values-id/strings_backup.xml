@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Mengunggah cadangan ke cloud...</string>
+    <string name="backup_cloud_restoring">Memulihkan cadangan dari cloud...</string>
+    <string name="backup_cloud_upload_success">Cadangan diunggah ke cloud</string>
+    <string name="backup_cloud_restore_success">Cadangan dipulihkan dari cloud</string>
+    <string name="backup_cloud_restore_partly">Tugas dipulihkan dari cloud (cadangan tidak ditemukan untuk: %1$s)</string>
+    <string name="backup_part_steps">langkah</string>
+    <string name="backup_part_flights">penerbangan</string>
+    <string name="backup_part_scans">pindaian</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Kesalahan unggah: %1$s</string>
+    <string name="backup_error_download">Kesalahan unduh: %1$s</string>
+    <string name="backup_error_unknown">Kesalahan tidak diketahui</string>
+    <string name="backup_error_insecure_url">URL harus diawali dengan https://</string>
+    <string name="backup_error_authentication">Autentikasi gagal: periksa nama pengguna dan kata sandi</string>
+    <string name="backup_error_server_code">Server merespons dengan kode: %1$d</string>
+    <string name="backup_error_connection">Kesalahan koneksi: %1$s</string>
+    <string name="backup_destination_title">Simpan cadangan ke</string>
+    <string name="backup_destination_folder">Pilih folder (perangkat, kartu SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Bagikan ke aplikasi</string>
+    <string name="backup_preparing">Menyiapkan cadangan...</string>
+    <string name="backup_export_failed">Ekspor gagal</string>
+    <string name="backup_export_saved">Cadangan disimpan</string>
+    <string name="backup_import_success">Cadangan berhasil diimpor. Memulai ulang...</string>
+    <string name="backup_import_failed">Impor gagal</string>
+    <string name="backup_import_title">Perhatian!</string>
+    <string name="backup_import_message">Memulihkan cadangan akan mengganti tugas, langkah, dan pindaian saat ini dengan data di dalamnya. Lanjutkan?</string>
+    <string name="backup_import_confirm">Konfirmasi impor</string>
+    <string name="backup_share_chooser_title">Ekspor cadangan</string>
+    <string name="backup_cloud_settings_saved">Pengaturan cloud disimpan</string>
+    <string name="backup_cloud_secure_storage_unavailable">Penyimpanan aman tidak tersedia, pengaturan tidak disimpan</string>
+    <string name="backup_cloud_url_empty">URL tidak boleh kosong</string>
+    <string name="backup_cloud_testing">Menguji koneksi...</string>
+    <string name="backup_cloud_connection_successful">Koneksi berhasil!</string>
+</resources>

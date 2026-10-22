@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scan_paper_letter">Letter</string>
+    <string name="scan_paper_original">Asli</string>
+    <string name="scan_page_details_format">%1$s · %2$d × %3$d</string>
+    <string name="scan_default_title">Pindaian %1$s</string>
+    <string name="scan_delete_page_message">Hapus halaman ini? Tindakan ini tidak dapat dibatalkan!</string>
+    <string name="scan_delete_document_message">Hapus “%1$s” beserta semua halamannya? Tindakan ini tidak dapat dibatalkan!</string>
+    <string name="scan_delete_all_message">Hapus semuanya: %1$s, %2$s? Tindakan ini tidak dapat dibatalkan!</string>
+    <plurals name="scan_documents_count">
+        <item quantity="other">%d dokumen</item>
+    </plurals>
+</resources>

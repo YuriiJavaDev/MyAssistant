@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Apa yang perlu dilakukan</string>
+    <string name="tasks_list_add">Tambah</string>
+    <string name="tasks_list_delete_completed">Hapus yang selesai</string>
+    <string name="tasks_list_clear_all">Hapus semua</string>
+    <string name="tasks_list_reminder_set">Pengingat diatur</string>
+    <string name="tasks_statistics">Total: %1$d  Selesai: %2$d  Sisa: %3$d  Progres: %4$d %%</string>
+    <string name="tasks_dialog_title_add">Tugas baru</string>
+    <string name="tasks_dialog_title_edit">Ubah tugas</string>
+    <string name="tasks_dialog_importance">Tingkat kepentingan:</string>
+    <string name="tasks_dialog_deadline_label">Tenggat:</string>
+    <string name="tasks_dialog_deadline_select">Pilih tenggat</string>
+    <string name="tasks_dialog_reminder_label">Pengingat (tanggal dan waktu):</string>
+    <string name="tasks_dialog_reminder_select">Pilih tanggal dan waktu pengingat</string>
+    <string name="tasks_dialog_show_timestamps">Tampilkan tanggal dibuat/diubah</string>
+    <string name="tasks_dialog_delete">Hapus</string>
+    <string name="tasks_dialog_save">Simpan</string>
+    <string name="tasks_dialog_clear">Bersihkan</string>
+    <string name="tasks_importance_normal">Biasa</string>
+    <string name="tasks_importance_important">Penting</string>
+    <string name="tasks_importance_urgent">Mendesak</string>
+    <string name="tasks_toast_created">Tugas dibuat</string>
+    <string name="tasks_toast_updated">Tugas diperbarui</string>
+    <string name="tasks_toast_deleted">Tugas dihapus</string>
+    <string name="tasks_toast_completed_deleted">Tugas selesai dihapus</string>
+    <string name="tasks_toast_all_cleared">Semua tugas dihapus</string>
+    <string name="tasks_toast_empty_title">Deskripsi tugas tidak boleh kosong</string>
+    <string name="tasks_toast_reminder_after_deadline">Pengingat tidak boleh setelah tenggat!</string>
+    <string name="tasks_toast_reminder_in_past">Pengingat tidak boleh di masa lalu!</string>
+    <string name="tasks_toast_reminder_cleared">Pengingat dihapus karena tenggatnya lebih awal!</string>
+    <string name="tasks_toast_select_deadline_first">Pilih tenggat terlebih dahulu!</string>
+    <string name="tasks_time_created">Dibuat: %1$s</string>
+    <string name="tasks_time_edited">Diubah: %1$s</string>
+    <string name="tasks_time_completed">Selesai: %1$s</string>
+    <string name="tasks_deadline_prefixed">Tenggat: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="other">%1$s — sisa %2$d hari!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="other">%1$s — terlambat %2$d hari!</item>
+    </plurals>
+    <string name="tasks_delete_title">Konfirmasi penghapusan</string>
+    <string name="tasks_delete_button">Hapus</string>
+    <string name="tasks_delete_nothing">Tidak ada yang bisa dihapus!</string>
+    <string name="tasks_delete_item_message">Yakin ingin menghapus item ini? Tindakan ini tidak dapat dibatalkan!</string>
+    <string name="tasks_delete_cannot_be_undone">Tindakan ini tidak dapat dibatalkan!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="other">Hapus %1$d tugas selesai?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="other">%1$d di antaranya masih memiliki pengingat tersimpan</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="other">Hapus semua %1$d tugas?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="other">%1$d tugas memiliki pengingat aktif</item>
+    </plurals>
+    <string name="tasks_alert_title">Peringatan tenggat!</string>
+    <string name="tasks_alert_view_tasks">Lihat tugas</string>
+    <string name="tasks_alert_channel_name">Peringatan tenggat tugas</string>
+    <string name="tasks_alert_channel_description">Notifikasi mendesak tentang tenggat tugas</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="other">Tenggat tugas yang terlambat: %1$d</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="other">Perhatian! Tenggat tugas yang perlu segera ditangani: %1$d</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Perhatian! Tenggat tugas sudah dekat: %1$s</string>
+</resources>
