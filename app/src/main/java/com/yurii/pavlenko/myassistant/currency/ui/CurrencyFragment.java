@@ -122,7 +122,7 @@ public class CurrencyFragment extends Fragment {
             codes = rates.codes();
             List<String> labels = new ArrayList<>();
             for (String code : codes) {
-                labels.add(MoneyFormat.label(code));
+                labels.add(MoneyFormat.label(code, Locale.getDefault()));
             }
             binding.fromSpinner.setAdapter(adapterOf(labels));
             binding.toSpinner.setAdapter(adapterOf(labels));
@@ -157,7 +157,7 @@ public class CurrencyFragment extends Fragment {
     }
 
     private void showStatus(RatesState state) {
-        String updated = new SimpleDateFormat(DATE_PATTERN, Locale.ENGLISH)
+        String updated = new SimpleDateFormat(DATE_PATTERN, Locale.getDefault())
                 .format(new Date(state.getRates().getUpdatedAtMillis()));
         binding.statusText.setText(getString(
                 state.isOutdated() ? R.string.currency_outdated : R.string.currency_updated, updated));

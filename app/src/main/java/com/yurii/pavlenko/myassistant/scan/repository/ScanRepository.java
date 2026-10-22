@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 
 import androidx.lifecycle.LiveData;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.scan.database.ScanDao;
 import com.yurii.pavlenko.myassistant.scan.database.ScanDatabase;
 import com.yurii.pavlenko.myassistant.scan.files.ScanFileStore;
@@ -32,9 +33,11 @@ public class ScanRepository {
     private final ScanDatabase database;
     private final ScanDao scanDao;
     private final ScanFileStore fileStore;
+    private final Application application;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     public ScanRepository(Application application) {
+        this.application = application;
         database = ScanDatabase.getInstance(application);
         scanDao = database.scanDao();
         fileStore = new ScanFileStore(application);
@@ -123,7 +126,8 @@ public class ScanRepository {
     }
 
     private long createDocument() {
-        String title = "Scan " + new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(new Date());
+        String title = application.getString(R.string.scan_default_title,
+                new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(new Date()));
         return scanDao.insertDocument(new ScanDocument(title, System.currentTimeMillis()));
     }
 

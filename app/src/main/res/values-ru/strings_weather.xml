@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Ясное небо</string>
+    <string name="weather_description_mainly_clear">Преимущественно ясно</string>
+    <string name="weather_description_partly_cloudy">Переменная облачность</string>
+    <string name="weather_description_overcast">Пасмурно</string>
+    <string name="weather_description_fog">Туман</string>
+    <string name="weather_description_rime_fog">Изморозевый туман</string>
+    <string name="weather_description_light_drizzle">Лёгкая морось</string>
+    <string name="weather_description_drizzle">Морось</string>
+    <string name="weather_description_dense_drizzle">Густая морось</string>
+    <string name="weather_description_light_freezing_drizzle">Лёгкая ледяная морось</string>
+    <string name="weather_description_freezing_drizzle">Ледяная морось</string>
+    <string name="weather_description_slight_rain">Небольшой дождь</string>
+    <string name="weather_description_rain">Дождь</string>
+    <string name="weather_description_heavy_rain">Сильный дождь</string>
+    <string name="weather_description_light_freezing_rain">Лёгкий ледяной дождь</string>
+    <string name="weather_description_freezing_rain">Ледяной дождь</string>
+    <string name="weather_description_slight_snow">Небольшой снег</string>
+    <string name="weather_description_snow">Снег</string>
+    <string name="weather_description_heavy_snow">Сильный снегопад</string>
+    <string name="weather_description_snow_grains">Снежные зёрна</string>
+    <string name="weather_description_light_rain_showers">Небольшие ливни</string>
+    <string name="weather_description_rain_showers">Ливни</string>
+    <string name="weather_description_violent_rain_showers">Сильные ливни</string>
+    <string name="weather_description_light_snow_showers">Небольшой снег с порывами</string>
+    <string name="weather_description_heavy_snow_showers">Сильный снег с порывами</string>
+    <string name="weather_description_thunderstorm">Гроза</string>
+    <string name="weather_description_thunderstorm_with_hail">Гроза с градом</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Гроза с сильным градом</string>
+    <string name="weather_description_unknown">Неизвестно</string>
+    <string name="weather_moon_phase_new_moon">Новолуние</string>
+    <string name="weather_moon_phase_waxing_crescent">Растущая луна</string>
+    <string name="weather_moon_phase_first_quarter">Первая четверть</string>
+    <string name="weather_moon_phase_waxing_gibbous">Прибывающая луна</string>
+    <string name="weather_moon_phase_full_moon">Полнолуние</string>
+    <string name="weather_moon_phase_waning_gibbous">Убывающая луна</string>
+    <string name="weather_moon_phase_last_quarter">Последняя четверть</string>
+    <string name="weather_moon_phase_waning_crescent">Старая луна</string>
+    <string name="weather_error_no_location">Не удаётся определить местоположение. Включите службы геолокации или найдите город.</string>
+    <string name="weather_error_city_not_found">Город «%1$s» не найден</string>
+    <string name="weather_error_no_network">Не удаётся загрузить погоду. Проверьте подключение к интернету.</string>
+    <string name="weather_error_choose_city">Выберите город из списка</string>
+    <string name="weather_current_location">Текущее местоположение</string>
+</resources>

@@ -11,8 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
 import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilter;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskStatistics;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskActionsHandler;
@@ -80,9 +82,13 @@ public class TasksFragment extends Fragment implements
             taskAdapter.setTasks(tasks);
         });
 
-        taskViewModel.getStatistics().observe(getViewLifecycleOwner(), statsText -> {
-            binding.statisticsTextView.setText(statsText);
-        });
+        showStatistics(new TaskStatistics(0, 0));
+        taskViewModel.getStatistics().observe(getViewLifecycleOwner(), this::showStatistics);
+    }
+
+    private void showStatistics(TaskStatistics statistics) {
+        binding.statisticsTextView.setText(getString(R.string.tasks_statistics,
+                statistics.total, statistics.completed, statistics.left, statistics.progress));
     }
 
     @Override

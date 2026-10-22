@@ -12,9 +12,11 @@ import com.yurii.pavlenko.myassistant.ui.theme.ThemeColors;
  */
 public class ViewPagerConfigurator {
 
-    private static final String[] ALL_TITLES = {"Tasks", "Weather", "Exchange", "Calc", "Scan", "Steps", "Flights"};
-    private static final String[] FIRST_ROW_TITLES = {"Tasks", "Weather", "Exchange", "Calc"};
-    private static final String[] SECOND_ROW_TITLES = {"Scan", "Steps", "Flights"};
+    private static final int[] ALL_TITLES = {R.string.app_tab_tasks, R.string.app_tab_weather, R.string.app_tab_exchange,
+            R.string.app_tab_calculator, R.string.app_tab_scan, R.string.app_tab_steps, R.string.app_tab_flights};
+    private static final int[] FIRST_ROW_TITLES = {R.string.app_tab_tasks, R.string.app_tab_weather, R.string.app_tab_exchange,
+            R.string.app_tab_calculator};
+    private static final int[] SECOND_ROW_TITLES = {R.string.app_tab_scan, R.string.app_tab_steps, R.string.app_tab_flights};
 
     /**
      * Sets up the ViewPager adapter, populates tabs for single or dual row layout,
@@ -27,14 +29,14 @@ public class ViewPagerConfigurator {
         boolean isTwoRows = binding.tabLayoutSecond != null;
 
         if (isTwoRows) {
-            for (String title : FIRST_ROW_TITLES) {
+            for (int title : FIRST_ROW_TITLES) {
                 binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
             }
-            for (String title : SECOND_ROW_TITLES) {
+            for (int title : SECOND_ROW_TITLES) {
                 binding.tabLayoutSecond.addTab(binding.tabLayoutSecond.newTab().setText(title));
             }
         } else {
-            for (String title : ALL_TITLES) {
+            for (int title : ALL_TITLES) {
                 binding.tabLayout.addTab(binding.tabLayout.newTab().setText(title));
             }
         }

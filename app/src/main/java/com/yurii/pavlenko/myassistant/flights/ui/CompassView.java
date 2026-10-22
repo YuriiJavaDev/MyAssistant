@@ -124,9 +124,13 @@ public class CompassView extends InstrumentView {
         canvas.drawPath(shape, plane);
     }
 
+    private String cardinalName() {
+        return getResources().getStringArray(R.array.flights_cardinal_points)[Cardinal.indexOf(heading)];
+    }
+
     private void drawReadout(Canvas canvas, float center, float radius) {
         String text = Double.isNaN(heading) ? "--"
-                : String.format(Locale.US, "%03.0f° %s", heading, Cardinal.of(heading));
+                : String.format(Locale.US, "%03.0f° %s", heading, cardinalName());
         readout.setTextSize(radius * 0.14f);
         float width = readout.measureText(text) + radius * 0.2f;
         float height = radius * 0.22f;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Загрузка копии в облако...</string>
+    <string name="backup_cloud_restoring">Восстановление копии из облака...</string>
+    <string name="backup_cloud_upload_success">Копия успешно загружена в облако</string>
+    <string name="backup_cloud_restore_success">Копия успешно восстановлена из облака</string>
+    <string name="backup_cloud_restore_partly">Задачи восстановлены из облака (копии для таких данных там не найдено: %1$s)</string>
+    <string name="backup_part_steps">шаги</string>
+    <string name="backup_part_flights">полёты</string>
+    <string name="backup_part_scans">сканы</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Ошибка загрузки: %1$s</string>
+    <string name="backup_error_download">Ошибка получения: %1$s</string>
+    <string name="backup_error_unknown">Неизвестная ошибка</string>
+    <string name="backup_error_insecure_url">URL должен начинаться с https://</string>
+    <string name="backup_error_authentication">Ошибка аутентификации: проверьте имя пользователя и пароль</string>
+    <string name="backup_error_server_code">Сервер ответил кодом: %1$d</string>
+    <string name="backup_error_connection">Ошибка соединения: %1$s</string>
+    <string name="backup_destination_title">Сохранить копию в</string>
+    <string name="backup_destination_folder">Выбрать папку (устройство, SD-карта, USB, Диск...)</string>
+    <string name="backup_destination_share">Поделиться через приложение</string>
+    <string name="backup_preparing">Подготовка копии...</string>
+    <string name="backup_export_failed">Ошибка экспорта</string>
+    <string name="backup_export_saved">Копия сохранена</string>
+    <string name="backup_import_success">Копия успешно импортирована. Перезапуск...</string>
+    <string name="backup_import_failed">Ошибка импорта</string>
+    <string name="backup_import_title">Внимание!</string>
+    <string name="backup_import_message">Восстановление копии заменит текущие задачи, шаги и сканы, которые в ней есть. Вы уверены, что хотите продолжить?</string>
+    <string name="backup_import_confirm">Подтвердить импорт</string>
+    <string name="backup_share_chooser_title">Экспорт резервной копии</string>
+    <string name="backup_cloud_settings_saved">Настройки облака успешно сохранены</string>
+    <string name="backup_cloud_secure_storage_unavailable">Защищённое хранилище недоступно, настройки не сохранены</string>
+    <string name="backup_cloud_url_empty">URL не может быть пустым</string>
+    <string name="backup_cloud_testing">Проверка соединения...</string>
+    <string name="backup_cloud_connection_successful">Соединение успешно!</string>
+</resources>

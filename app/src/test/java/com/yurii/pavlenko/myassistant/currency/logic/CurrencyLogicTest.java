@@ -101,7 +101,7 @@ public class CurrencyLogicTest {
 
     @Test
     public void labelsKnownAndUnknownCurrencies() {
-        assertTrue(MoneyFormat.label("ILS").startsWith("ILS · "));
-        assertEquals("ZZZ", MoneyFormat.label("ZZZ"));
+        assertTrue(MoneyFormat.label("ILS", Locale.ENGLISH).startsWith("ILS · "));
+        assertEquals("ZZZ", MoneyFormat.label("ZZZ", Locale.ENGLISH));
     }
 }

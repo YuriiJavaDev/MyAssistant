@@ -1,0 +1,42 @@
+package com.yurii.pavlenko.myassistant.ui.locale;
+
+import androidx.annotation.NonNull;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+/** A language the app is translated into, shown by its own name so that it can be found in any language. */
+public final class AppLanguage {
+
+    private static final List<AppLanguage> ALL = Collections.unmodifiableList(Arrays.asList(
+            new AppLanguage("en", "English"),
+            new AppLanguage("uk", "Українська"),
+            new AppLanguage("ru", "Русский")
+    ));
+
+    private final String tag;
+    private final String nativeName;
+
+    private AppLanguage(String tag, String nativeName) {
+        this.tag = tag;
+        this.nativeName = nativeName;
+    }
+
+    /** The languages to choose from; it must match res/xml/locales_config.xml. */
+    @NonNull
+    public static List<AppLanguage> all() {
+        return ALL;
+    }
+
+    /** The BCP 47 tag, such as "en" or "zh-CN". */
+    @NonNull
+    public String getTag() {
+        return tag;
+    }
+
+    @NonNull
+    public String getNativeName() {
+        return nativeName;
+    }
+}

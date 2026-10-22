@@ -9,8 +9,6 @@ public final class ExpressionEvaluator {
 
     private static final int MAX_LENGTH = 300;
     private static final int MAX_DEPTH = 100;
-    private static final String INVALID_EXPRESSION = "Invalid expression";
-    private static final String DIVISION_BY_ZERO = "Division by zero";
 
     private final String text;
     private final AngleMode mode;
@@ -28,18 +26,18 @@ public final class ExpressionEvaluator {
     /** @param answer the value that "Ans" stands for */
     public static double evaluate(String expression, AngleMode mode, double answer) throws CalculationException {
         if (expression.length() > MAX_LENGTH) {
-            throw new CalculationException("Expression is too long");
+            throw new CalculationException(CalcError.EXPRESSION_TOO_LONG);
         }
         ExpressionEvaluator evaluator = new ExpressionEvaluator(expression, mode, answer);
         double value = evaluator.parseExpression();
         if (!evaluator.atEnd()) {
-            throw new CalculationException(INVALID_EXPRESSION);
+            throw new CalculationException(CalcError.INVALID_EXPRESSION);
         }
         if (Double.isNaN(value)) {
-            throw new CalculationException("Invalid input");
+            throw new CalculationException(CalcError.INVALID_INPUT);
         }
         if (Double.isInfinite(value)) {
-            throw new CalculationException("Result is too large");
+            throw new CalculationException(CalcError.RESULT_TOO_LARGE);
         }
         return value;
     }
@@ -95,7 +93,7 @@ public final class ExpressionEvaluator {
         if (accept('^')) {
             double exponent = parseUnary();
             if (base == 0 && exponent < 0) {
-                throw new CalculationException(DIVISION_BY_ZERO);
+                throw new CalculationException(CalcError.DIVISION_BY_ZERO);
             }
             return Math.pow(base, exponent);
         }
@@ -132,7 +130,7 @@ public final class ExpressionEvaluator {
         if (peekIsLetter()) {
             return parseName();
         }
-        throw new CalculationException(INVALID_EXPRESSION);
+        throw new CalculationException(CalcError.INVALID_EXPRESSION);
     }
 
     private double parseParenthesized() throws CalculationException {
@@ -161,7 +159,7 @@ public final class ExpressionEvaluator {
         switch (name) {
             case "e": return Math.E;
             case "Ans": return answer;
-            default: throw new CalculationException(INVALID_EXPRESSION);
+            default: throw new CalculationException(CalcError.INVALID_EXPRESSION);
         }
     }
 
@@ -183,7 +181,7 @@ public final class ExpressionEvaluator {
         }
         String number = text.substring(start, position);
         if (number.equals(".")) {
-            throw new CalculationException(INVALID_EXPRESSION);
+            throw new CalculationException(CalcError.INVALID_EXPRESSION);
         }
         return Double.parseDouble(number);
     }
@@ -206,14 +204,14 @@ public final class ExpressionEvaluator {
 
     private double nonZero(double divisor) throws CalculationException {
         if (divisor == 0) {
-            throw new CalculationException(DIVISION_BY_ZERO);
+            throw new CalculationException(CalcError.DIVISION_BY_ZERO);
         }
         return divisor;
     }
 
     private void enter() throws CalculationException {
         if (++depth > MAX_DEPTH) {
-            throw new CalculationException("Expression is too complex");
+            throw new CalculationException(CalcError.EXPRESSION_TOO_COMPLEX);
         }
     }
 
@@ -251,7 +249,7 @@ public final class ExpressionEvaluator {
 
     private void expect(char symbol) throws CalculationException {
         if (!accept(symbol)) {
-            throw new CalculationException(INVALID_EXPRESSION);
+            throw new CalculationException(CalcError.INVALID_EXPRESSION);
         }
     }
 }

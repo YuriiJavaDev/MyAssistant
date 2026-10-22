@@ -12,6 +12,7 @@ import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilter;
 import com.yurii.pavlenko.myassistant.tasks.logic.TaskFilterSorter;
 import com.yurii.pavlenko.myassistant.tasks.logic.TaskLifecycle;
 import com.yurii.pavlenko.myassistant.tasks.logic.TaskSort;
+import com.yurii.pavlenko.myassistant.tasks.logic.TaskStatistics;
 import com.yurii.pavlenko.myassistant.tasks.logic.TaskStatisticsCalculator;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
 import com.yurii.pavlenko.myassistant.tasks.notifications.OverdueAlerts;
@@ -27,7 +28,7 @@ public class TaskViewModel extends AndroidViewModel {
 
     private final TaskRepository repository;
     private final MediatorLiveData<List<Task>> displayListLiveData = new MediatorLiveData<>();
-    private final MutableLiveData<String> statisticsLiveData = new MutableLiveData<>();
+    private final MutableLiveData<TaskStatistics> statisticsLiveData = new MutableLiveData<>();
 
     private TaskFilter currentFilter = TaskFilter.ALL;
     private TaskSort currentSort = TaskSort.ALPHA_A_Z;
@@ -50,7 +51,7 @@ public class TaskViewModel extends AndroidViewModel {
         return displayListLiveData;
     }
 
-    public LiveData<String> getStatistics() {
+    public LiveData<TaskStatistics> getStatistics() {
         return statisticsLiveData;
     }
 
@@ -142,7 +143,6 @@ public class TaskViewModel extends AndroidViewModel {
     }
 
     private void updateStatistics() {
-        String statsText = TaskStatisticsCalculator.calculateStatistics(cachedRawTasks);
-        statisticsLiveData.setValue(statsText);
+        statisticsLiveData.setValue(TaskStatisticsCalculator.calculateStatistics(cachedRawTasks));
     }
 }

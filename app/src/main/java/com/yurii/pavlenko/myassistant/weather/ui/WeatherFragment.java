@@ -142,14 +142,14 @@ public class WeatherFragment extends Fragment {
         if (status == WeatherState.Status.LOADING) {
             binding.statusText.setText(R.string.weather_loading);
         } else if (status == WeatherState.Status.ERROR) {
-            binding.statusText.setText(state.getMessage());
+            binding.statusText.setText(getString(WeatherTexts.error(state.getError()), state.getErrorArgument()));
         } else if (status == WeatherState.Status.CONTENT) {
             renderWeather(state.getPlace(), state.getWeather());
         }
     }
 
     private void renderWeather(Place place, CurrentWeather weather) {
-        binding.cityName.setText(place.getName());
+        binding.cityName.setText(place.hasName() ? place.getName() : getString(R.string.weather_current_location));
         binding.countryName.setText(place.getCountry().isEmpty() ? "" : getString(R.string.weather_country_format, place.getCountry()));
         binding.countryName.setVisibility(place.getCountry().isEmpty() ? View.GONE : View.VISIBLE);
 
@@ -158,7 +158,7 @@ public class WeatherFragment extends Fragment {
         BeachScenario scenario = BeachScenario.of(condition, weather.isDay(), weather.getTemperature(), weather.getWindSpeed());
         binding.porthole.show(SceneFactory.weather(condition, weather.isDay(), scenario));
         binding.temperature.setText(units.getTemperature().format(weather.getTemperature()));
-        binding.description.setText(WeatherCode.describe(weather.getWeatherCode()));
+        binding.description.setText(getString(WeatherTexts.description(WeatherCode.describe(weather.getWeatherCode()))));
 
         binding.detailFeelsLike.setText(units.getTemperature().format(weather.getFeelsLike()));
         binding.detailHumidity.setText(getString(R.string.weather_humidity_value, weather.getHumidity()));
@@ -172,7 +172,7 @@ public class WeatherFragment extends Fragment {
         MoonPhase phase = MoonPhase.at(System.currentTimeMillis());
         binding.moonWindow.show(SceneFactory.moon(phase, place.getLatitude() < 0));
         binding.moonCaption.setText(getString(R.string.weather_moon_caption,
-                phase.name(), Math.round(phase.illumination() * 100)));
+                getString(WeatherTexts.moonPhase(phase.phase())), Math.round(phase.illumination() * 100)));
     }
 
     @Override

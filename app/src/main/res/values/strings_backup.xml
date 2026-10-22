@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Uploading backup to cloud...</string>
+    <string name="backup_cloud_restoring">Restoring backup from cloud...</string>
+    <string name="backup_cloud_upload_success">Backup successfully uploaded to cloud</string>
+    <string name="backup_cloud_restore_success">Backup successfully restored from cloud</string>
+    <string name="backup_cloud_restore_partly">Tasks restored from cloud (no %1$s backup found there)</string>
+    <string name="backup_part_steps">step</string>
+    <string name="backup_part_flights">flight</string>
+    <string name="backup_part_scans">scan</string>
+    <string name="backup_part_separator">" or "</string>
+    <string name="backup_error_upload">Upload error: %1$s</string>
+    <string name="backup_error_download">Download error: %1$s</string>
+    <string name="backup_error_unknown">Unknown error</string>
+    <string name="backup_error_insecure_url">The URL must start with https://</string>
+    <string name="backup_error_authentication">Authentication failed: Check username and password</string>
+    <string name="backup_error_server_code">Server responded with code: %1$d</string>
+    <string name="backup_error_connection">Connection error: %1$s</string>
+    <string name="backup_destination_title">Save backup to</string>
+    <string name="backup_destination_folder">Choose a folder (device, SD card, USB, Drive...)</string>
+    <string name="backup_destination_share">Share with an app</string>
+    <string name="backup_preparing">Preparing backup...</string>
+    <string name="backup_export_failed">Export failed</string>
+    <string name="backup_export_saved">Backup saved</string>
+    <string name="backup_import_success">Backup imported successfully. Restarting...</string>
+    <string name="backup_import_failed">Import failed</string>
+    <string name="backup_import_title">Attention!</string>
+    <string name="backup_import_message">Restoring a backup replaces the current tasks, steps and scans it contains. Are you sure you want to proceed?</string>
+    <string name="backup_import_confirm">Confirm import</string>
+    <string name="backup_share_chooser_title">Export Backup</string>
+    <string name="backup_cloud_settings_saved">Cloud settings saved successfully</string>
+    <string name="backup_cloud_secure_storage_unavailable">Secure storage is unavailable, settings were not saved</string>
+    <string name="backup_cloud_url_empty">URL cannot be empty</string>
+    <string name="backup_cloud_testing">Testing connection...</string>
+    <string name="backup_cloud_connection_successful">Connection successful!</string>
+</resources>

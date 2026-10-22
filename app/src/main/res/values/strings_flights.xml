@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Flight recording</string>
+    <string name="flights_notification_channel_description">Shown while a flight is being recorded</string>
+    <string name="flights_notification_title">Recording the flight</string>
+    <string name="flights_notification_text">Tap to open the instruments</string>
+
+    <string-array name="flights_cardinal_points">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+
+    <string name="flights_report_title">Flight report</string>
+    <string name="flights_report_north">N</string>
+    <string name="flights_report_side_north">N</string>
+    <string name="flights_report_side_south">S</string>
+    <string name="flights_report_side_east">E</string>
+    <string name="flights_report_side_west">W</string>
+    <string name="flights_report_duration">Duration</string>
+    <string name="flights_report_distance">Distance</string>
+    <string name="flights_report_top_speed">Top speed</string>
+    <string name="flights_report_average_speed">Average speed</string>
+    <string name="flights_report_highest_altitude">Highest altitude</string>
+    <string name="flights_report_best_climb">Best climb</string>
+    <string name="flights_report_worst_sink">Worst sink</string>
+    <string name="flights_report_peak_load">Peak load</string>
+    <string name="flights_report_start_point">Start point</string>
+    <string name="flights_report_end_point">End point</string>
+    <string name="flights_report_altitude_above_start">%1$s above start</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s above sea level</string>
+    <string name="flights_report_chart_altitude_above_start">Altitude (%1$s, above start)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Altitude (%1$s, above sea level)</string>
+    <string name="flights_report_chart_speed">Ground speed (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Map: Natural Earth (public domain).</string>
+    <string name="flights_report_footer">%1$s Recorded with MyAssistant. For fun only: not for navigation or safety.</string>
+</resources>

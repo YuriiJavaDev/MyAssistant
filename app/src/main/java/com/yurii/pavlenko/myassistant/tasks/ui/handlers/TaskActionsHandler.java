@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.databinding.FragmentTasksBinding;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.DeleteConfirmationDialog;
 import com.yurii.pavlenko.myassistant.tasks.ui.dialogs.TaskDialogFragment;
@@ -26,14 +27,14 @@ public class TaskActionsHandler {
         binding.deleteCompletedButton.setOnClickListener(v -> {
             DeleteConfirmationDialog.showDeleteCompleted(context, taskViewModel.getAllTasksSnapshot(), () -> {
                 taskViewModel.deleteCompletedTasks();
-                Toast.makeText(context, "Completed tasks deleted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.tasks_toast_completed_deleted, Toast.LENGTH_SHORT).show();
             });
         });
 
         binding.clearAllButton.setOnClickListener(v -> {
             DeleteConfirmationDialog.showClearAll(context, taskViewModel.getAllTasksSnapshot(), () -> {
                 taskViewModel.clearAllTasks();
-                Toast.makeText(context, "All tasks cleared", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.tasks_toast_all_cleared, Toast.LENGTH_SHORT).show();
             });
         });
     }

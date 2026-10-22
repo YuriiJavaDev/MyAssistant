@@ -21,6 +21,7 @@ import com.yurii.pavlenko.myassistant.databinding.DialogAddTaskBinding;
 import com.yurii.pavlenko.myassistant.tasks.logic.Importance;
 import com.yurii.pavlenko.myassistant.tasks.logic.ReminderRules;
 import com.yurii.pavlenko.myassistant.tasks.model.Task;
+import com.yurii.pavlenko.myassistant.tasks.ui.ImportanceText;
 import com.yurii.pavlenko.myassistant.tasks.ui.handlers.TaskDeadlinePickerHelper;
 
 import java.time.LocalDate;
@@ -137,7 +138,7 @@ public class TaskDialogFragment extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         DialogAddTaskBinding binding = DialogAddTaskBinding.inflate(LayoutInflater.from(requireContext()));
 
-        String[] importanceOptions = Importance.labels();
+        String[] importanceOptions = ImportanceText.labels(requireContext());
         ArrayAdapter<String> importanceAdapter = new ArrayAdapter<>(requireContext(), R.layout.item_spinner, importanceOptions);
         importanceAdapter.setDropDownViewResource(R.layout.item_spinner);
         binding.dialogImportanceSpinner.setAdapter(importanceAdapter);
@@ -164,7 +165,7 @@ public class TaskDialogFragment extends DialogFragment {
             initialDeadline = task.getDeadline();
             initialCustomReminder = task.getCustomReminderDateTime();
 
-            binding.dialogImportanceSpinner.setSelection(Importance.fromLabel(task.getImportance()).ordinal());
+            binding.dialogImportanceSpinner.setSelection(Importance.fromKey(task.getImportance()).ordinal());
         } else {
             if (initialText != null && !initialText.isEmpty()) {
                 binding.dialogTaskEditText.setText(initialText);
@@ -173,8 +174,8 @@ public class TaskDialogFragment extends DialogFragment {
             binding.dialogImportanceSpinner.setSelection(0);
         }
 
-        binding.dialogTitleTextView.setText(isEditMode ? "Edit Task" : "Add New Task");
-        binding.btnSave.setText(isEditMode ? "Save" : "Add");
+        binding.dialogTitleTextView.setText(isEditMode ? R.string.tasks_dialog_title_edit : R.string.tasks_dialog_title_add);
+        binding.btnSave.setText(isEditMode ? R.string.tasks_dialog_save : R.string.tasks_list_add);
 
         deadlineHelper.setupDeadlinePicker(
                 binding.dialogDeadlineTextView,
@@ -191,7 +192,7 @@ public class TaskDialogFragment extends DialogFragment {
             binding.btnDelete.setOnClickListener(v -> {
                 DeleteConfirmationDialog.show(requireContext(), true, () -> {
                     deleteListener.onTaskDeleted(task);
-                    Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), R.string.tasks_toast_deleted, Toast.LENGTH_SHORT).show();
                     dismiss();
                 });
             });
@@ -210,7 +211,7 @@ public class TaskDialogFragment extends DialogFragment {
 
         binding.btnSave.setOnClickListener(v -> {
             String title = binding.dialogTaskEditText.getText().toString().trim();
-            String importance = binding.dialogImportanceSpinner.getSelectedItem().toString();
+            String importance = Importance.values()[binding.dialogImportanceSpinner.getSelectedItemPosition()].key;
             LocalDate deadline = deadlineHelper.getSelectedDeadline();
             LocalDateTime customReminderDateTime = deadlineHelper.getCustomReminderDateTime();
             boolean showTimestamps = binding.dialogShowTimestampsCheckBox.isChecked();
@@ -218,21 +219,21 @@ public class TaskDialogFragment extends DialogFragment {
             boolean remindSound = customReminderDateTime != null && !isCompleted;
 
             if (title.isEmpty()) {
-                Toast.makeText(requireContext(), "Task description cannot be empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.tasks_toast_empty_title, Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (ReminderRules.isLaterThanDeadline(customReminderDateTime, deadline)) {
-                Toast.makeText(requireContext(), "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.tasks_toast_reminder_after_deadline, Toast.LENGTH_SHORT).show();
                 return;
             }
 
             if (isEditMode && updateListener != null) {
                 updateListener.onTaskUpdated(task, title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
-                Toast.makeText(requireContext(), "Task updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.tasks_toast_updated, Toast.LENGTH_SHORT).show();
             } else if (!isEditMode && createListener != null) {
                 createListener.onTaskSaved(title, importance, deadline, remindSound, showTimestamps, customReminderDateTime);
-                Toast.makeText(requireContext(), "Task created", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), R.string.tasks_toast_created, Toast.LENGTH_SHORT).show();
             }
             dismiss();
         });

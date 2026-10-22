@@ -27,7 +27,6 @@ import java.util.concurrent.TimeUnit;
 public class WeatherViewModel extends AndroidViewModel {
 
     private static final long STALE_MILLIS = TimeUnit.MINUTES.toMillis(15);
-    private static final String NO_NETWORK = "Cannot load the weather. Check the internet connection.";
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final MutableLiveData<WeatherState> state = new MutableLiveData<>(WeatherState.loading());
@@ -79,7 +78,7 @@ public class WeatherViewModel extends AndroidViewModel {
         executor.execute(() -> {
             Location location = DeviceLocation.find(getApplication());
             if (location == null) {
-                publish(id, WeatherState.error("Cannot determine the location. Turn on location services or search for a city."));
+                publish(id, WeatherState.error(WeatherState.Error.NO_LOCATION));
                 return;
             }
             Place place = GeocodingService.describe(location.getLatitude(), location.getLongitude());
@@ -102,7 +101,7 @@ public class WeatherViewModel extends AndroidViewModel {
                 }
                 Place obvious = PlaceChoice.obvious(found);
                 if (found.isEmpty()) {
-                    publish(id, WeatherState.error("No city found for \"" + text + "\""));
+                    publish(id, WeatherState.error(WeatherState.Error.CITY_NOT_FOUND, text));
                 } else if (obvious != null) {
                     followsPhone = false;
                     loadWeather(id, obvious);
@@ -111,7 +110,7 @@ public class WeatherViewModel extends AndroidViewModel {
                     publish(id, backTo(before));
                 }
             } catch (IOException e) {
-                publish(id, WeatherState.error(NO_NETWORK));
+                publish(id, WeatherState.error(WeatherState.Error.NO_NETWORK));
             }
         });
     }
@@ -153,7 +152,7 @@ public class WeatherViewModel extends AndroidViewModel {
             }
             publish(id, WeatherState.content(place, weather));
         } catch (IOException e) {
-            publish(id, WeatherState.error(NO_NETWORK));
+            publish(id, WeatherState.error(WeatherState.Error.NO_NETWORK));
         }
     }
 
@@ -167,7 +166,7 @@ public class WeatherViewModel extends AndroidViewModel {
     /** While the user picks among several cities, the screen shows again what it showed before the search. */
     private static WeatherState backTo(WeatherState before) {
         boolean hasNothingToShow = before == null || before.getStatus() == WeatherState.Status.LOADING;
-        return hasNothingToShow ? WeatherState.error("Choose a city from the list") : before;
+        return hasNothingToShow ? WeatherState.error(WeatherState.Error.CHOOSE_CITY) : before;
     }
 
     @Override

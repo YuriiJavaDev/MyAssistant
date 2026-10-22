@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Что нужно сделать?</string>
+    <string name="tasks_list_add">Добавить</string>
+    <string name="tasks_list_delete_completed">Удалить выполненные</string>
+    <string name="tasks_list_clear_all">Очистить всё</string>
+    <string name="tasks_list_reminder_set">Напоминание установлено</string>
+    <string name="tasks_statistics">Всего: %1$d  Выполнено: %2$d  Осталось: %3$d  Прогресс: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Новая задача</string>
+    <string name="tasks_dialog_title_edit">Редактировать задачу</string>
+    <string name="tasks_dialog_importance">Уровень важности:</string>
+    <string name="tasks_dialog_deadline_label">Срок:</string>
+    <string name="tasks_dialog_deadline_select">Выберите срок</string>
+    <string name="tasks_dialog_reminder_label">Напоминание (дата и время):</string>
+    <string name="tasks_dialog_reminder_select">Выберите дату и время напоминания</string>
+    <string name="tasks_dialog_show_timestamps">Показывать даты создания/редактирования</string>
+    <string name="tasks_dialog_delete">Удалить</string>
+    <string name="tasks_dialog_save">Сохранить</string>
+    <string name="tasks_dialog_clear">Очистить</string>
+    <string name="tasks_importance_normal">Обычный</string>
+    <string name="tasks_importance_important">Важный</string>
+    <string name="tasks_importance_urgent">Срочный</string>
+    <string name="tasks_toast_created">Задача создана</string>
+    <string name="tasks_toast_updated">Задача обновлена</string>
+    <string name="tasks_toast_deleted">Задача удалена</string>
+    <string name="tasks_toast_completed_deleted">Выполненные задачи удалены</string>
+    <string name="tasks_toast_all_cleared">Все задачи очищены</string>
+    <string name="tasks_toast_empty_title">Описание задачи не может быть пустым</string>
+    <string name="tasks_toast_reminder_after_deadline">Напоминание не может быть позже срока!</string>
+    <string name="tasks_toast_reminder_in_past">Напоминание не может быть в прошлом!</string>
+    <string name="tasks_toast_reminder_cleared">Напоминание сброшено, так как срок раньше!</string>
+    <string name="tasks_toast_select_deadline_first">Сначала выберите срок!</string>
+    <string name="tasks_time_created">Создано: %1$s</string>
+    <string name="tasks_time_edited">Изменено: %1$s</string>
+    <string name="tasks_time_completed">Выполнено: %1$s</string>
+    <string name="tasks_deadline_prefixed">Срок: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — остался %2$d день!</item>
+        <item quantity="few">%1$s — осталось %2$d дня!</item>
+        <item quantity="many">%1$s — осталось %2$d дней!</item>
+        <item quantity="other">%1$s — осталось %2$d дня!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — просрочено на %2$d день!</item>
+        <item quantity="few">%1$s — просрочено на %2$d дня!</item>
+        <item quantity="many">%1$s — просрочено на %2$d дней!</item>
+        <item quantity="other">%1$s — просрочено на %2$d дня!</item>
+    </plurals>
+    <string name="tasks_delete_title">Подтверждение удаления</string>
+    <string name="tasks_delete_button">Удалить</string>
+    <string name="tasks_delete_nothing">Нет объектов для удаления!</string>
+    <string name="tasks_delete_item_message">Вы уверены, что хотите удалить этот элемент? Это действие нельзя отменить!</string>
+    <string name="tasks_delete_cannot_be_undone">Это действие нельзя отменить!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Удалить %1$d выполненную задачу?</item>
+        <item quantity="few">Удалить %1$d выполненные задачи?</item>
+        <item quantity="many">Удалить %1$d выполненных задач?</item>
+        <item quantity="other">Удалить %1$d выполненной задачи?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">У %1$d из них ещё есть сохранённое напоминание.</item>
+        <item quantity="few">У %1$d из них ещё есть сохранённые напоминания.</item>
+        <item quantity="many">У %1$d из них ещё есть сохранённые напоминания.</item>
+        <item quantity="other">У %1$d из них ещё есть сохранённые напоминания.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Удалить все %1$d задачу?</item>
+        <item quantity="few">Удалить все %1$d задачи?</item>
+        <item quantity="many">Удалить все %1$d задач?</item>
+        <item quantity="other">Удалить все %1$d задачи?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">У %1$d есть активное напоминание.</item>
+        <item quantity="few">У %1$d есть активные напоминания.</item>
+        <item quantity="many">У %1$d есть активные напоминания.</item>
+        <item quantity="other">У %1$d есть активные напоминания.</item>
+    </plurals>
+    <string name="tasks_alert_title">Оповещение о сроке!</string>
+    <string name="tasks_alert_view_tasks">Посмотреть задачи</string>
+    <string name="tasks_alert_channel_name">Оповещения о сроках задач</string>
+    <string name="tasks_alert_channel_description">Срочные оповещения о сроках задач</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">У вас просрочен срок задачи: %1$d.</item>
+        <item quantity="few">У вас просрочены сроки задач: %1$d.</item>
+        <item quantity="many">У вас просрочены сроки задач: %1$d.</item>
+        <item quantity="other">У вас просрочены сроки задач: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Внимание! У вас %1$d срок задачи, требующий немедленного внимания.</item>
+        <item quantity="few">Внимание! У вас %1$d срока задач, требующих немедленного внимания.</item>
+        <item quantity="many">Внимание! У вас %1$d сроков задач, требующих немедленного внимания.</item>
+        <item quantity="other">Внимание! У вас %1$d срока задач, требующих немедленного внимания.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Внимание! Приближается срок задачи: %1$s</string>
+</resources>

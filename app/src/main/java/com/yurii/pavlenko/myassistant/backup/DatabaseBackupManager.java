@@ -10,6 +10,7 @@ import android.util.Log;
 import androidx.core.content.FileProvider;
 import androidx.documentfile.provider.DocumentFile;
 
+import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.flights.data.FlightReportStore;
 import com.yurii.pavlenko.myassistant.flights.database.FlightDao;
 import com.yurii.pavlenko.myassistant.flights.database.FlightDatabase;
@@ -216,7 +217,7 @@ public final class DatabaseBackupManager {
         intent.setType("*/*");
         intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        return Intent.createChooser(intent, "Export Backup");
+        return Intent.createChooser(intent, context.getString(R.string.backup_share_chooser_title));
     }
 
     /** An existing file with the same name is replaced, so the folder always holds the latest backup. */

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:minHeight="28dp"
         android:gravity="center_vertical"
-        android:text="Export Backup"
+        android:text="@string/backup_menu_export"
         style="@style/CustomPopupMenuItemTextAppearance"
         android:paddingHorizontal="16dp"
         android:background="?attr/selectableItemBackground"/>
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:minHeight="28dp"
         android:gravity="center_vertical"
-        android:text="Import Backup"
+        android:text="@string/backup_menu_import"
         style="@style/CustomPopupMenuItemTextAppearance"
         android:paddingHorizontal="16dp"
         android:background="?attr/selectableItemBackground"/>
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:minHeight="28dp"
         android:gravity="center_vertical"
-        android:text="Cloud Settings &amp; Auto-backup"
+        android:text="@string/backup_menu_cloud_settings"
         style="@style/CustomPopupMenuItemTextAppearance"
         android:paddingHorizontal="16dp"
         android:background="?attr/selectableItemBackground"/>
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:minHeight="28dp"
         android:gravity="center_vertical"
-        android:text="Save to Cloud Now"
+        android:text="@string/backup_menu_cloud_save"
         style="@style/CustomPopupMenuItemTextAppearance"
         android:paddingHorizontal="16dp"
         android:background="?attr/selectableItemBackground"/>
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:minHeight="28dp"
         android:gravity="center_vertical"
-        android:text="Restore from Cloud"
+        android:text="@string/backup_menu_cloud_restore"
         style="@style/CustomPopupMenuItemTextAppearance"
         android:paddingHorizontal="16dp"
         android:background="?attr/selectableItemBackground"/>

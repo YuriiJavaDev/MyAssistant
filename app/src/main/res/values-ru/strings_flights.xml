@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Запись полёта</string>
+    <string name="flights_notification_channel_description">Показывается, пока записывается полёт</string>
+    <string name="flights_notification_title">Идёт запись полёта</string>
+    <string name="flights_notification_text">Нажмите, чтобы открыть приборы</string>
+    <string-array name="flights_cardinal_points">
+        <item>С</item>
+        <item>СВ</item>
+        <item>В</item>
+        <item>ЮВ</item>
+        <item>Ю</item>
+        <item>ЮЗ</item>
+        <item>З</item>
+        <item>СЗ</item>
+    </string-array>
+    <string name="flights_report_title">Отчёт о полёте</string>
+    <string name="flights_report_north">С</string>
+    <string name="flights_report_side_north">с</string>
+    <string name="flights_report_side_south">ю</string>
+    <string name="flights_report_side_east">в</string>
+    <string name="flights_report_side_west">з</string>
+    <string name="flights_report_duration">Длительность</string>
+    <string name="flights_report_distance">Расстояние</string>
+    <string name="flights_report_top_speed">Макс. скорость</string>
+    <string name="flights_report_average_speed">Средняя скорость</string>
+    <string name="flights_report_highest_altitude">Наибольшая высота</string>
+    <string name="flights_report_best_climb">Лучший набор высоты</string>
+    <string name="flights_report_worst_sink">Наибольшее снижение</string>
+    <string name="flights_report_peak_load">Пиковая нагрузка</string>
+    <string name="flights_report_start_point">Точка старта</string>
+    <string name="flights_report_end_point">Точка финиша</string>
+    <string name="flights_report_altitude_above_start">%1$s над стартом</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s над уровнем моря</string>
+    <string name="flights_report_chart_altitude_above_start">Высота (%1$s, над стартом)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Высота (%1$s, над уровнем моря)</string>
+    <string name="flights_report_chart_speed">Скорость относительно земли (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Карта: Natural Earth (общественное достояние).</string>
+    <string name="flights_report_footer">%1$s Записано в MyAssistant. Только для развлечения: не для навигации и не для безопасности.</string>
+</resources>

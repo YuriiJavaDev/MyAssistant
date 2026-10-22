@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">Що потрібно зробити?</string>
+    <string name="tasks_list_add">Додати</string>
+    <string name="tasks_list_delete_completed">Видалити виконані</string>
+    <string name="tasks_list_clear_all">Очистити все</string>
+    <string name="tasks_list_reminder_set">Нагадування встановлено</string>
+    <string name="tasks_statistics">Усього: %1$d  Виконано: %2$d  Залишилось: %3$d  Прогрес: %4$d%%</string>
+    <string name="tasks_dialog_title_add">Нове завдання</string>
+    <string name="tasks_dialog_title_edit">Редагувати завдання</string>
+    <string name="tasks_dialog_importance">Рівень важливості:</string>
+    <string name="tasks_dialog_deadline_label">Термін:</string>
+    <string name="tasks_dialog_deadline_select">Виберіть термін</string>
+    <string name="tasks_dialog_reminder_label">Нагадування (дата й час):</string>
+    <string name="tasks_dialog_reminder_select">Виберіть дату й час нагадування</string>
+    <string name="tasks_dialog_show_timestamps">Показувати дати створення/редагування</string>
+    <string name="tasks_dialog_delete">Видалити</string>
+    <string name="tasks_dialog_save">Зберегти</string>
+    <string name="tasks_dialog_clear">Очистити</string>
+    <string name="tasks_importance_normal">Звичайний</string>
+    <string name="tasks_importance_important">Важливий</string>
+    <string name="tasks_importance_urgent">Терміновий</string>
+    <string name="tasks_toast_created">Завдання створено</string>
+    <string name="tasks_toast_updated">Завдання оновлено</string>
+    <string name="tasks_toast_deleted">Завдання видалено</string>
+    <string name="tasks_toast_completed_deleted">Виконані завдання видалено</string>
+    <string name="tasks_toast_all_cleared">Усі завдання очищено</string>
+    <string name="tasks_toast_empty_title">Опис завдання не може бути порожнім</string>
+    <string name="tasks_toast_reminder_after_deadline">Нагадування не може бути пізніше за термін!</string>
+    <string name="tasks_toast_reminder_in_past">Нагадування не може бути в минулому!</string>
+    <string name="tasks_toast_reminder_cleared">Нагадування скасовано, бо термін раніший!</string>
+    <string name="tasks_toast_select_deadline_first">Спершу виберіть термін!</string>
+    <string name="tasks_time_created">Створено: %1$s</string>
+    <string name="tasks_time_edited">Змінено: %1$s</string>
+    <string name="tasks_time_completed">Виконано: %1$s</string>
+    <string name="tasks_deadline_prefixed">Термін: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="one">%1$s — залишився %2$d день!</item>
+        <item quantity="few">%1$s — залишилося %2$d дні!</item>
+        <item quantity="many">%1$s — залишилося %2$d днів!</item>
+        <item quantity="other">%1$s — залишилося %2$d дня!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="one">%1$s — прострочено на %2$d день!</item>
+        <item quantity="few">%1$s — прострочено на %2$d дні!</item>
+        <item quantity="many">%1$s — прострочено на %2$d днів!</item>
+        <item quantity="other">%1$s — прострочено на %2$d дня!</item>
+    </plurals>
+    <string name="tasks_delete_title">Підтвердження видалення</string>
+    <string name="tasks_delete_button">Видалити</string>
+    <string name="tasks_delete_nothing">Немає об\'єктів для видалення!</string>
+    <string name="tasks_delete_item_message">Ви впевнені, що хочете видалити цей елемент? Цю дію не можна скасувати!</string>
+    <string name="tasks_delete_cannot_be_undone">Цю дію не можна скасувати!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="one">Видалити %1$d виконане завдання?</item>
+        <item quantity="few">Видалити %1$d виконані завдання?</item>
+        <item quantity="many">Видалити %1$d виконаних завдань?</item>
+        <item quantity="other">Видалити %1$d виконаного завдання?</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="one">У %1$d із них ще є збережене нагадування.</item>
+        <item quantity="few">У %1$d з них ще є збережені нагадування.</item>
+        <item quantity="many">У %1$d з них ще є збережені нагадування.</item>
+        <item quantity="other">У %1$d з них ще є збережені нагадування.</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="one">Видалити всі %1$d завдання?</item>
+        <item quantity="few">Видалити всі %1$d завдання?</item>
+        <item quantity="many">Видалити всі %1$d завдань?</item>
+        <item quantity="other">Видалити всі %1$d завдання?</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="one">%1$d має активне нагадування.</item>
+        <item quantity="few">%1$d мають активні нагадування.</item>
+        <item quantity="many">%1$d мають активні нагадування.</item>
+        <item quantity="other">%1$d мають активні нагадування.</item>
+    </plurals>
+    <string name="tasks_alert_title">Сповіщення про термін!</string>
+    <string name="tasks_alert_view_tasks">Переглянути завдання</string>
+    <string name="tasks_alert_channel_name">Сповіщення про терміни завдань</string>
+    <string name="tasks_alert_channel_description">Термінові сповіщення про терміни завдань</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="one">У вас прострочений термін завдання: %1$d.</item>
+        <item quantity="few">У вас прострочені терміни завдань: %1$d.</item>
+        <item quantity="many">У вас прострочені терміни завдань: %1$d.</item>
+        <item quantity="other">У вас прострочені терміни завдань: %1$d.</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="one">Увага! У вас %1$d термін завдання, що потребує негайної уваги.</item>
+        <item quantity="few">Увага! У вас %1$d терміни завдань, що потребують негайної уваги.</item>
+        <item quantity="many">Увага! У вас %1$d термінів завдань, що потребують негайної уваги.</item>
+        <item quantity="other">Увага! У вас %1$d терміну завдань, що потребують негайної уваги.</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">Увага! Наближається термін завдання: %1$s</string>
+</resources>

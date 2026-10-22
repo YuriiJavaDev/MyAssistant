@@ -11,6 +11,7 @@ import com.yurii.pavlenko.myassistant.flights.data.FlightUnits;
 import com.yurii.pavlenko.myassistant.flights.logic.Coastline;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightFormat;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightPoint;
+import com.yurii.pavlenko.myassistant.flights.logic.Hemispheres;
 import com.yurii.pavlenko.myassistant.flights.logic.FlightTime;
 import com.yurii.pavlenko.myassistant.flights.logic.MapProjection;
 import com.yurii.pavlenko.myassistant.flights.logic.TileGrid;
@@ -44,6 +45,7 @@ public final class FlightReportBuilder {
 
     private final Coastline coastline;
     private final MapTiles mapTiles;
+    private final ReportTexts texts;
     private final Paint headline = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint subtitle = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint label = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -52,12 +54,13 @@ public final class FlightReportBuilder {
     private final Paint footer = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public FlightReportBuilder(Context context) {
-        this(CoastlineAsset.load(context), MapTiles.esri());
+        this(CoastlineAsset.load(context), MapTiles.esri(), new ReportTexts(context));
     }
 
-    FlightReportBuilder(Coastline coastline, MapTiles mapTiles) {
+    FlightReportBuilder(Coastline coastline, MapTiles mapTiles, ReportTexts texts) {
         this.coastline = coastline;
         this.mapTiles = mapTiles;
+        this.texts = texts;
         headline.setColor(ReportColors.HEADER);
         headline.setTextSize(22);
         headline.setTypeface(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
@@ -98,12 +101,11 @@ public final class FlightReportBuilder {
         RectF area = new RectF(MARGIN, MAP_TOP, PAGE_WIDTH - MARGIN - STATS_WIDTH - GAP, CHART_TOP - GAP);
         MapProjection projection = RouteMapPainter.projectionFor(area, points);
         List<TileLayer> layers = loadLayers(projection);
-        new RouteMapPainter(coastline).draw(canvas, area, projection, points, units.getSpeed(), layers);
+        new RouteMapPainter(coastline, texts.north()).draw(canvas, area, projection, points, units.getSpeed(), layers);
         drawStatistics(canvas, flight, points, units);
         drawProfiles(canvas, flight, points, units);
         boolean photo = layers.get(0).hasTiles();
-        canvas.drawText((photo ? mapTiles.getImagery().attribution() + " " : "Map: Natural Earth (public domain). ")
-                + "Recorded with MyAssistant. For fun only: not for navigation or safety.", MARGIN, PAGE_HEIGHT - 12, footer);
+        canvas.drawText(texts.footer(photo ? mapTiles.getImagery().attribution() : null), MARGIN, PAGE_HEIGHT - 12, footer);
         boolean complete = true;
         for (TileLayer layer : layers) {
             complete &= layer.isComplete();
@@ -128,9 +130,9 @@ public final class FlightReportBuilder {
     }
 
     private void drawHeader(Canvas canvas, FlightRecord flight) {
-        canvas.drawText("Flight report", MARGIN, 44, headline);
-        SimpleDateFormat day = new SimpleDateFormat("EEEE, d MMMM yyyy", Locale.ENGLISH);
-        SimpleDateFormat time = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
+        canvas.drawText(texts.title(), MARGIN, 44, headline);
+        SimpleDateFormat day = new SimpleDateFormat("EEEE, d MMMM yyyy", texts.locale());
+        SimpleDateFormat time = new SimpleDateFormat("HH:mm", Locale.US);
         canvas.drawText(day.format(new Date(flight.getStartMillis())) + "   "
                 + time.format(new Date(flight.getStartMillis())) + " - " + time.format(new Date(flight.getEndMillis())),
                 MARGIN, 62, subtitle);
@@ -139,19 +141,20 @@ public final class FlightReportBuilder {
     private void drawStatistics(Canvas canvas, FlightRecord flight, List<FlightPoint> points, FlightUnits units) {
         float left = PAGE_WIDTH - MARGIN - STATS_WIDTH;
         float right = PAGE_WIDTH - MARGIN;
-        String altitude = FlightFormat.altitude(flight.getMaxAltitude(), units.getAltitude())
-                + (flight.isAltitudeFromStart() ? " above start" : " above sea level");
+        String altitude = texts.altitudeWithReference(
+                FlightFormat.altitude(flight.getMaxAltitude(), units.getAltitude()), flight.isAltitudeFromStart());
+        Hemispheres hemispheres = texts.hemispheres();
         String[][] rows = {
-                {"Duration", FlightTime.format(flight.getDurationMillis())},
-                {"Distance", FlightFormat.distance(flight.getDistanceMetres(), units.getSpeed())},
-                {"Top speed", FlightFormat.speed(flight.getMaxSpeed(), units.getSpeed())},
-                {"Average speed", FlightFormat.speed(flight.getAverageSpeed(), units.getSpeed())},
-                {"Highest altitude", altitude},
-                {"Best climb", FlightFormat.climbRate(flight.getMaxClimb(), units.getClimb())},
-                {"Worst sink", FlightFormat.climbRate(flight.getMaxSink(), units.getClimb())},
-                {"Peak load", FlightFormat.gForce(flight.getMaxGForce())},
-                {"Start point", FlightFormat.position(points.get(0))},
-                {"End point", FlightFormat.position(points.get(points.size() - 1))},
+                {texts.duration(), FlightTime.format(flight.getDurationMillis())},
+                {texts.distance(), FlightFormat.distance(flight.getDistanceMetres(), units.getSpeed())},
+                {texts.topSpeed(), FlightFormat.speed(flight.getMaxSpeed(), units.getSpeed())},
+                {texts.averageSpeed(), FlightFormat.speed(flight.getAverageSpeed(), units.getSpeed())},
+                {texts.highestAltitude(), altitude},
+                {texts.bestClimb(), FlightFormat.climbRate(flight.getMaxClimb(), units.getClimb())},
+                {texts.worstSink(), FlightFormat.climbRate(flight.getMaxSink(), units.getClimb())},
+                {texts.peakLoad(), FlightFormat.gForce(flight.getMaxGForce())},
+                {texts.startPoint(), FlightFormat.position(points.get(0), hemispheres)},
+                {texts.endPoint(), FlightFormat.position(points.get(points.size() - 1), hemispheres)},
         };
         float y = MAP_TOP + 10;
         for (String[] row : rows) {
@@ -175,9 +178,9 @@ public final class FlightReportBuilder {
         float width = (PAGE_WIDTH - 2 * MARGIN - GAP) / 2;
         ProfileChartPainter charts = new ProfileChartPainter();
         charts.draw(canvas, new RectF(MARGIN, CHART_TOP, MARGIN + width, CHART_TOP + CHART_HEIGHT),
-                "Altitude (" + units.getAltitude().symbol() + (flight.isAltitudeFromStart() ? ", above start)" : ", above sea level)"),
+                texts.altitudeChartTitle(units.getAltitude().symbol(), flight.isAltitudeFromStart()),
                 seconds, altitudes, ReportColors.ALTITUDE);
         charts.draw(canvas, new RectF(MARGIN + width + GAP, CHART_TOP, PAGE_WIDTH - MARGIN, CHART_TOP + CHART_HEIGHT),
-                "Ground speed (" + units.getSpeed().symbol() + ")", seconds, speeds, ReportColors.SPEED);
+                texts.speedChartTitle(units.getSpeed().symbol()), seconds, speeds, ReportColors.SPEED);
     }
 }

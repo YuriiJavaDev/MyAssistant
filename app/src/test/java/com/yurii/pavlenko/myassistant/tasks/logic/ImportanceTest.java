@@ -1,6 +1,5 @@
 package com.yurii.pavlenko.myassistant.tasks.logic;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -10,22 +9,24 @@ import java.util.Locale;
 public class ImportanceTest {
 
     @Test
-    public void labelsAreTheStoredWordsInSpinnerOrder() {
-        assertArrayEquals(new String[]{"Normal", "Important", "Urgent"}, Importance.labels());
+    public void keysAreTheStoredWordsInSpinnerOrder() {
+        assertEquals("Normal", Importance.values()[0].key);
+        assertEquals("Important", Importance.values()[1].key);
+        assertEquals("Urgent", Importance.values()[2].key);
     }
 
     @Test
-    public void labelIsFoundWhateverItsCase() {
-        assertEquals(Importance.URGENT, Importance.fromLabel("urgent"));
-        assertEquals(Importance.IMPORTANT, Importance.fromLabel("IMPORTANT"));
-        assertEquals(Importance.NORMAL, Importance.fromLabel("Normal"));
+    public void keyIsFoundWhateverItsCase() {
+        assertEquals(Importance.URGENT, Importance.fromKey("urgent"));
+        assertEquals(Importance.IMPORTANT, Importance.fromKey("IMPORTANT"));
+        assertEquals(Importance.NORMAL, Importance.fromKey("Normal"));
     }
 
     @Test
-    public void missingOrUnknownLabelMeansNormal() {
-        assertEquals(Importance.NORMAL, Importance.fromLabel(null));
-        assertEquals(Importance.NORMAL, Importance.fromLabel(""));
-        assertEquals(Importance.NORMAL, Importance.fromLabel("critical"));
+    public void missingOrUnknownKeyMeansNormal() {
+        assertEquals(Importance.NORMAL, Importance.fromKey(null));
+        assertEquals(Importance.NORMAL, Importance.fromKey(""));
+        assertEquals(Importance.NORMAL, Importance.fromKey("critical"));
     }
 
     @Test
@@ -33,8 +34,8 @@ public class ImportanceTest {
         Locale saved = Locale.getDefault();
         try {
             Locale.setDefault(new Locale("tr", "TR"));
-            assertEquals(Importance.IMPORTANT, Importance.fromLabel("IMPORTANT"));
-            assertEquals(Importance.IMPORTANT, Importance.fromLabel("important"));
+            assertEquals(Importance.IMPORTANT, Importance.fromKey("IMPORTANT"));
+            assertEquals(Importance.IMPORTANT, Importance.fromKey("important"));
         } finally {
             Locale.setDefault(saved);
         }

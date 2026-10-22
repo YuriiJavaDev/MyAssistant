@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_cancel">Отмена</string>
+    <string name="app_name">MyAssistant</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_alarms_title">Напоминания и сигналы</string>
+    <string name="settings_alarms_subtitle">Интервалы, звуки и состояние уведомлений</string>
+    <string name="settings_display_title">Режим экрана</string>
+    <string name="settings_display_subtitle">День / Ночь / Авто</string>
+    <string name="display_mode_title">Режим экрана</string>
+    <string name="display_mode_light">Светлый (день)</string>
+    <string name="display_mode_dark">Тёмный (ночь)</string>
+    <string name="display_mode_system">Системный (авто)</string>
+    <string name="settings_design_title">Дизайн приложения</string>
+    <string name="settings_design_subtitle">Варианты оформления интерфейса</string>
+    <string name="design_classic_name">Классический</string>
+    <string name="design_classic_about">Исходный вид: кремовый и фиолетовый</string>
+    <string name="design_paper_ink_name">Бумага и чернила</string>
+    <string name="design_paper_ink_about">Тонкие линии и сдержанные деловые тона</string>
+    <string name="design_pastel_cloud_name">Пастельное облако</string>
+    <string name="design_pastel_cloud_about">Мягкий, округлый и бледный, с облаками</string>
+    <string name="design_neon_arcade_name">Неоновая аркада</string>
+    <string name="design_neon_arcade_about">Яркий неон, сильный контраст и ретросолнце</string>
+    <string name="design_toon_name">Мультяшный</string>
+    <string name="design_toon_about">Комиксные контуры и рукописный шрифт</string>
+    <string name="design_biker_name">Байкер</string>
+    <string name="design_biker_about">Грубый металл, резина и оранжевый выхлоп</string>
+    <string name="design_cockpit_name">Кабина пилота</string>
+    <string name="design_cockpit_about">Строгая приборная панель с планёром</string>
+    <string name="design_beach_name">Пляж</string>
+    <string name="design_beach_about">Песок, лагуна, кораллы и пальмы</string>
+    <string name="design_forest_name">Волшебный лес</string>
+    <string name="design_forest_about">Пергамент, золото и лесной мох</string>
+    <string name="design_mono_block_name">Моноблок</string>
+    <string name="design_mono_block_about">Резкий чёрно-белый с одним жёлтым маркером</string>
+    <string name="settings_permissions_title">Системные разрешения</string>
+    <string name="settings_permissions_subtitle">Управление доступом в системе Android</string>
+    <string-array name="filter_options">
+        <item>Все задачи</item>
+        <item>Активные</item>
+        <item>Выполненные</item>
+        <item>Напоминания</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>А–Я</item>
+        <item>Я–А</item>
+        <item>Статус</item>
+        <item>Созданные</item>
+        <item>Изменённые</item>
+        <item>Выполненные</item>
+        <item>Важность</item>
+        <item>Срок</item>
+    </string-array>
+    <string name="scan_camera">Камера</string>
+    <string name="scan_gallery">Галерея</string>
+    <string name="scan_clear_all">Очистить всё</string>
+    <string name="scan_cleared">Все сканы удалены</string>
+    <string name="scan_empty">Документов пока нет. Сфотографируйте страницу или выберите фото из галереи.</string>
+    <string name="scan_auto">Авто</string>
+    <string name="scan_reset">Сбросить</string>
+    <string name="scan_next">Далее</string>
+    <string name="scan_back">Назад</string>
+    <string name="scan_save">Сохранить</string>
+    <string name="scan_rotate">Повернуть</string>
+    <string name="scan_paper">Бумага</string>
+    <string name="scan_filter_color">Цвет</string>
+    <string name="scan_filter_gray">Серый</string>
+    <string name="scan_filter_bw">Ч/Б</string>
+    <string name="scan_tune">Свет и контраст</string>
+    <string name="scan_shadows">Удаление теней</string>
+    <string name="scan_brightness">Яркость</string>
+    <string name="scan_contrast">Контраст</string>
+    <string name="scan_sharpen">Резкость</string>
+    <string name="scan_page_saved">Страница сохранена</string>
+    <string name="scan_next_page_question">Добавить ещё одну страницу в этот документ?</string>
+    <string name="scan_page_label">Страница %d</string>
+    <string name="scan_done">Готово</string>
+    <string name="scan_add_page">Добавить страницу</string>
+    <string name="scan_share_pdf">Поделиться PDF</string>
+    <string name="scan_pages_empty">В этом документе нет страниц.</string>
+    <string name="scan_saved_to_device">Файл сохранён</string>
+    <string name="scan_share_title">Поделиться документом</string>
+    <string name="scan_rename_title">Переименовать документ</string>
+    <string name="scan_rename_confirm">Переименовать</string>
+    <string name="scan_error_load">Не удаётся открыть это фото</string>
+    <string name="scan_error_preview">Недостаточно памяти для предпросмотра</string>
+    <string name="scan_error_save">Не удаётся сохранить скан</string>
+    <string name="scan_error_export">Не удаётся подготовить файл</string>
+    <string name="scan_error_no_camera">Приложение камеры не найдено</string>
+    <string name="scan_error_no_viewer">Не найдено приложение для открытия изображения</string>
+    <string name="scan_error_no_app">Не найдено приложение, с которым можно поделиться</string>
+    <plurals name="scan_pages">
+        <item quantity="one">%d страница</item>
+        <item quantity="few">%d страницы</item>
+        <item quantity="many">%d страниц</item>
+        <item quantity="other">%d страницы</item>
+    </plurals>
+    <string-array name="scan_actions">
+        <item>Страницы</item>
+        <item>Поделиться как PDF</item>
+        <item>Поделиться как JPEG</item>
+        <item>Сохранить PDF в…</item>
+        <item>Переименовать</item>
+        <item>Удалить</item>
+    </string-array>
+    <string-array name="scan_page_actions">
+        <item>Просмотр</item>
+        <item>Сохранить JPEG в…</item>
+        <item>Переместить вверх</item>
+        <item>Переместить вниз</item>
+        <item>Удалить страницу</item>
+    </string-array>
+    <string name="weather_city_hint">Название города на любом языке</string>
+    <string name="weather_search">Поиск</string>
+    <string name="weather_my_location">Моё местоположение</string>
+    <string name="weather_country_format">(%1$s)</string>
+    <string name="weather_feels_like">Ощущается как</string>
+    <string name="weather_humidity">Влажность</string>
+    <string name="weather_wind">Ветер</string>
+    <string name="weather_today_range">Сегодня</string>
+    <string name="weather_units">Единицы</string>
+    <string name="weather_units_temperature">Температура</string>
+    <string name="weather_units_wind">Скорость ветра</string>
+    <string name="weather_unit_celsius">Цельсий (°C)</string>
+    <string name="weather_unit_fahrenheit">Фаренгейт (°F)</string>
+    <string name="weather_unit_ms">Метры в секунду (м/с)</string>
+    <string name="weather_unit_kmh">Километры в час (км/ч)</string>
+    <string name="weather_moon_caption">%1$s · освещено %2$d%%</string>
+    <string name="weather_humidity_value">%1$d%%</string>
+    <string name="weather_loading">Загрузка погоды…</string>
+    <string name="weather_location_needed">Разрешите доступ к примерному местоположению, чтобы видеть погоду там, где вы находитесь, или найдите город.</string>
+    <string name="weather_allow">Разрешить</string>
+    <string name="weather_open_settings">Открыть настройки приложения</string>
+    <string name="weather_attribution">Погода: Open-Meteo.com · Места: © участники OpenStreetMap</string>
+    <string name="weather_choose_city">Выберите город</string>
+    <string name="steps_today">Сегодня</string>
+    <string name="steps_unit">шагов</string>
+    <string name="steps_walk_run">Ходьба %1$s · Бег %2$s</string>
+    <string name="steps_period">Период</string>
+    <string name="steps_last_7">7 дней</string>
+    <string name="steps_last_30">30 дней</string>
+    <string name="steps_this_month">Этот месяц</string>
+    <string name="steps_pick_dates">Выбрать даты</string>
+    <string name="steps_range_format">%1$s – %2$s</string>
+    <string name="steps_total">Всего шагов</string>
+    <string name="steps_distance">Расстояние</string>
+    <string name="steps_average">В среднем за день</string>
+    <string name="steps_best_day">Лучший день</string>
+    <string name="steps_walking">Шаги при ходьбе</string>
+    <string name="steps_running">Шаги при беге</string>
+    <string name="steps_active_days">Дни с шагами</string>
+    <string name="steps_average_value">%1$s (%2$s)</string>
+    <string name="steps_best_day_value">%1$s (%2$s)</string>
+    <string name="steps_active_days_value">%1$d из %2$d</string>
+    <string name="steps_distance_km">%1$.2f км</string>
+    <string name="steps_no_data">За этот период шагов не записано</string>
+    <string name="steps_settings">Настройки шагов</string>
+    <string name="steps_settings_title">Длина шага</string>
+    <string name="steps_walk_length">Длина шага при ходьбе, см</string>
+    <string name="steps_run_length">Длина шага при беге, см</string>
+    <string name="steps_run_cadence">Бег начинается от, шагов в минуту</string>
+    <string name="steps_run_cadence_hint">Шаги в таком темпе или быстрее считаются бегом.</string>
+    <string name="steps_defaults">По умолчанию</string>
+    <string name="steps_save">Сохранить</string>
+    <string name="steps_invalid_length">Введите %1$d–%2$d</string>
+    <string name="steps_measure_title">Как измерить длину шага</string>
+    <string name="steps_measure_text">1. Отметьте стартовую линию у носка обуви перед первым шагом.\n2. Пройдите 10 спокойных шагов в обычном темпе.\n3. Измерьте расстояние от стартовой линии до того же носка после 10-го шага, в сантиметрах.\n4. Разделите его на 10.\n5. Повторите несколько раз и введите среднее значение.\n\nСделайте то же в своём обычном темпе бега, чтобы получить длину шага при беге.</string>
+    <string name="steps_no_sensor">В этом телефоне нет датчика шагов.</string>
+    <string name="steps_permission_needed">Разрешите доступ к физической активности, чтобы телефон мог считать ваши шаги.</string>
+    <string name="steps_allow">Разрешить</string>
+    <string name="steps_open_settings">Открыть настройки приложения</string>
+    <string name="currency_amount_hint">Сумма</string>
+    <string name="currency_swap">Поменять ⇅</string>
+    <string name="currency_refresh">Обновить курсы</string>
+    <string name="currency_result_format">%1$s %2$s</string>
+    <string name="currency_rate_format">1 %1$s = %2$s %3$s</string>
+    <string name="currency_updated">Курсы обновлены %1$s</string>
+    <string name="currency_outdated">Нет интернета. Показаны сохранённые курсы, обновлённые %1$s</string>
+    <string name="currency_loading">Загрузка курсов…</string>
+    <string name="currency_unavailable">Курсы недоступны. Проверьте подключение к интернету и обновите.</string>
+    <string name="currency_invalid_amount">Введите сумму</string>
+    <string name="currency_attribution">Курсы от Exchange Rate API · https://www.exchangerate-api.com</string>
+    <string name="calculator_scientific">Инж</string>
+    <string name="calculator_basic">Прост</string>
+    <string name="calculator_degrees">Град</string>
+    <string name="calculator_radians">Рад</string>
+    <string name="calculator_history">История</string>
+    <string name="calculator_memory_format">M: %1$s</string>
+    <string name="calculator_preview_format">= %1$s</string>
+    <string name="calculator_last_format">%1$s = %2$s</string>
+    <string name="flights_start">Начать запись</string>
+    <string name="flights_stop">Остановить запись</string>
+    <string name="flights_units">Единицы</string>
+    <string name="flights_journal">Журнал</string>
+    <string name="flights_journal_title">Журнал полётов</string>
+    <string name="flights_journal_empty">Полётов пока не записано.</string>
+    <string name="flights_journal_in_progress">Этот полёт ещё записывается.</string>
+    <string name="flights_report_open">Открыть отчёт</string>
+    <string name="flights_report_share">Поделиться отчётом</string>
+    <string name="flights_report_delete">Удалить полёт</string>
+    <string name="flights_report_failed">Не удалось подготовить отчёт.</string>
+    <string name="flights_report_no_viewer">Не найдено приложение для открытия PDF-файлов.</string>
+    <string name="flights_delete_title">Удалить этот полёт?</string>
+    <string name="flights_delete_message">Маршрут и отчёт будут удалены навсегда. Сначала можно отправить отчёт куда-нибудь, например на флешку, компьютер или Google Диск.</string>
+    <string name="flights_delete_save_first">Сохранить отчёт, затем удалить</string>
+    <string name="flights_delete_without_saving">Удалить без сохранения</string>
+    <string name="flights_delete_after_share_message">Если отчёт дошёл до нужного места, полёт можно удалить сейчас.</string>
+    <string name="flights_delete_after_share_confirm">Удалить полёт</string>
+    <string name="flights_delete_keep">Оставить полёт</string>
+    <string name="flights_units_report_limit">Лимит отчётов</string>
+    <string name="flights_units_report_limit_hint">Максимум PDF-отчётов в журнале, 0 — без лимита</string>
+    <string name="flights_limit_full_title">Достигнут лимит PDF-отчётов</string>
+    <string name="flights_limit_full_message">В журнале %1$d отчётов — это лимит. Чтобы записать новый полёт, удалите из журнала хотя бы один полёт. Сначала можно сохранить его отчёт на флешку, компьютер или Google Диск.</string>
+    <string name="flights_limit_warning_title">Вы приближаетесь к лимиту PDF-отчётов!</string>
+    <plurals name="flights_limit_warning_message">
+        <item quantity="one">Можно записать ещё %d полёт. Удалите устаревшие полёты из журнала.</item>
+        <item quantity="few">Можно записать ещё %d полёта. Удалите устаревшие полёты из журнала.</item>
+        <item quantity="many">Можно записать ещё %d полётов. Удалите устаревшие полёты из журнала.</item>
+        <item quantity="other">Можно записать ещё %d полёта. Удалите устаревшие полёты из журнала.</item>
+    </plurals>
+    <string name="flights_limit_open_journal">Открыть журнал</string>
+    <string name="flights_journal_line">%1$s · скор. до %2$s · высота до %3$s</string>
+    <string name="flights_units_speed">Скорость и расстояние</string>
+    <string name="flights_units_altitude">Высота</string>
+    <string name="flights_unit_kmh">Километры в час (км/ч)</string>
+    <string name="flights_unit_knots">Узлы (kt, морские мили)</string>
+    <string name="flights_unit_ms">Метры в секунду (м/с)</string>
+    <string name="flights_unit_metres">Метры (м)</string>
+    <string name="flights_unit_feet">Футы (ft)</string>
+    <string name="flights_units_climb">Скорость набора высоты</string>
+    <string name="flights_unit_fpm">Футы в минуту (ft/min)</string>
+    <string name="flights_altitude_zero">Ноль</string>
+    <string name="flights_altitude_sea">Над уровнем моря</string>
+    <string name="flights_altitude_start">Над стартом · удерживайте «Ноль», чтобы отменить</string>
+    <string name="flights_sound_on">Звук: вкл.</string>
+    <string name="flights_sound_off">Звук: выкл.</string>
+    <string name="flights_sound_tune">Настройка звука</string>
+    <string name="flights_sound_climb_start">Сигнал начинается при наборе высоты %1$.1f м/с</string>
+    <string name="flights_sound_sink_start">Низкие сигналы начинаются при снижении %1$.1f м/с</string>
+    <string name="flights_sound_sink_alarm">Непрерывная тревога при снижении %1$.1f м/с</string>
+    <string name="flights_speed_label">Скорость</string>
+    <string name="flights_g_label">G</string>
+    <string name="flights_time">Время полёта</string>
+    <string name="flights_distance">Расстояние</string>
+    <string name="flights_max_speed">Макс. скорость</string>
+    <string name="flights_avg_speed">Средняя скорость</string>
+    <string name="flights_max_altitude">Наибольшая высота</string>
+    <string name="flights_climb_rate">Скорость набора высоты</string>
+    <string name="flights_max_g">Пиковая нагрузка</string>
+    <string name="flights_status_waiting">Ожидание сигнала GPS…</string>
+    <string name="flights_location_needed">Разрешите доступ к точному местоположению, чтобы записывать скорость, высоту и маршрут.</string>
+    <string name="flights_allow">Разрешить</string>
+    <string name="flights_open_settings">Открыть настройки приложения</string>
+    <string name="flights_gps_off">Включите службы геолокации (GPS), чтобы записать полёт.</string>
+    <string name="flights_disclaimer">Только для развлечения и любопытства. Не полагайтесь на эти приборы для навигации или чего-либо, что влияет на безопасность.</string>
+</resources>

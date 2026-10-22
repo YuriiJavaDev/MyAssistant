@@ -80,7 +80,7 @@ public final class DialogStyle {
         button.setPadding(padding, button.getPaddingTop(), padding, button.getPaddingBottom());
         if (gapBefore && button.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) button.getLayoutParams();
-            params.leftMargin = (int) (BUTTON_GAP_DP * density);
+            params.setMarginStart((int) (BUTTON_GAP_DP * density));
             button.setLayoutParams(params);
         }
     }

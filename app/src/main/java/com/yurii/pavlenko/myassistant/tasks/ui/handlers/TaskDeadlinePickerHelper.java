@@ -62,7 +62,7 @@ public class TaskDeadlinePickerHelper {
         customReminderTextView.setOnClickListener(v -> {
             if (!customReminderTextView.isEnabled()) return;
             if (selectedDeadline == null) {
-                Toast.makeText(context, "Please select a deadline first!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, R.string.tasks_toast_select_deadline_first, Toast.LENGTH_SHORT).show();
                 return;
             }
             showCustomReminderDatePicker();
@@ -80,7 +80,7 @@ public class TaskDeadlinePickerHelper {
                     if (ReminderRules.isLaterThanDeadline(customReminderDateTime, newDeadline)) {
                         customReminderDateTime = null;
                         updateCustomReminderDisplay();
-                        Toast.makeText(context, "Reminder was cleared because the deadline is earlier!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, R.string.tasks_toast_reminder_cleared, Toast.LENGTH_LONG).show();
                     }
 
                     selectedDeadline = newDeadline;
@@ -110,7 +110,7 @@ public class TaskDeadlinePickerHelper {
                     LocalDate pickedDate = LocalDate.of(year, month + 1, dayOfMonth);
 
                     if (ReminderRules.isDayAfterDeadline(pickedDate, selectedDeadline)) {
-                        Toast.makeText(context, "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, R.string.tasks_toast_reminder_after_deadline, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -130,7 +130,7 @@ public class TaskDeadlinePickerHelper {
     /** Shows a date picker that starts at today and has a Clear button running the given action. */
     private void showFromToday(DatePickerDialog datePickerDialog, Runnable onClear) {
         datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
-        datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, "Clear", (dialog, which) -> onClear.run());
+        datePickerDialog.setButton(DatePickerDialog.BUTTON_NEGATIVE, context.getString(R.string.tasks_dialog_clear), (dialog, which) -> onClear.run());
         datePickerDialog.show();
         if (datePickerDialog.getWindow() != null) {
             datePickerDialog.getWindow().setBackgroundDrawableResource(R.drawable.bg_spinner_dropdown);
@@ -154,12 +154,12 @@ public class TaskDeadlinePickerHelper {
                     LocalDateTime pickedDateTime = LocalDateTime.of(pickedDate, LocalTime.of(hourOfDay, minute));
 
                     if (pickedDateTime.isBefore(LocalDateTime.now())) {
-                        Toast.makeText(context, "Reminder cannot be in the past!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, R.string.tasks_toast_reminder_in_past, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
                     if (ReminderRules.isLaterThanDeadline(pickedDateTime, selectedDeadline)) {
-                        Toast.makeText(context, "Reminder cannot be later than the deadline!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, R.string.tasks_toast_reminder_after_deadline, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -176,7 +176,7 @@ public class TaskDeadlinePickerHelper {
 
     private void updateDeadlineDisplay() {
         if (selectedDeadline != null) {
-            String text = TaskTimeFormatter.getRawDeadlineText(selectedDeadline);
+            String text = TaskTimeFormatter.getRawDeadlineText(context, selectedDeadline);
             deadlineTextView.setText(text);
 
             if (DeadlineText.isOverdue(LocalDate.now(), selectedDeadline)) {
@@ -185,7 +185,7 @@ public class TaskDeadlinePickerHelper {
                 deadlineTextView.setTextColor(defaultDeadlineTextColor);
             }
         } else {
-            deadlineTextView.setText("Select a deadline");
+            deadlineTextView.setText(R.string.tasks_dialog_deadline_select);
             if (defaultDeadlineTextColor != null) {
                 deadlineTextView.setTextColor(defaultDeadlineTextColor);
             }
@@ -197,7 +197,7 @@ public class TaskDeadlinePickerHelper {
             String text = TaskTimeFormatter.formatDateTime(customReminderDateTime);
             customReminderTextView.setText(text);
         } else {
-            customReminderTextView.setText("Select reminder date & time");
+            customReminderTextView.setText(R.string.tasks_dialog_reminder_select);
         }
     }
 

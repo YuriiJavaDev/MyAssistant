@@ -2,30 +2,24 @@ package com.yurii.pavlenko.myassistant.scan.imaging;
 
 /** Target page shape of a scan, including the PDF page size in points (1/72 inch). */
 public enum PaperFormat {
-    AUTO("Auto", 0, 0, 0),
-    A4("A4", Math.sqrt(2), 595, 842),
-    A5("A5", Math.sqrt(2), 420, 595),
-    LETTER("Letter", 11.0 / 8.5, 612, 792),
-    ORIGINAL("Original", 0, 0, 0);
+    AUTO(0, 0, 0),
+    A4(Math.sqrt(2), 595, 842),
+    A5(Math.sqrt(2), 420, 595),
+    LETTER(11.0 / 8.5, 612, 792),
+    ORIGINAL(0, 0, 0);
 
     /** How far (relative) a measured page may differ from a standard ratio and still be snapped to it. */
     private static final double AUTO_SNAP_TOLERANCE = 0.10;
     private static final int MIN_LONG_SIDE = 600;
 
-    private final String label;
     private final double longToShortRatio;
     private final int pdfShortSide;
     private final int pdfLongSide;
 
-    PaperFormat(String label, double longToShortRatio, int pdfShortSide, int pdfLongSide) {
-        this.label = label;
+    PaperFormat(double longToShortRatio, int pdfShortSide, int pdfLongSide) {
         this.longToShortRatio = longToShortRatio;
         this.pdfShortSide = pdfShortSide;
         this.pdfLongSide = pdfLongSide;
-    }
-
-    public String getLabel() {
-        return label;
     }
 
     /** True for formats with a fixed physical page size. */

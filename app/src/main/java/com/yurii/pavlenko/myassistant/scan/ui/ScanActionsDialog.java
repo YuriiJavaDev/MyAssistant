@@ -1,6 +1,7 @@
 package com.yurii.pavlenko.myassistant.scan.ui;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
@@ -71,9 +72,9 @@ final class ScanActionsDialog {
     }
 
     private static void confirmDelete(Context context, ScanDocument document, Listener listener) {
-        DeleteConfirmationDialog.showCustom(context, "Delete Confirmation",
-                "Delete \"" + document.getTitle() + "\" with all its pages? This action cannot be undone!",
-                "Delete", () -> listener.onDelete(document));
+        DeleteConfirmationDialog.showCustom(context, context.getString(R.string.tasks_delete_title),
+                context.getString(R.string.scan_delete_document_message, document.getTitle()),
+                context.getString(R.string.tasks_delete_button), () -> listener.onDelete(document));
     }
 
     /** Warns before every document is deleted; with nothing to delete it only says so. */
@@ -82,10 +83,12 @@ final class ScanActionsDialog {
             DeleteConfirmationDialog.show(context, false, onConfirmed);
             return;
         }
-        DeleteConfirmationDialog.showCustom(context, "Delete Confirmation",
-                "Delete all " + documentCount + (documentCount == 1 ? " document" : " documents")
-                        + " with " + pageCount + (pageCount == 1 ? " page" : " pages") + "? This action cannot be undone!",
-                "Delete", onConfirmed);
+        Resources resources = context.getResources();
+        DeleteConfirmationDialog.showCustom(context, context.getString(R.string.tasks_delete_title),
+                context.getString(R.string.scan_delete_all_message,
+                        resources.getQuantityString(R.plurals.scan_documents_count, documentCount, documentCount),
+                        resources.getQuantityString(R.plurals.scan_pages, pageCount, pageCount)),
+                context.getString(R.string.tasks_delete_button), onConfirmed);
     }
 
 }

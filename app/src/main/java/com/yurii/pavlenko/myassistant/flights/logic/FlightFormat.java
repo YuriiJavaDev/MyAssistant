@@ -28,10 +28,10 @@ public final class FlightFormat {
     }
 
     /** A position as degrees with the side of the world, for example 32.8000°N 35.0500°E. */
-    public static String position(FlightPoint point) {
+    public static String position(FlightPoint point, Hemispheres hemispheres) {
         return String.format(Locale.US, "%.4f°%s %.4f°%s",
-                Math.abs(point.getLatitude()), point.getLatitude() < 0 ? "S" : "N",
-                Math.abs(point.getLongitude()), point.getLongitude() < 0 ? "W" : "E");
+                Math.abs(point.getLatitude()), hemispheres.latitude(point.getLatitude()),
+                Math.abs(point.getLongitude()), hemispheres.longitude(point.getLongitude()));
     }
 
     public static String gForce(double g) {

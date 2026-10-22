@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Clear sky</string>
+    <string name="weather_description_mainly_clear">Mainly clear</string>
+    <string name="weather_description_partly_cloudy">Partly cloudy</string>
+    <string name="weather_description_overcast">Overcast</string>
+    <string name="weather_description_fog">Fog</string>
+    <string name="weather_description_rime_fog">Rime fog</string>
+    <string name="weather_description_light_drizzle">Light drizzle</string>
+    <string name="weather_description_drizzle">Drizzle</string>
+    <string name="weather_description_dense_drizzle">Dense drizzle</string>
+    <string name="weather_description_light_freezing_drizzle">Light freezing drizzle</string>
+    <string name="weather_description_freezing_drizzle">Freezing drizzle</string>
+    <string name="weather_description_slight_rain">Slight rain</string>
+    <string name="weather_description_rain">Rain</string>
+    <string name="weather_description_heavy_rain">Heavy rain</string>
+    <string name="weather_description_light_freezing_rain">Light freezing rain</string>
+    <string name="weather_description_freezing_rain">Freezing rain</string>
+    <string name="weather_description_slight_snow">Slight snow</string>
+    <string name="weather_description_snow">Snow</string>
+    <string name="weather_description_heavy_snow">Heavy snow</string>
+    <string name="weather_description_snow_grains">Snow grains</string>
+    <string name="weather_description_light_rain_showers">Light rain showers</string>
+    <string name="weather_description_rain_showers">Rain showers</string>
+    <string name="weather_description_violent_rain_showers">Violent rain showers</string>
+    <string name="weather_description_light_snow_showers">Light snow showers</string>
+    <string name="weather_description_heavy_snow_showers">Heavy snow showers</string>
+    <string name="weather_description_thunderstorm">Thunderstorm</string>
+    <string name="weather_description_thunderstorm_with_hail">Thunderstorm with hail</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Thunderstorm with heavy hail</string>
+    <string name="weather_description_unknown">Unknown</string>
+    <string name="weather_moon_phase_new_moon">New moon</string>
+    <string name="weather_moon_phase_waxing_crescent">Waxing crescent</string>
+    <string name="weather_moon_phase_first_quarter">First quarter</string>
+    <string name="weather_moon_phase_waxing_gibbous">Waxing gibbous</string>
+    <string name="weather_moon_phase_full_moon">Full moon</string>
+    <string name="weather_moon_phase_waning_gibbous">Waning gibbous</string>
+    <string name="weather_moon_phase_last_quarter">Last quarter</string>
+    <string name="weather_moon_phase_waning_crescent">Waning crescent</string>
+    <string name="weather_error_no_location">Cannot determine the location. Turn on location services or search for a city.</string>
+    <string name="weather_error_city_not_found">No city found for \"%1$s\"</string>
+    <string name="weather_error_no_network">Cannot load the weather. Check the internet connection.</string>
+    <string name="weather_error_choose_city">Choose a city from the list</string>
+    <string name="weather_current_location">Current location</string>
+</resources>

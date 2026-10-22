@@ -30,7 +30,7 @@ final class DeadlineAlertDialog {
     static DeadlineAlertDialog show(Context context, String taskTitle) {
         DeadlineAlertDialog alert = new DeadlineAlertDialog(context, taskTitle);
         alert.dialog.show();
-        alert.speaker.speak("Attention! Deadline is near for task: " + taskTitle);
+        alert.speaker.speak(context.getString(R.string.tasks_alert_speech_task, taskTitle));
         return alert;
     }
 

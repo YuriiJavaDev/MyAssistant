@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 if (!uris.isEmpty()) {
                     DatabaseBackupManager.importFiles(this, uris, success -> {
                         if (success) {
-                            Toast.makeText(this, "Backup imported successfully. Restarting...", Toast.LENGTH_LONG).show();
+                            Toast.makeText(this, R.string.backup_import_success, Toast.LENGTH_LONG).show();
                             restartApp();
                         } else {
-                            Toast.makeText(this, "Import failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, R.string.backup_import_failed, Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             folder -> {
                 if (folder != null) {
                     DatabaseBackupManager.exportToFolder(this, folder, success ->
-                            Toast.makeText(this, success ? "Backup saved" : "Export failed", Toast.LENGTH_SHORT).show());
+                            Toast.makeText(this, success ? R.string.backup_export_saved : R.string.backup_export_failed, Toast.LENGTH_SHORT).show());
                 }
             }
     );
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultContracts.RequestPermission(),
             isGranted -> {
                 if (!isGranted) {
-                    Toast.makeText(this, "Notifications are disabled: reminders will not be shown", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.app_notifications_disabled, Toast.LENGTH_LONG).show();
                 }
             }
     );

@@ -39,13 +39,15 @@ final class RouteMapPainter {
     private final Paint outline = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint ink = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint text = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final String northLetter;
     private final Paint labelBackground = new Paint();
     private final Path landPath = new Path();
     private final Path routePath = new Path();
     private final RectF labelBounds = new RectF();
 
-    RouteMapPainter(Coastline coastline) {
+    RouteMapPainter(Coastline coastline, String northLetter) {
         this.coastline = coastline;
+        this.northLetter = northLetter;
         sea.setColor(ReportColors.SEA);
         land.setColor(ReportColors.LAND);
         land.setStyle(Paint.Style.FILL);
@@ -231,7 +233,7 @@ final class RouteMapPainter {
         canvas.drawLine(x, y - 16, x - 3, y - 10, ink);
         canvas.drawLine(x, y - 16, x + 3, y - 10, ink);
         text.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("N", x, y + 9, text);
+        canvas.drawText(northLetter, x, y + 9, text);
         text.setTextAlign(Paint.Align.LEFT);
     }
 }

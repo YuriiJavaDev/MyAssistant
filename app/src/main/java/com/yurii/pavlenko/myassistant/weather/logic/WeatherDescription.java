@@ -1,0 +1,34 @@
+package com.yurii.pavlenko.myassistant.weather.logic;
+
+/** What a WMO weather code says, without any wording. */
+public enum WeatherDescription {
+    CLEAR_SKY,
+    MAINLY_CLEAR,
+    PARTLY_CLOUDY,
+    OVERCAST,
+    FOG,
+    RIME_FOG,
+    LIGHT_DRIZZLE,
+    DRIZZLE,
+    DENSE_DRIZZLE,
+    LIGHT_FREEZING_DRIZZLE,
+    FREEZING_DRIZZLE,
+    SLIGHT_RAIN,
+    RAIN,
+    HEAVY_RAIN,
+    LIGHT_FREEZING_RAIN,
+    FREEZING_RAIN,
+    SLIGHT_SNOW,
+    SNOW,
+    HEAVY_SNOW,
+    SNOW_GRAINS,
+    LIGHT_RAIN_SHOWERS,
+    RAIN_SHOWERS,
+    VIOLENT_RAIN_SHOWERS,
+    LIGHT_SNOW_SHOWERS,
+    HEAVY_SNOW_SHOWERS,
+    THUNDERSTORM,
+    THUNDERSTORM_WITH_HAIL,
+    THUNDERSTORM_WITH_HEAVY_HAIL,
+    UNKNOWN
+}

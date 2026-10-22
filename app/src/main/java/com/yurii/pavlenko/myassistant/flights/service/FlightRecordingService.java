@@ -3,6 +3,7 @@ package com.yurii.pavlenko.myassistant.flights.service;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
 import android.os.IBinder;
@@ -16,6 +17,7 @@ import androidx.core.app.ServiceCompat;
 import com.yurii.pavlenko.myassistant.MainActivity;
 import com.yurii.pavlenko.myassistant.R;
 import com.yurii.pavlenko.myassistant.flights.data.FlightRecorder;
+import com.yurii.pavlenko.myassistant.ui.locale.AppLocale;
 
 /**
  * Keeps the flight recording alive while the app is in the background or the screen is off.
@@ -56,22 +58,24 @@ public final class FlightRecordingService extends Service {
     }
 
     private void createChannel() {
+        Context texts = AppLocale.localized(this);
         NotificationChannelCompat channel = new NotificationChannelCompat.Builder(
                 CHANNEL_ID, NotificationManagerCompat.IMPORTANCE_LOW)
-                .setName("Flight recording")
-                .setDescription("Shown while a flight is being recorded")
+                .setName(texts.getString(R.string.flights_notification_channel_name))
+                .setDescription(texts.getString(R.string.flights_notification_channel_description))
                 .build();
         NotificationManagerCompat.from(this).createNotificationChannel(channel);
     }
 
     private Notification buildNotification() {
+        Context texts = AppLocale.localized(this);
         PendingIntent open = PendingIntent.getActivity(this, OPEN_REQUEST_CODE,
                 new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),
                 PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_launcher_foreground)
-                .setContentTitle("Recording the flight")
-                .setContentText("Tap to open the instruments")
+                .setContentTitle(texts.getString(R.string.flights_notification_title))
+                .setContentText(texts.getString(R.string.flights_notification_text))
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
                 .setOngoing(true)
                 .setContentIntent(open)

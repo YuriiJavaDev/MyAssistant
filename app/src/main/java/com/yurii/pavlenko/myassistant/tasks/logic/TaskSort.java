@@ -13,7 +13,7 @@ public enum TaskSort {
     CREATED(latestFirst(Task::getCreatedAt)),
     EDITED(latestFirst(Task::getUpdatedAt)),
     COMPLETED(latestFirst(Task::getCompletedAt)),
-    IMPORTANCE(Comparator.comparingInt(task -> Importance.fromLabel(task.getImportance()).rank)),
+    IMPORTANCE(Comparator.comparingInt(task -> Importance.fromKey(task.getImportance()).rank)),
     DEADLINE(Comparator.comparing(Task::getDeadline, Comparator.nullsLast(Comparator.naturalOrder())));
 
     private final Comparator<Task> order;

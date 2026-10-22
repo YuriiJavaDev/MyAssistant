@@ -14,20 +14,22 @@ import java.time.format.DateTimeFormatter;
 
 public class TaskTimeFormatter {
 
+    private static final DateTimeFormatter DEADLINE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
     private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
     public static void formatTimestamps(TextView textView, Task task) {
+        Context context = textView.getContext();
         StringBuilder sb = new StringBuilder();
 
         if (task.isShowTimestamps()) {
             if (task.getCreatedAt() != null) {
-                sb.append("Created: ").append(task.getCreatedAt().format(TIMESTAMP_FORMATTER));
+                sb.append(context.getString(R.string.tasks_time_created, formatDateTime(task.getCreatedAt())));
             }
             if (task.getUpdatedAt() != null) {
                 if (sb.length() > 0) {
                     sb.append("\n");
                 }
-                sb.append("Edited: ").append(task.getUpdatedAt().format(TIMESTAMP_FORMATTER));
+                sb.append(context.getString(R.string.tasks_time_edited, formatDateTime(task.getUpdatedAt())));
             }
         }
 
@@ -35,7 +37,7 @@ public class TaskTimeFormatter {
             if (sb.length() > 0) {
                 sb.append("\n");
             }
-            sb.append("Completed: ").append(task.getCompletedAt().format(TIMESTAMP_FORMATTER));
+            sb.append(context.getString(R.string.tasks_time_completed, formatDateTime(task.getCompletedAt())));
         }
 
         if (sb.length() > 0) {
@@ -50,22 +52,26 @@ public class TaskTimeFormatter {
         return dateTime.format(TIMESTAMP_FORMATTER);
     }
 
-    public static String getRawDeadlineText(LocalDate deadline) {
-        return DeadlineText.describe(LocalDate.now(), deadline);
+    /** For example "05.11.2026 — 3 days left!" or "01.11.2026 — Overdue by 1 day!". */
+    public static String getRawDeadlineText(Context context, LocalDate deadline) {
+        long daysLeft = DeadlineText.daysLeft(LocalDate.now(), deadline);
+        String date = deadline.format(DEADLINE_FORMATTER);
+        if (daysLeft < 0) {
+            return context.getResources().getQuantityString(R.plurals.tasks_deadline_overdue, quantity(-daysLeft), date, -daysLeft);
+        }
+        return context.getResources().getQuantityString(R.plurals.tasks_deadline_days_left, quantity(daysLeft), date, daysLeft);
     }
 
-    public static String getFormattedDeadlineText(LocalDate deadline) {
-        String rawText = getRawDeadlineText(deadline);
-        return rawText != null ? "Deadline: " + rawText : null;
+    private static int quantity(long days) {
+        return (int) Math.min(days, Integer.MAX_VALUE);
     }
 
     public static void formatDeadline(TextView deadlineTextView, Task task) {
         LocalDate deadline = task.getDeadline();
         if (deadline != null) {
-            String text = getFormattedDeadlineText(deadline);
-            deadlineTextView.setText(text);
-
             Context context = deadlineTextView.getContext();
+            deadlineTextView.setText(context.getString(R.string.tasks_deadline_prefixed, getRawDeadlineText(context, deadline)));
+
             if (task.isCompleted()) {
                 deadlineTextView.setTextColor(ThemeColors.get(context, R.attr.maTextMuted));
             } else {
