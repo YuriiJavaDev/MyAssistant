@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Om appen</string>
+    <string name="settings_about_subtitle">Versjon, lisens og datakilder</string>
+    <string name="settings_feedback_title">Send tilbakemelding</string>
+    <string name="settings_feedback_subtitle">Skriv til utvikleren</string>
+    <string name="about_version_format">Versjon %1$s</string>
+    <string name="about_description">Sju hverdagsverktøy i én app: oppgaver, vær, valuta, kalkulator, skanner, skritt og flyinstrumenter.</string>
+    <string name="about_promise">Ingen annonser. Ingen sporing. Ingen konto. Dataene dine blir på telefonen din.</string>
+    <string name="about_credits_title">Data og tjenester</string>
+    <string name="about_credits">Vær: Open-Meteo.com\nSteder: © OpenStreetMap-bidragsytere\nValutakurser: Exchange Rate API\nKystlinjer: Natural Earth\nKartbilder: Esri og leverandørene</string>
+    <string name="about_open_readme">Les mer</string>
+    <string name="about_open_license">Lisens</string>
+    <string name="about_open_privacy">Personvern</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Alle rettigheter forbeholdt.</string>
+    <string name="about_link_failed">Siden kunne ikke åpnes</string>
+    <string name="feedback_title">Send tilbakemelding</string>
+    <string name="feedback_hint">Meldingen din til utvikleren</string>
+    <string name="feedback_include_details">Legg til appversjon og telefonmodell</string>
+    <string name="feedback_note">E-postappen din åpnes med meldingen. Ingenting sendes før du trykker send, og du kan redigere den først.</string>
+    <string name="feedback_send">Skriv e-post</string>
+    <string name="feedback_opened_mail">E-postappen er åpnet</string>
+    <string name="feedback_too_short">Skriv noen ord til</string>
+    <string name="feedback_duplicate">Denne meldingen ligner en du allerede har sendt</string>
+    <string name="feedback_wait_minutes">Vent %1$d min før neste melding</string>
+    <string name="feedback_daily_limit">Dagsgrensen er nådd. Skriv i morgen</string>
+    <string name="feedback_monthly_limit">Månedsgrensen er nådd. Skriv senere</string>
+    <string name="feedback_no_mail_app">Fant ingen e-postapp. Du kan skrive til %1$s</string>
+</resources>

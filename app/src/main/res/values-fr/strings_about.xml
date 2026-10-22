@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">À propos</string>
+    <string name="settings_about_subtitle">Version, licence et sources des données</string>
+    <string name="settings_feedback_title">Envoyer un commentaire</string>
+    <string name="settings_feedback_subtitle">Écrire au développeur</string>
+    <string name="about_version_format">Version %1$s</string>
+    <string name="about_description">Sept outils du quotidien dans une seule appli : tâches, météo, devises, calculatrice, scanner, pas et instruments de vol.</string>
+    <string name="about_promise">Sans publicité. Sans traceurs. Sans compte. Vos données restent sur votre téléphone.</string>
+    <string name="about_credits_title">Données et services</string>
+    <string name="about_credits">Météo : Open-Meteo.com\nLieux : © contributeurs d’OpenStreetMap\nTaux de change : Exchange Rate API\nLittoraux : Natural Earth\nImages de cartes : Esri et ses fournisseurs</string>
+    <string name="about_open_readme">En savoir plus</string>
+    <string name="about_open_license">Licence</string>
+    <string name="about_open_privacy">Confidentialité</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Tous droits réservés.</string>
+    <string name="about_link_failed">Impossible d’ouvrir la page</string>
+    <string name="feedback_title">Envoyer un commentaire</string>
+    <string name="feedback_hint">Votre message au développeur</string>
+    <string name="feedback_include_details">Ajouter la version de l’appli et le modèle du téléphone</string>
+    <string name="feedback_note">Votre appli de messagerie s’ouvrira avec le message. Rien n’est envoyé tant que vous n’appuyez pas sur envoyer, et vous pouvez le modifier avant.</string>
+    <string name="feedback_send">Écrire un e-mail</string>
+    <string name="feedback_opened_mail">Appli de messagerie ouverte</string>
+    <string name="feedback_too_short">Écrivez encore quelques mots</string>
+    <string name="feedback_duplicate">Ce message ressemble à un message déjà envoyé</string>
+    <string name="feedback_wait_minutes">Patientez %1$d min avant le message suivant</string>
+    <string name="feedback_daily_limit">Limite quotidienne atteinte. Écrivez demain</string>
+    <string name="feedback_monthly_limit">Limite mensuelle atteinte. Écrivez plus tard</string>
+    <string name="feedback_no_mail_app">Aucune appli de messagerie trouvée. Vous pouvez écrire à %1$s</string>
+</resources>

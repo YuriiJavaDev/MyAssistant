@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Uygulama hakkında</string>
+    <string name="settings_about_subtitle">Sürüm, lisans ve veri kaynakları</string>
+    <string name="settings_feedback_title">Geri bildirim gönder</string>
+    <string name="settings_feedback_subtitle">Geliştiriciye yaz</string>
+    <string name="about_version_format">Sürüm %1$s</string>
+    <string name="about_description">Tek uygulamada yedi günlük araç: görevler, hava durumu, döviz, hesap makinesi, tarayıcı, adımlar ve uçuş göstergeleri.</string>
+    <string name="about_promise">Reklam yok. İzleyici yok. Hesap yok. Verileriniz telefonunuzda kalır.</string>
+    <string name="about_credits_title">Veriler ve hizmetler</string>
+    <string name="about_credits">Hava durumu: Open-Meteo.com\nYerler: © OpenStreetMap katkıda bulunanlar\nDöviz kurları: Exchange Rate API\nKıyı çizgileri: Natural Earth\nHarita görüntüleri: Esri ve sağlayıcıları</string>
+    <string name="about_open_readme">Daha fazla</string>
+    <string name="about_open_license">Lisans</string>
+    <string name="about_open_privacy">Gizlilik</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Tüm hakları saklıdır.</string>
+    <string name="about_link_failed">Sayfa açılamadı</string>
+    <string name="feedback_title">Geri bildirim gönder</string>
+    <string name="feedback_hint">Geliştiriciye mesajınız</string>
+    <string name="feedback_include_details">Uygulama sürümünü ve telefon modelini ekle</string>
+    <string name="feedback_note">E-posta uygulamanız mesajla açılır. Siz gönder\'e dokunana kadar hiçbir şey gönderilmez, önce düzenleyebilirsiniz.</string>
+    <string name="feedback_send">E-posta yaz</string>
+    <string name="feedback_opened_mail">E-posta uygulaması açıldı</string>
+    <string name="feedback_too_short">Birkaç kelime daha yazın</string>
+    <string name="feedback_duplicate">Bu mesaj daha önce gönderdiğinize benziyor</string>
+    <string name="feedback_wait_minutes">Sonraki mesaj için %1$d dk bekleyin</string>
+    <string name="feedback_daily_limit">Günlük sınıra ulaşıldı. Yarın yazın</string>
+    <string name="feedback_monthly_limit">Aylık sınıra ulaşıldı. Daha sonra yazın</string>
+    <string name="feedback_no_mail_app">E-posta uygulaması bulunamadı. %1$s adresine yazabilirsiniz</string>
+</resources>

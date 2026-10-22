@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Giới thiệu</string>
+    <string name="settings_about_subtitle">Phiên bản, giấy phép và nguồn dữ liệu</string>
+    <string name="settings_feedback_title">Gửi phản hồi</string>
+    <string name="settings_feedback_subtitle">Viết cho nhà phát triển</string>
+    <string name="about_version_format">Phiên bản %1$s</string>
+    <string name="about_description">Bảy công cụ hằng ngày trong một ứng dụng: công việc, thời tiết, tiền tệ, máy tính, máy quét, bước chân và thiết bị bay.</string>
+    <string name="about_promise">Không quảng cáo. Không theo dõi. Không tài khoản. Dữ liệu của bạn ở lại trên điện thoại.</string>
+    <string name="about_credits_title">Dữ liệu và dịch vụ</string>
+    <string name="about_credits">Thời tiết: Open-Meteo.com\nĐịa điểm: © những người đóng góp OpenStreetMap\nTỷ giá: Exchange Rate API\nĐường bờ biển: Natural Earth\nẢnh bản đồ: Esri và các nhà cung cấp</string>
+    <string name="about_open_readme">Tìm hiểu thêm</string>
+    <string name="about_open_license">Giấy phép</string>
+    <string name="about_open_privacy">Quyền riêng tư</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Bảo lưu mọi quyền.</string>
+    <string name="about_link_failed">Không mở được trang</string>
+    <string name="feedback_title">Gửi phản hồi</string>
+    <string name="feedback_hint">Tin nhắn của bạn gửi nhà phát triển</string>
+    <string name="feedback_include_details">Thêm phiên bản ứng dụng và kiểu điện thoại</string>
+    <string name="feedback_note">Ứng dụng email của bạn sẽ mở cùng thư. Không có gì được gửi cho đến khi bạn nhấn gửi, và bạn có thể sửa trước.</string>
+    <string name="feedback_send">Viết email</string>
+    <string name="feedback_opened_mail">Đã mở ứng dụng email</string>
+    <string name="feedback_too_short">Hãy viết thêm vài từ</string>
+    <string name="feedback_duplicate">Tin nhắn này giống một tin bạn đã gửi</string>
+    <string name="feedback_wait_minutes">Vui lòng chờ %1$d phút trước tin nhắn tiếp theo</string>
+    <string name="feedback_daily_limit">Đã đạt giới hạn trong ngày. Hãy viết vào ngày mai</string>
+    <string name="feedback_monthly_limit">Đã đạt giới hạn trong tháng. Hãy viết sau</string>
+    <string name="feedback_no_mail_app">Không tìm thấy ứng dụng email. Bạn có thể viết tới %1$s</string>
+</resources>

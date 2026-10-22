@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Σχετικά</string>
+    <string name="settings_about_subtitle">Έκδοση, άδεια και πηγές δεδομένων</string>
+    <string name="settings_feedback_title">Αποστολή σχολίων</string>
+    <string name="settings_feedback_subtitle">Γράψτε στον προγραμματιστή</string>
+    <string name="about_version_format">Έκδοση %1$s</string>
+    <string name="about_description">Επτά καθημερινά εργαλεία σε μία εφαρμογή: εργασίες, καιρός, νομίσματα, αριθμομηχανή, σαρωτής, βήματα και όργανα πτήσης.</string>
+    <string name="about_promise">Χωρίς διαφημίσεις. Χωρίς ιχνηλάτες. Χωρίς λογαριασμό. Τα δεδομένα σας μένουν στο τηλέφωνό σας.</string>
+    <string name="about_credits_title">Δεδομένα και υπηρεσίες</string>
+    <string name="about_credits">Καιρός: Open-Meteo.com\nΜέρη: © συντελεστές του OpenStreetMap\nΙσοτιμίες: Exchange Rate API\nΑκτογραμμές: Natural Earth\nΕικόνες χαρτών: Esri και οι πάροχοί της</string>
+    <string name="about_open_readme">Περισσότερα</string>
+    <string name="about_open_license">Άδεια</string>
+    <string name="about_open_privacy">Απόρρητο</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Με επιφύλαξη παντός δικαιώματος.</string>
+    <string name="about_link_failed">Δεν ήταν δυνατό να ανοίξει η σελίδα</string>
+    <string name="feedback_title">Αποστολή σχολίων</string>
+    <string name="feedback_hint">Το μήνυμά σας προς τον προγραμματιστή</string>
+    <string name="feedback_include_details">Προσθήκη έκδοσης εφαρμογής και μοντέλου τηλεφώνου</string>
+    <string name="feedback_note">Θα ανοίξει η εφαρμογή email σας με το μήνυμα. Δεν στέλνεται τίποτα μέχρι να πατήσετε αποστολή και μπορείτε να το αλλάξετε πριν.</string>
+    <string name="feedback_send">Γράψτε email</string>
+    <string name="feedback_opened_mail">Η εφαρμογή email άνοιξε</string>
+    <string name="feedback_too_short">Γράψτε μερικές λέξεις ακόμη</string>
+    <string name="feedback_duplicate">Αυτό το μήνυμα μοιάζει με ένα που έχετε ήδη στείλει</string>
+    <string name="feedback_wait_minutes">Περιμένετε %1$d λεπτά πριν το επόμενο μήνυμα</string>
+    <string name="feedback_daily_limit">Συμπληρώθηκε το ημερήσιο όριο. Γράψτε αύριο</string>
+    <string name="feedback_monthly_limit">Συμπληρώθηκε το μηνιαίο όριο. Γράψτε αργότερα</string>
+    <string name="feedback_no_mail_app">Δεν βρέθηκε εφαρμογή email. Μπορείτε να γράψετε στο %1$s</string>
+</resources>

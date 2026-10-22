@@ -174,5 +174,70 @@
                 android:textColor="?attr/maText"/>
         </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/maText"
+            android:alpha="0.2"
+            android:layout_marginVertical="4dp"/>
+
+        <!-- Block 6: About -->
+        <LinearLayout
+            android:id="@+id/layoutAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_about_title"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="?attr/maText"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_about_subtitle"
+                android:textSize="11sp"
+                android:textColor="?attr/maText"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/maText"
+            android:alpha="0.2"
+            android:layout_marginVertical="4dp"/>
+
+        <!-- Block 7: Feedback -->
+        <LinearLayout
+            android:id="@+id/layoutFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_feedback_title"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="?attr/maText"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_feedback_subtitle"
+                android:textSize="11sp"
+                android:textColor="?attr/maText"/>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

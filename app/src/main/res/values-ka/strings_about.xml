@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">აპის შესახებ</string>
+    <string name="settings_about_subtitle">ვერსია, ლიცენზია და მონაცემთა წყაროები</string>
+    <string name="settings_feedback_title">უკუკავშირი</string>
+    <string name="settings_feedback_subtitle">მისწერეთ დეველოპერს</string>
+    <string name="about_version_format">ვერსია %1$s</string>
+    <string name="about_description">შვიდი ყოველდღიური ხელსაწყო ერთ აპში: ამოცანები, ამინდი, ვალუტა, კალკულატორი, სკანერი, ნაბიჯები და ფრენის ხელსაწყოები.</string>
+    <string name="about_promise">რეკლამის გარეშე. თვალთვალის გარეშე. ანგარიშის გარეშე. თქვენი მონაცემები თქვენს ტელეფონში რჩება.</string>
+    <string name="about_credits_title">მონაცემები და სერვისები</string>
+    <string name="about_credits">ამინდი: Open-Meteo.com\nადგილები: © OpenStreetMap-ის კონტრიბუტორები\nვალუტის კურსი: Exchange Rate API\nსანაპირო ხაზები: Natural Earth\nრუკის სურათები: Esri და მისი მომწოდებლები</string>
+    <string name="about_open_readme">მეტი</string>
+    <string name="about_open_license">ლიცენზია</string>
+    <string name="about_open_privacy">კონფიდენციალურობა</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. ყველა უფლება დაცულია.</string>
+    <string name="about_link_failed">გვერდის გახსნა ვერ მოხერხდა</string>
+    <string name="feedback_title">უკუკავშირი</string>
+    <string name="feedback_hint">თქვენი შეტყობინება დეველოპერს</string>
+    <string name="feedback_include_details">აპის ვერსიისა და ტელეფონის მოდელის დამატება</string>
+    <string name="feedback_note">გაიხსნება თქვენი ელფოსტის აპი შეტყობინებით. არაფერი გაიგზავნება, სანამ გაგზავნას არ დააჭერთ, და ადრე შეგიძლიათ შეცვალოთ.</string>
+    <string name="feedback_send">წერილის დაწერა</string>
+    <string name="feedback_opened_mail">ელფოსტის აპი გაიხსნა</string>
+    <string name="feedback_too_short">დაწერეთ კიდევ რამდენიმე სიტყვა</string>
+    <string name="feedback_duplicate">ეს შეტყობინება გაგზავნილს ჰგავს</string>
+    <string name="feedback_wait_minutes">მომდევნო შეტყობინებამდე დაელოდეთ %1$d წთ</string>
+    <string name="feedback_daily_limit">დღიური ლიმიტი ამოიწურა. დაწერეთ ხვალ</string>
+    <string name="feedback_monthly_limit">თვიური ლიმიტი ამოიწურა. დაწერეთ მოგვიანებით</string>
+    <string name="feedback_no_mail_app">ელფოსტის აპი ვერ მოიძებნა. შეგიძლიათ მისწეროთ: %1$s</string>
+</resources>

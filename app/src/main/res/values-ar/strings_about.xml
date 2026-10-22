@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">حول التطبيق</string>
+    <string name="settings_about_subtitle">الإصدار والترخيص ومصادر البيانات</string>
+    <string name="settings_feedback_title">إرسال ملاحظات</string>
+    <string name="settings_feedback_subtitle">اكتب للمطوّر</string>
+    <string name="about_version_format">الإصدار %1$s</string>
+    <string name="about_description">سبع أدوات يومية في تطبيق واحد: المهام والطقس والعملات والآلة الحاسبة والماسح الضوئي والخطوات وأجهزة الطيران.</string>
+    <string name="about_promise">بلا إعلانات. بلا أدوات تتبّع. بلا حساب. تبقى بياناتك على هاتفك.</string>
+    <string name="about_credits_title">البيانات والخدمات</string>
+    <string name="about_credits">الطقس: Open-Meteo.com\nالأماكن: © مساهمو OpenStreetMap\nأسعار الصرف: Exchange Rate API\nالسواحل: Natural Earth\nصور الخرائط: Esri ومزوّدوها</string>
+    <string name="about_open_readme">المزيد</string>
+    <string name="about_open_license">الترخيص</string>
+    <string name="about_open_privacy">الخصوصية</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. جميع الحقوق محفوظة.</string>
+    <string name="about_link_failed">تعذّر فتح الصفحة</string>
+    <string name="feedback_title">إرسال ملاحظات</string>
+    <string name="feedback_hint">رسالتك إلى المطوّر</string>
+    <string name="feedback_include_details">إضافة إصدار التطبيق وطراز الهاتف</string>
+    <string name="feedback_note">سيُفتح تطبيق البريد لديك مع الرسالة. لا يُرسل شيء حتى تضغط على إرسال، ويمكنك تعديلها قبل ذلك.</string>
+    <string name="feedback_send">كتابة رسالة بريد</string>
+    <string name="feedback_opened_mail">فُتح تطبيق البريد</string>
+    <string name="feedback_too_short">اكتب بضع كلمات أخرى</string>
+    <string name="feedback_duplicate">هذه الرسالة تشبه رسالة أرسلتها من قبل</string>
+    <string name="feedback_wait_minutes">انتظر %1$d دقيقة قبل الرسالة التالية</string>
+    <string name="feedback_daily_limit">بلغت الحد اليومي. اكتب غدًا</string>
+    <string name="feedback_monthly_limit">بلغت الحد الشهري. اكتب لاحقًا</string>
+    <string name="feedback_no_mail_app">لم يُعثر على تطبيق بريد. يمكنك الكتابة إلى %1$s</string>
+</resources>

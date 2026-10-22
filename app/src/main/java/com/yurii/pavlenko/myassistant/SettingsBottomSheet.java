@@ -16,6 +16,8 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.yurii.pavlenko.myassistant.about.ui.AboutBottomSheet;
+import com.yurii.pavlenko.myassistant.about.ui.FeedbackDialog;
 
 /**
  * Bottom sheet dialog fragment for managing application settings,
@@ -58,6 +60,14 @@ public class SettingsBottomSheet extends BottomSheetDialogFragment {
         layoutSystemPermissions.setOnClickListener(v -> {
             openSystemAppSettings();
             dismiss();
+        });
+
+        view.findViewById(R.id.layoutAbout).setOnClickListener(v -> {
+            new AboutBottomSheet().show(getParentFragmentManager(), "AboutBottomSheet");
+        });
+
+        view.findViewById(R.id.layoutFeedback).setOnClickListener(v -> {
+            new FeedbackDialog().show(getParentFragmentManager(), "FeedbackDialog");
         });
 
         return view;

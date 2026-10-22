@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">關於</string>
+    <string name="settings_about_subtitle">版本、授權與資料來源</string>
+    <string name="settings_feedback_title">傳送意見回饋</string>
+    <string name="settings_feedback_subtitle">聯絡開發者</string>
+    <string name="about_version_format">版本 %1$s</string>
+    <string name="about_description">七個日常工具合在一個應用程式裡：工作、天氣、匯率、計算機、掃描、步數與飛行儀表。</string>
+    <string name="about_promise">無廣告。無追蹤。無需帳號。你的資料只保留在你的手機上。</string>
+    <string name="about_credits_title">資料與服務</string>
+    <string name="about_credits">天氣：Open-Meteo.com\n地點：© OpenStreetMap 貢獻者\n匯率：Exchange Rate API\n海岸線：Natural Earth\n地圖影像：Esri 及其供應商</string>
+    <string name="about_open_readme">了解更多</string>
+    <string name="about_open_license">授權</string>
+    <string name="about_open_privacy">隱私</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko。保留所有權利。</string>
+    <string name="about_link_failed">無法開啟該頁面</string>
+    <string name="feedback_title">傳送意見回饋</string>
+    <string name="feedback_hint">你給開發者的訊息</string>
+    <string name="feedback_include_details">附上應用程式版本與手機型號</string>
+    <string name="feedback_note">你的郵件應用程式會帶著這則訊息開啟。你按下傳送之前不會寄出任何內容，也可以先修改。</string>
+    <string name="feedback_send">寫郵件</string>
+    <string name="feedback_opened_mail">郵件應用程式已開啟</string>
+    <string name="feedback_too_short">請再多寫幾個字</string>
+    <string name="feedback_duplicate">這則訊息與你已傳送的相似</string>
+    <string name="feedback_wait_minutes">請等待 %1$d 分鐘後再傳下一則</string>
+    <string name="feedback_daily_limit">已達每日上限，請明天再寫</string>
+    <string name="feedback_monthly_limit">已達每月上限，請稍後再寫</string>
+    <string name="feedback_no_mail_app">找不到郵件應用程式。你可以寫信到 %1$s</string>
+</resources>

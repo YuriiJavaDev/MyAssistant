@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Az alkalmazásról</string>
+    <string name="settings_about_subtitle">Verzió, licenc és adatforrások</string>
+    <string name="settings_feedback_title">Visszajelzés küldése</string>
+    <string name="settings_feedback_subtitle">Írj a fejlesztőnek</string>
+    <string name="about_version_format">Verzió: %1$s</string>
+    <string name="about_description">Hét mindennapi eszköz egy alkalmazásban: feladatok, időjárás, pénznemek, számológép, szkenner, lépések és repülőműszerek.</string>
+    <string name="about_promise">Nincs reklám. Nincs követés. Nincs fiók. Az adataid a telefonodon maradnak.</string>
+    <string name="about_credits_title">Adatok és szolgáltatások</string>
+    <string name="about_credits">Időjárás: Open-Meteo.com\nHelyek: © az OpenStreetMap közreműködői\nÁrfolyamok: Exchange Rate API\nPartvonalak: Natural Earth\nTérképképek: Esri és szolgáltatói</string>
+    <string name="about_open_readme">Tudj meg többet</string>
+    <string name="about_open_license">Licenc</string>
+    <string name="about_open_privacy">Adatvédelem</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Minden jog fenntartva.</string>
+    <string name="about_link_failed">Az oldalt nem sikerült megnyitni</string>
+    <string name="feedback_title">Visszajelzés küldése</string>
+    <string name="feedback_hint">Üzeneted a fejlesztőnek</string>
+    <string name="feedback_include_details">Az alkalmazás verziójának és a telefon típusának hozzáadása</string>
+    <string name="feedback_note">Megnyílik az e-mail alkalmazásod az üzenettel. Semmi sem megy el, amíg te nem koppintasz a küldésre, és előtte szerkesztheted.</string>
+    <string name="feedback_send">E-mail írása</string>
+    <string name="feedback_opened_mail">Az e-mail alkalmazás megnyílt</string>
+    <string name="feedback_too_short">Írj még néhány szót</string>
+    <string name="feedback_duplicate">Ez az üzenet hasonlít egy már elküldöttre</string>
+    <string name="feedback_wait_minutes">Várj %1$d percet a következő üzenet előtt</string>
+    <string name="feedback_daily_limit">Elérted a napi korlátot. Írj holnap</string>
+    <string name="feedback_monthly_limit">Elérted a havi korlátot. Írj később</string>
+    <string name="feedback_no_mail_app">Nem található e-mail alkalmazás. Írhatsz ide: %1$s</string>
+</resources>

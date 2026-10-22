@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Über die App</string>
+    <string name="settings_about_subtitle">Version, Lizenz und Datenquellen</string>
+    <string name="settings_feedback_title">Feedback senden</string>
+    <string name="settings_feedback_subtitle">An den Entwickler schreiben</string>
+    <string name="about_version_format">Version %1$s</string>
+    <string name="about_description">Sieben Alltagswerkzeuge in einer App: Aufgaben, Wetter, Währungen, Rechner, Scanner, Schritte und Fluginstrumente.</string>
+    <string name="about_promise">Keine Werbung. Keine Tracker. Kein Konto. Ihre Daten bleiben auf Ihrem Telefon.</string>
+    <string name="about_credits_title">Daten und Dienste</string>
+    <string name="about_credits">Wetter: Open-Meteo.com\nOrte: © OpenStreetMap-Mitwirkende\nWechselkurse: Exchange Rate API\nKüstenlinien: Natural Earth\nKartenbilder: Esri und seine Anbieter</string>
+    <string name="about_open_readme">Mehr erfahren</string>
+    <string name="about_open_license">Lizenz</string>
+    <string name="about_open_privacy">Datenschutz</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Alle Rechte vorbehalten.</string>
+    <string name="about_link_failed">Die Seite konnte nicht geöffnet werden</string>
+    <string name="feedback_title">Feedback senden</string>
+    <string name="feedback_hint">Ihre Nachricht an den Entwickler</string>
+    <string name="feedback_include_details">App-Version und Telefonmodell hinzufügen</string>
+    <string name="feedback_note">Ihre E-Mail-App öffnet sich mit der Nachricht. Nichts wird gesendet, bis Sie auf Senden tippen, und Sie können sie vorher ändern.</string>
+    <string name="feedback_send">E-Mail schreiben</string>
+    <string name="feedback_opened_mail">E-Mail-App geöffnet</string>
+    <string name="feedback_too_short">Schreiben Sie noch ein paar Wörter</string>
+    <string name="feedback_duplicate">Diese Nachricht ähnelt einer bereits gesendeten</string>
+    <string name="feedback_wait_minutes">Bitte %1$d Min. bis zur nächsten Nachricht warten</string>
+    <string name="feedback_daily_limit">Tageslimit erreicht. Schreiben Sie morgen</string>
+    <string name="feedback_monthly_limit">Monatslimit erreicht. Schreiben Sie später</string>
+    <string name="feedback_no_mail_app">Keine E-Mail-App gefunden. Sie können an %1$s schreiben</string>
+</resources>

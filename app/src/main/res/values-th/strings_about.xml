@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">เกี่ยวกับ</string>
+    <string name="settings_about_subtitle">เวอร์ชัน ใบอนุญาต และแหล่งข้อมูล</string>
+    <string name="settings_feedback_title">ส่งความคิดเห็น</string>
+    <string name="settings_feedback_subtitle">เขียนถึงนักพัฒนา</string>
+    <string name="about_version_format">เวอร์ชัน %1$s</string>
+    <string name="about_description">เครื่องมือประจำวันเจ็ดอย่างในแอปเดียว: งาน สภาพอากาศ สกุลเงิน เครื่องคิดเลข สแกน ก้าว และเครื่องวัดการบิน</string>
+    <string name="about_promise">ไม่มีโฆษณา ไม่มีตัวติดตาม ไม่มีบัญชี ข้อมูลของคุณอยู่บนโทรศัพท์ของคุณ</string>
+    <string name="about_credits_title">ข้อมูลและบริการ</string>
+    <string name="about_credits">สภาพอากาศ: Open-Meteo.com\nสถานที่: © ผู้ร่วมพัฒนา OpenStreetMap\nอัตราแลกเปลี่ยน: Exchange Rate API\nแนวชายฝั่ง: Natural Earth\nภาพแผนที่: Esri และผู้ให้บริการ</string>
+    <string name="about_open_readme">อ่านเพิ่ม</string>
+    <string name="about_open_license">ใบอนุญาต</string>
+    <string name="about_open_privacy">ความเป็นส่วนตัว</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko สงวนลิขสิทธิ์</string>
+    <string name="about_link_failed">เปิดหน้านี้ไม่ได้</string>
+    <string name="feedback_title">ส่งความคิดเห็น</string>
+    <string name="feedback_hint">ข้อความของคุณถึงนักพัฒนา</string>
+    <string name="feedback_include_details">เพิ่มเวอร์ชันแอปและรุ่นโทรศัพท์</string>
+    <string name="feedback_note">แอปอีเมลของคุณจะเปิดพร้อมข้อความ จะไม่มีการส่งอะไรจนกว่าคุณจะกดส่ง และคุณแก้ไขได้ก่อน</string>
+    <string name="feedback_send">เขียนอีเมล</string>
+    <string name="feedback_opened_mail">เปิดแอปอีเมลแล้ว</string>
+    <string name="feedback_too_short">เขียนเพิ่มอีกสักสองสามคำ</string>
+    <string name="feedback_duplicate">ข้อความนี้คล้ายกับที่คุณเคยส่งแล้ว</string>
+    <string name="feedback_wait_minutes">โปรดรอ %1$d นาทีก่อนข้อความถัดไป</string>
+    <string name="feedback_daily_limit">ถึงขีดจำกัดรายวันแล้ว เขียนใหม่พรุ่งนี้</string>
+    <string name="feedback_monthly_limit">ถึงขีดจำกัดรายเดือนแล้ว เขียนใหม่ภายหลัง</string>
+    <string name="feedback_no_mail_app">ไม่พบแอปอีเมล คุณเขียนถึง %1$s ได้</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Про застосунок</string>
+    <string name="settings_about_subtitle">Версія, ліцензія та джерела даних</string>
+    <string name="settings_feedback_title">Зворотний зв’язок</string>
+    <string name="settings_feedback_subtitle">Написати розробнику</string>
+    <string name="about_version_format">Версія %1$s</string>
+    <string name="about_description">Сім щоденних інструментів в одному застосунку: завдання, погода, валюти, калькулятор, сканер, кроки та польотні прилади.</string>
+    <string name="about_promise">Без реклами. Без трекерів. Без облікового запису. Ваші дані залишаються на вашому телефоні.</string>
+    <string name="about_credits_title">Дані та сервіси</string>
+    <string name="about_credits">Погода: Open-Meteo.com\nМісця: © учасники OpenStreetMap\nКурси валют: Exchange Rate API\nБерегові лінії: Natural Earth\nЗнімки карт: Esri та його постачальники</string>
+    <string name="about_open_readme">Докладніше</string>
+    <string name="about_open_license">Ліцензія</string>
+    <string name="about_open_privacy">Приватність</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Усі права захищені.</string>
+    <string name="about_link_failed">Не вдалося відкрити сторінку</string>
+    <string name="feedback_title">Зворотний зв’язок</string>
+    <string name="feedback_hint">Ваше повідомлення розробнику</string>
+    <string name="feedback_include_details">Додати версію застосунку та модель телефона</string>
+    <string name="feedback_note">Відкриється ваш поштовий застосунок з листом. Нічого не надсилається, доки ви самі не натиснете «Надіслати», і лист можна змінити.</string>
+    <string name="feedback_send">Написати листа</string>
+    <string name="feedback_opened_mail">Поштовий застосунок відкрито</string>
+    <string name="feedback_too_short">Напишіть ще кілька слів</string>
+    <string name="feedback_duplicate">Це повідомлення схоже на те, яке ви вже надсилали</string>
+    <string name="feedback_wait_minutes">Зачекайте %1$d хв до наступного повідомлення</string>
+    <string name="feedback_daily_limit">Денний ліміт вичерпано. Напишіть завтра</string>
+    <string name="feedback_monthly_limit">Місячний ліміт вичерпано. Напишіть пізніше</string>
+    <string name="feedback_no_mail_app">Поштовий застосунок не знайдено. Можете написати на %1$s</string>
+</resources>
