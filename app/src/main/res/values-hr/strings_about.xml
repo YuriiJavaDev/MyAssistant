@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">O aplikaciji</string>
+    <string name="settings_about_subtitle">Verzija, licenca i izvori podataka</string>
+    <string name="settings_feedback_title">Pošalji povratnu informaciju</string>
+    <string name="settings_feedback_subtitle">Piši programeru</string>
+    <string name="about_version_format">Verzija %1$s</string>
+    <string name="about_description">Sedam svakodnevnih alata u jednoj aplikaciji: zadaci, vrijeme, valute, kalkulator, skener, koraci i zrakoplovni instrumenti.</string>
+    <string name="about_promise">Bez reklama. Bez praćenja. Bez računa. Vaši podaci ostaju na vašem telefonu.</string>
+    <string name="about_credits_title">Podaci i usluge</string>
+    <string name="about_credits">Vrijeme: Open-Meteo.com\nMjesta: © suradnici OpenStreetMapa\nTečajevi: Exchange Rate API\nObalne linije: Natural Earth\nSnimke karata: Esri i njegovi dobavljači</string>
+    <string name="about_open_readme">Više</string>
+    <string name="about_open_license">Licenca</string>
+    <string name="about_open_privacy">Privatnost</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Sva prava pridržana.</string>
+    <string name="about_link_failed">Stranicu nije moguće otvoriti</string>
+    <string name="feedback_title">Pošalji povratnu informaciju</string>
+    <string name="feedback_hint">Vaša poruka programeru</string>
+    <string name="feedback_include_details">Dodaj verziju aplikacije i model telefona</string>
+    <string name="feedback_note">Otvorit će se vaša aplikacija za e-poštu s porukom. Ništa se ne šalje dok sami ne dodirnete pošalji, a prije toga je možete urediti.</string>
+    <string name="feedback_send">Napiši e-poruku</string>
+    <string name="feedback_opened_mail">Aplikacija za e-poštu je otvorena</string>
+    <string name="feedback_too_short">Napišite još nekoliko riječi</string>
+    <string name="feedback_duplicate">Ova poruka sliči već poslanoj</string>
+    <string name="feedback_wait_minutes">Pričekajte %1$d min prije sljedeće poruke</string>
+    <string name="feedback_daily_limit">Dnevno ograničenje je dosegnuto. Pišite sutra</string>
+    <string name="feedback_monthly_limit">Mjesečno ograničenje je dosegnuto. Pišite kasnije</string>
+    <string name="feedback_no_mail_app">Aplikacija za e-poštu nije pronađena. Možete pisati na %1$s</string>
+</resources>

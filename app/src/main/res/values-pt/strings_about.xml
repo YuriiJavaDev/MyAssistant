@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Sobre</string>
+    <string name="settings_about_subtitle">Versão, licença e fontes de dados</string>
+    <string name="settings_feedback_title">Enviar feedback</string>
+    <string name="settings_feedback_subtitle">Escrever ao desenvolvedor</string>
+    <string name="about_version_format">Versão %1$s</string>
+    <string name="about_description">Sete ferramentas do dia a dia em um só app: tarefas, clima, moedas, calculadora, scanner, passos e instrumentos de voo.</string>
+    <string name="about_promise">Sem anúncios. Sem rastreadores. Sem conta. Seus dados ficam no seu telefone.</string>
+    <string name="about_credits_title">Dados e serviços</string>
+    <string name="about_credits">Clima: Open-Meteo.com\nLocais: © colaboradores do OpenStreetMap\nCâmbio: Exchange Rate API\nLinhas costeiras: Natural Earth\nImagens de mapas: Esri e seus fornecedores</string>
+    <string name="about_open_readme">Saiba mais</string>
+    <string name="about_open_license">Licença</string>
+    <string name="about_open_privacy">Privacidade</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Todos os direitos reservados.</string>
+    <string name="about_link_failed">Não foi possível abrir a página</string>
+    <string name="feedback_title">Enviar feedback</string>
+    <string name="feedback_hint">Sua mensagem ao desenvolvedor</string>
+    <string name="feedback_include_details">Adicionar versão do app e modelo do telefone</string>
+    <string name="feedback_note">Seu app de e-mail abrirá com a mensagem. Nada é enviado até você tocar em enviar, e você pode editá-la antes.</string>
+    <string name="feedback_send">Escrever e-mail</string>
+    <string name="feedback_opened_mail">App de e-mail aberto</string>
+    <string name="feedback_too_short">Escreva mais algumas palavras</string>
+    <string name="feedback_duplicate">Esta mensagem é parecida com uma que você já enviou</string>
+    <string name="feedback_wait_minutes">Aguarde %1$d min antes da próxima mensagem</string>
+    <string name="feedback_daily_limit">Limite diário atingido. Escreva amanhã</string>
+    <string name="feedback_monthly_limit">Limite mensal atingido. Escreva mais tarde</string>
+    <string name="feedback_no_mail_app">Nenhum app de e-mail encontrado. Você pode escrever para %1$s</string>
+</resources>

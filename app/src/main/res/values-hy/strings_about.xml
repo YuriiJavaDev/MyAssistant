@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Հավելվածի մասին</string>
+    <string name="settings_about_subtitle">Տարբերակ, արտոնագիր և տվյալների աղբյուրներ</string>
+    <string name="settings_feedback_title">Ուղարկել կարծիք</string>
+    <string name="settings_feedback_subtitle">Գրել մշակողին</string>
+    <string name="about_version_format">Տարբերակ %1$s</string>
+    <string name="about_description">Յոթ առօրյա գործիք մեկ հավելվածում՝ առաջադրանքներ, եղանակ, արժույթներ, հաշվիչ, սկաներ, քայլեր և թռիչքի սարքեր։</string>
+    <string name="about_promise">Առանց գովազդի։ Առանց հետևման։ Առանց հաշվի։ Ձեր տվյալները մնում են ձեր հեռախոսում։</string>
+    <string name="about_credits_title">Տվյալներ և ծառայություններ</string>
+    <string name="about_credits">Եղանակ՝ Open-Meteo.com\nՎայրեր՝ © OpenStreetMap-ի մասնակիցներ\nՓոխարժեքներ՝ Exchange Rate API\nԱփամուտքեր՝ Natural Earth\nՔարտեզի պատկերներ՝ Esri և նրա մատակարարները</string>
+    <string name="about_open_readme">Ավելին</string>
+    <string name="about_open_license">Արտոնագիր</string>
+    <string name="about_open_privacy">Գաղտնիություն</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko։ Բոլոր իրավունքները պաշտպանված են։</string>
+    <string name="about_link_failed">Էջը չհաջողվեց բացել</string>
+    <string name="feedback_title">Ուղարկել կարծիք</string>
+    <string name="feedback_hint">Ձեր հաղորդագրությունը մշակողին</string>
+    <string name="feedback_include_details">Ավելացնել հավելվածի տարբերակը և հեռախոսի մոդելը</string>
+    <string name="feedback_note">Ձեր փոստի հավելվածը կբացվի հաղորդագրությամբ։ Ոչինչ չի ուղարկվի, մինչև սեղմեք ուղարկել, և կարող եք նախապես փոփոխել։</string>
+    <string name="feedback_send">Գրել նամակ</string>
+    <string name="feedback_opened_mail">Փոստի հավելվածը բացվեց</string>
+    <string name="feedback_too_short">Գրեք ևս մի քանի բառ</string>
+    <string name="feedback_duplicate">Այս հաղորդագրությունը նման է արդեն ուղարկվածի</string>
+    <string name="feedback_wait_minutes">Սպասեք %1$d րոպե հաջորդ հաղորդագրությունից առաջ</string>
+    <string name="feedback_daily_limit">Օրվա սահմանաչափը լրացել է։ Գրեք վաղը</string>
+    <string name="feedback_monthly_limit">Ամսվա սահմանաչափը լրացել է։ Գրեք ավելի ուշ</string>
+    <string name="feedback_no_mail_app">Փոստի հավելված չի գտնվել։ Կարող եք գրել %1$s հասցեին</string>
+</resources>

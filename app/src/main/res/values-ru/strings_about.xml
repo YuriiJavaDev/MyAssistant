@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">О приложении</string>
+    <string name="settings_about_subtitle">Версия, лицензия и источники данных</string>
+    <string name="settings_feedback_title">Обратная связь</string>
+    <string name="settings_feedback_subtitle">Написать разработчику</string>
+    <string name="about_version_format">Версия %1$s</string>
+    <string name="about_description">Семь повседневных инструментов в одном приложении: задачи, погода, валюты, калькулятор, сканер, шаги и полётные приборы.</string>
+    <string name="about_promise">Без рекламы. Без трекеров. Без аккаунта. Ваши данные остаются на вашем телефоне.</string>
+    <string name="about_credits_title">Данные и сервисы</string>
+    <string name="about_credits">Погода: Open-Meteo.com\nМеста: © участники OpenStreetMap\nКурсы валют: Exchange Rate API\nБереговые линии: Natural Earth\nСнимки карт: Esri и его поставщики</string>
+    <string name="about_open_readme">Подробнее</string>
+    <string name="about_open_license">Лицензия</string>
+    <string name="about_open_privacy">Приватность</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Все права защищены.</string>
+    <string name="about_link_failed">Не удалось открыть страницу</string>
+    <string name="feedback_title">Обратная связь</string>
+    <string name="feedback_hint">Ваше сообщение разработчику</string>
+    <string name="feedback_include_details">Добавить версию приложения и модель телефона</string>
+    <string name="feedback_note">Откроется ваше почтовое приложение с письмом. Ничего не отправляется, пока вы сами не нажмёте «Отправить», и письмо можно изменить.</string>
+    <string name="feedback_send">Написать письмо</string>
+    <string name="feedback_opened_mail">Почтовое приложение открыто</string>
+    <string name="feedback_too_short">Напишите ещё несколько слов</string>
+    <string name="feedback_duplicate">Это сообщение похоже на уже отправленное вами</string>
+    <string name="feedback_wait_minutes">Подождите %1$d мин до следующего сообщения</string>
+    <string name="feedback_daily_limit">Дневной лимит исчерпан. Напишите завтра</string>
+    <string name="feedback_monthly_limit">Месячный лимит исчерпан. Напишите позже</string>
+    <string name="feedback_no_mail_app">Почтовое приложение не найдено. Можете написать на %1$s</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Tietoja sovelluksesta</string>
+    <string name="settings_about_subtitle">Versio, lisenssi ja tietolähteet</string>
+    <string name="settings_feedback_title">Lähetä palautetta</string>
+    <string name="settings_feedback_subtitle">Kirjoita kehittäjälle</string>
+    <string name="about_version_format">Versio %1$s</string>
+    <string name="about_description">Seitsemän arjen työkalua yhdessä sovelluksessa: tehtävät, sää, valuutat, laskin, skanneri, askeleet ja lentomittarit.</string>
+    <string name="about_promise">Ei mainoksia. Ei seurantaa. Ei tiliä. Tietosi pysyvät puhelimessasi.</string>
+    <string name="about_credits_title">Tiedot ja palvelut</string>
+    <string name="about_credits">Sää: Open-Meteo.com\nPaikat: © OpenStreetMapin tekijät\nValuuttakurssit: Exchange Rate API\nRannikkoviivat: Natural Earth\nKarttakuvat: Esri ja sen toimittajat</string>
+    <string name="about_open_readme">Lue lisää</string>
+    <string name="about_open_license">Lisenssi</string>
+    <string name="about_open_privacy">Tietosuoja</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Kaikki oikeudet pidätetään.</string>
+    <string name="about_link_failed">Sivua ei voitu avata</string>
+    <string name="feedback_title">Lähetä palautetta</string>
+    <string name="feedback_hint">Viestisi kehittäjälle</string>
+    <string name="feedback_include_details">Lisää sovelluksen versio ja puhelimen malli</string>
+    <string name="feedback_note">Sähköpostisovelluksesi avautuu viestin kanssa. Mitään ei lähetetä, ennen kuin painat lähetä, ja voit muokata viestiä ensin.</string>
+    <string name="feedback_send">Kirjoita sähköposti</string>
+    <string name="feedback_opened_mail">Sähköpostisovellus avattu</string>
+    <string name="feedback_too_short">Kirjoita vielä muutama sana</string>
+    <string name="feedback_duplicate">Tämä viesti muistuttaa jo lähettämääsi</string>
+    <string name="feedback_wait_minutes">Odota %1$d min ennen seuraavaa viestiä</string>
+    <string name="feedback_daily_limit">Päiväraja täynnä. Kirjoita huomenna</string>
+    <string name="feedback_monthly_limit">Kuukausiraja täynnä. Kirjoita myöhemmin</string>
+    <string name="feedback_no_mail_app">Sähköpostisovellusta ei löytynyt. Voit kirjoittaa osoitteeseen %1$s</string>
+</resources>

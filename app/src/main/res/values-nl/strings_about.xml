@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">Over de app</string>
+    <string name="settings_about_subtitle">Versie, licentie en gegevensbronnen</string>
+    <string name="settings_feedback_title">Feedback sturen</string>
+    <string name="settings_feedback_subtitle">Schrijf de ontwikkelaar</string>
+    <string name="about_version_format">Versie %1$s</string>
+    <string name="about_description">Zeven alledaagse hulpmiddelen in één app: taken, weer, valuta, rekenmachine, scanner, stappen en vlieginstrumenten.</string>
+    <string name="about_promise">Geen advertenties. Geen trackers. Geen account. Je gegevens blijven op je telefoon.</string>
+    <string name="about_credits_title">Gegevens en diensten</string>
+    <string name="about_credits">Weer: Open-Meteo.com\nPlaatsen: © OpenStreetMap-bijdragers\nWisselkoersen: Exchange Rate API\nKustlijnen: Natural Earth\nKaartbeelden: Esri en zijn leveranciers</string>
+    <string name="about_open_readme">Meer lezen</string>
+    <string name="about_open_license">Licentie</string>
+    <string name="about_open_privacy">Privacy</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Alle rechten voorbehouden.</string>
+    <string name="about_link_failed">De pagina kon niet worden geopend</string>
+    <string name="feedback_title">Feedback sturen</string>
+    <string name="feedback_hint">Je bericht aan de ontwikkelaar</string>
+    <string name="feedback_include_details">App-versie en telefoonmodel toevoegen</string>
+    <string name="feedback_note">Je e-mailapp opent met het bericht. Er wordt niets verstuurd tot je op verzenden tikt, en je kunt het eerst aanpassen.</string>
+    <string name="feedback_send">E-mail schrijven</string>
+    <string name="feedback_opened_mail">E-mailapp geopend</string>
+    <string name="feedback_too_short">Schrijf nog een paar woorden</string>
+    <string name="feedback_duplicate">Dit bericht lijkt op een bericht dat je al hebt verstuurd</string>
+    <string name="feedback_wait_minutes">Wacht %1$d min voor het volgende bericht</string>
+    <string name="feedback_daily_limit">Daglimiet bereikt. Schrijf morgen</string>
+    <string name="feedback_monthly_limit">Maandlimiet bereikt. Schrijf later</string>
+    <string name="feedback_no_mail_app">Geen e-mailapp gevonden. Je kunt schrijven naar %1$s</string>
+</resources>

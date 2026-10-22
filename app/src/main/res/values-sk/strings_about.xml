@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">O aplikácii</string>
+    <string name="settings_about_subtitle">Verzia, licencia a zdroje údajov</string>
+    <string name="settings_feedback_title">Poslať spätnú väzbu</string>
+    <string name="settings_feedback_subtitle">Napísať vývojárovi</string>
+    <string name="about_version_format">Verzia %1$s</string>
+    <string name="about_description">Sedem každodenných nástrojov v jednej aplikácii: úlohy, počasie, meny, kalkulačka, skener, kroky a letové prístroje.</string>
+    <string name="about_promise">Žiadne reklamy. Žiadne sledovanie. Žiadny účet. Vaše údaje zostávajú vo vašom telefóne.</string>
+    <string name="about_credits_title">Údaje a služby</string>
+    <string name="about_credits">Počasie: Open-Meteo.com\nMiesta: © prispievatelia OpenStreetMap\nMenové kurzy: Exchange Rate API\nPobrežia: Natural Earth\nMapové snímky: Esri a jeho poskytovatelia</string>
+    <string name="about_open_readme">Viac</string>
+    <string name="about_open_license">Licencia</string>
+    <string name="about_open_privacy">Súkromie</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Všetky práva vyhradené.</string>
+    <string name="about_link_failed">Stránku sa nepodarilo otvoriť</string>
+    <string name="feedback_title">Poslať spätnú väzbu</string>
+    <string name="feedback_hint">Vaša správa vývojárovi</string>
+    <string name="feedback_include_details">Pridať verziu aplikácie a model telefónu</string>
+    <string name="feedback_note">Otvorí sa vaša e-mailová aplikácia so správou. Nič sa neodošle, kým sami neklepnete na odoslať, a predtým ju môžete upraviť.</string>
+    <string name="feedback_send">Napísať e-mail</string>
+    <string name="feedback_opened_mail">E-mailová aplikácia otvorená</string>
+    <string name="feedback_too_short">Napíšte ešte pár slov</string>
+    <string name="feedback_duplicate">Táto správa sa podobá už odoslanej</string>
+    <string name="feedback_wait_minutes">Počkajte %1$d min pred ďalšou správou</string>
+    <string name="feedback_daily_limit">Denný limit dosiahnutý. Napíšte zajtra</string>
+    <string name="feedback_monthly_limit">Mesačný limit dosiahnutý. Napíšte neskôr</string>
+    <string name="feedback_no_mail_app">E-mailová aplikácia nenájdená. Môžete napísať na %1$s</string>
+</resources>

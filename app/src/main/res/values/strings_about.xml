@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">About</string>
+    <string name="settings_about_subtitle">Version, license and data sources</string>
+    <string name="settings_feedback_title">Send feedback</string>
+    <string name="settings_feedback_subtitle">Write to the developer</string>
+
+    <string name="about_version_format">Version %1$s</string>
+    <string name="about_description">Seven everyday tools in one app: tasks, weather, currency, calculator, scanner, steps and flight instruments.</string>
+    <string name="about_promise">No ads. No trackers. No account. Your data stays on your phone.</string>
+    <string name="about_credits_title">Data and services</string>
+    <string name="about_credits">Weather: Open-Meteo.com\nPlaces: © OpenStreetMap contributors\nExchange rates: Exchange Rate API\nCoastlines: Natural Earth\nMap imagery: Esri and its providers</string>
+    <string name="about_open_readme">Read more</string>
+    <string name="about_open_license">License</string>
+    <string name="about_open_privacy">Privacy</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. All rights reserved.</string>
+    <string name="about_link_failed">The page could not be opened</string>
+
+    <string name="feedback_title">Send feedback</string>
+    <string name="feedback_hint">Your message to the developer</string>
+    <string name="feedback_include_details">Add app version and phone model</string>
+    <string name="feedback_note">Your email app opens with the message. Nothing is sent until you send it, and you can edit it first.</string>
+    <string name="feedback_send">Write email</string>
+    <string name="feedback_opened_mail">Email app opened</string>
+    <string name="feedback_too_short">Please write a few more words</string>
+    <string name="feedback_duplicate">This message is like one you have already sent</string>
+    <string name="feedback_wait_minutes">Please wait %1$d min before the next message</string>
+    <string name="feedback_daily_limit">Daily limit reached. Please write again tomorrow</string>
+    <string name="feedback_monthly_limit">Monthly limit reached. Please write again later</string>
+    <string name="feedback_no_mail_app">No email app found. You can write to %1$s</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">アプリについて</string>
+    <string name="settings_about_subtitle">バージョン、ライセンス、データの出典</string>
+    <string name="settings_feedback_title">フィードバックを送る</string>
+    <string name="settings_feedback_subtitle">開発者に連絡</string>
+    <string name="about_version_format">バージョン %1$s</string>
+    <string name="about_description">毎日使う7つのツールを1つのアプリに：タスク、天気、為替、電卓、スキャン、歩数、フライト計器。</string>
+    <string name="about_promise">広告なし。トラッカーなし。アカウント不要。データはあなたのスマートフォンの中だけに残ります。</string>
+    <string name="about_credits_title">データとサービス</string>
+    <string name="about_credits">天気：Open-Meteo.com\n場所：© OpenStreetMap コントリビューター\n為替レート：Exchange Rate API\n海岸線：Natural Earth\n地図画像：Esri とその提供元</string>
+    <string name="about_open_readme">詳しく見る</string>
+    <string name="about_open_license">ライセンス</string>
+    <string name="about_open_privacy">プライバシー</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. すべての権利を保有します。</string>
+    <string name="about_link_failed">ページを開けませんでした</string>
+    <string name="feedback_title">フィードバックを送る</string>
+    <string name="feedback_hint">開発者へのメッセージ</string>
+    <string name="feedback_include_details">アプリのバージョンと機種を添付する</string>
+    <string name="feedback_note">メッセージ入りでメールアプリが開きます。送信を押すまで何も送られず、先に編集もできます。</string>
+    <string name="feedback_send">メールを書く</string>
+    <string name="feedback_opened_mail">メールアプリを開きました</string>
+    <string name="feedback_too_short">もう少し書き足してください</string>
+    <string name="feedback_duplicate">このメッセージは送信済みのものに似ています</string>
+    <string name="feedback_wait_minutes">次のメッセージまで %1$d 分お待ちください</string>
+    <string name="feedback_daily_limit">1日の上限に達しました。明日書いてください</string>
+    <string name="feedback_monthly_limit">1か月の上限に達しました。後で書いてください</string>
+    <string name="feedback_no_mail_app">メールアプリが見つかりません。%1$s 宛に書けます</string>
+</resources>

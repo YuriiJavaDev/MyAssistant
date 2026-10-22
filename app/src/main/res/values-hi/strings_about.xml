@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">ऐप के बारे में</string>
+    <string name="settings_about_subtitle">संस्करण, लाइसेंस और डेटा स्रोत</string>
+    <string name="settings_feedback_title">प्रतिक्रिया भेजें</string>
+    <string name="settings_feedback_subtitle">डेवलपर को लिखें</string>
+    <string name="about_version_format">संस्करण %1$s</string>
+    <string name="about_description">एक ही ऐप में सात रोज़मर्रा के टूल: कार्य, मौसम, मुद्रा, कैलकुलेटर, स्कैनर, कदम और उड़ान उपकरण।</string>
+    <string name="about_promise">कोई विज्ञापन नहीं। कोई ट्रैकर नहीं। कोई खाता नहीं। आपका डेटा आपके फ़ोन पर ही रहता है।</string>
+    <string name="about_credits_title">डेटा और सेवाएँ</string>
+    <string name="about_credits">मौसम: Open-Meteo.com\nस्थान: © OpenStreetMap योगदानकर्ता\nविनिमय दरें: Exchange Rate API\nतटरेखाएँ: Natural Earth\nनक्शे की तस्वीरें: Esri और उसके प्रदाता</string>
+    <string name="about_open_readme">और जानें</string>
+    <string name="about_open_license">लाइसेंस</string>
+    <string name="about_open_privacy">गोपनीयता</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. सर्वाधिकार सुरक्षित।</string>
+    <string name="about_link_failed">पेज नहीं खुल सका</string>
+    <string name="feedback_title">प्रतिक्रिया भेजें</string>
+    <string name="feedback_hint">डेवलपर को आपका संदेश</string>
+    <string name="feedback_include_details">ऐप का संस्करण और फ़ोन का मॉडल जोड़ें</string>
+    <string name="feedback_note">आपका ईमेल ऐप संदेश के साथ खुलेगा। जब तक आप भेजें नहीं दबाते, कुछ नहीं भेजा जाता, और आप पहले इसे बदल सकते हैं।</string>
+    <string name="feedback_send">ईमेल लिखें</string>
+    <string name="feedback_opened_mail">ईमेल ऐप खुल गया</string>
+    <string name="feedback_too_short">कुछ शब्द और लिखें</string>
+    <string name="feedback_duplicate">यह संदेश आपके पहले भेजे संदेश जैसा है</string>
+    <string name="feedback_wait_minutes">अगला संदेश भेजने से पहले %1$d मिनट रुकें</string>
+    <string name="feedback_daily_limit">दैनिक सीमा पूरी हो गई। कल लिखें</string>
+    <string name="feedback_monthly_limit">मासिक सीमा पूरी हो गई। बाद में लिखें</string>
+    <string name="feedback_no_mail_app">कोई ईमेल ऐप नहीं मिला। आप %1$s पर लिख सकते हैं</string>
+</resources>

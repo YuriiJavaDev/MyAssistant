@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">אודות</string>
+    <string name="settings_about_subtitle">גרסה, רישיון ומקורות נתונים</string>
+    <string name="settings_feedback_title">משוב</string>
+    <string name="settings_feedback_subtitle">כתבו למפתח</string>
+    <string name="about_version_format">גרסה %1$s</string>
+    <string name="about_description">שבעה כלים יומיומיים באפליקציה אחת: משימות, מזג אוויר, מטבעות, מחשבון, סורק, צעדים ומכשירי טיסה.</string>
+    <string name="about_promise">בלי פרסומות. בלי מעקב. בלי חשבון. הנתונים שלכם נשארים בטלפון שלכם.</string>
+    <string name="about_credits_title">נתונים ושירותים</string>
+    <string name="about_credits">מזג אוויר: Open-Meteo.com\nמקומות: © תורמי OpenStreetMap\nשערי חליפין: Exchange Rate API\nקווי חוף: Natural Earth\nתצלומי מפה: Esri והספקים שלה</string>
+    <string name="about_open_readme">עוד מידע</string>
+    <string name="about_open_license">רישיון</string>
+    <string name="about_open_privacy">פרטיות</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. כל הזכויות שמורות.</string>
+    <string name="about_link_failed">לא ניתן לפתוח את הדף</string>
+    <string name="feedback_title">משוב</string>
+    <string name="feedback_hint">ההודעה שלכם למפתח</string>
+    <string name="feedback_include_details">הוסיפו את גרסת האפליקציה ואת דגם הטלפון</string>
+    <string name="feedback_note">אפליקציית הדוא״ל שלכם תיפתח עם המכתב. דבר לא יישלח עד שתלחצו על שליחה, ואפשר לערוך אותו קודם.</string>
+    <string name="feedback_send">כתיבת מכתב</string>
+    <string name="feedback_opened_mail">אפליקציית הדוא״ל נפתחה</string>
+    <string name="feedback_too_short">כתבו עוד כמה מילים</string>
+    <string name="feedback_duplicate">ההודעה דומה להודעה ששלחתם כבר</string>
+    <string name="feedback_wait_minutes">המתינו %1$d דק׳ לפני ההודעה הבאה</string>
+    <string name="feedback_daily_limit">הגעתם למגבלה היומית. כתבו מחר</string>
+    <string name="feedback_monthly_limit">הגעתם למגבלה החודשית. כתבו מאוחר יותר</string>
+    <string name="feedback_no_mail_app">לא נמצאה אפליקציית דוא״ל. אפשר לכתוב אל %1$s</string>
+</resources>

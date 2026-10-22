@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_about_title">За приложението</string>
+    <string name="settings_about_subtitle">Версия, лиценз и източници на данни</string>
+    <string name="settings_feedback_title">Изпрати отзив</string>
+    <string name="settings_feedback_subtitle">Пиши на разработчика</string>
+    <string name="about_version_format">Версия %1$s</string>
+    <string name="about_description">Седем ежедневни инструмента в едно приложение: задачи, времето, валути, калкулатор, скенер, стъпки и полетни уреди.</string>
+    <string name="about_promise">Без реклами. Без проследяване. Без профил. Данните ти остават на твоя телефон.</string>
+    <string name="about_credits_title">Данни и услуги</string>
+    <string name="about_credits">Времето: Open-Meteo.com\nМеста: © сътрудници на OpenStreetMap\nВалутни курсове: Exchange Rate API\nБрегови линии: Natural Earth\nКартови изображения: Esri и неговите доставчици</string>
+    <string name="about_open_readme">Повече</string>
+    <string name="about_open_license">Лиценз</string>
+    <string name="about_open_privacy">Поверителност</string>
+    <string name="about_copyright">© 2026 Yurii Pavlenko. Всички права запазени.</string>
+    <string name="about_link_failed">Страницата не може да се отвори</string>
+    <string name="feedback_title">Изпрати отзив</string>
+    <string name="feedback_hint">Твоето съобщение до разработчика</string>
+    <string name="feedback_include_details">Добави версията на приложението и модела на телефона</string>
+    <string name="feedback_note">Имейл приложението ти ще се отвори със съобщението. Нищо не се изпраща, докато сам не натиснеш изпращане, и можеш да го промениш преди това.</string>
+    <string name="feedback_send">Напиши имейл</string>
+    <string name="feedback_opened_mail">Имейл приложението е отворено</string>
+    <string name="feedback_too_short">Напиши още няколко думи</string>
+    <string name="feedback_duplicate">Това съобщение прилича на вече изпратено</string>
+    <string name="feedback_wait_minutes">Изчакай %1$d мин преди следващото съобщение</string>
+    <string name="feedback_daily_limit">Дневният лимит е достигнат. Пиши утре</string>
+    <string name="feedback_monthly_limit">Месечният лимит е достигнат. Пиши по-късно</string>
+    <string name="feedback_no_mail_app">Не е намерено имейл приложение. Можеш да пишеш на %1$s</string>
+</resources>
