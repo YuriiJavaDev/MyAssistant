@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tab_tasks">Việc</string>
+    <string name="app_tab_weather">Thời tiết</string>
+    <string name="app_tab_exchange">Tỷ giá</string>
+    <string name="app_tab_calculator">Máy tính</string>
+    <string name="app_tab_scan">Quét</string>
+    <string name="app_tab_steps">Bước</string>
+    <string name="app_tab_flights">Chuyến bay</string>
+    <string name="app_menu_settings">Cài đặt</string>
+    <string name="app_menu_options">Tùy chọn</string>
+    <string name="app_notifications_disabled">Thông báo đã tắt: nhắc nhở sẽ không hiển thị</string>
+    <string name="app_overdue_tasks_format">Công việc quá hạn: %1$d</string>
+    <string name="app_exact_alarm_already_granted">Quyền báo thức chính xác đã được cấp</string>
+    <string name="app_alarm_title">Nhắc nhở và báo thức</string>
+    <string name="app_alarm_voice_alert">Cảnh báo bằng giọng nói (TTS)</string>
+    <string name="app_alarm_full_screen">Cửa sổ toàn màn hình</string>
+    <string name="app_alarm_grant_exact">Cấp quyền báo thức chính xác</string>
+    <string name="backup_menu_export">Xuất bản sao lưu</string>
+    <string name="backup_menu_import">Nhập bản sao lưu</string>
+    <string name="backup_menu_cloud_settings">Cài đặt đám mây và sao lưu tự động</string>
+    <string name="backup_menu_cloud_save">Lưu lên đám mây ngay</string>
+    <string name="backup_menu_cloud_restore">Khôi phục từ đám mây</string>
+    <string name="backup_cloud_username_hint">Tên người dùng/Email</string>
+    <string name="backup_cloud_password_hint">Mật khẩu</string>
+    <string name="backup_cloud_auto_backup">Bật sao lưu tự động hằng ngày</string>
+    <string name="backup_cloud_auto_backup_info">ℹ️ Khi bật sao lưu tự động, tệp cơ sở dữ liệu trong bộ nhớ đám mây của bạn mặc định được ghi đè mỗi ngày một lần.</string>
+    <string name="backup_cloud_test">Kiểm tra</string>
+    <string name="backup_cloud_save">Lưu</string>
+    <string name="settings_language_title">Ngôn ngữ</string>
+    <string name="settings_language_subtitle">Ngôn ngữ ứng dụng</string>
+    <string name="language_system_default">Mặc định của hệ thống</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">กำลังอัปโหลดข้อมูลสำรองไปยังคลาวด์...</string>
+    <string name="backup_cloud_restoring">กำลังกู้คืนข้อมูลสำรองจากคลาวด์...</string>
+    <string name="backup_cloud_upload_success">อัปโหลดข้อมูลสำรองไปยังคลาวด์แล้ว</string>
+    <string name="backup_cloud_restore_success">กู้คืนข้อมูลสำรองจากคลาวด์แล้ว</string>
+    <string name="backup_cloud_restore_partly">กู้คืนงานจากคลาวด์แล้ว (ไม่พบข้อมูลสำรองของ: %1$s)</string>
+    <string name="backup_part_steps">ก้าว</string>
+    <string name="backup_part_flights">เที่ยวบิน</string>
+    <string name="backup_part_scans">การสแกน</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">ข้อผิดพลาดในการอัปโหลด: %1$s</string>
+    <string name="backup_error_download">ข้อผิดพลาดในการดาวน์โหลด: %1$s</string>
+    <string name="backup_error_unknown">ข้อผิดพลาดที่ไม่ทราบสาเหตุ</string>
+    <string name="backup_error_insecure_url">URL ต้องขึ้นต้นด้วย https://</string>
+    <string name="backup_error_authentication">การยืนยันตัวตนล้มเหลว: ตรวจสอบชื่อผู้ใช้และรหัสผ่าน</string>
+    <string name="backup_error_server_code">เซิร์ฟเวอร์ตอบกลับด้วยรหัส: %1$d</string>
+    <string name="backup_error_connection">ข้อผิดพลาดในการเชื่อมต่อ: %1$s</string>
+    <string name="backup_destination_title">บันทึกข้อมูลสำรองไปที่</string>
+    <string name="backup_destination_folder">เลือกโฟลเดอร์ (อุปกรณ์ การ์ด SD, USB, Drive...)</string>
+    <string name="backup_destination_share">แชร์ไปยังแอป</string>
+    <string name="backup_preparing">กำลังเตรียมข้อมูลสำรอง...</string>
+    <string name="backup_export_failed">การส่งออกล้มเหลว</string>
+    <string name="backup_export_saved">บันทึกข้อมูลสำรองแล้ว</string>
+    <string name="backup_import_success">นำเข้าข้อมูลสำรองสำเร็จ กำลังรีสตาร์ท...</string>
+    <string name="backup_import_failed">การนำเข้าล้มเหลว</string>
+    <string name="backup_import_title">โปรดทราบ!</string>
+    <string name="backup_import_message">การกู้คืนข้อมูลสำรองจะแทนที่งาน ก้าว และการสแกนปัจจุบันด้วยข้อมูลที่อยู่ในนั้น ต้องการดำเนินการต่อหรือไม่</string>
+    <string name="backup_import_confirm">ยืนยันการนำเข้า</string>
+    <string name="backup_share_chooser_title">ส่งออกข้อมูลสำรอง</string>
+    <string name="backup_cloud_settings_saved">บันทึกการตั้งค่าคลาวด์แล้ว</string>
+    <string name="backup_cloud_secure_storage_unavailable">ที่เก็บข้อมูลที่ปลอดภัยไม่พร้อมใช้งาน จึงไม่ได้บันทึกการตั้งค่า</string>
+    <string name="backup_cloud_url_empty">URL ต้องไม่ว่าง</string>
+    <string name="backup_cloud_testing">กำลังทดสอบการเชื่อมต่อ...</string>
+    <string name="backup_cloud_connection_successful">เชื่อมต่อสำเร็จ!</string>
+</resources>

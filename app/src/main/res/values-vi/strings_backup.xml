@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backup_cloud_uploading">Đang tải bản sao lưu lên đám mây...</string>
+    <string name="backup_cloud_restoring">Đang khôi phục bản sao lưu từ đám mây...</string>
+    <string name="backup_cloud_upload_success">Đã tải bản sao lưu lên đám mây</string>
+    <string name="backup_cloud_restore_success">Đã khôi phục bản sao lưu từ đám mây</string>
+    <string name="backup_cloud_restore_partly">Đã khôi phục công việc từ đám mây (không tìm thấy bản sao lưu cho: %1$s)</string>
+    <string name="backup_part_steps">bước chân</string>
+    <string name="backup_part_flights">chuyến bay</string>
+    <string name="backup_part_scans">bản quét</string>
+    <string name="backup_part_separator">", "</string>
+    <string name="backup_error_upload">Lỗi tải lên: %1$s</string>
+    <string name="backup_error_download">Lỗi tải xuống: %1$s</string>
+    <string name="backup_error_unknown">Lỗi không xác định</string>
+    <string name="backup_error_insecure_url">URL phải bắt đầu bằng https://</string>
+    <string name="backup_error_authentication">Xác thực thất bại: hãy kiểm tra tên người dùng và mật khẩu</string>
+    <string name="backup_error_server_code">Máy chủ trả về mã: %1$d</string>
+    <string name="backup_error_connection">Lỗi kết nối: %1$s</string>
+    <string name="backup_destination_title">Lưu bản sao lưu vào</string>
+    <string name="backup_destination_folder">Chọn thư mục (thiết bị, thẻ SD, USB, Drive...)</string>
+    <string name="backup_destination_share">Chia sẻ với ứng dụng</string>
+    <string name="backup_preparing">Đang chuẩn bị bản sao lưu...</string>
+    <string name="backup_export_failed">Xuất thất bại</string>
+    <string name="backup_export_saved">Đã lưu bản sao lưu</string>
+    <string name="backup_import_success">Đã nhập bản sao lưu. Đang khởi động lại...</string>
+    <string name="backup_import_failed">Nhập thất bại</string>
+    <string name="backup_import_title">Chú ý!</string>
+    <string name="backup_import_message">Khôi phục bản sao lưu sẽ thay thế công việc, bước chân và bản quét hiện tại bằng dữ liệu trong bản sao lưu. Bạn có chắc muốn tiếp tục?</string>
+    <string name="backup_import_confirm">Xác nhận nhập</string>
+    <string name="backup_share_chooser_title">Xuất bản sao lưu</string>
+    <string name="backup_cloud_settings_saved">Đã lưu cài đặt đám mây</string>
+    <string name="backup_cloud_secure_storage_unavailable">Bộ nhớ bảo mật không khả dụng, chưa lưu cài đặt</string>
+    <string name="backup_cloud_url_empty">URL không được để trống</string>
+    <string name="backup_cloud_testing">Đang kiểm tra kết nối...</string>
+    <string name="backup_cloud_connection_successful">Kết nối thành công!</string>
+</resources>

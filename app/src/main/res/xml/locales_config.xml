@@ -33,4 +33,6 @@
     <locale android:name="zh-TW" />
     <locale android:name="ja" />
     <locale android:name="ko" />
+    <locale android:name="vi" />
+    <locale android:name="th" />
 </locale-config>

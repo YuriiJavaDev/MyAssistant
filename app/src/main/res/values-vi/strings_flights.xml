@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">Ghi chuyến bay</string>
+    <string name="flights_notification_channel_description">Hiển thị khi đang ghi chuyến bay</string>
+    <string name="flights_notification_title">Đang ghi chuyến bay</string>
+    <string name="flights_notification_text">Chạm để mở các thiết bị</string>
+    <string-array name="flights_cardinal_points">
+        <item>B</item>
+        <item>ĐB</item>
+        <item>Đ</item>
+        <item>ĐN</item>
+        <item>N</item>
+        <item>TN</item>
+        <item>T</item>
+        <item>TB</item>
+    </string-array>
+    <string name="flights_report_title">Báo cáo chuyến bay</string>
+    <string name="flights_report_north">B</string>
+    <string name="flights_report_side_north">B</string>
+    <string name="flights_report_side_south">N</string>
+    <string name="flights_report_side_east">Đ</string>
+    <string name="flights_report_side_west">T</string>
+    <string name="flights_report_duration">Thời lượng</string>
+    <string name="flights_report_distance">Quãng đường</string>
+    <string name="flights_report_top_speed">Tốc độ tối đa</string>
+    <string name="flights_report_average_speed">Tốc độ trung bình</string>
+    <string name="flights_report_highest_altitude">Độ cao tối đa</string>
+    <string name="flights_report_best_climb">Lên cao tốt nhất</string>
+    <string name="flights_report_worst_sink">Xuống thấp tệ nhất</string>
+    <string name="flights_report_peak_load">Tải trọng đỉnh</string>
+    <string name="flights_report_start_point">Điểm xuất phát</string>
+    <string name="flights_report_end_point">Điểm đến</string>
+    <string name="flights_report_altitude_above_start">%1$s trên điểm xuất phát</string>
+    <string name="flights_report_altitude_above_sea_level">%1$s trên mực nước biển</string>
+    <string name="flights_report_chart_altitude_above_start">Độ cao (%1$s, so với điểm xuất phát)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">Độ cao (%1$s, so với mực nước biển)</string>
+    <string name="flights_report_chart_speed">Tốc độ so với mặt đất (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">Bản đồ: Natural Earth (phạm vi công cộng).</string>
+    <string name="flights_report_footer">%1$s Được ghi bởi MyAssistant. Chỉ để giải trí: không dùng để dẫn đường hay vì an toàn.</string>
+</resources>

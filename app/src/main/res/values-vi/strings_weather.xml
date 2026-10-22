@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather_description_clear_sky">Trời quang</string>
+    <string name="weather_description_mainly_clear">Chủ yếu quang đãng</string>
+    <string name="weather_description_partly_cloudy">Có mây rải rác</string>
+    <string name="weather_description_overcast">U ám</string>
+    <string name="weather_description_fog">Sương mù</string>
+    <string name="weather_description_rime_fog">Sương mù đóng băng</string>
+    <string name="weather_description_light_drizzle">Mưa phùn nhẹ</string>
+    <string name="weather_description_drizzle">Mưa phùn</string>
+    <string name="weather_description_dense_drizzle">Mưa phùn dày</string>
+    <string name="weather_description_light_freezing_drizzle">Mưa phùn đóng băng nhẹ</string>
+    <string name="weather_description_freezing_drizzle">Mưa phùn đóng băng</string>
+    <string name="weather_description_slight_rain">Mưa nhỏ</string>
+    <string name="weather_description_rain">Mưa</string>
+    <string name="weather_description_heavy_rain">Mưa lớn</string>
+    <string name="weather_description_light_freezing_rain">Mưa đóng băng nhẹ</string>
+    <string name="weather_description_freezing_rain">Mưa đóng băng</string>
+    <string name="weather_description_slight_snow">Tuyết rơi nhẹ</string>
+    <string name="weather_description_snow">Tuyết rơi</string>
+    <string name="weather_description_heavy_snow">Tuyết rơi dày</string>
+    <string name="weather_description_snow_grains">Hạt tuyết</string>
+    <string name="weather_description_light_rain_showers">Mưa rào nhẹ</string>
+    <string name="weather_description_rain_showers">Mưa rào</string>
+    <string name="weather_description_violent_rain_showers">Mưa rào dữ dội</string>
+    <string name="weather_description_light_snow_showers">Mưa tuyết nhẹ</string>
+    <string name="weather_description_heavy_snow_showers">Mưa tuyết dày</string>
+    <string name="weather_description_thunderstorm">Giông bão</string>
+    <string name="weather_description_thunderstorm_with_hail">Giông kèm mưa đá</string>
+    <string name="weather_description_thunderstorm_with_heavy_hail">Giông kèm mưa đá lớn</string>
+    <string name="weather_description_unknown">Không rõ</string>
+    <string name="weather_moon_phase_new_moon">Trăng non</string>
+    <string name="weather_moon_phase_waxing_crescent">Trăng lưỡi liềm đầu tháng</string>
+    <string name="weather_moon_phase_first_quarter">Trăng bán nguyệt đầu tháng</string>
+    <string name="weather_moon_phase_waxing_gibbous">Trăng khuyết đầu tháng</string>
+    <string name="weather_moon_phase_full_moon">Trăng tròn</string>
+    <string name="weather_moon_phase_waning_gibbous">Trăng khuyết cuối tháng</string>
+    <string name="weather_moon_phase_last_quarter">Trăng bán nguyệt cuối tháng</string>
+    <string name="weather_moon_phase_waning_crescent">Trăng lưỡi liềm cuối tháng</string>
+    <string name="weather_error_no_location">Không thể xác định vị trí. Hãy bật dịch vụ định vị hoặc tìm một thành phố.</string>
+    <string name="weather_error_city_not_found">Không tìm thấy thành phố nào cho “%1$s”</string>
+    <string name="weather_error_no_network">Không thể tải thời tiết. Hãy kiểm tra kết nối Internet.</string>
+    <string name="weather_error_choose_city">Chọn một thành phố từ danh sách</string>
+    <string name="weather_current_location">Vị trí hiện tại</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tasks_list_input_hint">ต้องทำอะไร</string>
+    <string name="tasks_list_add">เพิ่ม</string>
+    <string name="tasks_list_delete_completed">ลบที่เสร็จแล้ว</string>
+    <string name="tasks_list_clear_all">ล้างทั้งหมด</string>
+    <string name="tasks_list_reminder_set">ตั้งการเตือนแล้ว</string>
+    <string name="tasks_statistics">ทั้งหมด: %1$d  เสร็จแล้ว: %2$d  เหลือ: %3$d  ความคืบหน้า: %4$d %%</string>
+    <string name="tasks_dialog_title_add">งานใหม่</string>
+    <string name="tasks_dialog_title_edit">แก้ไขงาน</string>
+    <string name="tasks_dialog_importance">ระดับความสำคัญ:</string>
+    <string name="tasks_dialog_deadline_label">กำหนดส่ง:</string>
+    <string name="tasks_dialog_deadline_select">เลือกกำหนดส่ง</string>
+    <string name="tasks_dialog_reminder_label">การเตือน (วันที่และเวลา):</string>
+    <string name="tasks_dialog_reminder_select">เลือกวันที่และเวลาของการเตือน</string>
+    <string name="tasks_dialog_show_timestamps">แสดงวันที่สร้าง/แก้ไข</string>
+    <string name="tasks_dialog_delete">ลบ</string>
+    <string name="tasks_dialog_save">บันทึก</string>
+    <string name="tasks_dialog_clear">ล้าง</string>
+    <string name="tasks_importance_normal">ปกติ</string>
+    <string name="tasks_importance_important">สำคัญ</string>
+    <string name="tasks_importance_urgent">ด่วน</string>
+    <string name="tasks_toast_created">สร้างงานแล้ว</string>
+    <string name="tasks_toast_updated">อัปเดตงานแล้ว</string>
+    <string name="tasks_toast_deleted">ลบงานแล้ว</string>
+    <string name="tasks_toast_completed_deleted">ลบงานที่เสร็จแล้ว</string>
+    <string name="tasks_toast_all_cleared">ล้างงานทั้งหมดแล้ว</string>
+    <string name="tasks_toast_empty_title">คำอธิบายงานต้องไม่ว่าง</string>
+    <string name="tasks_toast_reminder_after_deadline">การเตือนต้องไม่อยู่หลังกำหนดส่ง!</string>
+    <string name="tasks_toast_reminder_in_past">การเตือนต้องไม่อยู่ในอดีต!</string>
+    <string name="tasks_toast_reminder_cleared">ล้างการเตือนแล้ว เพราะกำหนดส่งเร็วกว่า!</string>
+    <string name="tasks_toast_select_deadline_first">เลือกกำหนดส่งก่อน!</string>
+    <string name="tasks_time_created">สร้าง: %1$s</string>
+    <string name="tasks_time_edited">แก้ไข: %1$s</string>
+    <string name="tasks_time_completed">เสร็จ: %1$s</string>
+    <string name="tasks_deadline_prefixed">กำหนดส่ง: %1$s</string>
+    <plurals name="tasks_deadline_days_left">
+        <item quantity="other">%1$s — เหลืออีก %2$d วัน!</item>
+    </plurals>
+    <plurals name="tasks_deadline_overdue">
+        <item quantity="other">%1$s — เลยกำหนด %2$d วัน!</item>
+    </plurals>
+    <string name="tasks_delete_title">ยืนยันการลบ</string>
+    <string name="tasks_delete_button">ลบ</string>
+    <string name="tasks_delete_nothing">ไม่พบรายการที่จะลบ!</string>
+    <string name="tasks_delete_item_message">ต้องการลบรายการนี้จริงหรือไม่ การกระทำนี้ย้อนกลับไม่ได้!</string>
+    <string name="tasks_delete_cannot_be_undone">การกระทำนี้ย้อนกลับไม่ได้!</string>
+    <plurals name="tasks_delete_completed_question">
+        <item quantity="other">ลบงานที่เสร็จแล้ว %1$d งานไหม</item>
+    </plurals>
+    <plurals name="tasks_delete_completed_reminders">
+        <item quantity="other">ในจำนวนนี้ %1$d งานยังมีการเตือนที่บันทึกไว้</item>
+    </plurals>
+    <plurals name="tasks_delete_all_question">
+        <item quantity="other">ลบงานทั้ง %1$d งานไหม</item>
+    </plurals>
+    <plurals name="tasks_delete_all_reminders">
+        <item quantity="other">%1$d งานมีการเตือนที่ใช้งานอยู่</item>
+    </plurals>
+    <string name="tasks_alert_title">แจ้งเตือนกำหนดส่ง!</string>
+    <string name="tasks_alert_view_tasks">ดูงาน</string>
+    <string name="tasks_alert_channel_name">การแจ้งเตือนกำหนดส่งงาน</string>
+    <string name="tasks_alert_channel_description">การแจ้งเตือนด่วนเกี่ยวกับกำหนดส่งงาน</string>
+    <plurals name="tasks_alert_notification_text">
+        <item quantity="other">จำนวนกำหนดส่งงานที่เลยกำหนด: %1$d</item>
+    </plurals>
+    <plurals name="tasks_alert_speech_count">
+        <item quantity="other">โปรดทราบ! จำนวนกำหนดส่งงานที่ต้องใส่ใจทันที: %1$d</item>
+    </plurals>
+    <string name="tasks_alert_speech_task">โปรดทราบ! ใกล้ถึงกำหนดส่งงาน: %1$s</string>
+</resources>

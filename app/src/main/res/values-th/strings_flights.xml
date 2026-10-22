@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flights_notification_channel_name">การบันทึกเที่ยวบิน</string>
+    <string name="flights_notification_channel_description">แสดงขณะบันทึกเที่ยวบิน</string>
+    <string name="flights_notification_title">กำลังบันทึกเที่ยวบิน</string>
+    <string name="flights_notification_text">แตะเพื่อเปิดเครื่องมือวัด</string>
+    <string-array name="flights_cardinal_points">
+        <item>เหนือ</item>
+        <item>ตอ.เฉียงเหนือ</item>
+        <item>ตะวันออก</item>
+        <item>ตอ.เฉียงใต้</item>
+        <item>ใต้</item>
+        <item>ตต.เฉียงใต้</item>
+        <item>ตะวันตก</item>
+        <item>ตต.เฉียงเหนือ</item>
+    </string-array>
+    <string name="flights_report_title">รายงานเที่ยวบิน</string>
+    <string name="flights_report_north">เหนือ</string>
+    <string name="flights_report_side_north">เหนือ</string>
+    <string name="flights_report_side_south">ใต้</string>
+    <string name="flights_report_side_east">ออก</string>
+    <string name="flights_report_side_west">ตก</string>
+    <string name="flights_report_duration">ระยะเวลา</string>
+    <string name="flights_report_distance">ระยะทาง</string>
+    <string name="flights_report_top_speed">ความเร็วสูงสุด</string>
+    <string name="flights_report_average_speed">ความเร็วเฉลี่ย</string>
+    <string name="flights_report_highest_altitude">ความสูงสูงสุด</string>
+    <string name="flights_report_best_climb">การไต่ที่ดีที่สุด</string>
+    <string name="flights_report_worst_sink">การลดที่แย่ที่สุด</string>
+    <string name="flights_report_peak_load">แรงบรรทุกสูงสุด</string>
+    <string name="flights_report_start_point">จุดเริ่มต้น</string>
+    <string name="flights_report_end_point">จุดสิ้นสุด</string>
+    <string name="flights_report_altitude_above_start">สูงกว่าจุดเริ่ม %1$s</string>
+    <string name="flights_report_altitude_above_sea_level">สูงจากระดับน้ำทะเล %1$s</string>
+    <string name="flights_report_chart_altitude_above_start">ความสูง (%1$s, เหนือจุดเริ่ม)</string>
+    <string name="flights_report_chart_altitude_above_sea_level">ความสูง (%1$s, เหนือระดับน้ำทะเล)</string>
+    <string name="flights_report_chart_speed">ความเร็วเทียบพื้นดิน (%1$s)</string>
+    <string name="flights_report_map_credit_coastline">แผนที่: Natural Earth (สาธารณสมบัติ)</string>
+    <string name="flights_report_footer">%1$s บันทึกใน MyAssistant เพื่อความสนุกเท่านั้น: ไม่ใช่สำหรับการนำทางหรือความปลอดภัย</string>
+</resources>

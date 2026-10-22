@@ -42,7 +42,9 @@ public final class AppLanguage {
             new AppLanguage("zh-CN", "简体中文"),
             new AppLanguage("zh-TW", "繁體中文"),
             new AppLanguage("ja", "日本語"),
-            new AppLanguage("ko", "한국어")
+            new AppLanguage("ko", "한국어"),
+            new AppLanguage("vi", "Tiếng Việt"),
+            new AppLanguage("th", "ไทย")
     ));
 
     private final String tag;
