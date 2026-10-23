@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Memulai</item>
+        <item>MyAssistant menghimpun tujuh alat harian dalam satu aplikasi. Berpindah di antaranya dengan tab. Ikon roda gigi membuka pengaturan dan tiga titik membuka menu cadangan. Tidak perlu akun.</item>
+        <item># Tugas</item>
+        <item>Tulis apa yang perlu dilakukan, lalu pilih tingkat kepentingan, tenggat, dan pengingat. Pengingat datang sebagai notifikasi, peringatan layar penuh, dan jika mau, peringatan suara. Pengingat tetap ada setelah ponsel dinyalakan ulang.</item>
+        <item>- Saring daftar menurut status dan urutkan menurut tanggal, kepentingan, atau tenggat.</item>
+        <item>- Buka tugas untuk mengubah atau menghapusnya.</item>
+        <item>- Agar pengingat tiba tepat waktu, izinkan notifikasi dan alarm yang tepat di pengaturan.</item>
+        <item># Cuaca</item>
+        <item>Lihat cuaca di tempat Anda berada atau cari kota mana pun. Gambar berubah sesuai cuaca dan waktu, serta menampilkan fase bulan. Pilih satuan dengan tombol «Satuan».</item>
+        <item># Mata uang</item>
+        <item>Pilih dua mata uang, ketik jumlahnya, dan lihat hasilnya. Tukar kedua mata uang dengan satu sentuhan. Kurs disimpan, sehingga kurs terakhir yang diketahui tetap bisa dipakai tanpa internet dan tanggal pembaruan terakhir ditampilkan.</item>
+        <item># Kalkulator</item>
+        <item>Mode dasar dan ilmiah, derajat atau radian, memori, dan riwayat perhitungan.</item>
+        <item># Pindai</item>
+        <item>Foto satu halaman atau pilih gambar, periksa tepi yang terdeteksi, atur cahaya, dan pilih filter. Tambahkan halaman ke dokumen yang sama, lalu bagikan sebagai PDF atau gambar.</item>
+        <item># Langkah</item>
+        <item>Sensor langkah ponsel Anda menghitung langkah di latar belakang. Izinkan aktivitas fisik. Untuk jarak yang akurat, atur panjang langkah berjalan dan berlari di pengaturan langkah, tempat aplikasi menjelaskan cara mengukurnya. Langkah dibagi menjadi berjalan dan berlari menurut kecepatannya.</item>
+        <item># Penerbangan</item>
+        <item>Hanya untuk hiburan dan rasa ingin tahu: jangan gunakan untuk navigasi atau hal apa pun yang menyangkut keselamatan. Izinkan lokasi akurat dan tekan «Mulai». Aplikasi merekam kecepatan, ketinggian, laju naik, beban, dan jalur, serta memutar suara variometer. Setelah terbang, buka jurnal untuk laporan PDF. Saat batas laporan tercapai, hapus penerbangan lama dari jurnal.</item>
+        <item># Cadangan</item>
+        <item>Di menu tiga titik, Anda dapat mengekspor semua data ke berkas dan mengimpornya di ponsel lain. Anda juga dapat menyimpannya ke penyimpanan cloud Anda sendiri (WebDAV) dan mengaktifkan cadangan otomatis harian. Buat cadangan sebelum berganti ponsel.</item>
+        <item># Pengaturan</item>
+        <item>- Bahasa: bahasa seluruh aplikasi.</item>
+        <item>- Mode tampilan: terang, gelap, atau otomatis.</item>
+        <item>- Desain: sepuluh tampilan untuk seluruh aplikasi.</item>
+        <item>- Pengingat dan izin: pengingat, suara, dan akses ke fitur ponsel.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Data Anda tetap milik Anda</item>
+        <item>MyAssistant tidak memiliki iklan, analitik, maupun akun. Tugas, langkah, hasil pindai, dan penerbangan Anda hanya disimpan di ponsel Anda.</item>
+        <item># Apa yang melewati internet</item>
+        <item>Hanya yang Anda minta:</item>
+        <item>- Cuaca dan pencarian kota: lokasi atau nama kota Anda dikirim ke Open-Meteo dan OpenStreetMap.</item>
+        <item>- Kurs mata uang: permintaan kurs, tanpa data pribadi.</item>
+        <item>- Peta laporan penerbangan: gambar peta area terbang diminta dari Esri.</item>
+        <item>- Cadangan cloud Anda sendiri: jika Anda mengaturnya, salinan data dikirim melalui koneksi aman ke server WebDAV pilihan Anda. Kata sandi disimpan dalam bentuk terenkripsi.</item>
+        <item># Izin</item>
+        <item>- Lokasi: cuaca di tempat Anda berada dan perekaman penerbangan.</item>
+        <item>- Aktivitas fisik: menghitung langkah.</item>
+        <item>- Notifikasi dan alarm: pengingat tugas Anda.</item>
+        <item># Berbagi dan penjualan</item>
+        <item>Data Anda tidak pernah dijual atau dibagikan untuk iklan. Cadangan atau laporan hanya keluar dari ponsel saat Anda sendiri membagikannya.</item>
+        <item># Kontak</item>
+        <item>Ada pertanyaan? Gunakan «Kirim masukan» di pengaturan.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Ringkasan</item>
+        <item>- Anda membeli MyAssistant sekali dan menggunakannya di perangkat Anda untuk keperluan pribadi, tanpa langganan.</item>
+        <item>- Anda tidak boleh menyalin, menjual kembali, menyewakan, mendistribusikan ulang, atau menerbitkan aplikasi atau bagiannya, atau membongkarnya untuk mempelajari kodenya.</item>
+        <item>- Aplikasi disediakan «apa adanya», tanpa jaminan. Laporan bug diterima dan diperbaiki bila memungkinkan, tetapi tanpa kewajiban atau tenggat.</item>
+        <item>- Instrumen penerbangan, penghitung langkah, cuaca, dan kurs hanya untuk informasi.</item>
+        <item>Lisensi lengkap di bawah ini berbahasa Inggris dan merupakan teks yang mengikat.</item>
+        <item># Lisensi lengkap (bahasa Inggris)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Kom i gang</item>
+        <item>MyAssistant samler syv hverdagsværktøjer i én app. Skift mellem dem med fanerne. Tandhjulet åbner indstillingerne, og de tre prikker åbner menuen til sikkerhedskopier. Du behøver ingen konto.</item>
+        <item># Opgaver</item>
+        <item>Skriv, hvad der skal gøres, og vælg vigtighed, deadline og påmindelse. Påmindelsen kommer som notifikation, som advarsel på hele skærmen og, hvis du vil, som stemmeadvarsel. Påmindelser bevares efter en genstart af telefonen.</item>
+        <item>- Filtrer listen efter status, og sorter efter dato, vigtighed eller deadline.</item>
+        <item>- Åbn en opgave for at ændre eller slette den.</item>
+        <item>- Tillad notifikationer og præcise alarmer i indstillingerne, så påmindelserne kommer til tiden.</item>
+        <item># Vejr</item>
+        <item>Se vejret, hvor du er, eller søg efter en vilkårlig by. Billedet skifter med vejret og tidspunktet på dagen og viser månens fase. Vælg enheder med knappen »Enheder«.</item>
+        <item># Valuta</item>
+        <item>Vælg to valutaer, skriv et beløb, og se resultatet. Byt valutaerne med ét tryk. Kurserne gemmes, så de senest kendte kurser virker uden internet, og datoen for den seneste opdatering vises.</item>
+        <item># Lommeregner</item>
+        <item>Almindelig og videnskabelig tilstand, grader eller radianer, hukommelse og en historik over beregningerne.</item>
+        <item># Scanner</item>
+        <item>Tag et billede af en side eller vælg et billede, kontroller de fundne kanter, juster lyset, og vælg et filter. Tilføj flere sider til det samme dokument, og del det derefter som PDF eller som billeder.</item>
+        <item># Skridt</item>
+        <item>Skridtsensoren i din telefon tæller dine skridt i baggrunden. Tillad adgang til fysisk aktivitet. For en nøjagtig afstand skal du angive din skridtlængde ved gang og løb i skridtindstillingerne, hvor appen forklarer, hvordan du måler den. Skridtene deles op i gang og løb efter tempo.</item>
+        <item># Flyvninger</item>
+        <item>Kun for sjov og nysgerrighed: brug det ikke til navigation eller noget, der har med sikkerhed at gøre. Tillad præcis placering, og tryk på »Start«. Appen registrerer hastighed, højde, stigehastighed, belastning og rute og afspiller variometerlyden. Efter flyvningen åbner du logbogen for at få en PDF-rapport. Når grænsen for rapporter er nået, skal du slette gamle flyvninger fra logbogen.</item>
+        <item># Sikkerhedskopi</item>
+        <item>I menuen med de tre prikker kan du eksportere alle dine data til en fil og importere dem på en anden telefon. Du kan også gemme dem i din egen skylagring (WebDAV) og slå en daglig automatisk sikkerhedskopi til. Tag en sikkerhedskopi, før du skifter telefon.</item>
+        <item># Indstillinger</item>
+        <item>- Sprog: sproget i hele appen.</item>
+        <item>- Visningstilstand: lys, mørk eller automatisk.</item>
+        <item>- Design: ti udseender til hele appen.</item>
+        <item>- Påmindelser og tilladelser: påmindelser, lyde og adgang til telefonens funktioner.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Dine data bliver hos dig</item>
+        <item>MyAssistant har ingen reklamer, ingen analyse og ingen konto. Dine opgaver, skridt, scanninger og flyvninger gemmes kun på din telefon.</item>
+        <item># Hvad der sendes via internettet</item>
+        <item>Kun det, du selv beder om:</item>
+        <item>- Vejr og bysøgning: din placering eller byens navn sendes til Open-Meteo og OpenStreetMap.</item>
+        <item>- Valutakurser: en forespørgsel om kurserne uden personlige data.</item>
+        <item>- Kort til flyverapporter: kortbilleder af flyveområdet hentes fra Esri.</item>
+        <item>- Din egen skykopi: hvis du opsætter den, sendes en kopi af dine data til den WebDAV-server, du har valgt, over en sikker forbindelse. Adgangskoden gemmes krypteret.</item>
+        <item># Tilladelser</item>
+        <item>- Placering: vejret, hvor du er, og registrering af flyvninger.</item>
+        <item>- Fysisk aktivitet: optælling af skridt.</item>
+        <item>- Notifikationer og alarmer: påmindelser om dine opgaver.</item>
+        <item># Deling og salg</item>
+        <item>Dine data sælges aldrig og deles aldrig til reklame. En kopi eller en rapport forlader kun telefonen, når du selv deler den.</item>
+        <item># Kontakt</item>
+        <item>Spørgsmål? Brug Send feedback i indstillingerne.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Kort sagt</item>
+        <item>- Du køber MyAssistant én gang og må bruge den på dine egne enheder til personligt brug uden abonnement.</item>
+        <item>- Du må ikke kopiere, videresælge, udleje, distribuere eller offentliggøre appen eller dele af den eller skille den ad for at studere koden.</item>
+        <item>- Appen leveres i den stand, den er, uden garanti. Fejlrapporter er velkomne og rettes, når det er muligt, men uden forpligtelse eller frist.</item>
+        <item>- Flyveinstrumenterne, skridttælleren, vejret og valutakurserne er kun til information.</item>
+        <item>Den fulde licens nedenfor er på engelsk og er den bindende tekst.</item>
+        <item># Fuld licens (på engelsk)</item>
+    </string-array>
+</resources>

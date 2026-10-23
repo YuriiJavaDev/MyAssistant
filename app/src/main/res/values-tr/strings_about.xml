@@ -9,11 +9,11 @@
     <string name="about_promise">Reklam yok. İzleyici yok. Hesap yok. Verileriniz telefonunuzda kalır.</string>
     <string name="about_credits_title">Veriler ve hizmetler</string>
     <string name="about_credits">Hava durumu: Open-Meteo.com\nYerler: © OpenStreetMap katkıda bulunanlar\nDöviz kurları: Exchange Rate API\nKıyı çizgileri: Natural Earth\nHarita görüntüleri: Esri ve sağlayıcıları</string>
-    <string name="about_open_readme">Daha fazla</string>
+    <string name="about_open_guide">Kılavuz</string>
     <string name="about_open_license">Lisans</string>
     <string name="about_open_privacy">Gizlilik</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Tüm hakları saklıdır.</string>
-    <string name="about_link_failed">Sayfa açılamadı</string>
+    <string name="info_close">Kapat</string>
     <string name="feedback_title">Geri bildirim gönder</string>
     <string name="feedback_hint">Geliştiriciye mesajınız</string>
     <string name="feedback_include_details">Uygulama sürümünü ve telefon modelini ekle</string>

@@ -9,11 +9,11 @@
     <string name="about_promise">Nincs reklám. Nincs követés. Nincs fiók. Az adataid a telefonodon maradnak.</string>
     <string name="about_credits_title">Adatok és szolgáltatások</string>
     <string name="about_credits">Időjárás: Open-Meteo.com\nHelyek: © az OpenStreetMap közreműködői\nÁrfolyamok: Exchange Rate API\nPartvonalak: Natural Earth\nTérképképek: Esri és szolgáltatói</string>
-    <string name="about_open_readme">Tudj meg többet</string>
+    <string name="about_open_guide">Útmutató</string>
     <string name="about_open_license">Licenc</string>
     <string name="about_open_privacy">Adatvédelem</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Minden jog fenntartva.</string>
-    <string name="about_link_failed">Az oldalt nem sikerült megnyitni</string>
+    <string name="info_close">Bezárás</string>
     <string name="feedback_title">Visszajelzés küldése</string>
     <string name="feedback_hint">Üzeneted a fejlesztőnek</string>
     <string name="feedback_include_details">Az alkalmazás verziójának és a telefon típusának hozzáadása</string>

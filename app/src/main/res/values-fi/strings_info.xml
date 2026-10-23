@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Alkuun</item>
+        <item>MyAssistant kokoaa seitsemän arjen työkalua yhteen sovellukseen. Vaihda niiden välillä välilehdillä. Hammasratas avaa asetukset ja kolme pistettä varmuuskopioinnin valikon. Tiliä ei tarvita.</item>
+        <item># Tehtävät</item>
+        <item>Kirjoita, mitä pitää tehdä, ja valitse tärkeys, määräaika ja muistutus. Muistutus tulee ilmoituksena, koko näytön hälytyksenä ja halutessasi puheilmoituksena. Muistutukset säilyvät puhelimen uudelleenkäynnistyksen jälkeen.</item>
+        <item>- Suodata luetteloa tilan mukaan ja lajittele päivämäärän, tärkeyden tai määräajan mukaan.</item>
+        <item>- Avaa tehtävä muuttaaksesi tai poistaaksesi sen.</item>
+        <item>- Salli ilmoitukset ja tarkat hälytykset asetuksissa, jotta muistutukset tulevat ajoissa.</item>
+        <item># Sää</item>
+        <item>Katso sää siellä, missä olet, tai hae mikä tahansa kaupunki. Kuva muuttuu sään ja vuorokaudenajan mukaan ja näyttää kuun vaiheen. Valitse yksiköt Yksiköt-painikkeella.</item>
+        <item># Valuutat</item>
+        <item>Valitse kaksi valuuttaa, kirjoita summa ja katso tulos. Vaihda valuutat keskenään yhdellä napautuksella. Kurssit tallennetaan, joten viimeksi tunnetut kurssit toimivat ilman internetiä ja viimeisimmän päivityksen päivämäärä näkyy.</item>
+        <item># Laskin</item>
+        <item>Perus- ja tieteellinen tila, asteet tai radiaanit, muisti ja laskujen historia.</item>
+        <item># Skanneri</item>
+        <item>Ota kuva sivusta tai valitse kuva, tarkista löydetyt reunat, säädä valoa ja valitse suodatin. Lisää samaan asiakirjaan lisää sivuja ja jaa se sitten PDF-tiedostona tai kuvina.</item>
+        <item># Askeleet</item>
+        <item>Puhelimesi askelanturi laskee askeleesi taustalla. Salli pääsy fyysiseen aktiivisuuteen. Tarkkaa matkaa varten aseta askelpituutesi kävelyssä ja juoksussa askelasetuksissa, joissa sovellus selittää, miten se mitataan. Askeleet jaetaan kävelyyn ja juoksuun tahdin mukaan.</item>
+        <item># Lennot</item>
+        <item>Vain huvin ja uteliaisuuden vuoksi: älä käytä tätä navigointiin tai mihinkään turvallisuuteen liittyvään. Salli tarkka sijainti ja napauta Aloita. Sovellus tallentaa nopeuden, korkeuden, nousunopeuden, kuormituksen ja reitin ja toistaa variometrin äänen. Lennon jälkeen avaa lokikirja saadaksesi PDF-raportin. Kun raporttien raja on täynnä, poista vanhoja lentoja lokikirjasta.</item>
+        <item># Varmuuskopio</item>
+        <item>Kolmen pisteen valikossa voit viedä kaikki tietosi tiedostoon ja tuoda ne toiseen puhelimeen. Voit myös tallentaa ne omaan pilvitallennustilaasi (WebDAV) ja ottaa käyttöön päivittäisen automaattisen varmuuskopion. Tee varmuuskopio ennen puhelimen vaihtoa.</item>
+        <item># Asetukset</item>
+        <item>- Kieli: koko sovelluksen kieli.</item>
+        <item>- Näyttötila: vaalea, tumma tai automaattinen.</item>
+        <item>- Ulkoasu: kymmenen ilmettä koko sovellukseen.</item>
+        <item>- Muistutukset ja oikeudet: muistutukset, äänet ja pääsy puhelimen ominaisuuksiin.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Tietosi pysyvät sinulla</item>
+        <item>MyAssistantissa ei ole mainoksia, analytiikkaa eikä tiliä. Tehtäväsi, askeleesi, skannauksesi ja lentosi tallennetaan vain puhelimeesi.</item>
+        <item># Mitä kulkee internetin kautta</item>
+        <item>Vain se, mitä itse pyydät:</item>
+        <item>- Sää ja kaupunkihaku: sijaintisi tai kaupungin nimi lähetetään Open-Meteolle ja OpenStreetMapille.</item>
+        <item>- Valuuttakurssit: kurssipyyntö ilman henkilötietoja.</item>
+        <item>- Lentoraporttien kartat: lentoalueen karttakuvat pyydetään Esrilta.</item>
+        <item>- Oma pilvivarmuuskopiosi: jos otat sen käyttöön, tietojesi kopio lähetetään valitsemallesi WebDAV-palvelimelle suojatun yhteyden kautta. Salasana tallennetaan salattuna.</item>
+        <item># Oikeudet</item>
+        <item>- Sijainti: sää siellä, missä olet, ja lentojen tallennus.</item>
+        <item>- Fyysinen aktiivisuus: askelten laskenta.</item>
+        <item>- Ilmoitukset ja hälytykset: tehtävien muistutukset.</item>
+        <item># Jakaminen ja myynti</item>
+        <item>Tietojasi ei koskaan myydä eikä jaeta mainontaa varten. Varmuuskopio tai raportti poistuu puhelimesta vain, kun jaat sen itse.</item>
+        <item># Yhteystiedot</item>
+        <item>Kysyttävää? Käytä asetusten kohtaa Lähetä palautetta.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Lyhyesti</item>
+        <item>- Ostat MyAssistantin kerran ja saat käyttää sitä omilla laitteillasi henkilökohtaiseen käyttöön ilman tilausta.</item>
+        <item>- Sovellusta tai sen osia ei saa kopioida, myydä edelleen, vuokrata, levittää tai julkaista, eikä sitä saa purkaa koodin tutkimiseksi.</item>
+        <item>- Sovellus toimitetaan sellaisena kuin se on, ilman takuuta. Virheilmoitukset ovat tervetulleita ja ne korjataan mahdollisuuksien mukaan, mutta ilman velvoitetta tai määräaikaa.</item>
+        <item>- Lentomittarit, askelmittari, sää ja valuuttakurssit ovat vain tiedoksi.</item>
+        <item>Alla oleva täydellinen lisenssi on englanniksi ja se on sitova teksti.</item>
+        <item># Täydellinen lisenssi (englanniksi)</item>
+    </string-array>
+</resources>

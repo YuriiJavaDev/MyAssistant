@@ -9,11 +9,11 @@
     <string name="about_promise">בלי פרסומות. בלי מעקב. בלי חשבון. הנתונים שלכם נשארים בטלפון שלכם.</string>
     <string name="about_credits_title">נתונים ושירותים</string>
     <string name="about_credits">מזג אוויר: Open-Meteo.com\nמקומות: © תורמי OpenStreetMap\nשערי חליפין: Exchange Rate API\nקווי חוף: Natural Earth\nתצלומי מפה: Esri והספקים שלה</string>
-    <string name="about_open_readme">עוד מידע</string>
+    <string name="about_open_guide">מדריך</string>
     <string name="about_open_license">רישיון</string>
     <string name="about_open_privacy">פרטיות</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. כל הזכויות שמורות.</string>
-    <string name="about_link_failed">לא ניתן לפתוח את הדף</string>
+    <string name="info_close">סגירה</string>
     <string name="feedback_title">משוב</string>
     <string name="feedback_hint">ההודעה שלכם למפתח</string>
     <string name="feedback_include_details">הוסיפו את גרסת האפליקציה ואת דגם הטלפון</string>

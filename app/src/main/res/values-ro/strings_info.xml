@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Primii pași</item>
+        <item>MyAssistant adună șapte instrumente de zi cu zi într-o singură aplicație. Treci de la unul la altul cu ajutorul filelor. Rotița deschide setările, iar cele trei puncte deschid meniul de copii de rezervă. Nu ai nevoie de cont.</item>
+        <item># Sarcini</item>
+        <item>Scrie ce trebuie făcut și alege importanța, un termen și un memento. Mementoul vine ca notificare, ca alertă pe tot ecranul și, dacă vrei, ca alertă vocală. Mementourile rămân după repornirea telefonului.</item>
+        <item>- Filtrează lista după stare și sortează după dată, importanță sau termen.</item>
+        <item>- Deschide o sarcină ca să o modifici sau să o ștergi.</item>
+        <item>- Permite notificările și alarmele exacte în setări, ca mementourile să ajungă la timp.</item>
+        <item># Vremea</item>
+        <item>Vezi vremea de unde ești sau caută orice oraș. Imaginea se schimbă odată cu vremea și ora din zi și arată faza lunii. Alege unitățile cu butonul „Unități”.</item>
+        <item># Valute</item>
+        <item>Alege două valute, scrie o sumă și vezi rezultatul. Schimbă valutele între ele cu o atingere. Cursurile se salvează, așa că ultimele cursuri cunoscute funcționează fără internet, iar data ultimei actualizări este afișată.</item>
+        <item># Calculator</item>
+        <item>Mod simplu și științific, grade sau radiani, memorie și istoricul calculelor.</item>
+        <item># Scaner</item>
+        <item>Fotografiază o pagină sau alege o imagine, verifică marginile detectate, reglează lumina și alege un filtru. Adaugă alte pagini la același document, apoi trimite-l ca PDF sau ca imagini.</item>
+        <item># Pași</item>
+        <item>Senzorul de pași al telefonului numără pașii în fundal. Permite accesul la activitatea fizică. Pentru o distanță exactă, setează lungimea pasului la mers și la alergare în setările pașilor, unde aplicația explică cum se măsoară. Pașii se împart în mers și alergare după ritm.</item>
+        <item># Zboruri</item>
+        <item>Doar pentru distracție și curiozitate: nu-l folosi pentru navigație sau pentru orice ține de siguranță. Permite locația precisă și apasă „Start”. Aplicația înregistrează viteza, altitudinea, rata de urcare, sarcina și traseul și redă sunetul variometrului. După zbor deschide jurnalul ca să obții un raport PDF. Când se atinge limita de rapoarte, șterge zboruri vechi din jurnal.</item>
+        <item># Copie de rezervă</item>
+        <item>În meniul cu trei puncte poți exporta toate datele într-un fișier și le poți importa pe alt telefon. Le poți salva și în propriul spațiu cloud (WebDAV) și poți porni o copie automată zilnică. Fă o copie înainte să schimbi telefonul.</item>
+        <item># Setări</item>
+        <item>- Limbă: limba întregii aplicații.</item>
+        <item>- Mod de afișare: luminos, întunecat sau automat.</item>
+        <item>- Design: zece înfățișări pentru întreaga aplicație.</item>
+        <item>- Mementouri și permisiuni: mementouri, sunete și acces la funcțiile telefonului.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Datele tale rămân la tine</item>
+        <item>MyAssistant nu are reclame, analiză sau cont. Sarcinile, pașii, scanările și zborurile tale sunt stocate doar pe telefonul tău.</item>
+        <item># Ce trece prin internet</item>
+        <item>Doar ceea ce ceri tu:</item>
+        <item>- Vremea și căutarea orașelor: locația ta sau numele orașului ajunge la Open-Meteo și OpenStreetMap.</item>
+        <item>- Cursuri valutare: o cerere pentru cursuri, fără date personale.</item>
+        <item>- Hărți pentru rapoartele de zbor: imaginile hărții zonei de zbor sunt cerute de la Esri.</item>
+        <item>- Copia ta în cloud: dacă o configurezi, o copie a datelor ajunge pe serverul WebDAV ales de tine, printr-o conexiune sigură. Parola este stocată criptat.</item>
+        <item># Permisiuni</item>
+        <item>- Locație: vremea de unde ești și înregistrarea zborurilor.</item>
+        <item>- Activitate fizică: numărarea pașilor.</item>
+        <item>- Notificări și alarme: mementourile sarcinilor tale.</item>
+        <item># Partajare și vânzare</item>
+        <item>Datele tale nu sunt vândute și nici partajate pentru publicitate. O copie sau un raport părăsește telefonul doar când le partajezi tu.</item>
+        <item># Contact</item>
+        <item>Ai întrebări? Folosește „Trimite feedback” din setări.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Pe scurt</item>
+        <item>- Cumperi MyAssistant o singură dată și o poți folosi pe dispozitivele tale în scopuri personale, fără abonament.</item>
+        <item>- Nu ai voie să copiezi, să revinzi, să închiriezi, să redistribui sau să publici aplicația ori părți din ea și nici să o dezasamblezi pentru a-i studia codul.</item>
+        <item>- Aplicația este oferită „ca atare”, fără garanție. Raportările de erori sunt binevenite și se remediază când este posibil, dar fără obligație sau termen.</item>
+        <item>- Instrumentele de zbor, contorul de pași, vremea și cursurile valutare au doar caracter informativ.</item>
+        <item>Licența completă de mai jos este în engleză și este textul obligatoriu.</item>
+        <item># Licența completă (în engleză)</item>
+    </string-array>
+</resources>

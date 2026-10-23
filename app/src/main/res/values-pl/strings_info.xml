@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Na początek</item>
+        <item>MyAssistant łączy siedem codziennych narzędzi w jednej aplikacji. Przełączaj się między nimi kartami. Koło zębate otwiera ustawienia, a trzy kropki menu kopii zapasowych. Konto nie jest potrzebne.</item>
+        <item># Zadania</item>
+        <item>Zapisz, co trzeba zrobić, i wybierz ważność, termin oraz przypomnienie. Przypomnienie przychodzi jako powiadomienie, alert na pełnym ekranie i, jeśli chcesz, komunikat głosowy. Przypomnienia zostają po ponownym uruchomieniu telefonu.</item>
+        <item>- Filtruj listę według stanu i sortuj według daty, ważności lub terminu.</item>
+        <item>- Otwórz zadanie, aby je zmienić lub usunąć.</item>
+        <item>- Zezwól w ustawieniach na powiadomienia i dokładne alarmy, aby przypomnienia przychodziły na czas.</item>
+        <item># Pogoda</item>
+        <item>Sprawdź pogodę tam, gdzie jesteś, lub wyszukaj dowolne miasto. Obraz zmienia się wraz z pogodą i porą dnia oraz pokazuje fazę księżyca. Jednostki wybierzesz przyciskiem „Jednostki”.</item>
+        <item># Waluty</item>
+        <item>Wybierz dwie waluty, wpisz kwotę i zobacz wynik. Waluty zamienisz jednym dotknięciem. Kursy są zapisywane, więc ostatnie znane kursy działają bez internetu, a data ostatniej aktualizacji jest pokazana.</item>
+        <item># Kalkulator</item>
+        <item>Tryb podstawowy i naukowy, stopnie lub radiany, pamięć i historia obliczeń.</item>
+        <item># Skaner</item>
+        <item>Sfotografuj stronę lub wybierz obraz, sprawdź wykryte krawędzie, wyreguluj światło i wybierz filtr. Dodawaj kolejne strony do tego samego dokumentu, a potem udostępnij go jako PDF lub obrazy.</item>
+        <item># Kroki</item>
+        <item>Czujnik kroków w telefonie liczy kroki w tle. Zezwól na dostęp do aktywności fizycznej. Aby uzyskać dokładny dystans, ustaw długość kroku podczas chodzenia i biegu w ustawieniach kroków, gdzie aplikacja wyjaśnia, jak ją zmierzyć. Kroki są dzielone na chód i bieg według tempa.</item>
+        <item># Loty</item>
+        <item>Tylko dla zabawy i ciekawości: nie używaj tego do nawigacji ani do niczego związanego z bezpieczeństwem. Zezwól na dokładną lokalizację i dotknij „Start”. Aplikacja zapisuje prędkość, wysokość, prędkość wznoszenia, przeciążenie i trasę oraz odtwarza dźwięk wariometru. Po locie otwórz dziennik, aby uzyskać raport PDF. Gdy limit raportów zostanie osiągnięty, usuń stare loty z dziennika.</item>
+        <item># Kopia zapasowa</item>
+        <item>W menu z trzema kropkami możesz wyeksportować wszystkie dane do pliku i zaimportować je na innym telefonie. Możesz też zapisywać je we własnej chmurze (WebDAV) i włączyć codzienną automatyczną kopię. Zrób kopię przed zmianą telefonu.</item>
+        <item># Ustawienia</item>
+        <item>- Język: język całej aplikacji.</item>
+        <item>- Tryb wyświetlania: jasny, ciemny lub automatyczny.</item>
+        <item>- Wygląd: dziesięć stylów dla całej aplikacji.</item>
+        <item>- Przypomnienia i uprawnienia: przypomnienia, dźwięki i dostęp do funkcji telefonu.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Twoje dane zostają u Ciebie</item>
+        <item>MyAssistant nie ma reklam, analityki ani kont. Twoje zadania, kroki, skany i loty są przechowywane tylko na Twoim telefonie.</item>
+        <item># Co przechodzi przez internet</item>
+        <item>Tylko to, o co prosisz:</item>
+        <item>- Pogoda i wyszukiwanie miast: Twoja lokalizacja lub nazwa miasta trafia do Open-Meteo i OpenStreetMap.</item>
+        <item>- Kursy walut: zapytanie o kursy, bez żadnych danych osobowych.</item>
+        <item>- Mapy do raportów lotów: obrazy mapy obszaru lotu są pobierane od Esri.</item>
+        <item>- Własna kopia w chmurze: jeśli ją skonfigurujesz, kopia danych trafia na wybrany przez Ciebie serwer WebDAV przez bezpieczne połączenie. Hasło jest przechowywane w postaci zaszyfrowanej.</item>
+        <item># Uprawnienia</item>
+        <item>- Lokalizacja: pogoda tam, gdzie jesteś, i zapis lotów.</item>
+        <item>- Aktywność fizyczna: liczenie kroków.</item>
+        <item>- Powiadomienia i alarmy: przypomnienia o zadaniach.</item>
+        <item># Udostępnianie i sprzedaż</item>
+        <item>Twoje dane nigdy nie są sprzedawane ani udostępniane w celach reklamowych. Kopia lub raport opuszcza telefon tylko wtedy, gdy sam je udostępnisz.</item>
+        <item># Kontakt</item>
+        <item>Pytania? Użyj opcji „Wyślij opinię” w ustawieniach.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># W skrócie</item>
+        <item>- Kupujesz MyAssistant jeden raz i możesz używać go na swoich urządzeniach do celów osobistych, bez subskrypcji.</item>
+        <item>- Nie wolno kopiować, odsprzedawać, wynajmować, rozpowszechniać ani publikować aplikacji lub jej części, ani rozkładać jej, aby badać kod.</item>
+        <item>- Aplikacja jest dostarczana „tak jak jest”, bez gwarancji. Zgłoszenia błędów są mile widziane i w miarę możliwości poprawiane, ale bez zobowiązania i terminu.</item>
+        <item>- Przyrządy lotnicze, licznik kroków, pogoda i kursy walut mają charakter wyłącznie informacyjny.</item>
+        <item>Pełna licencja poniżej jest po angielsku i jest tekstem wiążącym.</item>
+        <item># Pełna licencja (po angielsku)</item>
+    </string-array>
+</resources>

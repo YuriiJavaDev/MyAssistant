@@ -9,11 +9,11 @@
     <string name="about_promise">Tanpa iklan. Tanpa pelacak. Tanpa akun. Data Anda tetap di ponsel Anda.</string>
     <string name="about_credits_title">Data dan layanan</string>
     <string name="about_credits">Cuaca: Open-Meteo.com\nTempat: © kontributor OpenStreetMap\nKurs: Exchange Rate API\nGaris pantai: Natural Earth\nCitra peta: Esri dan penyedianya</string>
-    <string name="about_open_readme">Selengkapnya</string>
+    <string name="about_open_guide">Panduan</string>
     <string name="about_open_license">Lisensi</string>
     <string name="about_open_privacy">Privasi</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Semua hak dilindungi.</string>
-    <string name="about_link_failed">Halaman tidak dapat dibuka</string>
+    <string name="info_close">Tutup</string>
     <string name="feedback_title">Kirim masukan</string>
     <string name="feedback_hint">Pesan Anda untuk pengembang</string>
     <string name="feedback_include_details">Tambahkan versi aplikasi dan model ponsel</string>

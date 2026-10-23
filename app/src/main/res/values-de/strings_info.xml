@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Erste Schritte</item>
+        <item>MyAssistant vereint sieben Alltagswerkzeuge in einer App. Mit den Tabs wechseln Sie zwischen ihnen. Das Zahnrad öffnet die Einstellungen, die drei Punkte das Backup-Menü. Ein Konto ist nicht nötig.</item>
+        <item># Aufgaben</item>
+        <item>Schreiben Sie auf, was zu tun ist, und wählen Sie Wichtigkeit, Frist und Erinnerung. Die Erinnerung kommt als Benachrichtigung, als Vollbild-Hinweis und auf Wunsch als Sprachhinweis. Erinnerungen bleiben nach einem Neustart des Telefons erhalten.</item>
+        <item>- Filtern Sie die Liste nach Status und sortieren Sie nach Datum, Wichtigkeit oder Frist.</item>
+        <item>- Öffnen Sie eine Aufgabe, um sie zu ändern oder zu löschen.</item>
+        <item>- Erlauben Sie in den Einstellungen Benachrichtigungen und exakte Alarme, damit Erinnerungen pünktlich ankommen.</item>
+        <item># Wetter</item>
+        <item>Sehen Sie das Wetter an Ihrem Standort oder suchen Sie eine beliebige Stadt. Das Bild ändert sich mit Wetter und Tageszeit und zeigt die Mondphase. Die Einheiten wählen Sie mit der Schaltfläche „Einheiten“.</item>
+        <item># Währungen</item>
+        <item>Wählen Sie zwei Währungen, geben Sie einen Betrag ein und sehen Sie das Ergebnis. Mit einem Tipp tauschen Sie die Währungen. Die Kurse werden gespeichert, deshalb funktionieren die zuletzt bekannten Kurse auch ohne Internet, und das Datum der letzten Aktualisierung wird angezeigt.</item>
+        <item># Rechner</item>
+        <item>Einfacher und wissenschaftlicher Modus, Grad oder Bogenmaß, Speicher und Verlauf der Berechnungen.</item>
+        <item># Scanner</item>
+        <item>Fotografieren Sie eine Seite oder wählen Sie ein Bild, prüfen Sie die erkannten Kanten, stellen Sie das Licht ein und wählen Sie einen Filter. Fügen Sie dem Dokument weitere Seiten hinzu und teilen Sie es als PDF oder als Bilder.</item>
+        <item># Schritte</item>
+        <item>Der Schrittsensor Ihres Telefons zählt Ihre Schritte im Hintergrund. Erlauben Sie den Zugriff auf körperliche Aktivität. Für eine genaue Strecke stellen Sie in den Schritt-Einstellungen Ihre Schrittlänge beim Gehen und Laufen ein; dort erklärt die App, wie man sie misst. Die Schritte werden nach Tempo in Gehen und Laufen geteilt.</item>
+        <item># Flüge</item>
+        <item>Nur zum Spaß und aus Neugier: Nicht für Navigation oder irgendetwas verwenden, was mit Sicherheit zu tun hat. Erlauben Sie den genauen Standort und tippen Sie auf „Start“. Die App zeichnet Geschwindigkeit, Höhe, Steigrate, Belastung und Route auf und spielt den Variometer-Ton ab. Nach dem Flug öffnen Sie das Logbuch, um einen PDF-Bericht zu erhalten. Ist das Limit der Berichte erreicht, löschen Sie alte Flüge aus dem Logbuch.</item>
+        <item># Backup</item>
+        <item>Im Menü mit den drei Punkten können Sie alle Daten in eine Datei exportieren und auf einem anderen Telefon importieren. Sie können sie auch in Ihrem eigenen Cloud-Speicher (WebDAV) sichern und ein tägliches automatisches Backup einschalten. Machen Sie ein Backup, bevor Sie das Telefon wechseln.</item>
+        <item># Einstellungen</item>
+        <item>- Sprache: die Sprache der ganzen App.</item>
+        <item>- Anzeigemodus: hell, dunkel oder automatisch.</item>
+        <item>- Design: zehn Looks für die ganze App.</item>
+        <item>- Erinnerungen und Berechtigungen: Erinnerungen, Töne und Zugriff auf Funktionen des Telefons.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Ihre Daten bleiben bei Ihnen</item>
+        <item>MyAssistant hat keine Werbung, keine Analyse und kein Konto. Ihre Aufgaben, Schritte, Scans und Flüge werden nur auf Ihrem Telefon gespeichert.</item>
+        <item># Was über das Internet geht</item>
+        <item>Nur das, was Sie anfordern:</item>
+        <item>- Wetter und Städtesuche: Ihr Standort oder der Stadtname wird an Open-Meteo und OpenStreetMap gesendet.</item>
+        <item>- Wechselkurse: eine Anfrage nach den Kursen, ohne persönliche Daten.</item>
+        <item>- Karten für Flugberichte: Kartenbilder des Flugbereichs werden bei Esri angefordert.</item>
+        <item>- Ihr eigenes Cloud-Backup: Wenn Sie es einrichten, geht eine Kopie Ihrer Daten über eine sichere Verbindung an den von Ihnen gewählten WebDAV-Server. Das Passwort wird verschlüsselt gespeichert.</item>
+        <item># Berechtigungen</item>
+        <item>- Standort: das Wetter an Ihrem Ort und die Aufzeichnung von Flügen.</item>
+        <item>- Körperliche Aktivität: Schritte zählen.</item>
+        <item>- Benachrichtigungen und Alarme: Erinnerungen an Ihre Aufgaben.</item>
+        <item># Weitergabe und Verkauf</item>
+        <item>Ihre Daten werden nie verkauft oder für Werbung weitergegeben. Ein Backup oder ein Bericht verlässt das Telefon nur, wenn Sie es selbst teilen.</item>
+        <item># Kontakt</item>
+        <item>Fragen? Nutzen Sie „Feedback senden“ in den Einstellungen.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Kurz gesagt</item>
+        <item>- Sie kaufen MyAssistant einmal und dürfen die App auf Ihren eigenen Geräten für persönliche Zwecke nutzen, ohne Abo.</item>
+        <item>- Sie dürfen die App oder Teile davon nicht kopieren, weiterverkaufen, vermieten, weitergeben oder veröffentlichen und sie nicht zerlegen, um ihren Code zu studieren.</item>
+        <item>- Die App wird „wie besehen“ ohne Gewährleistung bereitgestellt. Fehlermeldungen sind willkommen und werden nach Möglichkeit behoben, aber ohne Verpflichtung oder Frist.</item>
+        <item>- Fluginstrumente, Schrittzähler, Wetter und Wechselkurse dienen nur der Information.</item>
+        <item>Die vollständige Lizenz unten ist auf Englisch und ist der maßgebliche Text.</item>
+        <item># Vollständige Lizenz (auf Englisch)</item>
+    </string-array>
+</resources>

@@ -9,11 +9,11 @@
     <string name="about_promise">Geen advertenties. Geen trackers. Geen account. Je gegevens blijven op je telefoon.</string>
     <string name="about_credits_title">Gegevens en diensten</string>
     <string name="about_credits">Weer: Open-Meteo.com\nPlaatsen: © OpenStreetMap-bijdragers\nWisselkoersen: Exchange Rate API\nKustlijnen: Natural Earth\nKaartbeelden: Esri en zijn leveranciers</string>
-    <string name="about_open_readme">Meer lezen</string>
+    <string name="about_open_guide">Handleiding</string>
     <string name="about_open_license">Licentie</string>
     <string name="about_open_privacy">Privacy</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Alle rechten voorbehouden.</string>
-    <string name="about_link_failed">De pagina kon niet worden geopend</string>
+    <string name="info_close">Sluiten</string>
     <string name="feedback_title">Feedback sturen</string>
     <string name="feedback_hint">Je bericht aan de ontwikkelaar</string>
     <string name="feedback_include_details">App-versie en telefoonmodel toevoegen</string>

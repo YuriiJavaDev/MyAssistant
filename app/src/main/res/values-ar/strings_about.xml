@@ -9,11 +9,11 @@
     <string name="about_promise">بلا إعلانات. بلا أدوات تتبّع. بلا حساب. تبقى بياناتك على هاتفك.</string>
     <string name="about_credits_title">البيانات والخدمات</string>
     <string name="about_credits">الطقس: Open-Meteo.com\nالأماكن: © مساهمو OpenStreetMap\nأسعار الصرف: Exchange Rate API\nالسواحل: Natural Earth\nصور الخرائط: Esri ومزوّدوها</string>
-    <string name="about_open_readme">المزيد</string>
+    <string name="about_open_guide">الدليل</string>
     <string name="about_open_license">الترخيص</string>
     <string name="about_open_privacy">الخصوصية</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. جميع الحقوق محفوظة.</string>
-    <string name="about_link_failed">تعذّر فتح الصفحة</string>
+    <string name="info_close">إغلاق</string>
     <string name="feedback_title">إرسال ملاحظات</string>
     <string name="feedback_hint">رسالتك إلى المطوّر</string>
     <string name="feedback_include_details">إضافة إصدار التطبيق وطراز الهاتف</string>

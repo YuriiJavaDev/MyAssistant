@@ -9,11 +9,11 @@
     <string name="about_promise">Χωρίς διαφημίσεις. Χωρίς ιχνηλάτες. Χωρίς λογαριασμό. Τα δεδομένα σας μένουν στο τηλέφωνό σας.</string>
     <string name="about_credits_title">Δεδομένα και υπηρεσίες</string>
     <string name="about_credits">Καιρός: Open-Meteo.com\nΜέρη: © συντελεστές του OpenStreetMap\nΙσοτιμίες: Exchange Rate API\nΑκτογραμμές: Natural Earth\nΕικόνες χαρτών: Esri και οι πάροχοί της</string>
-    <string name="about_open_readme">Περισσότερα</string>
+    <string name="about_open_guide">Οδηγός</string>
     <string name="about_open_license">Άδεια</string>
     <string name="about_open_privacy">Απόρρητο</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Με επιφύλαξη παντός δικαιώματος.</string>
-    <string name="about_link_failed">Δεν ήταν δυνατό να ανοίξει η σελίδα</string>
+    <string name="info_close">Κλείσιμο</string>
     <string name="feedback_title">Αποστολή σχολίων</string>
     <string name="feedback_hint">Το μήνυμά σας προς τον προγραμματιστή</string>
     <string name="feedback_include_details">Προσθήκη έκδοσης εφαρμογής και μοντέλου τηλεφώνου</string>

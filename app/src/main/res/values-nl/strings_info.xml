@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Aan de slag</item>
+        <item>MyAssistant brengt zeven alledaagse hulpmiddelen samen in één app. Schakel tussen ze met de tabbladen. Het tandwiel opent de instellingen en de drie puntjes openen het back-upmenu. Een account is niet nodig.</item>
+        <item># Taken</item>
+        <item>Schrijf op wat er moet gebeuren en kies het belang, een deadline en een herinnering. Een herinnering komt als melding, als waarschuwing op volledig scherm en, als je wilt, als gesproken melding. Herinneringen blijven bestaan na het herstarten van de telefoon.</item>
+        <item>- Filter de lijst op status en sorteer op datum, belang of deadline.</item>
+        <item>- Open een taak om die te wijzigen of te verwijderen.</item>
+        <item>- Sta meldingen en exacte alarmen toe in de instellingen, zodat herinneringen op tijd aankomen.</item>
+        <item># Weer</item>
+        <item>Bekijk het weer waar je bent of zoek een willekeurige stad. De afbeelding verandert met het weer en het tijdstip en toont de maanfase. Kies de eenheden met de knop \'Eenheden\'.</item>
+        <item># Valuta</item>
+        <item>Kies twee valuta, typ een bedrag en zie het resultaat. Wissel de valuta met één tik. De koersen worden bewaard, dus de laatst bekende koersen werken zonder internet en de datum van de laatste update wordt getoond.</item>
+        <item># Rekenmachine</item>
+        <item>Basis- en wetenschappelijke modus, graden of radialen, geheugen en een geschiedenis van berekeningen.</item>
+        <item># Scanner</item>
+        <item>Fotografeer een pagina of kies een afbeelding, controleer de gevonden randen, stel het licht in en kies een filter. Voeg meer pagina\'s toe aan hetzelfde document en deel het als pdf of als afbeeldingen.</item>
+        <item># Stappen</item>
+        <item>De stappensensor van je telefoon telt je stappen op de achtergrond. Sta toegang tot lichamelijke activiteit toe. Stel voor een exacte afstand je staplengte bij lopen en hardlopen in bij de stapinstellingen, waar de app uitlegt hoe je die meet. Stappen worden op tempo verdeeld in lopen en hardlopen.</item>
+        <item># Vluchten</item>
+        <item>Alleen voor plezier en nieuwsgierigheid: gebruik het niet voor navigatie of iets wat met veiligheid te maken heeft. Sta nauwkeurige locatie toe en tik op \'Start\'. De app legt snelheid, hoogte, stijgsnelheid, belasting en route vast en speelt het variometergeluid af. Open na de vlucht het logboek voor een pdf-rapport. Is de limiet van rapporten bereikt, verwijder dan oude vluchten uit het logboek.</item>
+        <item># Back-up</item>
+        <item>In het menu met de drie puntjes kun je al je gegevens naar een bestand exporteren en op een andere telefoon importeren. Je kunt ze ook opslaan in je eigen cloudopslag (WebDAV) en een dagelijkse automatische back-up aanzetten. Maak een back-up voordat je van telefoon wisselt.</item>
+        <item># Instellingen</item>
+        <item>- Taal: de taal van de hele app.</item>
+        <item>- Weergavemodus: licht, donker of automatisch.</item>
+        <item>- Ontwerp: tien looks voor de hele app.</item>
+        <item>- Herinneringen en rechten: herinneringen, geluiden en toegang tot functies van de telefoon.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Je gegevens blijven bij jou</item>
+        <item>MyAssistant heeft geen advertenties, geen analyse en geen account. Je taken, stappen, scans en vluchten worden alleen op je telefoon bewaard.</item>
+        <item># Wat er via internet gaat</item>
+        <item>Alleen wat je zelf vraagt:</item>
+        <item>- Weer en stad zoeken: je locatie of de naam van de stad gaat naar Open-Meteo en OpenStreetMap.</item>
+        <item>- Wisselkoersen: een verzoek om de koersen, zonder persoonlijke gegevens.</item>
+        <item>- Kaarten voor vluchtrapporten: kaartbeelden van het vluchtgebied worden bij Esri opgevraagd.</item>
+        <item>- Je eigen cloudback-up: als je die instelt, gaat een kopie van je gegevens via een beveiligde verbinding naar de WebDAV-server die je koos. Het wachtwoord wordt versleuteld bewaard.</item>
+        <item># Rechten</item>
+        <item>- Locatie: het weer waar je bent en het vastleggen van vluchten.</item>
+        <item>- Lichamelijke activiteit: stappen tellen.</item>
+        <item>- Meldingen en alarmen: herinneringen aan je taken.</item>
+        <item># Delen en verkopen</item>
+        <item>Je gegevens worden nooit verkocht of voor advertenties gedeeld. Een back-up of rapport verlaat de telefoon alleen als jij het zelf deelt.</item>
+        <item># Contact</item>
+        <item>Vragen? Gebruik \'Feedback sturen\' in de instellingen.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># In het kort</item>
+        <item>- Je koopt MyAssistant één keer en mag de app op je eigen apparaten voor persoonlijk gebruik gebruiken, zonder abonnement.</item>
+        <item>- Je mag de app of onderdelen ervan niet kopiëren, doorverkopen, verhuren, verspreiden of publiceren, en niet ontleden om de code te bestuderen.</item>
+        <item>- De app wordt geleverd \'zoals hij is\', zonder garantie. Meldingen van fouten zijn welkom en worden waar mogelijk verholpen, maar zonder verplichting of termijn.</item>
+        <item>- De vlieginstrumenten, stappenteller, weer en wisselkoersen zijn alleen ter informatie.</item>
+        <item>De volledige licentie hieronder is in het Engels en is de bindende tekst.</item>
+        <item># Volledige licentie (in het Engels)</item>
+    </string-array>
+</resources>

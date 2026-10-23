@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Başlarken</item>
+        <item>MyAssistant yedi günlük aracı tek uygulamada toplar. Aralarında sekmelerle geçiş yapın. Dişli ayarları, üç nokta ise yedekleme menüsünü açar. Hesap gerekmez.</item>
+        <item># Görevler</item>
+        <item>Yapılacak işi yazın, önem derecesi, son tarih ve hatırlatıcı seçin. Hatırlatıcı bildirim, tam ekran uyarı ve isterseniz sesli uyarı olarak gelir. Hatırlatıcılar telefon yeniden başlatıldıktan sonra da korunur.</item>
+        <item>- Listeyi duruma göre filtreleyin; tarihe, öneme veya son tarihe göre sıralayın.</item>
+        <item>- Bir görevi değiştirmek veya silmek için açın.</item>
+        <item>- Hatırlatıcıların zamanında gelmesi için ayarlarda bildirimlere ve tam zamanlı alarmlara izin verin.</item>
+        <item># Hava durumu</item>
+        <item>Bulunduğunuz yerin hava durumunu görün veya herhangi bir şehri arayın. Görsel hava durumu ve günün saatiyle değişir, ayın evresini gösterir. Birimleri «Birimler» düğmesiyle seçin.</item>
+        <item># Döviz</item>
+        <item>İki para birimi seçin, tutarı yazın ve sonucu görün. Para birimlerini tek dokunuşla değiştirin. Kurlar kaydedilir; bilinen son kurlar internetsiz de çalışır ve son güncelleme tarihi gösterilir.</item>
+        <item># Hesap makinesi</item>
+        <item>Temel ve bilimsel mod, derece veya radyan, bellek ve hesaplama geçmişi.</item>
+        <item># Tarayıcı</item>
+        <item>Bir sayfanın fotoğrafını çekin veya görsel seçin, bulunan kenarları kontrol edin, ışığı ayarlayın ve filtre seçin. Aynı belgeye başka sayfalar ekleyin, ardından PDF veya görsel olarak paylaşın.</item>
+        <item># Adımlar</item>
+        <item>Telefonunuzun adım sensörü adımlarınızı arka planda sayar. Fiziksel etkinlik iznini verin. Doğru mesafe için adım ayarlarında yürüme ve koşu adım uzunluğunuzu girin; uygulama orada nasıl ölçüleceğini anlatır. Adımlar tempoya göre yürüme ve koşuya ayrılır.</item>
+        <item># Uçuşlar</item>
+        <item>Yalnızca eğlence ve merak için: seyrüsefer veya güvenlikle ilgili hiçbir şey için kullanmayın. Hassas konum iznini verin ve «Başlat»a dokunun. Uygulama hız, yükseklik, tırmanma hızı, yük ve rotayı kaydeder ve variyometre sesi çalar. Uçuştan sonra PDF raporu almak için günlüğü açın. Rapor sınırına ulaşıldığında günlükten eski uçuşları silin.</item>
+        <item># Yedekleme</item>
+        <item>Üç nokta menüsünde tüm verilerinizi bir dosyaya aktarabilir ve başka bir telefonda içe aktarabilirsiniz. Kendi bulut depolamanıza (WebDAV) da kaydedebilir ve günlük otomatik yedeklemeyi açabilirsiniz. Telefon değiştirmeden önce yedek alın.</item>
+        <item># Ayarlar</item>
+        <item>- Dil: tüm uygulamanın dili.</item>
+        <item>- Görünüm modu: açık, koyu veya otomatik.</item>
+        <item>- Tasarım: tüm uygulama için on görünüm.</item>
+        <item>- Hatırlatıcılar ve izinler: hatırlatıcılar, sesler ve telefon özelliklerine erişim.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Verileriniz sizde kalır</item>
+        <item>MyAssistant\'ta reklam, analiz ve hesap yoktur. Görevleriniz, adımlarınız, taramalarınız ve uçuşlarınız yalnızca telefonunuzda saklanır.</item>
+        <item># İnternetten neler geçer</item>
+        <item>Yalnızca sizin istedikleriniz:</item>
+        <item>- Hava durumu ve şehir arama: konumunuz veya şehir adı Open-Meteo ve OpenStreetMap\'e gönderilir.</item>
+        <item>- Döviz kurları: kişisel veri içermeyen bir kur isteği.</item>
+        <item>- Uçuş raporu haritaları: uçuş bölgesinin harita görselleri Esri\'den istenir.</item>
+        <item>- Kendi bulut yedeğiniz: kurarsanız, verilerinizin bir kopyası seçtiğiniz WebDAV sunucusuna güvenli bağlantıyla gider. Parola şifreli saklanır.</item>
+        <item># İzinler</item>
+        <item>- Konum: bulunduğunuz yerin hava durumu ve uçuş kaydı.</item>
+        <item>- Fiziksel etkinlik: adım sayma.</item>
+        <item>- Bildirimler ve alarmlar: görev hatırlatıcıları.</item>
+        <item># Paylaşım ve satış</item>
+        <item>Verileriniz asla satılmaz veya reklam için paylaşılmaz. Yedek veya rapor telefondan yalnızca siz paylaştığınızda çıkar.</item>
+        <item># İletişim</item>
+        <item>Sorularınız mı var? Ayarlardaki «Geri bildirim gönder»i kullanın.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Kısaca</item>
+        <item>- MyAssistant\'ı bir kez satın alırsınız ve kendi cihazlarınızda kişisel amaçlarla abonelik olmadan kullanabilirsiniz.</item>
+        <item>- Uygulamayı veya parçalarını kopyalayamaz, yeniden satamaz, kiralayamaz, dağıtamaz veya yayımlayamaz, kodunu incelemek için parçalayamazsınız.</item>
+        <item>- Uygulama «olduğu gibi», garantisiz sunulur. Hata bildirimleri memnuniyetle karşılanır ve mümkünse düzeltilir, ancak yükümlülük veya süre yoktur.</item>
+        <item>- Uçuş göstergeleri, adım sayacı, hava durumu ve döviz kurları yalnızca bilgi amaçlıdır.</item>
+        <item>Aşağıdaki tam lisans İngilizcedir ve bağlayıcı metindir.</item>
+        <item># Tam lisans (İngilizce)</item>
+    </string-array>
+</resources>

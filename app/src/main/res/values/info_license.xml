@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_license_text" translatable="false">
+        <item>Copyright (c) 2026 Yurii Pavlenko. All rights reserved.</item>
+        <item>This license applies to the MyAssistant application, its source code, its resources, translations, artwork and documentation (together, the \"Software\"). \"Author\" means Yurii Pavlenko. \"You\" means the person who has lawfully obtained the Software, for example by purchasing it in Google Play.</item>
+        <item># 1. Ownership</item>
+        <item>The Software is licensed, not sold. The Author keeps all rights, title and interest in the Software, including all copyrights, trademarks, names and artwork. No rights are granted except those stated here.</item>
+        <item># 2. Grant</item>
+        <item>After a single payment, the Author grants You a personal, non-exclusive, non-transferable, non-sublicensable, perpetual license to install and use the Software on devices that You own or control, for Your own personal purposes. The license is tied to the account with which the Software was purchased and continues for as long as You comply with this license. No subscription and no further payment is needed for the version You purchased and its updates published through the store where You purchased it.</item>
+        <item># 3. Restrictions</item>
+        <item>You may not:</item>
+        <item>- a) copy, distribute, sell, resell, rent, lease, lend, or sublicense the Software or any part of it;</item>
+        <item>- b) publish, upload or distribute the Software, any build of it, or any modified or derived version of it, in any store, website, file-sharing service or other channel;</item>
+        <item>- c) use the Software, its source code, artwork, translations or name to create a competing or derivative product;</item>
+        <item>- d) remove, hide or change copyright, attribution or license notices;</item>
+        <item>- e) circumvent any technical measure of the Software or of the store that protects it, or use the Software in violation of the store\'s terms;</item>
+        <item>- f) reverse engineer, decompile or disassemble the Software, except to the extent that applicable law expressly permits this despite this limit;</item>
+        <item>- g) use the Software for unlawful purposes.</item>
+        <item># 4. Source code</item>
+        <item>The source code is made visible so that anyone can inspect what the Software does. Visibility of the source code does not grant any right to copy, build, modify or distribute it beyond what Section 3 allows. Reading the code and reporting issues are welcome.</item>
+        <item># 5. No advertising, no sale of data</item>
+        <item>The paid Software contains no advertising. The Author does not sell Your data. The Software uses the internet only for the features You use, as described in the README and the privacy policy.</item>
+        <item># 6. Third-party components and data</item>
+        <item>The Software uses open-source components and third-party data services, which keep their own licenses and terms, including Open-Meteo.com, OpenStreetMap contributors, Exchange Rate API, Natural Earth, Esri and its imagery providers, and the AndroidX and Material Components libraries. This license does not change those terms.</item>
+        <item># 7. Informational use</item>
+        <item>The flight instruments, step counter, weather, exchange rates and calculator are provided for information, entertainment and convenience. You must not rely on them for navigation, flying, safety, medical or financial decisions.</item>
+        <item># 8. Updates and support</item>
+        <item>The Author may change, update or stop developing the Software. Updates are covered by this license unless they come with their own terms. Bug reports, problems and suggestions are welcome. The Author reads them and, where possible, fixes them in later updates, but is under no obligation to fix any bug, to answer any report, or to do so within any time. Reporting a problem does not create a claim for repair, replacement, compensation or support.</item>
+        <item># 9. Disclaimer of warranty</item>
+        <item>THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND NON-INFRINGEMENT. The Software may contain bugs and errors and may not work on every device. Nothing in this license excludes rights that You have under mandatory consumer protection law.</item>
+        <item># 10. Limitation of liability</item>
+        <item>TO THE EXTENT PERMITTED BY LAW, THE AUTHOR IS NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR LOSS OF DATA, ARISING OUT OF THE USE OF OR INABILITY TO USE THE SOFTWARE. You are responsible for keeping backups of Your data. THE AUTHOR\'S TOTAL LIABILITY IS LIMITED TO THE PRICE YOU PAID FOR THE SOFTWARE, EXCEPT WHERE THE LAW DOES NOT ALLOW THIS LIMIT.</item>
+        <item># 11. Termination</item>
+        <item>This license ends automatically if You breach it. Then You must stop using the Software and delete all copies. Sections 1, 3, 9 and 10 continue after termination.</item>
+        <item># 12. Refunds</item>
+        <item>Purchases and refunds are handled by the store where You bought the Software, under its rules.</item>
+        <item># 13. General</item>
+        <item>If a part of this license is held invalid, the rest stays in force. This license is the whole agreement about the Software between You and the Author.</item>
+        <item>For questions about this license, use Send feedback in the settings of the app.</item>
+    </string-array>
+</resources>

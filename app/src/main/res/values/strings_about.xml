@@ -10,11 +10,11 @@
     <string name="about_promise">No ads. No trackers. No account. Your data stays on your phone.</string>
     <string name="about_credits_title">Data and services</string>
     <string name="about_credits">Weather: Open-Meteo.com\nPlaces: © OpenStreetMap contributors\nExchange rates: Exchange Rate API\nCoastlines: Natural Earth\nMap imagery: Esri and its providers</string>
-    <string name="about_open_readme">Read more</string>
+    <string name="about_open_guide">Guide</string>
     <string name="about_open_license">License</string>
     <string name="about_open_privacy">Privacy</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. All rights reserved.</string>
-    <string name="about_link_failed">The page could not be opened</string>
+    <string name="info_close">Close</string>
 
     <string name="feedback_title">Send feedback</string>
     <string name="feedback_hint">Your message to the developer</string>

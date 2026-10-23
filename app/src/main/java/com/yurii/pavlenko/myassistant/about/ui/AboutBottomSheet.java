@@ -13,7 +13,6 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.yurii.pavlenko.myassistant.R;
-import com.yurii.pavlenko.myassistant.about.data.DeveloperContact;
 import com.yurii.pavlenko.myassistant.databinding.DialogAboutBinding;
 
 /** What the app is, which version it is, who made it, where its data comes from and where to read more. */
@@ -24,10 +23,14 @@ public class AboutBottomSheet extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         DialogAboutBinding binding = DialogAboutBinding.inflate(inflater, container, false);
         binding.tvAboutVersion.setText(getString(R.string.about_version_format, AppDetails.versionName(requireContext())));
-        binding.btnAboutReadme.setOnClickListener(v -> AppLinks.open(requireContext(), DeveloperContact.README_URL));
-        binding.btnAboutLicense.setOnClickListener(v -> AppLinks.open(requireContext(), DeveloperContact.LICENSE_URL));
-        binding.btnAboutPrivacy.setOnClickListener(v -> AppLinks.open(requireContext(), DeveloperContact.PRIVACY_URL));
+        binding.btnAboutGuide.setOnClickListener(v -> open(InfoSection.GUIDE));
+        binding.btnAboutPrivacy.setOnClickListener(v -> open(InfoSection.PRIVACY));
+        binding.btnAboutLicense.setOnClickListener(v -> open(InfoSection.LICENSE));
         return binding.getRoot();
+    }
+
+    private void open(InfoSection section) {
+        startActivity(InfoActivity.createIntent(requireContext(), section));
     }
 
     @Override

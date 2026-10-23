@@ -9,11 +9,11 @@
     <string name="about_promise">Bez reklama. Bez praćenja. Bez računa. Vaši podaci ostaju na vašem telefonu.</string>
     <string name="about_credits_title">Podaci i usluge</string>
     <string name="about_credits">Vrijeme: Open-Meteo.com\nMjesta: © suradnici OpenStreetMapa\nTečajevi: Exchange Rate API\nObalne linije: Natural Earth\nSnimke karata: Esri i njegovi dobavljači</string>
-    <string name="about_open_readme">Više</string>
+    <string name="about_open_guide">Vodič</string>
     <string name="about_open_license">Licenca</string>
     <string name="about_open_privacy">Privatnost</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Sva prava pridržana.</string>
-    <string name="about_link_failed">Stranicu nije moguće otvoriti</string>
+    <string name="info_close">Zatvori</string>
     <string name="feedback_title">Pošalji povratnu informaciju</string>
     <string name="feedback_hint">Vaša poruka programeru</string>
     <string name="feedback_include_details">Dodaj verziju aplikacije i model telefona</string>

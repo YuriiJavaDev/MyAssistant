@@ -9,11 +9,11 @@
     <string name="about_promise">Ei mainoksia. Ei seurantaa. Ei tiliä. Tietosi pysyvät puhelimessasi.</string>
     <string name="about_credits_title">Tiedot ja palvelut</string>
     <string name="about_credits">Sää: Open-Meteo.com\nPaikat: © OpenStreetMapin tekijät\nValuuttakurssit: Exchange Rate API\nRannikkoviivat: Natural Earth\nKarttakuvat: Esri ja sen toimittajat</string>
-    <string name="about_open_readme">Lue lisää</string>
+    <string name="about_open_guide">Opas</string>
     <string name="about_open_license">Lisenssi</string>
     <string name="about_open_privacy">Tietosuoja</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Kaikki oikeudet pidätetään.</string>
-    <string name="about_link_failed">Sivua ei voitu avata</string>
+    <string name="info_close">Sulje</string>
     <string name="feedback_title">Lähetä palautetta</string>
     <string name="feedback_hint">Viestisi kehittäjälle</string>
     <string name="feedback_include_details">Lisää sovelluksen versio ja puhelimen malli</string>

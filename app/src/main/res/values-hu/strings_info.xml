@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Első lépések</item>
+        <item>A MyAssistant hét mindennapi eszközt foglal egyetlen alkalmazásba. A lapokkal válthatsz közöttük. A fogaskerék a beállításokat, a három pont a biztonsági mentés menüjét nyitja meg. Fiók nem kell.</item>
+        <item># Feladatok</item>
+        <item>Írd le, mit kell tenni, és válaszd ki a fontosságot, a határidőt és az emlékeztetőt. Az emlékeztető értesítésként, teljes képernyős figyelmeztetésként, kérésre pedig hangos értesítésként érkezik. Az emlékeztetők a telefon újraindítása után is megmaradnak.</item>
+        <item>- Szűrd a listát állapot szerint, és rendezd dátum, fontosság vagy határidő szerint.</item>
+        <item>- Nyiss meg egy feladatot, hogy módosítsd vagy töröld.</item>
+        <item>- A beállításokban engedélyezd az értesítéseket és a pontos ébresztőket, hogy az emlékeztetők időben megérkezzenek.</item>
+        <item># Időjárás</item>
+        <item>Nézd meg az időjárást ott, ahol vagy, vagy keress bármelyik várost. A kép az időjárással és a napszakkal változik, és mutatja a Hold fázisát. A mértékegységeket az „Egységek” gombbal választhatod ki.</item>
+        <item># Pénznemek</item>
+        <item>Válassz két pénznemet, írj be egy összeget, és nézd az eredményt. A pénznemeket egy érintéssel felcserélheted. Az árfolyamok mentődnek, így az utolsó ismert árfolyamok internet nélkül is működnek, és megjelenik az utolsó frissítés dátuma.</item>
+        <item># Számológép</item>
+        <item>Alap és tudományos mód, fok vagy radián, memória és a számítások előzménye.</item>
+        <item># Szkenner</item>
+        <item>Fotózz le egy oldalt vagy válassz képet, ellenőrizd a felismert széleket, állítsd be a fényt, és válassz szűrőt. Adj hozzá további oldalakat ugyanahhoz a dokumentumhoz, majd oszd meg PDF-ként vagy képekként.</item>
+        <item># Lépések</item>
+        <item>A telefon lépésérzékelője a háttérben számolja a lépéseidet. Engedélyezd a fizikai aktivitáshoz való hozzáférést. A pontos távolsághoz add meg a lépéshosszodat járáskor és futáskor a lépésbeállításokban, ahol az alkalmazás elmagyarázza, hogyan mérheted meg. A lépések ütem szerint járásra és futásra oszlanak.</item>
+        <item># Repülések</item>
+        <item>Csak szórakozásra és kíváncsiságból: ne használd navigációra vagy bármire, ami a biztonsággal kapcsolatos. Engedélyezd a pontos helyzetet, és koppints az „Indítás” gombra. Az alkalmazás rögzíti a sebességet, a magasságot, az emelkedési sebességet, a terhelést és az útvonalat, és lejátssza a variométer hangját. A repülés után nyisd meg a naplót, hogy PDF-jelentést kapj. Ha elérted a jelentések korlátját, töröld a régi repüléseket a naplóból.</item>
+        <item># Biztonsági mentés</item>
+        <item>A három pontos menüben az összes adatodat fájlba exportálhatod, és másik telefonon importálhatod. Elmentheted a saját felhőtárhelyedre (WebDAV) is, és bekapcsolhatod a napi automatikus mentést. Telefoncsere előtt készíts mentést.</item>
+        <item># Beállítások</item>
+        <item>- Nyelv: az egész alkalmazás nyelve.</item>
+        <item>- Megjelenítési mód: világos, sötét vagy automatikus.</item>
+        <item>- Dizájn: tíz megjelenés az egész alkalmazáshoz.</item>
+        <item>- Emlékeztetők és engedélyek: emlékeztetők, hangok és hozzáférés a telefon funkcióihoz.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Az adataid nálad maradnak</item>
+        <item>A MyAssistantban nincs reklám, nincs elemzés és nincs fiók. A feladataid, lépéseid, szkenneléseid és repüléseid csak a telefonodon vannak tárolva.</item>
+        <item># Mi megy át az interneten</item>
+        <item>Csak az, amit te kérsz:</item>
+        <item>- Időjárás és városkeresés: a helyzeted vagy a város neve az Open-Meteóhoz és az OpenStreetMaphez kerül.</item>
+        <item>- Árfolyamok: árfolyamkérés személyes adatok nélkül.</item>
+        <item>- Repülési jelentések térképei: a repülés környékének térképképeit az Esritől kéri le.</item>
+        <item>- Saját felhős mentésed: ha beállítod, adataid másolata biztonságos kapcsolaton át az általad választott WebDAV-kiszolgálóra kerül. A jelszó titkosítva van tárolva.</item>
+        <item># Engedélyek</item>
+        <item>- Helyzet: az időjárás ott, ahol vagy, és a repülések rögzítése.</item>
+        <item>- Fizikai aktivitás: lépésszámlálás.</item>
+        <item>- Értesítések és ébresztők: a feladataid emlékeztetői.</item>
+        <item># Megosztás és eladás</item>
+        <item>Az adataidat soha nem adjuk el és nem osztjuk meg reklámcélra. A mentés vagy a jelentés csak akkor hagyja el a telefont, ha te magad megosztod.</item>
+        <item># Kapcsolat</item>
+        <item>Kérdésed van? Használd a beállításokban a „Visszajelzés küldése” lehetőséget.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Röviden</item>
+        <item>- A MyAssistantot egyszer vásárolod meg, és a saját eszközeiden személyes célra használhatod, előfizetés nélkül.</item>
+        <item>- Az alkalmazást vagy részeit nem másolhatod, adhatod tovább, bérbe, nem terjesztheted és nem teheted közzé, és nem szedheted szét a kód tanulmányozására.</item>
+        <item>- Az alkalmazást „adott állapotban”, garancia nélkül kapod. A hibabejelentéseket szívesen fogadjuk, és lehetőség szerint javítjuk, de kötelezettség és határidő nélkül.</item>
+        <item>- A repülőműszerek, a lépésszámláló, az időjárás és az árfolyamok csak tájékoztató jellegűek.</item>
+        <item>Az alábbi teljes licenc angol nyelvű, és ez a kötelező szöveg.</item>
+        <item># Teljes licenc (angolul)</item>
+    </string-array>
+</resources>

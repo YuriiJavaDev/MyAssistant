@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Primeros pasos</item>
+        <item>MyAssistant reúne siete herramientas cotidianas en una sola app. Cambia entre ellas con las pestañas. El engranaje abre los ajustes y los tres puntos abren el menú de copias de seguridad. No hace falta una cuenta.</item>
+        <item># Tareas</item>
+        <item>Escribe lo que hay que hacer y elige la importancia, un plazo y un recordatorio. El recordatorio llega como notificación, como aviso a pantalla completa y, si quieres, como aviso de voz. Los recordatorios se conservan al reiniciar el teléfono.</item>
+        <item>- Filtra la lista por estado y ordénala por fecha, importancia o plazo.</item>
+        <item>- Abre una tarea para cambiarla o eliminarla.</item>
+        <item>- Permite las notificaciones y las alarmas exactas en los ajustes para que los recordatorios lleguen a tiempo.</item>
+        <item># Clima</item>
+        <item>Consulta el clima donde estás o busca cualquier ciudad. La imagen cambia con el clima y la hora del día y muestra la fase de la luna. Elige las unidades con el botón «Unidades».</item>
+        <item># Divisas</item>
+        <item>Elige dos divisas, escribe un importe y mira el resultado. Intercambia las divisas con un toque. Los tipos se guardan, así que los últimos conocidos funcionan sin internet y se muestra la fecha de la última actualización.</item>
+        <item># Calculadora</item>
+        <item>Modo básico y científico, grados o radianes, memoria e historial de cálculos.</item>
+        <item># Escáner</item>
+        <item>Fotografía una página o elige una imagen, revisa los bordes detectados, ajusta la luz y elige un filtro. Añade más páginas al mismo documento y compártelo como PDF o como imágenes.</item>
+        <item># Pasos</item>
+        <item>El sensor de pasos de tu teléfono cuenta tus pasos en segundo plano. Permite el acceso a la actividad física. Para una distancia exacta, indica la longitud de tu paso al caminar y al correr en los ajustes de pasos, donde la app explica cómo medirla. Los pasos se dividen en caminata y carrera según el ritmo.</item>
+        <item># Vuelos</item>
+        <item>Solo por diversión y curiosidad: no lo uses para navegación ni para nada relacionado con la seguridad. Permite la ubicación precisa y pulsa «Iniciar». La app registra velocidad, altitud, tasa de ascenso, carga y ruta, y reproduce el sonido del variómetro. Tras el vuelo, abre el diario para obtener un informe en PDF. Cuando se alcance el límite de informes, elimina vuelos antiguos del diario.</item>
+        <item># Copia de seguridad</item>
+        <item>En el menú de tres puntos puedes exportar todos tus datos a un archivo e importarlos en otro teléfono. También puedes guardarlos en tu propio almacenamiento en la nube (WebDAV) y activar una copia automática diaria. Haz una copia antes de cambiar de teléfono.</item>
+        <item># Ajustes</item>
+        <item>- Idioma: el idioma de toda la app.</item>
+        <item>- Modo de pantalla: claro, oscuro o automático.</item>
+        <item>- Diseño: diez estilos para toda la app.</item>
+        <item>- Recordatorios y permisos: recordatorios, sonidos y acceso a las funciones del teléfono.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Tus datos se quedan contigo</item>
+        <item>MyAssistant no tiene anuncios, ni analíticas, ni cuentas. Tus tareas, pasos, escaneos y vuelos se guardan solo en tu teléfono.</item>
+        <item># Qué viaja por internet</item>
+        <item>Solo lo que tú pides:</item>
+        <item>- Clima y búsqueda de ciudades: tu ubicación o el nombre de la ciudad se envían a Open-Meteo y OpenStreetMap.</item>
+        <item>- Tipos de cambio: una solicitud de los tipos, sin datos personales.</item>
+        <item>- Mapas de los informes de vuelo: las imágenes del mapa de la zona del vuelo se piden a Esri.</item>
+        <item>- Tu propia copia en la nube: si la configuras, una copia de tus datos va al servidor WebDAV que elegiste, con una conexión segura. La contraseña se guarda cifrada.</item>
+        <item># Permisos</item>
+        <item>- Ubicación: el clima donde estás y la grabación de vuelos.</item>
+        <item>- Actividad física: contar pasos.</item>
+        <item>- Notificaciones y alarmas: recordatorios de tus tareas.</item>
+        <item># Compartir y vender</item>
+        <item>Tus datos nunca se venden ni se comparten con fines publicitarios. Una copia o un informe solo salen del teléfono cuando tú los compartes.</item>
+        <item># Contacto</item>
+        <item>¿Preguntas? Usa «Enviar comentarios» en los ajustes.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># En breve</item>
+        <item>- Compras MyAssistant una sola vez y puedes usarla en tus dispositivos para fines personales, sin suscripción.</item>
+        <item>- No puedes copiar, revender, alquilar, redistribuir ni publicar la app o sus partes, ni desmontarla para estudiar su código.</item>
+        <item>- La app se ofrece «tal cual», sin garantía. Los informes de errores son bienvenidos y se corrigen cuando es posible, pero sin obligación ni plazo.</item>
+        <item>- Los instrumentos de vuelo, el contador de pasos, el clima y los tipos de cambio son solo informativos.</item>
+        <item>La licencia completa que sigue está en inglés y es el texto vinculante.</item>
+        <item># Licencia completa (en inglés)</item>
+    </string-array>
+</resources>

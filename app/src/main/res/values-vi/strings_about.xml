@@ -9,11 +9,11 @@
     <string name="about_promise">Không quảng cáo. Không theo dõi. Không tài khoản. Dữ liệu của bạn ở lại trên điện thoại.</string>
     <string name="about_credits_title">Dữ liệu và dịch vụ</string>
     <string name="about_credits">Thời tiết: Open-Meteo.com\nĐịa điểm: © những người đóng góp OpenStreetMap\nTỷ giá: Exchange Rate API\nĐường bờ biển: Natural Earth\nẢnh bản đồ: Esri và các nhà cung cấp</string>
-    <string name="about_open_readme">Tìm hiểu thêm</string>
+    <string name="about_open_guide">Hướng dẫn</string>
     <string name="about_open_license">Giấy phép</string>
     <string name="about_open_privacy">Quyền riêng tư</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Bảo lưu mọi quyền.</string>
-    <string name="about_link_failed">Không mở được trang</string>
+    <string name="info_close">Đóng</string>
     <string name="feedback_title">Gửi phản hồi</string>
     <string name="feedback_hint">Tin nhắn của bạn gửi nhà phát triển</string>
     <string name="feedback_include_details">Thêm phiên bản ứng dụng và kiểu điện thoại</string>

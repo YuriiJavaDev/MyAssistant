@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Getting started</item>
+        <item>MyAssistant puts seven everyday tools in one app. Use the tabs to switch between them. The gear opens the settings and the three dots open the backup menu. No account is needed.</item>
+        <item># Tasks</item>
+        <item>Write what needs to be done and choose how important it is, a deadline and a reminder. A reminder comes as a notification, as a full-screen alert and, if you like, as a voice alert. Reminders survive a restart of the phone.</item>
+        <item>- Filter the list by status and sort it by date, importance or deadline.</item>
+        <item>- Open a task to change or delete it.</item>
+        <item>- Allow notifications and exact alarms in the settings so that reminders arrive on time.</item>
+        <item># Weather</item>
+        <item>See the weather where you are or search for any city. The picture changes with the weather and the time of day and shows the phase of the moon. Choose the units with the Units button.</item>
+        <item># Currency</item>
+        <item>Pick two currencies, type an amount and see the result. Swap the currencies with one tap. The rates are saved, so the last known rates work without internet, and the date of the last update is shown.</item>
+        <item># Calculator</item>
+        <item>Basic and scientific modes, degrees or radians, memory and a history of your calculations.</item>
+        <item># Scan</item>
+        <item>Photograph a page or choose a picture, check the detected edges, adjust the light and pick a filter. Add more pages to the same document, then share it as a PDF or as pictures.</item>
+        <item># Steps</item>
+        <item>The step sensor of your phone counts your steps in the background. Allow the physical activity permission. For an exact distance, set the length of your walking and running step in the step settings, where the app explains how to measure it. Steps are split into walking and running by their pace.</item>
+        <item># Flights</item>
+        <item>For fun and curiosity only: do not use it for navigation or anything related to safety. Allow precise location and press Start. The app records speed, altitude, climb rate, load and the route, and plays a variometer sound. After the flight, open the journal to get a PDF report. When the limit of reports is reached, delete old flights from the journal.</item>
+        <item># Backup</item>
+        <item>In the three dots menu you can export all your data to a file and import it on another phone. You can also save it to your own cloud storage (WebDAV) and turn on a daily automatic backup. Make a backup before you change your phone.</item>
+        <item># Settings</item>
+        <item>- Language: the language of the whole app.</item>
+        <item>- Display mode: light, dark or automatic.</item>
+        <item>- Design: ten looks for the whole app.</item>
+        <item>- Alarms and permissions: reminders, sounds and access to the features of the phone.</item>
+    </string-array>
+
+    <string-array name="info_privacy">
+        <item># Your data stays with you</item>
+        <item>MyAssistant has no advertising, no analytics and no account. Your tasks, steps, scans and flights are stored on your phone only.</item>
+        <item># What goes over the internet</item>
+        <item>Only what you ask for:</item>
+        <item>- Weather and city search: your location or the name of the city goes to Open-Meteo and OpenStreetMap.</item>
+        <item>- Exchange rates: a request for the rates, without any personal data.</item>
+        <item>- Flight report maps: map pictures of the area of the flight are requested from Esri.</item>
+        <item>- Your own cloud backup: if you set it up, a copy of your data goes to the WebDAV server you chose, over a secure connection. The password is stored encrypted.</item>
+        <item># Permissions</item>
+        <item>- Location: the weather where you are and the recording of flights.</item>
+        <item>- Physical activity: counting steps.</item>
+        <item>- Notifications and alarms: reminders of your tasks.</item>
+        <item># Sharing and selling</item>
+        <item>Your data is never sold or shared for advertising. A backup or a report leaves the phone only when you share it yourself.</item>
+        <item># Contact</item>
+        <item>Questions? Use Send feedback in the settings.</item>
+    </string-array>
+
+    <string-array name="info_license_summary">
+        <item># In short</item>
+        <item>- You buy MyAssistant once and may use it on your own devices for personal purposes, with no subscription.</item>
+        <item>- You may not copy, resell, rent, redistribute or publish the app or its parts, or take it apart to study its code.</item>
+        <item>- The app is provided as is, without warranty. Bug reports are welcome and are fixed where possible, but without any obligation or deadline.</item>
+        <item>- The flight instruments, step counter, weather and exchange rates are for information only.</item>
+        <item>The full license below is in English and is the binding text.</item>
+        <item># Full license (English)</item>
+    </string-array>
+</resources>
