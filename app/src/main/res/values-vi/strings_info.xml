@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Bắt đầu</item>
+        <item>MyAssistant gom bảy công cụ hằng ngày vào một ứng dụng. Chuyển giữa chúng bằng các tab. Biểu tượng bánh răng mở phần cài đặt, ba chấm mở menu sao lưu. Không cần tài khoản.</item>
+        <item># Công việc</item>
+        <item>Ghi việc cần làm, chọn mức quan trọng, hạn chót và nhắc nhở. Nhắc nhở đến dưới dạng thông báo, cảnh báo toàn màn hình và, nếu muốn, cảnh báo bằng giọng nói. Nhắc nhở vẫn còn sau khi khởi động lại điện thoại.</item>
+        <item>- Lọc danh sách theo trạng thái và sắp xếp theo ngày, mức quan trọng hoặc hạn chót.</item>
+        <item>- Mở một công việc để sửa hoặc xóa.</item>
+        <item>- Để nhắc nhở đến đúng giờ, hãy cho phép thông báo và báo thức chính xác trong cài đặt.</item>
+        <item># Thời tiết</item>
+        <item>Xem thời tiết nơi bạn đang ở hoặc tìm bất kỳ thành phố nào. Hình ảnh thay đổi theo thời tiết và giờ trong ngày, đồng thời hiển thị pha Mặt Trăng. Chọn đơn vị bằng nút «Đơn vị».</item>
+        <item># Tiền tệ</item>
+        <item>Chọn hai loại tiền, nhập số tiền và xem kết quả. Đổi chỗ hai loại tiền bằng một lần chạm. Tỷ giá được lưu lại, nên tỷ giá gần nhất vẫn dùng được khi không có mạng và ngày cập nhật cuối được hiển thị.</item>
+        <item># Máy tính</item>
+        <item>Chế độ cơ bản và khoa học, độ hoặc radian, bộ nhớ và lịch sử tính toán.</item>
+        <item># Quét</item>
+        <item>Chụp một trang hoặc chọn ảnh, kiểm tra các cạnh được nhận diện, chỉnh ánh sáng và chọn bộ lọc. Thêm nhiều trang vào cùng một tài liệu rồi chia sẻ dưới dạng PDF hoặc ảnh.</item>
+        <item># Bước chân</item>
+        <item>Cảm biến bước chân của điện thoại đếm số bước của bạn ở chế độ nền. Hãy cho phép quyền hoạt động thể chất. Để có quãng đường chính xác, hãy đặt độ dài bước đi bộ và chạy trong cài đặt bước chân, nơi ứng dụng giải thích cách đo. Các bước được chia thành đi bộ và chạy theo nhịp độ.</item>
+        <item># Chuyến bay</item>
+        <item>Chỉ để giải trí và tò mò: không dùng để dẫn đường hay bất cứ việc gì liên quan đến an toàn. Cho phép vị trí chính xác và nhấn «Bắt đầu». Ứng dụng ghi lại tốc độ, độ cao, tốc độ lên, tải trọng và đường bay, đồng thời phát âm thanh biến thiên kế. Sau chuyến bay, mở nhật ký để lấy báo cáo PDF. Khi đạt giới hạn báo cáo, hãy xóa các chuyến bay cũ khỏi nhật ký.</item>
+        <item># Sao lưu</item>
+        <item>Trong menu ba chấm, bạn có thể xuất toàn bộ dữ liệu ra tệp và nhập vào điện thoại khác. Bạn cũng có thể lưu lên kho đám mây của riêng mình (WebDAV) và bật sao lưu tự động hằng ngày. Hãy sao lưu trước khi đổi điện thoại.</item>
+        <item># Cài đặt</item>
+        <item>- Ngôn ngữ: ngôn ngữ của toàn bộ ứng dụng.</item>
+        <item>- Chế độ hiển thị: sáng, tối hoặc tự động.</item>
+        <item>- Giao diện: mười kiểu cho toàn bộ ứng dụng.</item>
+        <item>- Nhắc nhở và quyền: nhắc nhở, âm thanh và quyền truy cập các tính năng của điện thoại.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Dữ liệu của bạn ở lại với bạn</item>
+        <item>MyAssistant không có quảng cáo, không phân tích và không có tài khoản. Công việc, số bước, bản quét và chuyến bay của bạn chỉ được lưu trên điện thoại.</item>
+        <item># Những gì đi qua Internet</item>
+        <item>Chỉ những gì bạn yêu cầu:</item>
+        <item>- Thời tiết và tìm thành phố: vị trí hoặc tên thành phố của bạn được gửi đến Open-Meteo và OpenStreetMap.</item>
+        <item>- Tỷ giá: yêu cầu tỷ giá, không kèm dữ liệu cá nhân.</item>
+        <item>- Bản đồ trong báo cáo chuyến bay: ảnh bản đồ khu vực bay được yêu cầu từ Esri.</item>
+        <item>- Sao lưu đám mây của riêng bạn: nếu bạn thiết lập, bản sao dữ liệu được gửi qua kết nối an toàn đến máy chủ WebDAV bạn chọn. Mật khẩu được lưu ở dạng mã hóa.</item>
+        <item># Quyền</item>
+        <item>- Vị trí: thời tiết nơi bạn đang ở và ghi lại chuyến bay.</item>
+        <item>- Hoạt động thể chất: đếm bước chân.</item>
+        <item>- Thông báo và báo thức: nhắc nhở công việc.</item>
+        <item># Chia sẻ và bán</item>
+        <item>Dữ liệu của bạn không bao giờ bị bán hay chia sẻ cho quảng cáo. Bản sao lưu hoặc báo cáo chỉ rời khỏi điện thoại khi chính bạn chia sẻ.</item>
+        <item># Liên hệ</item>
+        <item>Có câu hỏi? Dùng «Gửi phản hồi» trong cài đặt.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Tóm tắt</item>
+        <item>- Bạn mua MyAssistant một lần và dùng trên thiết bị của mình cho mục đích cá nhân, không cần đăng ký thuê bao.</item>
+        <item>- Bạn không được sao chép, bán lại, cho thuê, phân phối lại hay đăng tải ứng dụng hoặc các phần của nó, cũng không được dịch ngược để nghiên cứu mã.</item>
+        <item>- Ứng dụng được cung cấp «nguyên trạng», không bảo hành. Báo lỗi luôn được hoan nghênh và sẽ được sửa nếu có thể, nhưng không có nghĩa vụ hay thời hạn.</item>
+        <item>- Các công cụ bay, bộ đếm bước, thời tiết và tỷ giá chỉ mang tính tham khảo.</item>
+        <item>Giấy phép đầy đủ bên dưới bằng tiếng Anh và là văn bản có giá trị ràng buộc.</item>
+        <item># Giấy phép đầy đủ (tiếng Anh)</item>
+    </string-array>
+</resources>

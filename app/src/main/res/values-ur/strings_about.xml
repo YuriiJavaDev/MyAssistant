@@ -9,11 +9,11 @@
     <string name="about_promise">کوئی اشتہار نہیں۔ کوئی ٹریکر نہیں۔ کوئی اکاؤنٹ نہیں۔ آپ کا ڈیٹا آپ کے فون پر ہی رہتا ہے۔</string>
     <string name="about_credits_title">ڈیٹا اور خدمات</string>
     <string name="about_credits">موسم: Open-Meteo.com\nمقامات: © OpenStreetMap کے معاونین\nشرحِ تبادلہ: Exchange Rate API\nساحلی خطوط: Natural Earth\nنقشے کی تصاویر: Esri اور اس کے فراہم کنندگان</string>
-    <string name="about_open_readme">مزید</string>
+    <string name="about_open_guide">رہنما</string>
     <string name="about_open_license">لائسنس</string>
     <string name="about_open_privacy">رازداری</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. جملہ حقوق محفوظ ہیں۔</string>
-    <string name="about_link_failed">صفحہ نہیں کھل سکا</string>
+    <string name="info_close">بند کریں</string>
     <string name="feedback_title">رائے بھیجیں</string>
     <string name="feedback_hint">ڈویلپر کے نام آپ کا پیغام</string>
     <string name="feedback_include_details">ایپ کا ورژن اور فون کا ماڈل شامل کریں</string>

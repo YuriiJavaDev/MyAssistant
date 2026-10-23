@@ -3,6 +3,8 @@ package com.yurii.pavlenko.myassistant.localization;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.yurii.pavlenko.myassistant.about.logic.InfoMarkup;
+
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -42,6 +44,12 @@ public class TranslationsTest {
                     assertEquals(where + " items", english.texts.size(), mine.texts.size());
                 } else {
                     assertTrue(where + " needs the form \"other\"", mine.quantities.contains("other"));
+                }
+                if (entry.getKey().startsWith("string-array:info_")) {
+                    for (int i = 0; i < mine.texts.size(); i++) {
+                        assertEquals(where + " marker of item " + i,
+                                InfoMarkup.typeOf(english.texts.get(i)), InfoMarkup.typeOf(mine.texts.get(i)));
+                    }
                 }
                 for (int i = 0; i < mine.texts.size(); i++) {
                     String reference = english.texts.get(english.quantities.isEmpty() ? i : english.quantities.indexOf("other"));

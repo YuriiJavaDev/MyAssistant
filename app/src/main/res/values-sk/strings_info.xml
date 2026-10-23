@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Začíname</item>
+        <item>MyAssistant spája sedem každodenných nástrojov v jednej aplikácii. Medzi nimi prepínate kartami. Ozubené koliesko otvorí nastavenia a tri bodky ponuku záloh. Účet nie je potrebný.</item>
+        <item># Úlohy</item>
+        <item>Napíšte, čo treba urobiť, a zvoľte dôležitosť, termín a pripomenutie. Pripomenutie príde ako oznámenie, ako upozornenie na celú obrazovku a podľa želania aj ako hlasové upozornenie. Pripomenutia prežijú reštart telefónu.</item>
+        <item>- Zoznam filtrujte podľa stavu a zoraďte podľa dátumu, dôležitosti alebo termínu.</item>
+        <item>- Úlohu otvorte, aby ste ju zmenili alebo zmazali.</item>
+        <item>- V nastaveniach povoľte oznámenia a presné budíky, aby pripomenutia chodili načas.</item>
+        <item># Počasie</item>
+        <item>Zobrazte počasie tam, kde ste, alebo vyhľadajte ľubovoľné mesto. Obrázok sa mení podľa počasia a dennej doby a ukazuje fázu mesiaca. Jednotky zvolíte tlačidlom „Jednotky“.</item>
+        <item># Meny</item>
+        <item>Vyberte dve meny, zadajte sumu a uvidíte výsledok. Meny vymeníte jedným ťuknutím. Kurzy sa ukladajú, takže posledné známe kurzy fungujú bez internetu a zobrazí sa dátum poslednej aktualizácie.</item>
+        <item># Kalkulačka</item>
+        <item>Základný a vedecký režim, stupne alebo radiány, pamäť a história výpočtov.</item>
+        <item># Skener</item>
+        <item>Odfotografujte stránku alebo vyberte obrázok, skontrolujte nájdené okraje, upravte svetlo a zvoľte filter. Do toho istého dokumentu pridávajte ďalšie stránky a potom ho zdieľajte ako PDF alebo obrázky.</item>
+        <item># Kroky</item>
+        <item>Snímač krokov v telefóne počíta vaše kroky na pozadí. Povoľte prístup k fyzickej aktivite. Pre presnú vzdialenosť nastavte dĺžku kroku pri chôdzi a behu v nastaveniach krokov, kde aplikácia vysvetľuje, ako ju zmerať. Kroky sa podľa tempa delia na chôdzu a beh.</item>
+        <item># Lety</item>
+        <item>Len pre zábavu a zvedavosť: nepoužívajte to na navigáciu ani na nič, čo súvisí s bezpečnosťou. Povoľte presnú polohu a ťuknite na „Štart“. Aplikácia zaznamenáva rýchlosť, výšku, stúpanie, zaťaženie a trasu a prehráva zvuk variometra. Po lete otvorte denník a získajte správu v PDF. Keď je dosiahnutý limit správ, zmažte z denníka staré lety.</item>
+        <item># Záloha</item>
+        <item>V ponuke s tromi bodkami môžete exportovať všetky údaje do súboru a importovať ich v inom telefóne. Môžete ich tiež ukladať do vlastného cloudového úložiska (WebDAV) a zapnúť dennú automatickú zálohu. Zálohu si urobte pred výmenou telefónu.</item>
+        <item># Nastavenia</item>
+        <item>- Jazyk: jazyk celej aplikácie.</item>
+        <item>- Režim zobrazenia: svetlý, tmavý alebo automatický.</item>
+        <item>- Vzhľad: desať podôb celej aplikácie.</item>
+        <item>- Pripomenutia a oprávnenia: pripomenutia, zvuky a prístup k funkciám telefónu.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Vaše údaje zostávajú u vás</item>
+        <item>MyAssistant nemá reklamy, analytiku ani účty. Vaše úlohy, kroky, skeny a lety sú uložené iba vo vašom telefóne.</item>
+        <item># Čo ide cez internet</item>
+        <item>Iba to, o čo požiadate:</item>
+        <item>- Počasie a vyhľadávanie miest: vaša poloha alebo názov mesta sa odošle službám Open-Meteo a OpenStreetMap.</item>
+        <item>- Menové kurzy: dopyt na kurzy bez akýchkoľvek osobných údajov.</item>
+        <item>- Mapy pre správy o letoch: obrázky mapy oblasti letu sa vyžiadajú od Esri.</item>
+        <item>- Vaša vlastná cloudová záloha: ak ju nastavíte, kópia údajov sa zabezpečeným pripojením odošle na vami zvolený server WebDAV. Heslo je uložené zašifrované.</item>
+        <item># Oprávnenia</item>
+        <item>- Poloha: počasie tam, kde ste, a záznam letov.</item>
+        <item>- Fyzická aktivita: počítanie krokov.</item>
+        <item>- Oznámenia a budíky: pripomenutia úloh.</item>
+        <item># Zdieľanie a predaj</item>
+        <item>Vaše údaje sa nikdy nepredávajú ani nezdieľajú na reklamu. Záloha alebo správa opustí telefón, len keď ju sami zdieľate.</item>
+        <item># Kontakt</item>
+        <item>Máte otázku? Použite v nastaveniach „Poslať spätnú väzbu“.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># V skratke</item>
+        <item>- MyAssistant kupujete raz a môžete ho používať na svojich zariadeniach na osobné účely, bez predplatného.</item>
+        <item>- Aplikáciu ani jej časti nesmiete kopírovať, ďalej predávať, prenajímať, šíriť ani zverejňovať, ani ju rozoberať kvôli štúdiu kódu.</item>
+        <item>- Aplikácia sa poskytuje „tak, ako je“, bez záruky. Hlásenia chýb sú vítané a podľa možností sa opravujú, ale bez záväzku či lehoty.</item>
+        <item>- Letové prístroje, počítadlo krokov, počasie a menové kurzy majú len informatívny charakter.</item>
+        <item>Úplná licencia nižšie je v angličtine a je záväzným znením.</item>
+        <item># Úplná licencia (po anglicky)</item>
+    </string-array>
+</resources>

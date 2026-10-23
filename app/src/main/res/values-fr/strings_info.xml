@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Pour commencer</item>
+        <item>MyAssistant réunit sept outils du quotidien dans une seule appli. Passez de l’un à l’autre avec les onglets. L’engrenage ouvre les réglages et les trois points ouvrent le menu des sauvegardes. Aucun compte n’est nécessaire.</item>
+        <item># Tâches</item>
+        <item>Écrivez ce qu’il faut faire et choisissez l’importance, une échéance et un rappel. Le rappel arrive sous forme de notification, d’alerte plein écran et, si vous le souhaitez, d’alerte vocale. Les rappels survivent au redémarrage du téléphone.</item>
+        <item>- Filtrez la liste par état et triez-la par date, importance ou échéance.</item>
+        <item>- Ouvrez une tâche pour la modifier ou la supprimer.</item>
+        <item>- Autorisez les notifications et les alarmes exactes dans les réglages pour que les rappels arrivent à l’heure.</item>
+        <item># Météo</item>
+        <item>Consultez la météo là où vous êtes ou cherchez n’importe quelle ville. L’image change avec la météo et l’heure du jour et montre la phase de la lune. Choisissez les unités avec le bouton « Unités ».</item>
+        <item># Devises</item>
+        <item>Choisissez deux devises, saisissez un montant et voyez le résultat. Inversez les devises d’une touche. Les taux sont enregistrés : les derniers taux connus fonctionnent sans internet, et la date de la dernière mise à jour est affichée.</item>
+        <item># Calculatrice</item>
+        <item>Modes simple et scientifique, degrés ou radians, mémoire et historique des calculs.</item>
+        <item># Scanner</item>
+        <item>Photographiez une page ou choisissez une image, vérifiez les bords détectés, réglez la lumière et choisissez un filtre. Ajoutez d’autres pages au même document, puis partagez-le en PDF ou en images.</item>
+        <item># Pas</item>
+        <item>Le capteur de pas de votre téléphone compte vos pas en arrière-plan. Autorisez l’accès à l’activité physique. Pour une distance exacte, indiquez la longueur de votre pas à la marche et à la course dans les réglages des pas, où l’appli explique comment la mesurer. Les pas sont répartis entre marche et course selon l’allure.</item>
+        <item># Vols</item>
+        <item>Pour le plaisir et la curiosité seulement : ne l’utilisez pas pour la navigation ni pour quoi que ce soit lié à la sécurité. Autorisez la position précise et touchez « Démarrer ». L’appli enregistre la vitesse, l’altitude, le taux de montée, la charge et le trajet, et joue le son du variomètre. Après le vol, ouvrez le journal pour obtenir un rapport PDF. Quand la limite de rapports est atteinte, supprimez d’anciens vols du journal.</item>
+        <item># Sauvegarde</item>
+        <item>Dans le menu à trois points, vous pouvez exporter toutes vos données dans un fichier et les importer sur un autre téléphone. Vous pouvez aussi les enregistrer dans votre propre stockage cloud (WebDAV) et activer une sauvegarde automatique quotidienne. Faites une sauvegarde avant de changer de téléphone.</item>
+        <item># Réglages</item>
+        <item>- Langue : la langue de toute l’appli.</item>
+        <item>- Mode d’affichage : clair, sombre ou automatique.</item>
+        <item>- Design : dix looks pour toute l’appli.</item>
+        <item>- Rappels et autorisations : rappels, sons et accès aux fonctions du téléphone.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Vos données restent chez vous</item>
+        <item>MyAssistant n’a ni publicité, ni analyse, ni compte. Vos tâches, pas, scans et vols sont stockés uniquement sur votre téléphone.</item>
+        <item># Ce qui passe par internet</item>
+        <item>Uniquement ce que vous demandez :</item>
+        <item>- Météo et recherche de ville : votre position ou le nom de la ville est envoyé à Open-Meteo et OpenStreetMap.</item>
+        <item>- Taux de change : une demande de taux, sans donnée personnelle.</item>
+        <item>- Cartes des rapports de vol : les images de carte de la zone du vol sont demandées à Esri.</item>
+        <item>- Votre propre sauvegarde cloud : si vous la configurez, une copie de vos données est envoyée au serveur WebDAV de votre choix, par une connexion sécurisée. Le mot de passe est stocké chiffré.</item>
+        <item># Autorisations</item>
+        <item>- Position : la météo là où vous êtes et l’enregistrement des vols.</item>
+        <item>- Activité physique : comptage des pas.</item>
+        <item>- Notifications et alarmes : rappels de vos tâches.</item>
+        <item># Partage et vente</item>
+        <item>Vos données ne sont jamais vendues ni partagées à des fins publicitaires. Une sauvegarde ou un rapport ne quitte le téléphone que lorsque vous le partagez vous-même.</item>
+        <item># Contact</item>
+        <item>Des questions ? Utilisez « Envoyer un commentaire » dans les réglages.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># En bref</item>
+        <item>- Vous achetez MyAssistant une seule fois et pouvez l’utiliser sur vos appareils à des fins personnelles, sans abonnement.</item>
+        <item>- Vous ne pouvez pas copier, revendre, louer, redistribuer ni publier l’appli ou ses parties, ni la décompiler pour étudier son code.</item>
+        <item>- L’appli est fournie « telle quelle », sans garantie. Les signalements de bugs sont les bienvenus et corrigés dans la mesure du possible, sans obligation ni délai.</item>
+        <item>- Les instruments de vol, le compteur de pas, la météo et les taux de change sont fournis à titre informatif seulement.</item>
+        <item>La licence complète ci-dessous est en anglais et fait foi.</item>
+        <item># Licence complète (en anglais)</item>
+    </string-array>
+</resources>

@@ -9,11 +9,11 @@
     <string name="about_promise">无广告。无追踪。无需账号。你的数据只保存在你的手机上。</string>
     <string name="about_credits_title">数据与服务</string>
     <string name="about_credits">天气：Open-Meteo.com\n地点：© OpenStreetMap 贡献者\n汇率：Exchange Rate API\n海岸线：Natural Earth\n地图影像：Esri 及其提供方</string>
-    <string name="about_open_readme">了解更多</string>
+    <string name="about_open_guide">指南</string>
     <string name="about_open_license">许可</string>
     <string name="about_open_privacy">隐私</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko。保留所有权利。</string>
-    <string name="about_link_failed">无法打开该页面</string>
+    <string name="info_close">关闭</string>
     <string name="feedback_title">发送反馈</string>
     <string name="feedback_hint">你给开发者的消息</string>
     <string name="feedback_include_details">附上应用版本和手机型号</string>

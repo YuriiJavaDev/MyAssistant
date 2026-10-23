@@ -9,11 +9,11 @@
     <string name="about_promise">कोई विज्ञापन नहीं। कोई ट्रैकर नहीं। कोई खाता नहीं। आपका डेटा आपके फ़ोन पर ही रहता है।</string>
     <string name="about_credits_title">डेटा और सेवाएँ</string>
     <string name="about_credits">मौसम: Open-Meteo.com\nस्थान: © OpenStreetMap योगदानकर्ता\nविनिमय दरें: Exchange Rate API\nतटरेखाएँ: Natural Earth\nनक्शे की तस्वीरें: Esri और उसके प्रदाता</string>
-    <string name="about_open_readme">और जानें</string>
+    <string name="about_open_guide">मार्गदर्शिका</string>
     <string name="about_open_license">लाइसेंस</string>
     <string name="about_open_privacy">गोपनीयता</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. सर्वाधिकार सुरक्षित।</string>
-    <string name="about_link_failed">पेज नहीं खुल सका</string>
+    <string name="info_close">बंद करें</string>
     <string name="feedback_title">प्रतिक्रिया भेजें</string>
     <string name="feedback_hint">डेवलपर को आपका संदेश</string>
     <string name="feedback_include_details">ऐप का संस्करण और फ़ोन का मॉडल जोड़ें</string>

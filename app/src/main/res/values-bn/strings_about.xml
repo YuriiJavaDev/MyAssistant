@@ -9,11 +9,11 @@
     <string name="about_promise">কোনো বিজ্ঞাপন নেই। কোনো ট্র্যাকার নেই। কোনো অ্যাকাউন্ট নেই। আপনার তথ্য আপনার ফোনেই থাকে।</string>
     <string name="about_credits_title">তথ্য ও পরিষেবা</string>
     <string name="about_credits">আবহাওয়া: Open-Meteo.com\nস্থান: © OpenStreetMap অবদানকারীরা\nবিনিময় হার: Exchange Rate API\nউপকূলরেখা: Natural Earth\nমানচিত্রের ছবি: Esri ও তার সরবরাহকারীরা</string>
-    <string name="about_open_readme">আরও জানুন</string>
+    <string name="about_open_guide">নির্দেশিকা</string>
     <string name="about_open_license">লাইসেন্স</string>
     <string name="about_open_privacy">গোপনীয়তা</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. সর্বস্বত্ব সংরক্ষিত।</string>
-    <string name="about_link_failed">পৃষ্ঠাটি খোলা যায়নি</string>
+    <string name="info_close">বন্ধ করুন</string>
     <string name="feedback_title">মতামত পাঠান</string>
     <string name="feedback_hint">ডেভেলপারের কাছে আপনার বার্তা</string>
     <string name="feedback_include_details">অ্যাপের সংস্করণ ও ফোনের মডেল যোগ করুন</string>

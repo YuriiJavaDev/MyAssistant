@@ -54,6 +54,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".about.ui.InfoActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".scan.ui.ScanEditorActivity"
             android:exported="false"
             android:screenOrientation="portrait"

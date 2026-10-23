@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="info_guide">
+        <item># Prvi koraci</item>
+        <item>MyAssistant spaja sedam svakodnevnih alata u jednoj aplikaciji. Među njima prelazite karticama. Zupčanik otvara postavke, a tri točkice izbornik sigurnosnih kopija. Račun nije potreban.</item>
+        <item># Zadaci</item>
+        <item>Upišite što treba učiniti i odaberite važnost, rok i podsjetnik. Podsjetnik stiže kao obavijest, kao upozorenje preko cijelog zaslona i, ako želite, kao glasovno upozorenje. Podsjetnici ostaju i nakon ponovnog pokretanja telefona.</item>
+        <item>- Filtrirajte popis po stanju i sortirajte po datumu, važnosti ili roku.</item>
+        <item>- Otvorite zadatak da biste ga promijenili ili izbrisali.</item>
+        <item>- Dopustite obavijesti i točne alarme u postavkama kako bi podsjetnici stizali na vrijeme.</item>
+        <item># Vrijeme</item>
+        <item>Pogledajte vrijeme gdje se nalazite ili potražite bilo koji grad. Slika se mijenja s vremenom i dobom dana i prikazuje fazu mjeseca. Jedinice birate gumbom „Jedinice”.</item>
+        <item># Valute</item>
+        <item>Odaberite dvije valute, unesite iznos i pogledajte rezultat. Valute zamjenjujete jednim dodirom. Tečajevi se spremaju pa posljednji poznati tečajevi rade bez interneta, a prikazuje se datum zadnjeg ažuriranja.</item>
+        <item># Kalkulator</item>
+        <item>Osnovni i znanstveni način, stupnjevi ili radijani, memorija i povijest izračuna.</item>
+        <item># Skener</item>
+        <item>Fotografirajte stranicu ili odaberite sliku, provjerite pronađene rubove, podesite svjetlo i odaberite filtar. Dodajte još stranica istom dokumentu pa ga podijelite kao PDF ili slike.</item>
+        <item># Koraci</item>
+        <item>Senzor koraka u telefonu broji vaše korake u pozadini. Dopustite pristup tjelesnoj aktivnosti. Za točnu udaljenost postavite duljinu koraka pri hodanju i trčanju u postavkama koraka, gdje aplikacija objašnjava kako je izmjeriti. Koraci se prema tempu dijele na hodanje i trčanje.</item>
+        <item># Letovi</item>
+        <item>Samo za zabavu i znatiželju: nemojte ga koristiti za navigaciju niti za bilo što povezano sa sigurnošću. Dopustite preciznu lokaciju i dodirnite „Start”. Aplikacija bilježi brzinu, visinu, brzinu penjanja, opterećenje i rutu te reproducira zvuk variometra. Nakon leta otvorite dnevnik da biste dobili PDF izvješće. Kad se dosegne ograničenje izvješća, izbrišite stare letove iz dnevnika.</item>
+        <item># Sigurnosna kopija</item>
+        <item>U izborniku s tri točkice možete izvesti sve podatke u datoteku i uvesti ih na drugom telefonu. Možete ih spremati i u vlastiti oblak (WebDAV) te uključiti dnevnu automatsku kopiju. Napravite kopiju prije promjene telefona.</item>
+        <item># Postavke</item>
+        <item>- Jezik: jezik cijele aplikacije.</item>
+        <item>- Način prikaza: svijetli, tamni ili automatski.</item>
+        <item>- Dizajn: deset izgleda za cijelu aplikaciju.</item>
+        <item>- Podsjetnici i dopuštenja: podsjetnici, zvukovi i pristup značajkama telefona.</item>
+    </string-array>
+    <string-array name="info_privacy">
+        <item># Vaši podaci ostaju kod vas</item>
+        <item>MyAssistant nema reklame, analitiku ni račune. Vaši zadaci, koraci, skenovi i letovi pohranjeni su samo na vašem telefonu.</item>
+        <item># Što ide putem interneta</item>
+        <item>Samo ono što vi zatražite:</item>
+        <item>- Vrijeme i pretraga gradova: vaša lokacija ili naziv grada šalje se uslugama Open-Meteo i OpenStreetMap.</item>
+        <item>- Tečajevi: zahtjev za tečajeve, bez osobnih podataka.</item>
+        <item>- Karte za izvješća o letovima: slike karte područja leta traže se od Esrija.</item>
+        <item>- Vaša vlastita kopija u oblaku: ako je postavite, kopija podataka ide na WebDAV poslužitelj koji ste odabrali, sigurnom vezom. Lozinka se pohranjuje šifrirana.</item>
+        <item># Dopuštenja</item>
+        <item>- Lokacija: vrijeme gdje se nalazite i bilježenje letova.</item>
+        <item>- Tjelesna aktivnost: brojanje koraka.</item>
+        <item>- Obavijesti i alarmi: podsjetnici za vaše zadatke.</item>
+        <item># Dijeljenje i prodaja</item>
+        <item>Vaši se podaci nikada ne prodaju niti dijele radi oglašavanja. Kopija ili izvješće napušta telefon samo kad ih sami podijelite.</item>
+        <item># Kontakt</item>
+        <item>Imate pitanja? Koristite „Pošalji povratnu informaciju” u postavkama.</item>
+    </string-array>
+    <string-array name="info_license_summary">
+        <item># Ukratko</item>
+        <item>- MyAssistant kupujete jednom i možete ga koristiti na svojim uređajima u osobne svrhe, bez pretplate.</item>
+        <item>- Nije dopušteno kopirati, preprodavati, iznajmljivati, distribuirati ili objavljivati aplikaciju ili njezine dijelove, niti je rastavljati radi proučavanja koda.</item>
+        <item>- Aplikacija se pruža „kakva jest”, bez jamstva. Prijave pogrešaka su dobrodošle i po mogućnosti se ispravljaju, ali bez obveze i roka.</item>
+        <item>- Zrakoplovni instrumenti, brojač koraka, vrijeme i tečajevi samo su informativni.</item>
+        <item>Potpuna licenca u nastavku na engleskom je i ona je obvezujući tekst.</item>
+        <item># Potpuna licenca (na engleskom)</item>
+    </string-array>
+</resources>

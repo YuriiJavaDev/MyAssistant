@@ -9,11 +9,11 @@
     <string name="about_promise">Bez reklam. Bez trackerów. Bez konta. Twoje dane zostają na Twoim telefonie.</string>
     <string name="about_credits_title">Dane i usługi</string>
     <string name="about_credits">Pogoda: Open-Meteo.com\nMiejsca: © współtwórcy OpenStreetMap\nKursy walut: Exchange Rate API\nLinie brzegowe: Natural Earth\nObrazy map: Esri i jego dostawcy</string>
-    <string name="about_open_readme">Więcej</string>
+    <string name="about_open_guide">Przewodnik</string>
     <string name="about_open_license">Licencja</string>
     <string name="about_open_privacy">Prywatność</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Wszelkie prawa zastrzeżone.</string>
-    <string name="about_link_failed">Nie udało się otworzyć strony</string>
+    <string name="info_close">Zamknij</string>
     <string name="feedback_title">Wyślij opinię</string>
     <string name="feedback_hint">Twoja wiadomość do twórcy</string>
     <string name="feedback_include_details">Dodaj wersję aplikacji i model telefonu</string>

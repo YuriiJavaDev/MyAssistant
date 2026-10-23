@@ -9,11 +9,11 @@
     <string name="about_promise">광고 없음. 추적 없음. 계정 없음. 데이터는 내 휴대전화에만 남습니다.</string>
     <string name="about_credits_title">데이터 및 서비스</string>
     <string name="about_credits">날씨: Open-Meteo.com\n장소: © OpenStreetMap 기여자\n환율: Exchange Rate API\n해안선: Natural Earth\n지도 이미지: Esri 및 제공업체</string>
-    <string name="about_open_readme">더 보기</string>
+    <string name="about_open_guide">안내</string>
     <string name="about_open_license">라이선스</string>
     <string name="about_open_privacy">개인정보</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. 모든 권리 보유.</string>
-    <string name="about_link_failed">페이지를 열 수 없습니다</string>
+    <string name="info_close">닫기</string>
     <string name="feedback_title">의견 보내기</string>
     <string name="feedback_hint">개발자에게 보낼 메시지</string>
     <string name="feedback_include_details">앱 버전과 휴대전화 모델 추가</string>

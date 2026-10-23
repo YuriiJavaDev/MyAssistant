@@ -70,25 +70,13 @@
             android:layout_marginBottom="8dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAboutReadme"
+                android:id="@+id/btnAboutGuide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="6dp"
                 android:background="@drawable/button_selector"
                 app:backgroundTint="@null"
-                android:text="@string/about_open_readme"
-                android:textAllCaps="false"
-                android:textColor="?attr/maButtonLabel"
-                android:textSize="12sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAboutLicense"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:background="@drawable/button_selector"
-                app:backgroundTint="@null"
-                android:text="@string/about_open_license"
+                android:text="@string/about_open_guide"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel"
                 android:textSize="12sp" />
@@ -101,6 +89,18 @@
                 android:background="@drawable/button_selector"
                 app:backgroundTint="@null"
                 android:text="@string/about_open_privacy"
+                android:textAllCaps="false"
+                android:textColor="?attr/maButtonLabel"
+                android:textSize="12sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAboutLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/button_selector"
+                app:backgroundTint="@null"
+                android:text="@string/about_open_license"
                 android:textAllCaps="false"
                 android:textColor="?attr/maButtonLabel"
                 android:textSize="12sp" />

@@ -9,11 +9,11 @@
     <string name="about_promise">Առանց գովազդի։ Առանց հետևման։ Առանց հաշվի։ Ձեր տվյալները մնում են ձեր հեռախոսում։</string>
     <string name="about_credits_title">Տվյալներ և ծառայություններ</string>
     <string name="about_credits">Եղանակ՝ Open-Meteo.com\nՎայրեր՝ © OpenStreetMap-ի մասնակիցներ\nՓոխարժեքներ՝ Exchange Rate API\nԱփամուտքեր՝ Natural Earth\nՔարտեզի պատկերներ՝ Esri և նրա մատակարարները</string>
-    <string name="about_open_readme">Ավելին</string>
+    <string name="about_open_guide">Ուղեցույց</string>
     <string name="about_open_license">Արտոնագիր</string>
     <string name="about_open_privacy">Գաղտնիություն</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko։ Բոլոր իրավունքները պաշտպանված են։</string>
-    <string name="about_link_failed">Էջը չհաջողվեց բացել</string>
+    <string name="info_close">Փակել</string>
     <string name="feedback_title">Ուղարկել կարծիք</string>
     <string name="feedback_hint">Ձեր հաղորդագրությունը մշակողին</string>
     <string name="feedback_include_details">Ավելացնել հավելվածի տարբերակը և հեռախոսի մոդելը</string>

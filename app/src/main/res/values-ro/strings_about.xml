@@ -9,11 +9,11 @@
     <string name="about_promise">Fără reclame. Fără urmăritoare. Fără cont. Datele tale rămân pe telefonul tău.</string>
     <string name="about_credits_title">Date și servicii</string>
     <string name="about_credits">Vreme: Open-Meteo.com\nLocuri: © contribuitorii OpenStreetMap\nCursuri valutare: Exchange Rate API\nLinii de coastă: Natural Earth\nImagini de hartă: Esri și furnizorii săi</string>
-    <string name="about_open_readme">Mai mult</string>
+    <string name="about_open_guide">Ghid</string>
     <string name="about_open_license">Licență</string>
     <string name="about_open_privacy">Confidențialitate</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Toate drepturile rezervate.</string>
-    <string name="about_link_failed">Pagina nu a putut fi deschisă</string>
+    <string name="info_close">Închide</string>
     <string name="feedback_title">Trimite feedback</string>
     <string name="feedback_hint">Mesajul tău pentru dezvoltator</string>
     <string name="feedback_include_details">Adaugă versiunea aplicației și modelul telefonului</string>

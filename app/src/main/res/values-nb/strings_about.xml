@@ -9,11 +9,11 @@
     <string name="about_promise">Ingen annonser. Ingen sporing. Ingen konto. Dataene dine blir på telefonen din.</string>
     <string name="about_credits_title">Data og tjenester</string>
     <string name="about_credits">Vær: Open-Meteo.com\nSteder: © OpenStreetMap-bidragsytere\nValutakurser: Exchange Rate API\nKystlinjer: Natural Earth\nKartbilder: Esri og leverandørene</string>
-    <string name="about_open_readme">Les mer</string>
+    <string name="about_open_guide">Veiledning</string>
     <string name="about_open_license">Lisens</string>
     <string name="about_open_privacy">Personvern</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. Alle rettigheter forbeholdt.</string>
-    <string name="about_link_failed">Siden kunne ikke åpnes</string>
+    <string name="info_close">Lukk</string>
     <string name="feedback_title">Send tilbakemelding</string>
     <string name="feedback_hint">Meldingen din til utvikleren</string>
     <string name="feedback_include_details">Legg til appversjon og telefonmodell</string>

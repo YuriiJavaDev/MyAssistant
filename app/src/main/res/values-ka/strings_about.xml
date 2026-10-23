@@ -9,11 +9,11 @@
     <string name="about_promise">რეკლამის გარეშე. თვალთვალის გარეშე. ანგარიშის გარეშე. თქვენი მონაცემები თქვენს ტელეფონში რჩება.</string>
     <string name="about_credits_title">მონაცემები და სერვისები</string>
     <string name="about_credits">ამინდი: Open-Meteo.com\nადგილები: © OpenStreetMap-ის კონტრიბუტორები\nვალუტის კურსი: Exchange Rate API\nსანაპირო ხაზები: Natural Earth\nრუკის სურათები: Esri და მისი მომწოდებლები</string>
-    <string name="about_open_readme">მეტი</string>
+    <string name="about_open_guide">გზამკვლევი</string>
     <string name="about_open_license">ლიცენზია</string>
     <string name="about_open_privacy">კონფიდენციალურობა</string>
     <string name="about_copyright">© 2026 Yurii Pavlenko. ყველა უფლება დაცულია.</string>
-    <string name="about_link_failed">გვერდის გახსნა ვერ მოხერხდა</string>
+    <string name="info_close">დახურვა</string>
     <string name="feedback_title">უკუკავშირი</string>
     <string name="feedback_hint">თქვენი შეტყობინება დეველოპერს</string>
     <string name="feedback_include_details">აპის ვერსიისა და ტელეფონის მოდელის დამატება</string>
