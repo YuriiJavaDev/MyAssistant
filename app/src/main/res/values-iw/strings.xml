@@ -131,7 +131,7 @@
     <string name="weather_location_needed">אפשרו גישה למיקום המשוער כדי לראות את מזג האוויר במקומכם, או חפשו עיר.</string>
     <string name="weather_allow">אפשר</string>
     <string name="weather_open_settings">פתיחת הגדרות האפליקציה</string>
-    <string name="weather_attribution">מזג אוויר: Open-Meteo.com · מקומות: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">מזג אוויר: MET Norway · מקומות: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">בחירת עיר</string>
     <string name="steps_today">היום</string>
     <string name="steps_unit">צעדים</string>

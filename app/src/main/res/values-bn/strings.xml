@@ -129,7 +129,7 @@
     <string name="weather_location_needed">আপনি যেখানে আছেন সেখানকার আবহাওয়া দেখতে আনুমানিক অবস্থানের অ্যাক্সেস দিন, অথবা একটি শহর খুঁজুন।</string>
     <string name="weather_allow">অনুমতি দিন</string>
     <string name="weather_open_settings">অ্যাপের সেটিংস খুলুন</string>
-    <string name="weather_attribution">আবহাওয়া: Open-Meteo.com · স্থান: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">আবহাওয়া: MET Norway · স্থান: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">একটি শহর বেছে নিন</string>
     <string name="steps_today">আজ</string>
     <string name="steps_unit">পদক্ষেপ</string>

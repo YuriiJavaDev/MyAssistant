@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">অবস্থান নির্ধারণ করা যায়নি। লোকেশন সেবা চালু করুন অথবা একটি শহর খুঁজুন।</string>
     <string name="weather_error_city_not_found">“%1$s”-এর জন্য কোনো শহর পাওয়া যায়নি</string>
     <string name="weather_error_no_network">আবহাওয়া লোড করা যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন।</string>
+    <string name="weather_error_cities">শহরের তালিকা পড়া যায়নি। অ্যাপটি আবার ইনস্টল করুন।</string>
     <string name="weather_error_choose_city">তালিকা থেকে একটি শহর বেছে নিন</string>
     <string name="weather_current_location">বর্তমান অবস্থান</string>
 </resources>

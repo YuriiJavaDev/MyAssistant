@@ -133,7 +133,7 @@
     <string name="weather_location_needed">اسمح بالوصول إلى الموقع التقريبي لرؤية الطقس في مكانك، أو ابحث عن مدينة.</string>
     <string name="weather_allow">السماح</string>
     <string name="weather_open_settings">فتح إعدادات التطبيق</string>
-    <string name="weather_attribution">الطقس: Open-Meteo.com · الأماكن: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">الطقس: MET Norway · الأماكن: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">اختر مدينة</string>
     <string name="steps_today">اليوم</string>
     <string name="steps_unit">خطوة</string>

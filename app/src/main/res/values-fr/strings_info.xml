@@ -33,7 +33,7 @@
         <item>MyAssistant n’a ni publicité, ni analyse, ni compte. Vos tâches, pas, scans et vols sont stockés uniquement sur votre téléphone.</item>
         <item># Ce qui passe par internet</item>
         <item>Uniquement ce que vous demandez :</item>
-        <item>- Météo et recherche de ville : votre position ou le nom de la ville est envoyé à Open-Meteo et OpenStreetMap.</item>
+        <item>- Météo : votre position est envoyée à MET Norway (l\'Institut météorologique norvégien).</item>
         <item>- Taux de change : une demande de taux, sans donnée personnelle.</item>
         <item>- Cartes des rapports de vol : les images de carte de la zone du vol sont demandées à Esri.</item>
         <item>- Votre propre sauvegarde cloud : si vous la configurez, une copie de vos données est envoyée au serveur WebDAV de votre choix, par une connexion sécurisée. Le mot de passe est stocké chiffré.</item>

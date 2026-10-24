@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Konum belirlenemiyor. Konum hizmetlerini açın veya bir şehir arayın.</string>
     <string name="weather_error_city_not_found">“%1$s” için şehir bulunamadı</string>
     <string name="weather_error_no_network">Hava durumu yüklenemiyor. İnternet bağlantısını kontrol edin.</string>
+    <string name="weather_error_cities">Şehir listesi okunamadı. Uygulamayı yeniden yükleyin.</string>
     <string name="weather_error_choose_city">Listeden bir şehir seçin</string>
     <string name="weather_current_location">Geçerli konum</string>
 </resources>

@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">現在地を特定できません。位置情報サービスをオンにするか、都市を検索してください。</string>
     <string name="weather_error_city_not_found">「%1$s」に該当する都市が見つかりません</string>
     <string name="weather_error_no_network">天気を読み込めません。インターネット接続を確認してください。</string>
+    <string name="weather_error_cities">都市のリストを読み込めませんでした。アプリを再インストールしてください。</string>
     <string name="weather_error_choose_city">一覧から都市を選択してください</string>
     <string name="weather_current_location">現在地</string>
 </resources>

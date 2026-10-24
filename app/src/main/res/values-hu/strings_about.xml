@@ -8,7 +8,7 @@
     <string name="about_description">Hét mindennapi eszköz egy alkalmazásban: feladatok, időjárás, pénznemek, számológép, szkenner, lépések és repülőműszerek.</string>
     <string name="about_promise">Nincs reklám. Nincs követés. Nincs fiók. Az adataid a telefonodon maradnak.</string>
     <string name="about_credits_title">Adatok és szolgáltatások</string>
-    <string name="about_credits">Időjárás: Open-Meteo.com\nHelyek: GeoNames.org, CC BY 4.0\nÁrfolyamok: Exchange Rate API\nPartvonalak: Natural Earth, public domain\nTérképképek: Esri és szolgáltatói</string>
+    <string name="about_credits">Időjárás: MET Norway\nHelyek: GeoNames.org, CC BY 4.0\nÁrfolyamok: Exchange Rate API\nPartvonalak: Natural Earth, public domain\nTérképképek: Esri és szolgáltatói</string>
     <string name="about_open_guide">Útmutató</string>
     <string name="about_open_license">Licenc</string>
     <string name="about_open_privacy">Adatvédelem</string>

@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Placeringen kan ikke bestemmes. Slå placeringstjenester til, eller søg efter en by.</string>
     <string name="weather_error_city_not_found">Der blev ikke fundet nogen by for „%1$s”</string>
     <string name="weather_error_no_network">Vejret kan ikke indlæses. Tjek internetforbindelsen.</string>
+    <string name="weather_error_cities">Listen over byer kunne ikke læses. Installer appen igen.</string>
     <string name="weather_error_choose_city">Vælg en by fra listen</string>
     <string name="weather_current_location">Nuværende placering</string>
 </resources>

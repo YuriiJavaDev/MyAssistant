@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">تعذّر تحديد الموقع. شغّل خدمات الموقع أو ابحث عن مدينة.</string>
     <string name="weather_error_city_not_found">لم يتم العثور على مدينة باسم \"%1$s\"</string>
     <string name="weather_error_no_network">تعذّر تحميل الطقس. تحقق من اتصال الإنترنت.</string>
+    <string name="weather_error_cities">تعذّرت قراءة قائمة المدن. أعد تثبيت التطبيق.</string>
     <string name="weather_error_choose_city">اختر مدينة من القائمة</string>
     <string name="weather_current_location">الموقع الحالي</string>
 </resources>

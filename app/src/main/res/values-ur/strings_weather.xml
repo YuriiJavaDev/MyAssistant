@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">مقام کا تعین نہیں ہو سکا۔ لوکیشن سروسز آن کریں یا کوئی شہر تلاش کریں۔</string>
     <string name="weather_error_city_not_found">“%1$s” کے لیے کوئی شہر نہیں ملا</string>
     <string name="weather_error_no_network">موسم لوڈ نہیں ہو سکا۔ انٹرنیٹ کنکشن چیک کریں۔</string>
+    <string name="weather_error_cities">شہروں کی فہرست پڑھی نہیں جا سکی۔ ایپ دوبارہ انسٹال کریں۔</string>
     <string name="weather_error_choose_city">فہرست سے شہر منتخب کریں</string>
     <string name="weather_current_location">موجودہ مقام</string>
 </resources>

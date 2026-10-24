@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Lokacija se ne može odrediti. Uključite usluge lokacije ili potražite grad.</string>
     <string name="weather_error_city_not_found">Nije pronađen grad za „%1$s”</string>
     <string name="weather_error_no_network">Vrijeme se ne može učitati. Provjerite internetsku vezu.</string>
+    <string name="weather_error_cities">Popis gradova nije bilo moguće pročitati. Ponovno instalirajte aplikaciju.</string>
     <string name="weather_error_choose_city">Odaberite grad s popisa</string>
     <string name="weather_current_location">Trenutačna lokacija</string>
 </resources>

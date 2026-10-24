@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Gi tilgang til omtrentlig posisjon for å se været der du er, eller søk etter en by.</string>
     <string name="weather_allow">Tillat</string>
     <string name="weather_open_settings">Åpne appinnstillinger</string>
-    <string name="weather_attribution">Vær: Open-Meteo.com · Steder: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Vær: MET Norway · Steder: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Velg en by</string>
     <string name="steps_today">I dag</string>
     <string name="steps_unit">skritt</string>

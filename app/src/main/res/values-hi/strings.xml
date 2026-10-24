@@ -129,7 +129,7 @@
     <string name="weather_location_needed">जहाँ आप हैं वहाँ का मौसम देखने के लिए अनुमानित स्थान की पहुँच दें, या कोई शहर खोजें।</string>
     <string name="weather_allow">अनुमति दें</string>
     <string name="weather_open_settings">ऐप सेटिंग खोलें</string>
-    <string name="weather_attribution">मौसम: Open-Meteo.com · स्थान: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">मौसम: MET Norway · स्थान: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">शहर चुनें</string>
     <string name="steps_today">आज</string>
     <string name="steps_unit">कदम</string>

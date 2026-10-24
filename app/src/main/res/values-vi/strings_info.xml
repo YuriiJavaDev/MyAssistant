@@ -33,7 +33,7 @@
         <item>MyAssistant không có quảng cáo, không phân tích và không có tài khoản. Công việc, số bước, bản quét và chuyến bay của bạn chỉ được lưu trên điện thoại.</item>
         <item># Những gì đi qua Internet</item>
         <item>Chỉ những gì bạn yêu cầu:</item>
-        <item>- Thời tiết và tìm thành phố: vị trí hoặc tên thành phố của bạn được gửi đến Open-Meteo và OpenStreetMap.</item>
+        <item>- Thời tiết: vị trí của bạn được gửi đến MET Norway (Viện Khí tượng Na Uy).</item>
         <item>- Tỷ giá: yêu cầu tỷ giá, không kèm dữ liệu cá nhân.</item>
         <item>- Bản đồ trong báo cáo chuyến bay: ảnh bản đồ khu vực bay được yêu cầu từ Esri.</item>
         <item>- Sao lưu đám mây của riêng bạn: nếu bạn thiết lập, bản sao dữ liệu được gửi qua kết nối an toàn đến máy chủ WebDAV bạn chọn. Mật khẩu được lưu ở dạng mã hóa.</item>

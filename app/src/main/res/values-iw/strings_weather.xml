@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">לא ניתן לקבוע את המיקום. הפעילו שירותי מיקום או חפשו עיר.</string>
     <string name="weather_error_city_not_found">לא נמצאה עיר עבור \"%1$s\"</string>
     <string name="weather_error_no_network">לא ניתן לטעון את מזג האוויר. בדקו את חיבור האינטרנט.</string>
+    <string name="weather_error_cities">לא ניתן לקרוא את רשימת הערים. התקינו מחדש את האפליקציה.</string>
     <string name="weather_error_choose_city">בחרו עיר מהרשימה</string>
     <string name="weather_current_location">המיקום הנוכחי</string>
 </resources>

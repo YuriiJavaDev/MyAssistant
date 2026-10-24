@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Platsen kunde inte fastställas. Aktivera platstjänster eller sök efter en stad.</string>
     <string name="weather_error_city_not_found">Ingen stad hittades för ”%1$s”</string>
     <string name="weather_error_no_network">Vädret kunde inte läsas in. Kontrollera internetanslutningen.</string>
+    <string name="weather_error_cities">Stadslistan kunde inte läsas. Installera appen igen.</string>
     <string name="weather_error_choose_city">Välj en stad i listan</string>
     <string name="weather_current_location">Aktuell plats</string>
 </resources>

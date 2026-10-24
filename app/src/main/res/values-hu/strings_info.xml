@@ -33,7 +33,7 @@
         <item>A MyAssistantban nincs reklám, nincs elemzés és nincs fiók. A feladataid, lépéseid, szkenneléseid és repüléseid csak a telefonodon vannak tárolva.</item>
         <item># Mi megy át az interneten</item>
         <item>Csak az, amit te kérsz:</item>
-        <item>- Időjárás és városkeresés: a helyzeted vagy a város neve az Open-Meteóhoz és az OpenStreetMaphez kerül.</item>
+        <item>- Időjárás: a helyzete a MET Norway (a Norvég Meteorológiai Intézet) felé kerül elküldésre.</item>
         <item>- Árfolyamok: árfolyamkérés személyes adatok nélkül.</item>
         <item>- Repülési jelentések térképei: a repülés környékének térképképeit az Esritől kéri le.</item>
         <item>- Saját felhős mentésed: ha beállítod, adataid másolata biztonságos kapcsolaton át az általad választott WebDAV-kiszolgálóra kerül. A jelszó titkosítva van tárolva.</item>

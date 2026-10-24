@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Դիրքը չհաջողվեց որոշել։ Միացրեք դիրքի ծառայությունները կամ որոնեք քաղաք</string>
     <string name="weather_error_city_not_found">«%1$s» համար քաղաք չի գտնվել</string>
     <string name="weather_error_no_network">Եղանակը չհաջողվեց բեռնել։ Ստուգեք ինտերնետը</string>
+    <string name="weather_error_cities">Քաղաքների ցանկը չհաջողվեց կարդալ։ Նորից տեղադրեք հավելվածը։</string>
     <string name="weather_error_choose_city">Ընտրեք քաղաք ցանկից</string>
     <string name="weather_current_location">Ընթացիկ դիրքը</string>
 </resources>

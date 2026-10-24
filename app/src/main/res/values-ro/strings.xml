@@ -130,7 +130,7 @@
     <string name="weather_location_needed">Permiteți accesul la locația aproximativă pentru a vedea vremea de unde vă aflați sau căutați un oraș.</string>
     <string name="weather_allow">Permite</string>
     <string name="weather_open_settings">Deschide setările aplicației</string>
-    <string name="weather_attribution">Vremea: Open-Meteo.com · Locuri: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Vremea: MET Norway · Locuri: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Alegeți un oraș</string>
     <string name="steps_today">Astăzi</string>
     <string name="steps_unit">pași</string>

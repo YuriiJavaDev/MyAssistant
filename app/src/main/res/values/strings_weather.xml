@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Cannot determine the location. Turn on location services or search for a city.</string>
     <string name="weather_error_city_not_found">No city found for \"%1$s\"</string>
     <string name="weather_error_no_network">Cannot load the weather. Check the internet connection.</string>
+    <string name="weather_error_cities">The list of cities could not be read. Please reinstall the app.</string>
     <string name="weather_error_choose_city">Choose a city from the list</string>
     <string name="weather_current_location">Current location</string>
 </resources>

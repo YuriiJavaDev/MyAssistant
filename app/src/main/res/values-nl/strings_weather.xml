@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">De locatie kan niet worden bepaald. Zet locatievoorzieningen aan of zoek een plaats.</string>
     <string name="weather_error_city_not_found">Geen plaats gevonden voor “%1$s”</string>
     <string name="weather_error_no_network">Het weer kan niet worden geladen. Controleer de internetverbinding.</string>
+    <string name="weather_error_cities">De lijst met steden kon niet worden gelezen. Installeer de app opnieuw.</string>
     <string name="weather_error_choose_city">Kies een plaats uit de lijst</string>
     <string name="weather_current_location">Huidige locatie</string>
 </resources>

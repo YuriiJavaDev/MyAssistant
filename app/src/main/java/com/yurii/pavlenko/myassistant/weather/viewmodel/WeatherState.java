@@ -9,7 +9,7 @@ public final class WeatherState {
     public enum Status { LOADING, CONTENT, NEEDS_LOCATION_PERMISSION, ERROR }
 
     /** Why there is no weather; the screen words it. */
-    public enum Error { NO_LOCATION, CITY_NOT_FOUND, NO_NETWORK, CHOOSE_CITY }
+    public enum Error { NO_LOCATION, CITY_NOT_FOUND, NO_NETWORK, CHOOSE_CITY, CITY_LIST_UNREADABLE }
 
     private final Status status;
     private final Place place;

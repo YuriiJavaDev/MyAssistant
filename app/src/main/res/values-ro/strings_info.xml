@@ -33,7 +33,7 @@
         <item>MyAssistant nu are reclame, analiză sau cont. Sarcinile, pașii, scanările și zborurile tale sunt stocate doar pe telefonul tău.</item>
         <item># Ce trece prin internet</item>
         <item>Doar ceea ce ceri tu:</item>
-        <item>- Vremea și căutarea orașelor: locația ta sau numele orașului ajunge la Open-Meteo și OpenStreetMap.</item>
+        <item>- Vremea: locația dvs. este trimisă către MET Norway (Institutul Meteorologic Norvegian).</item>
         <item>- Cursuri valutare: o cerere pentru cursuri, fără date personale.</item>
         <item>- Hărți pentru rapoartele de zbor: imaginile hărții zonei de zbor sunt cerute de la Esri.</item>
         <item>- Copia ta în cloud: dacă o configurezi, o copie a datelor ajunge pe serverul WebDAV ales de tine, printr-o conexiune sigură. Parola este stocată criptat.</item>

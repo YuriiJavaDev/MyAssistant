@@ -71,6 +71,7 @@ final class WeatherTexts {
             case CITY_NOT_FOUND: return R.string.weather_error_city_not_found;
             case NO_NETWORK: return R.string.weather_error_no_network;
             case CHOOSE_CITY: return R.string.weather_error_choose_city;
+            case CITY_LIST_UNREADABLE: return R.string.weather_error_cities;
             default: throw new IllegalArgumentException(error.name());
         }
     }

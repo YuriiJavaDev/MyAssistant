@@ -34,7 +34,7 @@
         <item>MyAssistant has no advertising, no analytics and no account. Your tasks, steps, scans and flights are stored on your phone only.</item>
         <item># What goes over the internet</item>
         <item>Only what you ask for:</item>
-        <item>- Weather and city search: your location or the name of the city goes to Open-Meteo and OpenStreetMap.</item>
+        <item>- Weather: your location goes to MET Norway (the Norwegian Meteorological Institute).</item>
         <item>- Exchange rates: a request for the rates, without any personal data.</item>
         <item>- Flight report maps: map pictures of the area of the flight are requested from Esri.</item>
         <item>- Your own cloud backup: if you set it up, a copy of your data goes to the WebDAV server you chose, over a secure connection. The password is stored encrypted.</item>

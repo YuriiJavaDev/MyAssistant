@@ -128,7 +128,7 @@
     <string name="weather_location_needed">Hãy cho phép truy cập vị trí gần đúng để xem thời tiết tại nơi bạn đang ở, hoặc tìm một thành phố.</string>
     <string name="weather_allow">Cho phép</string>
     <string name="weather_open_settings">Mở cài đặt ứng dụng</string>
-    <string name="weather_attribution">Thời tiết: Open-Meteo.com · Địa điểm: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Thời tiết: MET Norway · Địa điểm: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Chọn thành phố</string>
     <string name="steps_today">Hôm nay</string>
     <string name="steps_unit">bước</string>

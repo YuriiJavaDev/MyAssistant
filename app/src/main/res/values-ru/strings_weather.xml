@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Не удаётся определить местоположение. Включите службы геолокации или найдите город.</string>
     <string name="weather_error_city_not_found">Город «%1$s» не найден</string>
     <string name="weather_error_no_network">Не удаётся загрузить погоду. Проверьте подключение к интернету.</string>
+    <string name="weather_error_cities">Не удалось прочитать список городов. Переустановите приложение.</string>
     <string name="weather_error_choose_city">Выберите город из списка</string>
     <string name="weather_current_location">Текущее местоположение</string>
 </resources>

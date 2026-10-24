@@ -8,7 +8,7 @@
     <string name="about_description">एक ही ऐप में सात रोज़मर्रा के टूल: कार्य, मौसम, मुद्रा, कैलकुलेटर, स्कैनर, कदम और उड़ान उपकरण।</string>
     <string name="about_promise">कोई विज्ञापन नहीं। कोई ट्रैकर नहीं। कोई खाता नहीं। आपका डेटा आपके फ़ोन पर ही रहता है।</string>
     <string name="about_credits_title">डेटा और सेवाएँ</string>
-    <string name="about_credits">मौसम: Open-Meteo.com\nस्थान: GeoNames.org, CC BY 4.0\nविनिमय दरें: Exchange Rate API\nतटरेखाएँ: Natural Earth, public domain\nनक्शे की तस्वीरें: Esri और उसके प्रदाता</string>
+    <string name="about_credits">मौसम: MET Norway\nस्थान: GeoNames.org, CC BY 4.0\nविनिमय दरें: Exchange Rate API\nतटरेखाएँ: Natural Earth, public domain\nनक्शे की तस्वीरें: Esri और उसके प्रदाता</string>
     <string name="about_open_guide">मार्गदर्शिका</string>
     <string name="about_open_license">लाइसेंस</string>
     <string name="about_open_privacy">गोपनीयता</string>

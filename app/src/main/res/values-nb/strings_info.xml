@@ -33,7 +33,7 @@
         <item>MyAssistant har ingen annonser, ingen analyse og ingen konto. Oppgavene, skrittene, skanningene og flygningene dine lagres bare på telefonen din.</item>
         <item># Hva som sendes via internett</item>
         <item>Bare det du ber om:</item>
-        <item>- Vær og bysøk: posisjonen din eller bynavnet sendes til Open-Meteo og OpenStreetMap.</item>
+        <item>- Vær: posisjonen din sendes til MET Norway (Meteorologisk institutt).</item>
         <item>- Valutakurser: en forespørsel om kursene, uten personopplysninger.</item>
         <item>- Kart til flyrapporter: kartbilder av flyområdet hentes fra Esri.</item>
         <item>- Din egen skykopi: hvis du setter den opp, sendes en kopi av dataene dine til WebDAV-serveren du har valgt, over en sikker forbindelse. Passordet lagres kryptert.</item>

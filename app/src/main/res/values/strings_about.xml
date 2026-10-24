@@ -9,7 +9,7 @@
     <string name="about_description">Seven everyday tools in one app: tasks, weather, currency, calculator, scanner, steps and flight instruments.</string>
     <string name="about_promise">No ads. No trackers. No account. Your data stays on your phone.</string>
     <string name="about_credits_title">Data and services</string>
-    <string name="about_credits">Weather: Open-Meteo.com\nPlaces: GeoNames.org, CC BY 4.0\nExchange rates: Exchange Rate API\nCoastlines: Natural Earth, public domain\nMap imagery: Esri and its providers</string>
+    <string name="about_credits">Weather: MET Norway\nPlaces: GeoNames.org, CC BY 4.0\nExchange rates: Exchange Rate API\nCoastlines: Natural Earth, public domain\nMap imagery: Esri and its providers</string>
     <string name="about_open_guide">Guide</string>
     <string name="about_open_license">License</string>
     <string name="about_open_privacy">Privacy</string>

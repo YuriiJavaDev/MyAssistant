@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Sijaintia ei voitu selvittää. Ota sijaintipalvelut käyttöön tai hae kaupunkia.</string>
     <string name="weather_error_city_not_found">Hakusanalla ”%1$s” ei löytynyt kaupunkia</string>
     <string name="weather_error_no_network">Säätä ei voitu ladata. Tarkista internetyhteys.</string>
+    <string name="weather_error_cities">Kaupunkiluetteloa ei voitu lukea. Asenna sovellus uudelleen.</string>
     <string name="weather_error_choose_city">Valitse kaupunki luettelosta</string>
     <string name="weather_current_location">Nykyinen sijainti</string>
 </resources>

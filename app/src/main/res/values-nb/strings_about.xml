@@ -8,7 +8,7 @@
     <string name="about_description">Sju hverdagsverktøy i én app: oppgaver, vær, valuta, kalkulator, skanner, skritt og flyinstrumenter.</string>
     <string name="about_promise">Ingen annonser. Ingen sporing. Ingen konto. Dataene dine blir på telefonen din.</string>
     <string name="about_credits_title">Data og tjenester</string>
-    <string name="about_credits">Vær: Open-Meteo.com\nSteder: GeoNames.org, CC BY 4.0\nValutakurser: Exchange Rate API\nKystlinjer: Natural Earth, public domain\nKartbilder: Esri og leverandørene</string>
+    <string name="about_credits">Vær: MET Norway\nSteder: GeoNames.org, CC BY 4.0\nValutakurser: Exchange Rate API\nKystlinjer: Natural Earth, public domain\nKartbilder: Esri og leverandørene</string>
     <string name="about_open_guide">Veiledning</string>
     <string name="about_open_license">Lisens</string>
     <string name="about_open_privacy">Personvern</string>

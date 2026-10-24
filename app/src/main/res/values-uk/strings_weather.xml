@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Не вдається визначити місцезнаходження. Увімкніть служби геолокації або знайдіть місто.</string>
     <string name="weather_error_city_not_found">Місто «%1$s» не знайдено</string>
     <string name="weather_error_no_network">Не вдається завантажити погоду. Перевірте підключення до інтернету.</string>
+    <string name="weather_error_cities">Не вдалося прочитати список міст. Перевстановіть застосунок.</string>
     <string name="weather_error_choose_city">Виберіть місто зі списку</string>
     <string name="weather_current_location">Поточне місцезнаходження</string>
 </resources>

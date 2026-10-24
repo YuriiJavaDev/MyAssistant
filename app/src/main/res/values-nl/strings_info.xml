@@ -33,7 +33,7 @@
         <item>MyAssistant heeft geen advertenties, geen analyse en geen account. Je taken, stappen, scans en vluchten worden alleen op je telefoon bewaard.</item>
         <item># Wat er via internet gaat</item>
         <item>Alleen wat je zelf vraagt:</item>
-        <item>- Weer en stad zoeken: je locatie of de naam van de stad gaat naar Open-Meteo en OpenStreetMap.</item>
+        <item>- Weer: je locatie wordt naar MET Norway (het Noorse meteorologische instituut) gestuurd.</item>
         <item>- Wisselkoersen: een verzoek om de koersen, zonder persoonlijke gegevens.</item>
         <item>- Kaarten voor vluchtrapporten: kaartbeelden van het vluchtgebied worden bij Esri opgevraagd.</item>
         <item>- Je eigen cloudback-up: als je die instelt, gaat een kopie van je gegevens via een beveiligde verbinding naar de WebDAV-server die je koos. Het wachtwoord wordt versleuteld bewaard.</item>

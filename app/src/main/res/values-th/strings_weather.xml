@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">ไม่สามารถระบุตำแหน่งได้ เปิดบริการตำแหน่งหรือค้นหาเมือง</string>
     <string name="weather_error_city_not_found">ไม่พบเมืองสำหรับ “%1$s”</string>
     <string name="weather_error_no_network">ไม่สามารถโหลดสภาพอากาศได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="weather_error_cities">อ่านรายการเมืองไม่ได้ โปรดติดตั้งแอปใหม่</string>
     <string name="weather_error_choose_city">เลือกเมืองจากรายการ</string>
     <string name="weather_current_location">ตำแหน่งปัจจุบัน</string>
 </resources>
