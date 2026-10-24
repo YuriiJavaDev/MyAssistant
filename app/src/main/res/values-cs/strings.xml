@@ -131,7 +131,7 @@
     <string name="weather_location_needed">Povolte přístup k přibližné poloze, abyste viděli počasí tam, kde jste, nebo vyhledejte město.</string>
     <string name="weather_allow">Povolit</string>
     <string name="weather_open_settings">Otevřít nastavení aplikace</string>
-    <string name="weather_attribution">Počasí: Open-Meteo.com · Místa: © přispěvatelé OpenStreetMap</string>
+    <string name="weather_attribution">Počasí: Open-Meteo.com · Místa: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Vyberte město</string>
     <string name="steps_today">Dnes</string>
     <string name="steps_unit">kroků</string>

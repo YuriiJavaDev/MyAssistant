@@ -131,7 +131,7 @@
     <string name="weather_location_needed">Разрешите доступ к примерному местоположению, чтобы видеть погоду там, где вы находитесь, или найдите город.</string>
     <string name="weather_allow">Разрешить</string>
     <string name="weather_open_settings">Открыть настройки приложения</string>
-    <string name="weather_attribution">Погода: Open-Meteo.com · Места: © участники OpenStreetMap</string>
+    <string name="weather_attribution">Погода: Open-Meteo.com · Места: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Выберите город</string>
     <string name="steps_today">Сегодня</string>
     <string name="steps_unit">шагов</string>

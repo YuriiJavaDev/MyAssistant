@@ -8,7 +8,7 @@
     <string name="about_description">ایک ایپ میں سات روزمرہ ٹولز: کام، موسم، کرنسی، کیلکولیٹر، اسکینر، قدم اور پرواز کے آلات۔</string>
     <string name="about_promise">کوئی اشتہار نہیں۔ کوئی ٹریکر نہیں۔ کوئی اکاؤنٹ نہیں۔ آپ کا ڈیٹا آپ کے فون پر ہی رہتا ہے۔</string>
     <string name="about_credits_title">ڈیٹا اور خدمات</string>
-    <string name="about_credits">موسم: Open-Meteo.com\nمقامات: © OpenStreetMap کے معاونین\nشرحِ تبادلہ: Exchange Rate API\nساحلی خطوط: Natural Earth, public domain\nنقشے کی تصاویر: Esri اور اس کے فراہم کنندگان</string>
+    <string name="about_credits">موسم: Open-Meteo.com\nمقامات: GeoNames.org, CC BY 4.0\nشرحِ تبادلہ: Exchange Rate API\nساحلی خطوط: Natural Earth, public domain\nنقشے کی تصاویر: Esri اور اس کے فراہم کنندگان</string>
     <string name="about_open_guide">رہنما</string>
     <string name="about_open_license">لائسنس</string>
     <string name="about_open_privacy">رازداری</string>

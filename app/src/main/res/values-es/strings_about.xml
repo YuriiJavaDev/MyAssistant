@@ -8,7 +8,7 @@
     <string name="about_description">Siete herramientas cotidianas en una sola app: tareas, clima, divisas, calculadora, escáner, pasos e instrumentos de vuelo.</string>
     <string name="about_promise">Sin anuncios. Sin rastreadores. Sin cuenta. Tus datos se quedan en tu teléfono.</string>
     <string name="about_credits_title">Datos y servicios</string>
-    <string name="about_credits">Clima: Open-Meteo.com\nLugares: © colaboradores de OpenStreetMap\nTipos de cambio: Exchange Rate API\nLíneas de costa: Natural Earth, public domain\nImágenes de mapas: Esri y sus proveedores</string>
+    <string name="about_credits">Clima: Open-Meteo.com\nLugares: GeoNames.org, CC BY 4.0\nTipos de cambio: Exchange Rate API\nLíneas de costa: Natural Earth, public domain\nImágenes de mapas: Esri y sus proveedores</string>
     <string name="about_open_guide">Guía</string>
     <string name="about_open_license">Licencia</string>
     <string name="about_open_privacy">Privacidad</string>

@@ -8,7 +8,7 @@
     <string name="about_description">שבעה כלים יומיומיים באפליקציה אחת: משימות, מזג אוויר, מטבעות, מחשבון, סורק, צעדים ומכשירי טיסה.</string>
     <string name="about_promise">בלי פרסומות. בלי מעקב. בלי חשבון. הנתונים שלכם נשארים בטלפון שלכם.</string>
     <string name="about_credits_title">נתונים ושירותים</string>
-    <string name="about_credits">מזג אוויר: Open-Meteo.com\nמקומות: © תורמי OpenStreetMap\nשערי חליפין: Exchange Rate API\nקווי חוף: Natural Earth, public domain\nתצלומי מפה: Esri והספקים שלה</string>
+    <string name="about_credits">מזג אוויר: Open-Meteo.com\nמקומות: GeoNames.org, CC BY 4.0\nשערי חליפין: Exchange Rate API\nקווי חוף: Natural Earth, public domain\nתצלומי מפה: Esri והספקים שלה</string>
     <string name="about_open_guide">מדריך</string>
     <string name="about_open_license">רישיון</string>
     <string name="about_open_privacy">פרטיות</string>

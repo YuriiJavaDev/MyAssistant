@@ -1,100 +1,43 @@
 package com.yurii.pavlenko.myassistant.weather.data;
 
-import com.yurii.pavlenko.myassistant.network.HttpText;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.content.Context;
 
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+import java.io.InputStream;
 import java.util.List;
-import java.util.Locale;
-import java.util.Set;
 
 /**
- * Finds cities by name in any language, and names the place where the phone is, using the free
- * OpenStreetMap geocoder (Nominatim). All calls block, so they must run off the main thread.
+ * Finds cities by name in any language, and names the place where the phone is, using the list of cities
+ * bundled with the app, so it works without a network and sends nothing anywhere. The calls read the list
+ * and must run off the main thread.
  */
 public final class GeocodingService {
 
-    private static final String SEARCH_URL = "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1"
-            + "&accept-language=en&featureType=settlement&limit=10&q=%s";
-    private static final String REVERSE_URL = "https://nominatim.openstreetmap.org/reverse?format=jsonv2&addressdetails=1"
-            + "&accept-language=en&zoom=10&lat=%s&lon=%s";
-    private static final String[] TOWN_KEYS = {"city", "town", "village", "municipality", "hamlet", "suburb", "county"};
-    private static final Set<String> SETTLEMENT_TYPES = new HashSet<>(Arrays.asList("city", "town", "village", "hamlet", "municipality"));
+    private static final String LIST_FILE = "cities.tsv";
     private static final int MAX_MATCHES = 5;
+    /** A phone farther than this from every listed city gets no name rather than a misleading one. */
+    private static final double NEAREST_CITY_KM = 60;
 
     private GeocodingService() {
     }
 
-    /** Cities that match the name, best known first; smaller features such as districts are used only if nothing else matches. */
-    public static List<Place> search(String query) throws IOException {
-        String encoded = URLEncoder.encode(query.trim(), StandardCharsets.UTF_8.name());
-        try {
-            JSONArray items = new JSONArray(HttpText.get(String.format(Locale.US, SEARCH_URL, encoded)));
-            List<Place> settlements = new ArrayList<>();
-            List<Place> others = new ArrayList<>();
-            Set<String> seen = new HashSet<>();
-            for (int i = 0; i < items.length(); i++) {
-                JSONObject item = items.getJSONObject(i);
-                Place place = toPlace(item);
-                if (place != null && seen.add(place.fullName())) {
-                    (SETTLEMENT_TYPES.contains(item.optString("addresstype")) ? settlements : others).add(place);
-                }
-            }
-            List<Place> found = settlements.isEmpty() ? others : settlements;
-            return found.subList(0, Math.min(MAX_MATCHES, found.size()));
-        } catch (JSONException e) {
-            throw new IOException("Unexpected response from the search service", e);
+    /** Cities that match the name, whole names first and then the most populous. */
+    public static List<Place> search(Context context, String query) throws IOException {
+        try (InputStream list = context.getAssets().open(LIST_FILE)) {
+            return CityIndex.search(list, query, MAX_MATCHES);
         }
     }
 
-    /** Names the place at the given coordinates; falls back to a neutral name when the lookup fails. */
-    public static Place describe(double latitude, double longitude) {
-        try {
-            JSONObject item = new JSONObject(HttpText.get(String.format(Locale.US, REVERSE_URL, latitude, longitude)));
-            Place place = toPlace(item);
-            if (place != null) {
-                return new Place(place.getName(), regionOf(item), place.getCountry(), latitude, longitude, 1);
+    /** Names the place at the given coordinates; falls back to a neutral name when no listed city is near. */
+    public static Place describe(Context context, double latitude, double longitude) {
+        try (InputStream list = context.getAssets().open(LIST_FILE)) {
+            Place city = CityIndex.nearest(list, latitude, longitude, NEAREST_CITY_KM);
+            if (city != null) {
+                return new Place(city.getName(), "", city.getCountry(), latitude, longitude, 1);
             }
-        } catch (IOException | JSONException ignored) {
+        } catch (IOException ignored) {
             // The weather itself is still available for these coordinates
         }
         return new Place("", "", "", latitude, longitude, 1);
-    }
-
-    private static Place toPlace(JSONObject item) {
-        JSONObject address = item.optJSONObject("address");
-        String name = townName(item, address);
-        if (name.isEmpty()) {
-            return null;
-        }
-        String country = address == null ? "" : address.optString("country");
-        return new Place(name, regionOf(item), country, item.optDouble("lat"), item.optDouble("lon"), item.optDouble("importance"));
-    }
-
-    private static String townName(JSONObject item, JSONObject address) {
-        String name = item.optString("name");
-        if (!name.isEmpty() || address == null) {
-            return name;
-        }
-        for (String key : TOWN_KEYS) {
-            String value = address.optString(key);
-            if (!value.isEmpty()) {
-                return value;
-            }
-        }
-        return "";
-    }
-
-    private static String regionOf(JSONObject item) {
-        JSONObject address = item.optJSONObject("address");
-        return address == null ? "" : address.optString("state");
     }
 }

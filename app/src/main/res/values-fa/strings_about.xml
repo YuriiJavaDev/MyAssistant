@@ -8,7 +8,7 @@
     <string name="about_description">هفت ابزار روزمره در یک برنامه: وظایف، آب‌وهوا، ارز، ماشین‌حساب، اسکنر، قدم‌ها و ابزارهای پرواز.</string>
     <string name="about_promise">بدون تبلیغات. بدون ردیاب. بدون حساب کاربری. داده‌های شما روی گوشی‌تان می‌ماند.</string>
     <string name="about_credits_title">داده‌ها و خدمات</string>
-    <string name="about_credits">آب‌وهوا: Open-Meteo.com\nمکان‌ها: © مشارکت‌کنندگان OpenStreetMap\nنرخ ارز: Exchange Rate API\nخطوط ساحلی: Natural Earth, public domain\nتصاویر نقشه: Esri و تأمین‌کنندگانش</string>
+    <string name="about_credits">آب‌وهوا: Open-Meteo.com\nمکان‌ها: GeoNames.org, CC BY 4.0\nنرخ ارز: Exchange Rate API\nخطوط ساحلی: Natural Earth, public domain\nتصاویر نقشه: Esri و تأمین‌کنندگانش</string>
     <string name="about_open_guide">راهنما</string>
     <string name="about_open_license">مجوز</string>
     <string name="about_open_privacy">حریم خصوصی</string>

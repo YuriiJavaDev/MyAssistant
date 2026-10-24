@@ -130,7 +130,7 @@
     <string name="weather_location_needed">Autorisez l’accès à la position approximative pour voir la météo là où vous êtes, ou recherchez une ville.</string>
     <string name="weather_allow">Autoriser</string>
     <string name="weather_open_settings">Ouvrir les paramètres de l’appli</string>
-    <string name="weather_attribution">Météo : Open-Meteo.com · Lieux : © contributeurs d’OpenStreetMap</string>
+    <string name="weather_attribution">Météo : Open-Meteo.com · Lieux : GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Choisir une ville</string>
     <string name="steps_today">Aujourd’hui</string>
     <string name="steps_unit">pas</string>

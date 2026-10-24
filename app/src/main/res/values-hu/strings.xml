@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Engedélyezze a hozzávetőleges helyzethez való hozzáférést, hogy lássa az időjárást ott, ahol van, vagy keressen egy várost.</string>
     <string name="weather_allow">Engedélyezés</string>
     <string name="weather_open_settings">Az alkalmazás beállításainak megnyitása</string>
-    <string name="weather_attribution">Időjárás: Open-Meteo.com · Helyek: © OpenStreetMap közreműködők</string>
+    <string name="weather_attribution">Időjárás: Open-Meteo.com · Helyek: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Válasszon várost</string>
     <string name="steps_today">Ma</string>
     <string name="steps_unit">lépés</string>

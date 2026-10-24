@@ -81,7 +81,7 @@ public class WeatherViewModel extends AndroidViewModel {
                 publish(id, WeatherState.error(WeatherState.Error.NO_LOCATION));
                 return;
             }
-            Place place = GeocodingService.describe(location.getLatitude(), location.getLongitude());
+            Place place = GeocodingService.describe(getApplication(), location.getLatitude(), location.getLongitude());
             loadWeather(id, place);
         });
     }
@@ -95,7 +95,7 @@ public class WeatherViewModel extends AndroidViewModel {
         int id = begin();
         executor.execute(() -> {
             try {
-                List<Place> found = GeocodingService.search(text);
+                List<Place> found = GeocodingService.search(getApplication(), text);
                 if (id != request) {
                     return;
                 }

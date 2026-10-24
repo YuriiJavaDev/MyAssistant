@@ -104,7 +104,7 @@ Ten designs, each with its own colours, shapes and character, working in light a
 - **Your data stays on the device.** Tasks, steps, scans and flights are stored locally. They leave the phone only when you export a backup or turn on your own cloud backup.
 - **Internet is used only for what you ask for:**
   - weather: Open-Meteo.com;
-  - city search and place names: OpenStreetMap Nominatim;
+  - city search and place names: the bundled GeoNames list of cities (CC BY 4.0), built by `tools/cities/build_cities.py`, no network;
   - exchange rates: Exchange Rate API;
   - map imagery in flight reports: Esri;
   - your own WebDAV server, only if you configure it, and only over HTTPS.
@@ -259,7 +259,7 @@ cd MyAssistant
 - **No advertising.** MyAssistant contains no ads and never will in the paid version.
 - **No data selling.** Your data is never sold or shared for marketing.
 - **Entertainment instruments.** The flight instruments, step counter, weather and exchange rates are informational. Do not rely on them for navigation, flying, safety, medical or financial decisions. The author is not responsible for decisions made using them.
-- **Third-party data.** Weather by Open-Meteo.com, places by OpenStreetMap contributors, exchange rates by Exchange Rate API, coastlines by Natural Earth (public domain), imagery by Esri and its providers. They keep their own terms.
+- **Third-party data.** Weather by Open-Meteo.com, places by GeoNames (CC BY 4.0), exchange rates by Exchange Rate API, coastlines by Natural Earth (public domain), imagery by Esri and its providers. They keep their own terms.
 - **Fair use of the license.** See below.
 
 ## License and copyright

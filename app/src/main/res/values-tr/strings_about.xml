@@ -8,7 +8,7 @@
     <string name="about_description">Tek uygulamada yedi günlük araç: görevler, hava durumu, döviz, hesap makinesi, tarayıcı, adımlar ve uçuş göstergeleri.</string>
     <string name="about_promise">Reklam yok. İzleyici yok. Hesap yok. Verileriniz telefonunuzda kalır.</string>
     <string name="about_credits_title">Veriler ve hizmetler</string>
-    <string name="about_credits">Hava durumu: Open-Meteo.com\nYerler: © OpenStreetMap katkıda bulunanlar\nDöviz kurları: Exchange Rate API\nKıyı çizgileri: Natural Earth, public domain\nHarita görüntüleri: Esri ve sağlayıcıları</string>
+    <string name="about_credits">Hava durumu: Open-Meteo.com\nYerler: GeoNames.org, CC BY 4.0\nDöviz kurları: Exchange Rate API\nKıyı çizgileri: Natural Earth, public domain\nHarita görüntüleri: Esri ve sağlayıcıları</string>
     <string name="about_open_guide">Kılavuz</string>
     <string name="about_open_license">Lisans</string>
     <string name="about_open_privacy">Gizlilik</string>

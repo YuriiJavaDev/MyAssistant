@@ -8,7 +8,7 @@
     <string name="about_description">Bảy công cụ hằng ngày trong một ứng dụng: công việc, thời tiết, tiền tệ, máy tính, máy quét, bước chân và thiết bị bay.</string>
     <string name="about_promise">Không quảng cáo. Không theo dõi. Không tài khoản. Dữ liệu của bạn ở lại trên điện thoại.</string>
     <string name="about_credits_title">Dữ liệu và dịch vụ</string>
-    <string name="about_credits">Thời tiết: Open-Meteo.com\nĐịa điểm: © những người đóng góp OpenStreetMap\nTỷ giá: Exchange Rate API\nĐường bờ biển: Natural Earth, public domain\nẢnh bản đồ: Esri và các nhà cung cấp</string>
+    <string name="about_credits">Thời tiết: Open-Meteo.com\nĐịa điểm: GeoNames.org, CC BY 4.0\nTỷ giá: Exchange Rate API\nĐường bờ biển: Natural Earth, public domain\nẢnh bản đồ: Esri và các nhà cung cấp</string>
     <string name="about_open_guide">Hướng dẫn</string>
     <string name="about_open_license">Giấy phép</string>
     <string name="about_open_privacy">Quyền riêng tư</string>

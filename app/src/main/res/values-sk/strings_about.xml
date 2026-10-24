@@ -8,7 +8,7 @@
     <string name="about_description">Sedem každodenných nástrojov v jednej aplikácii: úlohy, počasie, meny, kalkulačka, skener, kroky a letové prístroje.</string>
     <string name="about_promise">Žiadne reklamy. Žiadne sledovanie. Žiadny účet. Vaše údaje zostávajú vo vašom telefóne.</string>
     <string name="about_credits_title">Údaje a služby</string>
-    <string name="about_credits">Počasie: Open-Meteo.com\nMiesta: © prispievatelia OpenStreetMap\nMenové kurzy: Exchange Rate API\nPobrežia: Natural Earth, public domain\nMapové snímky: Esri a jeho poskytovatelia</string>
+    <string name="about_credits">Počasie: Open-Meteo.com\nMiesta: GeoNames.org, CC BY 4.0\nMenové kurzy: Exchange Rate API\nPobrežia: Natural Earth, public domain\nMapové snímky: Esri a jeho poskytovatelia</string>
     <string name="about_open_guide">Sprievodca</string>
     <string name="about_open_license">Licencia</string>
     <string name="about_open_privacy">Súkromie</string>

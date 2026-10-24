@@ -128,7 +128,7 @@
     <string name="weather_location_needed">Izinkan akses ke perkiraan lokasi untuk melihat cuaca di tempat Anda, atau cari sebuah kota</string>
     <string name="weather_allow">Izinkan</string>
     <string name="weather_open_settings">Buka pengaturan aplikasi</string>
-    <string name="weather_attribution">Cuaca: Open-Meteo.com · Tempat: © kontributor OpenStreetMap</string>
+    <string name="weather_attribution">Cuaca: Open-Meteo.com · Tempat: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Pilih kota</string>
     <string name="steps_today">Hari ini</string>
     <string name="steps_unit">langkah</string>

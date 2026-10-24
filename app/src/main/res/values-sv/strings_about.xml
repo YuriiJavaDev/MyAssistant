@@ -8,7 +8,7 @@
     <string name="about_description">Sju vardagsverktyg i en app: uppgifter, väder, valutor, miniräknare, skanner, steg och flyginstrument.</string>
     <string name="about_promise">Inga annonser. Ingen spårning. Inget konto. Dina data stannar på din telefon.</string>
     <string name="about_credits_title">Data och tjänster</string>
-    <string name="about_credits">Väder: Open-Meteo.com\nPlatser: © OpenStreetMap-bidragsgivare\nValutakurser: Exchange Rate API\nKustlinjer: Natural Earth, public domain\nKartbilder: Esri och dess leverantörer</string>
+    <string name="about_credits">Väder: Open-Meteo.com\nPlatser: GeoNames.org, CC BY 4.0\nValutakurser: Exchange Rate API\nKustlinjer: Natural Earth, public domain\nKartbilder: Esri och dess leverantörer</string>
     <string name="about_open_guide">Guide</string>
     <string name="about_open_license">Licens</string>
     <string name="about_open_privacy">Integritet</string>

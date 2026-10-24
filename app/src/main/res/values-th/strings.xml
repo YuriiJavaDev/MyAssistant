@@ -128,7 +128,7 @@
     <string name="weather_location_needed">อนุญาตการเข้าถึงตำแหน่งโดยประมาณเพื่อดูสภาพอากาศที่คุณอยู่ หรือค้นหาเมือง</string>
     <string name="weather_allow">อนุญาต</string>
     <string name="weather_open_settings">เปิดการตั้งค่าแอป</string>
-    <string name="weather_attribution">สภาพอากาศ: Open-Meteo.com · สถานที่: © ผู้ร่วมพัฒนา OpenStreetMap</string>
+    <string name="weather_attribution">สภาพอากาศ: Open-Meteo.com · สถานที่: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">เลือกเมือง</string>
     <string name="steps_today">วันนี้</string>
     <string name="steps_unit">ก้าว</string>

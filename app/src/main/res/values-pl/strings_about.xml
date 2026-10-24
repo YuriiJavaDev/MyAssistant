@@ -8,7 +8,7 @@
     <string name="about_description">Siedem codziennych narzędzi w jednej aplikacji: zadania, pogoda, waluty, kalkulator, skaner, kroki i przyrządy lotnicze.</string>
     <string name="about_promise">Bez reklam. Bez trackerów. Bez konta. Twoje dane zostają na Twoim telefonie.</string>
     <string name="about_credits_title">Dane i usługi</string>
-    <string name="about_credits">Pogoda: Open-Meteo.com\nMiejsca: © współtwórcy OpenStreetMap\nKursy walut: Exchange Rate API\nLinie brzegowe: Natural Earth, public domain\nObrazy map: Esri i jego dostawcy</string>
+    <string name="about_credits">Pogoda: Open-Meteo.com\nMiejsca: GeoNames.org, CC BY 4.0\nKursy walut: Exchange Rate API\nLinie brzegowe: Natural Earth, public domain\nObrazy map: Esri i jego dostawcy</string>
     <string name="about_open_guide">Przewodnik</string>
     <string name="about_open_license">Licencja</string>
     <string name="about_open_privacy">Prywatność</string>

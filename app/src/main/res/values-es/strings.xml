@@ -130,7 +130,7 @@
     <string name="weather_location_needed">Permite el acceso a la ubicación aproximada para ver el tiempo donde estás, o busca una ciudad.</string>
     <string name="weather_allow">Permitir</string>
     <string name="weather_open_settings">Abrir ajustes de la app</string>
-    <string name="weather_attribution">Tiempo: Open-Meteo.com · Lugares: © colaboradores de OpenStreetMap</string>
+    <string name="weather_attribution">Tiempo: Open-Meteo.com · Lugares: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Elige una ciudad</string>
     <string name="steps_today">Hoy</string>
     <string name="steps_unit">pasos</string>

@@ -8,7 +8,7 @@
     <string name="about_description">Seitsemän arjen työkalua yhdessä sovelluksessa: tehtävät, sää, valuutat, laskin, skanneri, askeleet ja lentomittarit.</string>
     <string name="about_promise">Ei mainoksia. Ei seurantaa. Ei tiliä. Tietosi pysyvät puhelimessasi.</string>
     <string name="about_credits_title">Tiedot ja palvelut</string>
-    <string name="about_credits">Sää: Open-Meteo.com\nPaikat: © OpenStreetMapin tekijät\nValuuttakurssit: Exchange Rate API\nRannikkoviivat: Natural Earth, public domain\nKarttakuvat: Esri ja sen toimittajat</string>
+    <string name="about_credits">Sää: Open-Meteo.com\nPaikat: GeoNames.org, CC BY 4.0\nValuuttakurssit: Exchange Rate API\nRannikkoviivat: Natural Earth, public domain\nKarttakuvat: Esri ja sen toimittajat</string>
     <string name="about_open_guide">Opas</string>
     <string name="about_open_license">Lisenssi</string>
     <string name="about_open_privacy">Tietosuoja</string>
