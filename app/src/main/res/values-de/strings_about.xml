@@ -8,7 +8,7 @@
     <string name="about_description">Sieben Alltagswerkzeuge in einer App: Aufgaben, Wetter, Währungen, Rechner, Scanner, Schritte und Fluginstrumente.</string>
     <string name="about_promise">Keine Werbung. Keine Tracker. Kein Konto. Ihre Daten bleiben auf Ihrem Telefon.</string>
     <string name="about_credits_title">Daten und Dienste</string>
-    <string name="about_credits">Wetter: Open-Meteo.com\nOrte: © OpenStreetMap-Mitwirkende\nWechselkurse: Exchange Rate API\nKüstenlinien: Natural Earth\nKartenbilder: Esri und seine Anbieter</string>
+    <string name="about_credits">Wetter: Open-Meteo.com\nOrte: © OpenStreetMap-Mitwirkende\nWechselkurse: Exchange Rate API\nKüstenlinien: Natural Earth, public domain\nKartenbilder: Esri und seine Anbieter</string>
     <string name="about_open_guide">Anleitung</string>
     <string name="about_open_license">Lizenz</string>
     <string name="about_open_privacy">Datenschutz</string>

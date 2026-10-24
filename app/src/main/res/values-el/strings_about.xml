@@ -8,7 +8,7 @@
     <string name="about_description">Επτά καθημερινά εργαλεία σε μία εφαρμογή: εργασίες, καιρός, νομίσματα, αριθμομηχανή, σαρωτής, βήματα και όργανα πτήσης.</string>
     <string name="about_promise">Χωρίς διαφημίσεις. Χωρίς ιχνηλάτες. Χωρίς λογαριασμό. Τα δεδομένα σας μένουν στο τηλέφωνό σας.</string>
     <string name="about_credits_title">Δεδομένα και υπηρεσίες</string>
-    <string name="about_credits">Καιρός: Open-Meteo.com\nΜέρη: © συντελεστές του OpenStreetMap\nΙσοτιμίες: Exchange Rate API\nΑκτογραμμές: Natural Earth\nΕικόνες χαρτών: Esri και οι πάροχοί της</string>
+    <string name="about_credits">Καιρός: Open-Meteo.com\nΜέρη: © συντελεστές του OpenStreetMap\nΙσοτιμίες: Exchange Rate API\nΑκτογραμμές: Natural Earth, public domain\nΕικόνες χαρτών: Esri και οι πάροχοί της</string>
     <string name="about_open_guide">Οδηγός</string>
     <string name="about_open_license">Άδεια</string>
     <string name="about_open_privacy">Απόρρητο</string>

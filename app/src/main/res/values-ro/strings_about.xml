@@ -8,7 +8,7 @@
     <string name="about_description">Șapte instrumente de zi cu zi într-o singură aplicație: sarcini, vreme, valute, calculator, scaner, pași și instrumente de zbor.</string>
     <string name="about_promise">Fără reclame. Fără urmăritoare. Fără cont. Datele tale rămân pe telefonul tău.</string>
     <string name="about_credits_title">Date și servicii</string>
-    <string name="about_credits">Vreme: Open-Meteo.com\nLocuri: © contribuitorii OpenStreetMap\nCursuri valutare: Exchange Rate API\nLinii de coastă: Natural Earth\nImagini de hartă: Esri și furnizorii săi</string>
+    <string name="about_credits">Vreme: Open-Meteo.com\nLocuri: © contribuitorii OpenStreetMap\nCursuri valutare: Exchange Rate API\nLinii de coastă: Natural Earth, public domain\nImagini de hartă: Esri și furnizorii săi</string>
     <string name="about_open_guide">Ghid</string>
     <string name="about_open_license">Licență</string>
     <string name="about_open_privacy">Confidențialitate</string>

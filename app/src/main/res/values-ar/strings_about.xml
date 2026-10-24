@@ -8,7 +8,7 @@
     <string name="about_description">سبع أدوات يومية في تطبيق واحد: المهام والطقس والعملات والآلة الحاسبة والماسح الضوئي والخطوات وأجهزة الطيران.</string>
     <string name="about_promise">بلا إعلانات. بلا أدوات تتبّع. بلا حساب. تبقى بياناتك على هاتفك.</string>
     <string name="about_credits_title">البيانات والخدمات</string>
-    <string name="about_credits">الطقس: Open-Meteo.com\nالأماكن: © مساهمو OpenStreetMap\nأسعار الصرف: Exchange Rate API\nالسواحل: Natural Earth\nصور الخرائط: Esri ومزوّدوها</string>
+    <string name="about_credits">الطقس: Open-Meteo.com\nالأماكن: © مساهمو OpenStreetMap\nأسعار الصرف: Exchange Rate API\nالسواحل: Natural Earth, public domain\nصور الخرائط: Esri ومزوّدوها</string>
     <string name="about_open_guide">الدليل</string>
     <string name="about_open_license">الترخيص</string>
     <string name="about_open_privacy">الخصوصية</string>

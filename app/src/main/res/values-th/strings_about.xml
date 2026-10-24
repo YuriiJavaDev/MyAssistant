@@ -8,7 +8,7 @@
     <string name="about_description">เครื่องมือประจำวันเจ็ดอย่างในแอปเดียว: งาน สภาพอากาศ สกุลเงิน เครื่องคิดเลข สแกน ก้าว และเครื่องวัดการบิน</string>
     <string name="about_promise">ไม่มีโฆษณา ไม่มีตัวติดตาม ไม่มีบัญชี ข้อมูลของคุณอยู่บนโทรศัพท์ของคุณ</string>
     <string name="about_credits_title">ข้อมูลและบริการ</string>
-    <string name="about_credits">สภาพอากาศ: Open-Meteo.com\nสถานที่: © ผู้ร่วมพัฒนา OpenStreetMap\nอัตราแลกเปลี่ยน: Exchange Rate API\nแนวชายฝั่ง: Natural Earth\nภาพแผนที่: Esri และผู้ให้บริการ</string>
+    <string name="about_credits">สภาพอากาศ: Open-Meteo.com\nสถานที่: © ผู้ร่วมพัฒนา OpenStreetMap\nอัตราแลกเปลี่ยน: Exchange Rate API\nแนวชายฝั่ง: Natural Earth, public domain\nภาพแผนที่: Esri และผู้ให้บริการ</string>
     <string name="about_open_guide">คู่มือ</string>
     <string name="about_open_license">ใบอนุญาต</string>
     <string name="about_open_privacy">ความเป็นส่วนตัว</string>

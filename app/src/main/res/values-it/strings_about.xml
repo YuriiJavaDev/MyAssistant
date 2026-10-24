@@ -8,7 +8,7 @@
     <string name="about_description">Sette strumenti di ogni giorno in un’unica app: attività, meteo, valute, calcolatrice, scanner, passi e strumenti di volo.</string>
     <string name="about_promise">Niente pubblicità. Niente tracker. Nessun account. I tuoi dati restano sul tuo telefono.</string>
     <string name="about_credits_title">Dati e servizi</string>
-    <string name="about_credits">Meteo: Open-Meteo.com\nLuoghi: © collaboratori di OpenStreetMap\nTassi di cambio: Exchange Rate API\nCoste: Natural Earth\nImmagini delle mappe: Esri e i suoi fornitori</string>
+    <string name="about_credits">Meteo: Open-Meteo.com\nLuoghi: © collaboratori di OpenStreetMap\nTassi di cambio: Exchange Rate API\nCoste: Natural Earth, public domain\nImmagini delle mappe: Esri e i suoi fornitori</string>
     <string name="about_open_guide">Guida</string>
     <string name="about_open_license">Licenza</string>
     <string name="about_open_privacy">Privacy</string>

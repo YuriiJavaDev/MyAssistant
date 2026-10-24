@@ -8,7 +8,7 @@
     <string name="about_description">Сім щоденних інструментів в одному застосунку: завдання, погода, валюти, калькулятор, сканер, кроки та польотні прилади.</string>
     <string name="about_promise">Без реклами. Без трекерів. Без облікового запису. Ваші дані залишаються на вашому телефоні.</string>
     <string name="about_credits_title">Дані та сервіси</string>
-    <string name="about_credits">Погода: Open-Meteo.com\nМісця: © учасники OpenStreetMap\nКурси валют: Exchange Rate API\nБерегові лінії: Natural Earth\nЗнімки карт: Esri та його постачальники</string>
+    <string name="about_credits">Погода: Open-Meteo.com\nМісця: © учасники OpenStreetMap\nКурси валют: Exchange Rate API\nБерегові лінії: Natural Earth, public domain\nЗнімки карт: Esri та його постачальники</string>
     <string name="about_open_guide">Посібник</string>
     <string name="about_open_license">Ліцензія</string>
     <string name="about_open_privacy">Приватність</string>
