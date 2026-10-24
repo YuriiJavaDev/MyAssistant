@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Թույլատրեք մոտավոր դիրքի հասանելիությունը՝ ձեր մոտ եղանակը տեսնելու համար, կամ որոնեք քաղաք</string>
     <string name="weather_allow">Թույլատրել</string>
     <string name="weather_open_settings">Բացել հավելվածի կարգավորումները</string>
-    <string name="weather_attribution">Եղանակ՝ Open-Meteo.com · Վայրեր՝ GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Եղանակ՝ MET Norway · Վայրեր՝ GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Ընտրեք քաղաք</string>
     <string name="steps_today">Այսօր</string>
     <string name="steps_unit">քայլ</string>

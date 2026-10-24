@@ -12,13 +12,36 @@ public final class HttpText {
 
     private static final int TIMEOUT_MS = 10_000;
     private static final int MAX_BODY_BYTES = 5 * 1024 * 1024;
-    /** Public servers, such as OpenStreetMap's, require a User-Agent that identifies the app. */
+    /** Public servers, such as the one of MET Norway, require a User-Agent that identifies the app. */
     private static final String USER_AGENT = "MyAssistant/1.0 (https://github.com/YuriiJavaDev/MyAssistant)";
 
     private HttpText() {
     }
 
+    /** A response body with the moment the server says it goes out of date (0 when it does not say). */
+    public static final class Response {
+        private final String body;
+        private final long expiresAtMillis;
+
+        Response(String body, long expiresAtMillis) {
+            this.body = body;
+            this.expiresAtMillis = expiresAtMillis;
+        }
+
+        public String getBody() {
+            return body;
+        }
+
+        public long getExpiresAtMillis() {
+            return expiresAtMillis;
+        }
+    }
+
     public static String get(String url) throws IOException {
+        return getResponse(url).getBody();
+    }
+
+    public static Response getResponse(String url) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         connection.setConnectTimeout(TIMEOUT_MS);
         connection.setReadTimeout(TIMEOUT_MS);
@@ -28,7 +51,8 @@ public final class HttpText {
             if (code < 200 || code >= 300) {
                 throw new IOException("Server responded with HTTP " + code);
             }
-            return readAll(connection.getInputStream(), MAX_BODY_BYTES);
+            long expires = connection.getHeaderFieldDate("Expires", 0);
+            return new Response(readAll(connection.getInputStream(), MAX_BODY_BYTES), expires);
         } finally {
             connection.disconnect();
         }

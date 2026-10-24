@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">მდებარეობის დადგენა ვერ მოხერხდა. ჩართეთ მდებარეობის სერვისები ან მოძებნეთ ქალაქი</string>
     <string name="weather_error_city_not_found">„%1$s“-ისთვის ქალაქი ვერ მოიძებნა</string>
     <string name="weather_error_no_network">ამინდის ჩატვირთვა ვერ მოხერხდა. შეამოწმეთ ინტერნეტი</string>
+    <string name="weather_error_cities">ქალაქების სიის წაკითხვა ვერ მოხერხდა. ხელახლა დააინსტალირეთ აპლიკაცია.</string>
     <string name="weather_error_choose_city">აირჩიეთ ქალაქი სიიდან</string>
     <string name="weather_current_location">მიმდინარე მდებარეობა</string>
 </resources>

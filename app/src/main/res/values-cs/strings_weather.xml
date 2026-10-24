@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Polohu nelze určit. Zapněte služby určování polohy nebo vyhledejte město.</string>
     <string name="weather_error_city_not_found">Pro „%1$s“ nebylo nalezeno žádné město</string>
     <string name="weather_error_no_network">Počasí nelze načíst. Zkontrolujte připojení k internetu.</string>
+    <string name="weather_error_cities">Seznam měst se nepodařilo přečíst. Nainstalujte aplikaci znovu.</string>
     <string name="weather_error_choose_city">Vyberte město ze seznamu</string>
     <string name="weather_current_location">Aktuální poloha</string>
 </resources>

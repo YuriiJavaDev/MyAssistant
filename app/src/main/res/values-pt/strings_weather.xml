@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Não foi possível determinar a localização. Ative os serviços de localização ou pesquise uma cidade.</string>
     <string name="weather_error_city_not_found">Nenhuma cidade encontrada para «%1$s»</string>
     <string name="weather_error_no_network">Não foi possível carregar o clima. Verifique a conexão com a internet.</string>
+    <string name="weather_error_cities">Não foi possível ler a lista de cidades. Reinstale o aplicativo.</string>
     <string name="weather_error_choose_city">Escolha uma cidade da lista</string>
     <string name="weather_current_location">Localização atual</string>
 </resources>

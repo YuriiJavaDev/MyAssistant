@@ -8,7 +8,7 @@
     <string name="about_description">Sept outils du quotidien dans une seule appli : tâches, météo, devises, calculatrice, scanner, pas et instruments de vol.</string>
     <string name="about_promise">Sans publicité. Sans traceurs. Sans compte. Vos données restent sur votre téléphone.</string>
     <string name="about_credits_title">Données et services</string>
-    <string name="about_credits">Météo : Open-Meteo.com\nLieux : GeoNames.org, CC BY 4.0\nTaux de change : Exchange Rate API\nLittoraux : Natural Earth, public domain\nImages de cartes : Esri et ses fournisseurs</string>
+    <string name="about_credits">Météo : MET Norway\nLieux : GeoNames.org, CC BY 4.0\nTaux de change : Exchange Rate API\nLittoraux : Natural Earth, public domain\nImages de cartes : Esri et ses fournisseurs</string>
     <string name="about_open_guide">Guide</string>
     <string name="about_open_license">Licence</string>
     <string name="about_open_privacy">Confidentialité</string>

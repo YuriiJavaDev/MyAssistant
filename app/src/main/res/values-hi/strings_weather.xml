@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">स्थान का पता नहीं चल सका। स्थान सेवाएँ चालू करें या कोई शहर खोजें।</string>
     <string name="weather_error_city_not_found">“%1$s” के लिए कोई शहर नहीं मिला</string>
     <string name="weather_error_no_network">मौसम लोड नहीं हो सका। इंटरनेट कनेक्शन जाँचें।</string>
+    <string name="weather_error_cities">शहरों की सूची पढ़ी नहीं जा सकी। ऐप को दोबारा इंस्टॉल करें।</string>
     <string name="weather_error_choose_city">सूची से शहर चुनें</string>
     <string name="weather_current_location">वर्तमान स्थान</string>
 </resources>

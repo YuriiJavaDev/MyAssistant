@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Местоположението не може да се определи. Включете услугите за местоположение или потърсете град.</string>
     <string name="weather_error_city_not_found">Не е намерен град за „%1$s“</string>
     <string name="weather_error_no_network">Времето не може да се зареди. Проверете интернет връзката.</string>
+    <string name="weather_error_cities">Списъкът с градове не можа да бъде прочетен. Преинсталирайте приложението.</string>
     <string name="weather_error_choose_city">Изберете град от списъка</string>
     <string name="weather_current_location">Текущо местоположение</string>
 </resources>

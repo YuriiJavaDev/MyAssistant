@@ -33,7 +33,7 @@
         <item>MyAssistant 没有广告、没有统计分析，也没有账号。你的任务、步数、扫描和飞行记录只保存在你的手机上。</item>
         <item># 哪些内容会经过互联网</item>
         <item>只有你主动请求的内容：</item>
-        <item>- 天气和城市搜索：你的位置或城市名称会发送给 Open-Meteo 和 OpenStreetMap。</item>
+        <item>- 天气：你的位置会发送给 MET Norway（挪威气象研究所）。</item>
         <item>- 汇率：请求汇率，不含任何个人数据。</item>
         <item>- 飞行报告地图：飞行区域的地图图片向 Esri 请求。</item>
         <item>- 你自己的云备份：如果你设置了它，数据副本会通过安全连接发送到你选择的 WebDAV 服务器。密码以加密方式保存。</item>

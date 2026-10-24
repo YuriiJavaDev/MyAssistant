@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Lokasi tidak dapat ditentukan. Aktifkan layanan lokasi atau cari kota</string>
     <string name="weather_error_city_not_found">Kota untuk “%1$s” tidak ditemukan</string>
     <string name="weather_error_no_network">Cuaca tidak dapat dimuat. Periksa koneksi internet</string>
+    <string name="weather_error_cities">Daftar kota tidak dapat dibaca. Instal ulang aplikasi.</string>
     <string name="weather_error_choose_city">Pilih kota dari daftar</string>
     <string name="weather_current_location">Lokasi saat ini</string>
 </resources>

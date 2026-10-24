@@ -33,7 +33,7 @@
         <item>O MyAssistant não tem anúncios, análises nem conta. Suas tarefas, passos, digitalizações e voos ficam salvos apenas no seu telefone.</item>
         <item># O que passa pela internet</item>
         <item>Somente o que você pede:</item>
-        <item>- Clima e busca de cidades: sua localização ou o nome da cidade é enviado ao Open-Meteo e ao OpenStreetMap.</item>
+        <item>- Tempo: a sua localização é enviada ao MET Norway (o Instituto Meteorológico da Noruega).</item>
         <item>- Cotações: um pedido das cotações, sem nenhum dado pessoal.</item>
         <item>- Mapas dos relatórios de voo: imagens do mapa da área do voo são solicitadas à Esri.</item>
         <item>- Seu próprio backup na nuvem: se você o configurar, uma cópia dos dados vai para o servidor WebDAV que escolheu, por conexão segura. A senha é guardada criptografada.</item>

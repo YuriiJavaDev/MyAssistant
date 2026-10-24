@@ -110,7 +110,7 @@ public class WeatherViewModel extends AndroidViewModel {
                     publish(id, backTo(before));
                 }
             } catch (IOException e) {
-                publish(id, WeatherState.error(WeatherState.Error.NO_NETWORK));
+                publish(id, WeatherState.error(WeatherState.Error.CITY_LIST_UNREADABLE));
             }
         });
     }

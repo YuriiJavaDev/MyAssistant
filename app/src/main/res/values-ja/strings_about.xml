@@ -8,7 +8,7 @@
     <string name="about_description">毎日使う7つのツールを1つのアプリに：タスク、天気、為替、電卓、スキャン、歩数、フライト計器。</string>
     <string name="about_promise">広告なし。トラッカーなし。アカウント不要。データはあなたのスマートフォンの中だけに残ります。</string>
     <string name="about_credits_title">データとサービス</string>
-    <string name="about_credits">天気：Open-Meteo.com\n場所：GeoNames.org, CC BY 4.0\n為替レート：Exchange Rate API\n海岸線：Natural Earth, public domain\n地図画像：Esri とその提供元</string>
+    <string name="about_credits">天気：MET Norway\n場所：GeoNames.org, CC BY 4.0\n為替レート：Exchange Rate API\n海岸線：Natural Earth, public domain\n地図画像：Esri とその提供元</string>
     <string name="about_open_guide">ガイド</string>
     <string name="about_open_license">ライセンス</string>
     <string name="about_open_privacy">プライバシー</string>

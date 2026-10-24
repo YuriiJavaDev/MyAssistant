@@ -33,7 +33,7 @@
         <item>MyAssistant nie ma reklam, analityki ani kont. Twoje zadania, kroki, skany i loty są przechowywane tylko na Twoim telefonie.</item>
         <item># Co przechodzi przez internet</item>
         <item>Tylko to, o co prosisz:</item>
-        <item>- Pogoda i wyszukiwanie miast: Twoja lokalizacja lub nazwa miasta trafia do Open-Meteo i OpenStreetMap.</item>
+        <item>- Pogoda: Twoja lokalizacja jest wysyłana do MET Norway (Norweskiego Instytutu Meteorologicznego).</item>
         <item>- Kursy walut: zapytanie o kursy, bez żadnych danych osobowych.</item>
         <item>- Mapy do raportów lotów: obrazy mapy obszaru lotu są pobierane od Esri.</item>
         <item>- Własna kopia w chmurze: jeśli ją skonfigurujesz, kopia danych trafia na wybrany przez Ciebie serwer WebDAV przez bezpieczne połączenie. Hasło jest przechowywane w postaci zaszyfrowanej.</item>

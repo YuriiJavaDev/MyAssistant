@@ -33,7 +33,7 @@
         <item>MyAssistant nemá reklamy, analytiku ani účty. Vaše úlohy, kroky, skeny a lety sú uložené iba vo vašom telefóne.</item>
         <item># Čo ide cez internet</item>
         <item>Iba to, o čo požiadate:</item>
-        <item>- Počasie a vyhľadávanie miest: vaša poloha alebo názov mesta sa odošle službám Open-Meteo a OpenStreetMap.</item>
+        <item>- Počasie: vaša poloha sa odosiela do MET Norway (Nórsky meteorologický ústav).</item>
         <item>- Menové kurzy: dopyt na kurzy bez akýchkoľvek osobných údajov.</item>
         <item>- Mapy pre správy o letoch: obrázky mapy oblasti letu sa vyžiadajú od Esri.</item>
         <item>- Vaša vlastná cloudová záloha: ak ju nastavíte, kópia údajov sa zabezpečeným pripojením odošle na vami zvolený server WebDAV. Heslo je uložené zašifrované.</item>

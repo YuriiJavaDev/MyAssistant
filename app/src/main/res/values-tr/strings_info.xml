@@ -33,7 +33,7 @@
         <item>MyAssistant\'ta reklam, analiz ve hesap yoktur. Görevleriniz, adımlarınız, taramalarınız ve uçuşlarınız yalnızca telefonunuzda saklanır.</item>
         <item># İnternetten neler geçer</item>
         <item>Yalnızca sizin istedikleriniz:</item>
-        <item>- Hava durumu ve şehir arama: konumunuz veya şehir adı Open-Meteo ve OpenStreetMap\'e gönderilir.</item>
+        <item>- Hava durumu: konumunuz MET Norway\'e (Norveç Meteoroloji Enstitüsü) gönderilir.</item>
         <item>- Döviz kurları: kişisel veri içermeyen bir kur isteği.</item>
         <item>- Uçuş raporu haritaları: uçuş bölgesinin harita görselleri Esri\'den istenir.</item>
         <item>- Kendi bulut yedeğiniz: kurarsanız, verilerinizin bir kopyası seçtiğiniz WebDAV sunucusuna güvenli bağlantıyla gider. Parola şifreli saklanır.</item>

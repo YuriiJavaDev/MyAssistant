@@ -8,7 +8,7 @@
     <string name="about_description">Седам свакодневних алата у једној апликацији: задаци, време, валуте, калкулатор, скенер, кораци и ваздухопловни инструменти.</string>
     <string name="about_promise">Без реклама. Без пратилаца. Без налога. Ваши подаци остају на вашем телефону.</string>
     <string name="about_credits_title">Подаци и услуге</string>
-    <string name="about_credits">Време: Open-Meteo.com\nМеста: GeoNames.org, CC BY 4.0\nКурсеви валута: Exchange Rate API\nОбалне линије: Natural Earth, public domain\nСнимци мапа: Esri и његови добављачи</string>
+    <string name="about_credits">Време: MET Norway\nМеста: GeoNames.org, CC BY 4.0\nКурсеви валута: Exchange Rate API\nОбалне линије: Natural Earth, public domain\nСнимци мапа: Esri и његови добављачи</string>
     <string name="about_open_guide">Водич</string>
     <string name="about_open_license">Лиценца</string>
     <string name="about_open_privacy">Приватност</string>

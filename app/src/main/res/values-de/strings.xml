@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Erlaube den Zugriff auf den ungefähren Standort, um das Wetter an deinem Ort zu sehen, oder suche nach einer Stadt.</string>
     <string name="weather_allow">Erlauben</string>
     <string name="weather_open_settings">App-Einstellungen öffnen</string>
-    <string name="weather_attribution">Wetter: Open-Meteo.com · Orte: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Wetter: MET Norway · Orte: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Stadt wählen</string>
     <string name="steps_today">Heute</string>
     <string name="steps_unit">Schritte</string>

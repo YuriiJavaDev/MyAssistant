@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Salli pääsy likimääräiseen sijaintiin nähdäksesi sään siellä, missä olet, tai hae kaupunkia.</string>
     <string name="weather_allow">Salli</string>
     <string name="weather_open_settings">Avaa sovelluksen asetukset</string>
-    <string name="weather_attribution">Sää: Open-Meteo.com · Paikat: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Sää: MET Norway · Paikat: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Valitse kaupunki</string>
     <string name="steps_today">Tänään</string>
     <string name="steps_unit">askelta</string>

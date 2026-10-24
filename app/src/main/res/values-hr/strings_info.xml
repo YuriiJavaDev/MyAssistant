@@ -33,7 +33,7 @@
         <item>MyAssistant nema reklame, analitiku ni račune. Vaši zadaci, koraci, skenovi i letovi pohranjeni su samo na vašem telefonu.</item>
         <item># Što ide putem interneta</item>
         <item>Samo ono što vi zatražite:</item>
-        <item>- Vrijeme i pretraga gradova: vaša lokacija ili naziv grada šalje se uslugama Open-Meteo i OpenStreetMap.</item>
+        <item>- Vrijeme: vaša lokacija šalje se MET Norway (Norveškom meteorološkom institutu).</item>
         <item>- Tečajevi: zahtjev za tečajeve, bez osobnih podataka.</item>
         <item>- Karte za izvješća o letovima: slike karte područja leta traže se od Esrija.</item>
         <item>- Vaša vlastita kopija u oblaku: ako je postavite, kopija podataka ide na WebDAV poslužitelj koji ste odabrali, sigurnom vezom. Lozinka se pohranjuje šifrirana.</item>

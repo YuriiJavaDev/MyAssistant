@@ -8,7 +8,7 @@
     <string name="about_description">Sedm každodenních nástrojů v jedné aplikaci: úkoly, počasí, měny, kalkulačka, skener, kroky a letové přístroje.</string>
     <string name="about_promise">Žádné reklamy. Žádné sledování. Žádný účet. Vaše data zůstávají ve vašem telefonu.</string>
     <string name="about_credits_title">Data a služby</string>
-    <string name="about_credits">Počasí: Open-Meteo.com\nMísta: GeoNames.org, CC BY 4.0\nMěnové kurzy: Exchange Rate API\nPobřeží: Natural Earth, public domain\nMapové snímky: Esri a jeho poskytovatelé</string>
+    <string name="about_credits">Počasí: MET Norway\nMísta: GeoNames.org, CC BY 4.0\nMěnové kurzy: Exchange Rate API\nPobřeží: Natural Earth, public domain\nMapové snímky: Esri a jeho poskytovatelé</string>
     <string name="about_open_guide">Průvodce</string>
     <string name="about_open_license">Licence</string>
     <string name="about_open_privacy">Soukromí</string>

@@ -8,7 +8,7 @@
     <string name="about_description">七个日常工具合在一个应用里：任务、天气、汇率、计算器、扫描、步数和飞行仪表。</string>
     <string name="about_promise">无广告。无追踪。无需账号。你的数据只保存在你的手机上。</string>
     <string name="about_credits_title">数据与服务</string>
-    <string name="about_credits">天气：Open-Meteo.com\n地点：GeoNames.org, CC BY 4.0\n汇率：Exchange Rate API\n海岸线：Natural Earth, public domain\n地图影像：Esri 及其提供方</string>
+    <string name="about_credits">天气：MET Norway\n地点：GeoNames.org, CC BY 4.0\n汇率：Exchange Rate API\n海岸线：Natural Earth, public domain\n地图影像：Esri 及其提供方</string>
     <string name="about_open_guide">指南</string>
     <string name="about_open_license">许可</string>
     <string name="about_open_privacy">隐私</string>

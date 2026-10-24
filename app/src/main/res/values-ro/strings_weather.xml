@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Locația nu poate fi determinată. Activați serviciile de localizare sau căutați un oraș.</string>
     <string name="weather_error_city_not_found">Nu a fost găsit niciun oraș pentru „%1$s”</string>
     <string name="weather_error_no_network">Vremea nu poate fi încărcată. Verificați conexiunea la internet.</string>
+    <string name="weather_error_cities">Lista orașelor nu a putut fi citită. Reinstalați aplicația.</string>
     <string name="weather_error_choose_city">Alegeți un oraș din listă</string>
     <string name="weather_current_location">Locația curentă</string>
 </resources>

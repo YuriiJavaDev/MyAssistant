@@ -131,7 +131,7 @@
     <string name="weather_location_needed">Zezwól na dostęp do przybliżonej lokalizacji, aby zobaczyć pogodę tam, gdzie jesteś, albo wyszukaj miasto.</string>
     <string name="weather_allow">Zezwól</string>
     <string name="weather_open_settings">Otwórz ustawienia aplikacji</string>
-    <string name="weather_attribution">Pogoda: Open-Meteo.com · Miejsca: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Pogoda: MET Norway · Miejsca: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Wybierz miasto</string>
     <string name="steps_today">Dziś</string>
     <string name="steps_unit">kroków</string>

@@ -33,7 +33,7 @@
         <item>MyAssistantissa ei ole mainoksia, analytiikkaa eikä tiliä. Tehtäväsi, askeleesi, skannauksesi ja lentosi tallennetaan vain puhelimeesi.</item>
         <item># Mitä kulkee internetin kautta</item>
         <item>Vain se, mitä itse pyydät:</item>
-        <item>- Sää ja kaupunkihaku: sijaintisi tai kaupungin nimi lähetetään Open-Meteolle ja OpenStreetMapille.</item>
+        <item>- Sää: sijaintisi lähetetään MET Norwaylle (Norjan ilmatieteen laitokselle).</item>
         <item>- Valuuttakurssit: kurssipyyntö ilman henkilötietoja.</item>
         <item>- Lentoraporttien kartat: lentoalueen karttakuvat pyydetään Esrilta.</item>
         <item>- Oma pilvivarmuuskopiosi: jos otat sen käyttöön, tietojesi kopio lähetetään valitsemallesi WebDAV-palvelimelle suojatun yhteyden kautta. Salasana tallennetaan salattuna.</item>

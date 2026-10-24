@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Sta toegang tot de geschatte locatie toe om het weer op jouw plek te zien, of zoek een plaats.</string>
     <string name="weather_allow">Toestaan</string>
     <string name="weather_open_settings">App-instellingen openen</string>
-    <string name="weather_attribution">Weer: Open-Meteo.com · Plaatsen: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">Weer: MET Norway · Plaatsen: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Kies een plaats</string>
     <string name="steps_today">Vandaag</string>
     <string name="steps_unit">stappen</string>

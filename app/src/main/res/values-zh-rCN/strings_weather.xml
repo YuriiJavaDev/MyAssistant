@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">无法确定位置。请开启定位服务或搜索城市。</string>
     <string name="weather_error_city_not_found">未找到“%1$s”对应的城市</string>
     <string name="weather_error_no_network">无法加载天气。请检查网络连接。</string>
+    <string name="weather_error_cities">无法读取城市列表。请重新安装应用。</string>
     <string name="weather_error_choose_city">请从列表中选择城市</string>
     <string name="weather_current_location">当前位置</string>
 </resources>

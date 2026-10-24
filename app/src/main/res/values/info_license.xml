@@ -21,7 +21,7 @@
         <item># 5. No advertising, no sale of data</item>
         <item>The paid Software contains no advertising. The Author does not sell Your data. The Software uses the internet only for the features You use, as described in the README and the privacy policy.</item>
         <item># 6. Third-party components and data</item>
-        <item>The Software uses open-source components and third-party data services, which keep their own licenses and terms, including Open-Meteo.com, OpenStreetMap contributors, Exchange Rate API, Natural Earth, Esri and its imagery providers, and the AndroidX and Material Components libraries. This license does not change those terms.</item>
+        <item>The Software uses open-source components and third-party data services, which keep their own licenses and terms, including MET Norway, GeoNames, Exchange Rate API, Natural Earth, Esri and its imagery providers, and the AndroidX and Material Components libraries. This license does not change those terms.</item>
         <item># 7. Informational use</item>
         <item>The flight instruments, step counter, weather, exchange rates and calculator are provided for information, entertainment and convenience. You must not rely on them for navigation, flying, safety, medical or financial decisions.</item>
         <item># 8. Updates and support</item>

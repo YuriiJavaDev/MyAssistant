@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">A helyzet nem határozható meg. Kapcsolja be a helymeghatározást, vagy keressen egy várost.</string>
     <string name="weather_error_city_not_found">Nem található város a(z) „%1$s” kifejezésre</string>
     <string name="weather_error_no_network">Az időjárás nem tölthető be. Ellenőrizze az internetkapcsolatot.</string>
+    <string name="weather_error_cities">A városlistát nem sikerült beolvasni. Telepítse újra az alkalmazást.</string>
     <string name="weather_error_choose_city">Válasszon várost a listából</string>
     <string name="weather_current_location">Jelenlegi helyzet</string>
 </resources>

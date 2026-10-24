@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">مکان تعیین نشد. سرویس‌های مکان را روشن کنید یا شهری را جست‌وجو کنید.</string>
     <string name="weather_error_city_not_found">شهری برای «%1$s» پیدا نشد</string>
     <string name="weather_error_no_network">وضعیت هوا بارگذاری نشد. اتصال اینترنت را بررسی کنید.</string>
+    <string name="weather_error_cities">فهرست شهرها خوانده نشد. برنامه را دوباره نصب کنید.</string>
     <string name="weather_error_choose_city">شهری را از فهرست انتخاب کنید</string>
     <string name="weather_current_location">مکان فعلی</string>
 </resources>

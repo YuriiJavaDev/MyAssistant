@@ -40,6 +40,7 @@
     <string name="weather_error_no_location">Δεν είναι δυνατός ο εντοπισμός της τοποθεσίας. Ενεργοποιήστε τις υπηρεσίες τοποθεσίας ή αναζητήστε μια πόλη.</string>
     <string name="weather_error_city_not_found">Δεν βρέθηκε πόλη για «%1$s»</string>
     <string name="weather_error_no_network">Δεν είναι δυνατή η φόρτωση του καιρού. Ελέγξτε τη σύνδεση στο internet.</string>
+    <string name="weather_error_cities">Δεν ήταν δυνατή η ανάγνωση της λίστας πόλεων. Επανεγκαταστήστε την εφαρμογή.</string>
     <string name="weather_error_choose_city">Επιλέξτε πόλη από τη λίστα</string>
     <string name="weather_current_location">Τρέχουσα τοποθεσία</string>
 </resources>

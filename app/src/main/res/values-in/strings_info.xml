@@ -33,7 +33,7 @@
         <item>MyAssistant tidak memiliki iklan, analitik, maupun akun. Tugas, langkah, hasil pindai, dan penerbangan Anda hanya disimpan di ponsel Anda.</item>
         <item># Apa yang melewati internet</item>
         <item>Hanya yang Anda minta:</item>
-        <item>- Cuaca dan pencarian kota: lokasi atau nama kota Anda dikirim ke Open-Meteo dan OpenStreetMap.</item>
+        <item>- Cuaca: lokasi Anda dikirim ke MET Norway (Institut Meteorologi Norwegia).</item>
         <item>- Kurs mata uang: permintaan kurs, tanpa data pribadi.</item>
         <item>- Peta laporan penerbangan: gambar peta area terbang diminta dari Esri.</item>
         <item>- Cadangan cloud Anda sendiri: jika Anda mengaturnya, salinan data dikirim melalui koneksi aman ke server WebDAV pilihan Anda. Kata sandi disimpan dalam bentuk terenkripsi.</item>

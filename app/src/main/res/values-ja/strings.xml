@@ -128,7 +128,7 @@
     <string name="weather_location_needed">現在地の天気を表示するには、おおよその位置情報へのアクセスを許可するか、都市を検索してください。</string>
     <string name="weather_allow">許可</string>
     <string name="weather_open_settings">アプリの設定を開く</string>
-    <string name="weather_attribution">天気：Open-Meteo.com · 場所：GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">天気：MET Norway · 場所：GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">都市を選択</string>
     <string name="steps_today">今日</string>
     <string name="steps_unit">歩</string>

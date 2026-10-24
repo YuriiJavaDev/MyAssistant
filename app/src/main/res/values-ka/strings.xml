@@ -129,7 +129,7 @@
     <string name="weather_location_needed">დაუშვით მიახლოებითი მდებარეობის წვდომა, რომ ნახოთ ამინდი თქვენთან, ან მოძებნეთ ქალაქი</string>
     <string name="weather_allow">დაშვება</string>
     <string name="weather_open_settings">აპის პარამეტრების გახსნა</string>
-    <string name="weather_attribution">ამინდი: Open-Meteo.com · ადგილები: GeoNames.org, CC BY 4.0</string>
+    <string name="weather_attribution">ამინდი: MET Norway · ადგილები: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">აირჩიეთ ქალაქი</string>
     <string name="steps_today">დღეს</string>
     <string name="steps_unit">ნაბიჯი</string>
