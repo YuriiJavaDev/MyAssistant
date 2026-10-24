@@ -8,7 +8,7 @@
     <string name="about_description">하루에 쓰는 도구 일곱 가지를 한 앱에: 할 일, 날씨, 환율, 계산기, 스캐너, 걸음 수, 비행 계기.</string>
     <string name="about_promise">광고 없음. 추적 없음. 계정 없음. 데이터는 내 휴대전화에만 남습니다.</string>
     <string name="about_credits_title">데이터 및 서비스</string>
-    <string name="about_credits">날씨: Open-Meteo.com\n장소: © OpenStreetMap 기여자\n환율: Exchange Rate API\n해안선: Natural Earth, public domain\n지도 이미지: Esri 및 제공업체</string>
+    <string name="about_credits">날씨: Open-Meteo.com\n장소: GeoNames.org, CC BY 4.0\n환율: Exchange Rate API\n해안선: Natural Earth, public domain\n지도 이미지: Esri 및 제공업체</string>
     <string name="about_open_guide">안내</string>
     <string name="about_open_license">라이선스</string>
     <string name="about_open_privacy">개인정보</string>

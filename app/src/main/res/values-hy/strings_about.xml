@@ -8,7 +8,7 @@
     <string name="about_description">Յոթ առօրյա գործիք մեկ հավելվածում՝ առաջադրանքներ, եղանակ, արժույթներ, հաշվիչ, սկաներ, քայլեր և թռիչքի սարքեր։</string>
     <string name="about_promise">Առանց գովազդի։ Առանց հետևման։ Առանց հաշվի։ Ձեր տվյալները մնում են ձեր հեռախոսում։</string>
     <string name="about_credits_title">Տվյալներ և ծառայություններ</string>
-    <string name="about_credits">Եղանակ՝ Open-Meteo.com\nՎայրեր՝ © OpenStreetMap-ի մասնակիցներ\nՓոխարժեքներ՝ Exchange Rate API\nԱփամուտքեր՝ Natural Earth, public domain\nՔարտեզի պատկերներ՝ Esri և նրա մատակարարները</string>
+    <string name="about_credits">Եղանակ՝ Open-Meteo.com\nՎայրեր՝ GeoNames.org, CC BY 4.0\nՓոխարժեքներ՝ Exchange Rate API\nԱփամուտքեր՝ Natural Earth, public domain\nՔարտեզի պատկերներ՝ Esri և նրա մատակարարները</string>
     <string name="about_open_guide">Ուղեցույց</string>
     <string name="about_open_license">Արտոնագիր</string>
     <string name="about_open_privacy">Գաղտնիություն</string>

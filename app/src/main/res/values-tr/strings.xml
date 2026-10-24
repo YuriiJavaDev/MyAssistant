@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Bulunduğunuz yerdeki hava durumunu görmek için yaklaşık konuma erişime izin verin veya bir şehir arayın.</string>
     <string name="weather_allow">İzin ver</string>
     <string name="weather_open_settings">Uygulama ayarlarını aç</string>
-    <string name="weather_attribution">Hava durumu: Open-Meteo.com · Yerler: © OpenStreetMap katkıda bulunanlar</string>
+    <string name="weather_attribution">Hava durumu: Open-Meteo.com · Yerler: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Şehir seçin</string>
     <string name="steps_today">Bugün</string>
     <string name="steps_unit">adım</string>

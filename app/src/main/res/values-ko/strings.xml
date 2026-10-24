@@ -128,7 +128,7 @@
     <string name="weather_location_needed">현재 위치의 날씨를 보려면 대략적인 위치 접근을 허용하거나 도시를 검색하세요.</string>
     <string name="weather_allow">허용</string>
     <string name="weather_open_settings">앱 설정 열기</string>
-    <string name="weather_attribution">날씨: Open-Meteo.com · 장소: © OpenStreetMap 기여자</string>
+    <string name="weather_attribution">날씨: Open-Meteo.com · 장소: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">도시 선택</string>
     <string name="steps_today">오늘</string>
     <string name="steps_unit">걸음</string>

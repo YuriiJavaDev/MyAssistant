@@ -10,7 +10,7 @@ public final class Place {
     private final double longitude;
     private final double importance;
 
-    /** @param importance how well known the place is, from 0 to 1; it ranks cities with the same name */
+    /** @param importance how well known the place is, from 0 to 1 (its share of a very big city's population); it ranks cities with the same name */
     public Place(String name, String region, String country, double latitude, double longitude, double importance) {
         this.name = name;
         this.region = region;

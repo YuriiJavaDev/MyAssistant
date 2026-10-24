@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Tillåt åtkomst till din ungefärliga plats för att se vädret där du är, eller sök efter en stad.</string>
     <string name="weather_allow">Tillåt</string>
     <string name="weather_open_settings">Öppna appens inställningar</string>
-    <string name="weather_attribution">Väder: Open-Meteo.com · Platser: © OpenStreetMap-bidragsgivare</string>
+    <string name="weather_attribution">Väder: Open-Meteo.com · Platser: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Välj en stad</string>
     <string name="steps_today">Idag</string>
     <string name="steps_unit">steg</string>

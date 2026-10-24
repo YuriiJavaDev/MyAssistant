@@ -8,7 +8,7 @@
     <string name="about_description">Tujuh alat sehari-hari dalam satu aplikasi: tugas, cuaca, mata uang, kalkulator, pemindai, langkah, dan instrumen penerbangan.</string>
     <string name="about_promise">Tanpa iklan. Tanpa pelacak. Tanpa akun. Data Anda tetap di ponsel Anda.</string>
     <string name="about_credits_title">Data dan layanan</string>
-    <string name="about_credits">Cuaca: Open-Meteo.com\nTempat: © kontributor OpenStreetMap\nKurs: Exchange Rate API\nGaris pantai: Natural Earth, public domain\nCitra peta: Esri dan penyedianya</string>
+    <string name="about_credits">Cuaca: Open-Meteo.com\nTempat: GeoNames.org, CC BY 4.0\nKurs: Exchange Rate API\nGaris pantai: Natural Earth, public domain\nCitra peta: Esri dan penyedianya</string>
     <string name="about_open_guide">Panduan</string>
     <string name="about_open_license">Lisensi</string>
     <string name="about_open_privacy">Privasi</string>

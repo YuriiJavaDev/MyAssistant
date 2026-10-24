@@ -129,7 +129,7 @@
     <string name="weather_location_needed">Επιτρέψτε την πρόσβαση στην προσεγγιστική τοποθεσία για να βλέπετε τον καιρό εκεί που βρίσκεστε ή αναζητήστε μια πόλη.</string>
     <string name="weather_allow">Να επιτραπεί</string>
     <string name="weather_open_settings">Άνοιγμα ρυθμίσεων εφαρμογής</string>
-    <string name="weather_attribution">Καιρός: Open-Meteo.com · Τοποθεσίες: © συντελεστές του OpenStreetMap</string>
+    <string name="weather_attribution">Καιρός: Open-Meteo.com · Τοποθεσίες: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Επιλέξτε πόλη</string>
     <string name="steps_today">Σήμερα</string>
     <string name="steps_unit">βήματα</string>

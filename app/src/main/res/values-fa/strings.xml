@@ -129,7 +129,7 @@
     <string name="weather_location_needed">برای دیدن وضعیت هوا در مکانی که هستید، دسترسی به مکان تقریبی را مجاز کنید یا شهری را جست‌وجو کنید.</string>
     <string name="weather_allow">مجاز کردن</string>
     <string name="weather_open_settings">باز کردن تنظیمات برنامه</string>
-    <string name="weather_attribution">وضعیت هوا: Open-Meteo.com · مکان‌ها: © مشارکت‌کنندگان OpenStreetMap</string>
+    <string name="weather_attribution">وضعیت هوا: Open-Meteo.com · مکان‌ها: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">یک شهر انتخاب کنید</string>
     <string name="steps_today">امروز</string>
     <string name="steps_unit">قدم</string>

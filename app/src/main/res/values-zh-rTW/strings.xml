@@ -128,7 +128,7 @@
     <string name="weather_location_needed">允許存取大致位置以查看您所在地的天氣，或搜尋一個城市。</string>
     <string name="weather_allow">允許</string>
     <string name="weather_open_settings">開啟應用程式設定</string>
-    <string name="weather_attribution">天氣：Open-Meteo.com · 地點：© OpenStreetMap 貢獻者</string>
+    <string name="weather_attribution">天氣：Open-Meteo.com · 地點：GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">選擇城市</string>
     <string name="steps_today">今天</string>
     <string name="steps_unit">步</string>

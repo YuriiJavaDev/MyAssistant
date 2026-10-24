@@ -130,7 +130,7 @@
     <string name="weather_location_needed">Дозволите приступ приближној локацији да бисте видели време тамо где сте или потражите град.</string>
     <string name="weather_allow">Дозволи</string>
     <string name="weather_open_settings">Отвори подешавања апликације</string>
-    <string name="weather_attribution">Време: Open-Meteo.com · Места: © сарадници OpenStreetMap-а</string>
+    <string name="weather_attribution">Време: Open-Meteo.com · Места: GeoNames.org, CC BY 4.0</string>
     <string name="weather_choose_city">Изаберите град</string>
     <string name="steps_today">Данас</string>
     <string name="steps_unit">корака</string>
