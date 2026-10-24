@@ -8,7 +8,7 @@
     <string name="about_description">七個日常工具合在一個應用程式裡：工作、天氣、匯率、計算機、掃描、步數與飛行儀表。</string>
     <string name="about_promise">無廣告。無追蹤。無需帳號。你的資料只保留在你的手機上。</string>
     <string name="about_credits_title">資料與服務</string>
-    <string name="about_credits">天氣：Open-Meteo.com\n地點：© OpenStreetMap 貢獻者\n匯率：Exchange Rate API\n海岸線：Natural Earth\n地圖影像：Esri 及其供應商</string>
+    <string name="about_credits">天氣：Open-Meteo.com\n地點：© OpenStreetMap 貢獻者\n匯率：Exchange Rate API\n海岸線：Natural Earth, public domain\n地圖影像：Esri 及其供應商</string>
     <string name="about_open_guide">指南</string>
     <string name="about_open_license">授權</string>
     <string name="about_open_privacy">隱私</string>

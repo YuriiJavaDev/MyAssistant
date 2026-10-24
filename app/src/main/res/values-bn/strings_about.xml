@@ -8,7 +8,7 @@
     <string name="about_description">একটি অ্যাপে দৈনন্দিন সাতটি টুল: কাজ, আবহাওয়া, মুদ্রা, ক্যালকুলেটর, স্ক্যানার, পদক্ষেপ ও ফ্লাইট যন্ত্র।</string>
     <string name="about_promise">কোনো বিজ্ঞাপন নেই। কোনো ট্র্যাকার নেই। কোনো অ্যাকাউন্ট নেই। আপনার তথ্য আপনার ফোনেই থাকে।</string>
     <string name="about_credits_title">তথ্য ও পরিষেবা</string>
-    <string name="about_credits">আবহাওয়া: Open-Meteo.com\nস্থান: © OpenStreetMap অবদানকারীরা\nবিনিময় হার: Exchange Rate API\nউপকূলরেখা: Natural Earth\nমানচিত্রের ছবি: Esri ও তার সরবরাহকারীরা</string>
+    <string name="about_credits">আবহাওয়া: Open-Meteo.com\nস্থান: © OpenStreetMap অবদানকারীরা\nবিনিময় হার: Exchange Rate API\nউপকূলরেখা: Natural Earth, public domain\nমানচিত্রের ছবি: Esri ও তার সরবরাহকারীরা</string>
     <string name="about_open_guide">নির্দেশিকা</string>
     <string name="about_open_license">লাইসেন্স</string>
     <string name="about_open_privacy">গোপনীয়তা</string>

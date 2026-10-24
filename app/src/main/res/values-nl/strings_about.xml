@@ -8,7 +8,7 @@
     <string name="about_description">Zeven alledaagse hulpmiddelen in één app: taken, weer, valuta, rekenmachine, scanner, stappen en vlieginstrumenten.</string>
     <string name="about_promise">Geen advertenties. Geen trackers. Geen account. Je gegevens blijven op je telefoon.</string>
     <string name="about_credits_title">Gegevens en diensten</string>
-    <string name="about_credits">Weer: Open-Meteo.com\nPlaatsen: © OpenStreetMap-bijdragers\nWisselkoersen: Exchange Rate API\nKustlijnen: Natural Earth\nKaartbeelden: Esri en zijn leveranciers</string>
+    <string name="about_credits">Weer: Open-Meteo.com\nPlaatsen: © OpenStreetMap-bijdragers\nWisselkoersen: Exchange Rate API\nKustlijnen: Natural Earth, public domain\nKaartbeelden: Esri en zijn leveranciers</string>
     <string name="about_open_guide">Handleiding</string>
     <string name="about_open_license">Licentie</string>
     <string name="about_open_privacy">Privacy</string>

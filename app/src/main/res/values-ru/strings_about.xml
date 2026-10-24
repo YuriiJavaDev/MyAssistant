@@ -8,7 +8,7 @@
     <string name="about_description">Семь повседневных инструментов в одном приложении: задачи, погода, валюты, калькулятор, сканер, шаги и полётные приборы.</string>
     <string name="about_promise">Без рекламы. Без трекеров. Без аккаунта. Ваши данные остаются на вашем телефоне.</string>
     <string name="about_credits_title">Данные и сервисы</string>
-    <string name="about_credits">Погода: Open-Meteo.com\nМеста: © участники OpenStreetMap\nКурсы валют: Exchange Rate API\nБереговые линии: Natural Earth\nСнимки карт: Esri и его поставщики</string>
+    <string name="about_credits">Погода: Open-Meteo.com\nМеста: © участники OpenStreetMap\nКурсы валют: Exchange Rate API\nБереговые линии: Natural Earth, public domain\nСнимки карт: Esri и его поставщики</string>
     <string name="about_open_guide">Руководство</string>
     <string name="about_open_license">Лицензия</string>
     <string name="about_open_privacy">Приватность</string>
