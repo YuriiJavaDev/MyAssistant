@@ -109,4 +109,21 @@ public class CityIndexTest {
         assertEquals("פריז", CityIndex.search(list(), "Paris", 5, new Locale("iw")).get(0).getName());
         assertEquals("פריז", CityIndex.search(list(), "Paris", 5, new Locale("he")).get(0).getName());
     }
+
+    @Test
+    public void theBundledListNamesBigCitiesInTheirLanguages() throws IOException {
+        File file = new File("src/main/assets/cities.tsv");
+        String[][] expected = {
+                {"ru", "Харьков"}, {"uk", "Харків"}, {"he", "חרקוב"}, {"ar", "خاركيف"},
+                {"de", "Charkiw"}, {"zh-CN", "哈尔科夫"}, {"zh-TW", "卡爾可夫"}, {"ja", "ハルキウ"}, {"pl", "Charków"}};
+        for (String[] row : expected) {
+            try (InputStream in = new FileInputStream(file)) {
+                Place place = CityIndex.search(in, "Kharkiv", 1, Locale.forLanguageTag(row[0])).get(0);
+                assertEquals(row[0], row[1], place.getName());
+            }
+        }
+        try (InputStream in = new FileInputStream(file)) {
+            assertEquals("Kharkiv", CityIndex.search(in, "Kharkiv", 1, new Locale("th")).get(0).getName());
+        }
+    }
 }
