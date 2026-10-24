@@ -14,14 +14,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Locale;
 
 public class CityIndexTest {
 
     private static final String LIST = ""
-            + "Paris\tFR\t48.85341\t2.3488\t2138551\t|paris|parigi|париж|\n"
-            + "Paris\tUS\t33.66094\t-95.55551\t24899\t|paris|\n"
-            + "Parishville\tUS\t44.62\t-74.8\t800\t|parishville|\n"
-            + "Kyiv\tUA\t50.45466\t30.5238\t2797553\t|kyiv|kiev|киів|киев|\n";
+            + "Paris\tFR\t48.85341\t2.3488\t2138551\t|paris|parigi|париж|\the=פריז;ru=Париж;zh-CN=巴黎;zh-TW=巴黎\n"
+            + "Paris\tUS\t33.66094\t-95.55551\t24899\t|paris|\t\n"
+            + "Parishville\tUS\t44.62\t-74.8\t800\t|parishville|\t\n"
+            + "Kyiv\tUA\t50.45466\t30.5238\t2797553\t|kyiv|kiev|киів|киев|\tru=Киев;uk=Київ\n";
 
     private static InputStream list() {
         return new ByteArrayInputStream(LIST.getBytes(StandardCharsets.UTF_8));
@@ -29,7 +30,7 @@ public class CityIndexTest {
 
     @Test
     public void wholeNamesComeBeforeNamesThatOnlyStartLikeTheQuery() throws IOException {
-        List<Place> found = CityIndex.search(list(), "Paris", 5);
+        List<Place> found = CityIndex.search(list(), "Paris", 5, Locale.ENGLISH);
         assertEquals(3, found.size());
         assertEquals("France", found.get(0).getCountry());
         assertEquals("United States", found.get(1).getCountry());
@@ -38,8 +39,8 @@ public class CityIndexTest {
 
     @Test
     public void findsACityByItsNameInAnotherLanguage() throws IOException {
-        assertEquals("Kyiv", CityIndex.search(list(), "Киев", 5).get(0).getName());
-        assertEquals("Kyiv", CityIndex.search(list(), "київ", 5).get(0).getName());
+        assertEquals("Kyiv", CityIndex.search(list(), "Киев", 5, Locale.ENGLISH).get(0).getName());
+        assertEquals("Kyiv", CityIndex.search(list(), "київ", 5, Locale.ENGLISH).get(0).getName());
     }
 
     @Test
@@ -50,27 +51,27 @@ public class CityIndexTest {
 
     @Test
     public void aSingleLetterFindsNothing() throws IOException {
-        assertTrue(CityIndex.search(list(), "p", 5).isEmpty());
+        assertTrue(CityIndex.search(list(), "p", 5, Locale.ENGLISH).isEmpty());
     }
 
     @Test
     public void respectsTheLimit() throws IOException {
-        assertEquals(1, CityIndex.search(list(), "Paris", 1).size());
+        assertEquals(1, CityIndex.search(list(), "Paris", 1, Locale.ENGLISH).size());
     }
 
     @Test
     public void bigCitiesAreMoreImportantThanSmallOnes() throws IOException {
-        List<Place> found = CityIndex.search(list(), "Paris", 5);
+        List<Place> found = CityIndex.search(list(), "Paris", 5, Locale.ENGLISH);
         assertTrue(found.get(0).getImportance() > found.get(1).getImportance() * 2);
     }
 
     @Test
     public void findsTheNearestCityWithinReach() throws IOException {
-        Place near = CityIndex.nearest(list(), 48.9, 2.4, 60);
+        Place near = CityIndex.nearest(list(), 48.9, 2.4, 60, Locale.ENGLISH);
         assertNotNull(near);
         assertEquals("Paris", near.getName());
         assertEquals("France", near.getCountry());
-        assertNull(CityIndex.nearest(list(), 0, 0, 60));
+        assertNull(CityIndex.nearest(list(), 0, 0, 60, Locale.ENGLISH));
     }
 
     @Test
@@ -78,14 +79,34 @@ public class CityIndexTest {
         File file = new File("src/main/assets/cities.tsv");
         for (String query : new String[]{"Харьков", "Мерефа", "ראשון לציון", "פתח תקווה", "Kharkiv"}) {
             try (InputStream in = new FileInputStream(file)) {
-                assertTrue(query, !CityIndex.search(in, query, 5).isEmpty());
+                assertTrue(query, !CityIndex.search(in, query, 5, Locale.ENGLISH).isEmpty());
             }
         }
         try (InputStream in = new FileInputStream(file)) {
-            Place place = CityIndex.nearest(in, 49.99, 36.23, 60);
+            Place place = CityIndex.nearest(in, 49.99, 36.23, 60, Locale.ENGLISH);
             assertNotNull(place);
             assertEquals("Kharkiv", place.getName());
             assertEquals("Ukraine", place.getCountry());
         }
+    }
+
+    @Test
+    public void showsTheNameInTheChosenLanguageAndElseTheEnglishOne() throws IOException {
+        assertEquals("Париж", CityIndex.search(list(), "Paris", 5, new Locale("ru")).get(0).getName());
+        assertEquals("Київ", CityIndex.search(list(), "Kyiv", 5, new Locale("uk")).get(0).getName());
+        assertEquals("Paris", CityIndex.search(list(), "Paris", 5, new Locale("de")).get(0).getName());
+        assertEquals("Frankreich", CityIndex.search(list(), "Paris", 5, Locale.GERMAN).get(0).getCountry());
+    }
+
+    @Test
+    public void picksTheRightChineseScript() throws IOException {
+        assertEquals("巴黎", CityIndex.search(list(), "Paris", 5, Locale.SIMPLIFIED_CHINESE).get(0).getName());
+        assertEquals("巴黎", CityIndex.search(list(), "Paris", 5, Locale.TRADITIONAL_CHINESE).get(0).getName());
+    }
+
+    @Test
+    public void usesTheOldCodeOfHebrew() throws IOException {
+        assertEquals("פריז", CityIndex.search(list(), "Paris", 5, new Locale("iw")).get(0).getName());
+        assertEquals("פריז", CityIndex.search(list(), "Paris", 5, new Locale("he")).get(0).getName());
     }
 }
