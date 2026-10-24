@@ -2,9 +2,12 @@ package com.yurii.pavlenko.myassistant.weather.data;
 
 import android.content.Context;
 
+import com.yurii.pavlenko.myassistant.ui.locale.LanguageStore;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Finds cities by name in any language, and names the place where the phone is, using the list of cities
@@ -24,14 +27,14 @@ public final class GeocodingService {
     /** Cities that match the name, whole names first and then the most populous. */
     public static List<Place> search(Context context, String query) throws IOException {
         try (InputStream list = context.getAssets().open(LIST_FILE)) {
-            return CityIndex.search(list, query, MAX_MATCHES);
+            return CityIndex.search(list, query, MAX_MATCHES, languageOf(context));
         }
     }
 
     /** Names the place at the given coordinates; falls back to a neutral name when no listed city is near. */
     public static Place describe(Context context, double latitude, double longitude) {
         try (InputStream list = context.getAssets().open(LIST_FILE)) {
-            Place city = CityIndex.nearest(list, latitude, longitude, NEAREST_CITY_KM);
+            Place city = CityIndex.nearest(list, latitude, longitude, NEAREST_CITY_KM, languageOf(context));
             if (city != null) {
                 return new Place(city.getName(), "", city.getCountry(), latitude, longitude, 1);
             }
@@ -39,5 +42,10 @@ public final class GeocodingService {
             // The weather itself is still available for these coordinates
         }
         return new Place("", "", "", latitude, longitude, 1);
+    }
+
+    /** The language of the app, which is the one the user chose in its settings. */
+    private static Locale languageOf(Context context) {
+        return Locale.forLanguageTag(LanguageStore.chosenTag());
     }
 }
